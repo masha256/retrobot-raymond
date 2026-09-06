@@ -1,1 +1,5 @@
 Raymond profile has its own dedicated Telegram bot (separate token from default Hermes profile), allow-listed to Mike's Telegram user ID 1620897892, running as systemd user service "hermes-gateway-raymond" (persists across reboot/logout). Janus cron jobs (regime/screen/score) currently deliver locally only; Mike plans to switch their `deliver` target to this Telegram bot once confirmed working.
+§
+Mike runs 'janus' crypto trading pipeline (3 cronjobs: janus-regime 7:30am, janus-screen 7:45am, janus-score 8:00am, all deliver to Telegram). Raymond profile (~/.hermes/profiles/raymond) auto-backs up to github.com/masha256/retrobot-raymond hourly at :15 via GH_PAT (account 'retrobitbot'); janus-score self-commits its own report+sources to that same repo right after writing them. Analogous val profile backs up to retrobot-val.
+§
+Mike expects verification, not just optimistic status reports: when told a scheduled/background job 'should' do X, he asks for confirmation it actually works — check by reading real logs/output or re-running the job, don't just assert based on the prompt/config.

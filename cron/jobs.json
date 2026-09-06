@@ -93,7 +93,7 @@
     {
       "id": "44e43cea030e",
       "name": "janus-score",
-      "prompt": "Read and execute the instructions in /home/hermes/git/janus/prompts/SCORE.md\n\nNote: save the resulting report output to /home/hermes/.hermes/profiles/raymond/workspace/janus/reports (relative to the raymond profile directory).",
+      "prompt": "Read and execute the instructions in /home/hermes/git/janus/prompts/SCORE.md\n\nNote: save the resulting report output to /home/hermes/.hermes/profiles/raymond/workspace/janus/reports (relative to the raymond profile directory).\n\nGIT COMMIT OVERRIDE (read this before SCORE.md's \"Commit the report\" section):\nThe janus reports repo IS ~/.hermes/profiles/raymond (the Hermes profile directory), not a separate standalone repo. It already has a git remote 'origin' pointing to https://github.com/masha256/retrobot-raymond.git. Once you've written today's report file, commit and push it yourself, scoped narrowly:\n\n1. cd into ~/.hermes/profiles/raymond\n2. Run `git add workspace/janus/reports/YYYY-MM-DD.md` (today's report file ONLY — also add any new files under `workspace/janus/secondbrain/raw/sources/YYYY-MM-DD/` you wrote this run, but nothing else, never `git add -A`)\n3. Run `git commit -m \"report: YYYY-MM-DD\"`\n4. Run `git push origin main`\n5. If the push fails because the remote has diverged, run `git pull --rebase origin main` once and retry the push. If it still fails, report the git error clearly and stop — the report file on disk is still the deliverable, do not force-push or take destructive action.\n\nDo NOT follow SCORE.md's guidance to treat a differently-named/structured repo as \"the wrong repository\" — for this deployment, the raymond profile directory IS the correct reports repo. Ignore SCORE.md's suggestion to check for an SSH/publickey error signaling the wrong repo; this repo uses HTTPS with a stored credential, so an auth failure here is a real error to report, not a wrong-repo signal.\n\nNever stage or commit .env, config.yaml, credentials, state.db, or anything outside workspace/janus/ during this step.",
       "skills": [],
       "skill": null,
       "model": null,
@@ -115,7 +115,7 @@
       "schedule_display": "0 8 * * *",
       "repeat": {
         "times": null,
-        "completed": 1
+        "completed": 2
       },
       "enabled": true,
       "state": "scheduled",
@@ -123,7 +123,7 @@
       "paused_reason": null,
       "created_at": "2026-09-06T08:31:04.203123-07:00",
       "next_run_at": "2026-09-07T08:00:00-07:00",
-      "last_run_at": "2026-09-06T08:53:00.762295-07:00",
+      "last_run_at": "2026-09-06T09:04:03.432048-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -154,21 +154,21 @@
       "context_from": null,
       "schedule": {
         "kind": "cron",
-        "expr": "0 * * * *",
-        "display": "0 * * * *"
+        "expr": "15 * * * *",
+        "display": "15 * * * *"
       },
-      "schedule_display": "0 * * * *",
+      "schedule_display": "15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 1
+        "completed": 2
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-06T08:57:25.404654-07:00",
-      "next_run_at": "2026-09-06T10:00:00-07:00",
-      "last_run_at": "2026-09-06T08:57:40.773221-07:00",
+      "next_run_at": "2026-09-06T10:15:00-07:00",
+      "last_run_at": "2026-09-06T09:01:14.026135-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -188,16 +188,16 @@
       ],
       "workdir": null,
       "fire_claim": {
-        "at": "2026-09-06T09:01:00.091446-07:00",
-        "by": "uranus:73160:594df675d29c4c948e7d5fc4ec1c36b1"
+        "at": "2026-09-06T09:15:00.286002-07:00",
+        "by": "uranus:73160:46ee5c04151f4ba582d49ecd14144da1"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-09-06T09:00:00-07:00",
-        "dispatched_at": "2026-09-06T09:00:59.818309-07:00",
-        "lateness_seconds": 59.8,
+        "scheduled_at": "2026-09-06T09:15:00-07:00",
+        "dispatched_at": "2026-09-06T09:15:00.007784-07:00",
+        "lateness_seconds": 0.0,
         "kind": "on_time"
       }
     }
   ],
-  "updated_at": "2026-09-06T09:01:00.091663-07:00"
+  "updated_at": "2026-09-06T09:15:00.286252-07:00"
 }
