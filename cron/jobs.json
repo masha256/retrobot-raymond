@@ -134,7 +134,64 @@
       "enabled_toolsets": null,
       "workdir": null,
       "fire_claim": null
+    },
+    {
+      "id": "0b68001d8a20",
+      "name": "raymond-workspace-backup",
+      "prompt": "Commit and push any pending changes in the raymond profile directory (~/.hermes/profiles/raymond) to the git remote 'origin' (retrobot-raymond repo). The repo root is ~/.hermes/profiles/raymond itself. A .gitignore there allowlists only: memories/, the janus skill + a handful of agent-authored/patched skills (janus, productivity/rec-tracker, productivity/google-api-troubleshooting, productivity/aesthetic-slide-decks, software-development/browser-exec-headless-setup, research/situational-safety-monitoring), workspace/ (janus reports + secondbrain data), cron/jobs.json (job definitions only, not DBs/locks), SOUL.md, profile.yaml, and assets/. Everything else (state.db, .env, config.yaml, credentials, caches, stock/hub-installed skills, sessions, logs, cache/, runtime/, pending_messages/, bin/, image_cache/, audio_cache/) is excluded by that .gitignore -- trust it, do not try to independently decide what to include/exclude.\n\nSTEPS:\n1. cd into ~/.hermes/profiles/raymond\n2. Run `git status --porcelain` to check for changes (new/modified/deleted files).\n3. If there are NO changes, respond with exactly [SILENT] and nothing else -- do not commit or push, do not report anything.\n4. If there ARE changes:\n   - Run `git add -A`\n   - Run `git commit -m \"Auto-sync: <ISO timestamp>\"` (use the actual current UTC timestamp)\n   - Run `git push origin main`\n   - If the push fails (e.g. remote has diverged), run `git pull --rebase origin main` once and retry the push. If it still fails after that, report the failure clearly -- do not force-push, do not silently give up.\n   - On success, respond with a brief one-line confirmation: number of files changed and the commit message. Keep it terse, delivery target is local/log only, not a chat message.\n\nIMPORTANT SAFETY RULES:\n- Never touch, stage, or commit .env, config.yaml, google_client_secret.json, google_token.json, auth.json, .git-credentials, state.db, projects.db, verification_evidence.db, or any file matching *secret*/*token*/*password*/*.pem/*.key -- these must stay excluded by .gitignore. If `git status --porcelain` ever shows one of these as a new/modified file about to be staged, STOP immediately and report it instead of proceeding -- do not add or commit it under any circumstances.\n- Never commit anything outside ~/.hermes/profiles/raymond.\n- If a git command fails for a reason other than a normal divergence (auth failure, corrupted repo, network error), stop immediately and report the exact error -- do not retry blindly or attempt destructive fixes like git reset --hard.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": "anthropic",
+      "model_snapshot": "claude-sonnet-5",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 * * * *",
+        "display": "0 * * * *"
+      },
+      "schedule_display": "0 * * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-09-06T08:57:25.404654-07:00",
+      "next_run_at": "2026-09-06T09:00:00-07:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "failure_streak": 0,
+      "deliver": "local",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "1620897892",
+        "chat_name": "Mike M",
+        "thread_id": null,
+        "user_id": "1620897892",
+        "scope_id": null
+      },
+      "enabled_toolsets": [
+        "terminal"
+      ],
+      "workdir": null,
+      "fire_claim": {
+        "at": "2026-09-06T08:57:28.801477-07:00",
+        "by": "uranus:73160:eecd2cd86bb5413db2d2540984ae8f6f"
+      }
     }
   ],
-  "updated_at": "2026-09-06T08:53:00.780950-07:00"
+  "updated_at": "2026-09-06T08:57:28.801694-07:00"
 }
