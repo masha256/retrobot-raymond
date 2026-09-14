@@ -1,0 +1,12 @@
+# NVDA — sources checked, 2026-09-14
+
+- **Used** — "Global AI stocks fall as industry chiefs call for slowing development" (Reuters) — https://www.reuters.com/world/china/ai-linked-asian-stocks-slump-after-top-lab-ceos-call-slowing-down-technologys-2026-09-14/ — published Sep 14, pre-cutoff — why it moved a factor: first genuinely new, sector-moving negative for the AI-semis complex; drove the global AI-equity selloff. Catalyst −1.5.
+- **Used** — Dario Amodei, "We must pace the frontier" (3,800-word essay, Sat Sep 12) + Altman/Musk public agreement — https://darioamodei.com/post/we-must-pace-the-frontier — published Sep 12–13, pre-cutoff — why it moved a factor: the underlying source document behind the Monday selloff.
+- **Used** — "Anthropic's AI Warning May Weigh on Chips, But Trade…" (Yahoo Finance) — https://finance.yahoo.com/technology/ai/articles/anthropic-ai-warning-may-weigh-080000349.html — Sep 14 pre-market — why it moved a factor: confirms semis as the specific expression of the shock.
+- **Used** — coverage snapshot (janus, fetched 14:45Z): px_vs_sma20 −5.17, px_vs_sma50 −3.09, px_vs_sma200 +3.58, cross_px_50 below age 1, funding_ref 1.42e-4 vs funding_rate 2.64e-4 — trend rung and crowding/divergence.
+- **Rejected** — "NVDA declined 2.85% in pre-market trading" (X/@marketsday) — https://x.com/marketsday/status/2099470954124722202 — price action, not an event; already in the coverage snapshot.
+- **Rejected** — Piper Sandler $300 PT / "NVDA looks cheap" (Yahoo, Sep 13) — https://finance.yahoo.com/markets/stocks/articles/nvidia-nvda-looks-cheap-piper-191328167.html — Sep 9 initiation, already carried in prior sessions' rationales.
+- **Rejected** — "NVIDIA Expands Open Source CUDA-Q Platform" (NVIDIA newsroom, Sep 14) — https://nvidianews.nvidia.com/ — product/PR item with no measurable near-term revenue impact.
+- **Rejected** — "NVDA Stock Steadies As Tariff Fears Rattle Global Markets" (stockstotrade, Sep 14) — https://stockstotrade.com/news/nvidia-corporation-nvda-news-2026_09_14-2/ — aggregator narrative, no primary export-control action dated today.
+- **Rejected** — Musk/SpaceX "Nvidia AI platforms in space in 2027" (Seeking Alpha) — https://seekingalpha.com/news/4642318 — 2027 horizon, no near-term payoff change.
+- **Rejected** — Asia Times / CFR export-control loophole pieces — https://asiatimes.com/2026/09/nvidia-chip-export-loophole-clouds-us-china-ai-summit-talks — Sep 8–11, stale; no new regulatory action published today.
