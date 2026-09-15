@@ -1,0 +1,7 @@
+# AMD — sources checked, 2026-09-15
+
+- **Used** — "Trump and Huang unite against AI doomers in surprise on-stage call" — https://www.axios.com/2026/09/14/trump-jensen-huang-nvidia-ai-all-in-summit — published 2026-09-14 evening ET — why it moved a factor: cluster-level reversal of the AI-slowdown narrative that hit AMD −4.1% premarket Monday; scored +0.5 as partly-priced rhetoric rather than an order or a print.
+- **Used** — "AI Semiconductor Stocks Nvidia, AMD, Intel, and Broadcom Are Rebounding in Pre-Market Today" (TipRanks, via stockanalysis.com INTC page) — https://www.tipranks.com/news/ai-semiconductor-stocks-nvidia-amd-intel-and-broadcom-are-rebounding-in-pre-market-today-whats-driving-the-recovery — published 2026-09-15 pre-open — why it moved a factor: confirms the rebound is sector-wide and attributed to the same overnight commentary.
+- **Rejected** — "U.S. Chip Stocks Fall in Premarket Trading, Nvidia Down 2%, AMD Slides 4.1%" — https://www.gate.com/news/detail/us-chip-stocks-fall-in-premarket-trading-nvidia-down-2-amd-slides-41-24255337 — 2026-09-14, already priced and captured in the prior session.
+- **Rejected** — "Why Micron, Intel, AMD, and Other Chip Stocks Fell Today" (Motley Fool) — https://www.fool.com/investing/2026/09/14/why-micron-intel-amd-chip-stocks-fell-today/ — backward-looking recap of Monday's move.
+- **Rejected** — "5 top AI stocks to buy on the dip amid slowdown fears" (Zacks) — https://finance.yahoo.com/technology/ai/articles/5-top-ai-stocks-buy-203700535.html — opinion/screen piece, not asset-specific news.

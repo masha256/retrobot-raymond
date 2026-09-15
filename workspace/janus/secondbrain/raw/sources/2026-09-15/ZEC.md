@@ -1,0 +1,7 @@
+# ZEC — sources checked, 2026-09-15
+
+- **Used** — "NU7 Sentiment Polls Results" (Zcash Community Forum) — https://forum.zcashcommunity.com/t/nu7-sentiment-polls-results/57590 — published 2026-09-14 20:08 ET — why it moved a factor: the coinholder vote flagged as post-cutoff in yesterday's rationale resolved and results published between the two anchors; a real but modest governance outcome, +0.5.
+- **Used** — "NU7 Polling Results: What We Heard and Where We Go From Here" (Zcash Foundation) — https://zfnd.org/nu7-polling-results-what-we-heard-and-where-we-go-from-here — published 2026-09-14/15 — why it moved a factor: gives the actual tallies — Tachyon near-universal support, Orchard quantum recoverability 94.6% coinholder support, ZSAs rejected 98.6%, NSM issuance smoothing rejected 83.5% — i.e. narrowed scope with the fixed supply schedule left intact.
+- **Rejected** — "Zcash (ZEC) NU7 Coinholder Vote Explained" (U.Today via TradingView) — https://www.tradingview.com/news/u_today%3A2428e6e9c094b%3A0-zcash-zec-nu7-coinholder-vote-explained-eligibility-privacy-and-key-decisions — pre-vote explainer, already circulated and in prior rationales.
+- **Rejected** — "Zcash: Is Your ZEC Still in the Old Orchard Pool?" (Cryptoticker, Sep 13) — https://cryptoticker.io/en/zcash-orchard-pool-migrate-zec-balance/ — housekeeping guidance, not a payoff-changing event.
+- **Rejected** — CipherScan NU7 governance dashboard — https://cipherscan.app/governance/nu7 — page did not render tallies; undateable, treated as unusable.

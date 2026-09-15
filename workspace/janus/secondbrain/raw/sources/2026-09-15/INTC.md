@@ -1,0 +1,6 @@
+# INTC — sources checked, 2026-09-15
+
+- **Used** — "Trump and Huang unite against AI doomers in surprise on-stage call" — https://www.axios.com/2026/09/14/trump-jensen-huang-nvidia-ai-all-in-summit — published 2026-09-14 evening ET — why it moved a factor: same cluster-level reversal as AMD; INTC fell 4.9% premarket Monday on the slowdown thesis, so the rebuttal is a real if partly-priced positive, +0.5.
+- **Used** — "AI Semiconductor Stocks Nvidia, AMD, Intel, and Broadcom Are Rebounding in Pre-Market Today" (TipRanks) — https://www.tipranks.com/news/ai-semiconductor-stocks-nvidia-amd-intel-and-broadcom-are-rebounding-in-pre-market-today-whats-driving-the-recovery — published 2026-09-15 pre-open — why it moved a factor: confirms INTC participates in the sector rebound.
+- **Rejected** — "Intel Foundry and ASML Collaborate to Accelerate Industry Readiness for High NA EUV" — https://www.businesswire.com/news/home/20260907972389/en/ — published 2026-09-07, stale and already in prior rationales.
+- **Rejected** — live quote $99.11 / +1.98% (stockanalysis.com, Sep 15 09:50 ET) — https://stockanalysis.com/stocks/intc/ — session anchor price is the coverage snapshot (close 98.73); fresher quote not substituted.
