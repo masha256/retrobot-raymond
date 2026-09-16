@@ -1,0 +1,8 @@
+# XLM — sources checked, 2026-09-16
+
+- **Used** — "CLARITY Act Fails Senate Vote, Circle Stock Falls 11%" (BeInCrypto) — https://cryptorank.io/news/stellar — published 2026-09-15 afternoon ET — why it moved a factor: catalyst -1.5. Unlike generic crypto beta, XLM had rallied specifically *on* this vote, so the failure is asset-specific and sector-moving.
+- **Used** — "XRP and XLM Explode 8% as the CLARITY Act Nears Crucial Vote" (BeInCrypto) — https://beincrypto.com/xrp-xlm-explode-8-percent-clarity-act-nears-crucial-vote/ — published 2026-09-15 re: Sep 14 move — why it moved a factor: establishes that XLM's prior +8% was explicit positioning for the cloture vote, which is what makes the failure asset-specific rather than beta.
+- **Used** — "XLM price fell nearly 10% on September 16" (Finbold) — https://finbold.com/ai-predicts-stellar-xlm-price-for-september-30-2026/ — corroborates the magnitude of the coverage-row -9.36% print.
+- **Rejected** — Protocol 28 "Adapter" mainnet activation vote scheduled Sep 16 (CAP-83/85/86) — https://coinmarketcap.com/cmc-ai/stellar/latest-updates/ — a developer-infrastructure upgrade vote with no published pre-cutoff result; undateable outcome counts as post-cutoff. Flagged for tomorrow.
+- **Rejected** — U.S. Bank testing USBDC stablecoin on Stellar (247wallst, Sep 15) — https://247wallst.com/investing/cryptocurrency/2026/09/15/xlm-price-prediction-could-stellar-hit-0-25/ — a pilot referenced in a price-prediction listicle, not a dated primary announcement.
+- **Rejected** — "Stellar Gains Institutional Spotlight Ahead of Protocol 28" (Coinpedia, Sep 15) — https://cryptorank.io/news/stellar — narrative/price-analysis piece, not a verifiable event.

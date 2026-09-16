@@ -1,0 +1,8 @@
+# Cluster-wide — sources checked, 2026-09-16
+
+The dominant new item this session is the failed CLARITY Act cloture vote. It published Sep 15 afternoon ET — after yesterday's 10:00 ET cutoff, before today's — so it is new today, but it is a **market-wide** shock for crypto, not asset-specific. Per SCORE.md it may only move `catalyst` for assets where the bill itself is the thesis (XLM, COIN, CRCL); for generic crypto beta it stays 0 and lives in the crypto cluster regime (-1.3) the REGIME phase already recorded.
+
+- **Used** — "CLARITY Act Fails Senate Vote, Circle Stock Falls 11%" (BeInCrypto via CryptoRank) — https://cryptorank.io/news/stellar — published 2026-09-15, Senate failed to reach 60 votes on cloture, 41 no — why it moved a factor: applied as an asset-specific catalyst only to XLM, COIN and CRCL (below); treated as regime beta everywhere else.
+- **Used** — "Aptos (APT) Drops 8% Amid Broad Crypto Risk-Off Move" (CMC AI) — https://coinmarketcap.com/top-stories/6aaa4d9209b24407007500c4 — published 2026-09-16 08:04 UTC — why it moved a factor: confirms the CLARITY failure is a top-down shock hitting "essentially every non-stablecoin", which is exactly the argument for scoring it as regime rather than per-asset catalyst.
+- **Rejected** — FOMC decision today 14:00 ET, ~90%+ odds of a 25bp hike — multiple outlets — post-cutoff scheduled event; flagged for tomorrow. The macro read already carries the rate path.
+- **Rejected** — live quotes across all names (BTC ~75.6k, META 678.60, AMZN 247.23, AAPL 333.55 on Yahoo/Google at ~09:36 ET) — the session's authoritative price is the coverage snapshot fetched 14:45 UTC; fresher quotes were not substituted anywhere.
