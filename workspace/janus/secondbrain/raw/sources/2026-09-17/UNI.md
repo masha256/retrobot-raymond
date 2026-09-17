@@ -1,0 +1,7 @@
+# UNI — sources checked, 2026-09-17
+
+- **Rejected** — "Uniswap Price Prediction: Surging Fees Put $9 in Focus" (Yahoo/FXEmpire) — https://ca.finance.yahoo.com/news/uniswap-price-prediction-surging-fees-145031668.html — published 2026-09-15 10:50 ET — protocol fee run-rate and monthly DEX-volume figures are cumulative data prints, not events; the Robinhood Chain launch is a prior-session story.
+- **Rejected** — "Uniswap (UNI) News Today: Why UNI Is Up – 15 September 2026" (CoinStats) — https://coinstats.app/ai/a/latest-news-for-uniswap — source itself states there is no verified governance, listing, unlock or protocol announcement explaining the move.
+- **Rejected** — 0x report claiming 54.2% of v4 hooks malicious + Hayden Adams rebuttal (The Defiant via CMC) — https://thedefiant.io/news/defi/0x-says-uniswap-v4-hooks-were-a-mistake-hayden-adams-says-skill-issue — published Sep 14, pre-dates the prior cutoff and was already absorbed in the Sep 15/16 tape.
+- **Rejected** — "MEV Bot Front-Runs $7.7M Wallet Exploit" (CMC, Sep 15) — https://coinmarketcap.com/cmc-ai/uniswap/latest-updates/ — third-party exploit intercepted, no protocol loss, not payoff-changing.
+- **Rejected** — UNIfication buyback/burn narrative (CryptoRank, Sep 2) — https://cryptorank.io/news/feed/8c989-uniswap-price-prediction-september-2026-uni-eyes-8-after-trendline-breakout — carried structural item, belongs in secular not catalyst.

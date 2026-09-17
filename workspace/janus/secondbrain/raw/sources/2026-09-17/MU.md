@@ -1,0 +1,6 @@
+# MU — sources checked, 2026-09-17
+
+- **Used** — "Micron Technology Has Just Shared Great News" (Seeking Alpha) — https://seekingalpha.com/article/4947243-micron-technology-has-just-shared-great-news — published 2026-09-16 18:04 ET — why it moved a factor: surfaces Micron's announcement of the world's first 512GB DDR5 module; real product print but incremental against an already-carried shortage thesis, catalyst +0.5.
+- **Used** — "Micron Technology to Report Fiscal Fourth Quarter Results on September 30, 2026" — https://investors.micron.com/news/press-release/2026/Micron-Technology-to-Report-Fiscal-Fourth-Quarter-Results-on-September-30-2026/default.aspx — published 2026-08-26 — why it moved a factor: confirms the Sep 30 binary already recorded in the screen; gates entry, no factor change.
+- **Rejected** — "Micron stock: could a valuation rerating drive MU shares to $1,600?" (Invezz) — https://invezz.com/news/2026/09/17/micron-stock-could-a-valuation-rerating-drive-mu-shares-to-1600 — published Sep 17 04:19 but pure valuation opinion, not an event.
+- **Rejected** — TD Cowen rerating note (MarketWatch, Sep 16 14:26 ET) — https://www.marketwatch.com/story/microns-stock-could-climb-70-higher-thanks-to-a-factor-thats-been-largely-absent-so-far-2489f2cc — sell-side analysis, not an event.

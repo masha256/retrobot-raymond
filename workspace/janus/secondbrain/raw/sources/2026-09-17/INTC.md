@@ -1,0 +1,6 @@
+# INTC — sources checked, 2026-09-17
+
+- **Used** — "SK Hynix in talks with Intel about deal to make memory chips in US for the first time, sources say" — https://www.reuters.com/world/asia-pacific/sk-hynix-talks-with-intel-about-deal-make-memory-chips-us-first-time-sources-say-2026-09-16/ — published 2026-09-16 — why it moved a factor: first credible external foundry customer of this scale; catalyst +1.5, cluster-moving, not present in any prior session rationale.
+- **Used** — "Intel, SK Hynix shares jump on report they're discussing U.S. memory chip manufacturing" (CNBC) — https://www.cnbc.com/2026/09/16/intel-sk-hynix-us-memory-chips.html — published 2026-09-16 — why it moved a factor: confirms the market reaction (INTC +4.03% on Sep 16) and that no deal is signed, which caps magnitude below +2.
+- **Rejected** — "Intel Stock Rallies As Massive Equity Raise Supercharges AI And Foundry Push" (Timothy Sykes) — https://www.timothysykes.com/news/intel-corporation-intc-news-2026_09_08 — Sep 8 item, already priced and outside the fresh-news window.
+- **Rejected** — Analyst target hike to $200 (Ben Reitzes, cited via Yahoo/Motley Fool) — https://finance.yahoo.com/markets/stocks/articles/stock-market-today-sept-16-212959692.html — sell-side opinion, not an event.
