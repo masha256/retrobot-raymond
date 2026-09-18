@@ -178,20 +178,20 @@
       "schedule_display": "15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 289
+        "completed": 292
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-06T08:57:25.404654-07:00",
-      "next_run_at": "2026-09-18T09:15:00-07:00",
-      "last_run_at": "2026-09-18T07:16:06.217044-07:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-09-18T12:15:00-07:00",
+      "last_run_at": "2026-09-18T10:15:55.610831-07:00",
+      "last_status": "blocked_config",
+      "last_error": "[blocked_config:silent] provider credential missing: No Anthropic credentials found. Set ANTHROPIC_TOKEN or ANTHROPIC_API_KEY, run 'claude setup-token', or authenticate with 'claude /login'.. Set the provider API key in .env (or `hermes setup`), or pin a working provider via `hermes cron edit 0b68001d8a20 --provider <p>`.",
       "last_delivery_error": null,
       "last_delivery_unverified": null,
-      "failure_streak": 0,
+      "failure_streak": 2,
       "deliver": "local",
       "origin": {
         "platform": "telegram",
@@ -206,16 +206,16 @@
       ],
       "workdir": null,
       "fire_claim": {
-        "at": "2026-09-18T08:15:52.180059-07:00",
-        "by": "uranus:133148:634ea7f8900340229ef04ada3e3b2bc9"
+        "at": "2026-09-18T11:15:55.468591-07:00",
+        "by": "uranus:133148:580fca4a0c6d41b7bf16bc576100068f"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-09-18T08:15:00-07:00",
-        "dispatched_at": "2026-09-18T08:15:51.919311-07:00",
-        "lateness_seconds": 51.9,
+        "scheduled_at": "2026-09-18T11:15:00-07:00",
+        "dispatched_at": "2026-09-18T11:15:55.208411-07:00",
+        "lateness_seconds": 55.2,
         "kind": "on_time"
       }
     }
   ],
-  "updated_at": "2026-09-18T08:15:52.180464-07:00"
+  "updated_at": "2026-09-18T11:15:55.981054-07:00"
 }
