@@ -1,0 +1,8 @@
+# BTC — sources checked, 2026-09-18
+
+- **Rejected** — "Corporate treasuries bought just 5,900 bitcoin in 3 months. Other demand signals look weak, too." (CoinDesk) — https://www.coindesk.com/markets/2026/09/18/corporate-treasuries-bought-just-5-900-bitcoin-in-3-months-other-demand-signals-look-weak-too — published 2026-09-18, pre-cutoff — a cumulative three-month demand tally. Backward-looking data print, explicitly not an event under SCORE.md; catalyst 0.
+- **Rejected** — "Market update — September 18th, 2026" (CoinShares, James Butterfill) — https://coinshares.com/insights/research-data/market-update-18-09-2026 — house research restating the Fed hike and CLARITY setback, both already carried in the macro/cluster regime; commentary, not an event.
+- **Rejected** — "Bitcoin is set to hit a key level by next year … VanEck" (CNBC, Sep 18 02:10 ET) — https://www.cnbc.com/2026/09/18/bitcoin-cryptocurrency-forecast-vaneck.html — a forecast, not an event.
+- **Rejected** — "Bitcoin Market Recap — September 18, 2026" (Bitcoin News Center) — https://bitcoinnewscenter.com/bitcoin-market-recap-september-18-2026-btc-eyes-78-5k-highs — price-action recap with post-anchor levels; the coverage snapshot is authoritative and must not be replaced.
+- **Rejected** — "BlackRock IBIT options expiry on September 18" (CoinStats AI) — https://coinstats.app/ai/a/latest-news-for-bitcoin — a scheduled mechanical expiry, not new asset-specific information.
+- **Note** — prices in secondary sources ($76.4k–$80.4k intraday) run ahead of the 10:00 ET coverage close of 80,759. Per SCORE.md this gap was not chased; factors read off the snapshot.

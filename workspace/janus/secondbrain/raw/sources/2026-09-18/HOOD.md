@@ -1,0 +1,6 @@
+# HOOD — sources checked, 2026-09-18
+
+- **Used** — "SEC Issues 'Innovation Exemption' to Facilitate the Trading of Tokenized NMS Stock" (SEC press release 2026-90) — https://www.sec.gov/newsroom/press-releases/2026-90-sec-issues-innovation-exemption-facilitate-trading-tokenized-nms-stock-request-comment — published 2026-09-17 — why it moved a factor: the five-year conditional path for onchain tokenized-equity trading is the regulatory unlock for Robinhood's tokenization business line. Catalyst +1.5.
+- **Used** — "Stock Market Today (Sept. 17, 2026)" (TheStreet) — https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-17-2026 — published 2026-09-17 09:02 ET — why it moved a factor: confirms the order landed pre-cutoff and frames it against the CLARITY Act failure two days earlier, i.e. genuinely new information versus what was already scored.
+- **Rejected** — "Robinhood CEO Comments on Prediction Markets Supercycle" (fiscal.ai) — https://fiscal.ai/company/NasdaqGS-HOOD — undated executive commentary, not an event; undateable counts as post-cutoff.
+- **Rejected** — Robinhood IR press releases (Aug 2026 operating data, Sep 10) — https://investors.robinhood.com — monthly operating data is a backward-looking print, not an event, and predates the session.

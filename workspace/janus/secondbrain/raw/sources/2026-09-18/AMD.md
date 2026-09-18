@@ -1,0 +1,6 @@
+# AMD — sources checked, 2026-09-18
+
+- **Rejected** — "GMKtec Unveils EVO-X5 Pro at IFA 2026 with AMD Ryzen AI Max Processors" (Newsfile, Sep 18) — https://markets.financialcontent.com/stocks/article/newsfile-2026-9-18-gmktec-unveils-evo-x5-pro-at-ifa-2026-with-amd-ryzentm-ai-max-processors-introducing-the-worlds-first-desktop-ai-supercomputer-capable-of-running-a-300b-parameter-llm-fully-offline — a third-party OEM product launch using AMD silicon; no measurable revenue impact disclosed and not an AMD event. Catalyst 0.
+- **Rejected** — "Prediction: AMD's Biggest Growth Opportunity May Still Be Ahead" (24/7 Wall St., Sep 18) — https://247wallst.com/investing/2026/09/18/prediction-amds-biggest-growth-opportunity-may-still-be-ahead/ — opinion piece restating Q2 2026 results; not an event.
+- **Rejected** — "AMD Leads Chip Stocks Higher Amid Sector Rebound" (Investor's Business Daily) — https://www.investors.com/news/technology/amd-stock-leads-chip-stocks-sox-index-higher-amid-sector-rebound/ — no recoverable date on the page; undateable counts as post-cutoff, and it is sector price action already held in the cluster regime.
+- **Rejected** — SK Hynix/Intel memory-manufacturing talks (Reuters, Sep 16) — cluster-level, already scored Sep 17 under INTC and carried in the ai_semis cluster regime.

@@ -1,0 +1,8 @@
+# SOL — sources checked, 2026-09-18
+
+- **Used** — "Solana Cuts Slot Time to 250 Milliseconds: What to Check Before Friday" (CryptoTicker) — https://cryptoticker.io/en/solana-slot-time-250-milliseconds-check — published 2026-09-17 — why it moved a factor: dates and specifies the SIMD-0525 activation at the epoch 1037 boundary, ~05:01 UTC on 2026-09-18, i.e. pre-cutoff and live today. Real protocol change but a scheduled third step of a published staircase (400→350→300→250→200ms), so catalyst +0.5 rather than +1.0.
+- **Used** — "Solana speeds up blocks by 17%, but transaction capacity stays the same" (CoinDesk) — https://www.coindesk.com — published 2026-09-18 (~5h before anchor) — why it moved a factor: tempers the upgrade — per-slot compute ceilings fall with slot time, so throughput is unchanged. This is why catalyst stays at +0.5 and is not scaled up.
+- **Rejected** — "Moscow Exchange Plans SOL Perpetuals" (CMC AI, 2026-09-18) — https://coinmarketcap.com/cmc-ai/solana/latest-updates/ — a proposal pending regulatory approval, not a confirmed event; also secondary aggregation.
+- **Rejected** — "Project Harmonia Brings Institutional Tokenized Funds to Solana" (solana.com, Sep 16) — https://solana.com/news — prior-session item, submissions don't close until Oct 24; not new today.
+- **Rejected** — "CLARITY Act Fallout Hits SOL" (CMC AI, Sep 17) — market-wide regulatory shock already carried in the crypto cluster regime, not SOL-specific.
+- **Rejected** — Polymarket "Solana price on September 18?" — https://polymarket.com/event/solana-price-on-september-18-2026 — a price market, not information about the asset.
