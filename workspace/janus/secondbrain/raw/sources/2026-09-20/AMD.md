@@ -1,0 +1,5 @@
+# AMD — sources checked, 2026-09-20
+
+- **Rejected** — "AMD Stock And Other AI Infrastructure Names Investors Are Screening Closely" — https://simplywall.st/stocks/us/semiconductors/nasdaq-amd/advanced-micro-devices/news/amd-stock-and-other-ai-infrastructure-names-investors-are-sc — published 2026-09-19 — screening/narrative piece, no dated AMD event.
+- **Rejected** — AMD and Intel validating Micron's 512GB DDR5 module for next-gen server platforms — https://finance.yahoo.com/technology/articles/micron-mu-unveils-breakthrough-memory-171152232.html — underlying announcement 2026-09-15 — cluster-level read-through already inside the ai_semis regime, and prior-session dated.
+- **Used** — janus coverage 2026-09-20 (close 555.24, +0.34%, +10.21/+13.20/+32.28% vs 20/50/200-day, golden cross 24d, 12 sessions above the 50-day, mark 555.15 vs index 554.79, funding_ref 2.5e-5, OI 657 up from 547) — internal — why it moved a factor: top rung held at +1.5 as the only cluster name that did not give back extension; fractional mark premium plus rising OI put crowding modestly above neutral at reduced confidence (funding_ref near zero on a shut cash tape).

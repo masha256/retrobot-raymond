@@ -1,0 +1,7 @@
+# MU — sources checked, 2026-09-20
+
+- **Rejected** — "Micron (MU) Unveils Breakthrough Memory Product" (512GB DDR5 RDIMM demo, 9,200 MT/s, AMD and Intel validating) — https://finance.yahoo.com/technology/articles/micron-mu-unveils-breakthrough-memory-171152232.html — announced 2026-09-15, article 2026-09-19 — prior-session item, not new today.
+- **Rejected** — "Memory Shortage to Linger Until 2030, Setting Stage for Micron's Earnings" (FQ4 guide $50B rev / ~86% GM; MS target $1,200, BMO $1,300) — https://finance.biggo.com/news/89711ae7-5af8-41ae-a4ac-1d02ff82f7f4 — analysis and analyst revisions, not dated events; guidance itself is prior-quarter.
+- **Rejected** — "AMD Stock And Other AI Infrastructure Names Investors Are Screening Closely" — https://simplywall.st/stocks/us/semiconductors/nasdaq-amd/advanced-micro-devices/news/amd-stock-and-other-ai-infrastructure-names-investors-are-sc — published 2026-09-19 — screening commentary, not asset-specific news.
+- **Used** — janus screen row 2026-09-20 (binary_date 2026-09-30, fiscal Q4 earnings confirmed per the company's Aug 26 announcement) — internal — why it moved a factor: confirmed binary inside the 14-day cooldown; binary_gate returned `blocked`.
+- **Used** — janus coverage 2026-09-20 (close 1,002.45, -0.47%, +2.20/+5.78% vs 20/50-day, sma200 null at 140 bars, funding_ref 0) — internal — why it moved a factor: no 200-day and no 50/200 cross means the above-20-and-50 rung only (+1.0), with the 200-day input declared neutral rather than estimated.
