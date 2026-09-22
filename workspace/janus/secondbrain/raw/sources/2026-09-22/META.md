@@ -1,0 +1,8 @@
+# META — sources checked, 2026-09-22
+
+- **Used** — "Muse, Meta's extraordinarily privileged AI assistant, has a serious 0-day" (Ars Technica, Dan Goodin) — https://arstechnica.com/security/2026/09/muse-metas-extraordinarily-privileged-ai-assistant-has-a-serious-0-day/ — published Sep 21 2026 18:24 ET — why it moved a factor: new, asset-specific, pre-cutoff security defect in Meta's flagship AI agent granting attacker access to WhatsApp/email/calendar; negative catalyst −0.5.
+- **Used** — "Meta patches Muse exploit that let attackers control the AI agent" (The Verge) — https://www.theverge.com/tech/998679/meta-muse-patch-zero-day-exploit-ai-agent — published Sep 22 2026 11:53 UTC (07:53 ET) — why it moved a factor: pre-cutoff confirmation the defect is patched, which caps the magnitude at −0.5 rather than worse.
+- **Rejected** — "Meta's Muse AI agent downloads are surging" (CNBC, Sep 21) — https://www.cnbc.com/2026/09/21/meta-muse-personal-ai-agent-downloads.html — adoption data print, not an event; supports secular not catalyst.
+- **Rejected** — Wells Fargo target raise to $796 driving Monday's +11% (TipRanks/TIKR, Sep 21) — https://www.tipranks.com/news/why-meta-stock-jumped-over-11-today-september-21-2026 — sell-side revision and a prior-session item.
+- **Rejected** — Meta Connect 2026, Sep 23–24 — scheduled forward binary, not today's news; noted in rationale.
+- **Rejected** — Malwarebytes writeup of the same Muse 0-day — https://www.malwarebytes.com/blog/bugs/2026/09/metas-muse-ai-assistant-has-a-zero-day-that-can-turn-it-into-a-mac-backdoor — duplicate of the Ars primary.
