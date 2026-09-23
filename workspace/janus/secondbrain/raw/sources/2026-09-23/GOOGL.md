@@ -1,0 +1,9 @@
+# GOOGL — sources checked, 2026-09-23
+
+- **Rejected** — "Anthropic, OpenAI, Google, and SpaceXAI Face Antitrust Lawsuit Over AI Slowdown Pact" (gHacks) — https://www.ghacks.net/2026/09/21/anthropic-openai-google-and-spacexai-face-antitrust-lawsuit-over-ai-slowdown-pact — filed Sep 18, published Sep 21 — prior-session item, not new today.
+- **Rejected** — "California lawsuit accuses Google, OpenAI, Anthropic, and xAI of an unlawful AI slowdown pact" (Yahoo News) — https://www.yahoo.com/news/politics/articles/california-lawsuit-accuses-google-openai-203500729.html — published Sep 21 20:35 UTC — same suit, duplicate coverage.
+- **Rejected** — "Google (Alphabet) Fined in Ireland" (MarketScreener) — https://www.marketscreener.com/news/google-alphabet-fined-in-ireland-ce785adbdf88f727 — published Sep 21 10:44 ET — prior session.
+- **Rejected** — "Autonomous agents not ready for independent responsibility, says Google cybersecurity expert" (Economic Times) — https://economictimes.indiatimes.com/topic/gemini-ai — Sep 23 06:00 IST — executive commentary, not a payoff-changing event.
+- **Rejected** — "Google Takes on Apple, Microsoft With AI-Powered Laptops" (MarketScreener) — https://www.marketscreener.com/news/google-takes-on-apple-microsoft-with-ai-powered-laptops-ce785adbde80f221 — Sep 21 14:38 ET — prior session.
+- **Note** — no Alphabet-specific pre-cutoff item was found that explains the -3.88% session. Per SCORE.md, the gap between price and permitted news is left unexplained rather than back-filled; catalyst recorded 0 and the move is taken as trend structure only.
+- **Used** — janus coverage row 2026-09-23 — close 341.83, -3.88%, px_vs_sma20/50/200 -0.42/-1.13/-1.54%, cross_50_200 death age 1 (printed today), cross_px_50 below age 0, funding_ref 2.4735e-4 — drove the trend rung break to -1.5 and the 60-80 crowded-long band feeding the bearish divergence.
