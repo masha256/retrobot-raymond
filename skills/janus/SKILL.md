@@ -20,6 +20,14 @@ screening, coverage, clusters, macro reads, trade logging, or anything related t
 the Lighter perpetuals trading system. If janus is involved in any way, read this
 file and the janus `README.md` before acting.
 
+## Pitfall: target the live DB
+
+`source ~/.bashrc` does not export `JANUS_DB` in agent/cron terminal calls (bashrc exits early when non-interactive), and the default DB is empty, so a phase would silently write to the wrong place. Start every run with `export JANUS_DB=/home/hermes/.hermes/profiles/raymond/workspace/janus/janus.db` and confirm `janus cluster list` returns 3 clusters.
+
+## Pitfall: cron sandbox blocks some tooling
+
+In cron runs `execute_code` is blocked, and so are terminal commands that build large nested `{ ... } > file` blocks with `$(...)` substitutions (Tirith security scan). Pull data with simple `janus ... | jq` calls, then write the report with `write_file`.
+
 ## One envelope per command
 
 ```json
