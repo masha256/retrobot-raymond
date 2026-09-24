@@ -178,20 +178,20 @@
       "schedule_display": "15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 419
+        "completed": 421
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-06T08:57:25.404654-07:00",
-      "next_run_at": "2026-09-23T19:15:00-07:00",
-      "last_run_at": "2026-09-23T17:15:38.599180-07:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-09-23T21:15:00-07:00",
+      "last_run_at": "2026-09-23T19:35:33.191042-07:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: HTTP 429: This request would exceed your account's rate limit. Please try again later.",
       "last_delivery_error": null,
       "last_delivery_unverified": null,
-      "failure_streak": 0,
+      "failure_streak": 1,
       "deliver": "local",
       "origin": {
         "platform": "telegram",
@@ -206,16 +206,16 @@
       ],
       "workdir": null,
       "fire_claim": {
-        "at": "2026-09-23T18:15:29.001955-07:00",
-        "by": "uranus:272737:c7a0271d2629425cbc050b1f2f3a0d94"
+        "at": "2026-09-23T20:15:29.008993-07:00",
+        "by": "uranus:272737:5fe32f3e6bcf4561bdaac00038d12680"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-09-23T18:15:00-07:00",
-        "dispatched_at": "2026-09-23T18:15:28.632142-07:00",
+        "scheduled_at": "2026-09-23T20:15:00-07:00",
+        "dispatched_at": "2026-09-23T20:15:28.632275-07:00",
         "lateness_seconds": 28.6,
         "kind": "on_time"
       }
     }
   ],
-  "updated_at": "2026-09-23T18:15:29.002382-07:00"
+  "updated_at": "2026-09-23T20:15:29.009406-07:00"
 }
