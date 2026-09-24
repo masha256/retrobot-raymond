@@ -1,0 +1,6 @@
+# ORCL — sources checked, 2026-09-24
+
+- **Used** — Oracle stock drops as the company moves to shield itself from controversial data center costs (Yahoo Finance, citing Bloomberg) — https://finance.yahoo.com/markets/article/oracle-stock-drops-as-the-company-moves-to-shield-itself-from-controversial-data-center-costs-133351264.html — published 2026-09-24 08:33 CDT (09:33 ET) — force majeure invoked on Project Jupiter (NM, 2.45GW) with Blue Owl developer; catalyst -1.0
+- **Used** — Bloomberg: Oracle cites force majeure to shield itself on controversial data center — https://www.bloomberg.com/news/articles/2026-09-24/oracle-cites-force-majeure-to-shield-itself-on-controversial-data-center — 2026-09-24, pre-cutoff per Yahoo timestamp (paywalled, not read directly)
+- **Rejected** — Oracle's stock is falling as investors fear a data-center setback (MarketWatch via Morningstar) — https://www.morningstar.com/news/marketwatch/20260924117/oracles-stock-is-falling-as-investors-fear-a-data-center-setback — 13:39, post-cutoff follow-up
+- **Rejected** — Oracle Has Fallen Nearly 20% in 2026 (Yahoo) — https://finance.yahoo.com/markets/stocks/articles/oracle-fallen-nearly-20-2026-112546569.html — Sep 7 analysis, stale
