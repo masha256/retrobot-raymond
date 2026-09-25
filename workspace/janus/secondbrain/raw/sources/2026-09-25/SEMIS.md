@@ -1,0 +1,4 @@
+# AMD / INTC / MU / SNDK — sources checked, 2026-09-25
+
+- **Rejected** — TipRanks: "Why Are AI Chip Stocks AMD, INTC, MU, and SNDK Rising in Pre-Market Today, Sept. 25?" — https://www.tipranks.com/news/why-are-ai-chip-stocks-amd-intc-mu-and-sndk-rising-in-pre-market-today-sept-25 — published 2026-09-25 pre-market — move attributed to macro (US-Iran talks, Trump-Xi) and Muse CPU-demand commentary; not asset-specific events. Confirms MU FQ4 print Sep 30 (consensus EPS $31.49, rev ~$50.9B) — already the recorded binary
+- **Rejected** — Yahoo Finance "Tech stocks today: Intel stock soars 25%..." — https://finance.yahoo.com/sectors/technology/live/tech-stocks-today-intel-stock-soars-25-meta-to-cut-10-of-workforce-microsoft-offerings-buyouts-144220036.html — undated live blog (appears to be an older earnings day) — undateable, treated as post-cutoff/irrelevant
