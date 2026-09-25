@@ -1,109 +1,110 @@
 #!/usr/bin/env bash
 set -euo pipefail
 export JANUS_DB=/home/hermes/.hermes/profiles/raymond/workspace/janus/janus.db
-D=2026-09-16
-r() { janus screen record "$@" --date $D || { echo "FAILED: $1"; exit 1; }; }
+D=2026-09-25
+r() { out=$(janus screen record "$@" --date $D) || { echo "FAILED: $1 $out"; exit 1; }; echo "$1 $(echo "$out" | jq -c '{ok, d:.data}' | head -c 400)"; }
 
-# ---------- CRYPTO (cluster regime -1.3) ----------
-r ZEC --metric score=8 --metric confidence=0.85 \
-  --rationale "Strongest trend in the book: +11.75% today, +21.2% vs 20-day, +66.1% vs 50-day, +153.6% vs 200-day with golden cross 123 sessions old. Funding 0.000096 matches the 0.0001 reference, so the move is spot-led rather than a crowded perp bid; 10.5% ATR makes it extended, not broken."
-r ARB --metric score=7 --metric confidence=0.8 \
-  --binary-date 2026-09-16 --binary-reason "Scheduled vesting unlock of roughly 92.6M ARB releasing to investors, team and DAO treasury." \
-  --rationale "+6.88% today with a golden cross only 2 sessions old and +16.95%/+52.86%/+57.10% vs the 20/50/200-day - the cleanest fresh trend inflection in crypto. Today's unlock is the offset and gates new entries."
-r NEAR --metric score=7 --metric confidence=0.8 \
-  --rationale "+3.79% into a risk-off crypto tape, above all three MAs (+12.19%/+28.90%/+41.31%) with golden cross 113 sessions old. Funding 0.0001 in line with reference; no known catalyst, so this is pure relative strength."
-r APT --metric score=6 --metric confidence=0.85 \
-  --rationale "Cleanest bear structure in the roster: death cross 200 sessions, -9.60%/-8.62%/-31.46% vs the 20/50/200-day, -7.40% today and lost the 50-day yesterday. Funding negative at -0.000176 vs -0.000155 reference confirms short-side positioning rather than contradicting it."
-r VVV --metric score=6 --metric confidence=0.75 \
-  --rationale "Holds +11.94%/+39.18%/+78.61% vs the 20/50/200-day despite -2.12% today. 13.0% ATR is the widest in the book, so the trend is real but the entry is poor."
-r LIT --metric score=6 --metric confidence=0.75 \
-  --rationale "+1.10% on a red crypto day and still +32.03%/+128.55% vs the 50/200-day, though only +0.84% vs the 20-day - momentum is intact but flattening. Funding 0.000096 runs above the -0.000036 reference, a mild crowding tell."
-r ENA --metric score=5 --metric confidence=0.75 \
-  --rationale "Essentially flat (-0.20%) while the complex sold off, holding +16.13%/+39.54% vs the 50/200-day but -6.68% below the 20-day. Structurally strong, tactically mid-range."
-r HYPE --metric score=5 --metric confidence=0.75 \
-  --rationale "+1.46% against a red tape with +11.55%/+40.87% vs the 50/200-day, but -4.58% below the 20-day keeps it a pullback rather than a breakout. Funding 0.0001 matches reference."
-r UNI --metric score=5 --metric confidence=0.75 \
-  --rationale "-4.57% today drops it to -0.50% vs the 20-day, but it still holds +26.09%/+62.84% vs the 50/200-day. Funding 0.000096 vs a -0.000052 reference is the one crowding flag."
-r BNB --metric score=5 --metric confidence=0.8 \
-  --rationale "Most resilient major: only -0.93% below its 20-day versus -3.01% for BTC and -2.93% for ETH, holding +7.40%/+13.36% vs the 50/200-day with the 50-day reclaimed 45 sessions ago. Funding slightly negative at -0.000016."
-r OP --metric score=5 --metric confidence=0.8 \
-  --rationale "-7.99% today and lost the 50-day at age 0, with death cross 200 sessions and -15.36% vs the 200-day. Funding stays positive at 0.0001, so longs have not capitulated - a live bear case."
-r XLM --metric score=5 --metric confidence=0.8 \
-  --rationale "-9.36% today, lost the 50-day at age 0, with a fresh death cross only 6 sessions old and all three MA distances negative. Funding 0.0001 versus a -0.000095 reference shows longs still paying into the breakdown."
-r BTC --metric score=4 --metric confidence=0.85 \
-  --rationale "-1.00% and -3.01% below the 20-day, but longer structure holds at +5.29%/+7.71% vs the 50/200-day with golden cross 8 sessions old. Funding 0.000096 vs 0.000069 reference is neutral - a trend break inside an intact uptrend, no discrete edge."
-r ETH --metric score=4 --metric confidence=0.85 \
-  --rationale "-1.36%, -2.93% below the 20-day but +7.79%/+15.74% vs the 50/200-day and above the 50-day for 68 sessions. Funding near zero at 0.000024; consolidation, not a setup."
-r SOL --metric score=4 --metric confidence=0.8 \
-  --rationale "-2.32% and -4.76% below the 20-day, still +8.54%/+16.43% vs the 50/200-day with golden cross 14 sessions old. Funding 0.000024 basically flat - same inert-major profile as BTC/ETH."
-r AAVE --metric score=4 --metric confidence=0.8 \
-  --rationale "-6.85% today pushes it to -7.97% vs the 20-day while holding +5.50%/+19.95% vs the 50/200-day. Funding 0.000096 against a -0.000053 reference means Lighter longs are paying into a flush."
-r CRV --metric score=4 --metric confidence=0.8 \
-  --rationale "-10.57% today, -11.31% vs the 20-day, but still +4.91%/+26.87% above the 50/200-day with golden cross 23 sessions old. Funding negative on both venues; a sharp flush without a structural break."
-r LINK --metric score=4 --metric confidence=0.8 \
-  --rationale "-5.24% today, -8.06% vs the 20-day, holding +3.55%/+16.60% vs the 50/200-day after 64 sessions above the 50-day. Funding flat at 0.000024 - no edge either way."
-r MORPHO --metric score=4 --metric confidence=0.75 \
-  --rationale "-12.43% vs the 20-day and -6.33% vs the 50-day, below the 50-day 3 sessions, with only +5.28% vs the 200-day left as cushion. Deteriorating but not yet a confirmed downtrend."
-r LDO --metric score=4 --metric confidence=0.75 \
-  --rationale "-6.76% today, lost the 50-day at age 1, sitting -11.34%/-4.00% vs the 20/50-day with the 200-day distance now flat at -0.10%. Golden cross 26 sessions old is at risk of reversing."
-r AERO --metric score=4 --metric confidence=0.75 \
-  --rationale "-3.53% to -2.09% below the 20-day but still +9.19%/+21.07% vs the 50/200-day with golden cross 87 sessions old. 9.2% ATR and no catalyst; middling."
-r POL --metric score=4 --metric confidence=0.75 \
-  --rationale "Golden cross just triggered at age 1, but -5.52% today and -4.42% below the 20-day undercuts it; only +3.63%/+4.46% vs the 50/200-day. Fresh signal with weak confirmation."
-r AVAX --metric score=3 --metric confidence=0.8 \
-  --rationale "Death cross 200 sessions and -9.20% vs the 200-day, though it holds +3.25% vs the 50-day after -2.37% today. Funding slightly negative at -0.000048; conflicted structure, no clean side."
-r ONDO --metric score=3 --metric confidence=0.8 \
-  --rationale "Below both the 20- and 50-day (-6.35%/-7.31%) with only +1.16% vs the 200-day left, and lost the 50-day 7 sessions ago. Weak drift rather than a tradeable break."
-r JUP --metric score=3 --metric confidence=0.75 \
-  --rationale "-7.12% today to -7.69% vs the 20-day, leaving only +3.10% vs the 50-day of cushion. Funding 0.000096 against a -0.000107 reference is the only notable divergence."
-r MNT --metric score=3 --metric confidence=0.7 \
-  --rationale "Flat at +0.17% but caught between +10.72% vs the 50-day and -4.39% vs the 200-day with death cross 199 sessions. No direction; thin 19.7k volume limits read quality."
-r LINEA --metric score=3 --metric confidence=0.7 \
-  --rationale "-3.66% today, -5.27% vs the 20-day, marginally +1.60% vs the 50-day and -15.07% vs the 200-day under a 181-session death cross. Weak-side drift, no catalyst known."
-r TRX --metric score=2 --metric confidence=0.85 \
-  --rationale "Inert: -0.32% today with all three MA distances inside +/-2.3% and a 1.4% ATR, the tightest in the roster. Funding -0.00016 is the only movement; nothing to trade."
+# ---------- CRYPTO (cluster regime +0.1) ----------
+r BTC --metric score=8 --metric confidence=0.85 \
+  --rationale "Sixth straight US spot ETF inflow (+190.7M USD on Sep 24, 5-session sum +2,684.3M) under a 17-day golden cross, with price +4.5%/+10.9%/+17.8% over the 20/50/200-day despite -1.0% on the snapshot. Lighter funding 0.0096%/8h is at the venue floor against a 0.0009% reference, so no long crowding."
+r ETH --metric score=7 --metric confidence=0.8 \
+  --rationale "Same structure as BTC without its own flow print: flat on the snapshot at +4.8%/+13.7%/+27.9% over the 20/50/200-day on a 25-day golden cross, funding 0.0096%/8h vs a 0.0067% reference. ETH-specific ETF flow unavailable and treated as neutral."
+r SOL --metric score=6 --metric confidence=0.75 \
+  --rationale "Trend intact and unextended: +2.6% on the snapshot, +11.5%/+23.4%/+41.0% over the 20/50/200-day on a 23-day golden cross, funding 0.0096%/8h vs a 0.0100% reference. No SOL-specific flow confirmation."
+r BNB --metric score=5 --metric confidence=0.7 \
+  --rationale "Healthy but undifferentiated: +3.4%/+11.3%/+22.2% over the 20/50/200-day on a 22-day golden cross, -1.0% on the snapshot, 3.1% ATR. Nothing separates it from the cluster."
+r AAVE --metric score=6 --metric confidence=0.75 \
+  --rationale "Clean uptrend: +2.0% on the snapshot, +10.3%/+23.0%/+49.0% over the 20/50/200-day on a 30-day golden cross, 6.7% ATR. Funding 0.0096%/8h vs a 0.0100% reference shows no crowding; OI and catalyst data unavailable, treated as neutral."
+r AERO --metric score=5 --metric confidence=0.65 \
+  --rationale "Up 11.7% on the snapshot to +29.0%/+51.7% over the 20/50-day, well past the late-trend line. Lighter funding 0.0680%/8h is about 7x the 0.0100% reference, a crowded-long read that offsets the momentum."
+r APT --metric score=4 --metric confidence=0.65 \
+  --rationale "+23.7%/+36.1% over the 20/50-day but only +9.4% over the 200-day inside a 200-day-old death cross; flat (+0.8%) on the snapshot. Extended bounce into damaged long-run structure."
+r ARB --metric score=6 --metric confidence=0.65 \
+  --rationale "Golden cross 11 days old is a real regime change, but +21.7%/+70.9% over the 20/50-day with an 11.1% ATR is one of the most extended entries in the book. Next unlock (Oct 16) sits outside the 14-day window."
+r AVAX --metric score=4 --metric confidence=0.7 \
+  --rationale "Extended bounce (+17.9%/+33.9% over the 20/50-day) inside a 200-day-old death cross, -1.1% on the snapshot. Funding 0.0096%/8h vs 0.0064% reference, neutral."
+r CRV --metric score=4 --metric confidence=0.7 \
+  --rationale "Fell 2.7% on the snapshot and is back 1.4% below the 20-day, so the short-term break is not repaired despite a 32-day golden cross and +8.1% over the 50-day."
+r ENA --metric score=6 --metric confidence=0.6 \
+  --binary-date 2026-10-05 --binary-reason "Ethena releases all remaining locked investor tokens in a single accelerated unlock on October 5, 2026." \
+  --rationale "Up 14.4% on the snapshot to +41.9%/+71.2% over the 20/50-day on a 26-day golden cross, far past the late-trend line with an 8.2% ATR. The Oct 5 accelerated unlock gates new entries."
+r HYPE --metric score=6 --metric confidence=0.7 \
+  --binary-date 2026-10-06 --binary-reason "A projected 9.92M HYPE core-contributor unlock, roughly 4% of circulating supply, is scheduled for October 6, 2026." \
+  --rationale "Mature uptrend on a 172-day golden cross at +6.2%/+18.8% over the 20/50-day, -1.9% on the snapshot. Lighter funding at the 0.0096% floor vs a slightly negative -0.0006% reference, so longs are not crowded; the Oct 6 unlock gates entries."
+r JUP --metric score=5 --metric confidence=0.65 \
+  --rationale "Up 4.4% on the snapshot within a 117-day golden cross, but +23.1%/+44.1% over the 20/50-day is past the late-trend line. Funding normalized to 0.0096% vs a 0.0100% reference; no catalyst data."
+r LDO --metric score=6 --metric confidence=0.7 \
+  --rationale "Second strong follow-through session (+6.7% after +7.2%) confirms the 50-day reclaim from 9 sessions ago, now +14.5%/+24.6% over the 20/50-day on a 35-day golden cross and still under the late-trend line. Lighter funding 0.0168%/8h vs 0.0100% reference is a mild warm-up, not crowding."
+r LINEA --metric score=4 --metric confidence=0.7 \
+  --rationale "Only +0.5% over the 200-day inside a 190-day death cross; +6.2%/+14.7% over the 20/50-day is a bounce within broken long-run structure."
+r LINK --metric score=6 --metric confidence=0.7 \
+  --rationale "Up 7.8% on the snapshot to +13.2%/+23.9%/+47.7% over the 20/50/200-day on a 30-day golden cross, 73 sessions above the 50-day and still inside the late-trend line. Funding 0.0096% vs a 0.0100% reference; move recorded as an observation, no catalyst attributed."
+r LIT --metric score=5 --metric confidence=0.5 \
+  --rationale "Fell 8.4% on the snapshot, cutting the 20-day cushion to +3.0% while still +137% over the 200-day with a 9.8% ATR. Funding is negative on both Lighter (-0.0320%) and the reference (-0.0203%), so shorts are paying; momentum is fading from an extreme."
+r MNT --metric score=4 --metric confidence=0.7 \
+  --rationale "+9.2%/+23.3% over the 20/50-day but the 50/200 death cross is 200 days old and it fell 2.3% on the snapshot. Short-term strength inside unrepaired long-run structure."
+r MORPHO --metric score=6 --metric confidence=0.65 \
+  --rationale "Gave back 2.1% after yesterday's surge but holds +14.2%/+18.5% over the 20/50-day on a 186-day golden cross, 8 sessions above the 50-day. Lighter funding 0.0096% vs a -0.0043% reference; no OI or catalyst data."
+r NEAR --metric score=5 --metric confidence=0.65 \
+  --rationale "Parabolic: +10.2% on the snapshot atop +58.1%/+114.3% over the 20/50-day with a 10.0% ATR. Funding neutral (0.0120% vs 0.0100%), but the entry is blow-off risk."
+r ONDO --metric score=6 --metric confidence=0.6 \
+  --rationale "Up another 5.0% to +35.5%/+45.3% over the 20/50-day on a 112-day golden cross, well past the late-trend line. Lighter funding normalized to 0.0096% vs 0.0100% reference (from ~3x yesterday); the move is unexplained and not researched."
+r OP --metric score=4 --metric confidence=0.7 \
+  --rationale "Up 3.8% to +24.3%/+36.9% over the 20/50-day but the death cross is 200 days old; extended bounce in broken structure. Routine Sep 30 linear unlock is anticipated and not treated as binary."
+r POL --metric score=6 --metric confidence=0.65 \
+  --rationale "Up 7.8% on the snapshot confirming a 10-day golden cross, +12.6%/+19.9%/+28.8% over the 20/50/200-day and still inside the late-trend line. Fresh structure; no flow or catalyst data."
+r TRX --metric score=3 --metric confidence=0.8 \
+  --rationale "No edge: 0.6% below the 20-day and 0.2% above the 50-day with a 1.6% ATR. Funding negative on Lighter (-0.0168%) and reference (-0.0230%) is carry, not direction."
+r UNI --metric score=6 --metric confidence=0.6 \
+  --rationale "Strong momentum at +26.1%/+69.2% over the 20/50-day on a 48-day golden cross, +4.0% on the snapshot, but far past the late-trend line with a 10.1% ATR. No catalyst data."
+r VVV --metric score=5 --metric confidence=0.6 \
+  --rationale "Flat on the snapshot at +19.2%/+59.3%/+126.0% over the 20/50/200-day with a 10.8% ATR; mature golden cross but heavily extended entry and no catalyst data."
+r XLM --metric score=5 --metric confidence=0.7 \
+  --rationale "Golden cross now 5 days old with +3.0% on the snapshot to +12.2%/+19.0% over the 20/50-day. Fresh turn, not yet a trend; 289 bars of history."
+r ZEC --metric score=6 --metric confidence=0.6 \
+  --rationale "Strongest long-run trend in the roster (+64.7% over the 50-day on a 132-day golden cross), +2.7% on the snapshot, but +180.8% over the 200-day with a 9.3% ATR is extreme extension. Funding 0.0192% vs 0.0100% reference, modestly warm."
 
-# ---------- AI / SEMIS (cluster regime -1.0) ----------
-r AMD --metric score=7 --metric confidence=0.85 \
-  --rationale "Cluster leader: +3.59% today, above all three MAs at +7.32%/+7.99%/+26.62% with golden cross 20 sessions old and the 50-day reclaimed 8 sessions ago. Semis outperformance is the one constructive cluster signal today."
-r INTC --metric score=6 --metric confidence=0.8 \
-  --rationale "+3.59% and above all three MAs (+5.53%/+5.95%/+10.53%) with a 20-session-old golden cross. Funding 0.00037 vs a 0.00004 reference is elevated, a mild crowding caution."
-r SNDK --metric score=5 --metric confidence=0.8 \
-  --rationale "Holds +2.36%/+13.53% vs the 50/200-day under a 20-session golden cross but sits -4.91% below the 20-day after a flat +0.25% session. Constructive base, no trigger."
-r MU --metric score=5 --metric confidence=0.6 \
-  --binary-date 2026-09-30 --binary-reason "Micron reports fiscal fourth quarter results after the close on September 30, 2026." \
-  --rationale "Reclaimed and then lost the 50-day (below, age 1) at -0.28%, -3.82% vs the 20-day, and 200-day context is unavailable at 136 bars - declared gap, treated as neutral. Earnings in 14 days gate any new entry."
-r NVDA --metric score=4 --metric confidence=0.85 \
-  --rationale "+1.49% but still below both the 20- and 50-day (-2.71%/-1.26%), below the 50-day 3 sessions, with +5.69% vs the 200-day the only cushion. The heaviest cluster name is the laggard, which caps the semis case."
+# ---------- AI SEMIS (cluster regime -0.1) ----------
+r AMD --metric score=6 --metric confidence=0.75 \
+  --rationale "Secular trend intact at +16.0%/+25.1%/+46.6% over the 20/50/200-day on a 29-day golden cross, +3.1% on the snapshot. Extension is the main risk; ATR 3.6%."
+r INTC --metric score=6 --metric confidence=0.75 \
+  --rationale "Turnaround trend at +15.2%/+24.5%/+31.2% over the 20/50/200-day on a 29-day golden cross, +1.9% on the snapshot. Lighter funding 0.0088% vs 0.0124% reference clears yesterday's crowding flag."
+r MU --metric score=6 --metric confidence=0.75 \
+  --binary-date 2026-09-30 --binary-reason "Micron reports fiscal Q4 2026 results after the close on September 30, 2026." \
+  --rationale "Rebounded 2.2% to +7.4%/+11.7% over the 20/50-day after two soft sessions, but the case resolves on the Sep 30 print. 200-day and 50/200 cross unavailable (145 bars), treated as neutral."
+r NVDA --metric score=4 --metric confidence=0.8 \
+  --rationale "No momentum: +0.7%/+0.9% over the 20/50-day and +0.4% on the snapshot despite a 104-day golden cross. Cleanest risk profile in the cluster (1.8% ATR) but no directional edge."
+r SNDK --metric score=6 --metric confidence=0.7 \
+  --binary-date 2026-09-30 --binary-reason "Micron's September 30 fiscal Q4 report and memory pricing guide is the sector readout that directly reprices NAND peers." \
+  --rationale "Uptrend intact at +3.2%/+10.7%/+25.4% over the 20/50/200-day on a 29-day golden cross, flat on the snapshot. Lighter funding 0.0208% vs 0.0000% reference is a mild crowding flag; SanDisk's own earnings date is an unconfirmed gap."
 
-# ---------- AI / SOFTWARE (cluster regime -1.2) ----------
-r META --metric score=7 --metric confidence=0.85 \
-  --rationale "+1.72% and extended above all three MAs at +9.60%/+14.91%/+11.95%, the strongest name in a cluster that underperformed today. The 93-session death cross is stale and contradicted by price."
-r AAPL --metric score=6 --metric confidence=0.85 \
-  --rationale "+1.33% with price above all three MAs (+2.85%/+5.59%/+13.71%), golden cross 93 sessions old and the 50-day held 15 sessions. Quiet, durable uptrend against a soft software cluster."
-r AMZN --metric score=5 --metric confidence=0.85 \
-  --rationale "-0.88% and below both the 20- and 50-day (-3.80%/-5.69%) for 10 sessions, with only +0.47% vs the 200-day left as support. Clearest downside structure in the cluster."
-r ORCL --metric score=5 --metric confidence=0.7 \
-  --rationale "-5.65%/-2.44% vs the 20/50-day and below the 50-day 2 sessions after post-earnings damage; 200-day context unavailable at 135 bars, declared as a gap and treated as neutral. Earnings already passed on September 10, so no binary."
-r MSFT --metric score=4 --metric confidence=0.85 \
-  --rationale "-1.51% today, -1.38% below the 20-day but still marginally above the 50-day (+0.49%, held 51 sessions) and +17.06% vs the 200-day. Balanced - no discrete case."
-r PLTR --metric score=4 --metric confidence=0.8 \
-  --rationale "-1.41% and -1.99% below the 20-day, having just reclaimed the 50-day 2 sessions ago (+1.90%) with +17.74% vs the 200-day. Marginal signal, easily invalidated."
-r TSLA --metric score=4 --metric confidence=0.8 \
-  --rationale "+0.72% with price above the 20- and 50-day (+1.12%/+5.48%) but -4.19% below the 200-day under an 80-session death cross. Short-term strength fighting long-term damage."
-r GOOGL --metric score=3 --metric confidence=0.8 \
-  --rationale "+0.58% but whipsawing: golden cross 5 sessions old while price lost the 50-day at age 1, sitting +1.63%/-0.09%/+0.19% vs the 20/50/200-day. Pure chop."
+# ---------- AI SOFTWARE (cluster regime -0.5) ----------
+r PLTR --metric score=6 --metric confidence=0.75 \
+  --rationale "Relative strength holding against a -0.5 software regime: +8.2%/+8.0%/+29.7% over the 20/50/200-day on a 38-day golden cross, -0.5% on the snapshot. The cluster tilt is the headwind."
 
-# ---------- CRYPTO-ADJACENT EQUITY (no cluster; macro regime -1.1) ----------
-r CRCL --metric score=6 --metric confidence=0.85 \
-  --rationale "-10.35% today, lost the 50-day at age 0, -13.44% vs the 20-day and -10.98% vs the 200-day under a 53-session death cross. Funding 0.00258 against a 0.00031 reference is a roughly 8x dislocation, the most extreme in the roster."
-r COIN --metric score=5 --metric confidence=0.85 \
-  --rationale "-7.13% today to -6.02% vs the 20-day, clinging to +0.51% vs the 50-day with -4.30% vs the 200-day under a 96-session death cross. Crypto-equity complex underperformance is a live crypto-cluster signal."
-r MSTR --metric score=4 --metric confidence=0.8 \
-  --rationale "-3.83% today, -4.32% vs the 20-day, still +10.14% vs the 50-day but -1.69% vs the 200-day under a 53-session death cross. Funding 0.000248 vs 0.000167 reference; conflicted."
-r HOOD --metric score=4 --metric confidence=0.8 \
-  --rationale "-5.87% today to -6.33% below the 20-day, holding +2.59%/+17.34% vs the 50/200-day under a 77-session golden cross. Pullback inside an uptrend, no trigger."
-r STRC --metric score=2 --metric confidence=0.7 \
-  --rationale "-0.33% with a 0.8% ATR and price within 0.1% of its 20-day; 200-day context unavailable at 182 bars, declared as a gap. Functionally a yield instrument, not a trade."
-
+# ---------- UNFILED (macro regime) ----------
+r AAPL --metric score=5 --metric confidence=0.75 \
+  --rationale "Steady trend with no edge: +1.8%/+5.3%/+13.5% over the 20/50/200-day on a 102-day golden cross, 1.4% ATR, flat on the snapshot. No catalyst inside 14 days."
+r AMZN --metric score=5 --metric confidence=0.75 \
+  --rationale "Bear lean intact but unresolved: -2.1%/-4.4% vs the 20/50-day after 19 sessions under the 50-day, yet price is back on the 200-day (+0.1%) and the 102-day golden cross has not rolled. The 200-day test is the open question."
+r COIN --metric score=5 --metric confidence=0.7 \
+  --rationale "Gave back 1.5% and the 20-day cushion shrank to +4.7% (+10.1% over the 50-day) despite a sixth straight BTC ETF inflow; the 105-day death cross remains the structural caveat."
+r CRCL --metric score=4 --metric confidence=0.65 \
+  --rationale "Fell 4.1% to lose the 20-day (-4.0%) and 200-day (-1.8%) inside a 62-day death cross, clinging to +2.3% over the 50-day with a 6.6% ATR. Bear lean forming, not confirmed; Lighter funding 0.0344% vs 0.0491% reference."
+r GOOGL --metric score=5 --metric confidence=0.75 \
+  --rationale "Bear case lost follow-through: +1.0% on the snapshot brings it back onto all three averages (-0.1%/-0.6%/-1.3%), though the 50/200 death cross is only 3 days old. Structure bearish, momentum absent."
+r HOOD --metric score=5 --metric confidence=0.7 \
+  --rationale "Second soft session (-2.0%) thins the 20-day cushion to +1.2%, still +8.7%/+28.2% over the 50/200-day on an 86-day golden cross. Real trend, fading short-term edge."
+r META --metric score=6 --metric confidence=0.7 \
+  --rationale "Golden cross 2 days old with +10.8%/+21.2% over the 20/50-day, but a second pullback (-2.4%) and Lighter funding 0.0224% against a 0.0013% reference flag crowded longs. Trend leader with rising positioning risk."
+r MSFT --metric score=5 --metric confidence=0.75 \
+  --rationale "Up 3.7% on the snapshot to reclaim the 50-day this session (+3.3%/+3.5% over the 20/50-day, +20.6% over the 200-day). The move is unexplained and recorded as an observation; one session does not make a trend."
+r MSTR --metric score=4 --metric confidence=0.7 \
+  --rationale "Levered BTC proxy that underperformed again (-2.4% vs BTC -1.0%) inside a 62-day death cross; +24.8% over the 50-day is an extended bounce in broken structure. Funding 0.0216% in line with 0.0220% reference."
+r ORCL --metric score=6 --metric confidence=0.75 \
+  --rationale "Breakdown held but did not extend: flat (-0.2%) on the snapshot at 7.5% below the 20-day and 7.3% below the 50-day, 7 sessions under the 50-day. 200-day unavailable (144 bars) and treated as neutral; reference funding 0.0250% vs Lighter 0.0032%."
+r STRC --metric score=2 --metric confidence=0.8 \
+  --rationale "No tradeable case: within 0.2% of the 20-day and 1.4% of the 50-day with a 0.7% ATR. The 200-day is unavailable and treated as neutral."
+r TSLA --metric score=4 --metric confidence=0.7 \
+  --rationale "Fell 2.3% and sits 2.7% below the 200-day inside an 89-day death cross, only +0.6%/+3.8% over the 20/50-day. The Q3 delivery report date is unconfirmed and treated as a declared gap, not a binary gate."
 echo "ALL RECORDED"
