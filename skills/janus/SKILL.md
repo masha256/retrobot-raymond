@@ -32,6 +32,8 @@ In cron runs `execute_code` is blocked, and so are terminal commands that build 
 
 The scratch dir has `regime_fetch2.py <YYYY-MM-DD> SYM...`, which prints Yahoo 5m bars at the 14:00 UTC anchor vs the prior daily close. On weekends it falls back to Friday's close. There is also `hl_funding2.py`, which gives Hyperliquid funding as a 30d mean/sd vs the 24h mean. Its anchor date is hardcoded, so edit it before running. Pull credit and the curve from FRED CSV via `curl https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAMLH0A0HYM2&cosd=...` (also T10Y2Y, DGS10, DTWEXBGS), and ETF flows from `web_extract https://farside.co.uk/btc/`. Write the macro and cluster record commands into a scratch `.sh` and `bash` it.
 
+Scratch entries left idle for 24h get pruned, so these helpers can disappear. If `regime_fetch2.py` is missing, rewrite it. It hits the Yahoo v8 chart API (`query1.finance.yahoo.com/v8/finance/chart/SYM?interval=5m&range=5d&includePrePost=true`, with a `User-Agent` header), takes the last bar at or before 14:00 UTC, compares it with the prior daily close from `interval=1d&range=1mo` (excluding today's date), and needs `import urllib.parse`. Useful symbols: ^GSPC ^NDX ^RUT ^VIX ^VIX9D ^VIX3M ^TNX ^FVX CL=F DX-Y.NYB SMH IGV BTC-USD ETH-USD SOL-USD BNB-USD plus the cluster single names. To get the HY OAS 3-month low, sort the FRED CSV by its value column.
+
 ## One envelope per command
 
 ```json
