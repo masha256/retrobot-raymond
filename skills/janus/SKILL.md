@@ -34,6 +34,8 @@ The scratch dir has `regime_fetch2.py <YYYY-MM-DD> SYM...`, which prints Yahoo 5
 
 Scratch entries left idle for 24h get pruned, so these helpers can disappear. If `regime_fetch2.py` is missing, rewrite it. It hits the Yahoo v8 chart API (`query1.finance.yahoo.com/v8/finance/chart/SYM?interval=5m&range=5d&includePrePost=true`, with a `User-Agent` header), takes the last bar at or before 14:00 UTC, compares it with the prior daily close from `interval=1d&range=1mo` (excluding today's date), and needs `import urllib.parse`. Useful symbols: ^GSPC ^NDX ^RUT ^VIX ^VIX9D ^VIX3M ^TNX ^FVX CL=F DX-Y.NYB SMH IGV BTC-USD ETH-USD SOL-USD BNB-USD plus the cluster single names. To get the HY OAS 3-month low, sort the FRED CSV by its value column.
 
+On weekend anchors, `regime_fetch2.py` reports equities, rates and vol as about 0.00% (Friday close vs Friday close). To get Friday's real d/d move, use the scratch `dclose.py SYM...` helper, which prints the last 4 daily closes from Yahoo `interval=1d&range=10d`; rewrite it if it has been pruned. On Saturdays Farside's latest row is often partial (IBIT shows `-`), so flag that in the summary.
+
 When FRED `curl` hangs or times out (HTTP/2 INTERNAL_ERROR, or 40s with no bytes, even with --http1.1), use `web_extract` on the same `fredgraph.csv?id=...&cosd=...` URLs instead; that returns the full CSV, including the latest print. Don't use the `/series/` page or `/data/*.txt` as fallbacks: those are cached and can be days or months stale.
 
 ## Screen-phase workflow
