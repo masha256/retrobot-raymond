@@ -5,3 +5,5 @@ Mike runs 'janus' crypto trading pipeline (3 cronjobs: janus-regime 7:30am, janu
 Mike expects verification, not just optimistic status reports: when told a scheduled/background job 'should' do X, he asks for confirmation it actually works — check by reading real logs/output or re-running the job, don't just assert based on the prompt/config.
 §
 janus CLI's default DB (~/.janus/janus.db) is empty/unmigrated; the live janus DB is at ~/.hermes/profiles/raymond/workspace/janus/janus.db. JANUS_DB is exported in ~/.bashrc but bashrc returns early for non-interactive shells, so `source ~/.bashrc` does NOT set it in agent terminal calls — always `export JANUS_DB=...` explicitly and verify with `janus cluster list` (3 clusters: crypto, ai_semis, ai_software) before recording.
+§
+Mike also runs 'orion' (/home/hermes/git/orion): cron jobs orion-vvv/hype/aero at 00:05/00:10/00:15 UTC, deliver to Telegram with replies attached. Each runs a pre-run script (profile scripts/orion-tick.sh, which loads orion .env). Profile tz is America/Los_Angeles, so the PT cron times are moved by hand at each DST change: 17:05/10/15 PDT, 16:05/10/15 PST.
