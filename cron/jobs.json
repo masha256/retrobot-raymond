@@ -178,15 +178,15 @@
       "schedule_display": "15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 689
+        "completed": 690
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-06T08:57:25.404654-07:00",
-      "next_run_at": "2026-10-05T01:15:00-07:00",
-      "last_run_at": "2026-10-04T23:15:26.835549-07:00",
+      "next_run_at": "2026-10-05T02:15:00-07:00",
+      "last_run_at": "2026-10-05T00:15:28.515407-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -206,12 +206,12 @@
       ],
       "workdir": null,
       "fire_claim": {
-        "at": "2026-10-05T00:15:10.906725-07:00",
-        "by": "uranus:347240:ff74a430448941c3b0e417f7faa710cd"
+        "at": "2026-10-05T01:15:10.907215-07:00",
+        "by": "uranus:347240:89f3bc9e15494335a0811fbae4a89051"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-10-05T00:15:00-07:00",
-        "dispatched_at": "2026-10-05T00:15:10.506799-07:00",
+        "scheduled_at": "2026-10-05T01:15:00-07:00",
+        "dispatched_at": "2026-10-05T01:15:10.507562-07:00",
         "lateness_seconds": 10.5,
         "kind": "on_time"
       }
@@ -253,7 +253,7 @@
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "failure_streak": 0,
-      "deliver": "telegram:1620897892",
+      "deliver": "telegram:1620897892:16022",
       "origin": {
         "platform": "telegram",
         "chat_id": "1620897892",
@@ -310,7 +310,7 @@
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "failure_streak": 0,
-      "deliver": "telegram:1620897892",
+      "deliver": "telegram:1620897892:16022",
       "origin": {
         "platform": "telegram",
         "chat_id": "1620897892",
@@ -367,7 +367,7 @@
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "failure_streak": 0,
-      "deliver": "telegram:1620897892",
+      "deliver": "telegram:1620897892:16022",
       "origin": {
         "platform": "telegram",
         "chat_id": "1620897892",
@@ -424,7 +424,7 @@
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "failure_streak": 0,
-      "deliver": "telegram:1620897892",
+      "deliver": "telegram:1620897892:16022",
       "origin": {
         "platform": "telegram",
         "chat_id": "1620897892",
@@ -437,5 +437,5 @@
       "workdir": null
     }
   ],
-  "updated_at": "2026-10-05T00:15:10.907352-07:00"
+  "updated_at": "2026-10-05T01:15:10.907839-07:00"
 }
