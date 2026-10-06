@@ -178,15 +178,15 @@
       "schedule_display": "15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 705
+        "completed": 706
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-06T08:57:25.404654-07:00",
-      "next_run_at": "2026-10-05T17:15:00-07:00",
-      "last_run_at": "2026-10-05T15:15:25.567398-07:00",
+      "next_run_at": "2026-10-05T18:15:00-07:00",
+      "last_run_at": "2026-10-05T16:15:24.762242-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -206,12 +206,12 @@
       ],
       "workdir": null,
       "fire_claim": {
-        "at": "2026-10-05T16:15:10.943483-07:00",
-        "by": "uranus:347240:2b023350c706433a9505fa8f179bff19"
+        "at": "2026-10-05T17:15:10.931626-07:00",
+        "by": "uranus:347240:fc74dec8f75546e6b19b785a8db32ba4"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-10-05T16:15:00-07:00",
-        "dispatched_at": "2026-10-05T16:15:10.506223-07:00",
+        "scheduled_at": "2026-10-05T17:15:00-07:00",
+        "dispatched_at": "2026-10-05T17:15:10.505667-07:00",
         "lateness_seconds": 10.5,
         "kind": "on_time"
       }
@@ -239,15 +239,15 @@
       "schedule_display": "5 17 * * *",
       "repeat": {
         "times": null,
-        "completed": 3
+        "completed": 4
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-03T01:55:31.725054-07:00",
-      "next_run_at": "2026-10-05T17:05:00-07:00",
-      "last_run_at": "2026-10-04T17:06:01.684438-07:00",
+      "next_run_at": "2026-10-06T17:05:00-07:00",
+      "last_run_at": "2026-10-05T17:06:11.378490-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -267,8 +267,8 @@
       "attach_to_session": true,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-04T17:05:00-07:00",
-        "dispatched_at": "2026-10-04T17:05:10.505313-07:00",
+        "scheduled_at": "2026-10-05T17:05:00-07:00",
+        "dispatched_at": "2026-10-05T17:05:10.506574-07:00",
         "lateness_seconds": 10.5,
         "kind": "on_time"
       }
@@ -296,15 +296,15 @@
       "schedule_display": "10 17 * * *",
       "repeat": {
         "times": null,
-        "completed": 3
+        "completed": 4
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-03T01:55:32.697183-07:00",
-      "next_run_at": "2026-10-05T17:10:00-07:00",
-      "last_run_at": "2026-10-04T17:10:40.211872-07:00",
+      "next_run_at": "2026-10-06T17:10:00-07:00",
+      "last_run_at": "2026-10-05T17:10:30.071419-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -324,8 +324,8 @@
       "attach_to_session": true,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-04T17:10:00-07:00",
-        "dispatched_at": "2026-10-04T17:10:10.506433-07:00",
+        "scheduled_at": "2026-10-05T17:10:00-07:00",
+        "dispatched_at": "2026-10-05T17:10:10.508180-07:00",
         "lateness_seconds": 10.5,
         "kind": "on_time"
       }
@@ -360,7 +360,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-03T01:55:33.657220-07:00",
-      "next_run_at": "2026-10-05T17:15:00-07:00",
+      "next_run_at": "2026-10-06T17:15:00-07:00",
       "last_run_at": "2026-10-04T17:15:30.096811-07:00",
       "last_status": "ok",
       "last_error": null,
@@ -379,10 +379,13 @@
       "enabled_toolsets": null,
       "workdir": "/home/hermes/git/orion",
       "attach_to_session": true,
-      "fire_claim": null,
+      "fire_claim": {
+        "at": "2026-10-05T17:15:10.917604-07:00",
+        "by": "uranus:347240:639b9ec6dbde4f94b2be876ea5c89517"
+      },
       "last_dispatch": {
-        "scheduled_at": "2026-10-04T17:15:00-07:00",
-        "dispatched_at": "2026-10-04T17:15:10.516453-07:00",
+        "scheduled_at": "2026-10-05T17:15:00-07:00",
+        "dispatched_at": "2026-10-05T17:15:10.505667-07:00",
         "lateness_seconds": 10.5,
         "kind": "on_time"
       }
@@ -437,5 +440,5 @@
       "workdir": null
     }
   ],
-  "updated_at": "2026-10-05T16:15:10.944069-07:00"
+  "updated_at": "2026-10-05T17:15:10.932249-07:00"
 }
