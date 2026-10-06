@@ -178,15 +178,15 @@
       "schedule_display": "15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 713
+        "completed": 714
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-06T08:57:25.404654-07:00",
-      "next_run_at": "2026-10-06T01:15:00-07:00",
-      "last_run_at": "2026-10-05T23:15:21.166179-07:00",
+      "next_run_at": "2026-10-06T02:15:00-07:00",
+      "last_run_at": "2026-10-06T00:17:03.168321-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -206,12 +206,12 @@
       ],
       "workdir": null,
       "fire_claim": {
-        "at": "2026-10-06T00:16:10.897137-07:00",
-        "by": "uranus:347240:5a4980320cff48a388e9027da04c1ff5"
+        "at": "2026-10-06T01:15:10.903963-07:00",
+        "by": "uranus:347240:05b2d68fa31b4b0697716cbaf37cdfa6"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-10-06T00:15:00-07:00",
-        "dispatched_at": "2026-10-06T00:15:10.506199-07:00",
+        "scheduled_at": "2026-10-06T01:15:00-07:00",
+        "dispatched_at": "2026-10-06T01:15:10.507171-07:00",
         "lateness_seconds": 10.5,
         "kind": "on_time"
       }
@@ -435,7 +435,56 @@
       },
       "enabled_toolsets": null,
       "workdir": null
+    },
+    {
+      "id": "fc34f6af6b05",
+      "name": "orion-rpc-retest",
+      "prompt": "One-shot Alchemy Base RPC retest for orion; script output is delivered verbatim.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "orion-rpc-retest.sh",
+      "no_agent": true,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-10-06T12:00:00-07:00",
+        "display": "once at 2026-10-06 12:00"
+      },
+      "schedule_display": "once at 2026-10-06 12:00",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-10-06T00:40:11.669018-07:00",
+      "next_run_at": "2026-10-06T12:00:00-07:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "failure_streak": 0,
+      "deliver": "telegram:1620897892:16022",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "1620897892",
+        "chat_name": "Mike M",
+        "thread_id": "16022",
+        "user_id": "1620897892",
+        "scope_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
     }
   ],
-  "updated_at": "2026-10-06T00:16:10.897970-07:00"
+  "updated_at": "2026-10-06T01:15:10.904574-07:00"
 }
