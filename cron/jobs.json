@@ -178,15 +178,15 @@
       "schedule_display": "15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 706
+        "completed": 707
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-06T08:57:25.404654-07:00",
-      "next_run_at": "2026-10-05T18:15:00-07:00",
-      "last_run_at": "2026-10-05T16:15:24.762242-07:00",
+      "next_run_at": "2026-10-05T19:15:00-07:00",
+      "last_run_at": "2026-10-05T17:15:23.769760-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -206,12 +206,12 @@
       ],
       "workdir": null,
       "fire_claim": {
-        "at": "2026-10-05T17:15:10.931626-07:00",
-        "by": "uranus:347240:fc74dec8f75546e6b19b785a8db32ba4"
+        "at": "2026-10-05T18:15:10.906229-07:00",
+        "by": "uranus:347240:1b9e167a18074aaf82b438ea618341d1"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-10-05T17:15:00-07:00",
-        "dispatched_at": "2026-10-05T17:15:10.505667-07:00",
+        "scheduled_at": "2026-10-05T18:15:00-07:00",
+        "dispatched_at": "2026-10-05T18:15:10.506104-07:00",
         "lateness_seconds": 10.5,
         "kind": "on_time"
       }
@@ -353,7 +353,7 @@
       "schedule_display": "15 17 * * *",
       "repeat": {
         "times": null,
-        "completed": 3
+        "completed": 4
       },
       "enabled": true,
       "state": "scheduled",
@@ -361,7 +361,7 @@
       "paused_reason": null,
       "created_at": "2026-10-03T01:55:33.657220-07:00",
       "next_run_at": "2026-10-06T17:15:00-07:00",
-      "last_run_at": "2026-10-04T17:15:30.096811-07:00",
+      "last_run_at": "2026-10-05T17:15:38.343341-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -379,10 +379,7 @@
       "enabled_toolsets": null,
       "workdir": "/home/hermes/git/orion",
       "attach_to_session": true,
-      "fire_claim": {
-        "at": "2026-10-05T17:15:10.917604-07:00",
-        "by": "uranus:347240:639b9ec6dbde4f94b2be876ea5c89517"
-      },
+      "fire_claim": null,
       "last_dispatch": {
         "scheduled_at": "2026-10-05T17:15:00-07:00",
         "dispatched_at": "2026-10-05T17:15:10.505667-07:00",
@@ -440,5 +437,5 @@
       "workdir": null
     }
   ],
-  "updated_at": "2026-10-05T17:15:10.932249-07:00"
+  "updated_at": "2026-10-05T18:15:10.906843-07:00"
 }
