@@ -46,9 +46,57 @@ DefiLlama's holders revenue is often a formula or includes non-revenue money (br
      - The `signal_id` stamp and `generated_at` are today. A future date means a future-dated row set the as-of. Every metric then reads stale and the grade falls to D.
      - Blocked only on `no_assumption_set`, at the grade you expected.
      - The bootstrap journal's `open_questions_json` (`sqlite3 orion.db "select open_questions_json from journal where asset_id='<x>'"`). The analyst flags real defects there; answer each one in the report.
-  3. Calibration packages.
-  4. First signal.
-  5. The cron line.
+  3. Calibration packages: see section 6.
+  4. First signal: `node dist/cli/index.js model run <asset>` right after the import. Report the expected value at each horizon, bear/base/bull, the per-module values and dispersion. Then run `inbox <asset>`.
+  5. The cron line: copy the newest `orion-<asset>` job. Ask before creating it, and say whether any one-shot watch job should also cover the new asset.
+     - Every asset has its own profile wrapper `scripts/orion-tick-<asset>.sh` (`exec /bin/bash .../orion-tick.sh <asset>`, mode 700). Copy one and `bash -n` it.
+     - Read the source job's full prompt from `~/.hermes/profiles/raymond/cron/jobs.json` (`cronjob_manage list` shows only a preview). Swap `AERO`→`<ASSET>` and `aero`→`<asset>`, then diff old against new to confirm only the symbol changed.
+     - Pass the real ~12k-char prompt text. Never pass a placeholder meaning to fill it in later: the job stores it literally. If a long prompt is awkward to inline, write it to a scratch file and run `hermes --profile raymond cron edit <id> --prompt "$(cat <file>)"`.
+     - Verify by reading `jobs.json`: the prompt equals the intended text, and schedule/script/workdir/deliver/attach_to_session match the source job.
+     - Schedule it 5 minutes after the last orion job, delivering to orion-ops with `attach_to_session`, `workdir` = repo.
+     - Add the new job's line to the pending DST reminder job's prompt (`cron edit --prompt`), or it fires an hour off after the clock change. Add the asset to `docs/ops/hermes-daily-job.md` and mark checkpoint 5 done in the followups note.
 
-## 6. Report shape Mike accepts
+## 6. Calibration (checkpoint 3)
+Never price candidates against live. Work in scratch homes and import only the package Mike picks.
+1. **Scratch home:** `sqlite3 orion.db ".backup '$TMPDIR/<x>-cal/orion.db'"`, copy `assets personas skills .env` (chmod 600 on `.env`), then `ORION_HOME=<scratch> node dist/cli/index.js ...`.
+2. **Longer history, if a 1-year window is a candidate:** `data fetch <x> --metric flow_usd.<k> --metric revenue_run_rate_usd --backfill-days 362` in the scratch home.
+   - Keyless CoinGecko refuses history older than 365 days (HTTP 401) when it prices a flow's days, so stay under 365.
+   - `data fetch` exits 0 even when a source failed. Grep its output for non-`ok` sources before trusting the result.
+   - Pick window lengths that are whole payout periods (28 / 91 / 357 for weekly payouts).
+3. **Window and component variants:** one scratch home per variant. Copy the scratch home, edit its `assets/<x>.yaml` (`window_days` on both the run rate and the holder flow; drop a component and its assumption keys for the without-component variant), then import and run `model whatif <x> --json` in each.
+4. **One-at-a-time sweep** from a starter set (copy the shapes of the closest calibrated asset): run `model whatif --set key=v --scenario s` per key. Report which keys move the 12m expected value and which don't.
+5. **Three packages** (conservative / central / constructive) × each window, plus the central window without each optional component. Report 12m expected (bear/base/bull) and what the market price implies: which package and settings reach spot. Recommend one package and one window, with the reason.
+6. **After Mike picks:**
+   - Write `calibration/<x>-assumptions.yaml`. Its comment header records the choice, the anchors (spot, supply, flows, emissions), the resulting 12m values, and that Mike heard the gap to spot before choosing.
+   - Write agent bands into `assets/<x>.yaml` by the mirror rule. Inner edge is halfway to the neighbouring scenario, outer edge as far again, clipped to min/max.
+   - **Sort each band's (min, max).** Keys that fall from bear to bull (discount rates) otherwise come out inverted.
+   - Halve the band of the largest single driver, and tie a capped key (capture at 1.0) to the ceiling.
+   - Price each band edge (and all keys at the edge together), and write the swing into the yaml comment.
+   - Re-pin the hash. Add an asset test that the calibrated set is complete and inside its own bands.
+   - Then branch `calib/<x>`, run the suite, ff-merge, build, back up, `model assumptions import <x> calibration/<x>-assumptions.yaml --rationale "..."`, `model run <x>`.
+7. **Record:** write a followups note `docs/superpowers/notes/<date>-<x>-onboarding-followups.md` (checkpoints, the calibration table, open questions). Delete the scratch homes, which hold `.env`, and the merged branches.
+
+## 7. Holder yield vs what orion reports
+The signal's "staked total return" adds only emissions paid to stakers. Cash to lockers (fee flow, bribes) never reaches it, so for ve-tokens it equals the price upside.
+
+When Mike asks whether a wrapper yield (yCRV/st-yCRV, cvxCRV, sdCRV…) is in the model, decompose it on chain before answering:
+- the wrapper's veCRV share of the total;
+- fees plus bribes pro rata;
+- the staked fraction of the wrapper token (unstaked holders forfeit to stakers);
+- the wrapper's discount to the underlying (DefiLlama coins price for both);
+- the vault's fee (Yearn APR from `ydaemon.yearn.fi/1/vaults/<addr>`).
+
+The direct-locker yield (holder cash ÷ locked tokens × spot) is the like-for-like number. The wrapper premium comes from the discount and the forfeit, not from extra protocol value.
+
+### Vetting a wrapper as its own asset (read-only spike)
+When Mike asks for "only the spike", make zero repo, DB or cron changes. Keep notes in `$TMPDIR`, and put the key numbers in the reply, because scratch is pruned.
+1. **Find the live staking contract from the token's holders, not from Yearn's API.** Use Blockscout `GET /api/v2/tokens/<wrapper>/holders`. ydaemon still lists legacy vaults (st-yCRV holds almost nothing; YearnBoostedStaker holds 88% of yCRV), so its APR and vault can be the wrong product.
+2. **Trace the cash route with `alchemy_getAssetTransfers`** (`fromAddress`/`toAddress`, `contractAddresses`, `category:["erc20"]`, `withMetadata`, follow `pageKey`). It's faster than chunked `eth_getLogs`. Start from FeeDistributor → the locker's voter, then follow each hop out, naming each address via Blockscout. Bribes usually arrive through a swap or "burner" contract that converts many tokens to one; treat that contract as the allowed sender rather than tracing every input token.
+3. **Measure the staker share** from the splitter's outputs (vault shares × `pricePerShare`): stakers vs treasury.
+4. **Reconcile supply:** compare the wrapper's supply with the locker's veCRV. Legacy wrapper tokens migrated into the new contract explain part of any gap.
+5. **Price check:** the wrapper/underlying ratio weekly over a year (`coins.llama.fi/chart/<a>,<b>?span=53&period=7d`) shows whether the discount is a stable band or a de-peg.
+6. **Rough fair value:** price per-token cash to stakers as a perpetuity, with fees growing slowly and bribes either shrinking with emissions or flat. Also solve for the discount rate the market price implies. Whether bribes shrink with emissions is usually the whole call; report it as such.
+7. **For a build:** list the flows (fees, bribes via the converter), the staker share, and the engine rule that a wrapper mintable 1:1 from the underlying is capped at the underlying's price.
+
+## 8. Report shape Mike accepts
 Per asset: holder-flow mechanism → what's config-only → what needs code → live numbers (30/90/365 annualized, market cap multiple) → open decisions. End with a recommended sequence and a short numbered list of decisions. Keep RPC keys out of chat output and commit messages; `.env` is git-ignored. If Mike pastes a key in chat, save it and mention it is now in the chat history (rotation is his call).

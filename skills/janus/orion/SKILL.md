@@ -5,14 +5,16 @@ description: Use when operating, debugging, or developing orion.
 
 # Orion operations and development
 
-This skill covers Mike's orion valuation pipeline (VVV/HYPE/AERO; CRV in progress): diagnosing ingest failures, vetting or swapping data endpoints and API keys, running the test suite, and scoping/onboarding new assets. Mike manages orion development from the Raymond bot's orion-dev topic.
+This skill covers Mike's orion valuation pipeline (VVV/HYPE/AERO/CRV): diagnosing ingest failures, vetting or swapping data endpoints and API keys, running the test suite, onboarding and calibrating new assets. Mike manages orion development from the Raymond bot's orion-dev topic.
 
 ## Development: tests and branches
 - Run `npx vitest run --maxWorkers=2` then `npm run typecheck`. Plain `npm test` on this 4-core host times out the CLI tests (`tests/cli/{cli,ingest.cli,tick.cli}.test.ts` spawn subprocesses; 5s/10s timeouts) under full parallelism; rerun those files alone before calling any failure real.
 - Report the counts (files/tests passed) from the real run, not an assertion.
 - Feature work follows the repo's own pattern: branch `feat/<asset>`, a spec in `docs/superpowers/specs/<date>-orion-<topic>-design.md`, then a plan in `docs/superpowers/plans/`, then implementation, then a followups note in `docs/superpowers/notes/`. Read the latest onboarding spec+followups (AERO, HYPE) before drafting a new one; they carry the conventions (mirror-rule bands, backfill > window, hash pins, the 5 user checkpoints).
-- Leave unrelated working-tree changes (e.g. an npm-touched `package-lock.json`) uncommitted and mention them; don't sweep them into feature commits.
-- Adding a new asset: follow `references/asset-onboarding.md`.
+- Leave unrelated working-tree changes (e.g. an npm-touched `package-lock.json`) uncommitted and mention them. Stage with explicit `git add <paths>` and never `git commit -a`/`-am`, because `-a` silently sweeps the stray file in. If it happens, `git reset --soft HEAD~1`, `git restore --staged <file>` and recommit.
+- Adding a new asset (scoping, build, live checkpoints, calibration, cron line, wrapper-yield questions): follow `references/asset-onboarding.md`.
+- Present every value-changing choice (packages, windows, price bases) as priced options with a recommendation, and let Mike pick. Record the pick and its rationale in the committed file, then don't re-argue it.
+- When Mike defers a decision ("will think about it"), finish the work that doesn't depend on it. List the decision as open in the followups note, and don't build it unasked.
 - Building blocks that keep the grade at A without manual rows (added on feat/crv): `constant` source for structural values (e.g. a zero staker share); adapters may return `schedule_steps` (step in force + future coded cuts) on schedule metrics; `vote_incentives` component for bribes (third-party vote payments are NOT holder flow; `price_basis: spot` per Mike's choice for CRV).
 - When a component or estimate comes out far from your back-of-envelope, debug-print its breakdown in the asset test before adjusting assertions, and surface the cause to Mike as a decision (e.g. horizon-price feedback shrank CRV bribes 20x) rather than silently loosening the test.
 - A value derived from an on-chain flow is stamped `onchain`, not `api`.
@@ -31,7 +33,7 @@ The repo working tree IS the live site: cron runs `run-daily.sh` → `dist/cli/i
 3. Merge with `git merge --ff-only feat/<x>`, then `npm run build` — cron runs `dist/`, so an unbuilt merge changes nothing live — then `asset validate` every asset with the built CLI, not only the new one.
 4. Run live commands with `node dist/cli/index.js ...` (what cron uses, not `tsx src`), and in the reply list every command run against live verbatim, in order, each with its result, and say plainly which ones wrote to the DB. Record row counts before and after, and state that a dry run left them unchanged.
 5. Before a step that calls the analyst agent (a tick or bootstrap, which costs Anthropic spend) or writes signals, say what it will write and ask for a go.
-6. Do dry runs during development from a throwaway home instead (`H=$(mktemp -d)`, copy `assets/<x>.yaml` and `.env` into it, `ORION_HOME=$H`), so they never touch `orion.db`. Delete that home afterwards, because it holds a copy of `.env`.
+6. Do dry runs and calibration during development from a throwaway home instead (`ORION_HOME=$TMPDIR/<x>`). Seed it with assets and `.env`, plus a `.backup` copy of `orion.db` when you need live history. It never touches production. Delete it afterwards, because it holds a copy of `.env`.
 - `git push origin main` may be refused for lack of access. If so, say so and ask Mike who pushes; never report a push you didn't see succeed.
 
 Repo: `/home/hermes/git/orion`. Live DB: `orion.db` in the repo root (sqlite). Secrets: `orion/.env` (gitignored, mode 600). It is sourced by the profile's `scripts/orion-tick.sh` and also read by orion itself via `loadEnv`. Cron jobs and delivery are covered in memory; use the `cron-job-administration` skill for any schedule changes.
