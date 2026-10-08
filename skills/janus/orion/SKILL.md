@@ -1,16 +1,24 @@
 ---
 name: orion
-description: Use when operating or debugging the orion pipeline.
+description: Use when operating, debugging, or developing orion.
 ---
 
-# Orion operations
+# Orion operations and development
 
-This skill covers Mike's orion valuation pipeline (VVV/HYPE/AERO): diagnosing ingest failures and vetting or swapping data endpoints and API keys.
+This skill covers Mike's orion valuation pipeline (VVV/HYPE/AERO; CRV in progress): diagnosing ingest failures, vetting or swapping data endpoints and API keys, running the test suite, and scoping/onboarding new assets. Mike manages orion development from the Raymond bot's orion-dev topic.
+
+## Development: tests and branches
+- Run `npx vitest run --maxWorkers=2` then `npm run typecheck`. Plain `npm test` on this 4-core host times out the CLI tests (`tests/cli/{cli,ingest.cli,tick.cli}.test.ts` spawn subprocesses; 5s/10s timeouts) under full parallelism; rerun those files alone before calling any failure real.
+- Report the counts (files/tests passed) from the real run, not an assertion.
+- Feature work follows the repo's own pattern: branch `feat/<asset>`, a spec in `docs/superpowers/specs/<date>-orion-<topic>-design.md`, then a plan in `docs/superpowers/plans/`, then implementation, then a followups note in `docs/superpowers/notes/`. Read the latest onboarding spec+followups (AERO, HYPE) before drafting a new one; they carry the conventions (mirror-rule bands, backfill > window, hash pins, the 5 user checkpoints).
+- Leave unrelated working-tree changes (e.g. an npm-touched `package-lock.json`) uncommitted and mention them; don't sweep them into feature commits.
+- Adding a new asset: follow `references/asset-onboarding.md`.
 
 Repo: `/home/hermes/git/orion`. Live DB: `orion.db` in the repo root (sqlite). Secrets: `orion/.env` (gitignored, mode 600). It is sourced by the profile's `scripts/orion-tick.sh` and also read by orion itself via `loadEnv`. Cron jobs and delivery are covered in memory; use the `cron-job-administration` skill for any schedule changes.
 
 ## External dependencies (what each asset hits)
 - **VVV, AERO**: Base mainnet RPC (chain 8453). The env var is named by `ingest.rpc_url_env` in `assets/<asset>.yaml` (currently `ORION_BASE_RPC_URL`). When it is unset, orion falls back to `https://mainnet.base.org` (`DEFAULT_RPC_URLS` in `src/ingest/run.ts`). They also use CoinGecko, DefiLlama and `http_json` cross-checks.
+- **Ethereum mainnet (chain 1)**: `ORION_ETH_RPC_URL` in `.env` holds Mike's Alchemy key (passes 100k-block `eth_getLogs` with `blockTimestamp`, and archive `eth_call`). Free mainnet RPCs (drpc, publicnode) refuse ranged logs beyond ~10k blocks and archive reads, so never default chain 1 to a keyless URL. The transport (`viemRpc.ts`) only accepts Base until the CRV branch adds chain 1.
 - **HYPE**: no RPC. It uses `api.hyperliquid.xyz/info` (REST), CoinGecko and DefiLlama.
 - **CoinGecko**: the optional `COINGECKO_API_KEY` is sent as the demo-key header. Without it, the code spaces requests 2.5s apart to stay under the keyless limit.
 - To re-derive this list: `grep -n '^ingest:' assets/*.yaml` and `grep -rn 'env\.\|https://' src/ingest`.

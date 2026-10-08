@@ -178,15 +178,15 @@
       "schedule_display": "15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 762
+        "completed": 763
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-06T08:57:25.404654-07:00",
-      "next_run_at": "2026-10-08T02:15:00-07:00",
-      "last_run_at": "2026-10-08T00:15:21.220927-07:00",
+      "next_run_at": "2026-10-08T03:15:00-07:00",
+      "last_run_at": "2026-10-08T01:15:27.821560-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -206,12 +206,12 @@
       ],
       "workdir": null,
       "fire_claim": {
-        "at": "2026-10-08T01:15:10.924596-07:00",
-        "by": "uranus:347240:4565b614976d48148c49cd36b92f97e3"
+        "at": "2026-10-08T02:15:10.930042-07:00",
+        "by": "uranus:347240:67bf797523ec47d38b6ff5179e90f2ba"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-10-08T01:15:00-07:00",
-        "dispatched_at": "2026-10-08T01:15:10.508108-07:00",
+        "scheduled_at": "2026-10-08T02:15:00-07:00",
+        "dispatched_at": "2026-10-08T02:15:10.506385-07:00",
         "lateness_seconds": 10.5,
         "kind": "on_time"
       }
@@ -486,7 +486,111 @@
       "workdir": null,
       "run_claim": null,
       "fire_claim": null
+    },
+    {
+      "id": "4deb72bdf5c1",
+      "name": "superpowers-watch-janus",
+      "prompt": "Verification check, report to Mike (terse, hedge-fund-PM tone, bullet points, no tables). Context: the 'superpowers' Hermes plugin (obra/superpowers v6.4.2) was installed on the raymond profile at 2026-10-08 00:57 PDT. It injects a bootstrap into the first turn of EVERY session, including cron runs; its brainstorming skill has a hard gate requiring human approval before implementation. Risk: unattended cron jobs could stall waiting for approval, ask questions, or change output format.\n\nTask: verify this morning's Janus runs were unaffected. Cron outputs live in ~/.hermes/profiles/raymond/cron/output/<job_id>/<YYYY-MM-DD_HH-MM-SS>.md (local PT time). Jobs: janus-regime=dc6e818b36df (07:30), janus-screen=f1f17269d73f (07:45), janus-score=44e43cea030e (08:00). For each: (1) confirm a 2026-10-08 output file exists and `hermes cron list` shows last run ok today; (2) compare today's file against the previous 3 days' files: size, section headings/structure, completion; (3) grep today's files for signs of superpowers interference: 'superpowers', 'brainstorm', 'human partner', 'approve', 'spec', 'design', 'classif', questions directed at the user, or text saying it is waiting/stopping. Also check janus-score still committed its report to the retrobot-raymond repo (git log in ~/.hermes/profiles/raymond if it is a repo, or the job output's commit line). Use only real file contents; never invent results. Output: one line verdict (CLEAN or AFFECTED) then per-job bullets with evidence. If AFFECTED, recommend option 2: patch ~/.hermes/profiles/raymond/plugins/superpowers/.hermes-plugin/__init__.py pre_llm_call to skip cron sessions (do NOT apply it yourself).",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-10-08T08:20:00-07:00",
+        "display": "once at 2026-10-08 08:20"
+      },
+      "schedule_display": "once at 2026-10-08 08:20",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-10-08T01:46:22.863810-07:00",
+      "next_run_at": "2026-10-08T08:20:00-07:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "failure_streak": 0,
+      "deliver": "telegram:1620897892:16044",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "1620897892",
+        "chat_name": "Mike M",
+        "thread_id": "16044",
+        "user_id": "1620897892",
+        "scope_id": null
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "file"
+      ],
+      "workdir": null
+    },
+    {
+      "id": "0bdb19c23854",
+      "name": "superpowers-watch-orion",
+      "prompt": "Verification check, report to Mike (terse, hedge-fund-PM tone, bullet points, no tables). Context: the 'superpowers' Hermes plugin (obra/superpowers v6.4.2) was installed on the raymond profile at 2026-10-08 00:57 PDT. It injects a bootstrap into the first turn of EVERY session, including cron runs; its brainstorming skill has a hard gate requiring human approval before implementation. Risk: unattended cron jobs could stall waiting for approval, ask questions, or change output format.\n\nTask: verify tonight's Orion runs were unaffected. Cron outputs live in ~/.hermes/profiles/raymond/cron/output/<job_id>/<YYYY-MM-DD_HH-MM-SS>.md (local PT time). Jobs: orion-vvv=3e9232dd281b (17:05 PDT), orion-hype=1f25a8f0be0d (17:10), orion-aero=26a33124cfbf (17:15). For each: (1) confirm a 2026-10-08 output file exists and `hermes cron list` shows last run ok today; (2) compare today's file against the previous 3 days' files (2026-10-05..07): size (baseline ~16-19.6KB), section headings/structure, completion; (3) grep today's files for signs of superpowers interference: 'superpowers', 'brainstorm', 'human partner', 'approve', 'classif', questions directed at the user, or text saying it is waiting/stopping. NOTE: words like 'spec'/'design'/'approv' already appeared in pre-install orion outputs, so judge interference by comparing against prior days, not by bare keyword hits. Use only real file contents; never invent results. Output: one line verdict (CLEAN or AFFECTED) then per-job bullets with evidence. If AFFECTED, recommend option 2: patch ~/.hermes/profiles/raymond/plugins/superpowers/.hermes-plugin/__init__.py pre_llm_call to skip cron sessions (do NOT apply it yourself).",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-10-08T17:25:00-07:00",
+        "display": "once at 2026-10-08 17:25"
+      },
+      "schedule_display": "once at 2026-10-08 17:25",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-10-08T01:46:30.097310-07:00",
+      "next_run_at": "2026-10-08T17:25:00-07:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "failure_streak": 0,
+      "deliver": "telegram:1620897892:16044",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "1620897892",
+        "chat_name": "Mike M",
+        "thread_id": "16044",
+        "user_id": "1620897892",
+        "scope_id": null
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "file"
+      ],
+      "workdir": null
     }
   ],
-  "updated_at": "2026-10-08T01:15:10.925231-07:00"
+  "updated_at": "2026-10-08T02:15:10.930633-07:00"
 }
