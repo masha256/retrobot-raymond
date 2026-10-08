@@ -29,5 +29,26 @@ DefiLlama's holders revenue is often a formula or includes non-revenue money (br
 - **buy_and_hold** (LINK, SKY, JUP…): the held-token policy (net from supply? retention haircut?) is unsettled — flag it as a decision before config.
 - Emissions larger than the holder flow (ve-models) make the holder-cashflow module bearish by construction; say so up front so a low base case isn't read as a bug.
 
-## 5. Report shape Mike accepts
+## 5. Build sequence that worked (CRV)
+- Write the spec, then a short plan with one task per building block (transport/chain → new source types → adapters → engine module → asset yaml + asset test + persona paragraph + docs). Make one commit per task on `feat/<asset>`, with the full suite and the type check green after each.
+- **The asset test** (`tests/assets/<asset>.ingest.test.ts`) follows the AERO pattern:
+  - Check the config hash pin, `requiredAssumptionKeys`, that no metric lacks a source, and the plan's batch map.
+  - Run a canned fetch with `fakeHttp`/`fakeRpc` (set `maxLogRange`/`blockTimeSec` for non-Base chains), then a valuation that must come out `ok` at grade A.
+  - Build fixtures from the real feed, trimmed.
+  - Pin the hash by printing `loadAsset('.', '<asset>').hash` via `npx tsx -e`, and re-pin on every deliberate yaml edit.
+  - Also drive the asset through `updateAsset` (the tick path), not only `fetchAsset` + `runValuation`. The valuation's as-of is computed in `src/app/update.ts` from what the fetch wrote, so a test that calls `runValuation(db, asset, NOW)` directly can't catch an as-of bug. Anything that writes future-dated rows (schedule steps) needs this path tested.
+  - Prove a new regression test bites: stash the fix (`git stash push <file>`), see the test fail, then pop it back.
+- Then do a live dry run from a throwaway home (see SKILL.md, live-install rules), with `--json --metric ...` to pull the exact values, and record them in the spec's Amendments section.
+- Before Mike's checkpoints, write any spec deviations found during the build into the Amendments section, and present any value-changing ones to him as a decision.
+- **Checkpoints on live, in order:**
+  1. `persona assign <asset> <persona>` + `data fetch <asset> --dry-run`.
+  2. `./run-daily.sh <asset>` (first real fetch → blocked → bootstrap journal). Record observation counts before and after. Then check:
+     - The `signal_id` stamp and `generated_at` are today. A future date means a future-dated row set the as-of. Every metric then reads stale and the grade falls to D.
+     - Blocked only on `no_assumption_set`, at the grade you expected.
+     - The bootstrap journal's `open_questions_json` (`sqlite3 orion.db "select open_questions_json from journal where asset_id='<x>'"`). The analyst flags real defects there; answer each one in the report.
+  3. Calibration packages.
+  4. First signal.
+  5. The cron line.
+
+## 6. Report shape Mike accepts
 Per asset: holder-flow mechanism → what's config-only → what needs code → live numbers (30/90/365 annualized, market cap multiple) → open decisions. End with a recommended sequence and a short numbered list of decisions. Keep RPC keys out of chat output and commit messages; `.env` is git-ignored. If Mike pastes a key in chat, save it and mention it is now in the chat history (rotation is his call).

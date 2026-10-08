@@ -13,12 +13,32 @@ This skill covers Mike's orion valuation pipeline (VVV/HYPE/AERO; CRV in progres
 - Feature work follows the repo's own pattern: branch `feat/<asset>`, a spec in `docs/superpowers/specs/<date>-orion-<topic>-design.md`, then a plan in `docs/superpowers/plans/`, then implementation, then a followups note in `docs/superpowers/notes/`. Read the latest onboarding spec+followups (AERO, HYPE) before drafting a new one; they carry the conventions (mirror-rule bands, backfill > window, hash pins, the 5 user checkpoints).
 - Leave unrelated working-tree changes (e.g. an npm-touched `package-lock.json`) uncommitted and mention them; don't sweep them into feature commits.
 - Adding a new asset: follow `references/asset-onboarding.md`.
+- Building blocks that keep the grade at A without manual rows (added on feat/crv): `constant` source for structural values (e.g. a zero staker share); adapters may return `schedule_steps` (step in force + future coded cuts) on schedule metrics; `vote_incentives` component for bribes (third-party vote payments are NOT holder flow; `price_basis: spot` per Mike's choice for CRV).
+- When a component or estimate comes out far from your back-of-envelope, debug-print its breakdown in the asset test before adjusting assertions, and surface the cause to Mike as a decision (e.g. horizon-price feedback shrank CRV bribes 20x) rather than silently loosening the test.
+- A value derived from an on-chain flow is stamped `onchain`, not `api`.
+- Future-dated observations (schedule steps for a coded cut) must never set the valuation's as-of. `updateAsset` values at the newest `observedAt` the fetch wrote; for schedule metrics, count only the earliest step (the one in force). Otherwise the signal is dated at the cut, every metric goes stale (grade D), and the bad signal stays "latest" until that date.
+
+## Repairing bad rows a live run wrote
+- Fix the code on a `fix/<topic>` branch with a regression test first. Then list the exact rows the run left (`signals`, `valuation_runs`, `snapshots`, `config_versions.created_at`; find them by scanning `*_at`/`as_of` columns for dates past today).
+- Propose the repair to Mike before running it, in this order: deploy the fix (ff-merge + build); fresh backup; one `BEGIN…COMMIT` whose `DELETE`/`UPDATE`s are each pinned by id AND asset (AND signal_id/hash where there is one); re-run the valuation without a fetch or the agent.
+- Leave correct observations and journal rows in place. Don't edit the append-only `signals.jsonl`/`ticks.jsonl` logs.
+- `PRAGMA foreign_keys` is off in `orion.db`, so delete children before parents (signals → valuation_runs → snapshots) by hand.
+
+## Changing the live install (Mike's standing rules)
+The repo working tree IS the live site: cron runs `run-daily.sh` → `dist/cli/index.js` with `ORION_HOME` = repo root, so `orion.db` and `.env` there are production.
+1. Before any live write, check nothing is mid-run (`pgrep -af 'orion|run-daily'`) and note when the next cron tick fires.
+2. Back up the DB first, with the sqlite online backup, then verify it: `sqlite3 orion.db ".backup 'backups/orion.db.pre-<topic>-<UTCstamp>'"`, `PRAGMA integrity_check` on the copy, and compare row counts (observations, assumption_sets, fetch_runs, anomalies). `chmod 600` the copy and keep `backups/` out of git via `.git/info/exclude`.
+3. Merge with `git merge --ff-only feat/<x>`, then `npm run build` — cron runs `dist/`, so an unbuilt merge changes nothing live — then `asset validate` every asset with the built CLI, not only the new one.
+4. Run live commands with `node dist/cli/index.js ...` (what cron uses, not `tsx src`), and in the reply list every command run against live verbatim, in order, each with its result, and say plainly which ones wrote to the DB. Record row counts before and after, and state that a dry run left them unchanged.
+5. Before a step that calls the analyst agent (a tick or bootstrap, which costs Anthropic spend) or writes signals, say what it will write and ask for a go.
+6. Do dry runs during development from a throwaway home instead (`H=$(mktemp -d)`, copy `assets/<x>.yaml` and `.env` into it, `ORION_HOME=$H`), so they never touch `orion.db`. Delete that home afterwards, because it holds a copy of `.env`.
+- `git push origin main` may be refused for lack of access. If so, say so and ask Mike who pushes; never report a push you didn't see succeed.
 
 Repo: `/home/hermes/git/orion`. Live DB: `orion.db` in the repo root (sqlite). Secrets: `orion/.env` (gitignored, mode 600). It is sourced by the profile's `scripts/orion-tick.sh` and also read by orion itself via `loadEnv`. Cron jobs and delivery are covered in memory; use the `cron-job-administration` skill for any schedule changes.
 
 ## External dependencies (what each asset hits)
 - **VVV, AERO**: Base mainnet RPC (chain 8453). The env var is named by `ingest.rpc_url_env` in `assets/<asset>.yaml` (currently `ORION_BASE_RPC_URL`). When it is unset, orion falls back to `https://mainnet.base.org` (`DEFAULT_RPC_URLS` in `src/ingest/run.ts`). They also use CoinGecko, DefiLlama and `http_json` cross-checks.
-- **Ethereum mainnet (chain 1)**: `ORION_ETH_RPC_URL` in `.env` holds Mike's Alchemy key (passes 100k-block `eth_getLogs` with `blockTimestamp`, and archive `eth_call`). Free mainnet RPCs (drpc, publicnode) refuse ranged logs beyond ~10k blocks and archive reads, so never default chain 1 to a keyless URL. The transport (`viemRpc.ts`) only accepts Base until the CRV branch adds chain 1.
+- **Ethereum mainnet (chain 1)**: `ORION_ETH_RPC_URL` in `.env` holds Mike's Alchemy key (passes 100k-block `eth_getLogs` with `blockTimestamp`, and archive `eth_call`). Free mainnet RPCs (drpc, publicnode) refuse ranged logs beyond ~10k blocks and archive reads, so never default chain 1 to a keyless URL. Chains live in `src/ingest/transport/chains.ts` (per-chain log range, block time, keyless default or none); adding a chain = a row there plus the viem chain in `viemRpc.ts`. The transfer scanner reads one day per `eth_getLogs` call regardless of the range cap, so a backfill costs one call per day (~2 min for 100 days on mainnet).
 - **HYPE**: no RPC. It uses `api.hyperliquid.xyz/info` (REST), CoinGecko and DefiLlama.
 - **CoinGecko**: the optional `COINGECKO_API_KEY` is sent as the demo-key header. Without it, the code spaces requests 2.5s apart to stay under the keyless limit.
 - To re-derive this list: `grep -n '^ingest:' assets/*.yaml` and `grep -rn 'env\.\|https://' src/ingest`.
