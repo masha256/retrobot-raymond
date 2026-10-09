@@ -5,7 +5,7 @@ description: Use when operating, debugging, or developing orion.
 
 # Orion operations and development
 
-This skill covers Mike's orion valuation pipeline (VVV/HYPE/AERO/CRV/yCRV live; cvxCRV and sdCRV built as multi-stream wrappers, awaiting live checkpoints): diagnosing ingest failures, vetting or swapping data endpoints and API keys, running the test suite, onboarding and calibrating new assets. Mike manages orion development from the Raymond bot's orion-dev topic.
+This skill covers Mike's orion valuation pipeline (VVV/HYPE/AERO/CRV/yCRV/cvxCRV/sdCRV live; the last three are CRV liquid-locker wrappers): diagnosing ingest failures, vetting or swapping data endpoints and API keys, running the test suite, onboarding and calibrating new assets. Mike manages orion development from the Raymond bot's orion-dev topic.
 
 ## Development: tests and branches
 - Run `npx vitest run --maxWorkers=2` then `npm run typecheck`. Plain `npm test` on this 4-core host times out the CLI tests (`tests/cli/{cli,ingest.cli,tick.cli}.test.ts` spawn subprocesses; 5s/10s timeouts) under full parallelism; rerun those files alone before calling any failure real.
