@@ -25,15 +25,15 @@
       "schedule_display": "30 7 * * *",
       "repeat": {
         "times": null,
-        "completed": 33
+        "completed": 34
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-06T08:31:04.140130-07:00",
-      "next_run_at": "2026-10-09T07:30:00-07:00",
-      "last_run_at": "2026-10-08T07:31:36.904396-07:00",
+      "next_run_at": "2026-10-10T07:30:00-07:00",
+      "last_run_at": "2026-10-09T07:31:43.727138-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -45,8 +45,8 @@
       "workdir": null,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-08T07:30:00-07:00",
-        "dispatched_at": "2026-10-08T07:30:10.505708-07:00",
+        "scheduled_at": "2026-10-09T07:30:00-07:00",
+        "dispatched_at": "2026-10-09T07:30:10.503589-07:00",
         "lateness_seconds": 10.5,
         "kind": "on_time"
       }
@@ -76,15 +76,15 @@
       "schedule_display": "45 7 * * *",
       "repeat": {
         "times": null,
-        "completed": 33
+        "completed": 34
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-06T08:31:04.175081-07:00",
-      "next_run_at": "2026-10-09T07:45:00-07:00",
-      "last_run_at": "2026-10-08T07:47:29.472531-07:00",
+      "next_run_at": "2026-10-10T07:45:00-07:00",
+      "last_run_at": "2026-10-09T07:47:26.296542-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -96,8 +96,8 @@
       "workdir": null,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-08T07:45:00-07:00",
-        "dispatched_at": "2026-10-08T07:45:10.507533-07:00",
+        "scheduled_at": "2026-10-09T07:45:00-07:00",
+        "dispatched_at": "2026-10-09T07:45:10.519308-07:00",
         "lateness_seconds": 10.5,
         "kind": "on_time"
       }
@@ -127,15 +127,15 @@
       "schedule_display": "0 8 * * *",
       "repeat": {
         "times": null,
-        "completed": 34
+        "completed": 35
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-06T08:31:04.203123-07:00",
-      "next_run_at": "2026-10-09T08:00:00-07:00",
-      "last_run_at": "2026-10-08T08:02:42.725004-07:00",
+      "next_run_at": "2026-10-10T08:00:00-07:00",
+      "last_run_at": "2026-10-09T08:02:24.104404-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -147,8 +147,8 @@
       "workdir": null,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-08T08:00:00-07:00",
-        "dispatched_at": "2026-10-08T08:00:10.505134-07:00",
+        "scheduled_at": "2026-10-09T08:00:00-07:00",
+        "dispatched_at": "2026-10-09T08:00:10.506476-07:00",
         "lateness_seconds": 10.5,
         "kind": "on_time"
       }
@@ -178,15 +178,15 @@
       "schedule_display": "15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 792
+        "completed": 793
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-06T08:57:25.404654-07:00",
-      "next_run_at": "2026-10-09T08:15:00-07:00",
-      "last_run_at": "2026-10-09T06:15:27.017076-07:00",
+      "next_run_at": "2026-10-09T09:15:00-07:00",
+      "last_run_at": "2026-10-09T07:15:26.370753-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -206,12 +206,12 @@
       ],
       "workdir": null,
       "fire_claim": {
-        "at": "2026-10-09T07:15:10.942423-07:00",
-        "by": "uranus:347240:f8c20ddd9b8541efac46e85c6a6ca050"
+        "at": "2026-10-09T08:15:10.921771-07:00",
+        "by": "uranus:347240:d34e6d1665d74059a034008755889647"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-10-09T07:15:00-07:00",
-        "dispatched_at": "2026-10-09T07:15:10.524335-07:00",
+        "scheduled_at": "2026-10-09T08:15:00-07:00",
+        "dispatched_at": "2026-10-09T08:15:10.507040-07:00",
         "lateness_seconds": 10.5,
         "kind": "on_time"
       }
@@ -701,7 +701,56 @@
       "enabled_toolsets": null,
       "workdir": "/home/hermes/git/orion",
       "attach_to_session": true
+    },
+    {
+      "id": "1cc5afa274dd",
+      "name": "reminder-orion-aero-rebuild",
+      "prompt": "Reminder for Mike (orion-dev): follow up on the AERO model rebuild. Do NOT change anything; just check and report briefly, then ask Mike whether to start.\n\nBackground (decided 2026-10-09, option 1 'hold, rebuild after the migration'): Aerodrome and Velodrome merged into 'Aero' (launch planned 2026-10-21 on 7 chains; AERO -> new AERO 1:1 and VELO -> ~0.044 AERO, conversion 2026-11-02..04; 'predictive allocation' may replace weekly gauge voting and shrink the bribe market). Orion's AERO asset (/home/hermes/git/orion/assets/aero.yaml) still uses DefiLlama 'aerodrome' dailyHoldersRevenue on Base as its holder flow (~$69M/yr, includes ~$5.6M/yr classic-pool bribes, misses ~$6.4M/yr Slipstream bribes; on-chain voter fees were ~$70M/yr over 91 days to 2026-10-09). DefiLlama now shows a $7.92M bribe-pricing spike on 2026-09-09 that Orion's stored row ($274K) does not have: never re-backfill AERO from DefiLlama without handling that.\n\nCheck and report: (1) the last few orion-aero signals in /home/hermes/git/orion/orion.db (status, grade, failed sources, any price/supply jumps around the migration); (2) whether Aero actually launched and the migration happened, the new token address and whether CoinGecko id aerodrome-finance and the Base Minter/VotingEscrow still apply; (3) whether weekly bribes/voting still exist. Then propose the rebuild plan: new token and supply incl. VELO dilution, fees on-chain across chains, bribes as a separate vote_incentives component only if the bribe market survives, then recalibration with Mike's OK.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-11-05T10:00:00-08:00",
+        "display": "once at 2026-11-05 10:00"
+      },
+      "schedule_display": "once at 2026-11-05 10:00",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-10-09T07:36:42.766049-07:00",
+      "next_run_at": "2026-11-05T10:00:00-08:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "failure_streak": 0,
+      "deliver": "telegram:1620897892:16021",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "1620897892",
+        "chat_name": "Mike M",
+        "thread_id": "16021",
+        "user_id": "1620897892",
+        "scope_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
     }
   ],
-  "updated_at": "2026-10-09T07:15:10.943038-07:00"
+  "updated_at": "2026-10-09T08:15:10.922403-07:00"
 }

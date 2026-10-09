@@ -18,7 +18,15 @@ Research notes go stale (UNI's 30d run rate fell ~30% in two weeks). Pull fresh 
 DefiLlama's holders revenue is often a formula or includes non-revenue money (bribes, product yield). Before choosing a flow source:
 1. `eth_getLogs` Transfer logs into the payout contract over ~90 days (needs a keyed RPC on mainnet); group by sender and by day.
 2. Then trace one hop up: logs out of and into the sender, to see the split (e.g. allocator → 90% distributor / 10% treasury).
-3. Reconcile against DefiLlama with its own subtraction (bribes = `dailyFees − dailyUserFees`) and its `methodology` text. Known case: Aerodrome's holders revenue adds external bribes (V1), while Slipstream shows zero bribes, which is suspect. So AERO's flow mixes fees and bribes, unlike CRV's fee-only flow. Check this before comparing ve-assets or reworking AERO. AERO has no liquid wrapper worth an asset (relays are non-tradeable; iAERO is a few $M); revisit only if a wrapper passes ~$50M.
+3. Reconcile against DefiLlama using its `methodology` and `breakdownMethodology` text, and read the adapter source (`github.com/DefiLlama/dimension-adapters`, `dexs/<slug>/index.ts`) to see exactly what is summed. The public API does not return the per-label split (`dailyBribesRevenue` comes back empty, and `breakdownByLabel` is ignored), so measure the bribe part on chain rather than subtracting.
+4. DefiLlama revises past days. Diff the stored daily rows against a fresh API pull: a day the API has since inflated (for example, a bribe-pricing spike) would come back on any re-backfill. Name the date and size when proposing a source change.
+
+**AERO (Velodrome-style ve(3,3) on Base):** voter payouts can be measured from logs.
+- Get every gauge's `bribeVotingReward` and `feeVotingReward` from Voter `0x16613524e02ad97eDfeF371bC883F2F5d6C480A5` `GaugeCreated` logs (about 2,000 gauges across 6 gauge factories).
+- Then sum `NotifyReward(from, reward, epoch, amount)` into those contracts over 91 days and price each token with `coins.llama.fi/prices/current/base:<t>,...` in batches of about 80.
+- Measured result: fees about $70M a year and bribes about $12M a year. DefiLlama's holders revenue counts the classic-pool bribes but none of the Slipstream ones, so the totals roughly offset.
+- The bribes are mostly long-tail tokens priced at spot, so treat bribe dollars as low quality.
+- AERO has no liquid wrapper worth its own asset (relays are non-tradeable; iAERO is a few $M). Revisit only if a wrapper passes about $50M.
 If the gap is explained, prefer the on-chain `transfer_flow` with a sender allowlist (an unlisted sender then raises an anomaly when governance re-routes fees) and drop a cross-check that would fire every month.
 
 ## 4. Shape decisions that recur
@@ -84,7 +92,12 @@ Never price candidates against live. Work in scratch homes and import only the p
 7. **Record:** write a followups note `docs/superpowers/notes/<date>-<x>-onboarding-followups.md` (checkpoints, the calibration table, open questions). Delete the scratch homes, which hold `.env`, and the merged branches.
 
 ## 7. Holder yield vs what orion reports
-The signal's "staked total return" adds only emissions paid to stakers. Cash to lockers (fee flow, bribes) never reaches it, so for ve-tokens it equals the price upside.
+The 12m target values flows from the horizon on (the token's price then), so cash paid DURING the horizon appears in no target. Engine 1.3.0 (`src/engine/stakedCash.ts`) adds it to the staked total return only: `((target + cash per receiving token) / spot) × (1 + emission yield)^H − 1`, signal fields `staked_cash_per_token` + `staked_cash_streams`. Rules it follows, keep them when extending:
+- Count `fee_share` holder flows only; burns/buybacks act through price and supply, so counting them double-counts (VVV and HYPE stay unchanged).
+- Vote incentives count only where the `vote_incentives` component sets `params.staked_return: all|staked|locked` (who collects them); CRV sets `locked`.
+- Each stream follows the valuation's own growth path, divided by its recipients at each step: effective supply, staked supply (today's share under `valued_per: recipients`, else today's ratio moving to `staked_ratio_horizon`), or locked supply now.
+- Targets never move; only staked total return does. AERO's figure inherits DefiLlama's mixed series (classic-pool bribes in, Slipstream bribes out) until its flow is rebuilt.
+When Mike asks why a yield line reads 0 or equals the upside, check the engine version of the signal first: before 1.3.0 the line counted token emissions only.
 
 When Mike asks whether a wrapper yield (yCRV/st-yCRV, cvxCRV, sdCRV…) is in the model, decompose it on chain before answering:
 - the wrapper's veCRV share of the total;
@@ -107,6 +120,23 @@ When Mike asks for "only the spike", make zero repo, DB or cron changes. Keep no
 
 ### Building a liquid-locker wrapper asset (yCRV pattern; reuse for cvxCRV, sdCRV)
 - **Scope (Mike's choice):** value the wrapper as its staked position paying the stable reward (crvUSD). Leave auto-compounding vaults out; the other lockers share the staking shape.
+- **Before building, list every reward token into the staking contract, not only crvUSD.** Sum `alchemy_getAssetTransfers` with `toAddress` = the staker or its wrapper, grouped by asset and sender. Then classify each stream:
+  - protocol fee income (crvUSD);
+  - emission-linked income (CRV platform fees, which shrink with CRV emissions and price);
+  - a treasury program (a capped governance token handed out by the protocol, which can end);
+  - bribes (check how they are paid: in the wrapper token through a Merkle distributor, and who is eligible).
+  If the crvUSD-only rule would drop a large share of the cash, bring Mike priced scope options (streams in or out, yield at spot for each) before building. Don't silently extend the yCRV rule. A multi-stream holder flow also needs the run-rate derivation to sum several flow metrics, an engine change to flag up front.
+- Fee routes into the staker contracts (read on chain, 91 days, starting from FeeDistributor `0xD16d5eC345Dd86Fb63C6a9C43c517210F1027914` crvUSD out):
+  - **cvxCRV** (token `0x62B9c7356A2Dc64a1969e19C23e4f579F9810Aa7`):
+    - crvUSD: VoterProxy `0x989AEb4d175e16225E39E87d0D97A3360524AD80` → Booster `0xF403C135812408BFbE8713b5A23a04b3D48AAE31` → crvUSD reward pool `0x191f455cc8acdd579f4e6956fc7007c9668c2289` (100%) → CvxCrvStakingWrapper `0xaa0c3f5f7dfd688c6e646f66cd2a6b66acdbe434`.
+    - CRV: from the Booster into BaseRewardPool `0x3Fe65692bfCD0e6CF84cB1E7d24108E434A7587e`.
+    - CVX: from CvxDistribution `0x449f2fd99174e1785cf2a1c79e665fec3dd1ddc6`.
+    - No bribes: Votium pays vlCVX, not cvxCRV.
+  - **sdCRV** (token `0xD1b5651E55D4CeeD36251c61c50C889B36F6abB5`):
+    - crvUSD: locker `0x52f541764E6e90eeBc5c21Ff570De0e2D63766B6` → CurveAccumulator `0x11f78501e6b0cbc5de4c7e6bbabaacdb973eb4cd`, which splits 85% to the sdCRV gauge `0x7f50786a0b15723d741727882ee99a0bf34e3466`, 10% to LPs and 5% to treasury.
+    - CRV: from FeeReceiver `0x60136fefe23d269af41ab72de483d186dc4318d6` through the accumulator.
+    - Bribes: Botmarket `0xadfbfd06633eb92fc9b58b3152fe92b0a24eb1ff` swaps them to sdCRV and sends them to MultiMerkleStash `0x03e34b085c52985f6a5d27243f20c84bddc01db4`.
+  - Bribes are about two-thirds of sdCRV's cash and about three-quarters of yCRV's; cvxCRV has none.
 - **Holder flow = the last hop:** the reward token into the stakers' reward distributor, allowlisting only the contract that funds it (for yCRV, the Receiver). The splitter ratios and performance fee upstream are then netted out by measurement. Read them for the spec anyway (`getSplits()`, `performanceFee()`; probe the struct's field count, since a wrong ABI returns garbage).
 - **Rewards paid in vault shares:** use `transfer_flow` `share_price: { contract, function: pricePerShare, decimals }`. It converts each day's shares at that day's last block, then prices the underlying.
 - **Paid only to stakers:** `recipient_base: staked` + `valued_per: recipients` divides the flow by today's staked share in both estimate modules, because unstaked wrapper tokens forfeit to the treasury.
