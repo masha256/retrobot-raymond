@@ -18,7 +18,8 @@ Research notes go stale (UNI's 30d run rate fell ~30% in two weeks). Pull fresh 
 DefiLlama's holders revenue is often a formula or includes non-revenue money (bribes, product yield). Before choosing a flow source:
 1. `eth_getLogs` Transfer logs into the payout contract over ~90 days (needs a keyed RPC on mainnet); group by sender and by day.
 2. Then trace one hop up: logs out of and into the sender, to see the split (e.g. allocator → 90% distributor / 10% treasury).
-3. Reconcile against DefiLlama with its own subtraction (bribes = `dailyFees − dailyUserFees`) and its `methodology` text. If the gap is explained, prefer the on-chain `transfer_flow` with a sender allowlist (an unlisted sender then raises an anomaly when governance re-routes fees) and drop a cross-check that would fire every month.
+3. Reconcile against DefiLlama with its own subtraction (bribes = `dailyFees − dailyUserFees`) and its `methodology` text. Known case: Aerodrome's holders revenue adds external bribes (V1), while Slipstream shows zero bribes, which is suspect. So AERO's flow mixes fees and bribes, unlike CRV's fee-only flow. Check this before comparing ve-assets or reworking AERO.
+If the gap is explained, prefer the on-chain `transfer_flow` with a sender allowlist (an unlisted sender then raises an anomaly when governance re-routes fees) and drop a cross-check that would fire every month.
 
 ## 4. Shape decisions that recur
 - **Lumpy flows**: weekly payouts → make the run-rate window AND the holder flow's `window_days` the same whole number of weeks (91), so every window holds the same number of payouts and measured capture stays 1. The scanner already writes empty days as 0 rows.
@@ -39,6 +40,7 @@ DefiLlama's holders revenue is often a formula or includes non-revenue money (br
   - Also drive the asset through `updateAsset` (the tick path), not only `fetchAsset` + `runValuation`. The valuation's as-of is computed in `src/app/update.ts` from what the fetch wrote, so a test that calls `runValuation(db, asset, NOW)` directly can't catch an as-of bug. Anything that writes future-dated rows (schedule steps) needs this path tested.
   - Prove a new regression test bites: stash the fix (`git stash push <file>`), see the test fail, then pop it back.
 - Then do a live dry run from a throwaway home (see SKILL.md, live-install rules), with `--json --metric ...` to pull the exact values, and record them in the spec's Amendments section.
+  - Do it before writing the asset test's fixtures, so they reflect real data. In the same home, a real `data fetch`, a flat placeholder `model assumptions import` and `model whatif <x> --json` check the engine end to end. Report the result as a placeholder, not a calibration.
 - Before Mike's checkpoints, write any spec deviations found during the build into the Amendments section, and present any value-changing ones to him as a decision.
 - **Checkpoints on live, in order:**
   1. `persona assign <asset> <persona>` + `data fetch <asset> --dry-run`.
@@ -97,6 +99,15 @@ When Mike asks for "only the spike", make zero repo, DB or cron changes. Keep no
 5. **Price check:** the wrapper/underlying ratio weekly over a year (`coins.llama.fi/chart/<a>,<b>?span=53&period=7d`) shows whether the discount is a stable band or a de-peg.
 6. **Rough fair value:** price per-token cash to stakers as a perpetuity, with fees growing slowly and bribes either shrinking with emissions or flat. Also solve for the discount rate the market price implies. Whether bribes shrink with emissions is usually the whole call; report it as such.
 7. **For a build:** list the flows (fees, bribes via the converter), the staker share, and the engine rule that a wrapper mintable 1:1 from the underlying is capped at the underlying's price.
+
+### Building a liquid-locker wrapper asset (yCRV pattern; reuse for cvxCRV, sdCRV)
+- **Scope (Mike's choice):** value the wrapper as its staked position paying the stable reward (crvUSD). Leave auto-compounding vaults out; the other lockers share the staking shape.
+- **Holder flow = the last hop:** the reward token into the stakers' reward distributor, allowlisting only the contract that funds it (for yCRV, the Receiver). The splitter ratios and performance fee upstream are then netted out by measurement. Read them for the spec anyway (`getSplits()`, `performanceFee()`; probe the struct's field count, since a wrong ABI returns garbage).
+- **Rewards paid in vault shares:** use `transfer_flow` `share_price: { contract, function: pricePerShare, decimals }`. It converts each day's shares at that day's last block, then prices the underlying.
+- **Paid only to stakers:** `recipient_base: staked` + `valued_per: recipients` divides the flow by today's staked share in both estimate modules, because unstaked wrapper tokens forfeit to the treasury.
+- **Bribes arriving as stable in the same flow:** no `vote_incentives` component. Put their link to the underlying's emission cuts in the growth assumptions (allow negative terminal growth), and add a `review_triggers.calendar` entry on the cut date.
+- **Metrics:** supply = wrapper `totalSupply()`; staked = the staker's `totalSupply()`; emissions and staker share = `constant` 0. Price cross-checks on thin wrappers run near the 2% tolerance; say so.
+- The ceiling at the underlying's price is not built yet (no cross-asset rule). List it as an open follow-up.
 
 ## 8. Report shape Mike accepts
 Per asset: holder-flow mechanism → what's config-only → what needs code → live numbers (30/90/365 annualized, market cap multiple) → open decisions. End with a recommended sequence and a short numbered list of decisions. Keep RPC keys out of chat output and commit messages; `.env` is git-ignored. If Mike pastes a key in chat, save it and mention it is now in the chat history (rotation is his call).
