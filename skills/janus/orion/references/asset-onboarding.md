@@ -27,6 +27,7 @@ DefiLlama's holders revenue is often a formula or includes non-revenue money (br
 - Measured result: fees about $70M a year and bribes about $12M a year. DefiLlama's holders revenue counts the classic-pool bribes but none of the Slipstream ones, so the totals roughly offset.
 - The bribes are mostly long-tail tokens priced at spot, so treat bribe dollars as low quality.
 - AERO has no liquid wrapper worth its own asset (relays are non-tradeable; iAERO is a few $M). Revisit only if a wrapper passes about $50M.
+**Before rebuilding a protocol's sources, search the news for an imminent migration** (merger, new token, new contracts, voting replaced by automation). If one is weeks away, recommend holding the current config, leaving a review flag on the signal, and setting a dated follow-up reminder after the migration (a cron one-shot to the orion-dev topic that checks signals around the dates, the new token/contracts/ids, and whether bribes still exist; then proposes the rebuild without changing anything). Contracts and bribe markets are what migrations change first.
 If the gap is explained, prefer the on-chain `transfer_flow` with a sender allowlist (an unlisted sender then raises an anomaly when governance re-routes fees) and drop a cross-check that would fire every month.
 
 ## 4. Shape decisions that recur
@@ -56,7 +57,7 @@ If the gap is explained, prefer the on-chain `transfer_flow` with a sender allow
      - The `signal_id` stamp and `generated_at` are today. A future date means a future-dated row set the as-of. Every metric then reads stale and the grade falls to D.
      - Blocked only on `no_assumption_set`, at the grade you expected.
      - The bootstrap journal (`select summary, thesis, open_questions_json from journal where asset_id='<x>' order by id desc limit 1`). The analyst flags real defects there; answer each one in the report. It reads raw drivers, not the valuation breakdown, so it can flag something the engine already handles (e.g. "valued per total supply?" when `valued_per: recipients` is set); check the breakdown before conceding a defect.
-     - A first tick runs about 2 minutes; launch it as one backgrounded command that does the backup, the run and the output tail together, and answer from its completion notice.
+     - A first tick runs about 2 minutes for a single-stream asset and 5–6 minutes for a three-stream wrapper (one log scan per stream per day); launch it as one backgrounded command that does the backup, the run and the output tail together, and answer from its completion notice.
   3. Calibration packages: see section 6.
   4. First signal: `node dist/cli/index.js model run <asset>` right after the import. Report the expected value at each horizon, bear/base/bull, the per-module values and dispersion. Then run `inbox <asset>`.
   5. The cron line: copy the newest `orion-<asset>` job. Ask before creating it, and say whether any one-shot watch job should also cover the new asset.
@@ -90,6 +91,14 @@ Never price candidates against live. Work in scratch homes and import only the p
    - Re-pin the hash. Add an asset test that the calibrated set is complete and inside its own bands.
    - Then branch `calib/<x>`, run the suite, ff-merge, build, back up, `model assumptions import <x> calibration/<x>-assumptions.yaml --rationale "..."`, `model run <x>`.
 7. **Record:** write a followups note `docs/superpowers/notes/<date>-<x>-onboarding-followups.md` (checkpoints, the calibration table, open questions). Delete the scratch homes, which hold `.env`, and the merged branches.
+
+## Multi-stream wrappers (cvxCRV, sdCRV pattern)
+
+- One `transfer_flow` holder flow per reward token, measured at the staking contract (wrapper/gauge/merkle stash) with the funding contract as `from_allowlist`; `revenue_run_rate_usd` uses `flow_annualized` with `params.metrics: [a, b, c]` (sums days every flow has).
+- **Capture is a share:** `capture_rate_terminal.<flow>` = that flow's share of the summed run rate. Setting 1 per flow counts the run rate N times (cvxCRV showed +62% instead of -45%). Band each capture key near its share; test that calibrated shares sum to <= 1.
+- Before calibrating, chart each stream by month: a stream that stopped (cvxCRV's CVX, Sept 2026) still sits in the 91-day average — set its capture to 0 rather than dropping the stream.
+- Scratch calibration: backfill all streams with `--metric` per flow plus `revenue_run_rate_usd`, `--backfill-days 362`; window variants by rewriting `days:`/`window_days:` in the scratch asset yaml and re-fetching only `revenue_run_rate_usd`. `model whatif --json` returns `{output: {horizons: {12m: {expectedTarget, upsidePct, stakedTotalReturnPct, scenarios}}}}`.
+- Thin wrapper prices on CoinGecko drift vs DefiLlama; http_json cannot be a required primary, so widen the cross-check tolerance instead.
 
 ## 7. Holder yield vs what orion reports
 The 12m target values flows from the horizon on (the token's price then), so cash paid DURING the horizon appears in no target. Engine 1.3.0 (`src/engine/stakedCash.ts`) adds it to the staked total return only: `((target + cash per receiving token) / spot) × (1 + emission yield)^H − 1`, signal fields `staked_cash_per_token` + `staked_cash_streams`. Rules it follows, keep them when extending:
@@ -131,6 +140,9 @@ When Mike asks for "only the spike", make zero repo, DB or cron changes. Keep no
 - **Multi-stream build:** one `transfer_flow` metric + one holder flow per stream (each `recipient_base: staked`, `valued_per: recipients`, `window_days: 91`; a treasury program gets `capture_rule: discretionary` so its own premium carries the wind-down). `revenue_run_rate_usd` uses `derived` `flow_annualized` with `params.metrics: [flow_usd.a, flow_usd.b, ...]` (sums by day over days every flow has; can't mix API and on-chain flows).
   - **Set each `capture_rate_terminal.<flow>` to that flow's share of the run rate, never 1 per flow.** Measured capture per flow is flow ÷ run rate, so 1 on each counts the whole run rate once per stream (a scratch run read +62% instead of −45%). Compute the shares from the last 91 days of `flow_usd.*` rows and write them into placeholders and calibrations alike.
   - Sanity-check a placeholder run: if `fm_holder_flow` ÷ per-token cash is far above the multiple you set, a capture rate is wrong.
+  - **Check each stream's recent daily rate against its 91-day average before calibrating.** A treasury program can stop mid-window (cvxCRV's CVX fell ~99% in Aug–Sep: CvxDistribution's funding hook stopped topping it up). Read the distributor's `rewardRate()`/`periodFinish()` and the funding transfers into it; if the program has ended, keep the stream (a restart shows up) but set its capture share from the current rate, not the window average, and tell Mike the corrected cash total.
+  - The bootstrap analyst tends to ask that bribes paid to stakers in the wrapper token be moved into a `vote_incentives` component. Answer with the yCRV rule: bribes the stakers actually receive are cash flow in the holder flow; their decline lives in growth assumptions.
+  - Start the 362-day calibration backfill only after the first live tick finishes, so the scratch copy holds the live 91-day flows; backfill each wrapper in its own scratch home, backgrounded (one wrapper ≈ 10+ minutes).
   - Asset test: the stock `fakeRpc` serves one log list, so wrap it to route `getTransferLogs` by `token>sink`; also fake `decimals()` on the wrapper token (`erc20_supply` reads it). A `for (const c of CASES) describe(...)` loop covers two wrappers in one file.
   - A scratch dry fetch scans ~100 days per stream (one `eth_getLogs` per day each), so two three-stream assets take 10+ minutes: run it backgrounded with `notify`, and do the asset test and full suite meanwhile.
 - Fee routes into the staker contracts (read on chain, 91 days, starting from FeeDistributor `0xD16d5eC345Dd86Fb63C6a9C43c517210F1027914` crvUSD out):
