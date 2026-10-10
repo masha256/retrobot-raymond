@@ -14,6 +14,43 @@
 | **sdCRV** | $0.1952 | $23.2M | $2.5M | $2.5M | 9.4x | **9.4x** | 10.7% | $0.1177 (-40%) | A |
 | **yCRV** | $0.1907 | $13.7M | $1.5M | $1.5M | 9.0x | **9.0x** | 11.1% | $0.1220 (-36%) | A |
 
+## 1b. Growth & PEG
+
+Holder flow over the latest 90-day window (91 days for the Curve family) against the 90 days before it. Windows run 2026-04-12..07-12 → 2026-07-12..10-10.
+
+| Asset | Holder flow, prior 90d | Holder flow, latest 90d | 90d/90d | **Annualized growth** | **PEG** (MC/HF ÷ ann. growth) | Orion base-case Y1 growth | PEG on Orion Y1 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| **HYPE** | $146.8M⁵ | $178.5M⁵ | +21.6% | **+121%** | **0.26** | +60% | 0.52 |
+| **VVV** | $0.82M | $2.29M | +181% | **n/m⁴** | n/m⁴ | +110% | 1.05 (on burn) · 0.10 (on rev.) |
+| **AERO** | $16.1M | $17.2M | +6.6% | **+30%** | **0.39** | +30% | 0.39 |
+| **CRV** | $1.56M | $1.28M | −17.9% | **−55%** | n/m (shrinking) | +10% | 11.1 |
+| **cvxCRV** | $1.49M | $1.30M | −13.0% | **−43%** | n/m (shrinking) | −11% | n/m |
+| **sdCRV** | $0.79M | $0.61M | −21.8% | **−63%** | n/m (shrinking) | −11% | n/m |
+| **yCRV** | $0.48M | $0.38M | −21.3% | **−62%** | n/m (shrinking) | −11% | n/m |
+
+**Stream detail:**
+- **cvxCRV:** crvUSD fees −17%, CRV +16%, CVX −43% (program stopped).
+- **sdCRV:** crvUSD −18%, CRV −1%, bribes −26%.
+- **VVV:** programmatic pool burns $0.24M → $1.19M (+402%); discretionary Safe buybacks $0.58M → $1.10M (+91%), one per month, rising from $119K in April to $411K in October.
+
+**How to read it**
+- **The 90d/90d figures:** I re-measured both windows today for all 11 streams, from the same sources Orion reads (DefiLlama for HYPE and AERO, on-chain Transfer logs for the rest, priced daily). For the latest window, the 9 on-chain streams match Orion's stored data to within about 1%.
+- **Annualized growth** compounds the 90d/90d change over a year: (1 + g)^(365/90) − 1. That turns a single quarter into four, so a −18% quarter becomes −55% and +22% becomes +121%. It's a run rate, not a forecast.
+- **PEG** = MC / Holder flow ÷ annualized growth in % points. Below 1 means you pay less than 1x of multiple per point of growth. It means nothing when growth is negative.
+- **PEG on Orion Y1** uses Orion's own base-case first-year growth assumption (`rev_growth_y1`) instead of trailing growth. It's steadier, and it's what the 12m targets are built on.
+
+**Read-through:**
+- **HYPE** is the cheapest on growth: 0.26 on trailing growth, 0.52 on Orion's more conservative +60%.
+- **AERO** is also cheap on growth at 0.39, and Orion's +30% assumption matches the trailing rate exactly.
+- **The Curve family's holder flow is shrinking 13–22% a quarter.**
+  - Orion's −11% Y1 assumption for the wrappers is far gentler than the trailing −43% to −63%.
+  - CRV's +10% assumption runs against a −18% quarter.
+  - The 9–12x multiples on the wrappers look cheap only if the decline stops.
+
+**⁴ VVV:** the prior window contains the very start of the measured series. Programmatic pool burns were still ramping up, so +181% (+6,500% annualized) reflects that ramp, not a growth rate. On a steadier measure, monthly Safe buybacks grew about 3.5x in 6 months. Treat VVV's growth as "very high, not yet measurable" rather than a PEG input.
+
+**⁵ HYPE data gap:** DefiLlama has since revised HYPE's daily history upward. Today's re-measure puts the latest 90d at $178.5M, a $724M annual run rate. Orion's stored figure for the same window is $149.2M ($605M a year), 16% lower, with nearly every day since August below the revised value. Orion didn't pick up the revisions, and its day labels also run one day later than DefiLlama's. On the revised series, HYPE trades at 25.8x and its PEG is 0.21. Both 90d windows above use the revised series, so the growth rate is like-for-like. AERO's DefiLlama history was also revised; I applied Orion's own fix for the 2026-09-09 artifact day, and the result matches Orion to 0.7%. This is worth a ticket: the DefiLlama ingest should re-fetch the trailing window so later revisions get picked up.
+
 ## 2. Holder flows by type (annualized, trailing 90–91d)
 
 | Asset | Paid to | Buyback / burn | Fee share (crvUSD / fees) | CRV rewards | Bribes / vote incentives | CVX rewards | **Total** |
