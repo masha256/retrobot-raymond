@@ -7,6 +7,8 @@ description: Use when operating, debugging, or developing orion.
 
 This skill covers Mike's orion valuation pipeline (VVV/HYPE/AERO/CRV/yCRV/cvxCRV/sdCRV live; the last three are CRV liquid-locker wrappers): diagnosing ingest failures, vetting or swapping data endpoints and API keys, running the test suite, onboarding and calibrating new assets. Mike manages orion development from the Raymond bot's orion-dev topic.
 
+Holder yield / growth / revenue reporting: see `references/holder-yield-report.md`.
+
 ## Development: tests and branches
 - Run `npx vitest run --maxWorkers=2` then `npm run typecheck`. Plain `npm test` on this 4-core host times out the CLI tests (`tests/cli/{cli,ingest.cli,tick.cli}.test.ts` spawn subprocesses; 5s/10s timeouts) under full parallelism; rerun those files alone before calling any failure real.
 - Report the counts (files/tests passed) from the real run, not an assertion. Even with `--maxWorkers=2`, the CLI subprocess tests (`agent.cli`, `ingest.cli`, `tick.cli`) can time out at 17–30s while the rest of the suite runs; rerun just those files with `--maxWorkers=1` and report both runs honestly.
