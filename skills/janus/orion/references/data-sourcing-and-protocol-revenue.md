@@ -36,6 +36,22 @@ Rules:
 - **Report-only** unless Mike says otherwise: haircuts in the valuation would move every target and force recalibration of all assets.
 - **Keep reporting tags in sync with the valuation config.** When a reporting-only reclassification would diverge from an asset's valuation tag (HYPE's fund buys and holds but is tagged burn), keep the valuation's tag in reporting too and note the economic view; don't let the two layers disagree silently.
 - A first growth value needs 180 days of daily flows, so plan a ~362-day backfill (live write: backup + exact commands) to start with ~6 months of growth history.
+- Show growth that lacks history as **pending** (needs 2 windows), and keep **n/m** for a zero or negative window. Mike reads n/m as "meaningless", not "not yet".
+- Wrappers (yCRV, cvxCRV, sdCRV) show zero dilution of their own but inherit CRV's emissions; say so beside any table that ranks net shareholder yield across assets, or the wrappers look artificially clean.
+- When an annualized 90d/90d comes off a tiny or fast-ramping base (VVV's revenue grew 13x in a quarter, which annualizes to thousands of percent), report it with the per-window change and say it isn't a trend. Don't present the annualized figure alone.
+
+## Vetting a backfilled report series before trusting it
+Monitor-only flows raise no `unlisted_sender` anomaly by design, so nothing flags a contaminated revenue total for you. After every report backfill:
+1. Read the fetch output's `unlisted sender` lines for each report scan. Large or one-off senders (a top-up, a mint from `0x0`, a migration) can inflate revenue. Identify each one (Blockscout) and either add it to `from_allowlist`/`count_from` or exclude it, before quoting the number.
+2. Count rows per metric (`select asset_id, metric_key, count(*), min(observed_at) … group by 1,2`). A stream with far fewer days than its siblings (one cut at 148 days while the others have 362) is a coverage gap: find out why before summing the cuts.
+3. Print monthly sums per series and eyeball them for jumps before computing growth.
+
+A 362-day re-scan of several transfer streams on one asset takes tens of minutes (one `eth_getLogs` per day per scan). Scope every report backfill with `--metric <key>` (repeatable) to the new series only: a bare `data fetch <asset> --backfill-days N` re-scans every existing valuation stream too (VVV's burn scan alone ran ~30 min), which buys nothing and risks rewriting valuation rows.
+
+Rehearse, then replay the same script live:
+1. Write the backfill as one script that takes its commands from a single `ORION_HOME` line (mask keys with the `/v2/` sed, `echo EXIT=${PIPESTATUS[0]}` per fetch). Run it against a scratch `.backup` copy for timing, anomalies and unlisted senders.
+2. Prove valuations didn't move: in the scratch home run `model run <asset> --json` for a few assets and compare `horizons['12m'].expected_target` and `data_quality.grade` from `signals.payload_json` (newest row) against the newest live signal for the same asset; expect identical values and `change.cause` none. Check `anomalies` for rows with `first_seen_at` after the run start (that table has no `created_at`).
+3. For live, generate the script with `sed` replacing only the `ORION_HOME` line, so the live commands are byte-for-byte the rehearsed ones; list them verbatim to Mike. Start it clear of the nightly cron window, and afterwards confirm row counts per metric and that each asset logs one new day per series after the next tick.
 
 ## How the report layer is built (engine pattern)
 - Report series are flow metrics with `monitor_only: true` (schema allows it on flows; still refused on anything the valuation reads). Ingest must exempt them from `unlisted_sender` anomalies and from failure streaks on sources that feed only monitor-only metrics, so report data never wakes the agent. The grade never reads fetch outcomes, so a failing report source can't move a signal.
