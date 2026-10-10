@@ -35,6 +35,7 @@ Classify every holder-flow stream into one of four buckets, and compare multiple
 4. **Buyback + hold**.
 
 Mike treats liquid non-stable payouts as effectively cash: they can be sold immediately, minus slippage. Distributions in either form deserve a higher multiple than any buyback.
+- For recorded (not ad hoc) bucket series and haircuts — burns unhaircut, holds with an overhang haircut, cash minus per-token slippage — see `data-sourcing-and-protocol-revenue.md`.
 - Don't penalize sellable-token payouts for the token's price risk or for Orion's bearish fair value; the holder can sell on receipt. He rejects that framing as too conservative.
 - Only apply a slippage or circularity markdown when it is material:
   - Payouts in the valued token itself, in a thin market (sdCRV bribes are paid in sdCRV).
@@ -44,6 +45,6 @@ Mike treats liquid non-stable payouts as effectively cash: they can be sold imme
   - Discretionary vs programmatic buybacks (`capture_rule`).
   - Yield measured on the receiving supply, and lock cost (ve-locks vs a sellable wrapper).
 - Bucket edge cases:
-  - HYPE's Assistance Fund is tagged burn in Orion, but the fund holds what it buys. It is hold unless an irrevocable burn is verified.
+  - HYPE's Assistance Fund buys and holds (economically a hold), but Mike keeps it tagged burn in both the valuation and the reporting buckets so the two layers stay in sync. Note the economic view; don't reclassify it unasked.
   - CRV's vote incentives go in sellable tokens, at about 41x versus 111x on fees only.
 - Orion's model multiples (8x for wrapper distributions vs 80x for HYPE's buyback) are the inverse of Mike's ranking. Point this out, but don't change asset configs unasked; propose one multiple per bucket instead.
