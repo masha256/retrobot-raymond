@@ -68,7 +68,7 @@ If the gap is explained, prefer the on-chain `transfer_flow` with a sender allow
      - Pass the real ~12k-char prompt text. Never pass a placeholder meaning to fill it in later: the job stores it literally. If a long prompt is awkward to inline, write it to a scratch file and run `hermes --profile raymond cron edit <id> --prompt "$(cat <file>)"`.
      - Verify by reading `jobs.json`: the prompt equals the intended text, and schedule/script/workdir/deliver/attach_to_session match the source job.
      - Schedule it 5 minutes after the last orion job, delivering to orion-ops with `attach_to_session`, `workdir` = repo.
-     - Add the new job's line to the pending DST reminder job's prompt (`cron edit --prompt`), or it fires an hour off after the clock change. Add the asset to `docs/ops/hermes-daily-job.md` and mark checkpoint 5 done in the followups note.
+     - Schedule the new job in the next free 5-minute slot after the last asset, in the 05:05 PT block (UNI is 05:40). These times are clear of UTC midnight, so they never move for DST and there is no DST reminder to update. Add the asset to `docs/ops/hermes-daily-job.md` and mark checkpoint 5 done in the followups note.
 
 ## 6. Calibration (checkpoint 3)
 Never price candidates against live. Work in scratch homes and import only the package Mike picks.
@@ -96,6 +96,8 @@ Never price candidates against live. Work in scratch homes and import only the p
    - **Multi-stream bands:** band each `capture_rate_terminal.<flow>` around its calibrated share (wide enough for the mix to drift) and a stopped stream at 0 up to about its old share. Test that the calibrated shares sum to at most 1 and the band maxima can't sum far past it. Once bands exist, switch the asset test's wiring valuation to import `calibration/<x>-assumptions.yaml`; a flat placeholder (capture 1 per flow) falls outside the bands and fails.
    - Then branch `calib/<x>`, run the suite, ff-merge, build, back up, `model assumptions import <x> calibration/<x>-assumptions.yaml --rationale "..."`, `model run <x>`.
 7. **Record:** write a followups note `docs/superpowers/notes/<date>-<x>-onboarding-followups.md` (checkpoints, the calibration table, open questions). Delete the scratch homes, which hold `.env`, and the merged branches.
+
+**Checkpoint 5 (cron) recipe:** copy `scripts/orion-tick-<prev>.sh` with the asset id swapped (keep mode 700); create the job with `cronjob_manage` (schedule, deliver `telegram:1620897892:16022`, script, workdir, attach_to_session) and a placeholder prompt; then set the real prompt with `hermes -p raymond cron edit <id> --prompt "$(cat file)"`, built from the previous asset's prompt with the symbol and id swapped and the example line updated to the new asset's numbers. Then diff the fields against the previous job.
 
 **Throwaway homes and `ORION_HOME`:** after a scratch run in a persistent terminal, `unset ORION_HOME` before any live command. Otherwise the CLI silently reads the scratch home: every `asset validate` failed with "no asset config at <scratch>/assets" after the home was deleted, which looks like a broken merge. Better still, pass it per command (`ORION_HOME=$H node ...`) and never `export` it.
 
