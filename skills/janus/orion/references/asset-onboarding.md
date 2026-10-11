@@ -36,6 +36,8 @@ If the gap is explained, prefer the on-chain `transfer_flow` with a sender allow
 - **Zero-valued structural metrics** (no staking, emissions not to lockers): Mike wants them fetched, not manual, so the grade stays A — a manual row in force caps the grade at B.
 - **Contract-coded schedules** (halvings, annual cuts): Mike wants an adapter that reads the contract and computes the next step, not a hand-entered dated row. The engine's `buildSchedule` already consumes future-dated schedule steps.
 - **Burn to 0xdead**: `totalSupply()` doesn't fall; use `erc20_supply` with `subtract_balances: [dead]`, and an allowlist to keep one-off treasury burns out of the flow.
+  - **Exception: permissionless burners.** When anyone can burn to release fees (UNI's Firepit/TokenJar: searcher contracts rotate weekly, ~30 one-off senders per quarter), an allowlist fires `unlisted_sender` constantly. Group senders by address with first and last burn dates before choosing. If they churn, count every burn and `from_ignore` the treasury/timelock instead (Mike's pick for UNI). UNI facts: 75% of burns arrive via 5 L2 bridge contracts (one relayer `0x2cf8…`), and 25% via mainnet searchers; DAO timelock `0x1a9C8182C09F50C8318d769245beA52c32BE35BC` (100M burn 2025-12-27; 5M UNI/quarter to the Labs vest).
+  - Compare the burn in tokens across windows, not only in USD: UNI's 30d and 91d token rates matched, and the whole USD gap was price.
 - **buy_and_hold** (LINK, SKY, JUP…): the held-token policy (net from supply? retention haircut?) is unsettled — flag it as a decision before config.
 - Emissions larger than the holder flow (ve-models) make the holder-cashflow module bearish by construction; say so up front so a low base case isn't read as a bug.
 
