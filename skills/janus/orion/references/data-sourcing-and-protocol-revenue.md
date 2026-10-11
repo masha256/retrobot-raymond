@@ -42,9 +42,21 @@ Rules:
 
 ## Vetting a backfilled report series before trusting it
 Monitor-only flows raise no `unlisted_sender` anomaly by design, so nothing flags a contaminated revenue total for you. After every report backfill:
-1. Read the fetch output's `unlisted sender` lines for each report scan. Large or one-off senders (a top-up, a mint from `0x0`, a migration) can inflate revenue. Identify each one (Blockscout) and either add it to `from_allowlist`/`count_from` or exclude it, before quoting the number.
+1. Read the fetch output's `unlisted sender` lines for each report scan and triage every sender (procedure below). Unlisted senders are never counted, so the risk runs both ways: a real fee leg left off the allowlist understates revenue, and adding a non-flow sender to the allowlist inflates it.
 2. Count rows per metric (`select asset_id, metric_key, count(*), min(observed_at) … group by 1,2`). A stream with far fewer days than its siblings (one cut at 148 days while the others have 362) is a coverage gap: find out why before summing the cuts.
 3. Print monthly sums per series and eyeball them for jumps before computing growth.
+
+### Triage unlisted senders
+Use `scripts/onchain_probe.py` (`rpc`, `name`, `io`) on the senders listed in a `--dry-run --json` fetch (`sources[].unlistedTransfers`; the CLI lists only the first 50, so read the `N unlisted transfers in total` note too):
+- **Zero-amount transfers** (reward stashes, distributors poking a sink) are noise; the scanner skips them.
+- **Factory clones:** `eth_getCode` each sender. An EIP-1167 clone is `363d3d373d3d3d363d73` + 20-byte implementation + `5af43d82803e903d91602b57fd5bf3`, sometimes followed by immutable-arg bytes, so match on prefix + suffix rather than exact length. Group senders by implementation; dozens of senders usually collapse into one or two implementations, which go in `from_ignore_clones_of`.
+- **Named contracts** (fee forwarders, other products' routers): find their owner/name on Blockscout. If they're the same protocol but a different product, put them in `from_ignore` with a why-comment in the YAML.
+- **Mints from `0x0`:** the Transfer log's `from` is 0x0, so decode the tx receipt. The vault's ERC-4626 `Deposit(sender, owner, …)` event names the real depositor; the tx sender is often just a keeper, which is a weaker match.
+- Before excluding a sender, measure what it would add (USD per year) and tell Mike when that's material (e.g. comparable to the series itself). An exclusion that removes half of a revenue line is a valuation-style decision for him, not cleanup.
+
+Ignore rules on `transfer_flow`:
+- `from_ignore: [names]` and `from_ignore_clones_of: [impl names]`: never counted, never reported. Both lists stay out of the scan key and source id, so cursors and history carry over. A name on both the allowlist and an ignore list is refused.
+- They exist only to quiet the report: a correct ignore rule never changes a stored value. Verify this by fetching the same day before and after on one scratch `.backup` home with `data fetch <a> --backfill-days 1 --dry-run --json`. Copy only the changed asset YAMLs into the home between the two runs. Diff `written[]` flow values (expect identical) and per-source unlisted counts (expect →0), and report that diff.
 
 A 362-day re-scan of several transfer streams on one asset takes tens of minutes (one `eth_getLogs` per day per scan). Scope every report backfill with `--metric <key>` (repeatable) to the new series only: a bare `data fetch <asset> --backfill-days N` re-scans every existing valuation stream too (VVV's burn scan alone ran ~30 min), which buys nothing and risks rewriting valuation rows.
 
@@ -60,6 +72,7 @@ Rehearse, then replay the same script live:
 - Adapters can be flow primaries returning a daily series (written like the DefiLlama API flow: cursor, revision days, a missing day is never written as zero).
 - Adding the block to every asset moves every asset hash: re-pin each `*.ingest.test.ts`/cadence hash (compute with `parseAssetYaml(...).hash` via `node --input-type=module` on `dist/`), and update plan/source-list `toEqual`s and canned fakes (e.g. `decimals` for a new token, a `userFillsByTime` fake keyed on `startTime`). The VVV golden test passing proves valuations didn't move.
 - Test pitfalls: the fake RPC ignores `to`, so to fail one specific scan wrap `getTransferLogs` and throw on `q.to`; the fake chain head is fixed, so a failure-streak test must run several attempts at `NOW + small offset`, not on later days. Add a control test showing the same failure on a valuation source still raises the streak.
+- A new RPC capability (e.g. `getCode` for clone detection) goes on `RpcTransport` as an optional method, so other fakes and transports still compile. Implement it in `viemRpc.ts` and in `tests/helpers/fakeRpc.ts` behind an option threaded through `fetchHarness` (e.g. `code: {addr: bytecode}`), with a call counter. Then a test can assert a cache: one read per sender per scan.
 
 ## Haircut sizing from pool depth
 Quote each payout token's main pool with `get_dy` at a day's and a week's payout size; set the fixed haircut near the day-size impact plus a margin. Reference points: stables and redeemable vault shares 0; CVX 0.5%; CRV via TriCRV ~1% (day 0.6%, week 4.4%); sdCRV bribes paid in sdCRV 5% (sdCRV/CRV pool ~$1.5M: day 1.3%, week 9%); long-tail bribe/fee baskets 2–3%. Burns 0.

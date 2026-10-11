@@ -19,3 +19,10 @@ Live since 2026-10-10 (main `901070a`, spec `docs/superpowers/specs/2026-10-10-o
 - Any new `reporting` block changes every asset hash: re-pin the hashes in the ingest tests and cadence test.
 - The full vitest run can time out CLI subprocess tests under load; rerun those files with `--maxWorkers=1` before calling it a failure.
 - Yearn revenue: treasury vault `0x044f…` takes ~28% (20% splitter + 10% receiver), not 10%.
+
+## Quieting unlisted senders on transfer_flow (live 2026-10-11, `a50dfea`)
+- Zero-amount transfers are never reported. `from_ignore: [names]` (why-comment each), `from_ignore_clones_of: [impl]` (EIP-1167, one getCode per sender per scan), `mint_sender: erc4626_deposit` (a 0x0 mint takes the depositor of the vault's matching Deposit in the same tx; no match stays 0x0 and is reported).
+- None of these count anything an unlisted sender didn't already not count, so stored values can't change; prove it with a before/after `data fetch <a> --backfill-days N --dry-run --json` on a scratch copy and diff the written flow rows.
+- Ignore lists aren't in the scan key/source id, so cursors carry over; a name on both allowlist and an ignore list is refused.
+- Live ignores: cvxCRV treasury ← 3 Convex fee forwarders; sdCRV gross ← sidecar clones of 0xef7c…/0x66c3…; yCRV revenue ← yvyCRV fee converter 0x988f… (it re-converts st-yCRV fees already counted in `flow_usd.yearn_styc_fee`; ignoring it avoids double counting).
+- Wrapper "protocol revenue" is the operator's kept cut (Yearn/StakeDAO/Convex), not holder cash; for cvxCRV, Convex's 10% lockIncentive does go to cvxCRV stakers, so it overlaps holder cash.
