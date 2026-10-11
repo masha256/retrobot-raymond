@@ -5,7 +5,7 @@ description: Use when operating, debugging, or developing orion.
 
 # Orion operations and development
 
-This skill covers Mike's orion valuation pipeline (VVV/HYPE/AERO/CRV/yCRV/cvxCRV/sdCRV live; the last three are CRV liquid-locker wrappers): diagnosing ingest failures, vetting or swapping data endpoints and API keys, running the test suite, onboarding and calibrating new assets. Mike manages orion development from the Raymond bot's orion-dev topic.
+This skill covers Mike's orion valuation pipeline (VVV/HYPE/AERO/CRV/yCRV/cvxCRV/sdCRV/UNI live; yCRV/cvxCRV/sdCRV are CRV liquid-locker wrappers): diagnosing ingest failures, vetting or swapping data endpoints and API keys, running the test suite, onboarding and calibrating new assets. Mike manages orion development from the Raymond bot's orion-dev topic.
 
 Holder yield / growth / revenue reporting: see `references/holder-yield-report.md`.
 
