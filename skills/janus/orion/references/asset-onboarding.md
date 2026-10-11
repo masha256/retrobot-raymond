@@ -8,8 +8,8 @@ Use when Mike asks what it takes to add a token, or to start onboarding one.
 - `src/config/schema.ts` + `src/config/sources.ts` for what is config-only vs needs code: required standard metrics (price, revenue run rate, effective supply, staked supply, staker_emission_share, emission_rate_annual), source types, which types can be primaries/cross-checks for level vs flow.
 
 ## 2. Re-verify every figure live before recommending
-Research notes go stale (UNI's 30d run rate fell ~30% in two weeks). Pull fresh numbers in one batched script:
-- DefiLlama: `https://api.llama.fi/summary/fees/<slug>?dataType=<dailyHoldersRevenue|dailyRevenue|dailyFees|dailyUserFees>`; sum `totalDataChart` over 30/90/365 days and annualize. `totalDataChartBreakdown` gives per-chain/per-product splits; `methodology` says what is included.
+Research notes go stale (UNI's 30d run rate fell ~30% in two weeks). Pull fresh numbers in one batched script, **on chain first** (SKILL.md DefiLlama rule: DefiLlama only where on-chain data doesn't exist or for an asset-specific metric with no on-chain equivalent):
+- DefiLlama (reference/comparison, or the off-chain-only metric): `https://api.llama.fi/summary/fees/<slug>?dataType=<dailyHoldersRevenue|dailyRevenue|dailyFees|dailyUserFees>`; sum `totalDataChart` over 30/90/365 days and annualize. `totalDataChartBreakdown` gives per-chain/per-product splits; `methodology` says what is included.
 - CoinGecko `simple/price`; DefiLlama coins `coins.llama.fi/prices/current/<chain>:<token>` for the price cross-check.
 - `eth_call` reads via curl (compute selectors with `node -e "const {keccak256,toHex}=require('viem');console.log(keccak256(toHex('rate()')).slice(0,10))"` from the orion dir). Private Vyper constants revert as calls; take them from the published source.
 - Blockscout `https://eth.blockscout.com/api/v2/addresses/<addr>` names unknown contracts (`name`, `is_contract`) — use it to label the senders/recipients of a fee route.
