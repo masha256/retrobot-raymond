@@ -2,6 +2,26 @@
 
 Use this when Mike asks for a summary table across Orion assets (price, revenue, holder flows, multiples, growth, PEG) or for an apples-to-apples comparison of protocols.
 
+## Coinrevs comparison tables (Mike's current spec)
+Two tables, one row per asset, sorted by market cap, columns in exactly this order:
+- **Revenue:** protocol, market cap, annualized revenue, annualized revenue growth, P/E (market cap ÷ annualized revenue), PEG (P/E ÷ annualized growth in percentage points).
+- **Holder flow:** protocol, market cap, annualized buybacks, annualized slippage-adjusted direct payments to holders (cash + sellable tokens merged), annualized holder flow (= buybacks + direct payments), holder flow ratio (market cap ÷ holder flow).
+- Market cap = price × circulating supply (CoinGecko's; on-chain total for the wrappers). Never FDV.
+- Burns are not a separate column: a burn is a buyback that was destroyed; add buybacks once. Footnote which buybacks are burned (UNI, VVV) and which are held (HYPE's Assistance Fund).
+- Under the tables: a slippage-adjustment list (gross → haircut → net per stream) and numbered footnotes. File: `~/.hermes/profiles/raymond/workspace/orion/coinrevs-tables-<date>.md`, sent with `MEDIA:`.
+
+### Procedure
+1. If Mike says prod is being changed, wait for his go before reading it; then re-copy prod (`sqlite3 orion.db ".backup <scratch>/orion.db"`) so the tables reflect his latest commits.
+2. Growth needs 180/182 complete days of every flow; live payout series hold ~100. Backfill in a scratch home only, scoped and parallel: `ORION_HOME=$S node dist/cli/index.js data fetch <a> --metric <payout flows> --backfill-days 200`, one background job per asset. If a fetch reports `partial` with a manual-row conflict, re-run with `--adopt` (scratch only) and footnote that prod still holds the old row.
+3. `ORION_HOME=$S node dist/cli/index.js report yield --json` gives everything: `marketCap`, `fdv`, `income.revenue.{annualized,growth}`, `flows[].{gross,net,haircut,bucket}`. Build the tables from it, not from hand-rolled sums.
+4. Compare each backfilled window with prod. A big jump means a DefiLlama revision (AERO went $69.5M → $100.8M); use the revised figure, footnote prod's, and offer the prod re-fetch (a live write, so ask).
+
+### Revenue-definition caveat
+For HYPE, UNI and VVV, Orion's "revenue" ≈ holder flow, so P/E = holder flow ratio. Flag this whenever revenue is shown:
+- HYPE: DefiLlama `dailyRevenue` ≈ Assistance Fund buys; excludes HLP, builder and deployer fees.
+- UNI: the USD value of UNI burned, which understates the fees burners receive. Gross swap fees are LP income, not revenue.
+- VVV: DefiLlama's series tracks the burns; real revenue is off-chain (only founder disclosures).
+
 ## Output shape (Mike's preferences)
 - Deliver a markdown file he can save, under `~/.hermes/profiles/raymond/workspace/orion/orion-exec-summary-<date>.md`, sent with `MEDIA:`. On later requests, extend the same file rather than starting a new one.
 - Use simple executive-summary tables, one row per asset, with the key multiple in bold. Put caveats in numbered footnotes under the table, not in the cells.
@@ -15,7 +35,7 @@ Use this when Mike asks for a summary table across Orion assets (price, revenue,
 1. Price, targets and grade: take the latest signal per asset from `signals` (`payload_json`), not `signals.jsonl`, which is missing some recent lines.
 2. Holder flow per stream: annualize Orion's own window from `observations` (`flow_usd.*`, `superseded_by is null`). Window is 90d for HYPE/AERO/VVV and 91d for the Curve family. Check that your annualized total reproduces the signal's revenue run rate before trusting it.
 3. Revenue: Orion has no gross protocol revenue for most assets; there revenue = holder flow. Say so in the table, and don't present MC/holder flow as price-to-sales. VVV's revenue input is a disclosure, not a measurement.
-4. Growth: Orion does NOT measure period-over-period growth. `rev_growth_y1` in the assumption sets is a calibrated assumption. Measure 90d/90d yourself:
+4. Growth: `orion report yield` now computes 90d/90d growth once 180/182 days of history exist (see the coinrevs procedure for the backfill). `rev_growth_y1` in the assumption sets is a calibrated assumption, not a measurement. Fallback when the report can't be used, measure 90d/90d yourself:
    - Re-pull ~185 days per stream from the same sources Orion uses: DefiLlama daily holders revenue for HYPE/AERO, and on-chain Transfer logs priced daily for the rest, via `ORION_BASE_RPC_URL` / `ORION_ETH_RPC_URL` from `.env`.
    - Run the probe as a throwaway `.mjs` in the repo, with key-masked output, and delete it afterwards.
    - Validate the latest window against Orion's stored observations. On-chain streams should match within ~1%.
@@ -45,6 +65,7 @@ Mike treats liquid non-stable payouts as effectively cash: they can be sold imme
   - Discretionary vs programmatic buybacks (`capture_rule`).
   - Yield measured on the receiving supply, and lock cost (ve-locks vs a sellable wrapper).
 - Bucket edge cases:
-  - HYPE's Assistance Fund buys and holds (economically a hold), but Mike keeps it tagged burn in both the valuation and the reporting buckets so the two layers stay in sync. Note the economic view; don't reclassify it unasked.
+  - HYPE's Assistance Fund buys and holds (economically a hold). Orion's configs tag it `burn`; in comparison tables show it as a buyback, not burned, and footnote it. Don't change the config tag unasked.
+  - Verify "buyback = burn" on chain before asserting it: for every burn tx in the window, net each address's token transfers across the receipt. In-tx transfers to non-burn addresses are usually DEX routing (pools buying the token), not leakage; only net gainers other than the burn address matter (UNI: all 5.9M bought ended at 0xdead).
   - CRV's vote incentives go in sellable tokens, at about 41x versus 111x on fees only.
 - Orion's model multiples (8x for wrapper distributions vs 80x for HYPE's buyback) are the inverse of Mike's ranking. Point this out, but don't change asset configs unasked; propose one multiple per bucket instead.
