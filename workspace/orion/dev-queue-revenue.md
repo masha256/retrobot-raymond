@@ -24,7 +24,7 @@ No one-off series per new revenue type. Revenue = config list of streams; adding
 - Report: show growth with and without streams younger than 180 days (a new stream inflates 90d/90d).
 
 ## All API daily series — re-fetch recent history each run
-- DefiLlama revises history (HYPE: Orion $149M vs $178.5M latest 90d; AERO: $17.1M vs $24.9M). Re-pull the last N days (e.g. 30) each run and supersede changed rows.
+- DefiLlama revises history (HYPE: Orion $149M vs $178.5M latest 90d. AERO correction 2026-10-12: its apparent $17.1M→$24.9M "revision" was the known 2026-09-10 DefiLlama artifact ($7.92M day), not a revision — manual row re-applied after the prod backfill). Re-pull the last N days (e.g. 30) each run and supersede changed rows.
 
 ## VVV — use disclosed business revenue (reviewed 2026-10-12)
 - Orion already stores disclosures (`revenue_run_rate_usd`, manual, cited) and reports them as `revenueDisclosed` with growth between consecutive disclosures; staleness anomaly `revenue_disclosure_stale` already fires.
