@@ -36,7 +36,7 @@ Scratch entries left idle for 24h get pruned, so these helpers can disappear. A 
 
 On weekend anchors, `regime_fetch2.py` reports equities, rates and vol as about 0.00% (Friday close vs Friday close). To get Friday's real d/d move, use the scratch `dclose.py SYM...` helper, which prints the last 4 daily closes from Yahoo `interval=1d&range=10d`; a durable copy is at `scripts/dclose.py` in this skill — copy it into scratch if pruned. Coverage rows (`janus coverage list --date D`) are at `.data.coverage[]` (envelope data keys: count, coverage, session_date) with flat fields `symbol`, `close`, `daily_change_pct`, `px_vs_sma20`, `px_vs_sma50`, `cross_px_50` (no `.metrics`). On Saturdays Farside's latest row is often partial (IBIT shows `-`), so flag that in the summary.
 
-When FRED `curl` hangs or times out (HTTP/2 INTERNAL_ERROR, or 40s with no bytes, even with --http1.1), use `web_extract` on the same `fredgraph.csv?id=...&cosd=...` URLs instead; that returns the full CSV, including the latest print. Don't use the `/series/` page or `/data/*.txt` as fallbacks: those are cached and can be days or months stale.
+When FRED `curl` hangs or times out (HTTP/2 INTERNAL_ERROR, or 40s with no bytes, even with --http1.1), use `web_extract` on the same `fredgraph.csv?id=...&cosd=...` URLs instead; that returns the full CSV, including the latest print. The reverse also happens: `web_extract` can return `network_error` for all the FRED URLs while plain `curl -s --max-time 40 ... -o file` works. Try the other method before you declare a gap. Don't use the `/series/` page or `/data/*.txt` as fallbacks: those are cached and can be days or months stale.
 
 ## Screen-phase workflow
 

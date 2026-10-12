@@ -7,3 +7,5 @@ Mike expects verification, not just optimistic status reports: when told a sched
 janus CLI's default DB (~/.janus/janus.db) is empty/unmigrated; the live janus DB is at ~/.hermes/profiles/raymond/workspace/janus/janus.db. JANUS_DB is exported in ~/.bashrc but bashrc returns early for non-interactive shells, so `source ~/.bashrc` does NOT set it in agent terminal calls — always `export JANUS_DB=...` explicitly and verify with `janus cluster list` (3 clusters: crypto, ai_semis, ai_software) before recording.
 §
 Mike also runs 'orion' (/home/hermes/git/orion): cron jobs orion-vvv/hype/aero/crv/ycrv/cvxcrv/sdcrv/uni at 05:05..05:40 PT (5-min steps; moved 2026-10-11 clear of UTC midnight so no DST adjustment is ever needed), each with a per-asset pre-run wrapper scripts/orion-tick-<asset>.sh → orion-tick.sh <asset>, deliver to Telegram DM topic orion-ops (telegram:1620897892:16022) with replies attached. Raymond bot DM topics (Threaded Mode): orion-ops=16022, orion-dev=16021, general=16044.
+§
+Orion revenue/supply dev queue (pending items for orion-dev): ~/.hermes/profiles/raymond/workspace/orion/dev-queue-revenue.md.

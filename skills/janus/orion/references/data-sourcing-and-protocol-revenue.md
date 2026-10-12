@@ -8,6 +8,9 @@ Use when Mike asks to record a new series (growth, revenue, yield), to cut a thi
 - Keep historical pricing on CoinGecko; rebuilding price history on-chain is slow and RPC-heavy. Keyless CoinGecko stops at 365 days, which bounds every backfill.
 - VVV revenue is disclosure-based; its only daily series is DefiLlama. Keep it as a labelled proxy next to the disclosures, not as the official figure.
 
+## DefiLlama usage audit
+When Mike asks where Orion relies on DefiLlama: `grep -nE 'llama' assets/*.yaml` and map each hit to its metric (`awk` back to the nearest `^  <metric>:` line). Split into primary inputs (feeds tables/valuation), labels/context only, and cross-checks (`coins.llama.fi` price checks, one request per asset per run). `llama.box` is Curve's community site, not DefiLlama. Flag duplicates (HYPE pulls the same number as both `af_buyback` and `revenue_proxy`) and note that scratch backfills re-pull full histories, so they are the main load, not nightly runs.
+
 ## Inventory before proposing a build
 Grep the asset configs for every `type:` per asset and classify each third-party source as **primary input** (moves the valuation) vs **cross-check**. Lead the reply with the primary dependencies; cross-checks are cheap to replace later. Order the build: shared engine capability first (e.g. multi-sink `transfer_flow`), then on-chain series on chains with a keyed RPC, then own pool quotes (they give price checks AND the pool depth the slippage haircut needs), then non-EVM APIs (Hyperliquid) after a history-depth test, and protocol rebuilds pinned to their migration dates.
 
@@ -23,6 +26,22 @@ Measured routes (Ethereum, 91 days; probe with `scripts/onchain_probe.py` `io(ad
 - **Unverified contracts:** resolve an unknown recipient with Blockscout `/api/v2/addresses/<a>` and `/api/v2/smart-contracts/<a>` (name, verified source) before stating a protocol's cut; an unexplained outflow is often a second fee leg.
 
 To trace a new protocol: start at the address that receives the gross, `io()` it, read every fee getter on the router, then reconcile getter rates with measured outflow ratios.
+
+## Auditing an asset's revenue figure ("are we missing something big?")
+Goal: find material streams missing from the revenue figure. Small fees (gas, priority fees) are rounding errors, so don't chase them.
+1. **Pull every DefiLlama view, not just the one Orion stores.** Fetch the parent slug's `dailyFees`, `dailyRevenue`, `dailyHoldersRevenue`, `dailySupplySideRevenue` and `dailyProtocolRevenue`, plus `totalDataChartBreakdown` (by child product), and annualize each one over Orion's window. Fees minus supply-side minus revenue should come to about 0. Each `childProtocols[]` entry carries `methodology` and `breakdownMethodology`, which list the streams the adapter claims to count.
+2. **Read the adapter source** (`raw.githubusercontent.com/DefiLlama/dimension-adapters/master/<dexs|fees>/<slug>/index.ts`). That's how you see which streams are commented out or fed by inputs that may be empty.
+3. **Test each claimed stream in the data.** Plot the daily revenue/fees ratio across the stream's start date and its first payment. If it stays flat, the stream is in the methodology but not in the numbers (HYPE: the USDC reserve-yield input reads zero).
+4. **Cross-check against Token Terminal's revenue methodology** (it lists the products it counts) **and Artemis's last-12-month revenue**. Search news for new revenue programmes from the last ~6 months.
+5. **Size the gap from the protocol's own docs and the first actual payment:** the accrual rule, the payment interval, and the amount over the days covered. Report the revenue and P/E effect, the growth-window effect, and the rate sensitivity.
+6. Log the finding in the dev queue (`workspace/orion/dev-queue-revenue.md`). Don't build anything until Mike has reviewed every asset in the batch.
+
+### Periodic and lump-sum revenue (design rule, Mike)
+- **No one-off series per revenue type.** Revenue is a config list of streams, and a new type is config only. Each stream has a source and a settlement mode: `daily`, or `periodic` (lump payments with a known coverage period).
+- **Spread a periodic payment evenly across the days it covers,** so the 90d windows line up with when it was earned, not when it was paid.
+- **Days earned but not yet paid:** if the protocol documents a daily accrual (balance × an on-chain rate, as with Hyperliquid AQAv2), compute them from that rule. Fall back to the last period's daily rate, marked provisional, only when the inputs can't be read. Replace either with the actual payment when it lands.
+- **Read rate-driven yield from the protocol itself, daily** (e.g. the on-chain AQA rate), never a fixed % or a T-bill proxy, so a change of manager/issuer, fee or methodology shows up automatically. Store daily rate, balance and earned amount plus the manager addresses; alert on rate jumps, manager change, a payment that differs from the summed accruals by >2%, and a late payment. The payment is the truth; accruals fill the gap until it lands.
+- **A new stream inflates 90d/90d growth** until it has been in both windows (about 180 days). It's real income, not an error, but annualizing a one-time step reads as compounding. Show growth both with and without streams younger than 180 days.
 
 ## Holder-yield buckets (report-only)
 Log each asset's holder flow in three separate daily buckets so later metrics can sum any subset:

@@ -68,6 +68,8 @@ The repo working tree IS the live site: cron runs `run-daily.sh` → `dist/cli/i
 ## Answer style
 - Mike asks for short, succinct answers when aligning on definitions: give the answer and the numbers, skip background and "how it works". Bullets per asset, a one-line recommendation, then the question he owes. Long explanations cost him attention.
 - When he says prod is mid-change ("wait until I say"), do nothing that reads or writes it; scratch-only or read-only chain work is fine, and say so.
+- When he reviews items one by one (e.g. each asset's revenue definition) and says "save for dev", append the finding to `~/.hermes/profiles/raymond/workspace/orion/dev-queue-revenue.md` (finding, numbers, sources, proposed design) and move on to the next item. Build nothing until the whole batch is reviewed.
+- He prefers generic mechanisms over special cases: propose config-driven designs (a stream list with a settlement mode), not a bespoke series per new source.
 
 Repo: `/home/hermes/git/orion`. Live DB: `orion.db` in the repo root (sqlite). Secrets: `orion/.env` (gitignored, mode 600). It is sourced by the profile's `scripts/orion-tick.sh` and also read by orion itself via `loadEnv`. Cron jobs and delivery are covered in memory; use the `cron-job-administration` skill for any schedule changes.
 

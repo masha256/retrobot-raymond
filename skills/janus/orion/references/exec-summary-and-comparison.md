@@ -16,11 +16,11 @@ Two tables, one row per asset, sorted by market cap, columns in exactly this ord
 3. `ORION_HOME=$S node dist/cli/index.js report yield --json` gives everything: `marketCap`, `fdv`, `income.revenue.{annualized,growth}`, `flows[].{gross,net,haircut,bucket}`. Build the tables from it, not from hand-rolled sums.
 4. Compare each backfilled window with prod. A big jump means a DefiLlama revision (AERO went $69.5M → $100.8M); use the revised figure, footnote prod's, and offer the prod re-fetch (a live write, so ask).
 
-### Revenue-definition caveat
-For HYPE, UNI and VVV, Orion's "revenue" ≈ holder flow, so P/E = holder flow ratio. Flag this whenever revenue is shown:
-- HYPE: DefiLlama `dailyRevenue` ≈ Assistance Fund buys; excludes HLP, builder and deployer fees.
-- UNI: the USD value of UNI burned, which understates the fees burners receive. Gross swap fees are LP income, not revenue.
-- VVV: DefiLlama's series tracks the burns; real revenue is off-chain (only founder disclosures).
+### Revenue definitions (Mike's rule)
+Revenue = what users pay the protocol, net of what goes to LPs/suppliers (fees − supply-side). Where a business discloses revenue that settles off-chain, use the disclosure. For HYPE, UNI and VVV, Orion's stored "revenue" ≈ holder flow, so P/E = holder flow ratio; check each against this rule whenever revenue is shown:
+- HYPE: DefiLlama `dailyRevenue` ≈ Assistance Fund buys. Trading revenue checks out against Artemis and Token Terminal. Builder, HIP-3 deployer and HLP fees are correctly excluded as pass-through, and gas and priority fees are rounding. The material gap is AQAv2 USDC reserve yield (~$177M a year, paid every 30 days to the Assistance Fund): DefiLlama's data omits it and Token Terminal counts it. Footnote it until Orion records it (see the revenue audit in `data-sourcing-and-protocol-revenue.md`).
+- UNI: burns (USD value of UNI sent to 0xdead) ≈ protocol fees, so the figure is right. Documented split (Uniswap developer docs, "Protocol Fee Configuration"): v2 all pools 1/6 of 0.30%; v3 selected pools only, 1/4 on the 0.01%/0.05% tiers and 1/6 on 0.30%/1%; v4 not switched on; Unichain sequencer fees also burn. DefiLlama's protocol revenue shows v3 only and misses v2 (~1/6 of v2 swap fees), so burns run slightly above it. Label it "protocol fees (v2 + selected v3)". v4 and the unswitched v3 pools are upside: a valuation scenario/catalyst, never revenue. Gross swap fees are LP income, not revenue.
+- VVV: use the latest disclosed run-rate (stored as `revenue_run_rate_usd`, manual, cited) as revenue in the tables. DefiLlama's series is just the burns: keep it as a cross-check only. Holder flow stays = burns. Growth between disclosures less than 90 days apart annualizes absurdly; show it as n/m.
 
 ## Output shape (Mike's preferences)
 - Deliver a markdown file he can save, under `~/.hermes/profiles/raymond/workspace/orion/orion-exec-summary-<date>.md`, sent with `MEDIA:`. On later requests, extend the same file rather than starting a new one.
