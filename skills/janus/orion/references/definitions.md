@@ -5,6 +5,7 @@
 - circulating_supply = CoinGecko circulating; if CoinGecko has none (cvxCRV, sdCRV, yCRV) use on-chain total. Do NOT use CoinGecko total for sdCRV/yCRV: frozen 2022 snapshots (CMC/CoinPaprika copy them; GeckoTerminal/DexScreener are current).
 - market_cap = price x circulating; fdv = price x total_supply. P/E and holder-flow ratio use market cap.
 - Valuation targets still divide by total_supply; Mike will rework targets later.
+- Emission vs dilution (the short answer Mike accepted): **emission** = new tokens minted, total supply grows, the valuation counts it (each holder's share of future flow shrinks). **Dilution** = existing tokens unlocked (team/investor vests, treasury releases), total supply unchanged, already in the valuation via total_supply, so it is report-only (`reporting.dilution`, selling pressure); counting it as an emission would double-count.
 
 ## Revenue (commit 4ed14b2)
 - Revenue = config list of streams per asset (daily | periodic | disclosed). No one-off series per new revenue type.
