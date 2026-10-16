@@ -1,4 +1,4 @@
-Raymond profile has its own dedicated Telegram bot (separate token from default Hermes profile), allow-listed to Mike's Telegram user ID 1620897892, running as systemd user service "hermes-gateway-raymond" (persists across reboot/logout). Janus cron jobs (regime/screen/score) currently deliver locally only; Mike plans to switch their `deliver` target to this Telegram bot once confirmed working.
+Raymond profile has its own Telegram bot (separate token), allow-listed to Mike's user ID 1620897892, systemd user service "hermes-gateway-raymond".
 §
 Mike runs 'janus' crypto trading pipeline (3 cronjobs: janus-regime 7:30am, janus-screen 7:45am, janus-score 8:00am, all deliver to Telegram). Raymond profile (~/.hermes/profiles/raymond) auto-backs up to github.com/masha256/retrobot-raymond hourly at :15 via GH_PAT (account 'retrobitbot'); janus-score self-commits its own report+sources to that same repo right after writing them. Analogous val profile backs up to retrobot-val.
 §
@@ -6,6 +6,6 @@ Mike expects verification, not just optimistic status reports: when told a sched
 §
 janus CLI's default DB (~/.janus/janus.db) is empty/unmigrated; the live janus DB is at ~/.hermes/profiles/raymond/workspace/janus/janus.db. JANUS_DB is exported in ~/.bashrc but bashrc returns early for non-interactive shells, so `source ~/.bashrc` does NOT set it in agent terminal calls — always `export JANUS_DB=...` explicitly and verify with `janus cluster list` (3 clusters: crypto, ai_semis, ai_software) before recording.
 §
-Mike also runs 'orion' (/home/hermes/git/orion): cron jobs orion-vvv/hype/aero/crv/ycrv/cvxcrv/sdcrv/uni/cake/lit/link/sky at 05:05..06:00 PT (5-min steps, clear of UTC midnight), each via scripts/orion-tick-<asset>.sh → orion-tick.sh <asset>, deliver to orion-ops (telegram:1620897892:16022), replies attached. Raymond bot DM topics: orion-ops=16022, orion-dev=16021, general=16044. Mike (2026-10-16): always push orion commits to GitHub after merging, without asking.
+Mike also runs 'orion' (/home/hermes/git/orion): cron jobs orion-vvv/hype/aero/crv/ycrv/cvxcrv/sdcrv/uni/cake/lit/link/sky at 05:05..06:00 PT (5-min steps, clear of UTC midnight), each via scripts/orion-tick-<asset>.sh → orion-tick.sh <asset>, deliver to orion-ops (telegram:1620897892:16022), replies attached. Raymond bot DM topics: orion-ops=16022, orion-dev=16021, general=16044. Mike (2026-10-16): always push orion commits to GitHub after merging, without asking, and always over HTTPS (`git push https://github.com/masha256/orion.git main`; origin is SSH with no key here, the stored credential helper supplies the token).
 §
 Orion revenue/supply dev queue (pending items for orion-dev): ~/.hermes/profiles/raymond/workspace/orion/dev-queue-revenue.md.
