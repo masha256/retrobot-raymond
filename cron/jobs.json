@@ -178,15 +178,15 @@
       "schedule_display": "15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 946
+        "completed": 947
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-06T08:57:25.404654-07:00",
-      "next_run_at": "2026-10-15T18:15:00-07:00",
-      "last_run_at": "2026-10-15T16:15:19.804457-07:00",
+      "next_run_at": "2026-10-15T19:15:00-07:00",
+      "last_run_at": "2026-10-15T17:15:22.640235-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -206,12 +206,12 @@
       ],
       "workdir": null,
       "fire_claim": {
-        "at": "2026-10-15T17:15:10.942539-07:00",
-        "by": "uranus:347240:3cda0a4c4a894656b2cc50a22032d286"
+        "at": "2026-10-15T18:15:10.934338-07:00",
+        "by": "uranus:347240:ed5dadfafe974495b27fb59fabe78d42"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-10-15T17:15:00-07:00",
-        "dispatched_at": "2026-10-15T17:15:10.507821-07:00",
+        "scheduled_at": "2026-10-15T18:15:00-07:00",
+        "dispatched_at": "2026-10-15T18:15:10.506674-07:00",
         "lateness_seconds": 10.5,
         "kind": "on_time"
       }
@@ -386,60 +386,6 @@
         "lateness_seconds": 10.5,
         "kind": "on_time"
       }
-    },
-    {
-      "id": "0bdb19c23854",
-      "name": "superpowers-watch-orion",
-      "prompt": "Verification check, report to Mike (terse, hedge-fund-PM tone, bullet points, no tables). Context: the 'superpowers' Hermes plugin (obra/superpowers v6.4.2) was installed on the raymond profile at 2026-10-08 00:57 PDT. It injects a bootstrap into the first turn of EVERY session, including cron runs; its brainstorming skill has a hard gate requiring human approval before implementation. Risk: unattended cron jobs could stall waiting for approval, ask questions, or change output format.\n\nTask: verify tonight's Orion runs were unaffected. Cron outputs live in ~/.hermes/profiles/raymond/cron/output/<job_id>/<YYYY-MM-DD_HH-MM-SS>.md (local PT time). Jobs: orion-vvv=3e9232dd281b (17:05 PDT), orion-hype=1f25a8f0be0d (17:10), orion-aero=26a33124cfbf (17:15). For each: (1) confirm a 2026-10-08 output file exists and `hermes cron list` shows last run ok today; (2) compare today's file against the previous 3 days' files (2026-10-05..07): size (baseline ~16-19.6KB), section headings/structure, completion; (3) grep today's files for signs of superpowers interference: 'superpowers', 'brainstorm', 'human partner', 'approve', 'classif', questions directed at the user, or text saying it is waiting/stopping. NOTE: words like 'spec'/'design'/'approv' already appeared in pre-install orion outputs, so judge interference by comparing against prior days, not by bare keyword hits. Use only real file contents; never invent results. Output: one line verdict (CLEAN or AFFECTED) then per-job bullets with evidence. If AFFECTED, recommend option 2: patch ~/.hermes/profiles/raymond/plugins/superpowers/.hermes-plugin/__init__.py pre_llm_call to skip cron sessions (do NOT apply it yourself).",
-      "skills": [],
-      "skill": null,
-      "model": null,
-      "provider": null,
-      "base_url": null,
-      "script": null,
-      "no_agent": false,
-      "monitor_script": null,
-      "monitor_url": null,
-      "monitor_state": null,
-      "context_from": null,
-      "schedule": {
-        "kind": "once",
-        "run_at": "2026-10-08T17:25:00-07:00",
-        "display": "once at 2026-10-08 17:25"
-      },
-      "schedule_display": "once at 2026-10-08 17:25",
-      "repeat": {
-        "times": 1,
-        "completed": 1
-      },
-      "enabled": false,
-      "state": "completed",
-      "paused_at": null,
-      "paused_reason": null,
-      "created_at": "2026-10-08T01:46:30.097310-07:00",
-      "next_run_at": null,
-      "last_run_at": "2026-10-08T17:25:42.310539-07:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
-      "last_delivery_unverified": null,
-      "failure_streak": 0,
-      "deliver": "telegram:1620897892:16044",
-      "origin": {
-        "platform": "telegram",
-        "chat_id": "1620897892",
-        "chat_name": "Mike M",
-        "thread_id": "16044",
-        "user_id": "1620897892",
-        "scope_id": null
-      },
-      "enabled_toolsets": [
-        "terminal",
-        "file"
-      ],
-      "workdir": null,
-      "run_claim": null,
-      "fire_claim": null
     },
     {
       "id": "58f7c92759f6",
@@ -887,5 +833,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-10-15T17:15:10.943171-07:00"
+  "updated_at": "2026-10-15T18:15:10.934948-07:00"
 }
