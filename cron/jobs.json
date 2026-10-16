@@ -178,15 +178,15 @@
       "schedule_display": "15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 968
+        "completed": 969
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-06T08:57:25.404654-07:00",
-      "next_run_at": "2026-10-16T16:15:00-07:00",
-      "last_run_at": "2026-10-16T14:15:26.393517-07:00",
+      "next_run_at": "2026-10-16T17:15:00-07:00",
+      "last_run_at": "2026-10-16T15:15:26.886551-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -206,12 +206,12 @@
       ],
       "workdir": null,
       "fire_claim": {
-        "at": "2026-10-16T15:15:10.905371-07:00",
-        "by": "uranus:347240:664ff77adb6e4b649be4cfb41d2cd73d"
+        "at": "2026-10-16T16:15:10.918210-07:00",
+        "by": "uranus:347240:ac5b8a1ab5914fd5a3aed7aa11285f2b"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-10-16T15:15:00-07:00",
-        "dispatched_at": "2026-10-16T15:15:10.505980-07:00",
+        "scheduled_at": "2026-10-16T16:15:00-07:00",
+        "dispatched_at": "2026-10-16T16:15:10.507077-07:00",
         "lateness_seconds": 10.5,
         "kind": "on_time"
       }
@@ -1033,5 +1033,5 @@
       "attach_to_session": true
     }
   ],
-  "updated_at": "2026-10-16T15:15:10.906160-07:00"
+  "updated_at": "2026-10-16T16:15:10.919058-07:00"
 }
