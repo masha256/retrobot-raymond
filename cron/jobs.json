@@ -178,15 +178,15 @@
       "schedule_display": "15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 982
+        "completed": 983
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-06T08:57:25.404654-07:00",
-      "next_run_at": "2026-10-17T06:15:00-07:00",
-      "last_run_at": "2026-10-17T04:15:42.924233-07:00",
+      "next_run_at": "2026-10-17T07:15:00-07:00",
+      "last_run_at": "2026-10-17T05:15:22.899775-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -206,12 +206,12 @@
       ],
       "workdir": null,
       "fire_claim": {
-        "at": "2026-10-17T05:15:11.042385-07:00",
-        "by": "uranus:347240:6472cb29213b4e90b1a7135d7f55078e"
+        "at": "2026-10-17T06:15:10.928421-07:00",
+        "by": "uranus:347240:f625b7921b964b83a471d047743c7e7e"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-10-17T05:15:00-07:00",
-        "dispatched_at": "2026-10-17T05:15:10.506986-07:00",
+        "scheduled_at": "2026-10-17T06:15:00-07:00",
+        "dispatched_at": "2026-10-17T06:15:10.506365-07:00",
         "lateness_seconds": 10.5,
         "kind": "on_time"
       }
@@ -353,7 +353,7 @@
       "schedule_display": "15 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 14
+        "completed": 15
       },
       "enabled": true,
       "state": "scheduled",
@@ -361,7 +361,7 @@
       "paused_reason": null,
       "created_at": "2026-10-03T01:55:33.657220-07:00",
       "next_run_at": "2026-10-18T05:15:00-07:00",
-      "last_run_at": "2026-10-16T05:15:30.845547-07:00",
+      "last_run_at": "2026-10-17T05:17:30.155553-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -379,10 +379,7 @@
       "enabled_toolsets": null,
       "workdir": "/home/hermes/git/orion",
       "attach_to_session": true,
-      "fire_claim": {
-        "at": "2026-10-17T05:15:10.938620-07:00",
-        "by": "uranus:347240:f43be75f908040ef8f088f5848d9161d"
-      },
+      "fire_claim": null,
       "last_dispatch": {
         "scheduled_at": "2026-10-17T05:15:00-07:00",
         "dispatched_at": "2026-10-17T05:15:10.506986-07:00",
@@ -413,15 +410,15 @@
       "schedule_display": "20 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 8
+        "completed": 9
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-08T04:58:11.153616-07:00",
-      "next_run_at": "2026-10-17T05:20:00-07:00",
-      "last_run_at": "2026-10-16T05:20:36.493477-07:00",
+      "next_run_at": "2026-10-18T05:20:00-07:00",
+      "last_run_at": "2026-10-17T05:20:51.148284-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -440,8 +437,8 @@
       "workdir": "/home/hermes/git/orion",
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-10-16T05:20:00-07:00",
-        "dispatched_at": "2026-10-16T05:20:10.505395-07:00",
+        "scheduled_at": "2026-10-17T05:20:00-07:00",
+        "dispatched_at": "2026-10-17T05:20:10.508180-07:00",
         "lateness_seconds": 10.5,
         "kind": "on_time"
       },
@@ -470,15 +467,15 @@
       "schedule_display": "25 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 7
+        "completed": 8
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-09T07:04:49.494795-07:00",
-      "next_run_at": "2026-10-17T05:25:00-07:00",
-      "last_run_at": "2026-10-16T05:26:51.664372-07:00",
+      "next_run_at": "2026-10-18T05:25:00-07:00",
+      "last_run_at": "2026-10-17T05:26:15.113899-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -497,8 +494,8 @@
       "workdir": "/home/hermes/git/orion",
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-10-16T05:25:00-07:00",
-        "dispatched_at": "2026-10-16T05:25:10.506205-07:00",
+        "scheduled_at": "2026-10-17T05:25:00-07:00",
+        "dispatched_at": "2026-10-17T05:25:10.509939-07:00",
         "lateness_seconds": 10.5,
         "kind": "on_time"
       },
@@ -576,15 +573,15 @@
       "schedule_display": "30 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 7
+        "completed": 8
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-09T11:08:37.091713-07:00",
-      "next_run_at": "2026-10-17T05:30:00-07:00",
-      "last_run_at": "2026-10-16T05:33:24.944382-07:00",
+      "next_run_at": "2026-10-18T05:30:00-07:00",
+      "last_run_at": "2026-10-17T05:31:02.152530-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -603,8 +600,8 @@
       "workdir": "/home/hermes/git/orion",
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-10-16T05:30:00-07:00",
-        "dispatched_at": "2026-10-16T05:30:10.507317-07:00",
+        "scheduled_at": "2026-10-17T05:30:00-07:00",
+        "dispatched_at": "2026-10-17T05:30:10.507191-07:00",
         "lateness_seconds": 10.5,
         "kind": "on_time"
       },
@@ -633,15 +630,15 @@
       "schedule_display": "35 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 7
+        "completed": 8
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-09T11:08:39.892982-07:00",
-      "next_run_at": "2026-10-17T05:35:00-07:00",
-      "last_run_at": "2026-10-16T05:37:29.214296-07:00",
+      "next_run_at": "2026-10-18T05:35:00-07:00",
+      "last_run_at": "2026-10-17T05:36:00.819407-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -660,8 +657,8 @@
       "workdir": "/home/hermes/git/orion",
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-10-16T05:35:00-07:00",
-        "dispatched_at": "2026-10-16T05:35:10.508211-07:00",
+        "scheduled_at": "2026-10-17T05:35:00-07:00",
+        "dispatched_at": "2026-10-17T05:35:10.507883-07:00",
         "lateness_seconds": 10.5,
         "kind": "on_time"
       },
@@ -690,15 +687,15 @@
       "schedule_display": "40 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 5
+        "completed": 6
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-11T08:18:18.891548-07:00",
-      "next_run_at": "2026-10-17T05:40:00-07:00",
-      "last_run_at": "2026-10-16T05:40:29.317028-07:00",
+      "next_run_at": "2026-10-18T05:40:00-07:00",
+      "last_run_at": "2026-10-17T05:41:08.137679-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -717,8 +714,8 @@
       "workdir": "/home/hermes/git/orion",
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-10-16T05:40:00-07:00",
-        "dispatched_at": "2026-10-16T05:40:10.506909-07:00",
+        "scheduled_at": "2026-10-17T05:40:00-07:00",
+        "dispatched_at": "2026-10-17T05:40:10.506447-07:00",
         "lateness_seconds": 10.5,
         "kind": "on_time"
       },
@@ -801,15 +798,15 @@
       "schedule_display": "45 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 4
+        "completed": 5
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-12T12:41:31.934982-07:00",
-      "next_run_at": "2026-10-17T05:45:00-07:00",
-      "last_run_at": "2026-10-16T05:46:13.905659-07:00",
+      "next_run_at": "2026-10-18T05:45:00-07:00",
+      "last_run_at": "2026-10-17T05:45:58.626295-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -828,8 +825,8 @@
       "workdir": "/home/hermes/git/orion",
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-10-16T05:45:00-07:00",
-        "dispatched_at": "2026-10-16T05:45:10.502423-07:00",
+        "scheduled_at": "2026-10-17T05:45:00-07:00",
+        "dispatched_at": "2026-10-17T05:45:10.518618-07:00",
         "lateness_seconds": 10.5,
         "kind": "on_time"
       },
@@ -858,16 +855,16 @@
       "schedule_display": "50 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 0
+        "completed": 1
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-16T07:01:06.975272-07:00",
-      "next_run_at": "2026-10-17T05:50:00-07:00",
-      "last_run_at": null,
-      "last_status": null,
+      "next_run_at": "2026-10-18T05:50:00-07:00",
+      "last_run_at": "2026-10-17T05:51:03.333132-07:00",
+      "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "last_delivery_unverified": null,
@@ -883,7 +880,14 @@
       },
       "enabled_toolsets": null,
       "workdir": "/home/hermes/git/orion",
-      "attach_to_session": true
+      "attach_to_session": true,
+      "last_dispatch": {
+        "scheduled_at": "2026-10-17T05:50:00-07:00",
+        "dispatched_at": "2026-10-17T05:50:10.506843-07:00",
+        "lateness_seconds": 10.5,
+        "kind": "on_time"
+      },
+      "fire_claim": null
     },
     {
       "id": "3b93e01e3034",
@@ -908,16 +912,16 @@
       "schedule_display": "55 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 0
+        "completed": 1
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-16T09:07:04.613447-07:00",
-      "next_run_at": "2026-10-17T05:55:00-07:00",
-      "last_run_at": null,
-      "last_status": null,
+      "next_run_at": "2026-10-18T05:55:00-07:00",
+      "last_run_at": "2026-10-17T05:55:50.050680-07:00",
+      "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "last_delivery_unverified": null,
@@ -933,7 +937,14 @@
       },
       "enabled_toolsets": null,
       "workdir": "/home/hermes/git/orion",
-      "attach_to_session": true
+      "attach_to_session": true,
+      "last_dispatch": {
+        "scheduled_at": "2026-10-17T05:55:00-07:00",
+        "dispatched_at": "2026-10-17T05:55:10.508189-07:00",
+        "lateness_seconds": 10.5,
+        "kind": "on_time"
+      },
+      "fire_claim": null
     },
     {
       "id": "22c1e66c4f44",
@@ -958,16 +969,16 @@
       "schedule_display": "0 6 * * *",
       "repeat": {
         "times": null,
-        "completed": 0
+        "completed": 1
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-16T11:34:32.367416-07:00",
-      "next_run_at": "2026-10-17T06:00:00-07:00",
-      "last_run_at": null,
-      "last_status": null,
+      "next_run_at": "2026-10-18T06:00:00-07:00",
+      "last_run_at": "2026-10-17T06:00:57.308620-07:00",
+      "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "last_delivery_unverified": null,
@@ -983,7 +994,14 @@
       },
       "enabled_toolsets": null,
       "workdir": "/home/hermes/git/orion",
-      "attach_to_session": true
+      "attach_to_session": true,
+      "last_dispatch": {
+        "scheduled_at": "2026-10-17T06:00:00-07:00",
+        "dispatched_at": "2026-10-17T06:00:10.505993-07:00",
+        "lateness_seconds": 10.5,
+        "kind": "on_time"
+      },
+      "fire_claim": null
     },
     {
       "id": "e557c09a6a2c",
@@ -1008,16 +1026,16 @@
       "schedule_display": "5 6 * * *",
       "repeat": {
         "times": null,
-        "completed": 0
+        "completed": 1
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-16T13:15:12.947712-07:00",
-      "next_run_at": "2026-10-17T06:05:00-07:00",
-      "last_run_at": null,
-      "last_status": null,
+      "next_run_at": "2026-10-18T06:05:00-07:00",
+      "last_run_at": "2026-10-17T06:05:27.652792-07:00",
+      "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "last_delivery_unverified": null,
@@ -1033,8 +1051,15 @@
       },
       "enabled_toolsets": null,
       "workdir": "/home/hermes/git/orion",
-      "attach_to_session": true
+      "attach_to_session": true,
+      "last_dispatch": {
+        "scheduled_at": "2026-10-17T06:05:00-07:00",
+        "dispatched_at": "2026-10-17T06:05:10.506426-07:00",
+        "lateness_seconds": 10.5,
+        "kind": "on_time"
+      },
+      "fire_claim": null
     }
   ],
-  "updated_at": "2026-10-17T05:15:11.043108-07:00"
+  "updated_at": "2026-10-17T06:15:10.929083-07:00"
 }
