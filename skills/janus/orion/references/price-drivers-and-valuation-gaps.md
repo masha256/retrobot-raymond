@@ -41,6 +41,7 @@ Mike's position: a large TVL or TVS measures usefulness and network effects (dee
 
 ## 7. Dominance share recipe (DefiLlama, free endpoints)
 - `overview/fees?excludeTotalDataChart=true&excludeTotalDataChartBreakdown=true` (`total30d`, `total1y`, `category`) and `overview/dexs?...` (volume); per chain, `overview/dexs/<Chain>` (e.g. `Base`, `BSC`). Filter by `category`, group by `parentProtocol`, share = parent ÷ category total; 30d vs 1y gives the trend.
+- Apply the category filter on BOTH numerator and denominator, every time. The `overview/dexs` pages (global and per chain) also list Trading App, Prediction Market, Launchpad and other rows, so an unfiltered denominator understates DEX share (CAKE on BSC by about 8 points, UNI global by about 5; AERO barely moves). When comparing a hand-measured figure with the built `defillama_share` reader, check which basis each used before calling a gap a bug.
 - Categories and measures: DEXes `Dexs` volume (not TVL share, because emissions buy TVL). AERO and CAKE get both home-chain and global shares. HYPE/LIT `Derivatives` fee share (`overview/derivatives` volume is paywalled). PUMP `Launchpad`, SKY `CDP` (`parent#maker`). LINK: the fee `Oracle` category is meaningless (geodnet dwarfs it), so take TVS share from a cited secondary source.
 
 ## 8. Scratch whatif per scenario
