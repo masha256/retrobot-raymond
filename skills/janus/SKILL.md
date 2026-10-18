@@ -40,6 +40,8 @@ When FRED `curl` hangs or times out (HTTP/2 INTERNAL_ERROR, or 40s with no bytes
 
 ## Screen-phase workflow
 
+Pitfall: `janus coverage run` does NOT enforce phase order. It will open the session and stamp coverage even when macro/cluster are null. Check `janus session list | jq '.data.sessions[0]'` for today's `macro_at`/`cluster_at` BEFORE running coverage. If they're missing (e.g. janus-regime failed with `GatewayUnavailableError`), stop and report; don't screen without a regime read.
+
 Run `janus coverage run`, then dump `janus coverage list --date D` to a scratch JSON and tabulate it with jq (guard nulls: sma200 is null for <200 bars, as with MU/ORCL/STRC). Pull the prior day's `janus screen list --date D-1` so you keep continuity and carry forward binary events already sourced there, dropping any whose date has passed. Write all ~46 `screen record` calls into a scratch `.sh` with a helper function, diff its symbols against the coverage list, then `bash` it. Finish by checking `session status` (screen stamped) and `score queue`. To read today's regime context, use `janus macro reads --date D` and `janus cluster reads --date D` (all clusters in one call). There is no `macro show`, and `cluster show <key>` returns only params/description, not the read. In screen list/queue output, score/confidence sit under `.metrics` and screen_score under `.results`.
 
 ## One envelope per command
