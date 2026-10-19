@@ -107,6 +107,11 @@ sqlite3 orion.db "select f.asset_id,f.started_at,json_extract(s.value,'$.sourceI
 ```
 - "RPC Request failed." on `chain_levels`, on `adapter:*` `totalSupply()`, or on `transfer_flow` `eth_getLogs` means the Base RPC was throttled or rejected the request. Errors are deliberately scrubbed: viem's `shortMessage` is used and URLs are cut to their origin. To see the provider's actual message, curl the endpoint directly.
 
+## Outage-hit ticks and same-day re-runs
+- During a network outage a tick still exits 0 with `outcome: completed`, but `ingest.outcome` is `partial` and `sources_failed` lists the CoinGecko, DefiLlama and chain sources that failed. The signal written from that data is mostly stale: look for `target_delta_pct` 0. Judge each tick by `ingest.outcome` and its failed-source count, not by the tick outcome or the cron status. A cron run can be marked error only because the report agent or Telegram failed after the tick finished.
+- A second tick on the same day is safe. `tick` has no once-a-day guard: it fetches again, writes a new signal that becomes the latest, and leaves the earlier rows in history. The analyst agent runs only if `dueRunType`/triggers call for it, so if the morning report showed `agent: null` and `agent_would_run: null`, a re-run costs no agent spend.
+- To repair a morning of bad ticks, re-fire the asset cron jobs one at a time, 5 minutes apart (the procedure is in `cron-job-administration`, "Auditing whether jobs ran"). Don't fire them in parallel: without `COINGECKO_API_KEY`, the 2.5s request spacing works only inside one process, so parallel ticks get throttled and fail again. Confirm the first re-run shows `ingest.outcome: ok` and no delivery error before you tell Mike the batch is working.
+
 ## Vetting a new RPC endpoint (before relying on it)
 Orion's Base RPC must support all of the following. Test every item. A provider that passes the reads can still fail the logs check.
 1. `eth_blockNumber` and `eth_getBlockByNumber` (historical): used for the block-by-time search.
