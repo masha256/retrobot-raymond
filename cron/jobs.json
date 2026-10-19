@@ -191,20 +191,20 @@
       "schedule_display": "15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 1029
+        "completed": 1032
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-06T08:57:25.404654-07:00",
-      "next_run_at": "2026-10-19T05:15:00-07:00",
-      "last_run_at": "2026-10-19T03:15:47.497179-07:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-10-19T08:15:00-07:00",
+      "last_run_at": "2026-10-19T06:32:18.110613-07:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again.",
       "last_delivery_error": null,
       "last_delivery_unverified": null,
-      "failure_streak": 0,
+      "failure_streak": 2,
       "deliver": "local",
       "origin": {
         "platform": "telegram",
@@ -219,18 +219,22 @@
       ],
       "workdir": null,
       "fire_claim": {
-        "at": "2026-10-19T04:15:32.282559-07:00",
-        "by": "uranus:1096506:d68a3afda36648f9a2e6412a0b71e66b"
+        "at": "2026-10-19T07:15:32.299645-07:00",
+        "by": "uranus:1096506:2390340fd7184ca2bcbf090ba4e270b3"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-10-19T04:15:00-07:00",
-        "dispatched_at": "2026-10-19T04:15:31.066716-07:00",
+        "scheduled_at": "2026-10-19T07:15:00-07:00",
+        "dispatched_at": "2026-10-19T07:15:31.067291-07:00",
         "lateness_seconds": 31.1,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "554b9ea0ea8f4ec8a41c5ca681789353"
-      ]
+        "8e5fff3947634b38b53b4f2d0677f52d"
+      ],
+      "last_failure": {
+        "at": "2026-10-19T06:32:18.110613-07:00",
+        "detail": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again."
+      }
     },
     {
       "id": "3e9232dd281b",
@@ -255,15 +259,15 @@
       "schedule_display": "5 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 16
+        "completed": 17
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-03T01:55:31.725054-07:00",
-      "next_run_at": "2026-10-19T05:05:00-07:00",
-      "last_run_at": "2026-10-18T05:06:14.193580-07:00",
+      "next_run_at": "2026-10-20T05:05:00-07:00",
+      "last_run_at": "2026-10-19T05:06:47.650625-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -283,11 +287,14 @@
       "attach_to_session": true,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-18T05:05:00-07:00",
-        "dispatched_at": "2026-10-18T05:05:10.507452-07:00",
-        "lateness_seconds": 10.5,
+        "scheduled_at": "2026-10-19T05:05:00-07:00",
+        "dispatched_at": "2026-10-19T05:05:31.066828-07:00",
+        "lateness_seconds": 31.1,
         "kind": "on_time"
-      }
+      },
+      "canonical_completions": [
+        "694132a1503c4f9d9d2b6b4972e7f1f7"
+      ]
     },
     {
       "id": "1f25a8f0be0d",
@@ -312,15 +319,15 @@
       "schedule_display": "10 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 16
+        "completed": 17
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-03T01:55:32.697183-07:00",
-      "next_run_at": "2026-10-19T05:10:00-07:00",
-      "last_run_at": "2026-10-18T05:11:19.692346-07:00",
+      "next_run_at": "2026-10-20T05:10:00-07:00",
+      "last_run_at": "2026-10-19T05:11:23.643625-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -340,11 +347,14 @@
       "attach_to_session": true,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-18T05:10:00-07:00",
-        "dispatched_at": "2026-10-18T05:10:10.508063-07:00",
-        "lateness_seconds": 10.5,
+        "scheduled_at": "2026-10-19T05:10:00-07:00",
+        "dispatched_at": "2026-10-19T05:10:31.080943-07:00",
+        "lateness_seconds": 31.1,
         "kind": "on_time"
-      }
+      },
+      "canonical_completions": [
+        "8ba165096307457193468f4d91e4c805"
+      ]
     },
     {
       "id": "26a33124cfbf",
@@ -369,20 +379,20 @@
       "schedule_display": "15 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 16
+        "completed": 17
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-03T01:55:33.657220-07:00",
-      "next_run_at": "2026-10-19T05:15:00-07:00",
-      "last_run_at": "2026-10-18T05:16:10.139452-07:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
+      "next_run_at": "2026-10-20T05:15:00-07:00",
+      "last_run_at": "2026-10-19T05:35:13.454610-07:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again.",
+      "last_delivery_error": "delivery error: Telegram send failed: Timed out (target telegram:1620897892:16022)",
       "last_delivery_unverified": null,
-      "failure_streak": 0,
+      "failure_streak": 1,
       "deliver": "telegram:1620897892:16022",
       "origin": {
         "platform": "telegram",
@@ -397,11 +407,18 @@
       "attach_to_session": true,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-18T05:15:00-07:00",
-        "dispatched_at": "2026-10-18T05:15:10.508087-07:00",
-        "lateness_seconds": 10.5,
+        "scheduled_at": "2026-10-19T05:15:00-07:00",
+        "dispatched_at": "2026-10-19T05:15:31.066710-07:00",
+        "lateness_seconds": 31.1,
         "kind": "on_time"
-      }
+      },
+      "last_failure": {
+        "at": "2026-10-19T05:35:13.454610-07:00",
+        "detail": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again."
+      },
+      "canonical_completions": [
+        "5ce17bf2aea245ef9b54289fe28a2243"
+      ]
     },
     {
       "id": "58f7c92759f6",
@@ -426,20 +443,20 @@
       "schedule_display": "20 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 10
+        "completed": 11
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-08T04:58:11.153616-07:00",
-      "next_run_at": "2026-10-19T05:20:00-07:00",
-      "last_run_at": "2026-10-18T05:21:12.697390-07:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
+      "next_run_at": "2026-10-20T05:20:00-07:00",
+      "last_run_at": "2026-10-19T05:40:16.706183-07:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again.",
+      "last_delivery_error": "delivery error: Telegram send failed: Timed out (target telegram:1620897892:16022)",
       "last_delivery_unverified": null,
-      "failure_streak": 0,
+      "failure_streak": 1,
       "deliver": "telegram:1620897892:16022",
       "origin": {
         "platform": "telegram",
@@ -453,12 +470,19 @@
       "workdir": "/home/hermes/git/orion",
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-10-18T05:20:00-07:00",
-        "dispatched_at": "2026-10-18T05:20:10.509046-07:00",
-        "lateness_seconds": 10.5,
+        "scheduled_at": "2026-10-19T05:20:00-07:00",
+        "dispatched_at": "2026-10-19T05:20:31.070115-07:00",
+        "lateness_seconds": 31.1,
         "kind": "on_time"
       },
-      "fire_claim": null
+      "fire_claim": null,
+      "last_failure": {
+        "at": "2026-10-19T05:40:16.706183-07:00",
+        "detail": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again."
+      },
+      "canonical_completions": [
+        "b2ae51e061784184b2414c70b8cf17a6"
+      ]
     },
     {
       "id": "6dc912265834",
@@ -483,20 +507,20 @@
       "schedule_display": "25 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 9
+        "completed": 10
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-09T07:04:49.494795-07:00",
-      "next_run_at": "2026-10-19T05:25:00-07:00",
-      "last_run_at": "2026-10-18T05:25:41.693984-07:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
+      "next_run_at": "2026-10-20T05:25:00-07:00",
+      "last_run_at": "2026-10-19T05:44:05.279274-07:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again.",
+      "last_delivery_error": "delivery error: Telegram send failed: Timed out (target telegram:1620897892:16022)",
       "last_delivery_unverified": null,
-      "failure_streak": 0,
+      "failure_streak": 1,
       "deliver": "telegram:1620897892:16022",
       "origin": {
         "platform": "telegram",
@@ -510,12 +534,19 @@
       "workdir": "/home/hermes/git/orion",
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-10-18T05:25:00-07:00",
-        "dispatched_at": "2026-10-18T05:25:10.507555-07:00",
-        "lateness_seconds": 10.5,
+        "scheduled_at": "2026-10-19T05:25:00-07:00",
+        "dispatched_at": "2026-10-19T05:25:31.071899-07:00",
+        "lateness_seconds": 31.1,
         "kind": "on_time"
       },
-      "fire_claim": null
+      "fire_claim": null,
+      "last_failure": {
+        "at": "2026-10-19T05:44:05.279274-07:00",
+        "detail": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again."
+      },
+      "canonical_completions": [
+        "242b37fe383d4f3a9f8f364a4d61519f"
+      ]
     },
     {
       "id": "1cc5afa274dd",
@@ -589,20 +620,20 @@
       "schedule_display": "30 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 9
+        "completed": 10
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-09T11:08:37.091713-07:00",
-      "next_run_at": "2026-10-19T05:30:00-07:00",
-      "last_run_at": "2026-10-18T05:31:15.453006-07:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
+      "next_run_at": "2026-10-20T05:30:00-07:00",
+      "last_run_at": "2026-10-19T05:48:58.240436-07:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again.",
+      "last_delivery_error": "delivery error: Telegram send failed: Timed out (target telegram:1620897892:16022)",
       "last_delivery_unverified": null,
-      "failure_streak": 0,
+      "failure_streak": 1,
       "deliver": "telegram:1620897892:16022",
       "origin": {
         "platform": "telegram",
@@ -616,12 +647,19 @@
       "workdir": "/home/hermes/git/orion",
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-10-18T05:30:00-07:00",
-        "dispatched_at": "2026-10-18T05:30:10.520461-07:00",
-        "lateness_seconds": 10.5,
+        "scheduled_at": "2026-10-19T05:30:00-07:00",
+        "dispatched_at": "2026-10-19T05:30:31.075047-07:00",
+        "lateness_seconds": 31.1,
         "kind": "on_time"
       },
-      "fire_claim": null
+      "fire_claim": null,
+      "last_failure": {
+        "at": "2026-10-19T05:48:58.240436-07:00",
+        "detail": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again."
+      },
+      "canonical_completions": [
+        "fedab3271c8e46e6a8a38c558d00805f"
+      ]
     },
     {
       "id": "412704deeb23",
@@ -646,20 +684,20 @@
       "schedule_display": "35 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 9
+        "completed": 10
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-09T11:08:39.892982-07:00",
-      "next_run_at": "2026-10-19T05:35:00-07:00",
-      "last_run_at": "2026-10-18T05:36:20.726779-07:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
+      "next_run_at": "2026-10-20T05:35:00-07:00",
+      "last_run_at": "2026-10-19T05:54:09.017154-07:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again.",
+      "last_delivery_error": "delivery error: Telegram send failed: Timed out (target telegram:1620897892:16022)",
       "last_delivery_unverified": null,
-      "failure_streak": 0,
+      "failure_streak": 1,
       "deliver": "telegram:1620897892:16022",
       "origin": {
         "platform": "telegram",
@@ -673,12 +711,19 @@
       "workdir": "/home/hermes/git/orion",
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-10-18T05:35:00-07:00",
-        "dispatched_at": "2026-10-18T05:35:10.507395-07:00",
-        "lateness_seconds": 10.5,
+        "scheduled_at": "2026-10-19T05:35:00-07:00",
+        "dispatched_at": "2026-10-19T05:35:31.071889-07:00",
+        "lateness_seconds": 31.1,
         "kind": "on_time"
       },
-      "fire_claim": null
+      "fire_claim": null,
+      "last_failure": {
+        "at": "2026-10-19T05:54:09.017154-07:00",
+        "detail": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again."
+      },
+      "canonical_completions": [
+        "d530dff1855444569b1d236f6ef12130"
+      ]
     },
     {
       "id": "f9e863bde3e1",
@@ -703,20 +748,20 @@
       "schedule_display": "40 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 7
+        "completed": 8
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-11T08:18:18.891548-07:00",
-      "next_run_at": "2026-10-19T05:40:00-07:00",
-      "last_run_at": "2026-10-18T05:43:45.893983-07:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
+      "next_run_at": "2026-10-20T05:40:00-07:00",
+      "last_run_at": "2026-10-19T05:59:46.366037-07:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again.",
+      "last_delivery_error": "delivery error: Telegram send failed: Timed out (target telegram:1620897892:16022)",
       "last_delivery_unverified": null,
-      "failure_streak": 0,
+      "failure_streak": 1,
       "deliver": "telegram:1620897892:16022",
       "origin": {
         "platform": "telegram",
@@ -730,66 +775,19 @@
       "workdir": "/home/hermes/git/orion",
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-10-18T05:40:00-07:00",
-        "dispatched_at": "2026-10-18T05:40:10.506484-07:00",
-        "lateness_seconds": 10.5,
+        "scheduled_at": "2026-10-19T05:40:00-07:00",
+        "dispatched_at": "2026-10-19T05:40:31.072698-07:00",
+        "lateness_seconds": 31.1,
         "kind": "on_time"
       },
-      "fire_claim": null
-    },
-    {
-      "id": "77147e5a009e",
-      "name": "verify-orion-morning-schedule",
-      "prompt": "Verification check, report to Mike (terse, hedge-fund-PM tone, bullet points, no tables). Read-only: change nothing, run no orion command that writes.\n\nContext: on 2026-10-11 the 8 orion daily cron jobs (orion-vvv, hype, aero, crv, ycrv, cvxcrv, sdcrv, uni) were moved from 17:05-17:40 PT to 05:05-05:40 PT (America/Los_Angeles), 5 minutes apart in that order, so they never need a DST change. orion-uni (UNI) was newly onboarded and today is its first scheduled run. Each job delivers to Telegram topic orion-ops.\n\nCheck, and report each with evidence:\n1. `hermes -p raymond cron list` (and `hermes -p raymond cron runs <job_id>` if available): did each of the 8 orion-* jobs fire this morning between 05:05 and ~06:00 PT, with last_status ok and no delivery error? Give each job's last_run_at.\n2. In /home/hermes/git/orion: `tail -n 8 ticks.jsonl`, and for each asset the latest line of signals.jsonl for that asset (use python/jq to read it; do not edit anything). Each asset should have one new signal stamped today 2026-10-12 (UTC, after 12:00Z), with status, grade, and 12m expected target. Flag any asset with no new signal, a blocked/degraded status, or an exit code other than 0.\n3. Report-day check: run `node dist/cli/index.js report yield <asset>` for hype and uni (read-only) from /home/hermes/git/orion with ORION_HOME=/home/hermes/git/orion, and give the 'day' each prints. It should be 2026-10-11 (the full previous UTC day).\n\nFirst line: 'ORION SCHEDULE CHECK: OK' if all 8 fired, delivered and produced today's signal, else 'ORION SCHEDULE CHECK: PROBLEM' followed by what failed. Never fix anything.",
-      "skills": [],
-      "skill": null,
-      "model": null,
-      "provider": null,
-      "base_url": null,
-      "script": null,
-      "no_agent": false,
-      "monitor_script": null,
-      "monitor_url": null,
-      "monitor_state": null,
-      "context_from": null,
-      "schedule": {
-        "kind": "once",
-        "run_at": "2026-10-12T06:15:00-07:00",
-        "display": "once at 2026-10-12 06:15"
+      "fire_claim": null,
+      "last_failure": {
+        "at": "2026-10-19T05:59:46.366037-07:00",
+        "detail": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again."
       },
-      "schedule_display": "once at 2026-10-12 06:15",
-      "repeat": {
-        "times": 1,
-        "completed": 1
-      },
-      "enabled": false,
-      "state": "completed",
-      "paused_at": null,
-      "paused_reason": null,
-      "created_at": "2026-10-11T08:42:10.671570-07:00",
-      "next_run_at": null,
-      "last_run_at": "2026-10-12T06:16:01.191625-07:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
-      "last_delivery_unverified": null,
-      "failure_streak": 0,
-      "deliver": "telegram:1620897892:16021",
-      "origin": {
-        "platform": "telegram",
-        "chat_id": "1620897892",
-        "chat_name": "Mike M",
-        "thread_id": "16021",
-        "user_id": "1620897892",
-        "scope_id": null
-      },
-      "enabled_toolsets": [
-        "terminal",
-        "file"
-      ],
-      "workdir": null,
-      "run_claim": null,
-      "fire_claim": null
+      "canonical_completions": [
+        "cd5b3ab8e54d43e19e499e454d53870b"
+      ]
     },
     {
       "id": "a0cb5d76eda8",
@@ -814,20 +812,20 @@
       "schedule_display": "45 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 6
+        "completed": 7
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-12T12:41:31.934982-07:00",
-      "next_run_at": "2026-10-19T05:45:00-07:00",
-      "last_run_at": "2026-10-18T05:46:35.682464-07:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
+      "next_run_at": "2026-10-20T05:45:00-07:00",
+      "last_run_at": "2026-10-19T06:05:36.805222-07:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again.",
+      "last_delivery_error": "delivery error: Telegram send failed: Timed out (target telegram:1620897892:16022)",
       "last_delivery_unverified": null,
-      "failure_streak": 0,
+      "failure_streak": 1,
       "deliver": "telegram:1620897892:16022",
       "origin": {
         "platform": "telegram",
@@ -841,12 +839,19 @@
       "workdir": "/home/hermes/git/orion",
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-10-18T05:45:00-07:00",
-        "dispatched_at": "2026-10-18T05:45:10.506198-07:00",
-        "lateness_seconds": 10.5,
+        "scheduled_at": "2026-10-19T05:45:00-07:00",
+        "dispatched_at": "2026-10-19T05:45:31.074406-07:00",
+        "lateness_seconds": 31.1,
         "kind": "on_time"
       },
-      "fire_claim": null
+      "fire_claim": null,
+      "last_failure": {
+        "at": "2026-10-19T06:05:36.805222-07:00",
+        "detail": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again."
+      },
+      "canonical_completions": [
+        "2d46f92d8bd141d2881e756bf558f435"
+      ]
     },
     {
       "id": "8d40b91687dc",
@@ -871,20 +876,20 @@
       "schedule_display": "50 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 2
+        "completed": 3
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-16T07:01:06.975272-07:00",
-      "next_run_at": "2026-10-19T05:50:00-07:00",
-      "last_run_at": "2026-10-18T05:50:58.522425-07:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
+      "next_run_at": "2026-10-20T05:50:00-07:00",
+      "last_run_at": "2026-10-19T06:12:34.766598-07:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again.",
+      "last_delivery_error": "delivery error: Telegram send failed: Timed out (target telegram:1620897892:16022)",
       "last_delivery_unverified": null,
-      "failure_streak": 0,
+      "failure_streak": 1,
       "deliver": "telegram:1620897892:16022",
       "origin": {
         "platform": "telegram",
@@ -898,12 +903,19 @@
       "workdir": "/home/hermes/git/orion",
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-10-18T05:50:00-07:00",
-        "dispatched_at": "2026-10-18T05:50:10.505948-07:00",
-        "lateness_seconds": 10.5,
+        "scheduled_at": "2026-10-19T05:50:00-07:00",
+        "dispatched_at": "2026-10-19T05:50:31.068244-07:00",
+        "lateness_seconds": 31.1,
         "kind": "on_time"
       },
-      "fire_claim": null
+      "fire_claim": null,
+      "last_failure": {
+        "at": "2026-10-19T06:12:34.766598-07:00",
+        "detail": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again."
+      },
+      "canonical_completions": [
+        "65389edd77914493a1b06dfba02f8361"
+      ]
     },
     {
       "id": "3b93e01e3034",
@@ -928,20 +940,20 @@
       "schedule_display": "55 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 2
+        "completed": 3
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-16T09:07:04.613447-07:00",
-      "next_run_at": "2026-10-19T05:55:00-07:00",
-      "last_run_at": "2026-10-18T05:56:22.772059-07:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
+      "next_run_at": "2026-10-20T05:55:00-07:00",
+      "last_run_at": "2026-10-19T06:13:46.320140-07:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again.",
+      "last_delivery_error": "delivery error: Telegram send failed: Timed out (target telegram:1620897892:16022)",
       "last_delivery_unverified": null,
-      "failure_streak": 0,
+      "failure_streak": 1,
       "deliver": "telegram:1620897892:16022",
       "origin": {
         "platform": "telegram",
@@ -955,12 +967,19 @@
       "workdir": "/home/hermes/git/orion",
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-10-18T05:55:00-07:00",
-        "dispatched_at": "2026-10-18T05:55:10.505620-07:00",
-        "lateness_seconds": 10.5,
+        "scheduled_at": "2026-10-19T05:55:00-07:00",
+        "dispatched_at": "2026-10-19T05:55:31.071200-07:00",
+        "lateness_seconds": 31.1,
         "kind": "on_time"
       },
-      "fire_claim": null
+      "fire_claim": null,
+      "last_failure": {
+        "at": "2026-10-19T06:13:46.320140-07:00",
+        "detail": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again."
+      },
+      "canonical_completions": [
+        "709adc7a672a4befbd1025e1c1fadb5a"
+      ]
     },
     {
       "id": "22c1e66c4f44",
@@ -985,20 +1004,20 @@
       "schedule_display": "0 6 * * *",
       "repeat": {
         "times": null,
-        "completed": 2
+        "completed": 3
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-16T11:34:32.367416-07:00",
-      "next_run_at": "2026-10-19T06:00:00-07:00",
-      "last_run_at": "2026-10-18T06:01:04.667214-07:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
+      "next_run_at": "2026-10-20T06:00:00-07:00",
+      "last_run_at": "2026-10-19T06:19:55.332919-07:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again.",
+      "last_delivery_error": "delivery error: Telegram send failed: Timed out (target telegram:1620897892:16022)",
       "last_delivery_unverified": null,
-      "failure_streak": 0,
+      "failure_streak": 1,
       "deliver": "telegram:1620897892:16022",
       "origin": {
         "platform": "telegram",
@@ -1012,12 +1031,19 @@
       "workdir": "/home/hermes/git/orion",
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-10-18T06:00:00-07:00",
-        "dispatched_at": "2026-10-18T06:00:10.509048-07:00",
-        "lateness_seconds": 10.5,
+        "scheduled_at": "2026-10-19T06:00:00-07:00",
+        "dispatched_at": "2026-10-19T06:00:31.093504-07:00",
+        "lateness_seconds": 31.1,
         "kind": "on_time"
       },
-      "fire_claim": null
+      "fire_claim": null,
+      "last_failure": {
+        "at": "2026-10-19T06:19:55.332919-07:00",
+        "detail": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again."
+      },
+      "canonical_completions": [
+        "0a4511d220924b14a5909b01ff51e99b"
+      ]
     },
     {
       "id": "e557c09a6a2c",
@@ -1042,20 +1068,20 @@
       "schedule_display": "5 6 * * *",
       "repeat": {
         "times": null,
-        "completed": 2
+        "completed": 3
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-16T13:15:12.947712-07:00",
-      "next_run_at": "2026-10-19T06:05:00-07:00",
-      "last_run_at": "2026-10-18T06:06:00.519549-07:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
+      "next_run_at": "2026-10-20T06:05:00-07:00",
+      "last_run_at": "2026-10-19T06:26:38.727162-07:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again.",
+      "last_delivery_error": "delivery error: Telegram send failed: Timed out (target telegram:1620897892:16022)",
       "last_delivery_unverified": null,
-      "failure_streak": 0,
+      "failure_streak": 1,
       "deliver": "telegram:1620897892:16022",
       "origin": {
         "platform": "telegram",
@@ -1069,13 +1095,20 @@
       "workdir": "/home/hermes/git/orion",
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-10-18T06:05:00-07:00",
-        "dispatched_at": "2026-10-18T06:05:10.507301-07:00",
-        "lateness_seconds": 10.5,
+        "scheduled_at": "2026-10-19T06:05:00-07:00",
+        "dispatched_at": "2026-10-19T06:05:31.073494-07:00",
+        "lateness_seconds": 31.1,
         "kind": "on_time"
       },
-      "fire_claim": null
+      "fire_claim": null,
+      "last_failure": {
+        "at": "2026-10-19T06:26:38.727162-07:00",
+        "detail": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again."
+      },
+      "canonical_completions": [
+        "09057d3bfacc401aa5338d01a3a80615"
+      ]
     }
   ],
-  "updated_at": "2026-10-19T04:15:32.283121-07:00"
+  "updated_at": "2026-10-19T07:15:32.300235-07:00"
 }
