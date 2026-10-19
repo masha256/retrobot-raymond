@@ -100,6 +100,10 @@ Repo: `/home/hermes/git/orion`. Live DB: `orion.db` in the repo root (sqlite). S
 - **CoinGecko**: the optional `COINGECKO_API_KEY` is sent as the demo-key header. Without it, the code spaces requests 2.5s apart to stay under the keyless limit.
 - To re-derive this list: `grep -n '^ingest:' assets/*.yaml` and `grep -rn 'env\.\|https://' src/ingest`.
 
+## Re-running ticks after an outage
+- Orion has no once-per-day guard: a second tick re-fetches and writes a new latest signal; the bad partial rows stay in history (fine). The agent runs only if cadence/triggers say so.
+- COINGECKO_API_KEY is unset (keyless, spacing is per-process), so never fire ticks in parallel. Run a background script that calls `hermes --profile raymond cron run <job_id>` per asset, 5 min apart (each call blocks until that run finishes and delivers). Verify per job: newest cron/output file shows `"ingest":{..."outcome":"ok","sources_failed":[]}`, and jobs.json `last_status` ok with no `last_delivery_error`.
+
 ## Diagnosing ingest failures
 The cron output .md files rarely contain the real error. Query `fetch_runs` instead. Its columns are `id, asset_id, started_at, ended_at, outcome, detail_json`; outcome is `ok` or `partial`. Per-source errors live in `detail_json.sources[]`:
 ```

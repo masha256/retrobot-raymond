@@ -191,15 +191,15 @@
       "schedule_display": "15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 1034
+        "completed": 1035
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-06T08:57:25.404654-07:00",
-      "next_run_at": "2026-10-19T09:15:00-07:00",
-      "last_run_at": "2026-10-19T07:18:16.813172-07:00",
+      "next_run_at": "2026-10-19T10:15:00-07:00",
+      "last_run_at": "2026-10-19T08:16:00.343931-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -219,17 +219,17 @@
       ],
       "workdir": null,
       "fire_claim": {
-        "at": "2026-10-19T08:15:47.060788-07:00",
-        "by": "uranus:1202318:b65f75c47d26447f9e5359bf5caad6ad"
+        "at": "2026-10-19T09:15:47.020827-07:00",
+        "by": "uranus:1202318:fe0296dcc037403fb68dd86ab0850f55"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-10-19T08:15:00-07:00",
-        "dispatched_at": "2026-10-19T08:15:45.881483-07:00",
+        "scheduled_at": "2026-10-19T09:15:00-07:00",
+        "dispatched_at": "2026-10-19T09:15:45.875695-07:00",
         "lateness_seconds": 45.9,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "4ecd4d98b14c4e148d1e2aa6ceb1d785"
+        "7bb7d4da7c604be4b2da44f433c851d1"
       ],
       "last_failure": {
         "at": "2026-10-19T07:17:23.054609-07:00",
@@ -1068,7 +1068,7 @@
       "schedule_display": "5 6 * * *",
       "repeat": {
         "times": null,
-        "completed": 3
+        "completed": 4
       },
       "enabled": true,
       "state": "scheduled",
@@ -1076,12 +1076,12 @@
       "paused_reason": null,
       "created_at": "2026-10-16T13:15:12.947712-07:00",
       "next_run_at": "2026-10-20T06:05:00-07:00",
-      "last_run_at": "2026-10-19T06:26:38.727162-07:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again.",
-      "last_delivery_error": "delivery error: Telegram send failed: Timed out (target telegram:1620897892:16022)",
+      "last_run_at": "2026-10-19T08:21:10.668469-07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
       "last_delivery_unverified": null,
-      "failure_streak": 1,
+      "failure_streak": 0,
       "deliver": "telegram:1620897892:16022",
       "origin": {
         "platform": "telegram",
@@ -1106,9 +1106,9 @@
         "detail": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again."
       },
       "canonical_completions": [
-        "09057d3bfacc401aa5338d01a3a80615"
+        "77df6c4e66e447259f393b6395018bd7"
       ]
     }
   ],
-  "updated_at": "2026-10-19T08:15:47.061364-07:00"
+  "updated_at": "2026-10-19T09:15:47.021427-07:00"
 }
