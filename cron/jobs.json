@@ -191,15 +191,15 @@
       "schedule_display": "15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 1055
+        "completed": 1056
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-06T08:57:25.404654-07:00",
-      "next_run_at": "2026-10-20T06:15:00-07:00",
-      "last_run_at": "2026-10-20T04:16:00.333574-07:00",
+      "next_run_at": "2026-10-20T07:15:00-07:00",
+      "last_run_at": "2026-10-20T05:16:00.387515-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -219,17 +219,17 @@
       ],
       "workdir": null,
       "fire_claim": {
-        "at": "2026-10-20T05:15:47.108632-07:00",
-        "by": "uranus:1202318:1731ade20eca4db4af99d323052ba4c4"
+        "at": "2026-10-20T06:15:47.056013-07:00",
+        "by": "uranus:1202318:76f17e9b0af44419a2c9cc7583153870"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-10-20T05:15:00-07:00",
-        "dispatched_at": "2026-10-20T05:15:45.851577-07:00",
-        "lateness_seconds": 45.9,
+        "scheduled_at": "2026-10-20T06:15:00-07:00",
+        "dispatched_at": "2026-10-20T06:15:45.846335-07:00",
+        "lateness_seconds": 45.8,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "de7e4d10f8ab4f55be1c72be8c8dc904"
+        "7659618258a14c2bb54109a45c0bb9df"
       ],
       "last_failure": {
         "at": "2026-10-19T07:17:23.054609-07:00",
@@ -379,7 +379,7 @@
       "schedule_display": "15 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 18
+        "completed": 19
       },
       "enabled": true,
       "state": "scheduled",
@@ -387,7 +387,7 @@
       "paused_reason": null,
       "created_at": "2026-10-03T01:55:33.657220-07:00",
       "next_run_at": "2026-10-21T05:15:00-07:00",
-      "last_run_at": "2026-10-19T07:25:09.768153-07:00",
+      "last_run_at": "2026-10-20T05:16:16.429785-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -405,10 +405,7 @@
       "enabled_toolsets": null,
       "workdir": "/home/hermes/git/orion",
       "attach_to_session": true,
-      "fire_claim": {
-        "at": "2026-10-20T05:15:47.073844-07:00",
-        "by": "uranus:1202318:45ca8773a93d45249897fdba9e3ac5c6"
-      },
+      "fire_claim": null,
       "last_dispatch": {
         "scheduled_at": "2026-10-20T05:15:00-07:00",
         "dispatched_at": "2026-10-20T05:15:45.851577-07:00",
@@ -420,7 +417,7 @@
         "detail": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again."
       },
       "canonical_completions": [
-        "938f865abe914eac8ae3b4e1d36c8bbb"
+        "4d70ed79d9f548a38d6a667f6e509a63"
       ]
     },
     {
@@ -446,15 +443,15 @@
       "schedule_display": "20 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 12
+        "completed": 13
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-08T04:58:11.153616-07:00",
-      "next_run_at": "2026-10-20T05:20:00-07:00",
-      "last_run_at": "2026-10-19T07:30:43.235366-07:00",
+      "next_run_at": "2026-10-21T05:20:00-07:00",
+      "last_run_at": "2026-10-20T05:21:12.306194-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -473,9 +470,9 @@
       "workdir": "/home/hermes/git/orion",
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-10-19T05:20:00-07:00",
-        "dispatched_at": "2026-10-19T05:20:31.070115-07:00",
-        "lateness_seconds": 31.1,
+        "scheduled_at": "2026-10-20T05:20:00-07:00",
+        "dispatched_at": "2026-10-20T05:20:45.844736-07:00",
+        "lateness_seconds": 45.8,
         "kind": "on_time"
       },
       "fire_claim": null,
@@ -484,7 +481,7 @@
         "detail": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again."
       },
       "canonical_completions": [
-        "3016a8d347b34180831429d0f86edf8a"
+        "56f4a972a4b1436ca2923895527311d6"
       ]
     },
     {
@@ -510,15 +507,15 @@
       "schedule_display": "25 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 11
+        "completed": 12
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-09T07:04:49.494795-07:00",
-      "next_run_at": "2026-10-20T05:25:00-07:00",
-      "last_run_at": "2026-10-19T07:36:20.690286-07:00",
+      "next_run_at": "2026-10-21T05:25:00-07:00",
+      "last_run_at": "2026-10-20T05:26:16.590284-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -537,9 +534,9 @@
       "workdir": "/home/hermes/git/orion",
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-10-19T05:25:00-07:00",
-        "dispatched_at": "2026-10-19T05:25:31.071899-07:00",
-        "lateness_seconds": 31.1,
+        "scheduled_at": "2026-10-20T05:25:00-07:00",
+        "dispatched_at": "2026-10-20T05:25:45.849287-07:00",
+        "lateness_seconds": 45.8,
         "kind": "on_time"
       },
       "fire_claim": null,
@@ -548,7 +545,7 @@
         "detail": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again."
       },
       "canonical_completions": [
-        "fea9d5896b0d4235a94394c9e7dc1804"
+        "836606664a7347f6867872c9d4d67bbd"
       ]
     },
     {
@@ -623,15 +620,15 @@
       "schedule_display": "30 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 11
+        "completed": 12
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-09T11:08:37.091713-07:00",
-      "next_run_at": "2026-10-20T05:30:00-07:00",
-      "last_run_at": "2026-10-19T07:42:06.188913-07:00",
+      "next_run_at": "2026-10-21T05:30:00-07:00",
+      "last_run_at": "2026-10-20T05:31:18.395502-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -650,9 +647,9 @@
       "workdir": "/home/hermes/git/orion",
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-10-19T05:30:00-07:00",
-        "dispatched_at": "2026-10-19T05:30:31.075047-07:00",
-        "lateness_seconds": 31.1,
+        "scheduled_at": "2026-10-20T05:30:00-07:00",
+        "dispatched_at": "2026-10-20T05:30:45.853289-07:00",
+        "lateness_seconds": 45.9,
         "kind": "on_time"
       },
       "fire_claim": null,
@@ -661,7 +658,7 @@
         "detail": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again."
       },
       "canonical_completions": [
-        "48afa8fe379549268b8388aa991f53b7"
+        "7a013cd897cc4c3fa314ad68fb904f4b"
       ]
     },
     {
@@ -687,15 +684,15 @@
       "schedule_display": "35 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 11
+        "completed": 12
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-09T11:08:39.892982-07:00",
-      "next_run_at": "2026-10-20T05:35:00-07:00",
-      "last_run_at": "2026-10-19T07:47:47.673159-07:00",
+      "next_run_at": "2026-10-21T05:35:00-07:00",
+      "last_run_at": "2026-10-20T05:36:36.514455-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -714,9 +711,9 @@
       "workdir": "/home/hermes/git/orion",
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-10-19T05:35:00-07:00",
-        "dispatched_at": "2026-10-19T05:35:31.071889-07:00",
-        "lateness_seconds": 31.1,
+        "scheduled_at": "2026-10-20T05:35:00-07:00",
+        "dispatched_at": "2026-10-20T05:35:45.845623-07:00",
+        "lateness_seconds": 45.8,
         "kind": "on_time"
       },
       "fire_claim": null,
@@ -725,7 +722,7 @@
         "detail": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again."
       },
       "canonical_completions": [
-        "60a0b0c695d6452b89d9255e115040fd"
+        "8155f93ba2b54adeb6e914ad337d0453"
       ]
     },
     {
@@ -751,15 +748,15 @@
       "schedule_display": "40 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 9
+        "completed": 10
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-11T08:18:18.891548-07:00",
-      "next_run_at": "2026-10-20T05:40:00-07:00",
-      "last_run_at": "2026-10-19T07:53:09.050061-07:00",
+      "next_run_at": "2026-10-21T05:40:00-07:00",
+      "last_run_at": "2026-10-20T05:41:26.389654-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -778,9 +775,9 @@
       "workdir": "/home/hermes/git/orion",
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-10-19T05:40:00-07:00",
-        "dispatched_at": "2026-10-19T05:40:31.072698-07:00",
-        "lateness_seconds": 31.1,
+        "scheduled_at": "2026-10-20T05:40:00-07:00",
+        "dispatched_at": "2026-10-20T05:40:45.846667-07:00",
+        "lateness_seconds": 45.8,
         "kind": "on_time"
       },
       "fire_claim": null,
@@ -789,7 +786,7 @@
         "detail": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again."
       },
       "canonical_completions": [
-        "a5bbe773ad034aee8cafc075240fdbf4"
+        "55bcddb2bf2f44a5b13040ba02fbce75"
       ]
     },
     {
@@ -815,15 +812,15 @@
       "schedule_display": "45 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 8
+        "completed": 9
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-12T12:41:31.934982-07:00",
-      "next_run_at": "2026-10-20T05:45:00-07:00",
-      "last_run_at": "2026-10-19T07:58:58.756224-07:00",
+      "next_run_at": "2026-10-21T05:45:00-07:00",
+      "last_run_at": "2026-10-20T05:46:30.493363-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -842,9 +839,9 @@
       "workdir": "/home/hermes/git/orion",
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-10-19T05:45:00-07:00",
-        "dispatched_at": "2026-10-19T05:45:31.074406-07:00",
-        "lateness_seconds": 31.1,
+        "scheduled_at": "2026-10-20T05:45:00-07:00",
+        "dispatched_at": "2026-10-20T05:45:45.887847-07:00",
+        "lateness_seconds": 45.9,
         "kind": "on_time"
       },
       "fire_claim": null,
@@ -853,7 +850,7 @@
         "detail": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again."
       },
       "canonical_completions": [
-        "6a095f3736f84478b261a85ece41681a"
+        "2a184752ddf642ab9433244f02fc5e0c"
       ]
     },
     {
@@ -879,15 +876,15 @@
       "schedule_display": "50 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 4
+        "completed": 5
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-16T07:01:06.975272-07:00",
-      "next_run_at": "2026-10-20T05:50:00-07:00",
-      "last_run_at": "2026-10-19T08:04:48.302421-07:00",
+      "next_run_at": "2026-10-21T05:50:00-07:00",
+      "last_run_at": "2026-10-20T05:51:28.366391-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -906,9 +903,9 @@
       "workdir": "/home/hermes/git/orion",
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-10-19T05:50:00-07:00",
-        "dispatched_at": "2026-10-19T05:50:31.068244-07:00",
-        "lateness_seconds": 31.1,
+        "scheduled_at": "2026-10-20T05:50:00-07:00",
+        "dispatched_at": "2026-10-20T05:50:45.853116-07:00",
+        "lateness_seconds": 45.9,
         "kind": "on_time"
       },
       "fire_claim": null,
@@ -917,7 +914,7 @@
         "detail": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again."
       },
       "canonical_completions": [
-        "4d41bc0e8c3a456b995c5188aab17599"
+        "e27720a82c604bf280b4ccbdf6f00df1"
       ]
     },
     {
@@ -943,15 +940,15 @@
       "schedule_display": "55 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 4
+        "completed": 5
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-16T09:07:04.613447-07:00",
-      "next_run_at": "2026-10-20T05:55:00-07:00",
-      "last_run_at": "2026-10-19T08:10:09.726179-07:00",
+      "next_run_at": "2026-10-21T05:55:00-07:00",
+      "last_run_at": "2026-10-20T05:56:12.344959-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -970,9 +967,9 @@
       "workdir": "/home/hermes/git/orion",
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-10-19T05:55:00-07:00",
-        "dispatched_at": "2026-10-19T05:55:31.071200-07:00",
-        "lateness_seconds": 31.1,
+        "scheduled_at": "2026-10-20T05:55:00-07:00",
+        "dispatched_at": "2026-10-20T05:55:45.848470-07:00",
+        "lateness_seconds": 45.8,
         "kind": "on_time"
       },
       "fire_claim": null,
@@ -981,7 +978,7 @@
         "detail": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again."
       },
       "canonical_completions": [
-        "136ee9634ce04f398f6e566da8171f10"
+        "19008640983c458c86c4310b466833d6"
       ]
     },
     {
@@ -1007,15 +1004,15 @@
       "schedule_display": "0 6 * * *",
       "repeat": {
         "times": null,
-        "completed": 4
+        "completed": 5
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-16T11:34:32.367416-07:00",
-      "next_run_at": "2026-10-20T06:00:00-07:00",
-      "last_run_at": "2026-10-19T08:15:41.182730-07:00",
+      "next_run_at": "2026-10-21T06:00:00-07:00",
+      "last_run_at": "2026-10-20T06:01:12.429131-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -1034,9 +1031,9 @@
       "workdir": "/home/hermes/git/orion",
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-10-19T06:00:00-07:00",
-        "dispatched_at": "2026-10-19T06:00:31.093504-07:00",
-        "lateness_seconds": 31.1,
+        "scheduled_at": "2026-10-20T06:00:00-07:00",
+        "dispatched_at": "2026-10-20T06:00:45.897995-07:00",
+        "lateness_seconds": 45.9,
         "kind": "on_time"
       },
       "fire_claim": null,
@@ -1045,7 +1042,7 @@
         "detail": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again."
       },
       "canonical_completions": [
-        "e119d9e5da5e4ac3bd1937917c207766"
+        "c4ae625f47614e9da9e116333c8440d1"
       ]
     },
     {
@@ -1071,15 +1068,15 @@
       "schedule_display": "5 6 * * *",
       "repeat": {
         "times": null,
-        "completed": 4
+        "completed": 5
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-16T13:15:12.947712-07:00",
-      "next_run_at": "2026-10-20T06:05:00-07:00",
-      "last_run_at": "2026-10-19T08:21:10.668469-07:00",
+      "next_run_at": "2026-10-21T06:05:00-07:00",
+      "last_run_at": "2026-10-20T06:06:28.449753-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -1098,9 +1095,9 @@
       "workdir": "/home/hermes/git/orion",
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-10-19T06:05:00-07:00",
-        "dispatched_at": "2026-10-19T06:05:31.073494-07:00",
-        "lateness_seconds": 31.1,
+        "scheduled_at": "2026-10-20T06:05:00-07:00",
+        "dispatched_at": "2026-10-20T06:05:45.855819-07:00",
+        "lateness_seconds": 45.9,
         "kind": "on_time"
       },
       "fire_claim": null,
@@ -1109,9 +1106,9 @@
         "detail": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again."
       },
       "canonical_completions": [
-        "77df6c4e66e447259f393b6395018bd7"
+        "ac5634510cab4078bb20e88adf5dec72"
       ]
     }
   ],
-  "updated_at": "2026-10-20T05:15:47.109229-07:00"
+  "updated_at": "2026-10-20T06:15:47.056624-07:00"
 }
