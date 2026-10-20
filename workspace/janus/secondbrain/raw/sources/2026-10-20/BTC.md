@@ -1,0 +1,6 @@
+# BTC — sources checked, 2026-10-20
+
+- **Rejected** — The Block: "BlackRock's IBIT Bitcoin ETF draws $665 million inflow, highest since October 2025" — https://www.theblock.co/news/markets/2026-10-20-blackrock-ibit-bitcoin-etf-665-million-421102 — published 2026-10-20 — backward-looking flow print (Oct 19), already in cluster read (+526.7M Farside); catalyst 0.
+- **Rejected** — The Block: "Swiss regulator FINMA approves country's first spot bitcoin ETF for retail investors" — https://www.theblock.co/news/regulation/2026-10-20-swiss-regulator-finma-approves-countrys-first-spot-bitcoin-etf-for-retail-investors-421127 — 2026-10-20, time undateable vs 10:00 ET cutoff; treated as post-cutoff, flagged for tomorrow.
+- **Rejected** — The Block: "Blockchain.com rolls out crypto options" — https://www.theblock.co/news/markets/2026-10-20-blockchain-com-launches-options-trading-bitcoin-ether-sol-421326 — not BTC-specific / minor.
+- **Rejected** — CoinDesk latest list (Oct 19): Bitcoin holds near $82,000; JPM Coin to Ethereum; whale moves 2013 coins — https://www.coindesk.com/markets/2026/10/19/live-updates-bitcoin-tags-usd83-000-and-slips-back-as-chip-stocks-lead-a-rebound — price recap / not asset-specific events.
