@@ -191,20 +191,20 @@
       "schedule_display": "15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 1084
+        "completed": 1085
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-06T08:57:25.404654-07:00",
-      "next_run_at": "2026-10-21T11:15:00-07:00",
-      "last_run_at": "2026-10-21T09:16:00.330206-07:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-10-21T12:15:00-07:00",
+      "last_run_at": "2026-10-21T10:16:52.511613-07:00",
+      "last_status": "error",
+      "last_error": "Commit succeeded locally but push failed with a DNS resolution error: `Could not resolve host: github.com`. Confirmed via `getent hosts github.com` — DNS lookup fails outright, so this is a host/network-level issue, not an auth or repo problem.\n\nStatus:\n- 1 file changed (`cron/jobs.json`), committed locally as `33239da` — \"Auto-sync: 2026-10-21T17:15:52Z\"\n- Push to `origin main` (retrobot-raymond) failed twice (immediate + after 5s retry), both with the same DNS resolution failure\n- No force-push or destructive action attempted, per instructions\n- Local repo is in a clean state with one unpushed commit\n\nThis needs the host's DNS/network resolver checked — not a git or credentials problem. Will need another run (or manual push) once connectivity is restored.",
       "last_delivery_error": null,
       "last_delivery_unverified": null,
-      "failure_streak": 0,
+      "failure_streak": 1,
       "deliver": "local",
       "origin": {
         "platform": "telegram",
@@ -219,21 +219,21 @@
       ],
       "workdir": null,
       "fire_claim": {
-        "at": "2026-10-21T10:15:47.032831-07:00",
-        "by": "uranus:1202318:05780bc2798446349e56cb38c7662d22"
+        "at": "2026-10-21T11:15:47.041358-07:00",
+        "by": "uranus:1202318:93d31d4f165847ee92697a95f42fe413"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-10-21T10:15:00-07:00",
-        "dispatched_at": "2026-10-21T10:15:45.847652-07:00",
-        "lateness_seconds": 45.8,
+        "scheduled_at": "2026-10-21T11:15:00-07:00",
+        "dispatched_at": "2026-10-21T11:15:45.851601-07:00",
+        "lateness_seconds": 45.9,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "574f2df0a7bb40b9920842ba9bd75822"
+        "d49e84c0cde74e3f985e1a6111e6b400"
       ],
       "last_failure": {
-        "at": "2026-10-19T07:17:23.054609-07:00",
-        "detail": "Cron execution unverified; reconcile /home/hermes/.hermes/profiles/raymond/cron/admissions/7a8d9a34a2c055d93a8db6d009f8cfb0aa72272c4a1c934af27ffdf6f1010f93.json: Gateway disconnected; turn outcome is unknown. Resume the printed session ID to check whether it completed or was interrupted; do not resend the work."
+        "at": "2026-10-21T10:16:52.511613-07:00",
+        "detail": "Commit succeeded locally but push failed with a DNS resolution error: `Could not resolve host: github.com`. Confirmed via `getent hosts github.com` — DNS lookup fails outright, so this is a host/network-level issue, not an auth or repo problem.\n\nStatus:\n- 1 file changed (`cron/jobs.json`), committed locally as `33239da` — \"Auto-sync: 2026-10-21T17:15:52Z\"\n- Push to `origin main` (retrobot-raymond) failed twice (immediate + after 5s retry), both with the same DNS resolution failure\n- No force-push or destructive action attempted, per instructions\n- Local repo is in a clean state with one unpushed commit\n\nThis needs the host's DNS/network resolver checked — not a git or credentials problem. Will need another run (or manual push) once connectivity is restored."
       }
     },
     {
@@ -1110,5 +1110,5 @@
       ]
     }
   ],
-  "updated_at": "2026-10-21T10:15:47.033410-07:00"
+  "updated_at": "2026-10-21T11:15:47.041924-07:00"
 }
