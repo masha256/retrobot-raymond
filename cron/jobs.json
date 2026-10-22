@@ -27,9 +27,9 @@
         "times": null,
         "completed": 46
       },
-      "enabled": true,
-      "state": "scheduled",
-      "paused_at": null,
+      "enabled": false,
+      "state": "paused",
+      "paused_at": "2026-10-21T17:14:21.048794-07:00",
       "paused_reason": null,
       "created_at": "2026-09-06T08:31:04.140130-07:00",
       "next_run_at": "2026-10-22T07:30:00-07:00",
@@ -85,9 +85,9 @@
         "times": null,
         "completed": 46
       },
-      "enabled": true,
-      "state": "scheduled",
-      "paused_at": null,
+      "enabled": false,
+      "state": "paused",
+      "paused_at": "2026-10-21T17:14:22.080205-07:00",
       "paused_reason": null,
       "created_at": "2026-09-06T08:31:04.175081-07:00",
       "next_run_at": "2026-10-22T07:45:00-07:00",
@@ -139,9 +139,9 @@
         "times": null,
         "completed": 47
       },
-      "enabled": true,
-      "state": "scheduled",
-      "paused_at": null,
+      "enabled": false,
+      "state": "paused",
+      "paused_at": "2026-10-21T17:14:23.107858-07:00",
       "paused_reason": null,
       "created_at": "2026-09-06T08:31:04.203123-07:00",
       "next_run_at": "2026-10-22T08:00:00-07:00",
@@ -191,15 +191,15 @@
       "schedule_display": "15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 1090
+        "completed": 1091
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-06T08:57:25.404654-07:00",
-      "next_run_at": "2026-10-21T17:15:00-07:00",
-      "last_run_at": "2026-10-21T15:15:58.345745-07:00",
+      "next_run_at": "2026-10-21T18:15:00-07:00",
+      "last_run_at": "2026-10-21T16:15:58.439347-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -219,17 +219,17 @@
       ],
       "workdir": null,
       "fire_claim": {
-        "at": "2026-10-21T16:15:47.168742-07:00",
-        "by": "uranus:1202318:ecf4b8ac2f9d46979066f7bb9feaa5df"
+        "at": "2026-10-21T17:15:01.493177-07:00",
+        "by": "uranus:1679188:0738d962901d47b48eb4d43a59395eb2"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-10-21T16:15:00-07:00",
-        "dispatched_at": "2026-10-21T16:15:45.901635-07:00",
-        "lateness_seconds": 45.9,
+        "scheduled_at": "2026-10-21T17:15:00-07:00",
+        "dispatched_at": "2026-10-21T17:15:00.341397-07:00",
+        "lateness_seconds": 0.3,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "1d97c5b61a5e406684af095195823fd7"
+        "9254cf2774bb491295e86fa40f56b236"
       ],
       "last_failure": {
         "at": "2026-10-21T10:16:52.511613-07:00",
@@ -273,7 +273,7 @@
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "failure_streak": 0,
-      "deliver": "telegram:1620897892:16022",
+      "deliver": "slack:C0CB7325YFK",
       "origin": {
         "platform": "telegram",
         "chat_id": "1620897892",
@@ -333,7 +333,7 @@
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "failure_streak": 0,
-      "deliver": "telegram:1620897892:16022",
+      "deliver": "slack:C0CB7325YFK",
       "origin": {
         "platform": "telegram",
         "chat_id": "1620897892",
@@ -393,7 +393,7 @@
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "failure_streak": 0,
-      "deliver": "telegram:1620897892:16022",
+      "deliver": "slack:C0CB7325YFK",
       "origin": {
         "platform": "telegram",
         "chat_id": "1620897892",
@@ -457,7 +457,7 @@
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "failure_streak": 0,
-      "deliver": "telegram:1620897892:16022",
+      "deliver": "slack:C0CB7325YFK",
       "origin": {
         "platform": "telegram",
         "chat_id": "1620897892",
@@ -521,7 +521,7 @@
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "failure_streak": 0,
-      "deliver": "telegram:1620897892:16022",
+      "deliver": "slack:C0CB7325YFK",
       "origin": {
         "platform": "telegram",
         "chat_id": "1620897892",
@@ -585,7 +585,7 @@
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "failure_streak": 0,
-      "deliver": "telegram:1620897892:16021",
+      "deliver": "slack:C0CB8SJKM8C",
       "origin": {
         "platform": "telegram",
         "chat_id": "1620897892",
@@ -634,7 +634,7 @@
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "failure_streak": 0,
-      "deliver": "telegram:1620897892:16022",
+      "deliver": "slack:C0CB7325YFK",
       "origin": {
         "platform": "telegram",
         "chat_id": "1620897892",
@@ -698,7 +698,7 @@
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "failure_streak": 0,
-      "deliver": "telegram:1620897892:16022",
+      "deliver": "slack:C0CB7325YFK",
       "origin": {
         "platform": "telegram",
         "chat_id": "1620897892",
@@ -762,7 +762,7 @@
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "failure_streak": 0,
-      "deliver": "telegram:1620897892:16022",
+      "deliver": "slack:C0CB7325YFK",
       "origin": {
         "platform": "telegram",
         "chat_id": "1620897892",
@@ -826,7 +826,7 @@
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "failure_streak": 0,
-      "deliver": "telegram:1620897892:16022",
+      "deliver": "slack:C0CB7325YFK",
       "origin": {
         "platform": "telegram",
         "chat_id": "1620897892",
@@ -890,7 +890,7 @@
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "failure_streak": 0,
-      "deliver": "telegram:1620897892:16022",
+      "deliver": "slack:C0CB7325YFK",
       "origin": {
         "platform": "telegram",
         "chat_id": "1620897892",
@@ -954,7 +954,7 @@
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "failure_streak": 0,
-      "deliver": "telegram:1620897892:16022",
+      "deliver": "slack:C0CB7325YFK",
       "origin": {
         "platform": "telegram",
         "chat_id": "1620897892",
@@ -1018,7 +1018,7 @@
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "failure_streak": 0,
-      "deliver": "telegram:1620897892:16022",
+      "deliver": "slack:C0CB7325YFK",
       "origin": {
         "platform": "telegram",
         "chat_id": "1620897892",
@@ -1082,7 +1082,7 @@
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "failure_streak": 0,
-      "deliver": "telegram:1620897892:16022",
+      "deliver": "slack:C0CB7325YFK",
       "origin": {
         "platform": "telegram",
         "chat_id": "1620897892",
@@ -1110,5 +1110,5 @@
       ]
     }
   ],
-  "updated_at": "2026-10-21T16:15:47.169319-07:00"
+  "updated_at": "2026-10-21T17:15:01.493751-07:00"
 }
