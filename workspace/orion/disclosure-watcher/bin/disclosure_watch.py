@@ -117,6 +117,12 @@ def window_of(d, asset_cfg):
     return None
 
 
+def latest_window(d, asset_cfg):
+    """(key, last_day) of the window after the latest quarter end before d, whether or not it has ended yet."""
+    qe = last_quarter_end(d)
+    return f"{qe.year}Q{(qe.month - 1) // 3 + 1}", qe + timedelta(days=asset_cfg["window"]["after_quarter_end_days"])
+
+
 def is_scan_day(today, cfg):
     """Daily from quarter end + 1 to quarter end + after_quarter_end_days; outside the window, Mondays only."""
     if window_of(today, cfg) is not None:
@@ -330,7 +336,7 @@ def append_log(base_dir, asset, entry):
 # ---------------------------------------------------------------- scan
 
 def alert_search_failed(asset, last_error):
-    return f"ORION DISCLOSURE ALERT {asset}: search failed {SEARCH_ALERT_DAYS} scan days running ({last_error})"
+    return f"ORION DISCLOSURE ALERT {asset}: search failed {SEARCH_ALERT_DAYS} scan days running ({_one_line(last_error)})"
 
 
 def window_closed_line(asset, key):
@@ -394,16 +400,18 @@ def _scan_asset_locked(asset, asset_cfg, base_dir, http, today, now, sleep, opts
     if ids is not None:
         entry["search_ok"] = True
         entry["ids"] = ids
-        state.data["search"].update(last_ok_at=now.isoformat(timespec="seconds"), consecutive_failures=0)
-        state.data["search"].pop("last_failed_day", None)
+        state.data["search"]["last_ok_at"] = now.isoformat(timespec="seconds")
         new_ids = [i for i in ids if state.get(i) is None]
         entry["new"] = new_ids
+        fetched, fetch_error = 0, None
         for post_id in new_ids:
             try:
                 post = fetch_post(http, post_id)
             except RuntimeError as e:
                 entry["errors"].append(str(e))
+                fetch_error = str(e)
                 continue
+            fetched += 1
             kind = classify(post, asset_cfg, now)
             status = {"recording": "queued", "announcement": "announcement"}.get(kind, "irrelevant")
             state.set(post_id, status=status, kind=kind if kind != "irrelevant" else None)
@@ -412,15 +420,24 @@ def _scan_asset_locked(asset, asset_cfg, base_dir, http, today, now, sleep, opts
                 w = window_of(parse_created_at(post["created_at"]).date(), asset_cfg)
                 if w is not None and state.window(w[0])["found_post_id"] is None:
                     state.window(w[0])["found_post_id"] = post_id
+        if new_ids and not fetched:
+            # Every tweet-result fetch failed: the scan learned nothing, so the day counts like a failed search
+            # (towards the same three-day alert), never as "nothing found".
+            error = f"tweet-result: all {len(new_ids)} fetch(es) failed; last: {fetch_error}"
+            if _record_search_failure(state, today, error):
+                alerts.append(alert_search_failed(asset, error))
+        else:
+            state.data["search"]["consecutive_failures"] = 0
+            state.data["search"].pop("last_failed_day", None)
         state.save()
     out = process_queued(asset, asset_cfg, state, base_dir, opts)
     for line in out:
         (alerts if line.startswith("ORION DISCLOSURE ALERT") else info).append(line)
-    w = window_of(today, asset_cfg)
-    if w is not None and today == w[1]:
-        win = state.window(w[0])
+    key, last_day = latest_window(today, asset_cfg)
+    if today >= last_day:  # on the window's last day, or the first scan after it (a missed cron day still reports)
+        win = state.window(key)
         if win["found_post_id"] is None and not win["closed_reported"]:
-            alerts.append(window_closed_line(asset, w[0]))
+            alerts.append(window_closed_line(asset, key))
             win["closed_reported"] = True
     state.save()
     append_log(base_dir, asset, entry)
@@ -487,25 +504,35 @@ TITLE_CAP, EVENT_CAP, TEXT_CAP, FIX_CAP, QUOTE_CAP, WORD_CAP = 120, 200, 1000, 1
 _SLACK_SEQ = re.compile(r"<[@!#][^>]*>")
 _SLACK_OPEN = re.compile(r"<[@!#]")
 _URL = re.compile(r"https?://\S+", re.I)
+_COMMENT = re.compile(r"<!--|-->")
+_BROADCAST = re.compile(r"@(?:here|channel|everyone)\b", re.I)
 
 
 def clean_model_text(s, cap, keep_newlines=False):
-    """A model-written string made safe for Slack and the queue: Slack control sequences (<@..>, <!..>, <#..>) and bare
-    URLs removed, control and format characters removed (newlines kept only with keep_newlines, as in claims), runs of
-    blanks collapsed, capped at `cap` characters, trimmed."""
+    """A model-written string made safe for Slack and the queue. In this order (so an invisible character cannot hide a
+    sequence from the patterns): control and format characters removed (Unicode Cc/Cf/Cs/Co/Cn; newlines kept only
+    with keep_newlines, as in claims; tabs -> blanks); then Slack control sequences (<@..>, <!..>, <#..>), bare URLs
+    and HTML comment markers (<!--, -->) replaced by blanks; then any '<' and '>' left turned into '\u2039' and
+    '\u203a' (Slack reads nothing in angle brackets as markup then) and @here, @channel, @everyone removed (any case);
+    then runs of blanks collapsed, capped at `cap`, trimmed."""
     if s is None:
         return ""
     s = str(s).replace("\r\n", "\n").replace("\r", "\n").replace("\t", " ")
-    s = _SLACK_SEQ.sub(" ", s)
-    s = _SLACK_OPEN.sub(" ", s)
-    s = _URL.sub(" ", s)
     out = []
     for ch in s:
         if ch == "\n":
             out.append("\n" if keep_newlines else " ")
         elif unicodedata.category(ch) not in ("Cc", "Cf", "Cs", "Co", "Cn"):
             out.append(ch)
-    lines = [" ".join(line.split()) for line in "".join(out).split("\n")]
+    s = "".join(out)
+    # Each removal leaves a blank, so no removal can join its neighbours into a new sequence.
+    s = _COMMENT.sub(" ", s)
+    s = _SLACK_SEQ.sub(" ", s)
+    s = _SLACK_OPEN.sub(" ", s)
+    s = _URL.sub(" ", s)
+    s = s.replace("<", "\u2039").replace(">", "\u203a")
+    s = _BROADCAST.sub(" ", s)
+    lines = [" ".join(line.split()) for line in s.split("\n")]
     s = "\n".join(line for line in lines if line)
     return s[:cap].strip()
 
@@ -540,8 +567,10 @@ def sha256_file(path):
 
 
 def _one_line(s, cap=300):
+    """The last non-blank line of an error text (subprocess stderr, an exception, an Orion error message), made safe
+    for Slack by clean_model_text and capped at `cap`: every alert line carries text from outside the script."""
     lines = [line.strip() for line in str(s or "").splitlines() if line.strip()]
-    return (lines[-1] if lines else "")[:cap]
+    return clean_model_text(lines[-1] if lines else "", cap)
 
 
 # ---------------------------------------------------------------- media: download, decode, transcribe (spec 8.4)
@@ -632,7 +661,7 @@ def _error_text(data, code):
 class OrionCli:
     """The real Orion: `node dist/cli/index.js <args> --json`, cwd = the repo, ORION_HOME = the home."""
 
-    def __init__(self, repo, home, timeout=2400):
+    def __init__(self, repo, home, timeout=1800):
         self.repo, self.home, self.timeout = Path(repo), Path(home), timeout
 
     def _call(self, args, timeout=300):
@@ -645,12 +674,12 @@ class OrionCli:
         try:
             data = json.loads(r.stdout)
         except ValueError:
-            data = {"error": {"code": "bad_output", "message": _one_line(r.stderr) or r.stdout[:200]}}
+            data = {"error": {"code": "bad_output", "message": _one_line(r.stderr) or _one_line(r.stdout[:200])}}
         return r.returncode, data
 
     def _checked(self, args):
         code, data = self._call(args)
-        if code != 0 or not isinstance(data, dict) or "error" in data:
+        if code != 0 or not isinstance(data, dict) or isinstance(data.get("error"), dict):  # a row's null `error` is fine
             raise OrionCliError(_error_text(data, code))
         return data
 
@@ -712,6 +741,29 @@ def doc_label(kind, asr_model):
     return kind
 
 
+def run_json_path(post_id, tdir, opts):
+    """--run-json, else transcripts/<asset>/<post_id>.run.json; on a dry run (whose transcripts dir is temporary) the
+    default sits next to --queue-file."""
+    if opts.get("run_json"):
+        return Path(opts["run_json"])
+    if opts.get("dry_run") and opts.get("queue_file"):
+        return Path(opts["queue_file"]).parent / f"{post_id}.run.json"
+    return Path(tdir) / f"{post_id}.run.json"
+
+
+def _write_run_json(path, result, asset, post_id):
+    """Write the raw `agent run --json` result (tmp + os.replace). -> [] or [an alert line]; never raises."""
+    try:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        tmp = path.with_name(path.name + ".tmp")
+        tmp.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+        os.replace(tmp, path)
+        return []
+    except Exception as e:  # noqa: BLE001 - the run is done whatever happens here
+        return [f"ORION DISCLOSURE ALERT {asset}: run json write failed for post {post_id}: "
+                f"{_one_line(f'{type(e).__name__}: {e}')}"]
+
+
 def process_post(post_id, cfg, state, orion, opts):
     """Spec 8.4 for one post, then the post-run step (8.5). cfg is the asset's config; opts carries asset, base_dir and
     either post (tweet-result JSON) or http. Returns output lines (an alert line first when a step fails)."""
@@ -733,7 +785,7 @@ def process_post(post_id, cfg, state, orion, opts):
     duration_ms = video_duration_ms(post)
     kind = feed.get("doc_kind", "machine_transcript") if duration_ms is not None else "post"
     asr_model = cfg.get("transcribe", {}).get("asr_model") if kind == "machine_transcript" else None
-    rec = state.get(post_id)
+    rec = state.get(post_id) or state.set(post_id, status="queued", kind="recording" if kind != "post" else "post")
     state.set(post_id, attempts=int(rec.get("attempts") or 0) + 1, error=None)
     state.save()
 
@@ -755,16 +807,22 @@ def process_post(post_id, cfg, state, orion, opts):
             return fail("transcribe", f"--transcript {opts['transcript']}: {e}")
     elif kind == "post":
         text = normalize_doc_text(html.unescape(post.get("text") or ""))
-    elif txt_path.exists() and meta_path.exists():  # a busy run lock, an interrupted run or --force: reuse
-        text = normalize_doc_text(txt_path.read_text(encoding="utf-8"))
-        old = json.loads(meta_path.read_text(encoding="utf-8"))
-        audio_sha, transcribed_at, asr_model = old.get("audio_sha256"), old.get("transcribed_at"), old.get("asr_model")
     else:
-        try:
-            text, audio_sha = transcribe_post(post_id, url, cfg, opts)
-        except StepFailed as e:
-            return fail(e.step, e.message)
-        transcribed_at = utc_now_iso()
+        text = None
+        if txt_path.exists() and meta_path.exists():  # a busy run lock, an interrupted run or --force: reuse
+            try:
+                old = json.loads(meta_path.read_text(encoding="utf-8"))
+                text = normalize_doc_text(txt_path.read_text(encoding="utf-8"))
+                audio_sha, transcribed_at, asr_model = (old.get("audio_sha256"), old.get("transcribed_at"),
+                                                        old.get("asr_model"))
+            except (OSError, ValueError, AttributeError):  # unreadable or not an object: transcribe again
+                text, audio_sha, transcribed_at = None, None, None
+        if text is None:
+            try:
+                text, audio_sha = transcribe_post(post_id, url, cfg, opts)
+            except StepFailed as e:
+                return fail(e.step, e.message)
+            transcribed_at = utc_now_iso()
     if not text.strip():
         return fail("transcribe", "the transcript is empty")
     data = text.encode("utf-8")
@@ -799,48 +857,62 @@ def process_post(post_id, cfg, state, orion, opts):
         return [f"ORION DISCLOSURE {asset}: doc #{doc_id} {kind} stored ({'existing' if added.get('existing') else 'new'},"
                 f" sha256 {sha}); stopped after doc add"]
 
-    # 6: the analyst run.
+    # 6: the analyst run. Its raw --json result is kept in a file (spec 15, ruling 19): check_acceptance.py reads it.
     dry_run = bool(opts.get("dry_run"))
     try:
         code, res = orion.agent_run(cfg.get("orion_asset", asset), doc_id, dry_run)
     except Exception as e:  # noqa: BLE001
         return fail("run", e, status="run_failed")
+    run_json_alerts = _write_run_json(run_json_path(post_id, tdir, opts), res, asset, post_id)
+
+    def out(lines):
+        return run_json_alerts + lines
+
     res = res if isinstance(res, dict) else {}
     err = res.get("error")
     if code != 0 and isinstance(err, dict):
         if err.get("code") == "run_in_progress":  # the run lock: stay at doc_added, the next scan retries
-            state.set(post_id, error=f"run: run_in_progress: {err.get('message')}")
+            state.set(post_id, error=f"run: run_in_progress: {_one_line(err.get('message'))}")
             state.save()
-            return [f"ORION DISCLOSURE {asset}: run_in_progress (the asset's run lock is held) for post {post_id}; "
-                    f"doc #{doc_id} is stored; the next scan retries the run"]
-        return fail("run", f"{err.get('code')}: {err.get('message')}", status="run_failed")
+            return out([f"ORION DISCLOSURE {asset}: run_in_progress (the asset's run lock is held) for post {post_id}; "
+                        f"doc #{doc_id} is stored; the next scan retries the run"])
+        return out(fail("run", f"{err.get('code')}: {err.get('message')}", status="run_failed"))
     run = res.get("run")
     if not isinstance(run, dict):
-        return fail("run", f"exit {code} without a run in the output", status="run_failed")
+        return out(fail("run", f"exit {code} without a run in the output", status="run_failed"))
     completed = run.get("outcome") == "completed"
     state.set(post_id, status="run_done" if completed else "run_failed", run_id=run.get("id"),
               run_outcome=run.get("outcome"), error=None if completed else f"run: {run.get('outcome')}: {run.get('error')}")
     state.save()
 
-    # 7: the post-run step.
-    show, inbox = {}, {}
-    if completed:
-        with contextlib.suppress(Exception):
-            show = orion.run_show(run["id"])
-        if (res.get("committed") or {}).get("proposalIds"):
+    # 7: the post-run step. The run is done whatever happens here: a failure is an alert, the state stays as set.
+    try:
+        show, inbox = {}, {}
+        if completed:
             with contextlib.suppress(Exception):
-                inbox = orion.inbox(cfg.get("orion_asset", asset))
-    post_meta = {"asset": asset, "title": title, "url": url, "posted": created_at[:10], "doc_id": doc_id, "kind": kind,
-                 "duration_s": meta["duration_s"], "asr_model": asr_model, "today": opts.get("today") or get_today()}
-    return post_run(res, inbox, show, cfg, Path(opts.get("queue_file") or DEFAULT_QUEUE), post_meta).split("\n")
+                show = orion.run_show(run["id"])
+            if (res.get("committed") or {}).get("proposalIds"):
+                with contextlib.suppress(Exception):
+                    inbox = orion.inbox(cfg.get("orion_asset", asset))
+        post_meta = {"asset": asset, "title": title, "url": url, "posted": created_at[:10], "doc_id": doc_id,
+                     "kind": kind, "duration_s": meta["duration_s"], "asr_model": asr_model,
+                     "today": opts.get("today") or get_today()}
+        return out(post_run(res, inbox, show, cfg, Path(opts.get("queue_file") or DEFAULT_QUEUE), post_meta).split("\n"))
+    except Exception as e:  # noqa: BLE001 - e.g. the queue file unwritable
+        message = _one_line(f"{type(e).__name__}: {e}")
+        if not opts.get("dry_run"):
+            with contextlib.suppress(Exception):  # a failing log write must not hide the alert
+                append_log(base_dir, asset, {"at": utc_now_iso(), "asset": asset, "post_run_failed": post_id,
+                                             "run_id": run.get("id"), "error": message})
+        return out([f"ORION DISCLOSURE ALERT {asset}: post-run failed for post {post_id}: {message}"])
 
 
 # ---------------------------------------------------------------- ingest (spec 8.3)
 
 def ingest(cfg, asset, url, orion, opts):
     """The paste-a-link trigger. -> (exit code, lines). 0: run done (or stopped where asked); 1: refused or failed;
-    2: a usage error. opts: base_dir, http, dry_run, queue_file, transcript, force, and the test-only stop_after,
-    no_orion, asr_seconds, cache_dir, run_cmd, transcribe, lock_timeout."""
+    2: a usage error. opts: base_dir, http, dry_run, queue_file, orion_home, run_json, transcript, force, and the test-only
+    stop_after, no_orion, asr_seconds, cache_dir, run_cmd, transcribe, lock_timeout."""
     m = re.search(r"(?:x|twitter)\.com/[^/?#]+/status(?:es)?/(\d{5,25})", url)
     if not m:
         return 2, [f"disclosure_watch.py ingest: {url!r} is not an X post url (https://x.com/<handle>/status/<id>)"]
@@ -849,6 +921,9 @@ def ingest(cfg, asset, url, orion, opts):
     if opts.get("dry_run") and not opts.get("queue_file"):
         return 2, ["disclosure_watch.py ingest: --dry-run needs an explicit --queue-file "
                    "(a dry run never writes the live dev queue)"]
+    if opts.get("dry_run") and not opts.get("orion_home"):
+        return 2, ["disclosure_watch.py ingest: --dry-run needs an explicit --orion-home "
+                   "(a dry run never uses the live Orion home)"]
     base_dir = Path(opts["base_dir"])
     try:
         with asset_lock(base_dir, asset, opts.get("lock_timeout", LOCK_TIMEOUT_S)):
@@ -874,13 +949,14 @@ def _ingest_locked(cfg, asset, post_id, orion, opts):
     try:
         post = fetch_post(opts["http"], post_id)
     except RuntimeError as e:
-        return 1, [f"ORION DISCLOSURE ALERT {asset}: fetch failed for post {post_id}: {e}"]
+        return 1, [f"ORION DISCLOSURE ALERT {asset}: fetch failed for post {post_id}: {_one_line(e)}"]
     author = acfg["author"]
     if str((post.get("user") or {}).get("id_str")) != str(author["user_id"]):
         who = post.get("user") or {}
         return 1, [f"ORION DISCLOSURE {asset}: post {post_id} is not by the configured author "
-                   f"(@{author['handle']}, user id {author['user_id']}; this one is @{who.get('screen_name')}, "
-                   f"user id {who.get('id_str')}); refused"]
+                   f"(@{author['handle']}, user id {author['user_id']}; this one is "
+                   f"@{clean_model_text(who.get('screen_name'), WORD_CAP)}, "
+                   f"user id {clean_model_text(who.get('id_str'), 30)}); refused"]
     is_recording = video_duration_ms(post) is not None
     state.set(post_id, status="queued", kind="recording" if is_recording else "post")
     if is_recording:
@@ -925,7 +1001,9 @@ def _date(s):
 
 
 def _indent(s):
-    return s.replace("\n", "\n  ")
+    """Model text for a queue list item: a line starting with '#' gets a backslash (it cannot open a markdown section),
+    continuation lines are indented two blanks so they stay inside the item."""
+    return "\n  ".join("\\" + line if line.startswith("#") else line for line in s.split("\n"))
 
 
 def _queue_section(f, run_id, post_meta):
@@ -954,8 +1032,9 @@ def _queue_section(f, run_id, post_meta):
 
 
 def _fingerprint(f):
-    fp = re.sub(r"[^0-9a-f]", "", str(f.get("fingerprint") or "").lower())[:64]
-    return fp or sha256_bytes(json.dumps(f, sort_keys=True).encode())
+    """The finding's fingerprint (exactly 64 lowercase hex digits, Orion's sha256), or '' when it is anything else."""
+    fp = f.get("fingerprint")
+    return fp if isinstance(fp, str) and re.fullmatch(r"[0-9a-f]{64}", fp) else ""
 
 
 def post_run(run_json, inbox_json, run_show_json, cfg, queue_path, post_meta):
@@ -1003,9 +1082,12 @@ def post_run(run_json, inbox_json, run_show_json, cfg, queue_path, post_meta):
     queue_path = Path(queue_path)
     existing = queue_path.read_text(encoding="utf-8") if queue_path.exists() else ""
     known = set(re.findall(r"<!-- dw:fp=([0-9a-f]+) -->", existing))
-    sections = []
+    sections, skipped = [], 0
     for f in findings:
         f = {**f, "_fp": _fingerprint(f)}
+        if not f["_fp"]:  # no dedupe key: never appended (it would be filed again on every re-run)
+            skipped += 1
+            continue
         if f["_fp"] in known:
             continue
         known.add(f["_fp"])
@@ -1019,7 +1101,12 @@ def post_run(run_json, inbox_json, run_show_json, cfg, queue_path, post_meta):
         titles = " | ".join(f"[{clean_model_text(f.get('category'), WORD_CAP)}] {clean_model_text(f.get('title'), TITLE_CAP)}"
                             for f in findings)
         n, k = len(findings), len(sections)
-        counts = f"{n}, added to {queue_path.name}" if k == n else f"{n}, {k} added to {queue_path.name}, {n - k} already there"
+        already = n - k - skipped
+        if k == n:
+            counts = f"{n}, added to {queue_path.name}"
+        else:
+            counts = f"{n}, {k} added to {queue_path.name}" + (f", {already} already there" if already else "") + (
+                f", {skipped} skipped (no fingerprint)" if skipped else "")
         lines.append(f"dev findings ({counts}): {titles}")
     else:
         lines.append("dev findings: none")
@@ -1078,6 +1165,8 @@ def main(argv=None):
     ing.add_argument("--dry-run", action="store_true")
     ing.add_argument("--orion-home")
     ing.add_argument("--queue-file")
+    ing.add_argument("--run-json", help="where the raw `agent run --json` result goes (default "
+                                        "transcripts/<asset>/<post_id>.run.json; on a dry run, next to --queue-file)")
     ing.add_argument("--transcript")
     ing.add_argument("--force", action="store_true")
     ing.add_argument("--config", default=argparse.SUPPRESS)
@@ -1097,6 +1186,7 @@ def main(argv=None):
         orion = None if args.no_orion else orion_for(args.orion_home)
         code, lines = ingest(cfg, args.asset, args.url, orion, {
             "base_dir": args.base_dir, "http": UrllibHttp(), "dry_run": args.dry_run, "queue_file": args.queue_file,
+            "orion_home": args.orion_home, "run_json": args.run_json,
             "transcript": args.transcript, "force": args.force, "stop_after": args.stop_after,
             "asr_seconds": args.asr_seconds, "no_orion": args.no_orion})
         if lines:

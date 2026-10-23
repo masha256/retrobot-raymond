@@ -398,12 +398,57 @@ class TestIngest(Base):
         orion = FakeOrion(runs=[completed_run(dry_run=True)])
         src = self.base / "given.txt"
         src.write_text("[00:00] hello\n", encoding="utf-8")
-        code, lines = self.ingest(orion, dry_run=True, transcript=str(src))
+        code, lines = self.ingest(orion, dry_run=True, transcript=str(src), orion_home=str(self.base / "oh"))
         self.assertEqual(code, 0, lines)
         self.assertEqual(orion.calls[1], ("agent_run", {"asset": "lit", "doc_id": 1, "dry_run": True}))
         self.assertEqual((self.base / "state" / "lit.json").read_text(), before)
         self.assertFalse((self.base / "transcripts").exists())
         self.assertIn("dry run: nothing filed", "\n".join(lines))
+
+    def test_dry_run_requires_an_explicit_orion_home(self):
+        # F2 (ruling 16): exit 2 before the lock or any state, like --queue-file.
+        orion = FakeOrion(runs=[completed_run(dry_run=True)])
+        code, lines = dw.ingest(self.cfg, "lit", Q3_URL, orion, self.opts(dry_run=True, orion_home=None))
+        self.assertEqual(code, 2)
+        self.assertIn("--dry-run needs an explicit --orion-home", lines[0])
+        self.assertEqual(orion.calls, [])
+        self.assertFalse((self.base / "state").exists())
+        r = subprocess.run([sys.executable, str(ROOT / "bin" / "disclosure_watch.py"), "--base-dir", str(self.base),
+                            "ingest", "--asset", "lit", "--url", Q3_URL, "--dry-run", "--queue-file", str(self.queue)],
+                           capture_output=True, text=True, env={**os.environ, "ORION_DW_REPO": str(self.base / "norepo")})
+        self.assertEqual(r.returncode, 2, r.stdout + r.stderr)
+        self.assertIn("--dry-run needs an explicit --orion-home", r.stderr)
+        self.assertEqual(r.stdout, "")
+        self.assertFalse((self.base / "state").exists())
+        self.assertFalse(self.queue.exists())
+
+    def test_post_run_failure_is_an_alert_and_keeps_run_done(self):
+        # F4: the queue path is a directory -> post_run raises; alert line first, a log entry, state stays run_done.
+        qdir = self.base / "qdir"
+        qdir.mkdir()
+        orion = FakeOrion(runs=[completed_run()])
+        code, lines = self.ingest(orion, queue_file=str(qdir))
+        self.assertTrue(lines[0].startswith(f"ORION DISCLOSURE ALERT lit: post-run failed for post {Q3}: "), lines)
+        self.assertEqual(self.state().get(Q3)["status"], "run_done")
+        log = [json.loads(line) for line in (self.base / "log" / "lit.jsonl").read_text().splitlines()]
+        pr = [e for e in log if e.get("post_run_failed")]
+        self.assertEqual(len(pr), 1, log)
+        self.assertEqual(pr[0]["post_run_failed"], Q3)
+        self.assertIn("Errno", pr[0]["error"])
+
+    def test_corrupt_meta_json_is_not_reused(self):
+        # F4: an unreadable .meta.json does not crash the run; the post is transcribed again.
+        tdir = self.base / "transcripts" / "lit"
+        tdir.mkdir(parents=True)
+        (tdir / f"{Q3}.txt").write_text("[00:00] stale\n", encoding="utf-8")
+        (tdir / f"{Q3}.meta.json").write_text("{not json", encoding="utf-8")
+        orion = FakeOrion(runs=[completed_run()])
+        code, lines = self.ingest(orion)
+        self.assertEqual(code, 0, lines)
+        self.assertEqual(self.state().get(Q3)["status"], "run_done")
+        self.assertTrue(any("yt-dlp" in " ".join(c) or "yt_dlp" in c for c in self.media.cmds), self.media.cmds)
+        self.assertNotIn("stale", orion.calls[0][1]["text"])
+        json.loads((tdir / f"{Q3}.meta.json").read_text(encoding="utf-8"))  # rewritten
 
     def test_stop_after_doc_add(self):
         orion = FakeOrion()
@@ -433,7 +478,8 @@ class TestCarryOvers(Base):
         st = self.state()
         st.data["search"].update(last_failed_day="2026-10-22", consecutive_failures=1)
         st.save()
-        http = FakeHttp(posts=[(200, fixture_text("ddg-lighter.html"))])
+        tweets = {i: fixture_text(f"tweet-{i}.json") for i in (Q3, ANNOUNCEMENT)}  # some fetches work (B4)
+        http = FakeHttp(tweets=tweets, posts=[(200, fixture_text("ddg-lighter.html"))])
         dw.run_scan(self.cfg, self.base, http, TODAY, sleep=lambda s: None, now=NOW)
         s = self.state().data["search"]
         self.assertEqual(s["consecutive_failures"], 0)
@@ -527,6 +573,20 @@ class TestOrionCli(unittest.TestCase):
                                                  published_at="x", title="t", meta={}),
                       FAKE_NODE_OUT=bad, FAKE_NODE_EXIT="1")
 
+    def test_run_show_null_error_field_is_success_and_feeds_the_digest_cost(self):
+        # The real runs-show row always carries an `error` column (null on success); only an object is an error.
+        row = json.dumps({"id": 43, "outcome": "completed", "error": None, "estimated_cost_usd": 1.05})
+        show = self.call(lambda: self.orion.run_show(43), FAKE_NODE_OUT=row, FAKE_NODE_EXIT="0")
+        self.assertEqual((show["id"], show["estimated_cost_usd"]), (43, 1.05))
+        import test_postrun as tp
+        with tempfile.TemporaryDirectory() as d:
+            cfg = dw.load_config(ROOT / "watch.yaml")["assets"]["lit"]
+            digest = dw.post_run(run_fixture(), tp.EMPTY_INBOX, show, cfg, Path(d) / "q.md", tp.post_meta())
+        self.assertRegex(digest.split("\n")[1], r"^analyst disclosure run #\d+ completed \| .* \| est \$1\.05$")
+        err = json.dumps({"error": {"code": "x", "message": "y"}})
+        with self.assertRaisesRegex(dw.OrionCliError, "x: y"):
+            self.call(lambda: self.orion.run_show(43), FAKE_NODE_OUT=err, FAKE_NODE_EXIT="0")
+
 
 class TestCheckAcceptance(unittest.TestCase):
     SCRIPT = ROOT / "bin" / "check_acceptance.py"
@@ -566,6 +626,37 @@ class TestCheckAcceptance(unittest.TestCase):
             r = self.run_check(data)
             self.assertEqual(r.returncode, 1, (n, r.stdout))
             self.assertRegex(r.stdout, rf"(?m)^FAIL criterion {n}\b")
+
+    def test_any_passing_candidate_passes_criteria_1_to_3(self):
+        # F3: a wrong candidate first, the correct one second -> PASS.
+        data = run_fixture()
+        bad_p = copy.deepcopy(data["staged"]["proposals"][0])
+        bad_p["change"]["edits"][0]["value"]["first"] = "2026-12-29"
+        data["staged"]["proposals"].insert(0, bad_p)
+        bad_cited = copy.deepcopy(data["staged"]["proposals"][1])  # right tranches, wrong locator
+        for c in bad_cited["citations"]:
+            c["locator"] = "01:00"
+        data["staged"]["proposals"].insert(0, bad_cited)
+        f_hold, f_rev = copy.deepcopy(data["staged"]["devFindings"])
+        bad_hold = copy.deepcopy(f_hold)
+        bad_hold["orionReading"] = "Orion measures 6,100,000 USD against 8.5M."
+        bad_rev = copy.deepcopy(f_rev)
+        bad_rev.update(claim="8.5M of revenue.", title="Revenue gap", proposedFix="Look again.")
+        data["staged"]["devFindings"] = [bad_hold, bad_rev, f_hold, f_rev]
+        r = self.run_check(data)
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+        for n in range(1, 6):
+            self.assertRegex(r.stdout, rf"(?m)^PASS criterion {n}\b")
+
+    def test_first_failure_reason_reported_when_no_candidate_passes(self):
+        data = run_fixture()
+        bad_cited = copy.deepcopy(data["staged"]["proposals"][0])
+        for c in bad_cited["citations"]:
+            c["locator"] = "01:00"
+        data["staged"]["proposals"] = [bad_cited]
+        r = self.run_check(data)
+        self.assertEqual(r.returncode, 1)
+        self.assertRegex(r.stdout, r"(?m)^FAIL criterion 1: a tranches config proposal exists but cites")
 
     def test_locator_outside_range_fails_criterion_1(self):
         data = run_fixture()

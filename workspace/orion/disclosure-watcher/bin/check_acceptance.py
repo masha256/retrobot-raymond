@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Check an `orion agent run lit --type disclosure --dry-run --json` result against spec 11.3 (criteria 1-5).
 
+Also takes `orion agent runs show <id> --json` output (spec 15, ruling 19). The watcher's ingest writes the run result
+to --run-json (default transcripts/<asset>/<post_id>.run.json; on a dry run, next to --queue-file).
+
 Usage: check_acceptance.py <run.json>
 Prints one PASS or FAIL line per criterion; exit 0 when all five pass, else 1 (2 on unreadable input).
 The scratch DB row-count half of criterion 5 is not in the run JSON: it is printed as a NOTE to check by hand.
@@ -39,13 +42,29 @@ def finding_text(f):
     return " ".join(str(f.get(k) or "") for k in ("title", "claim", "orionReading", "proposedFix"))
 
 
+def first_pass(candidates, judge, none_reason):
+    """'At least one' semantics: (True, why) for the first candidate the judge passes; else the first candidate's
+    failure reason, or none_reason when no candidate was judged at all. judge(c) -> None (not a candidate) or
+    (ok, why)."""
+    first_fail = None
+    for c in candidates:
+        verdict = judge(c)
+        if verdict is None:
+            continue
+        if verdict[0]:
+            return verdict
+        first_fail = first_fail or verdict
+    return first_fail or (False, none_reason)
+
+
 def criterion_1(result, doc_source):
-    for p in result["staged"].get("proposals") or []:
+    def judge(p):
         change = p.get("change") or {}
         if change.get("kind") != "config":
-            continue
-        if not any(e.get("path") == TRANCHES_PATH and e.get("value") == TRANCHES_VALUE for e in change.get("edits") or []):
-            continue
+            return None
+        if not any(isinstance(e, dict) and e.get("path") == TRANCHES_PATH and e.get("value") == TRANCHES_VALUE
+                   for e in change.get("edits") or []):
+            return None
         cites = [c for c in p.get("citations") or []
                  if (doc_source is None and str(c.get("source", "")).startswith("doc:")) or c.get("source") == doc_source]
         if not any(LOCATOR_RANGE[0] <= (locator_seconds(c.get("locator")) or -1) <= LOCATOR_RANGE[1] for c in cites):
@@ -56,13 +75,14 @@ def criterion_1(result, doc_source):
             if not isinstance(e, dict) or e.get("from") != e.get("to"):
                 return False, f"the tranches proposal's {h} effect is not from == to ({e})"
         return True, "config proposal sets tranches " + json.dumps(TRANCHES_VALUE) + ", cited in 12:20-12:55, effect from == to"
-    return False, ("no staged config proposal edits " + ".".join(TRANCHES_PATH) + " = " + json.dumps(TRANCHES_VALUE))
+    return first_pass(result["staged"].get("proposals") or [], judge,
+                      "no staged config proposal edits " + ".".join(TRANCHES_PATH) + " = " + json.dumps(TRANCHES_VALUE))
 
 
 def criterion_2(result):
-    for f in result["staged"].get("devFindings") or []:
+    def judge(f):
         if f.get("category") != "holder_flow" or "flow_usd.buyback" not in (f.get("metricKeys") or []):
-            continue
+            return None
         if not re.search(r"robinhood", finding_text(f), re.I):
             return False, "the holder_flow finding does not mention Robinhood"
         reading = f.get("orionReading") or ""
@@ -71,13 +91,14 @@ def criterion_2(result):
         if not (has_amount(reading, 8.45e6, 8.55e6) or has_amount(reading, 0.9e6, 1.2e6)):
             return False, "orion_reading does not set the buys against the disclosed 8.5M (or the ~1M Robinhood share)"
         return True, "holder_flow finding on flow_usd.buyback, Robinhood, ~7.41M against the disclosed figure"
-    return False, "no dev finding with category holder_flow and metric flow_usd.buyback"
+    return first_pass(result["staged"].get("devFindings") or [], judge,
+                      "no dev finding with category holder_flow and metric flow_usd.buyback")
 
 
 def criterion_3(result):
-    for f in result["staged"].get("devFindings") or []:
+    def judge(f):
         if f.get("category") not in ("revenue", "source") or "flow_usd.llama_revenue" not in (f.get("metricKeys") or []):
-            continue
+            return None
         text = finding_text(f)
         if not (re.search(r"defillama", text, re.I) and re.search(r"robinhood", text, re.I)):
             return False, "the revenue/source finding does not mention both DefiLlama and Robinhood"
@@ -85,7 +106,8 @@ def criterion_3(result):
         if not (has_amount(reading, 9.80e6, 9.90e6) and has_amount(reading, 8.45e6, 8.55e6)):
             return False, "orion_reading does not carry DefiLlama's Q3 (~9.85M) against 8.5M"
         return True, f"{f.get('category')} finding on flow_usd.llama_revenue, DefiLlama and Robinhood, ~9.85M against 8.5M"
-    return False, "no dev finding with category revenue or source and metric flow_usd.llama_revenue"
+    return first_pass(result["staged"].get("devFindings") or [], judge,
+                      "no dev finding with category revenue or source and metric flow_usd.llama_revenue")
 
 
 def criterion_4(result):
@@ -119,8 +141,17 @@ def criterion_5(result):
     return True, "no staged assumption change, outcome completed, dry run"
 
 
+def normalize(result):
+    """The `agent run --json` shape ({run, staged, ...}) as is; the `agent runs show <id> --json` shape (the run row,
+    no top-level staged) as {run: result, staged: result.summary.staged}."""
+    if isinstance(result, dict) and "staged" not in result and isinstance(result.get("summary"), dict):
+        return {"run": result, "staged": result["summary"].get("staged")}
+    return result
+
+
 def check(result):
-    """-> (all passed, output lines)."""
+    """-> (all passed, output lines). Takes either shape (see normalize)."""
+    result = normalize(result)
     if not isinstance(result, dict) or not isinstance(result.get("staged"), dict):
         err = result.get("error") if isinstance(result, dict) else None
         return False, [f"FAIL criterion {n}: no staged output in the run JSON ({err})" for n in range(1, 6)]

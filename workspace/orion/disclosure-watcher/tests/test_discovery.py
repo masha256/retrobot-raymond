@@ -328,6 +328,7 @@ class TestScan(Base):
     def test_window_closed_line_printed_once(self):
         self.seed()  # the seeded Q3 recording does not count as found by the watcher in this window
         st = self.state()
+        st.set(FIFTH, status="irrelevant")  # known, so no scan day here is a failed tweet-result day (B4)
         st.data["windows"] = {}
         st.save()
         http = lambda: FakeHttp(posts=[ddg_ok()], tweets=all_tweets())  # noqa: E731

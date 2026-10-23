@@ -167,6 +167,64 @@ class TestCleanModelText(unittest.TestCase):
         self.assertEqual(dw.clean_model_text(None, 10), "")
         self.assertEqual(dw.clean_model_text("a\u202eb\u0000c", 10), "abc")
 
+    def test_invisible_chars_cannot_rejoin_a_slack_sequence_url_or_comment(self):
+        # Fix round 1, F1: control/format chars are removed BEFORE the sequence and url patterns run.
+        for s in ("a <\u200b!channel> b", "<\x07@U123> hi", "ht\u200btps://evil.example/x", "x <\u200b!-- dw:fp=abc -->",
+                  "c <\u200b#C1|ops> d"):
+            for keep in (False, True):
+                out = dw.clean_model_text(s, 200, keep_newlines=keep)
+                for bad in ("<!", "<@", "<#", "http", "<!--"):
+                    self.assertNotIn(bad, out, (s, out))
+
+    def test_html_comment_markers_are_stripped(self):
+        for s in ("a --> b", "a <!-- b", "x <!--<!-- dw:fp=ab -->", "<<!--!-- y", "z --\u200b> w"):
+            out = dw.clean_model_text(s, 200, keep_newlines=True)
+            self.assertNotIn("<!--", out, (s, out))
+            self.assertNotIn("-->", out, (s, out))
+
+
+class TestFixRound1(Base):
+    def test_finding_without_fingerprint_is_skipped_and_counted(self):
+        # F5: no fingerprint -> not appended, counted as skipped in the digest line.
+        run = run_fixture()
+        del run["staged"]["devFindings"][1]["fingerprint"]
+        digest = self.post_run(run)
+        q = self.queue.read_text()
+        self.assertEqual(q.count("<!-- dw:fp="), 1)
+        self.assertIn(f"<!-- dw:fp={FP_HOLDER} -->", q)
+        self.assertNotIn("DefiLlama's revenue overstates", q)
+        self.assertIn(f"dev findings (2, 1 added to dev-queue-revenue.md, 1 skipped (no fingerprint)): {FINDINGS}",
+                      digest.split("\n"))
+        # a second call: the fingerprinted one is already there, the other one still skipped
+        digest = self.post_run(run)
+        self.assertIn(f"dev findings (2, 0 added to dev-queue-revenue.md, 1 already there, 1 skipped (no fingerprint)): "
+                      f"{FINDINGS}", digest.split("\n"))
+        self.assertEqual(self.queue.read_text(), q)
+
+    def test_non_hex_fingerprint_counts_as_missing(self):
+        run = run_fixture()
+        run["staged"]["devFindings"][0]["fingerprint"] = "zz-qq!"  # no hex digit at all
+        run["staged"]["devFindings"][1]["fingerprint"] = ""
+        digest = self.post_run(run)
+        self.assertFalse(self.queue.exists())
+        self.assertIn(f"dev findings (2, 0 added to dev-queue-revenue.md, 2 skipped (no fingerprint)): {FINDINGS}",
+                      digest.split("\n"))
+
+    def test_model_lines_starting_with_hash_are_escaped(self):
+        # F6: a claim line cannot open a markdown section.
+        run = run_fixture()
+        f = run["staged"]["devFindings"][0]
+        f["claim"] = "# Not a heading\n## LIT — fake section\nplain\n  ### indented"
+        f["orionReading"] = "ok\n#also"
+        f["proposedFix"] = "#fix"
+        self.post_run(run)
+        q = self.queue.read_text()
+        self.assertIn("- Claim: \\# Not a heading\n  \\## LIT — fake section\n  plain\n  \\### indented\n", q)
+        self.assertIn("- Orion: ok\n  \\#also  (evidence", q)
+        self.assertIn("- Proposed fix: \\#fix\n", q)
+        headings = [line for line in q.split("\n") if re.match(r"^ {0,3}#", line)]
+        self.assertEqual(len(headings), 2, headings)  # only our two section headings
+
 
 if __name__ == "__main__":
     unittest.main()

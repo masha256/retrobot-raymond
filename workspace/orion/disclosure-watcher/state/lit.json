@@ -1,0 +1,70 @@
+{
+  "posts": {
+    "2039862458572001352": {
+      "attempts": 0,
+      "doc_id": null,
+      "doc_sha256": null,
+      "error": null,
+      "first_seen_at": "2026-10-23T22:29:44Z",
+      "kind": "recording",
+      "run_id": null,
+      "run_outcome": null,
+      "status": "seeded",
+      "updated_at": "2026-10-23T22:29:44Z"
+    },
+    "2073044023661453589": {
+      "attempts": 0,
+      "doc_id": null,
+      "doc_sha256": null,
+      "error": null,
+      "first_seen_at": "2026-10-23T22:29:44Z",
+      "kind": "recording",
+      "run_id": null,
+      "run_outcome": null,
+      "status": "seeded",
+      "updated_at": "2026-10-23T22:29:44Z"
+    },
+    "2111481510230675531": {
+      "attempts": 0,
+      "doc_id": null,
+      "doc_sha256": null,
+      "error": null,
+      "first_seen_at": "2026-10-23T22:29:44Z",
+      "kind": "announcement",
+      "run_id": null,
+      "run_outcome": null,
+      "status": "seeded",
+      "updated_at": "2026-10-23T22:29:44Z"
+    },
+    "2113065839352336774": {
+      "attempts": 0,
+      "doc_id": null,
+      "doc_sha256": null,
+      "error": null,
+      "first_seen_at": "2026-10-23T22:29:44Z",
+      "kind": "recording",
+      "run_id": null,
+      "run_outcome": null,
+      "status": "seeded",
+      "updated_at": "2026-10-23T22:29:44Z"
+    }
+  },
+  "search": {
+    "consecutive_failures": 0,
+    "last_ok_at": null
+  },
+  "windows": {
+    "2026Q1": {
+      "closed_reported": true,
+      "found_post_id": "2039862458572001352"
+    },
+    "2026Q2": {
+      "closed_reported": true,
+      "found_post_id": "2073044023661453589"
+    },
+    "2026Q3": {
+      "closed_reported": false,
+      "found_post_id": "2113065839352336774"
+    }
+  }
+}
