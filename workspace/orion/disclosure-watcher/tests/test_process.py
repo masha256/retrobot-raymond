@@ -164,7 +164,7 @@ class FakeHttp:
         for post_id, body in self.tweets.items():
             if f"id={post_id}&" in url:
                 return 200, body
-        return 404, ""
+        return 503, ""  # an id without a body is an outage (a 404 would mean the post is gone)
 
     def post(self, url, data):
         return self.posts[0]

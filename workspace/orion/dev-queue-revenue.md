@@ -1,6 +1,9 @@
-# Orion dev queue — revenue definitions (hold until HYPE, UNI, VVV reviews are done)
+# Orion dev queue — revenue definitions
 
-## HYPE — USDC reserve yield missing from revenue (reviewed 2026-10-12)
+Status 2026-10-23: the HYPE, generic-streams, re-fetch and VVV sections below are BUILT (kept for the record). Open work: the LIT sections at the end.
+
+## [DONE] HYPE — USDC reserve yield missing from revenue (reviewed 2026-10-12)
+Built: `flow_usd.reserve_yield` from `hype.reserve_yield_payments` (ledger of 0x5000…0000 → Assistance Fund), revenue stream `settlement: periodic`. The daily on-chain rate is not available (Hyperliquid's `alignedQuoteTokenInfo` returns 422), so accrual between payments runs at the last period's daily rate (provisional).
 - Trading revenue OK: DefiLlama dailyRevenue 90d ann. $727M (perps $706M, spot $20M, outcomes $0.3M) = 99% of fees net of builder/HIP-3 deployer/maker rebates/HLP 1%. Artemis LTM $918M (−27% YoY), consistent. HyperEVM gas (~$7M/yr) and priority fees: rounding.
 - MISSING: AQAv2 USDC reserve yield (~90% of yield on USDC backing HyperCore), started 2026-08-26, funds Assistance Fund buybacks.
   - First payment 2026-10-03: $14.58M covering 2026-08-26..09-24 (30d) → ~$0.486M/day, ~$177M/yr (BlockBeats est. $193M).
@@ -15,7 +18,8 @@
     - First step: confirm the info API exposes the AQA rate and the per-token balance history (if not: read the system interest address 0x50..00+token_index and derive).
 - Unverified, likely small: USDH sends 50% of reserve yield to the Assistance Fund.
 
-## Generic design requirement (Mike, 2026-10-12)
+## [DONE] Generic design requirement (Mike, 2026-10-12)
+Built: `reporting.revenue` stream list (daily | periodic | disclosed); growth shown as-is and ex streams < 180d.
 No one-off series per new revenue type. Revenue = config list of streams; adding a type is config only.
 - Each stream: source + settlement mode.
   - `daily`: a daily series (as today).
@@ -23,20 +27,31 @@ No one-off series per new revenue type. Revenue = config list of streams; adding
 - Unpaid tail (days since the last covered period): use the stream's own daily accrual inputs when available (HYPE: balance × on-chain rate), else the last period's daily rate; mark provisional; replaced when the payment lands.
 - Report: show growth with and without streams younger than 180 days (a new stream inflates 90d/90d).
 
-## All API daily series — re-fetch recent history each run
+## [DONE] All API daily series — re-fetch recent history each run
+Built: DefiLlama primaries re-read 30 written days (`revision_days`); manual rows in the window are left alone.
 - DefiLlama revises history (HYPE: Orion $149M vs $178.5M latest 90d. AERO correction 2026-10-12: its apparent $17.1M→$24.9M "revision" was the known 2026-09-10 DefiLlama artifact ($7.92M day), not a revision — manual row re-applied after the prod backfill). Re-pull the last N days (e.g. 30) each run and supersede changed rows.
 
-## VVV — use disclosed business revenue (reviewed 2026-10-12)
+## [DONE in Orion] VVV — use disclosed business revenue (reviewed 2026-10-12)
+Built: revenue = disclosed stream (`revenue_run_rate_usd`, DefiLlama proxy as cross_check); 3 cited disclosures ($70M 2026-07-01, $100M 2026-08-17, $150M 2026-10-14). Not verified here: whether the coinrevs site's revenue column now uses it (Gap 2 is a site change).
 - Orion already stores disclosures (`revenue_run_rate_usd`, manual, cited) and reports them as `revenueDisclosed` with growth between consecutive disclosures; staleness anomaly `revenue_disclosure_stale` already fires.
 - Gap 1: only ONE disclosure stored ($100M, 2026-08-17, founder X post). Add prior: >$70M ARR, 2026-07-01 (Series A, TechCrunch/GeekWire) — gives growth.
 - Gap 2: coinrevs revenue column uses the DefiLlama proxy ($9.3M = on-chain burns). Rule: revenue = disclosed when the asset has `revenue_disclosed`; DefiLlama proxy stays as a cross-check only. Holder flow stays = burns.
 - Growth on disclosures: compute from the two latest disclosures (not 90d/90d); flag when gap < 90d or latest > 90d old.
 
-## UNI — reviewed 2026-10-12: no fix needed
+## [NO ACTION] UNI — reviewed 2026-10-12: no fix needed
 - Revenue = burns ($132M/yr) = v3 selected-pool fees ($121.6M, DefiLlama) + v2 1/6 fee (~$10M, missing in DefiLlama) + Unichain sequencer (small). Label "protocol fees (v2 + selected v3)".
 - Upside not revenue: v4 ($965M/yr swap fees, fee switch not on, ~$160M at 1/6) + remaining v3 pools → valuation scenario/catalyst.
 
-## LIT — Robinhood revenue share, revenue source, unlock cadence (reviewed 2026-10-23, from Lighter Q3 investor call)
+## [IN PROGRESS] LIT — Robinhood revenue share, revenue source, unlock cadence (reviewed 2026-10-23, from Lighter Q3 investor call)
+Status: item 3 (unlock cadence) = Orion proposal #3, pending Mike's decision. Items 1-2: Mike picked 1a (holder flow Core-only + watch) and 2a (Core + 0.5 x RH first-party streams), 2026-10-23; spec docs/superpowers/specs/2026-10-23-orion-lit-lighter-api-design.md on feat/lit-lighter-api (edaca62), awaiting review.
+Scoping result (2026-10-23, measured; full notes: workspace/orion/lit-scoping/robinhood-revenue.md, re-checked by Raymond):
+- Robinhood instance = separate exchange, API api.rh.lighter.xyz (Robinhood Chain 4663). Its fee account (RH L2 account 0) has never traded:
+  no LIT market on RH, Q3 buyback_usdc $125. It holds $3.49M USDG collateral = ~all RH fees to date (both halves), less one
+  320k USDG withdrawal 2026-08-25 to an unlabelled EOA 0xac71ec13…c357. -> The RH share is NOT bought back (as of 2026-10-22).
+- First-party fees: exchangeMetrics?period=all&kind=maker_fee|taker_fee|transfer_fee|withdraw_fee, daily USD, both hosts, keyless
+  (Core from 2025-01-17, RH from 2026-06-26). Q3: Core $7.540M + 0.5 x RH $2.227M = $8.654M, 87.1% Core (call: $8.5M, 87%).
+  Lighter's stats page applies the 0.5 in its frontend (Core + 0.5 x RH lifetime $68.20M vs $68.21M shown). DefiLlama reads the same API, RH at 100%.
+- Core buys Q3 $7.46M = 99.0% of Core fees: "100% to buybacks" holds for Core only.
 Source: Lighter Q3 2026 investor update video, https://x.com/Lighter_xyz/status/2113065839352336774 (posted 2026-10-22).
 Transcribed locally (faster-whisper small.en); figures quoted are Vlad's.
 Call figures: Q3 volume $137.67B (Robinhood instance $17.8B); revenue $8.5M, 87% Lighter Core; Robinhood is a 50/50 rev share,
@@ -73,3 +88,21 @@ Also noted (no action): 1.5M bought LIT routed to Coinbase Prime again on 2026-1
 Strategic-investor placements are secondaries from the existing cap table (no new supply).
 Catalysts (dates for the analyst): vanilla options + portfolio margin by YE 2026; Lighter EVM mainnet by YE; CFTC DCM+DCO filing
 Nov 2026, review up to 180 days (US instance mid-2027 at the earliest).
+
+## [IN PROGRESS] LIT — Issuer states 109.8M LIT staked; Orion's staked_supply is a constant 0 (disclosure watcher, 2026-10-23, run #43, doc #1)
+<!-- dw:fp=8b2b72b7d6cb88a9fbd2703cba72322887cd7f336565494a9dc9ca9a2167f99d -->
+Source: https://x.com/Lighter_xyz/status/2113065839352336774 (posted 2026-10-22), machine transcript (small.en): names and numbers may be misheard; every figure in it is the speaker's dated claim, not a fact. Machine-written from the document by the analyst; verify before building.
+- Category: supply; metrics: staked_supply; a fix moves targets: none
+- Claim: The founder (doc:1, 2026-10-22) says 109.8M LIT is currently staked, about 11% of total supply and 44% of the 250M circulating figure.
+- Orion: staked_supply = 0 (obs 25269), a config constant: the staking rewards are bought LIT passed on, not a fee share. As a result, staked_ratio and real_staking_yield read 0 in the driver report. For scale, total supply is 981,909,280 (obs 25267), so the issuer's figure is an 11.2% staked ratio.  (evidence: observation ids 25269, 25267)
+- Quotes: "as of the end of Q3, 2.45 million in Q3 and also 109.8 million lit is currently staked," [11:36]
+- Proposed fix: Keep the valuation treatment (the burn reaches every holder). Add a monitor-only staked LIT level from Lighter's API or staking contract, so the report shows the real staked share and the reader can size the staking-reward redistribution. Then rename the constant so the driver report does not state "staked 0" as a fact.
+- Reviewed (Mike, 2026-10-23): queue it. Monitor only, never a valuation input: keep `staked_supply` = 0 (lit.yaml:58; valuing it per staker would count the redistributed buys twice).
+  - Purpose: display (report + coinrevs) and a float signal: ~110M staked vs ~13.5M/month of unlocks from 2027-01-29.
+  - Design: a `monitor_only` level, e.g. `staked_tokens_reported`, read daily. Source to scope first: Lighter's API or the staking contract (Lighter runs its own chain, so EVM `contract_read` may not apply); no DefiLlama unless nothing first-party exists. History starts on the go-live day (levels don't backfill).
+  - Also: the driver report shows "staked 0" / real_staking_yield 0 from the constant. Label it as structural (rewards are passed-on buys) so it isn't read as a measured fact.
+  - Cross-check: the issuer's 109.8M at 2026-09-30 [11:36-11:41] (doc #1), within ~2% once the series exists.
+  - Scoping result (2026-10-23, measured; notes: workspace/orion/lit-scoping/staked-supply.md): staking is on the L2. Staked = LIT balance of
+    pool account 281474976624800 (= /systemConfig staking_pool_index): 110.92M LIT at 2026-10-23 23:34Z (11.3% of supply). Rewards are
+    6%/365 of staked daily since 2026-07-07; the 2026-09-30 reward implies 109.76M (call: 109.8M). Source: /account?by=index&value=<pool>,
+    asset symbol LIT. No history endpoint (levels start at go-live).

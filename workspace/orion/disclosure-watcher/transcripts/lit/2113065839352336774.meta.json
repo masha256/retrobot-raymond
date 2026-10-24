@@ -1,0 +1,12 @@
+{
+  "asr_model": "small.en",
+  "audio_sha256": null,
+  "created_at": "2026-10-22T00:32:09.000Z",
+  "duration_s": 2491.6,
+  "kind": "machine_transcript",
+  "post_id": "2113065839352336774",
+  "transcribed_at": null,
+  "transcript_file": "lit-q3-2026-call-transcript.txt",
+  "transcript_sha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+  "url": "https://x.com/Lighter_xyz/status/2113065839352336774"
+}

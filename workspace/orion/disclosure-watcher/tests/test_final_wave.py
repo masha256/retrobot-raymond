@@ -38,7 +38,7 @@ def all_tweets():
 
 
 class ScanHttp(FakeHttp):
-    """post() always answers the DuckDuckGo fixture; get() answers tweet-result from the given bodies (else 404)."""
+    """post() always answers the DuckDuckGo fixture; get() answers tweet-result from the given bodies (else 503)."""
 
     def __init__(self, tweets=None):
         super().__init__(tweets=tweets, posts=[ddg_ok()])
@@ -196,7 +196,7 @@ class TestSlackHardening(Base):
 
 class TestTweetResultFailures(ScanBase):
     def test_a_day_where_every_tweet_result_fetch_failed_counts_toward_the_alert(self):
-        # Search works, but every new id 404s at tweet-result: three such days alert, naming tweet-result.
+        # Search works, but every new id 503s at tweet-result: three such days alert, naming tweet-result.
         self.assertEqual(self.scan(date(2026, 10, 21), tweets={}), [])
         self.assertEqual(self.scan(date(2026, 10, 21), tweets={}), [])  # the same day again counts once
         self.assertEqual(self.state().data["search"]["consecutive_failures"], 1)
@@ -210,8 +210,62 @@ class TestTweetResultFailures(ScanBase):
         self.scan(date(2026, 10, 24))
         self.assertEqual(self.state().data["search"]["consecutive_failures"], 0)
 
+    def _gone_case(self, status, body, note):
+        self.seed()
+        st = self.state()
+        del st.data["posts"][FIFTH]  # FIFTH is the only new id
+        st.save()
+
+        class GoneHttp(ScanHttp):
+            def get(self, url):
+                self.get_calls.append(url)
+                return status, body
+        http = GoneHttp({})
+        self.assertEqual(dw.run_scan(self.cfg, self.base, http, date(2026, 10, 21), sleep=lambda s: None), [])
+        self.assertEqual(len(http.get_calls), 1)
+        st = self.state()
+        rec = st.get(FIFTH)
+        self.assertEqual(rec["status"], "irrelevant")
+        self.assertIsNone(rec["kind"])
+        self.assertIn(note, rec["error"])
+        self.assertEqual(st.data["search"]["consecutive_failures"], 0)
+        self.assertIsNone(st.data["search"].get("last_failed_day"))
+        http2 = GoneHttp({})
+        dw.run_scan(self.cfg, self.base, http2, date(2026, 10, 22), sleep=lambda s: None)
+        self.assertEqual(http2.get_calls, [])  # deduped forever
+        self.assertEqual(self.state().data["search"]["consecutive_failures"], 0)
+
+    def test_a_404_post_is_irrelevant_not_a_failed_fetch(self):
+        self._gone_case(404, "", "unavailable (404)")
+
+    def test_a_tombstone_post_is_irrelevant_not_a_failed_fetch(self):
+        self._gone_case(200, json.dumps({"__typename": "TweetTombstone", "tombstone": {"text": {"text": "gone"}}}),
+                        "tombstone")
+
+    def test_a_tombstone_key_or_empty_object_is_irrelevant(self):
+        for body, note in ((json.dumps({"tombstone": {}}), "tombstone"), ("{}", "unavailable")):
+            with self.subTest(body=body):
+                self.assertRaisesRegex(dw.PostUnavailable, note, dw.fetch_post,
+                                       ScanHttp({"1" * 19: body}), "1" * 19)
+
+    def test_429_5xx_and_unparsable_bodies_are_fetch_failures_not_unavailable(self):
+        for status, body in ((429, ""), (500, ""), (503, ""), (200, "<html>"), (200, "[]")):
+            with self.subTest(status=status, body=body):
+                with self.assertRaises(RuntimeError) as cm:
+                    dw.fetch_post(type("H", (), {"get": lambda self, url: (status, body)})(), "1" * 19)
+                self.assertNotIsInstance(cm.exception, dw.PostUnavailable)
+
+    def test_a_503_on_every_new_id_still_counts_as_a_failed_day(self):
+        for day in (21, 22):
+            self.assertEqual(self.scan(date(2026, 10, day), tweets={}), [])  # unknown ids answer 503
+        self.assertEqual(self.state().data["search"]["consecutive_failures"], 2)
+        out = self.scan(date(2026, 10, 23), tweets={})
+        self.assertEqual(len(out), 1, out)
+        self.assertIn("HTTP 503", out[0])
+        self.assertEqual(self.state().data["posts"], {})
+
     def test_some_fetches_failing_or_no_new_ids_is_not_a_failure(self):
-        self.scan(date(2026, 10, 21))  # FIFTH 404s, the four others are fetched
+        self.scan(date(2026, 10, 21))  # FIFTH 503s, the four others are fetched
         self.assertEqual(self.state().data["search"]["consecutive_failures"], 0)
         st = self.state()
         st.set(FIFTH, status="irrelevant")

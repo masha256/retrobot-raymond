@@ -63,6 +63,11 @@ class SearchFailed(Exception):
     """The search gave no usable answer. Never read as 'nothing found'."""
 
 
+class PostUnavailable(RuntimeError):
+    """tweet-result says the post is gone (HTTP 404, a tombstone, or an empty answer): a fact about that post, not an
+    outage. The scan records such an id as irrelevant (deduped forever) and never counts it as a failed fetch."""
+
+
 # ---------------------------------------------------------------- config
 
 def load_config(path):
@@ -198,17 +203,25 @@ def search_ids(http, cfg, sleep=time.sleep):
 
 
 def fetch_post(http, post_id):
-    """tweet-result JSON for a post id, or raise RuntimeError (the id stays unknown and is retried next run)."""
+    """tweet-result JSON for a post id. Raises PostUnavailable when the post is gone (HTTP 404, a tombstone body, or an
+    empty object with no id_str), else RuntimeError for an outage (network error, 429, 5xx, ...) or an unparsable
+    answer (the id stays unknown and is retried next run)."""
     try:
         status, text = http.get(TWEET_RESULT_URL.format(id=post_id))
     except OSError as e:
         raise RuntimeError(f"tweet-result {post_id}: network error: {e}") from e
+    if status == 404:
+        raise PostUnavailable(f"tweet-result {post_id}: unavailable (404)")
     if status != 200:
         raise RuntimeError(f"tweet-result {post_id}: HTTP {status}")
     try:
         post = json.loads(text)
     except ValueError as e:
         raise RuntimeError(f"tweet-result {post_id}: not JSON") from e
+    if isinstance(post, dict) and (post.get("__typename") == "TweetTombstone" or "tombstone" in post):
+        raise PostUnavailable(f"tweet-result {post_id}: unavailable (tombstone)")
+    if isinstance(post, dict) and not post.get("id_str") and not post.get("user") and not post.get("created_at"):
+        raise PostUnavailable(f"tweet-result {post_id}: unavailable (empty answer)")
     if not isinstance(post, dict) or "user" not in post or "created_at" not in post:
         raise RuntimeError(f"tweet-result {post_id}: no post in answer ({str(post.get('__typename', '?'))[:40]})"
                            if isinstance(post, dict) else f"tweet-result {post_id}: unexpected answer")
@@ -407,6 +420,12 @@ def _scan_asset_locked(asset, asset_cfg, base_dir, http, today, now, sleep, opts
         for post_id in new_ids:
             try:
                 post = fetch_post(http, post_id)
+            except PostUnavailable as e:
+                # The post is gone: a fact about it, not an outage. Deduped forever; not a failed fetch.
+                fetched += 1
+                state.set(post_id, status="irrelevant", kind=None, error=str(e))
+                entry["decisions"][post_id] = "irrelevant"
+                continue
             except RuntimeError as e:
                 entry["errors"].append(str(e))
                 fetch_error = str(e)

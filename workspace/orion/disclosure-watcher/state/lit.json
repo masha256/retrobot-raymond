@@ -37,21 +37,21 @@
       "updated_at": "2026-10-23T22:29:44Z"
     },
     "2113065839352336774": {
-      "attempts": 0,
-      "doc_id": null,
-      "doc_sha256": null,
+      "attempts": 2,
+      "doc_id": 1,
+      "doc_sha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
       "error": null,
       "first_seen_at": "2026-10-23T22:29:44Z",
       "kind": "recording",
-      "run_id": null,
-      "run_outcome": null,
-      "status": "seeded",
-      "updated_at": "2026-10-23T22:29:44Z"
+      "run_id": 43,
+      "run_outcome": "completed",
+      "status": "run_done",
+      "updated_at": "2026-10-23T23:22:09Z"
     }
   },
   "search": {
     "consecutive_failures": 0,
-    "last_ok_at": null
+    "last_ok_at": "2026-10-23T23:22:38+00:00"
   },
   "windows": {
     "2026Q1": {

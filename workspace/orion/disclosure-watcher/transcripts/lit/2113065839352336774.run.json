@@ -1,0 +1,858 @@
+{
+  "run": {
+    "id": 43,
+    "assetId": "lit",
+    "persona": "perp-exchange-analyst",
+    "runType": "disclosure",
+    "trigger": "manual",
+    "triggerDetail": {
+      "docId": 1,
+      "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e"
+    },
+    "outcome": "completed",
+    "dryRun": false,
+    "configHash": "5cd677855377b3be5e588039ae5b1d6e64602aa8acd6d880fb8a30b4a07f048b",
+    "model": "claude-opus-5-5",
+    "startedAt": "2026-10-23T23:18:59.452Z",
+    "endedAt": "2026-10-23T23:22:09.331Z",
+    "usage": {
+      "requests": 7,
+      "inputTokens": 4132,
+      "cacheReadTokens": 725180,
+      "cacheWriteTokens": 89345,
+      "outputTokens": 20606,
+      "webSearches": 1,
+      "webFetches": 2
+    },
+    "error": null,
+    "summary": {
+      "committed": {
+        "setVersion": null,
+        "observationIds": [],
+        "resolvedAnomalyIds": [],
+        "proposalIds": [
+          3
+        ],
+        "journalId": 39,
+        "devFindings": [
+          {
+            "category": "revenue",
+            "title": "DefiLlama revenue runs 16% above Lighter's stated Q3 revenue; no volume metric",
+            "metricKeys": [
+              "flow_usd.fees",
+              "flow_usd.llama_revenue"
+            ],
+            "claim": "In the Q3 2026 update (doc:1, machine transcript), the founder states:\n- Q3 revenue was $8.5M, 87% of it from Lighter core.\n- Volume was $137.67B, a take rate of about 0.6 bp.\n- The Robinhood instance's revenue is shown net of a 50-50 revenue share, with \"more than a million\" in fees attributed back to Lighter.\nSo the issuer's revenue is about $7.4M from core plus about $1.1M of Lighter's half of Robinhood-instance fees.",
+            "orionReading": "For 2026-07-01 to 2026-09-30, all 92 days covered:\n- flow_usd.llama_revenue (DefiLlama dailyRevenue) sums to $9,846,397, 16% above the stated $8.5M.\n- flow_usd.fees (DefiLlama dailyFees) sums to $12,457,687.\nThe gap of about $1.35M is close to the Robinhood partner's half: core $7.4M plus Robinhood gross of about $2.2M would make about $9.6M. That suggests DefiLlama counts the Robinhood-instance revenue before the 50-50 split. This is an inference; I could not check DefiLlama's breakdown.\nOrion has no volume metric. reporting.volume points at flow_usd.fees, which is gross fees, not volume, so no take rate can be computed against the stated 0.6 bp.",
+            "valueDirection": "none",
+            "proposedFix": "Check DefiLlama's Lighter adapter breakdown for Robinhood perps. If it books gross Robinhood fees as revenue, net the partner's 50% in the reporting revenue line, or label the line \"incl. partner share\". Add a monitor-only volume metric (DefiLlama dailyVolume for derivatives, or Lighter's API), and point reporting.volume at it instead of flow_usd.fees. Neither change moves the target, since the engine's revenue is the buyback flow.",
+            "evidence": [
+              16110,
+              16201,
+              15945,
+              16036
+            ],
+            "citations": [
+              {
+                "source": "doc:1",
+                "quotedText": "So the total revenue of the quarter, 8.5 million, split again pretty evenly between Lighter core, evenly in terms of meaning relative to volume.",
+                "locator": "04:22",
+                "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+                "docKind": "machine_transcript"
+              },
+              {
+                "source": "doc:1",
+                "quotedText": "And it generated fees such that as of end of Q3, already more than a million in fees attributed back to Lighter from the 50-50 split.",
+                "locator": "06:04",
+                "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+                "docKind": "machine_transcript"
+              },
+              {
+                "source": "doc:1",
+                "quotedText": "The total volume 137.67 billion for the quarter,",
+                "locator": "02:15",
+                "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+                "docKind": "machine_transcript"
+              }
+            ],
+            "fingerprint": "08d88059e124fce73fc34fb133819931ba1c70c06defe3763faafb7bf54f388a"
+          },
+          {
+            "category": "holder_flow",
+            "title": "Q3 buybacks equal Lighter core's revenue only, not the stated 100% of trading revenue",
+            "metricKeys": [
+              "flow_tokens.burn",
+              "flow_tokens.buyback",
+              "flow_tokens.routed_to_prime",
+              "flow_usd.buyback"
+            ],
+            "claim": "The founder (doc:1, machine transcript, 2026-10-22) makes three statements:\n- 100% of trading revenue is used for buybacks.\n- 2.45M LIT was bought back in Q3, and over 18M in total by the end of Q3, already burned on Ethereum.\n- Q3 revenue was $8.5M, 87% of it from Lighter core.",
+            "orionReading": "For 2026-07-01 to 2026-09-30, all 92 days covered:\n- flow_usd.buyback (account 0 bids on market 2049) sums to $7,410,898. That is 87.2% of $8.5M, almost exactly the stated core share (0.87 \u00d7 8.5M = $7.395M).\n- flow_tokens.buyback sums to 2,444,357 LIT, which matches the stated 2.45M.\n- flow_tokens.burn from 2026-06-01 to 2026-10-23 sums to 18,090,720 LIT, which matches the stated \"over 18 million\".\nThe token counts tie out. In USD, though, the buys cover the core revenue only. The Robinhood instance's roughly $1.1M Lighter share was either not bought back in Q3, or it was bought by an account the adapter does not read. Since the token count already matches the issuer's 2.45M, the first is more likely.\nSeparately, flow_tokens.routed_to_prime sums to 3,000,021 LIT for Q3, more than the Q3 buys. The document does not mention it.",
+            "valueDirection": "unknown",
+            "proposedFix": "Find out whether the Robinhood instance has its own treasury or fee account and whether it buys LIT. If it does, extend lit.treasury_buys_daily to read that account too, and the holder flow rises by about 13% (direction up). If it does not, no code change is needed. The analyst should then treat \"100% of trading revenue\" as core-only. Robinhood-instance growth would not reach the buyback, which matters because the issuer says that instance grows faster.",
+            "evidence": [
+              15615,
+              15706,
+              15779,
+              15870,
+              16245,
+              25279,
+              16530,
+              16621
+            ],
+            "citations": [
+              {
+                "source": "doc:1",
+                "quotedText": "100% of trading revenue is used for buybacks. At this point, over 18 million lit has been bought back as of the end of Q3, 2.45 million in Q3",
+                "locator": "11:27",
+                "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+                "docKind": "machine_transcript"
+              },
+              {
+                "source": "doc:1",
+                "quotedText": "split again pretty evenly between Lighter core, evenly in terms of meaning relative to volume. So 87% Lighter core.",
+                "locator": "04:30",
+                "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+                "docKind": "machine_transcript"
+              }
+            ],
+            "fingerprint": "a5fb2aca2feec2686dcf0117a1b6ba19a04a518d9b2d5ff6c9fa131f5fe9889f"
+          },
+          {
+            "category": "supply",
+            "title": "Issuer states 109.8M LIT staked; Orion's staked_supply is a constant 0",
+            "metricKeys": [
+              "staked_supply"
+            ],
+            "claim": "The founder (doc:1, 2026-10-22) says 109.8M LIT is currently staked, about 11% of total supply and 44% of the 250M circulating figure.",
+            "orionReading": "staked_supply = 0 (obs 25269), a config constant: the staking rewards are bought LIT passed on, not a fee share. As a result, staked_ratio and real_staking_yield read 0 in the driver report. For scale, total supply is 981,909,280 (obs 25267), so the issuer's figure is an 11.2% staked ratio.",
+            "valueDirection": "none",
+            "proposedFix": "Keep the valuation treatment (the burn reaches every holder). Add a monitor-only staked LIT level from Lighter's API or staking contract, so the report shows the real staked share and the reader can size the staking-reward redistribution. Then rename the constant so the driver report does not state \"staked 0\" as a fact.",
+            "evidence": [
+              25269,
+              25267
+            ],
+            "citations": [
+              {
+                "source": "doc:1",
+                "quotedText": "as of the end of Q3, 2.45 million in Q3 and also 109.8 million lit is currently staked,",
+                "locator": "11:36",
+                "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+                "docKind": "machine_transcript"
+              }
+            ],
+            "fingerprint": "8b2b72b7d6cb88a9fbd2703cba72322887cd7f336565494a9dc9ca9a2167f99d"
+          }
+        ]
+      },
+      "staged": {
+        "assumptionChanges": [],
+        "resolutions": [],
+        "observations": [],
+        "proposals": [
+          {
+            "change": {
+              "kind": "config",
+              "edits": [
+                {
+                  "path": [
+                    "metrics",
+                    "unlocks_next_year",
+                    "source",
+                    "params",
+                    "tranches"
+                  ],
+                  "value": {
+                    "first": "2027-01-29",
+                    "every_months": 1,
+                    "count": 36
+                  }
+                }
+              ]
+            },
+            "filedAgainst": [
+              null
+            ],
+            "rationale": "Lighter's own unlock schedule differs from DefiLlama's model. In the Q3 2026 investor update (doc:1, machine transcript, 2026-10-22), founder Vlad says the team and investor unlocks run monthly over 36 months. The first one is 2027-01-29: the three-year window opens at the end of December and month one unlocks a month later. Tokenomics.com, which says its data is \"verified by the Lighter team\", lists the same shape: the next unlock is 2027-01-28 at 13.515M LIT, with 36 events in all. The two sources differ by one day. I used the issuer's date; inside a 365-day window that day only matters at the edge.\n\nOrion reads DefiLlama's emissions dataset (obs 25274: 135.98M over the next 365 days, Team 70.71M plus Investors 65.27M). DefiLlama models a weekly linear release from 2026-12-29 (1.661M + 1.533M a week, per the config comment). That counts about 42.6 weeks in the current window, and it starts the dilution a month early.\n\nThe adapter's documented tranches option can state the issuer's terms: monthly from 2027-01-29, 36 tranches. Today's window would then hold 9 tranches (Jan 29 to Sep 29, 2027). At about 498M/36 \u2248 13.8M each, that is roughly 125M, against 136M now. Until late January the metric would show no unlock as having happened, which is correct.\n\nEffect on the target: none. unlocks_next_year is monitor_only and feeds only the dilution line in the report. The fix makes that line, and the reader's dilution-versus-burn comparison, match the issuer's terms. It also settles the open question about a 2026-12-29 cliff: there is none. The first unlock is about 13.5\u201313.8M in late January.\n\nRevert if Lighter's docs or the first on-chain unlock show weekly or December releases.",
+            "evidence": [],
+            "citations": [
+              {
+                "source": "doc:1",
+                "quotedText": "So there's no cliff, what unlocks will happen literally over 36 months.",
+                "locator": "12:27",
+                "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+                "docKind": "machine_transcript"
+              },
+              {
+                "source": "doc:1",
+                "quotedText": "Actually, the first one will be January 29th of next year, because the three year window starts at the end of December, but then month one will be unlocked one month later.",
+                "locator": "12:33",
+                "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+                "docKind": "machine_transcript"
+              },
+              {
+                "source": "https://app.tokenomics.com/tokenomics/lighter/unlocks",
+                "quotedText": "The next LIT token unlock is scheduled for January 28, 2027 (in 97 days), releasing 13,515,000 tokens (1.4% of total supply).",
+                "locator": null,
+                "docSha256": null,
+                "docKind": null
+              }
+            ],
+            "effect": {
+              "6m": {
+                "from": 0.3485252632744437,
+                "to": 0.3485252632744437
+              },
+              "12m": {
+                "from": 0.38874561463164015,
+                "to": 0.38874561463164015
+              }
+            }
+          }
+        ],
+        "journal": {
+          "thesis": "LIT is a buyback-and-burn token on a perp DEX. Its fee share is falling and a monthly unlock overhang starts in late January 2027. Facts as of 2026-10-23:\n- Price $3.38 (obs 25265).\n- The 91d buyback run rate is $32.5M (obs 25282).\n- 30d Derivatives fee share is 3.07% against 4.15% over 1y (obs 25277/25278). Durability keys are on the bear side, as set last run.\n\nNew from the Q3 2026 investor update (doc:1, machine transcript; the figures are the issuer's dated claims):\n- The buyback tokens tie out exactly. Q3 buys were 2,444,357 LIT in Orion against 2.45M stated, and the burn total of 18,090,720 matches \"over 18 million\".\n- The buyback dollars ($7.41M in Q3) equal Lighter core's 87% share of the stated $8.5M revenue. The Robinhood instance's roughly $1.1M Lighter share does not appear to be bought back, despite the \"100% of trading revenue\" statement.\n\nThat matters for the thesis. The issuer says the Robinhood instance grows faster, so revenue growth may outrun buyback growth unless Robinhood fees get bought back too. Orion values the buyback flow, not revenue, so its target is unaffected. But I should not read the issuer's revenue growth as buyback growth.\n\nUnlocks: the issuer says monthly over 36 months, first on 2027-01-29, with no cliff. Tokenomics.com, Lighter-verified, gives 2027-01-28 and 13.5M. DefiLlama's weekly-from-12-29 model overstates the next-year dilution slightly (136M vs about 125M). Either way dilution is about 3x the buyback count in tokens, and far more in dollars than the buyback removes.\n\nUpside the engine does not price: a CFTC DCM/DCO filing in November 2026, Lighter EVM mainnet and vanilla options by year end. All are plans, not revenue.",
+          "openQuestions": [
+            "Does the Robinhood instance's Lighter revenue share get bought back? Q3 buys ($7.41M, ids 15615\u201315706) = 87% of stated $8.5M = the core share. If a separate account buys, extend the adapter; if not, treat '100% of trading revenue' as core-only and watch whether buyback growth lags revenue growth (dev finding filed).",
+            "flow_tokens.routed_to_prime: 3.0M LIT to Coinbase Prime in Q3 (ids 16530\u201316621), more than Q3 buys (2.44M). Not addressed in the Q3 call. Possibly the staking-reward or Robinhood pledge route. Find out what it is.",
+            "The pending config proposal sets unlocks_next_year tranches to monthly from 2027-01-29 \u00d736. If the user approves, check the metric drops to about 125M. A Messari search snippet showed 'Dec 30' and 17.4M events (not fetched). Confirm the first actual unlock on chain or in DefiLlama around 2027-01-28/29.",
+            "DefiLlama dailyRevenue Q3 is $9.85M vs the stated $8.5M. I infer it counts Robinhood gross before the 50-50 split (dev finding filed). Do not use llama_revenue as Lighter's net revenue.",
+            "Q4 burn check (early January 2027): the burn count should equal Oct\u2013Dec flow_tokens.buyback.",
+            "Dominance: carry over from the last run. If the 30d share stays below the 1y share for 2\u20133 more weeks, consider moving the bull durability keys; reverse the base moves if 30d climbs above about 3.6%.",
+            "Re-read primary sources (Lighter docs: fee split, buyback/burn policy, staking) next weekly run. The issuer states 109.8M LIT staked while staked_supply is a constant 0."
+          ],
+          "summary": "Disclosure run on doc:1, the Lighter Q3 2026 investor update (X video, machine transcript, published 2026-10-22). I compared every figure with Orion's own data for Q3 (2026-07-01 to 09-30).\n\nConsistent, nothing filed:\n- Q3 buybacks of 2.45M LIT match flow_tokens.buyback (2,444,357) and the 2026-10-09 burn.\n- \"Over 18 million\" bought and burned matches flow_tokens.burn (18,090,720) and total supply (obs 25267).\n- \"Over 7% of the original 250M burned\" is 18.09/250 = 7.2%.\n- The take rate of about 0.6bp is internally consistent: $8.5M on $137.67B is 0.62bp.\n\nFiled:\n1. Config proposal: unlocks_next_year gets adapter tranches {first 2027-01-29, monthly, 36}. This follows the issuer's statement and Tokenomics.com (fetched; Jan 28, 13.515M). It replaces DefiLlama's weekly-from-12-29 model, taking the next-365-day figure from 136M (obs 25274) to about 125M. No target effect (monitor_only).\n2. Revenue dev finding: DefiLlama revenue for Q3 is $9.85M and fees $12.46M, against $8.5M stated. Robinhood revenue is likely counted gross before the 50-50 split. There is also no volume metric, and reporting.volume points at gross fees.\n3. Holder-flow dev finding: buyback dollars of $7.41M equal exactly the 87% core share of revenue. The Robinhood share does not appear to be bought back, despite the \"100% of trading revenue\" claim. Q3 Prime routing was 3.0M LIT.\n4. Supply dev finding: 109.8M LIT staked is stated, while staked_supply is a constant 0.\n\nNot checked against Orion, because Orion has no metric for them: volume of $137.67B, OI of $1.6B (Robinhood $454M), 1M core accounts, 39.8k Robinhood accounts, Robinhood volume of $17.8B, about 70% RWA OI, premium taker share from 13% to 18%, 124 ecosystem projects, proving cost down more than 50%, proof time from 5 min to 1 min. I recorded no observations: every figure is from a machine transcript, and Orion has no manual metric for them.\n\nCatalysts: CFTC filing (Nov 2026) and review window, EVM mainnet, vanilla options with portfolio margin, first unlock, and the next quarterly update.\n\nNo assumption changes; none are available in a disclosure run, and nothing in the document bears on the dominance-driven keys. Searches: one, for the LIT unlock schedule. Fetches: Messari unlocks (failed), Tokenomics.com unlocks (ok).",
+          "catalysts": [
+            {
+              "event": "Lighter files for CFTC DCM and DCO licences",
+              "kind": "regulatory",
+              "from": "2026-11-01",
+              "to": "2026-11-30",
+              "citations": [
+                {
+                  "source": "doc:1",
+                  "quotedText": "And so the plan from here is to file for these licenses next month. And then from there, there's a period of up to 180 days",
+                  "locator": "26:13",
+                  "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+                  "docKind": "machine_transcript"
+                }
+              ]
+            },
+            {
+              "event": "CFTC review of the DCM/DCO filing ends (up to 180 days after a November filing)",
+              "kind": "regulatory",
+              "from": "2026-11-01",
+              "to": "2027-05-29",
+              "citations": [
+                {
+                  "source": "doc:1",
+                  "quotedText": "for these licenses next month. And then from there, there's a period of up to 180 days that the agency would have to review now",
+                  "locator": "26:17",
+                  "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+                  "docKind": "machine_transcript"
+                }
+              ]
+            },
+            {
+              "event": "Lighter EVM mainnet",
+              "kind": "product",
+              "by": "2026-12-31",
+              "citations": [
+                {
+                  "source": "doc:1",
+                  "quotedText": "So the mainnet is planned by year end.",
+                  "locator": "18:18",
+                  "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+                  "docKind": "machine_transcript"
+                }
+              ]
+            },
+            {
+              "event": "Vanilla options live, with portfolio margin across spot, perps and options",
+              "kind": "product",
+              "by": "2026-12-31",
+              "citations": [
+                {
+                  "source": "doc:1",
+                  "quotedText": "Vanilla options are going live by end of year.",
+                  "locator": "20:13",
+                  "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+                  "docKind": "machine_transcript"
+                },
+                {
+                  "source": "doc:1",
+                  "quotedText": "So this will be rolled out as part of the rollout for a vanilla options at the end of the quarter.",
+                  "locator": "21:48",
+                  "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+                  "docKind": "machine_transcript"
+                }
+              ]
+            },
+            {
+              "event": "First monthly team and investor unlock (36 monthly tranches, about 13.5M LIT each)",
+              "kind": "token",
+              "from": "2027-01-28",
+              "to": "2027-01-29",
+              "citations": [
+                {
+                  "source": "doc:1",
+                  "quotedText": "Actually, the first one will be January 29th of next year, because the three year window starts at the end of December,",
+                  "locator": "12:33",
+                  "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+                  "docKind": "machine_transcript"
+                },
+                {
+                  "source": "https://app.tokenomics.com/tokenomics/lighter/unlocks",
+                  "quotedText": "The next LIT token unlock is scheduled for January 28, 2027 (in 97 days), releasing 13,515,000 tokens (1.4% of total supply).",
+                  "locator": null,
+                  "docSha256": null,
+                  "docKind": null
+                }
+              ]
+            },
+            {
+              "event": "Q4 2026 investor update (check Q4 burn vs Oct-Dec buys)",
+              "kind": "other",
+              "from": "2027-01-01",
+              "to": "2027-01-31",
+              "citations": [
+                {
+                  "source": "doc:1",
+                  "quotedText": "And we'll see you in a quarter.",
+                  "locator": "41:29",
+                  "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+                  "docKind": "machine_transcript"
+                }
+              ]
+            }
+          ]
+        },
+        "devFindings": [
+          {
+            "category": "revenue",
+            "title": "DefiLlama revenue runs 16% above Lighter's stated Q3 revenue; no volume metric",
+            "metricKeys": [
+              "flow_usd.fees",
+              "flow_usd.llama_revenue"
+            ],
+            "claim": "In the Q3 2026 update (doc:1, machine transcript), the founder states:\n- Q3 revenue was $8.5M, 87% of it from Lighter core.\n- Volume was $137.67B, a take rate of about 0.6 bp.\n- The Robinhood instance's revenue is shown net of a 50-50 revenue share, with \"more than a million\" in fees attributed back to Lighter.\nSo the issuer's revenue is about $7.4M from core plus about $1.1M of Lighter's half of Robinhood-instance fees.",
+            "orionReading": "For 2026-07-01 to 2026-09-30, all 92 days covered:\n- flow_usd.llama_revenue (DefiLlama dailyRevenue) sums to $9,846,397, 16% above the stated $8.5M.\n- flow_usd.fees (DefiLlama dailyFees) sums to $12,457,687.\nThe gap of about $1.35M is close to the Robinhood partner's half: core $7.4M plus Robinhood gross of about $2.2M would make about $9.6M. That suggests DefiLlama counts the Robinhood-instance revenue before the 50-50 split. This is an inference; I could not check DefiLlama's breakdown.\nOrion has no volume metric. reporting.volume points at flow_usd.fees, which is gross fees, not volume, so no take rate can be computed against the stated 0.6 bp.",
+            "valueDirection": "none",
+            "proposedFix": "Check DefiLlama's Lighter adapter breakdown for Robinhood perps. If it books gross Robinhood fees as revenue, net the partner's 50% in the reporting revenue line, or label the line \"incl. partner share\". Add a monitor-only volume metric (DefiLlama dailyVolume for derivatives, or Lighter's API), and point reporting.volume at it instead of flow_usd.fees. Neither change moves the target, since the engine's revenue is the buyback flow.",
+            "evidence": [
+              16110,
+              16201,
+              15945,
+              16036
+            ],
+            "citations": [
+              {
+                "source": "doc:1",
+                "quotedText": "So the total revenue of the quarter, 8.5 million, split again pretty evenly between Lighter core, evenly in terms of meaning relative to volume.",
+                "locator": "04:22",
+                "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+                "docKind": "machine_transcript"
+              },
+              {
+                "source": "doc:1",
+                "quotedText": "And it generated fees such that as of end of Q3, already more than a million in fees attributed back to Lighter from the 50-50 split.",
+                "locator": "06:04",
+                "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+                "docKind": "machine_transcript"
+              },
+              {
+                "source": "doc:1",
+                "quotedText": "The total volume 137.67 billion for the quarter,",
+                "locator": "02:15",
+                "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+                "docKind": "machine_transcript"
+              }
+            ],
+            "fingerprint": "08d88059e124fce73fc34fb133819931ba1c70c06defe3763faafb7bf54f388a"
+          },
+          {
+            "category": "holder_flow",
+            "title": "Q3 buybacks equal Lighter core's revenue only, not the stated 100% of trading revenue",
+            "metricKeys": [
+              "flow_tokens.burn",
+              "flow_tokens.buyback",
+              "flow_tokens.routed_to_prime",
+              "flow_usd.buyback"
+            ],
+            "claim": "The founder (doc:1, machine transcript, 2026-10-22) makes three statements:\n- 100% of trading revenue is used for buybacks.\n- 2.45M LIT was bought back in Q3, and over 18M in total by the end of Q3, already burned on Ethereum.\n- Q3 revenue was $8.5M, 87% of it from Lighter core.",
+            "orionReading": "For 2026-07-01 to 2026-09-30, all 92 days covered:\n- flow_usd.buyback (account 0 bids on market 2049) sums to $7,410,898. That is 87.2% of $8.5M, almost exactly the stated core share (0.87 \u00d7 8.5M = $7.395M).\n- flow_tokens.buyback sums to 2,444,357 LIT, which matches the stated 2.45M.\n- flow_tokens.burn from 2026-06-01 to 2026-10-23 sums to 18,090,720 LIT, which matches the stated \"over 18 million\".\nThe token counts tie out. In USD, though, the buys cover the core revenue only. The Robinhood instance's roughly $1.1M Lighter share was either not bought back in Q3, or it was bought by an account the adapter does not read. Since the token count already matches the issuer's 2.45M, the first is more likely.\nSeparately, flow_tokens.routed_to_prime sums to 3,000,021 LIT for Q3, more than the Q3 buys. The document does not mention it.",
+            "valueDirection": "unknown",
+            "proposedFix": "Find out whether the Robinhood instance has its own treasury or fee account and whether it buys LIT. If it does, extend lit.treasury_buys_daily to read that account too, and the holder flow rises by about 13% (direction up). If it does not, no code change is needed. The analyst should then treat \"100% of trading revenue\" as core-only. Robinhood-instance growth would not reach the buyback, which matters because the issuer says that instance grows faster.",
+            "evidence": [
+              15615,
+              15706,
+              15779,
+              15870,
+              16245,
+              25279,
+              16530,
+              16621
+            ],
+            "citations": [
+              {
+                "source": "doc:1",
+                "quotedText": "100% of trading revenue is used for buybacks. At this point, over 18 million lit has been bought back as of the end of Q3, 2.45 million in Q3",
+                "locator": "11:27",
+                "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+                "docKind": "machine_transcript"
+              },
+              {
+                "source": "doc:1",
+                "quotedText": "split again pretty evenly between Lighter core, evenly in terms of meaning relative to volume. So 87% Lighter core.",
+                "locator": "04:30",
+                "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+                "docKind": "machine_transcript"
+              }
+            ],
+            "fingerprint": "a5fb2aca2feec2686dcf0117a1b6ba19a04a518d9b2d5ff6c9fa131f5fe9889f"
+          },
+          {
+            "category": "supply",
+            "title": "Issuer states 109.8M LIT staked; Orion's staked_supply is a constant 0",
+            "metricKeys": [
+              "staked_supply"
+            ],
+            "claim": "The founder (doc:1, 2026-10-22) says 109.8M LIT is currently staked, about 11% of total supply and 44% of the 250M circulating figure.",
+            "orionReading": "staked_supply = 0 (obs 25269), a config constant: the staking rewards are bought LIT passed on, not a fee share. As a result, staked_ratio and real_staking_yield read 0 in the driver report. For scale, total supply is 981,909,280 (obs 25267), so the issuer's figure is an 11.2% staked ratio.",
+            "valueDirection": "none",
+            "proposedFix": "Keep the valuation treatment (the burn reaches every holder). Add a monitor-only staked LIT level from Lighter's API or staking contract, so the report shows the real staked share and the reader can size the staking-reward redistribution. Then rename the constant so the driver report does not state \"staked 0\" as a fact.",
+            "evidence": [
+              25269,
+              25267
+            ],
+            "citations": [
+              {
+                "source": "doc:1",
+                "quotedText": "as of the end of Q3, 2.45 million in Q3 and also 109.8 million lit is currently staked,",
+                "locator": "11:36",
+                "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+                "docKind": "machine_transcript"
+              }
+            ],
+            "fingerprint": "8b2b72b7d6cb88a9fbd2703cba72322887cd7f336565494a9dc9ca9a2167f99d"
+          }
+        ]
+      },
+      "signal_id": null,
+      "valuation_error": null
+    }
+  },
+  "staged": {
+    "assumptionChanges": [],
+    "resolutions": [],
+    "observations": [],
+    "proposals": [
+      {
+        "change": {
+          "kind": "config",
+          "edits": [
+            {
+              "path": [
+                "metrics",
+                "unlocks_next_year",
+                "source",
+                "params",
+                "tranches"
+              ],
+              "value": {
+                "first": "2027-01-29",
+                "every_months": 1,
+                "count": 36
+              }
+            }
+          ]
+        },
+        "filedAgainst": [
+          null
+        ],
+        "rationale": "Lighter's own unlock schedule differs from DefiLlama's model. In the Q3 2026 investor update (doc:1, machine transcript, 2026-10-22), founder Vlad says the team and investor unlocks run monthly over 36 months. The first one is 2027-01-29: the three-year window opens at the end of December and month one unlocks a month later. Tokenomics.com, which says its data is \"verified by the Lighter team\", lists the same shape: the next unlock is 2027-01-28 at 13.515M LIT, with 36 events in all. The two sources differ by one day. I used the issuer's date; inside a 365-day window that day only matters at the edge.\n\nOrion reads DefiLlama's emissions dataset (obs 25274: 135.98M over the next 365 days, Team 70.71M plus Investors 65.27M). DefiLlama models a weekly linear release from 2026-12-29 (1.661M + 1.533M a week, per the config comment). That counts about 42.6 weeks in the current window, and it starts the dilution a month early.\n\nThe adapter's documented tranches option can state the issuer's terms: monthly from 2027-01-29, 36 tranches. Today's window would then hold 9 tranches (Jan 29 to Sep 29, 2027). At about 498M/36 \u2248 13.8M each, that is roughly 125M, against 136M now. Until late January the metric would show no unlock as having happened, which is correct.\n\nEffect on the target: none. unlocks_next_year is monitor_only and feeds only the dilution line in the report. The fix makes that line, and the reader's dilution-versus-burn comparison, match the issuer's terms. It also settles the open question about a 2026-12-29 cliff: there is none. The first unlock is about 13.5\u201313.8M in late January.\n\nRevert if Lighter's docs or the first on-chain unlock show weekly or December releases.",
+        "evidence": [],
+        "citations": [
+          {
+            "source": "doc:1",
+            "quotedText": "So there's no cliff, what unlocks will happen literally over 36 months.",
+            "locator": "12:27",
+            "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+            "docKind": "machine_transcript"
+          },
+          {
+            "source": "doc:1",
+            "quotedText": "Actually, the first one will be January 29th of next year, because the three year window starts at the end of December, but then month one will be unlocked one month later.",
+            "locator": "12:33",
+            "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+            "docKind": "machine_transcript"
+          },
+          {
+            "source": "https://app.tokenomics.com/tokenomics/lighter/unlocks",
+            "quotedText": "The next LIT token unlock is scheduled for January 28, 2027 (in 97 days), releasing 13,515,000 tokens (1.4% of total supply).",
+            "locator": null,
+            "docSha256": null,
+            "docKind": null
+          }
+        ],
+        "effect": {
+          "6m": {
+            "from": 0.3485252632744437,
+            "to": 0.3485252632744437
+          },
+          "12m": {
+            "from": 0.38874561463164015,
+            "to": 0.38874561463164015
+          }
+        }
+      }
+    ],
+    "journal": {
+      "thesis": "LIT is a buyback-and-burn token on a perp DEX. Its fee share is falling and a monthly unlock overhang starts in late January 2027. Facts as of 2026-10-23:\n- Price $3.38 (obs 25265).\n- The 91d buyback run rate is $32.5M (obs 25282).\n- 30d Derivatives fee share is 3.07% against 4.15% over 1y (obs 25277/25278). Durability keys are on the bear side, as set last run.\n\nNew from the Q3 2026 investor update (doc:1, machine transcript; the figures are the issuer's dated claims):\n- The buyback tokens tie out exactly. Q3 buys were 2,444,357 LIT in Orion against 2.45M stated, and the burn total of 18,090,720 matches \"over 18 million\".\n- The buyback dollars ($7.41M in Q3) equal Lighter core's 87% share of the stated $8.5M revenue. The Robinhood instance's roughly $1.1M Lighter share does not appear to be bought back, despite the \"100% of trading revenue\" statement.\n\nThat matters for the thesis. The issuer says the Robinhood instance grows faster, so revenue growth may outrun buyback growth unless Robinhood fees get bought back too. Orion values the buyback flow, not revenue, so its target is unaffected. But I should not read the issuer's revenue growth as buyback growth.\n\nUnlocks: the issuer says monthly over 36 months, first on 2027-01-29, with no cliff. Tokenomics.com, Lighter-verified, gives 2027-01-28 and 13.5M. DefiLlama's weekly-from-12-29 model overstates the next-year dilution slightly (136M vs about 125M). Either way dilution is about 3x the buyback count in tokens, and far more in dollars than the buyback removes.\n\nUpside the engine does not price: a CFTC DCM/DCO filing in November 2026, Lighter EVM mainnet and vanilla options by year end. All are plans, not revenue.",
+      "openQuestions": [
+        "Does the Robinhood instance's Lighter revenue share get bought back? Q3 buys ($7.41M, ids 15615\u201315706) = 87% of stated $8.5M = the core share. If a separate account buys, extend the adapter; if not, treat '100% of trading revenue' as core-only and watch whether buyback growth lags revenue growth (dev finding filed).",
+        "flow_tokens.routed_to_prime: 3.0M LIT to Coinbase Prime in Q3 (ids 16530\u201316621), more than Q3 buys (2.44M). Not addressed in the Q3 call. Possibly the staking-reward or Robinhood pledge route. Find out what it is.",
+        "The pending config proposal sets unlocks_next_year tranches to monthly from 2027-01-29 \u00d736. If the user approves, check the metric drops to about 125M. A Messari search snippet showed 'Dec 30' and 17.4M events (not fetched). Confirm the first actual unlock on chain or in DefiLlama around 2027-01-28/29.",
+        "DefiLlama dailyRevenue Q3 is $9.85M vs the stated $8.5M. I infer it counts Robinhood gross before the 50-50 split (dev finding filed). Do not use llama_revenue as Lighter's net revenue.",
+        "Q4 burn check (early January 2027): the burn count should equal Oct\u2013Dec flow_tokens.buyback.",
+        "Dominance: carry over from the last run. If the 30d share stays below the 1y share for 2\u20133 more weeks, consider moving the bull durability keys; reverse the base moves if 30d climbs above about 3.6%.",
+        "Re-read primary sources (Lighter docs: fee split, buyback/burn policy, staking) next weekly run. The issuer states 109.8M LIT staked while staked_supply is a constant 0."
+      ],
+      "summary": "Disclosure run on doc:1, the Lighter Q3 2026 investor update (X video, machine transcript, published 2026-10-22). I compared every figure with Orion's own data for Q3 (2026-07-01 to 09-30).\n\nConsistent, nothing filed:\n- Q3 buybacks of 2.45M LIT match flow_tokens.buyback (2,444,357) and the 2026-10-09 burn.\n- \"Over 18 million\" bought and burned matches flow_tokens.burn (18,090,720) and total supply (obs 25267).\n- \"Over 7% of the original 250M burned\" is 18.09/250 = 7.2%.\n- The take rate of about 0.6bp is internally consistent: $8.5M on $137.67B is 0.62bp.\n\nFiled:\n1. Config proposal: unlocks_next_year gets adapter tranches {first 2027-01-29, monthly, 36}. This follows the issuer's statement and Tokenomics.com (fetched; Jan 28, 13.515M). It replaces DefiLlama's weekly-from-12-29 model, taking the next-365-day figure from 136M (obs 25274) to about 125M. No target effect (monitor_only).\n2. Revenue dev finding: DefiLlama revenue for Q3 is $9.85M and fees $12.46M, against $8.5M stated. Robinhood revenue is likely counted gross before the 50-50 split. There is also no volume metric, and reporting.volume points at gross fees.\n3. Holder-flow dev finding: buyback dollars of $7.41M equal exactly the 87% core share of revenue. The Robinhood share does not appear to be bought back, despite the \"100% of trading revenue\" claim. Q3 Prime routing was 3.0M LIT.\n4. Supply dev finding: 109.8M LIT staked is stated, while staked_supply is a constant 0.\n\nNot checked against Orion, because Orion has no metric for them: volume of $137.67B, OI of $1.6B (Robinhood $454M), 1M core accounts, 39.8k Robinhood accounts, Robinhood volume of $17.8B, about 70% RWA OI, premium taker share from 13% to 18%, 124 ecosystem projects, proving cost down more than 50%, proof time from 5 min to 1 min. I recorded no observations: every figure is from a machine transcript, and Orion has no manual metric for them.\n\nCatalysts: CFTC filing (Nov 2026) and review window, EVM mainnet, vanilla options with portfolio margin, first unlock, and the next quarterly update.\n\nNo assumption changes; none are available in a disclosure run, and nothing in the document bears on the dominance-driven keys. Searches: one, for the LIT unlock schedule. Fetches: Messari unlocks (failed), Tokenomics.com unlocks (ok).",
+      "catalysts": [
+        {
+          "event": "Lighter files for CFTC DCM and DCO licences",
+          "kind": "regulatory",
+          "from": "2026-11-01",
+          "to": "2026-11-30",
+          "citations": [
+            {
+              "source": "doc:1",
+              "quotedText": "And so the plan from here is to file for these licenses next month. And then from there, there's a period of up to 180 days",
+              "locator": "26:13",
+              "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+              "docKind": "machine_transcript"
+            }
+          ]
+        },
+        {
+          "event": "CFTC review of the DCM/DCO filing ends (up to 180 days after a November filing)",
+          "kind": "regulatory",
+          "from": "2026-11-01",
+          "to": "2027-05-29",
+          "citations": [
+            {
+              "source": "doc:1",
+              "quotedText": "for these licenses next month. And then from there, there's a period of up to 180 days that the agency would have to review now",
+              "locator": "26:17",
+              "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+              "docKind": "machine_transcript"
+            }
+          ]
+        },
+        {
+          "event": "Lighter EVM mainnet",
+          "kind": "product",
+          "by": "2026-12-31",
+          "citations": [
+            {
+              "source": "doc:1",
+              "quotedText": "So the mainnet is planned by year end.",
+              "locator": "18:18",
+              "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+              "docKind": "machine_transcript"
+            }
+          ]
+        },
+        {
+          "event": "Vanilla options live, with portfolio margin across spot, perps and options",
+          "kind": "product",
+          "by": "2026-12-31",
+          "citations": [
+            {
+              "source": "doc:1",
+              "quotedText": "Vanilla options are going live by end of year.",
+              "locator": "20:13",
+              "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+              "docKind": "machine_transcript"
+            },
+            {
+              "source": "doc:1",
+              "quotedText": "So this will be rolled out as part of the rollout for a vanilla options at the end of the quarter.",
+              "locator": "21:48",
+              "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+              "docKind": "machine_transcript"
+            }
+          ]
+        },
+        {
+          "event": "First monthly team and investor unlock (36 monthly tranches, about 13.5M LIT each)",
+          "kind": "token",
+          "from": "2027-01-28",
+          "to": "2027-01-29",
+          "citations": [
+            {
+              "source": "doc:1",
+              "quotedText": "Actually, the first one will be January 29th of next year, because the three year window starts at the end of December,",
+              "locator": "12:33",
+              "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+              "docKind": "machine_transcript"
+            },
+            {
+              "source": "https://app.tokenomics.com/tokenomics/lighter/unlocks",
+              "quotedText": "The next LIT token unlock is scheduled for January 28, 2027 (in 97 days), releasing 13,515,000 tokens (1.4% of total supply).",
+              "locator": null,
+              "docSha256": null,
+              "docKind": null
+            }
+          ]
+        },
+        {
+          "event": "Q4 2026 investor update (check Q4 burn vs Oct-Dec buys)",
+          "kind": "other",
+          "from": "2027-01-01",
+          "to": "2027-01-31",
+          "citations": [
+            {
+              "source": "doc:1",
+              "quotedText": "And we'll see you in a quarter.",
+              "locator": "41:29",
+              "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+              "docKind": "machine_transcript"
+            }
+          ]
+        }
+      ]
+    },
+    "devFindings": [
+      {
+        "category": "revenue",
+        "title": "DefiLlama revenue runs 16% above Lighter's stated Q3 revenue; no volume metric",
+        "metricKeys": [
+          "flow_usd.fees",
+          "flow_usd.llama_revenue"
+        ],
+        "claim": "In the Q3 2026 update (doc:1, machine transcript), the founder states:\n- Q3 revenue was $8.5M, 87% of it from Lighter core.\n- Volume was $137.67B, a take rate of about 0.6 bp.\n- The Robinhood instance's revenue is shown net of a 50-50 revenue share, with \"more than a million\" in fees attributed back to Lighter.\nSo the issuer's revenue is about $7.4M from core plus about $1.1M of Lighter's half of Robinhood-instance fees.",
+        "orionReading": "For 2026-07-01 to 2026-09-30, all 92 days covered:\n- flow_usd.llama_revenue (DefiLlama dailyRevenue) sums to $9,846,397, 16% above the stated $8.5M.\n- flow_usd.fees (DefiLlama dailyFees) sums to $12,457,687.\nThe gap of about $1.35M is close to the Robinhood partner's half: core $7.4M plus Robinhood gross of about $2.2M would make about $9.6M. That suggests DefiLlama counts the Robinhood-instance revenue before the 50-50 split. This is an inference; I could not check DefiLlama's breakdown.\nOrion has no volume metric. reporting.volume points at flow_usd.fees, which is gross fees, not volume, so no take rate can be computed against the stated 0.6 bp.",
+        "valueDirection": "none",
+        "proposedFix": "Check DefiLlama's Lighter adapter breakdown for Robinhood perps. If it books gross Robinhood fees as revenue, net the partner's 50% in the reporting revenue line, or label the line \"incl. partner share\". Add a monitor-only volume metric (DefiLlama dailyVolume for derivatives, or Lighter's API), and point reporting.volume at it instead of flow_usd.fees. Neither change moves the target, since the engine's revenue is the buyback flow.",
+        "evidence": [
+          16110,
+          16201,
+          15945,
+          16036
+        ],
+        "citations": [
+          {
+            "source": "doc:1",
+            "quotedText": "So the total revenue of the quarter, 8.5 million, split again pretty evenly between Lighter core, evenly in terms of meaning relative to volume.",
+            "locator": "04:22",
+            "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+            "docKind": "machine_transcript"
+          },
+          {
+            "source": "doc:1",
+            "quotedText": "And it generated fees such that as of end of Q3, already more than a million in fees attributed back to Lighter from the 50-50 split.",
+            "locator": "06:04",
+            "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+            "docKind": "machine_transcript"
+          },
+          {
+            "source": "doc:1",
+            "quotedText": "The total volume 137.67 billion for the quarter,",
+            "locator": "02:15",
+            "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+            "docKind": "machine_transcript"
+          }
+        ],
+        "fingerprint": "08d88059e124fce73fc34fb133819931ba1c70c06defe3763faafb7bf54f388a"
+      },
+      {
+        "category": "holder_flow",
+        "title": "Q3 buybacks equal Lighter core's revenue only, not the stated 100% of trading revenue",
+        "metricKeys": [
+          "flow_tokens.burn",
+          "flow_tokens.buyback",
+          "flow_tokens.routed_to_prime",
+          "flow_usd.buyback"
+        ],
+        "claim": "The founder (doc:1, machine transcript, 2026-10-22) makes three statements:\n- 100% of trading revenue is used for buybacks.\n- 2.45M LIT was bought back in Q3, and over 18M in total by the end of Q3, already burned on Ethereum.\n- Q3 revenue was $8.5M, 87% of it from Lighter core.",
+        "orionReading": "For 2026-07-01 to 2026-09-30, all 92 days covered:\n- flow_usd.buyback (account 0 bids on market 2049) sums to $7,410,898. That is 87.2% of $8.5M, almost exactly the stated core share (0.87 \u00d7 8.5M = $7.395M).\n- flow_tokens.buyback sums to 2,444,357 LIT, which matches the stated 2.45M.\n- flow_tokens.burn from 2026-06-01 to 2026-10-23 sums to 18,090,720 LIT, which matches the stated \"over 18 million\".\nThe token counts tie out. In USD, though, the buys cover the core revenue only. The Robinhood instance's roughly $1.1M Lighter share was either not bought back in Q3, or it was bought by an account the adapter does not read. Since the token count already matches the issuer's 2.45M, the first is more likely.\nSeparately, flow_tokens.routed_to_prime sums to 3,000,021 LIT for Q3, more than the Q3 buys. The document does not mention it.",
+        "valueDirection": "unknown",
+        "proposedFix": "Find out whether the Robinhood instance has its own treasury or fee account and whether it buys LIT. If it does, extend lit.treasury_buys_daily to read that account too, and the holder flow rises by about 13% (direction up). If it does not, no code change is needed. The analyst should then treat \"100% of trading revenue\" as core-only. Robinhood-instance growth would not reach the buyback, which matters because the issuer says that instance grows faster.",
+        "evidence": [
+          15615,
+          15706,
+          15779,
+          15870,
+          16245,
+          25279,
+          16530,
+          16621
+        ],
+        "citations": [
+          {
+            "source": "doc:1",
+            "quotedText": "100% of trading revenue is used for buybacks. At this point, over 18 million lit has been bought back as of the end of Q3, 2.45 million in Q3",
+            "locator": "11:27",
+            "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+            "docKind": "machine_transcript"
+          },
+          {
+            "source": "doc:1",
+            "quotedText": "split again pretty evenly between Lighter core, evenly in terms of meaning relative to volume. So 87% Lighter core.",
+            "locator": "04:30",
+            "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+            "docKind": "machine_transcript"
+          }
+        ],
+        "fingerprint": "a5fb2aca2feec2686dcf0117a1b6ba19a04a518d9b2d5ff6c9fa131f5fe9889f"
+      },
+      {
+        "category": "supply",
+        "title": "Issuer states 109.8M LIT staked; Orion's staked_supply is a constant 0",
+        "metricKeys": [
+          "staked_supply"
+        ],
+        "claim": "The founder (doc:1, 2026-10-22) says 109.8M LIT is currently staked, about 11% of total supply and 44% of the 250M circulating figure.",
+        "orionReading": "staked_supply = 0 (obs 25269), a config constant: the staking rewards are bought LIT passed on, not a fee share. As a result, staked_ratio and real_staking_yield read 0 in the driver report. For scale, total supply is 981,909,280 (obs 25267), so the issuer's figure is an 11.2% staked ratio.",
+        "valueDirection": "none",
+        "proposedFix": "Keep the valuation treatment (the burn reaches every holder). Add a monitor-only staked LIT level from Lighter's API or staking contract, so the report shows the real staked share and the reader can size the staking-reward redistribution. Then rename the constant so the driver report does not state \"staked 0\" as a fact.",
+        "evidence": [
+          25269,
+          25267
+        ],
+        "citations": [
+          {
+            "source": "doc:1",
+            "quotedText": "as of the end of Q3, 2.45 million in Q3 and also 109.8 million lit is currently staked,",
+            "locator": "11:36",
+            "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+            "docKind": "machine_transcript"
+          }
+        ],
+        "fingerprint": "8b2b72b7d6cb88a9fbd2703cba72322887cd7f336565494a9dc9ca9a2167f99d"
+      }
+    ]
+  },
+  "committed": {
+    "setVersion": null,
+    "observationIds": [],
+    "resolvedAnomalyIds": [],
+    "proposalIds": [
+      3
+    ],
+    "journalId": 39,
+    "devFindings": [
+      {
+        "category": "revenue",
+        "title": "DefiLlama revenue runs 16% above Lighter's stated Q3 revenue; no volume metric",
+        "metricKeys": [
+          "flow_usd.fees",
+          "flow_usd.llama_revenue"
+        ],
+        "claim": "In the Q3 2026 update (doc:1, machine transcript), the founder states:\n- Q3 revenue was $8.5M, 87% of it from Lighter core.\n- Volume was $137.67B, a take rate of about 0.6 bp.\n- The Robinhood instance's revenue is shown net of a 50-50 revenue share, with \"more than a million\" in fees attributed back to Lighter.\nSo the issuer's revenue is about $7.4M from core plus about $1.1M of Lighter's half of Robinhood-instance fees.",
+        "orionReading": "For 2026-07-01 to 2026-09-30, all 92 days covered:\n- flow_usd.llama_revenue (DefiLlama dailyRevenue) sums to $9,846,397, 16% above the stated $8.5M.\n- flow_usd.fees (DefiLlama dailyFees) sums to $12,457,687.\nThe gap of about $1.35M is close to the Robinhood partner's half: core $7.4M plus Robinhood gross of about $2.2M would make about $9.6M. That suggests DefiLlama counts the Robinhood-instance revenue before the 50-50 split. This is an inference; I could not check DefiLlama's breakdown.\nOrion has no volume metric. reporting.volume points at flow_usd.fees, which is gross fees, not volume, so no take rate can be computed against the stated 0.6 bp.",
+        "valueDirection": "none",
+        "proposedFix": "Check DefiLlama's Lighter adapter breakdown for Robinhood perps. If it books gross Robinhood fees as revenue, net the partner's 50% in the reporting revenue line, or label the line \"incl. partner share\". Add a monitor-only volume metric (DefiLlama dailyVolume for derivatives, or Lighter's API), and point reporting.volume at it instead of flow_usd.fees. Neither change moves the target, since the engine's revenue is the buyback flow.",
+        "evidence": [
+          16110,
+          16201,
+          15945,
+          16036
+        ],
+        "citations": [
+          {
+            "source": "doc:1",
+            "quotedText": "So the total revenue of the quarter, 8.5 million, split again pretty evenly between Lighter core, evenly in terms of meaning relative to volume.",
+            "locator": "04:22",
+            "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+            "docKind": "machine_transcript"
+          },
+          {
+            "source": "doc:1",
+            "quotedText": "And it generated fees such that as of end of Q3, already more than a million in fees attributed back to Lighter from the 50-50 split.",
+            "locator": "06:04",
+            "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+            "docKind": "machine_transcript"
+          },
+          {
+            "source": "doc:1",
+            "quotedText": "The total volume 137.67 billion for the quarter,",
+            "locator": "02:15",
+            "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+            "docKind": "machine_transcript"
+          }
+        ],
+        "fingerprint": "08d88059e124fce73fc34fb133819931ba1c70c06defe3763faafb7bf54f388a"
+      },
+      {
+        "category": "holder_flow",
+        "title": "Q3 buybacks equal Lighter core's revenue only, not the stated 100% of trading revenue",
+        "metricKeys": [
+          "flow_tokens.burn",
+          "flow_tokens.buyback",
+          "flow_tokens.routed_to_prime",
+          "flow_usd.buyback"
+        ],
+        "claim": "The founder (doc:1, machine transcript, 2026-10-22) makes three statements:\n- 100% of trading revenue is used for buybacks.\n- 2.45M LIT was bought back in Q3, and over 18M in total by the end of Q3, already burned on Ethereum.\n- Q3 revenue was $8.5M, 87% of it from Lighter core.",
+        "orionReading": "For 2026-07-01 to 2026-09-30, all 92 days covered:\n- flow_usd.buyback (account 0 bids on market 2049) sums to $7,410,898. That is 87.2% of $8.5M, almost exactly the stated core share (0.87 \u00d7 8.5M = $7.395M).\n- flow_tokens.buyback sums to 2,444,357 LIT, which matches the stated 2.45M.\n- flow_tokens.burn from 2026-06-01 to 2026-10-23 sums to 18,090,720 LIT, which matches the stated \"over 18 million\".\nThe token counts tie out. In USD, though, the buys cover the core revenue only. The Robinhood instance's roughly $1.1M Lighter share was either not bought back in Q3, or it was bought by an account the adapter does not read. Since the token count already matches the issuer's 2.45M, the first is more likely.\nSeparately, flow_tokens.routed_to_prime sums to 3,000,021 LIT for Q3, more than the Q3 buys. The document does not mention it.",
+        "valueDirection": "unknown",
+        "proposedFix": "Find out whether the Robinhood instance has its own treasury or fee account and whether it buys LIT. If it does, extend lit.treasury_buys_daily to read that account too, and the holder flow rises by about 13% (direction up). If it does not, no code change is needed. The analyst should then treat \"100% of trading revenue\" as core-only. Robinhood-instance growth would not reach the buyback, which matters because the issuer says that instance grows faster.",
+        "evidence": [
+          15615,
+          15706,
+          15779,
+          15870,
+          16245,
+          25279,
+          16530,
+          16621
+        ],
+        "citations": [
+          {
+            "source": "doc:1",
+            "quotedText": "100% of trading revenue is used for buybacks. At this point, over 18 million lit has been bought back as of the end of Q3, 2.45 million in Q3",
+            "locator": "11:27",
+            "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+            "docKind": "machine_transcript"
+          },
+          {
+            "source": "doc:1",
+            "quotedText": "split again pretty evenly between Lighter core, evenly in terms of meaning relative to volume. So 87% Lighter core.",
+            "locator": "04:30",
+            "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+            "docKind": "machine_transcript"
+          }
+        ],
+        "fingerprint": "a5fb2aca2feec2686dcf0117a1b6ba19a04a518d9b2d5ff6c9fa131f5fe9889f"
+      },
+      {
+        "category": "supply",
+        "title": "Issuer states 109.8M LIT staked; Orion's staked_supply is a constant 0",
+        "metricKeys": [
+          "staked_supply"
+        ],
+        "claim": "The founder (doc:1, 2026-10-22) says 109.8M LIT is currently staked, about 11% of total supply and 44% of the 250M circulating figure.",
+        "orionReading": "staked_supply = 0 (obs 25269), a config constant: the staking rewards are bought LIT passed on, not a fee share. As a result, staked_ratio and real_staking_yield read 0 in the driver report. For scale, total supply is 981,909,280 (obs 25267), so the issuer's figure is an 11.2% staked ratio.",
+        "valueDirection": "none",
+        "proposedFix": "Keep the valuation treatment (the burn reaches every holder). Add a monitor-only staked LIT level from Lighter's API or staking contract, so the report shows the real staked share and the reader can size the staking-reward redistribution. Then rename the constant so the driver report does not state \"staked 0\" as a fact.",
+        "evidence": [
+          25269,
+          25267
+        ],
+        "citations": [
+          {
+            "source": "doc:1",
+            "quotedText": "as of the end of Q3, 2.45 million in Q3 and also 109.8 million lit is currently staked,",
+            "locator": "11:36",
+            "docSha256": "bdea5e5169884f68312611d55dea81b35b275506d482784a10001291cf89352e",
+            "docKind": "machine_transcript"
+          }
+        ],
+        "fingerprint": "8b2b72b7d6cb88a9fbd2703cba72322887cd7f336565494a9dc9ca9a2167f99d"
+      }
+    ]
+  },
+  "signal": null
+}

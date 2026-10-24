@@ -38,7 +38,7 @@ def tweet(post_id):
 
 
 class FakeHttp:
-    """post() answers from a list (the last answer repeats); get() answers tweet-result by id."""
+    """post() answers from a list (the last answer repeats); get() answers tweet-result by id (else 503)."""
 
     def __init__(self, posts=None, tweets=None):
         self.posts = list(posts or [])
@@ -57,7 +57,7 @@ class FakeHttp:
         for post_id, body in self.tweets.items():
             if f"id={post_id}&" in url:
                 return 200, body
-        return 404, ""
+        return 503, ""  # an id without a body is an outage (a 404 would mean the post is gone)
 
 
 def ddg_ok():
@@ -268,7 +268,7 @@ class TestScan(Base):
         self.seed()
         http = FakeHttp(posts=[ddg_ok()], tweets=all_tweets())
         self.assertEqual(self.scan(http, date(2026, 10, 22)), [])
-        # Only the unknown fifth id is looked up; it 404s here, so it stays unknown (retried next run).
+        # Only the unknown fifth id is looked up; it 503s here, so it stays unknown (retried next run).
         self.assertEqual(len(http.get_calls), 1)
         self.assertIn(f"id={FIFTH}&", http.get_calls[0])
         st = self.state()
