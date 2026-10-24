@@ -4,7 +4,7 @@ Open items only. Built or closed items move to dev-queue-revenue-archive.md (sam
 
 Status 2026-10-24: LIT unlock cadence (proposal #3) applied live (main 4287b32). Open items below.
 Kanban (board `orion`, all assigned 2026-10-24): LIT revision check t_3bfa0ba7 DONE (main 0739cd6); loadEnv fix t_7a5fb5d1 DONE (main 08ab5f6, pushed); agent budget t_46c152b5 DONE (main 4a2f126, pushed);
-minors batch t_b3b09288 running.
+minors batch t_b3b09288 DONE (main c797f29 + docs 2611dee, pushed). Board clear as of 2026-10-24; only open item = LIT fee lag check (not a card).
 
 ## [DONE] Orion `loadEnv`: an empty process variable overrides `.env` (found 2026-10-23)
 - Built: t_7a5fb5d1, merged + built + pushed main 08ab5f6 (2026-10-24); blank process values no longer override `.env`; 13/13 whatif identical.
