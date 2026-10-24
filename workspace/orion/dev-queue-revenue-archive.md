@@ -107,3 +107,10 @@ Source: https://x.com/Lighter_xyz/status/2113065839352336774 (posted 2026-10-22)
     pool account 281474976624800 (= /systemConfig staking_pool_index): 110.92M LIT at 2026-10-23 23:34Z (11.3% of supply). Rewards are
     6%/365 of staked daily since 2026-07-07; the 2026-09-30 reward implies 109.76M (call: 109.8M). Source: /account?by=index&value=<pool>,
     asset symbol LIT. No history endpoint (levels start at go-live).
+
+## [DONE] LIT fee series: revision check (from the Lighter-API rollout, 2026-10-24)
+- Shipped main 0739cd6 (kanban t_3bfa0ba7, pushed 2026-10-24): no restatement. 10/16..10/23 baseline = stored = fresh
+  exchangeMetrics pull, $0 delta every day; all stored history (core 361 d, RH 119 d) matches. `days` left at 7.
+- Correction: the tick re-reads 3 written days (`REVISION_DAYS`, src/ingest/apiFlow.ts), not 7; `days` only sets the
+  adapter window. Wider revision coverage would need a code change (`revision_days` for adapter flows); not warranted.
+

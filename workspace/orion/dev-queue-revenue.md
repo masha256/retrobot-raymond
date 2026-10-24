@@ -3,6 +3,8 @@
 Open items only. Built or closed items move to dev-queue-revenue-archive.md (same folder).
 
 Status 2026-10-24: LIT unlock cadence (proposal #3) applied live (main 4287b32). Open items below.
+Kanban (board `orion`, all unassigned until Mike's go): LIT revision check t_3bfa0ba7 DONE (main 0739cd6); loadEnv fix t_7a5fb5d1;
+minors batch t_b3b09288; budget spec t_46c152b5.
 
 ## [OPEN] Orion `loadEnv`: an empty process variable overrides `.env` (found 2026-10-23)
 - `src/cli/env.ts` `loadEnv` returns `{ ...fromFile, ...processEnv }`, so `ANTHROPIC_API_KEY=""` in the process env (the
@@ -23,11 +25,11 @@ Status 2026-10-24: LIT unlock cadence (proposal #3) applied live (main 4287b32).
   config hash unchanged if the default is a pure re-weighting (or accept re-pins and say so).
 - Related option: on budget exhaustion, allow one final commit-only request so staged changes aren't lost.
 
-## [OPEN] LIT fee series: revision check (from the Lighter-API rollout, 2026-10-24)
-- Diff the stored `flow_usd.fees_core` / `flow_usd.fees_rh` rows for 2026-10-17..10-23 against
-  `workspace/orion/lit-scoping/revision-baseline-2026-10-24T0112Z.csv` after the next LIT tick (it re-reads 7 days).
-  Record restated days in `docs/superpowers/notes/2026-10-23-lit-lighter-api-followups.md`; if Lighter restates beyond
-  7 days, raise `days` for those metrics.
+## [OPEN] LIT fee series runs one day behind (found 2026-10-24, kanban t_3bfa0ba7)
+- fetch_run 272 (10-24 12:50Z) held back Lighter day 10-23 because no kind listed a row for today (adapter treats the
+  newest day as possibly partial). Lighter listed no 10-24 row at 01:28Z, 12:50Z, 15:48Z or 16:15Z. Nothing lost
+  (written next tick, inside the 3-day re-read; staleness_days 5). Check the 10-25 12:50Z run writes stamp 10-24 (day
+  10-23); if not, the series is stuck, not lagging -> adapter fix.
 
 ## [OPEN] Deferred minors from the 2026-10-23/24 builds (none blocks; triaged by the final reviews)
 - Disclosure watcher: `docs/superpowers/notes/2026-10-23-disclosure-watcher-followups.md` (Deferred minors).
