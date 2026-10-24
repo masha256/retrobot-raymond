@@ -1,0 +1,17 @@
+metric_key,observed_at,value
+flow_usd.fees_core,2026-10-17T00:00:00.000Z,100321.05
+flow_usd.fees_core,2026-10-18T00:00:00.000Z,54065.35
+flow_usd.fees_core,2026-10-19T00:00:00.000Z,85679.3
+flow_usd.fees_core,2026-10-20T00:00:00.000Z,122885.4
+flow_usd.fees_core,2026-10-21T00:00:00.000Z,140415.13
+flow_usd.fees_core,2026-10-22T00:00:00.000Z,118054.92
+flow_usd.fees_core,2026-10-23T00:00:00.000Z,123112.62
+flow_usd.fees_core,2026-10-24T00:00:00.000Z,87065.95
+flow_usd.fees_rh,2026-10-17T00:00:00.000Z,82360.43
+flow_usd.fees_rh,2026-10-18T00:00:00.000Z,47860.78
+flow_usd.fees_rh,2026-10-19T00:00:00.000Z,55491.5
+flow_usd.fees_rh,2026-10-20T00:00:00.000Z,68924.97
+flow_usd.fees_rh,2026-10-21T00:00:00.000Z,76499.49
+flow_usd.fees_rh,2026-10-22T00:00:00.000Z,92160.18
+flow_usd.fees_rh,2026-10-23T00:00:00.000Z,82623.03
+flow_usd.fees_rh,2026-10-24T00:00:00.000Z,71007.68
