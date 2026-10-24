@@ -3,16 +3,20 @@
 Open items only. Built or closed items move to dev-queue-revenue-archive.md (same folder).
 
 Status 2026-10-24: LIT unlock cadence (proposal #3) applied live (main 4287b32). Open items below.
-Kanban (board `orion`, all unassigned until Mike's go): LIT revision check t_3bfa0ba7 DONE (main 0739cd6); loadEnv fix t_7a5fb5d1;
-minors batch t_b3b09288; budget spec t_46c152b5.
+Kanban (board `orion`, all assigned 2026-10-24): LIT revision check t_3bfa0ba7 DONE (main 0739cd6); loadEnv fix t_7a5fb5d1 DONE (main 08ab5f6, pushed);
+minors batch t_b3b09288 running; budget spec t_46c152b5 running.
 
-## [OPEN] Orion `loadEnv`: an empty process variable overrides `.env` (found 2026-10-23)
+## [DONE] Orion `loadEnv`: an empty process variable overrides `.env` (found 2026-10-23)
+- Built: t_7a5fb5d1, merged + built + pushed main 08ab5f6 (2026-10-24); blank process values no longer override `.env`; 13/13 whatif identical.
 - `src/cli/env.ts` `loadEnv` returns `{ ...fromFile, ...processEnv }`, so `ANTHROPIC_API_KEY=""` in the process env (the
   Hermes agent terminal exports it empty) beats the real key in `<ORION_HOME>/.env`; a hand-run `orion agent run` then fails
   `no_credentials` ($0). Cron is unaffected (wrappers source `.env` with `set -a`).
 - Fix: skip process values that are empty or whitespace when merging (`.env` wins over an empty variable); test both orders.
 
-## [OPEN] Agent budget counts cache reads at full weight (found 2026-10-24, AERO deep run #44)
+## [IN PROGRESS] Agent budget counts cache reads at full weight (found 2026-10-24, AERO deep run #44)
+- Spec written (kanban t_46c152b5): branch feat/agent-budget-cost-weighted @ 7f7832f,
+  `docs/superpowers/specs/2026-10-24-orion-agent-budget-cost-weighted-design.md`; waiting on Mike's decisions (s.10).
+  Correction: #44 measured $2.50 at list price, not ~$3-4.
 - `src/config/agentPolicy.ts`: `inputTokens` = uncached + cache reads + cache writes, summed over requests, checked against
   one cap (deep default 2_000_000). Each request re-reads the whole context, so a long-context run hits the cap in a few
   requests even though cache reads cost ~10% of uncached input.
