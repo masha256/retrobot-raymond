@@ -12,5 +12,6 @@ assets:
         min_video_minutes: 10
         doc_kind: machine_transcript
         title: 'LIT investor update {year}Q{quarter}'
+        post_title: 'LIT post {date}'          # a text-only post (no video); {date} = its UTC date
     transcribe: { asr_model: small.en, initial_prompt: "Lighter, LIT, zkLighter, perps, buyback, Robinhood, staking, TVL, open interest" }
     run: { type: disclosure, auto: true }

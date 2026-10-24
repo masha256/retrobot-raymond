@@ -40,5 +40,9 @@ The worktree path. "Never touch /home/hermes/git/orion, no push, no merge, no ne
 - **Text cleaners for Slack or for files an LLM later reads:** remove control and format characters (Cc/Cf/...) FIRST, then strip `<@`, `<!`, `<#`, URLs and `<!--` markers, then cap. In the other order, a zero-width space inside `<!channel>` survives the regex and is re-joined into a live ping. Test with the sequence split by `\u200b` and `\x07`.
 - **A Python driver of the Orion CLI must treat an error as `exit != 0` or `data.get('error')` being a dict.** Run rows always carry `"error": null`, so a check for an `error` key fails on success. Fake-`node` tests never caught this; the one real end-to-end run did (the digest printed `est $?`). Run the paid acceptance through the real script, not by hand.
 
+## Old-vs-new whatif inside a task
+- `git worktree add $TMPDIR/orion-wt-base main` fails because `main` is checked out in the live tree; use `git worktree add --detach $TMPDIR/orion-wt-base main`. Give each tree its own read-only `.backup` DB copy and no `.env`, so one tree's writes can't affect the other's result.
+
 ## Stop point
+Final-review findings arrive after the task that wrote the followups note: append them to the note's open items (plus any rulings made since) in one docs commit before reporting, so the record is complete when the worktree goes.
 Stop where the plan says (usually before merge, live build, first live fetch and any paid analyst run Mike has not approved). Report the per-task commits, the real suite counts, the plan's checklist, and every `Ruling:` line from the ledger with what it costs if wrong.

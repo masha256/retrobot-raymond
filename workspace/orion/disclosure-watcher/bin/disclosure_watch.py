@@ -128,6 +128,27 @@ def latest_window(d, asset_cfg):
     return f"{qe.year}Q{(qe.month - 1) // 3 + 1}", qe + timedelta(days=asset_cfg["window"]["after_quarter_end_days"])
 
 
+def closed_windows(today, since, asset_cfg):
+    """[(key, last_day)] oldest first: every post-quarter window whose last day is in [since, today]. A window that
+    ended before the watcher started (since) is never one: the watcher could not have looked for its recording."""
+    out, d = [], today + timedelta(days=1)
+    while True:
+        key, last_day = latest_window(d, asset_cfg)
+        if last_day < since:
+            return out[::-1]
+        if last_day <= today:
+            out.append((key, last_day))
+        d = last_quarter_end(d)  # the window before: from the quarter end itself, so last_quarter_end steps back
+
+
+def watch_since_of(data, today):
+    """The day the watcher started on this asset: state's watch_since, else the first post it recorded, else today."""
+    if data.get("watch_since"):
+        return date.fromisoformat(data["watch_since"])
+    seen = [r.get("first_seen_at") for r in data.get("posts", {}).values() if r.get("first_seen_at")]
+    return min(date.fromisoformat(s[:10]) for s in seen) if seen else today
+
+
 def is_scan_day(today, cfg):
     """Daily from quarter end + 1 to quarter end + after_quarter_end_days; outside the window, Mondays only."""
     if window_of(today, cfg) is not None:
@@ -452,8 +473,11 @@ def _scan_asset_locked(asset, asset_cfg, base_dir, http, today, now, sleep, opts
     out = process_queued(asset, asset_cfg, state, base_dir, opts)
     for line in out:
         (alerts if line.startswith("ORION DISCLOSURE ALERT") else info).append(line)
-    key, last_day = latest_window(today, asset_cfg)
-    if today >= last_day:  # on the window's last day, or the first scan after it (a missed cron day still reports)
+    # Every window that has closed since the watcher started, oldest first: on its last day, or the first scan after
+    # it, however long the watcher was down (an outage past the next quarter end still reports the old window).
+    since = watch_since_of(state.data, today)
+    state.data["watch_since"] = since.isoformat()
+    for key, _last_day in closed_windows(today, since, asset_cfg):
         win = state.window(key)
         if win["found_post_id"] is None and not win["closed_reported"]:
             alerts.append(window_closed_line(asset, key))
@@ -740,6 +764,12 @@ def post_url(asset_cfg, post_id):
     return f"https://x.com/{asset_cfg['author']['handle']}/status/{post_id}"
 
 
+def post_title(feed, asset, created_at):
+    """A text-only post's doc title: the feed's post_title ({date} = the post's UTC date), else '<ASSET> post <date>'.
+    The feed's title names a call recording, so a plain post must not carry it."""
+    return feed.get("post_title", f"{asset.upper()} post {{date}}").format(date=created_at[:10])
+
+
 def quarter_key(d):
     """'<YYYY>Q<n>' of the latest quarter that ended before d (the quarter a call on d reviews)."""
     qe = last_quarter_end(d)
@@ -770,14 +800,28 @@ def run_json_path(post_id, tdir, opts):
     return Path(tdir) / f"{post_id}.run.json"
 
 
+def _completed(result):
+    return isinstance(result, dict) and isinstance(result.get("run"), dict) and result["run"].get("outcome") == "completed"
+
+
 def _write_run_json(path, result, asset, post_id):
-    """Write the raw `agent run --json` result (tmp + os.replace). -> [] or [an alert line]; never raises."""
+    """Write the raw `agent run --json` result (tmp + os.replace). A result that is not a completed run never replaces
+    a completed one already there (a failed --force retry): it goes to <name>.failed.json beside it, and a line says
+    so. -> [] or [one line]; never raises."""
+    note = []
     try:
+        if not _completed(result) and path.exists():
+            with contextlib.suppress(Exception):
+                if _completed(json.loads(path.read_text(encoding="utf-8"))):
+                    path = path.with_name(path.name[:-len(".json")] + ".failed.json") \
+                        if path.name.endswith(".json") else path.with_name(path.name + ".failed")
+                    note = [f"ORION DISCLOSURE {asset}: post {post_id}: the earlier completed run's JSON is kept; "
+                            f"this result is in {path.name}"]
         path.parent.mkdir(parents=True, exist_ok=True)
         tmp = path.with_name(path.name + ".tmp")
         tmp.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
         os.replace(tmp, path)
-        return []
+        return note
     except Exception as e:  # noqa: BLE001 - the run is done whatever happens here
         return [f"ORION DISCLOSURE ALERT {asset}: run json write failed for post {post_id}: "
                 f"{_one_line(f'{type(e).__name__}: {e}')}"]
@@ -800,9 +844,9 @@ def process_post(post_id, cfg, state, orion, opts):
     created_at = post["created_at"]
     year, quarter = quarter_key(parse_created_at(created_at).date())
     feed = _video_feed(cfg)
-    title = feed["title"].format(year=year, quarter=quarter)
     duration_ms = video_duration_ms(post)
     kind = feed.get("doc_kind", "machine_transcript") if duration_ms is not None else "post"
+    title = feed["title"].format(year=year, quarter=quarter) if kind != "post" else post_title(feed, asset, created_at)
     asr_model = cfg.get("transcribe", {}).get("asr_model") if kind == "machine_transcript" else None
     rec = state.get(post_id) or state.set(post_id, status="queued", kind="recording" if kind != "post" else "post")
     state.set(post_id, attempts=int(rec.get("attempts") or 0) + 1, error=None)

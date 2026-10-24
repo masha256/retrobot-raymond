@@ -114,3 +114,19 @@ Source: https://x.com/Lighter_xyz/status/2113065839352336774 (posted 2026-10-22)
 - Correction: the tick re-reads 3 written days (`REVISION_DAYS`, src/ingest/apiFlow.ts), not 7; `days` only sets the
   adapter window. Wider revision coverage would need a code change (`revision_days` for adapter flows); not warranted.
 
+## [DONE] Agent budget counts cache reads at full weight (found 2026-10-24, AERO deep run #44)
+Built: weighted input units (x1/x1.25/x0.1, same caps/key) + one journal-only reserve request on exhaustion; main 4a2f126 (merged, built, pushed 2026-10-24), 13/13 whatif identical, suite 100/1158. Notes: docs/superpowers/notes/2026-10-24-agent-budget-cost-weighted-followups.md.
+- Spec written (kanban t_46c152b5): branch feat/agent-budget-cost-weighted @ 7f7832f,
+  `docs/superpowers/specs/2026-10-24-orion-agent-budget-cost-weighted-design.md`; waiting on Mike's decisions (s.10).
+  Correction: #44 measured $2.50 at list price, not ~$3-4.
+- `src/config/agentPolicy.ts`: `inputTokens` = uncached + cache reads + cache writes, summed over requests, checked against
+  one cap (deep default 2_000_000). Each request re-reads the whole context, so a long-context run hits the cap in a few
+  requests even though cache reads cost ~10% of uncached input.
+- Run #44 (aero, deep, 2026-10-24): 5 requests, 172,555 uncached + 2,098,816 cache read + 177,334 cache write = 2.45M vs the
+  2M cap -> `budget_exhausted`, staged change discarded (base rev_growth_y1 0.30 -> 0.25, 12m $0.486 -> $0.475). Context was
+  ~690k chars (11 web searches at ~22k chars each, an 84k GitHub PR fetch, a 63k DefiLlama API fetch). Estimated ~$3-4.
+- Proposed design: a price-weighted budget (`input_cost_units` = uncached x1 + cache_write x1.25 + cache_read x0.1, or a
+  USD cap from a per-model price table) replacing or alongside the raw token cap; keep `requests` and output caps.
+  Recalibrate the per-run-type defaults so existing runs keep similar headroom on uncached input. Must leave every asset's
+  config hash unchanged if the default is a pure re-weighting (or accept re-pins and say so).
+- Related option: on budget exhaustion, allow one final commit-only request so staged changes aren't lost.
