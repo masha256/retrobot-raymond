@@ -191,15 +191,15 @@
       "schedule_display": "15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 1174
+        "completed": 1175
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-06T08:57:25.404654-07:00",
-      "next_run_at": "2026-10-25T05:15:00-07:00",
-      "last_run_at": "2026-10-25T03:15:42.783161-07:00",
+      "next_run_at": "2026-10-25T06:15:00-07:00",
+      "last_run_at": "2026-10-25T04:15:46.852040-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -219,17 +219,17 @@
       ],
       "workdir": null,
       "fire_claim": {
-        "at": "2026-10-25T04:15:29.555870-07:00",
-        "by": "uranus:2465761:822d4ef6b6464f51b305beeb7ef34f52"
+        "at": "2026-10-25T05:15:29.722957-07:00",
+        "by": "uranus:2465761:16e8001061c34801a90aa326fcfcd491"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-10-25T04:15:00-07:00",
-        "dispatched_at": "2026-10-25T04:15:28.530969-07:00",
+        "scheduled_at": "2026-10-25T05:15:00-07:00",
+        "dispatched_at": "2026-10-25T05:15:28.499362-07:00",
         "lateness_seconds": 28.5,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "a229586931994d6081331e57449e5ba2"
+        "b8c768bed4dc412ebf026a09c72ef251"
       ],
       "last_failure": {
         "at": "2026-10-21T10:16:52.511613-07:00",
@@ -259,15 +259,15 @@
       "schedule_display": "5 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 22
+        "completed": 23
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-03T01:55:31.725054-07:00",
-      "next_run_at": "2026-10-25T05:05:00-07:00",
-      "last_run_at": "2026-10-24T05:06:01.925632-07:00",
+      "next_run_at": "2026-10-26T05:05:00-07:00",
+      "last_run_at": "2026-10-25T05:06:28.902041-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -287,13 +287,13 @@
       "attach_to_session": false,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-24T05:05:00-07:00",
-        "dispatched_at": "2026-10-24T05:05:17.274697-07:00",
-        "lateness_seconds": 17.3,
+        "scheduled_at": "2026-10-25T05:05:00-07:00",
+        "dispatched_at": "2026-10-25T05:05:28.503762-07:00",
+        "lateness_seconds": 28.5,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "ba07fb82d1274e0fab3dde909f7f40e1"
+        "e9038436d7a84fc0b4ff493b0da95033"
       ]
     },
     {
@@ -319,15 +319,15 @@
       "schedule_display": "10 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 22
+        "completed": 23
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-03T01:55:32.697183-07:00",
-      "next_run_at": "2026-10-25T05:10:00-07:00",
-      "last_run_at": "2026-10-24T05:10:39.520647-07:00",
+      "next_run_at": "2026-10-26T05:10:00-07:00",
+      "last_run_at": "2026-10-25T05:10:58.802342-07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -347,13 +347,13 @@
       "attach_to_session": false,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-24T05:10:00-07:00",
-        "dispatched_at": "2026-10-24T05:10:17.239777-07:00",
-        "lateness_seconds": 17.2,
+        "scheduled_at": "2026-10-25T05:10:00-07:00",
+        "dispatched_at": "2026-10-25T05:10:28.502958-07:00",
+        "lateness_seconds": 28.5,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "c532f4f61a8d42c9886fcddcbf9404a6"
+        "5dbf6d8f87bd448fa2e3971381df89fd"
       ]
     },
     {
@@ -386,7 +386,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-03T01:55:33.657220-07:00",
-      "next_run_at": "2026-10-25T05:15:00-07:00",
+      "next_run_at": "2026-10-26T05:15:00-07:00",
       "last_run_at": "2026-10-24T05:19:36.475730-07:00",
       "last_status": "ok",
       "last_error": null,
@@ -405,11 +405,14 @@
       "enabled_toolsets": null,
       "workdir": "/home/hermes/git/orion",
       "attach_to_session": false,
-      "fire_claim": null,
+      "fire_claim": {
+        "at": "2026-10-25T05:15:29.619118-07:00",
+        "by": "uranus:2465761:53addf8a57ba474b942a61d56afb62f5"
+      },
       "last_dispatch": {
-        "scheduled_at": "2026-10-24T05:15:00-07:00",
-        "dispatched_at": "2026-10-24T05:15:17.241114-07:00",
-        "lateness_seconds": 17.2,
+        "scheduled_at": "2026-10-25T05:15:00-07:00",
+        "dispatched_at": "2026-10-25T05:15:28.499362-07:00",
+        "lateness_seconds": 28.5,
         "kind": "on_time"
       },
       "last_failure": {
@@ -1168,5 +1171,5 @@
       }
     }
   ],
-  "updated_at": "2026-10-25T04:15:29.556470-07:00"
+  "updated_at": "2026-10-25T05:15:29.723717-07:00"
 }
