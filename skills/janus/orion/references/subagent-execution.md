@@ -11,6 +11,8 @@ Use after Mike approves a plan and picks subagent-driven execution (superpowers:
 
    - For a plan that removes a CLI command group, check in the pre-flight scan which kept subcommands are registered under it (`grep -rn "register.*(<group>" src/cli`, e.g. `proposals` lived under `model`) and every live caller of the old path: `grep -o '<group> <sub>[a-z ]*' ~/.hermes/profiles/raymond/cron/jobs.json | sort | uniq -c` and the disclosure watcher's argv lists. A plan's "kept CLI" list can assume a top-level command that doesn't exist yet. Rule on the move (re-register at top level, no alias) and carry it to the deleting task, the docs task and the rollout's cron-prompt step.
    - For every symbol a task moves or deletes, `git grep` its importers yourself and compare with the task's file list. Plans written from a code search still miss callers inside code a later task deletes. Name the extra files in the dispatch as allowed one-line repoints, so the reviewer doesn't flag scope creep.
+   - For a removal plan, `git grep` the whole repo (README, `docs/` outside `superpowers/`, `skills/`, `personas/`, asset YAML comments, code comments) for every removed command, key and module name, and assign each hit to a task (usually the docs task). Stale docs and comments otherwise end up in no task's file list.
+   - When a task deletes a test file that holds hash pins, note what each pin guarded (e.g. a minimal-fixture hash that caught new schema defaults) and carry an equivalent cheap pin into the config task, so no guard is lost silently.
    - A plan step that a later phase replaces (e.g. per-asset cron prompts that a daemon will retire): rule it interim and minimal in the ledger, and say so in the dispatch, or the implementer polishes throwaway work.
    - **No-change proofs for a removal plan:** capture the baselines yourself before Task 1, with the OLD dist built in a detached worktree and a `.backup` snapshot of the live DB copied fresh for each run. Fix the report day `D` (the earliest default day across assets) and save `report yield <a> --day D --json` x all assets. For ingest, save `data fetch <a> --dry-run --json` reduced to sorted written metric keys plus `sourceId:status`; values and times are not compared because live data moves. A failed source drops its metrics from `written`, so exclude failed-source metrics on both sides when comparing, and ledger it.
 
@@ -52,6 +54,11 @@ The worktree path. "Never touch /home/hermes/git/orion, no push, no merge, no ne
 
 ## Old-vs-new whatif inside a task
 - `git worktree add $TMPDIR/orion-wt-base main` fails because `main` is checked out in the live tree; use `git worktree add --detach $TMPDIR/orion-wt-base main`. Give each tree its own read-only `.backup` DB copy and no `.env`, so one tree's writes can't affect the other's result.
+
+## Proofs that need `.env` or network
+- Run live dry-run fetch diffs and scratch ticks yourself (controller), not in an implementer: they need a `.env` copy (delete its `ORION_HOME=` line) and the network. Capture the old-dist baselines in Task 0 (`report yield --day D` on a `.backup` snapshot, and a reduced `data fetch --dry-run --json` = written metric keys + sourceId:status), delete every scratch home holding `.env` right after use, and record a source that failed in the baseline so the diff excludes it.
+- A lag or freshness figure read from a snapshot is pre-fetch; the daily tick fetches first, so production lags are a day shorter. Measure thresholds from a post-fetch scratch tick.
+- Before a plan removes a CLI parent command, grep for subcommands registered under it (`registerX(model, ...)`): Phase 1's `proposals` lived under `model`.
 
 ## Stop point
 Final-review findings arrive after the task that wrote the followups note: append them to the note's open items (plus any rulings made since) in one docs commit before reporting, so the record is complete when the worktree goes.
