@@ -1,4 +1,4 @@
-Raymond profile has its own Telegram bot (separate token), allow-listed to Mike's user ID 1620897892, systemd user service "hermes-gateway-raymond".
+Raymond has own Telegram bot, allow-listed to Mike (1620897892). All profiles run in one multiplexed hermes-gateway.service.
 §
 Mike runs 'janus' crypto trading pipeline (3 cronjobs: janus-regime 7:30am, janus-screen 7:45am, janus-score 8:00am, all deliver to Telegram; all 3 PAUSED by Mike 2026-10-21). Raymond profile (~/.hermes/profiles/raymond) auto-backs up to github.com/masha256/retrobot-raymond hourly at :15 via GH_PAT (account 'retrobitbot'); janus-score self-commits its own report+sources to that same repo right after writing them. Analogous val profile backs up to retrobot-val.
 §
