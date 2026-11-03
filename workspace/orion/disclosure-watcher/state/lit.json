@@ -36,6 +36,18 @@
       "status": "seeded",
       "updated_at": "2026-10-23T22:29:44Z"
     },
+    "2111481514676637854": {
+      "attempts": 0,
+      "doc_id": null,
+      "doc_sha256": null,
+      "error": null,
+      "first_seen_at": "2026-11-03T17:40:57Z",
+      "kind": null,
+      "run_id": null,
+      "run_outcome": null,
+      "status": "irrelevant",
+      "updated_at": "2026-11-03T17:40:57Z"
+    },
     "2113065839352336774": {
       "attempts": 2,
       "doc_id": 1,
@@ -51,7 +63,7 @@
   },
   "search": {
     "consecutive_failures": 0,
-    "last_ok_at": "2026-11-02T17:40:13+00:00"
+    "last_ok_at": "2026-11-03T17:40:56+00:00"
   },
   "watch_since": "2026-10-23",
   "windows": {
