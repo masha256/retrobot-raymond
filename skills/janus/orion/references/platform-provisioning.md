@@ -25,9 +25,27 @@ Raymond writes host setup as scripts in `scripts/provision/` (`dev-postgres.sh`,
 5. Verify his reported SELF-CHECK yourself where you can. Peer-auth Postgres needs the role named in the URL or `-U`, because the default role is the OS user (`psql -U orion_dev -d orion_test`).
 6. Keep a running list of the steps he still owes (cloud accounts, keys, webhooks, `.env` filling) in `~/.hermes/profiles/raymond/workspace/orion/phase1.5-mike-steps.md`, done vs deferred. When he asks "what was I supposed to do?", answer from it in two groups: needed now, and needed before the next milestone. Public keys he pastes go in `workspace/orion/venus-keys.md`.
 
+## External accounts Mike sets up (walk him through, secrets never in chat)
+- **Slack:** create one Slack app ("Orion", from scratch) at api.slack.com/apps and turn on Incoming Webhooks. Add one webhook per channel: #orion-ops for prod, #orion-staging for staging. It needs no bot or user scopes beyond the `incoming-webhook` scope Slack adds itself, because Orion only posts. Each URL goes in that env's `SLACK_WEBHOOK_URL`.
+- **healthchecks.io:** make cron-type checks in UTC.
+  - prod levels: `15 * * * *`, grace 30m
+  - prod nightly: `45 0 * * *`, grace 3h
+  - staging nightly: `45 2 * * *`, grace 3h
+  - backups: `0 9 * * *`, grace 2h. Keep it paused until backups are enabled; its URL goes into the backup timer, not `.env`.
+  - Integrations: email plus Slack to #orion-ops.
+  - Ping URLs: prod `ORION_DEADMAN_URL` (hourly) and `ORION_DEADMAN_NIGHTLY_URL`. Add the nightly line by hand, since the template only has the first. Staging gets only `ORION_DEADMAN_NIGHTLY_URL`.
+- **Server `.env` database URL:** name the role, e.g. `ORION_DATABASE_URL=postgresql://orion_prod@/orion_prod?host=/var/run/postgresql` (staging: `orion_stage`). A role-less URL makes libpq ask for the hyphenated OS user (`orion-prod`), which the `pg_ident` map refuses. Leave `ORION_DB_SCHEMA` unset (default `orion`). Mike's self-test: `sudo -u orion-prod psql '<url>' -Atc 'select current_user'` prints `orion_prod`. Fix the commented example in `files/env.template` with the next provisioning change if it is still role-less.
+- **CoinGecko before launch:** one free Demo key (developer dashboard, "+ Add New Key", `CG-...`) can serve prod and staging together while the hourly read is batched (~3k of 10k calls/month). Leave `COINGECKO_PLAN` unset or `demo`; set `pro` only together with the paid Basic key in prod, which must be in place before the site's live price layer (~43k/month at 60 s).
+- Deploy keys can't read `.env` (by design), so you can't verify these yourself. Give Mike a one-line self-test to run on the server instead, e.g. `sudo -u orion-stage bash -c 'set -a; . ~/shared/.env; curl -s -X POST -H "Content-type: application/json" --data "{\"text\":\"webhook test\"}" "$SLACK_WEBHOOK_URL"'`, which should print `ok`. Record each one as done-but-unverified in the steps file.
+- Don't claim a note was saved until the write has happened. If you said it and hadn't, correct it in the next reply.
+
 ## Deploy keys and snapshot repos (after the server run)
 - Create the per-env deploy keys on uranus only on Mike's go: `ssh-keygen -t ed25519 -N '' -f ~/.ssh/orion-<env>_ed25519`, never overwriting an existing file. Post the public halves as `echo '<key>' > /tmp/deploy-<env>.pub` lines plus the full re-run command with `--deploy-key-stage/--deploy-key-prod`.
 - Verify each key yourself, including the refusal of shell input: `ssh -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking=accept-new -i ~/.ssh/orion-<env>_ed25519 orion-<env>@<server> status`, then the same with `'id; cat .env'`. The second must be refused by `orion-remote`.
 - Forced-command keys block `scp`, so deploys stream the tarball over the SSH session's stdin.
 - Snapshot repos (one per env): private, created EMPTY (no README, licence or .gitignore, because the publisher makes the first commit and alerts on any commit it didn't write), default branch `main`, no branch protection. Each gets its env's server publish key as a deploy key with write access.
 - A personal-account GitHub repo has no read-only collaborator role: inviting `retrobitbot` always grants write. Accept invitations with `PATCH /user/repository_invitations/<id>` using GH_PAT. If Mike wants read-only, offer a read-only deploy key from uranus instead of the collaborator.
+
+## Deploying before cutover
+- The deploy script ships only commits reachable from `origin/main`, but the Postgres/daemon branches can't merge into main before cutover. For staging, tag on the feature branch, push the branch and tag, and deploy with an explicit `--branch <name>`. Prod refuses `--branch` and always needs main.
+- Raymond has no sudo on the server. Anything that needs root there (the full `orion-remote`, the daemon user unit, the watcher venv) ships as a change to `orion-host.sh`, which Mike re-runs. Unattended, stop at the ready-to-run command for him; never work around the forced command.

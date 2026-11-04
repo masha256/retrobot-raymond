@@ -23,5 +23,20 @@ Use when changing the Postgres-backed Orion (Phase 1.5b onward: `pg` pool, `Db` 
 - The SQLite RAISE triggers that tests used for fault injection become plpgsql `RAISE EXCEPTION` trigger functions, dropped in `finally`, because a file's schema outlives each test (tables are truncated, not dropped).
 - A `beforeAll` seed doesn't survive the per-test truncate. Assert on values captured in `beforeAll`, or seed in `beforeEach`.
 
+## Importing live SQLite and the row-for-row proof (tools/import-sqlite)
+Run it yourself (controller), never in a subagent. It reads a `.backup` of live, and the fetch leg needs a `.env` copy.
+1. Put the scratch area outside the worktree: `sqlite3 orion.db ".backup '<P>/snap.db'"`, then `PRAGMA integrity_check`. Copy `snap.db` into `<P>/old/orion.db`, and copy `assets/` (plus `personas/` and `skills/`) into both `<P>/old` and `<P>/new`.
+2. `<P>/new/.env` = only `ORION_DATABASE_URL=postgresql://orion_dev@/orion_dev?host=/var/run/postgresql` and `ORION_DB_SCHEMA=proof_<stamp>` (lowercase), mode 600. Migrate with `ORION_HOME=<P>/new node dist/cli/index.js db migrate --json`.
+3. Run from the worktree with `npx tsx tools/import-sqlite/cli.ts`:
+   - `import --from <snap> --to <url> --schema <s> --assets <wt>/assets --manifest-dir <dir>`, which writes `import-<stamp>.json`.
+   - `proof ... --manifest <json>`: per table, the row counts and sha256 must match, `first_mismatch` must be null, and each table's next id must equal its `sqlite_sequence` + 1.
+   - `reports --old-cli <sqlite release>/dist/cli/index.js --old-home <P>/old --new-cli <wt>/dist/cli/index.js --new-home <P>/new --day <D> --manifest <json> --out <dir>`. Expect 15 identical files for 13 assets: `report yield` per asset, plus the anomalies list and the proposals list.
+4. Expected exclusions, which you should report: observations of metrics no YAML declares any more, all `revenue_run_rate_usd`, whose count grows until the cutover; non-disclosure transcripts; `assumption_value` proposals; and the whole tables `config_versions`, `run_locks` and the valuation-era tables. Group the excluded ids by `metric_key` in the snapshot to prove what they are.
+5. Fetch leg: `data fetch <a> --dry-run --json` on both sides, reduced to the written metric keys plus `sourceId:status`. This needs a live `.env` copy with the `ORION_HOME=` line removed. Delete both copies, and drop every `proof_*` schema in `orion_dev`, at the end.
+6. Build the SQLite release for the old side in a detached `.worktrees/` checkout of the pre-conversion main (`npm ci`, `npm run build`), not under `$TMPDIR`.
+- A comparison that reports "identical" must also require non-empty, parseable output on both sides. A broken reducer, a wrong CLI path or a crashed command prints nothing on either side, and empty `cmp`s equal: count the sources and metric keys per asset and refuse zero.
+- Put any reducer or summariser in its own `.py` file (write_file, then `python3 <file> <dir>`), never as `python3 -c '...'` inside a bash script. Nested quote escaping (`\"` inside single quotes) is a Python SyntaxError that the `| reduce` pipe swallows, leaving both sides empty.
+- Write the proof as a script that saves every result to files, and inspect it by reading those files. Never re-invoke the script (e.g. `bash proof.sh | head`) just to view output: that runs the import again and leaves a second schema behind.
+
 ## Proving a conversion step changed nothing
 After each conversion task, build the branch and run old release vs new on two fresh `.backup` copies of live: `report yield <a> --day <fixed D> --json` x all assets, plus `data anomalies --all --json`, `proposals list --json`, `inbox --json` and `agent runs list --json`, each pair compared with `cmp`. `data sources` differs only in `ageDays`, which follows the clock, so exclude that field. Delete the scratch homes afterwards.
