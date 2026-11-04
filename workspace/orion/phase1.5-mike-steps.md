@@ -50,3 +50,14 @@ Until then: no WAL archive, no PITR, no dumps on venus. Fine while venus holds n
   live SQLite, start the staging daemon; staging posts to #orion-staging and publishes to orion-data-staging.
 - NOT without him: anything on prod (orion-prod), merging feat/platform-pg/feat/daemon into main, live install/cron/live DB
   writes, #orion-ops posts, analyst runs or other paid calls.
+
+## Before the first staging deploy (status 2026-11-04 ~02:00 PT)
+- Mike: `scp -r /home/hermes/orion-provision-f5f36fa/provision <you>@192.168.0.12:/tmp/` (as root on uranus), recreate
+  /tmp/deploy-{stage,prod}.pub if gone, run orion-host.sh with the same flags (--hostname venus --pg-datadir
+  /home/postgres/18/main --ssh-from 192.168.0.201 --ssh-from 100.109.70.114 --ssh-from 192.168.0.112 --deploy-key-stage
+  /tmp/deploy-stage.pub --deploy-key-prod /tmp/deploy-prod.pub), paste SELF-CHECK.
+- Mike: ORION_PUBLISH=git:git@github.com:masha256/orion-data.git#main (prod) and ...orion-data-staging.git#main (stage);
+  no ANTHROPIC_* in stage .env.
+- Raymond then: push tag orion-2026.11.04.2, deploy.sh stage orion-2026.11.04.2 --branch feat/daemon, import live
+  .backup into orion_dev scratch + proof, pg_dump -Fc -n orion, `refresh-staging --stdin <sha>`, report cmp, asset
+  activate x13, watch 02:45 UTC nightly. Runbook: docs/ops/deploy.md on feat/daemon.

@@ -46,6 +46,12 @@ Price-driver questions, explaining a price-vs-target gap, and new valuation idea
   - **Snapshot repos:** `masha256/orion-data` (prod) and `masha256/orion-data-staging` hold the venus publish keys as write deploy keys. retrobitbot is a collaborator with write, because personal-account repos have no read role; Mike said leave it. Never push there.
   - **Mike's pending steps:** tracked in `workspace/orion/phase1.5-mike-steps.md`. Backups (Spaces, pgbackrest.conf, age key, `--enable-backups`) were deferred by Mike: remind him by the first staging deploy. Slack webhooks come from a Slack app "Orion" with only the auto `incoming-webhook` scope; the URLs go straight into each env's `.env`, never into chat.
   - Phase 1.5b worktree: `/home/hermes/git/orion/.worktrees/platform-pg` (branch `feat/platform-pg`). Phase 1.5c worktree: `.worktrees/daemon` (branch `feat/daemon` = 1.5b + main merged in). Neither branch merges into main before the cutover, because the live install builds from main. Ledger copies are in `workspace/orion/phase1.5-sdd/`, refreshed after every task.
+  - **First staging deploy order** (final review, 2026-11-04): deploy, then load data, then `asset activate` each asset.
+    - The daemon's first start writes every asset as inactive, so `asset registry seed` is refused after any daemon start. Its first tick also runs each schedule entry's newest past slot.
+    - The importer can't run on venus, because it needs dev dependencies and has no tools to build there. So import and prove on uranus, then `pg_dump -Fc -n orion` and stream the dump with `ssh orion-stage@... refresh-staging --stdin <sha256> < dump` (fix wave 3).
+    - The daemon refuses to start in stage/prod without `ORION_PUBLISH`, `SLACK_WEBHOOK_URL` and `ORION_DEADMAN_NIGHTLY_URL` in its `.env`.
+    - Analyst runs are refused whenever `ORION_ENV=stage`.
+    - Releases are built into `/home/hermes/orion-releases/`. Hand Mike the provisioning scripts as a fixed `git archive` snapshot outside the worktree (e.g. `/home/hermes/orion-provision-<sha>`), never the moving worktree.
   - Before cutover, staging deploys come from a tag on `feat/daemon` pushed to GitHub (`deploy.sh stage --branch feat/daemon`); prod accepts only `origin/main`. Root-only steps on venus (the full `orion-remote`, the user unit, the watcher venv) are done by Mike re-running `orion-host.sh`. Raymond has no sudo there, so stop at a ready-to-run command for him.
 
 Until each phase ships, the rules below describe the live system.
