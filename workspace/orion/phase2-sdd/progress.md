@@ -43,3 +43,26 @@ Task 0: fix round 2/5 committed ecfbe55 (39 unittests OK); scoped re-review disp
 Task 1: fix (R8) committed eca4c4d (21/21; tests/config+assets 18/168, no pin moved; suite 114/1228). Review dispatched (ca1bc8e..eca4c4d, src+tests).
 Task 2: dispatched (BASE eca4c4d) in parallel with both reviews; rulings in task-2-rulings.md (R3/R6 probe done, R8 _rev renames).
 Ruling R9: Task 2 runs in parallel with Task 1's review — schema findings get their own fix commit after — costs a possible re-touch of a few YAML lines if the review changes a key.
+Task 0: re-review: I1 I2 I3 M1 M5 ADDRESSED, no new C/I. Task 0: complete (commits d614b08..ecfbe55, review clean after 2 fix rounds).
+Task 0: minor (deferred): coverage check doesn't require the 13 named assets to be present in the run; get_path can't address ids containing '.'.
+Task 1: review: spec compliant, quality approved, 0 C / 0 I / 5 M. Ruling R11: fix all 5 minors (M3 capture_rule required on measured to-holders below_line, M4 paid_metric double-read guard are behaviour; M1/M2/M5 test strength) before Task 3 relies on the schema — costs one small commit.
+Task 2: implementer NEEDS_CONTEXT, nothing committed: disclosure.e2e LIT_HASH pin. Ruling R10: re-pin LIT_HASH (LIT's own asset pin; fixture unchanged).
+Dispatch: one implementer, commit A = Task 1 minors fix (BASE eca4c4d), commit B = Task 2 (worktree changes kept) with R10 + crv capture_rule.
+Task 1: fix round 2/5 committed 511c27d (M1-M5; mutation-tested 16 checks). Scoped re-review dispatched (eca4c4d..511c27d).
+Task 2: committed 8f4cdc2 (suite 114/1250; assets/config/e2e 19/201 verified by controller; assets diff 0 removed lines; fixtures unchanged; only LIT_HASH line changed in disclosure.e2e).
+Task 2 Step 5 (controller): built dist at 8f4cdc2, reports vs release f5f36fa on p2proof_20261104t214336z, D=2026-11-02: 13/13 legacy identical + anomalies + proposals PASS; asset validate crv/lit ok. Task 2: review dispatched (511c27d..8f4cdc2). Task 3: dispatched (BASE 8f4cdc2).
+Task 1: re-review all M1-M5 ADDRESSED, no new breakage. Task 1: complete (commits ca1bc8e..511c27d incl. fc5587b, eca4c4d, 511c27d; review clean after 2 fix rounds).
+Task 1: minor (deferred): paid_metric guard untested for share_metric/run_rate readers (both levels; unreachable by a flow).
+Task 2: review spec OK, quality approved, 3 M. Task 2: complete (commits 511c27d..8f4cdc2, review clean).
+Task 2: minor (deferred): statementShape tests pin ids/of only (parity proof covers values); disclosure.e2e preApprovalLitYaml replaces only first NOTE_NOW (latent).
+G1 QUESTION for Mike (from Task 2 review M2): yCRV revenue (splitter gross) includes auctioned third-party vote incentives (~74% of yCRV flow per ycrv.yaml header), while sdCRV bribes go below the line under rule 3 — inconsistent; raise at G1 with figures.
+Task 3: implementer DONE_WITH_CONCERNS b3b423d (suite 116/1303; parity.json 262 pairs).
+Ruling R12: accept SKY 'protocol' pair excluded from parity (v1 residue ~-1e-10 vs v2 exact 0; rel tolerance can't compare) — costs nothing as long as SKY protocol is 0 by construction; reviewer to confirm.
+Ruling R13: accept lit.unlocks_next_year -> third_party (reads DefiLlama emissions) — correct per rule 1.
+Task 3 choices (perToken on net holder flow, dilution per token in USD, remainder/unreconciled = revenue - measured costs when a cost is n/m, below-line toHolders sums measured lines only) go to the reviewer as named risks and to Mike's G1 table notes.
+R4 carry to Task 4 (consumers of report yield JSON / the in-process report): src/app/tick.ts -> summarizeHolderYield (in-process; must keep legacy fields), src/push/body.ts (legacy:true, P2), tools/import-sqlite/reports.ts (cutover proof compares report yield --json bytes across releases: needs --legacy on a v2 release or stays a pre-Phase-2 tool — document), docs/ops/deploy.md:136-148 (stage vs ref report yield cmp, same release both sides: fine, but update text), docs/ops/daemon.md:135 (orion-remote read-only verb list), docs/ops/hermes-daily-job.md (main/SQLite only; untouched).
+Task 3: review dispatched (8f4cdc2..b3b423d). Task 4: dispatched (BASE b3b423d).
+Task 3: review spec issues, quality needs fixes (0 C / 4 I / 8 M); rulings in task-3-findings.md (fix I1-I4, M1-M6, M8; M7 -> G1 note). Real-data check by reviewer: all 262 parity pairs bit-equal on p2proof schema, 5 days x 10 assets.
+Task 4: implementer DONE_WITH_CONCERNS 30e3bde (suite 116/1329). Rulings task-4-rulings.md: C1-C3 accepted, C4 fix (catch v2 errors; alert line).
+Task 3: fix round 1/5 + Task 4 C4 fix dispatched to one implementer (two commits, BASE 30e3bde). Task 4: review dispatched in parallel (b3b423d..30e3bde), findings go into a later round.
+Early proof (controller) on 30e3bde (pre-fix), detached worktree, D=2026-11-02: 13/13 legacy identical + parity (262 pairs) + reclass PASS. v2 table saved v2-table-30e3bde-D20261102.tsv (AERO belowLine 0.00 -> null after I3).

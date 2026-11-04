@@ -1,0 +1,14 @@
+asset	scope	rev	cost	GP	holders	buckets	protocol	opex	belowLine	unrec	payout	basis	thirdParty	costNM
+aero	protocol_share_only	79.81	—	—	79.81	cash:79.81	0.00	0.00	0.00	0.00	1.00	revenue	revenue.fees,holders.voter_fees	lp_fees
+cake	protocol_share_only	79.74	—	—	58.37	burn:58.37	21.37	0.00	0.00	0.00	0.73	revenue		lp_fees
+crv	protocol_share_only	5.84	—	—	5.26	cash:5.26	0.58	0.00	7.12	0.00	0.90	revenue	below_line.vote_incentives	lp_fees
+cvxcrv	complete	6.11	0.00	6.11	4.70	cash:4.70	1.31	0.10	0.41	-0.00	0.77	grossProfit		
+hype	protocol_share_only	1012.28	—	—	1012.28	burn:1012.28	-0.00	0.00	0.00	0.00	1.00	revenue	revenue.trading,holders.af_buyback	hlp,builders,deployers,referrers
+link	protocol_share_only	57.17	—	—	57.17	hold:57.17	0.00	0.00	0.00	0.00	1.00	revenue		node_operators
+lit	complete	51.89	9.01	42.89	37.81	burn:37.81	5.08	0.00	0.00	0.00	0.88	grossProfit		
+pump	protocol_share_only	687.60	—	—	317.71	burn:317.71	369.89	0.00	0.00	0.00	0.46	revenue	revenue.protocol	creators,lps
+sdcrv	complete	1.91	0.00	1.91	0.90	cash:0.90	0.90	0.12	1.70	-0.00	0.47	grossProfit		
+sky	protocol_share_only	54.65	—	—	54.65	cash:54.65	0.00	0.00	0.00	0.00	1.00	revenue		savers
+uni	protocol_share_only	142.04	—	—	142.04	burn:142.04	0.00	0.00	0.00	0.00	1.00	revenue		lps
+vvv	complete	150.00	—	—	10.53	burn:10.53	139.47	0.00	0.00	0.00	0.07	revenue	revenue.business.cross_check	compute
+ycrv	complete	2.25	0.00	2.25	1.62	cash:1.62	0.63	0.00	0.00	-0.00	0.72	grossProfit		

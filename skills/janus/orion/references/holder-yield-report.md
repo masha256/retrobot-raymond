@@ -36,3 +36,15 @@ Live since 2026-10-10 (main `901070a`, spec `docs/superpowers/specs/2026-10-10-o
 - A remainder_of statement is only as good as both proxies agreeing: DefiLlama can revise a holders series weeks later (nightly re-reads only the last 3 days, `REVISION_DAYS`), which shows up as fake protocol income. Check with `data fetch <a> --metric <flow> --backfill-days 100 --dry-run` (lists "revised by the source" days); a real fetch supersedes them.
 - `report yield` with no `--day` picks the newest day of the holder flows only; if a revenue series lags a day, revenue prints n/a. Pass `--day` = the last day every series has (fix pending).
 - Backfilling 362d of a transfer_flow takes >7 min; run it with background=true (a foreground terminal timeout kills it mid-way; rerunning resumes).
+
+## Income statement v2 (Phase 2; spec `2026-10-28-orion-data-strategy-income-v2-design.md`, Mike's D1-D9 + P1-P4)
+The v1 block above stays live (and stays the `--legacy` output) until v1 is retired one release later. v2 conventions, which every later asset and phase must follow:
+- Config: one `income_statement` block beside `reporting`/`holder_flows`: `revenue` (everything users pay, partner/builder shares included) → `cost_of_revenue` → gross profit → `holders` (bucket burn/hold/cash) / `protocol` / `operating_costs` (keepers, callers, boost delegators) → `below_line` (not paid by users: third-party bribes, treasury programs). Pass-through emissions stay `volume`.
+- Line ids are unique across ALL sections; a use line passing a revenue line on uses `of: <id>`, never the same `metric` (double-read refused). When names collide, the revenue line gets `_rev`.
+- `not_measured: "<why, which phase fills it>"` is shown as n/m and NEVER zero-filled: any not_measured line makes its section total null and propagates (gross profit, take rate, unreconciled). A section whose lines are all not_measured is null, not 0.
+- Payout ratio = holders / gross profit; when gross profit is n/m it falls back to holders / revenue with `payoutRatioBasis: 'revenue'` and a flag (keeps every v1 ratio). Keep a separate flag for a data gap vs a not_measured line.
+- `holderFlow.net` = after haircuts (spec §7); `holderFlow.netOfDilution` = net − dilution at price (spec §6 "net holder flow"). Name both; they are different numbers.
+- `scope: protocol_share_only` beside every revenue figure until a gross series exists, so the site never compares a protocol share with gross fees unflagged. Every DefiLlama/llama.box-fed line lands in `provenance.thirdParty` (metric-level cross_checks and derived metrics with a third-party input included).
+- A disclosed revenue line carries the disclosure's growth and its cross_check, as v1 does.
+- A v2 computation error must never fail the legacy report, the tick or the snapshot: `incomeStatement: null` + an error field, and the nightly prints one alert line for that asset.
+- Only three assets move on the same stored data: sdCRV (bribes below the line), yCRV (splitter gross; st-yCRV fee excluded, see data-sourcing reference), LIT (Robinhood fees gross, Robinhood's 50% as cost of revenue).

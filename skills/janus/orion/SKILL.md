@@ -7,7 +7,7 @@ description: Use when operating, debugging, or developing orion.
 
 This skill covers Mike's orion valuation pipeline (VVV/HYPE/AERO/CRV/yCRV/cvxCRV/sdCRV/UNI/CAKE/LIT/LINK/SKY/PUMP live; PUMP is on Solana; LINK is the first buy-and-hold asset; yCRV/cvxCRV/sdCRV are CRV liquid-locker wrappers): diagnosing ingest failures, vetting or swapping data endpoints and API keys, running the test suite, onboarding and calibrating new assets. Mike manages orion development from the Raymond bot's orion-dev topic.
 
-Holder yield / growth / revenue reporting: see `references/holder-yield-report.md`.
+Holder yield / growth / revenue reporting, including the income statement v2 conventions (sections, `of`/`_rev` ids, not_measured never 0, payout-ratio basis, failure isolation): see `references/holder-yield-report.md`.
 Price-driver questions, explaining a price-vs-target gap, and new valuation ideas (TVL/TVS, network effects, capture options): see `references/price-drivers-and-valuation-gaps.md`.
 
 ## Direction (Mike, 2026-10-27): Orion = data core for coinrevs
@@ -55,6 +55,7 @@ Price-driver questions, explaining a price-vs-target gap, and new valuation idea
     - The daemon refuses to start in stage/prod without `ORION_PUBLISH`, `SLACK_WEBHOOK_URL` and `ORION_DEADMAN_NIGHTLY_URL` in its `.env`.
     - Analyst runs are refused whenever `ORION_ENV=stage`.
     - Releases are built into `/home/hermes/orion-releases/`. Hand Mike the provisioning scripts as a fixed `git archive` snapshot outside the worktree (e.g. `/home/hermes/orion-provision-<sha>`), never the moving worktree.
+  - **Phase 2 (data strategy + income statement v2)** is executed interactively in `.worktrees/data-strategy` on `feat/data-strategy`, stacked on `feat/daemon`. The ledger is in its `.superpowers/sdd/2026-11-04-orion-phase2-data-strategy-income-v2/` with copies in `workspace/orion/phase2-sdd/`; trust the ledger + `git log` over memory when resuming. The proof harness is `tools/phase2-proof/` (old side = the staging release tgz). Conventions settled there: `income_statement` line ids are unique across all sections, and a revenue line passed on by a same-named use line takes the suffix `_rev`. The plan stops at Mike's gate G1 (v2 table) after Task 4.
   - Before cutover, staging deploys come from a tag on `feat/daemon` pushed to GitHub (`deploy.sh stage --branch feat/daemon`); prod accepts only `origin/main`. Root-only steps on venus (the full `orion-remote`, the user unit, the watcher venv) are done by Mike re-running `orion-host.sh`. Raymond has no sudo there, so stop at a ready-to-run command for him.
 
 Until each phase ships, the rules below describe the live system.

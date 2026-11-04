@@ -5,3 +5,9 @@
 - Step 5's report-yield cross-release proof is a controller step: skip it, but DO run the full suite, typecheck, and confirm tests/agent/disclosure.e2e.test.ts passes unchanged.
 - Never edit `holder_flows` or `reporting` blocks (byte-for-byte); add `income_statement` as a new top-level block after `reporting`. Verify with `git diff -U0 assets/` that only added lines appear.
 - `capture_rule`, `recipient_base`, `valued_per`, haircuts: copy from each asset's existing holder_flows / reporting.haircuts where the table doesn't state them; where the table and the YAML disagree, the YAML wins and you list it.
+
+## Added after the first Task 2 attempt (binding)
+- R10: tests/agent/disclosure.e2e.test.ts `LIT_HASH` (line 35) IS LIT's own asset hash pin: re-pin it to the new lit.yaml hash. Nothing else in that test or its fixtures (tests/fixtures/disclosure/*) may change. "passes unchanged" in the brief means the replay and fixture.
+- statementShape helper in tests/helpers/assets.ts: accepted; stage it.
+- Gap fills accepted: HYPE and PUMP scope protocol_share_only; CRV category dex; check ids crv `splitter`, sdcrv `crv_fee`, ycrv `splitter`; HYPE `hlp` cost to lps; VVV `compute` to other; HYPE reserve_yield_paid capture_rule programmatic.
+- After the Task 1 schema fix (commit A) requires capture_rule on measured/run_rate to-holders below_line lines, crv vote_incentives needs `capture_rule: programmatic` (see task-1-findings.md rulings M3); recompute every hash pin after the final YAML.
