@@ -191,15 +191,15 @@
       "schedule_display": "15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 1423
+        "completed": 1424
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-06T08:57:25.404654-07:00",
-      "next_run_at": "2026-11-04T14:15:00-08:00",
-      "last_run_at": "2026-11-04T12:16:07.763458-08:00",
+      "next_run_at": "2026-11-04T15:15:00-08:00",
+      "last_run_at": "2026-11-04T13:16:09.794742-08:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -219,17 +219,17 @@
       ],
       "workdir": null,
       "fire_claim": {
-        "at": "2026-11-04T13:15:56.515200-08:00",
-        "by": "uranus:699275:36e485861cb347a59eb1a686a09df5ba"
+        "at": "2026-11-04T14:15:56.554999-08:00",
+        "by": "uranus:699275:b1f47a673bfe49a38e88aa969978eec1"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-11-04T13:15:00-08:00",
-        "dispatched_at": "2026-11-04T13:15:55.514675-08:00",
+        "scheduled_at": "2026-11-04T14:15:00-08:00",
+        "dispatched_at": "2026-11-04T14:15:55.516337-08:00",
         "lateness_seconds": 55.5,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "a5ae30f994ed42debf865fd4f8a89067"
+        "97d8dd60226649d98f72fda855d0d2fd"
       ],
       "last_failure": {
         "at": "2026-10-21T10:16:52.511613-07:00",
@@ -1170,7 +1170,7 @@
     {
       "id": "c99cb6b3425f",
       "name": "orion-staging-first-nightly-check",
-      "prompt": "One-shot, CHECK ONLY (no writes, no deploys, no activations, no run-now). Context: Orion Phase 1.5 staging went live 2026-11-04 ~20:50 UTC on venus (192.168.0.12) as Unix user orion-stage, release orion-2026.11.04.2 (feat/daemon f5f36fa), Postgres orion_stage, 13 assets active (aero cake crv cvxcrv hype link lit pump sdcrv sky uni vvv ycrv), staging data loaded from a proven copy of live and 13 run-now refreshes all ingest ok with 0 failed sources. The first SCHEDULED staging nightly was due at 2026-11-05T02:45:00Z (nightly_report waits for the slot's refresh jobs, posts to #orion-staging, pings the healthchecks stage-nightly check, records a full snapshot, then snapshot_push commits to github masha256/orion-data-staging). Known open item: the weekly staging_refresh fails with EACCES on /home/orion-refresh/latest.dump until Mike runs `sudo systemctl restart user@$(id -u orion-stage).service` on venus (low urgency).\n\nDo, from uranus as hermes: ST='ssh -i ~/.ssh/orion-stage_ed25519 -o IdentitiesOnly=yes -o BatchMode=yes orion-stage@192.168.0.12' (forced command orion-remote; output is JSON; no --json flag).\n1. `$ST status` and `$ST jobs`: for slot 2026-11-05T02:45:00Z list each refresh (asset, status, ingest.outcome, sources_failed) and the nightly_report (status, delivered, deadman) and the snapshot_push after it (pushed, ref). Also report whether status shows `soak` for orion-2026.11.04.2 now.\n2. `$ST logs 200` and pick out any ALERT / failed / undelivered lines since 02:00Z.\n3. GitHub: with GH_PAT from ~/.hermes/profiles/raymond/.env (never print it), `curl -s -H \"Authorization: Bearer $GH_PAT\" https://api.github.com/repos/masha256/orion-data-staging/commits?per_page=5` and the tree of main: confirm a new 'full seq N day 2026-11-04' commit and that assets.json now lists 13 active assets and full/latest.json has 13 asset reports (sizes are enough; print no data).\n4. Reply in 5-8 short bullets for Mike: nightly ran yes/no; refreshes N/13 ok with any failed sources named; Slack delivered and dead-man pinged yes/no; snapshot commit sha and asset count; soak status; anything that needs him (exact command). If something failed, quote the error line and say what you would do, but do not change anything.",
+      "prompt": "One-shot, CHECK ONLY (no writes, no deploys, no activations, no run-now). Context: Orion Phase 1.5 staging went live 2026-11-04 ~20:50 UTC on venus (192.168.0.12) as Unix user orion-stage, release orion-2026.11.04.2 (feat/daemon f5f36fa), Postgres orion_stage, 13 assets active (aero cake crv cvxcrv hype link lit pump sdcrv sky uni vvv ycrv), staging data loaded from a proven copy of live and 13 run-now refreshes all ingest ok with 0 failed sources. The first SCHEDULED staging nightly was due at 2026-11-05T02:45:00Z (nightly_report waits for the slot's refresh jobs, posts to #orion-staging, pings the healthchecks stage-nightly check, records a full snapshot, then snapshot_push commits to github masha256/orion-data-staging). The earlier staging_refresh EACCES (job 4) is FIXED: Mike restarted orion-stage's user manager on 2026-11-04 and the daemon pid 33378 carries group 994 orion-refresh; do not ask him for it again (the first real read test is Sun 2026-11-08 10:30Z).\n\nDo, from uranus as hermes: ST='ssh -i ~/.ssh/orion-stage_ed25519 -o IdentitiesOnly=yes -o BatchMode=yes orion-stage@192.168.0.12' (forced command orion-remote; output is JSON; no --json flag).\n1. `$ST status` and `$ST jobs`: for slot 2026-11-05T02:45:00Z list each refresh (asset, status, ingest.outcome, sources_failed) and the nightly_report (status, delivered, deadman) and the snapshot_push after it (pushed, ref). Also report whether status shows `soak` for orion-2026.11.04.2 now.\n2. `$ST logs 200` and pick out any ALERT / failed / undelivered lines since 02:00Z.\n3. GitHub: with GH_PAT from ~/.hermes/profiles/raymond/.env (never print it), `curl -s -H \"Authorization: Bearer ***\" https://api.github.com/repos/masha256/orion-data-staging/commits?per_page=5` and the tree of main: confirm a new 'full seq N day 2026-11-04' commit and that assets.json now lists 13 active assets and full/latest.json has 13 asset reports (sizes are enough; print no data). Before activation assets.json was 3 bytes and full/latest.json 312 bytes; they must be far larger now.\n4. Reply in 5-8 short bullets for Mike: nightly ran yes/no; refreshes N/13 ok with any failed sources named; Slack delivered and dead-man pinged yes/no; snapshot commit sha and asset count; soak status; anything that needs him (exact command). If something failed, quote the error line and say what you would do, but do not change anything.",
       "skills": [
         "orion"
       ],
@@ -1207,7 +1207,7 @@
       "last_delivery_unverified": null,
       "last_failure": null,
       "failure_streak": 0,
-      "deliver": "slack:C0CB8SJKM8C:1793249245.302979",
+      "deliver": "slack:C0CB8SJKM8C:1793827233.945569",
       "origin": {
         "platform": "slack",
         "chat_id": "C0CB8SJKM8C",
@@ -1222,7 +1222,64 @@
       ],
       "workdir": null,
       "timezone": "America/Los_Angeles"
+    },
+    {
+      "id": "e2fb64f34263",
+      "name": "orion-stage-soak",
+      "prompt": "Daily staging soak check for Orion (READ-ONLY; never write to staging, prod, the live repo/DB, or any GitHub repo; no paid/analyst calls; no `job run-now`).\n\nBackground: staging = `orion daemon` on venus (orion-stage@192.168.0.12, Postgres orion_stage), release tag from branch feat/daemon, 13 assets active since 2026-11-04 ~20:55 UTC. Goal: soak it for a few days so Mike can merge feat/daemon to main and cut prod over. Prod is still SQLite + Hermes cron (/home/hermes/git/orion, main). The injected script output (orion-stage-soak.py) holds: stage `status`, jobs from the last 30h (problem_jobs = not done / ingest not ok / failed / undelivered), interesting log lines, `snapshot_repo` (latest commits, file sizes and assets.json count of github masha256/orion-data-staging, read via API), and per-asset PARITY of price-independent report fields (flow gross/net, holder-flow growth current/prior, revenue annualized) stage vs prod for the same report day. Extra read-only probing allowed: `ssh -i ~/.ssh/orion-stage_ed25519 -o IdentitiesOnly=yes orion-stage@192.168.0.12 <status|jobs|logs N|report yield <a>>` and `node dist/cli/index.js report yield <a> --json` in /home/hermes/git/orion. The daemon heartbeat is every 15 min, so a beat up to ~16 min old is fresh.\n\nSchedule on staging (UTC): nightly 02:45 (refresh x13 + nightly_report + snapshot_push), levels every 6h at :15, disclosure_watch 16:40 (dry), retention 03:30, staging_refresh weekly Sun 10:30.\n\nKnown/expected items (mention once briefly, don't alarm): (1) staging_refresh job 4 failed EACCES on /home/orion-refresh/latest.dump at first start (2026-11-04 20:50Z). Fixed 2026-11-04: Mike restarted orion-stage's user manager and confirmed the daemon (pid 33378) now carries group 994 orion-refresh. The first real test is the Sun 2026-11-08 10:30Z slot; report its result (EACCES again = group still missing; ENOENT/no dump = expected before cutover since prod has no Postgres dump yet). (2) VVV acknowledged anomaly #2 (DefiLlama April cross-check 8.9% outside 5%) re-seen each run, expected. (3) CRV `flow.vote_incentives` is a run-rate LEVEL read at fetch time (llama.box), so stage vs prod differ by <~2% from fetch timing; not a parity failure. (4) PUMP solana.supply_burn_daily for the most recent closed day is not stable for hours after UTC close (known data issue), so a PUMP diff confined to the newest day is expected. (5) Report day may differ by one between stage and prod if one side has fetched a newer closed day; then compare carefully and say so rather than flagging. (6) The snapshot repo's first commits (2026-11-04 20:50Z) were made before assets were activated, so assets.json was empty then; from the 2026-11-05 nightly on, assets.json must list 13 assets and full/latest.json must be far larger than 312 bytes.\n\nPass criteria per day: daemon running with fresh heartbeat on the expected release; a scheduler-made nightly_report done for today's 02:45 UTC slot with all 13 refreshes done on that release, no failed sources, delivered true; `soak:` in status names the tag; levels and snapshot_push runs done (pushed) and a new 'full seq N day <yesterday>' commit in orion-data-staging with 13 assets; no unexpected daemon restarts or lease/retry errors in logs; parity match on every asset except the known items above.\n\nOutput (Slack, short, no tables): first line `STAGING SOAK day N (<date>): PASS` or `... : ISSUES (k)`, where N = count of scheduled nightlies done on the current release since 2026-11-05. Then bullets: nightly (slot, refreshes done/13, failed sources), soak line, levels/snapshot counts + snapshot commit sha and asset count, parity (\"13/13 match\" or list the asset + field + stage vs prod + likely cause), anything new in logs. Then one line `Merge readiness:` = number of clean consecutive nightlies out of the 3 Mike's gate needs, plus open blockers. If anything is new and unexplained, investigate read-only and give the cause or say plainly it is unknown. Never fabricate; if the script failed or SSH is down, say so with the error. Never print the GH_PAT.",
+      "skills": [
+        "orion"
+      ],
+      "skill": "orion",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "orion-stage-soak.py",
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 6 * * *",
+        "display": "30 6 * * *"
+      },
+      "schedule_display": "30 6 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-11-04T13:22:34.685359-08:00",
+      "next_run_at": "2026-11-05T06:30:00-08:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "last_failure": null,
+      "failure_streak": 0,
+      "deliver": "slack:C0CB8SJKM8C:1793827233.945569",
+      "origin": {
+        "platform": "slack",
+        "chat_id": "C0CB8SJKM8C",
+        "chat_name": "orion-dev",
+        "thread_id": null,
+        "user_id": "U0CBKGZFU9E",
+        "scope_id": "T0CAUSENDB6"
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "file"
+      ],
+      "workdir": null,
+      "attach_to_session": true,
+      "timezone": "America/Los_Angeles"
     }
   ],
-  "updated_at": "2026-11-04T13:15:56.515810-08:00"
+  "updated_at": "2026-11-04T14:15:56.555592-08:00"
 }

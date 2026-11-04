@@ -1,0 +1,3 @@
+# Task 1 controller ruling (binding)
+Ruling R8 (on implementer concern 1): line ids are unique across ALL sections, strictly, as spec §6 says ("every line id unique across sections"). Remove the exception that lets a use line reuse the id of the revenue line it names in `of`; keep/extend the tests so such a duplicate is refused. Task 2 will name revenue lines that are passed on by a same-named use line with the suffix `_rev` (e.g. cake revenue `burn_rev`, holders `burn` of burn_rev). Check `parts` then resolve to exactly one line, unambiguous.
+Concerns 3 and 4 (shared shapes via .extend; estimate.of names a revenue line id; non-empty sections) are accepted as is.

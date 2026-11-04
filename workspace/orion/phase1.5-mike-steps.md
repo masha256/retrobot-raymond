@@ -61,3 +61,11 @@ Until then: no WAL archive, no PITR, no dumps on venus. Fine while venus holds n
 - Raymond then: push tag orion-2026.11.04.2, deploy.sh stage orion-2026.11.04.2 --branch feat/daemon, import live
   .backup into orion_dev scratch + proof, pg_dump -Fc -n orion, `refresh-staging --stdin <sha>`, report cmp, asset
   activate x13, watch 02:45 UTC nightly. Runbook: docs/ops/deploy.md on feat/daemon.
+
+## Staging soak (started 2026-11-04, orion-dev thread 1793827233.945569)
+- Cron `orion-stage-soak` (e2fb64f34263) 06:30 PT daily -> that thread; collector scripts/orion-stage-soak.py (read-only:
+  stage status/jobs/logs + stage-vs-prod parity of price-independent report fields).
+- Baseline 2026-11-04 21:20 UTC: daemon healthy on orion-2026.11.04.2, 13/13 refreshes ok, 0 failed sources, parity 13/13
+  (CRV vote_incentives level differs 0.7% = fetch timing, expected).
+- Proposed merge gate: 3 consecutive clean scheduled nightlies (11-05/06/07 02:45 UTC) + parity clean.
+- DONE (Mike, 2026-11-04 ~21:30Z): daemon pid 33378 has group 994 orion-refresh (Groups: 994 1005). Sun 11-08 10:30Z staging_refresh is the first real read test.
