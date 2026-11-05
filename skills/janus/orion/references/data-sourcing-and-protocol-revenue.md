@@ -79,7 +79,16 @@ Monitor-only flows raise no `unlisted_sender` anomaly by design, so nothing flag
 3. Print monthly sums per series and eyeball them for jumps before computing growth.
 
 ### Triage unlisted senders
-Use `scripts/onchain_probe.py` (`rpc`, `name`, `io`) on the senders listed in a `--dry-run --json` fetch (`sources[].unlistedTransfers`; the CLI lists only the first 50, so read the `N unlisted transfers in total` note too):
+
+**A single `unlisted_sender` anomaly on a valuation flow (the recurring VVV burn-sink case):**
+1. Read the anomaly's `detail` (sender, tokens, tx, day) and the same asset's earlier `unlisted_sender` rows (`note` = precedent).
+2. Decode the tx: `eth_getTransactionByHash` + receipt, then `eth_getCode` / nonce of the sender. A tiny contract triggered inside a batch or keeper tx that touches many orders is a third-party wallet, not a protocol leg. The keyless `https://mainnet.base.org` returns 403 to Python urllib's default User-Agent, so send a `user-agent` header.
+3. Compare that day's stored row `sourceDetail.senders` with the days before (count, tokens, USD). Only listed senders appear, so the effect on the flow is nil, and you state it as nil.
+4. Recommend the disposition, plus the structural fix if dust keeps recurring.
+
+**Dust rule (`ignore_below_tokens`) limits:** it drops transfers below N tokens from *unlisted* senders only; listed senders count whatever their size (`src/ingest/flow.ts`). Before proposing it, compare N with the size of the protocol's own per-transfer legs. When the programmatic legs are as small as the dust (VVV: ~0.16 VVV per Aerodrome burn, dust 0.01–0.16), a per-transfer floor would also hide a new burner address. Name that blind spot and the backstop that would still catch it (e.g. a first-party monthly-sum cross-check and its tolerance in tokens). Offer a per-sender daily count/sum threshold as the stronger, generic alternative (an engine option, so it needs a spec). The floor never moves a stored value, but it moves the config hash, so re-pin the asset test.
+
+**Many unlisted senders (a backfill or a new scan):** use `scripts/onchain_probe.py` (`rpc`, `name`, `io`) on the senders listed in a `--dry-run --json` fetch (`sources[].unlistedTransfers`; the CLI lists only the first 50, so read the `N unlisted transfers in total` note too):
 - **Zero-amount transfers** (reward stashes, distributors poking a sink) are noise; the scanner skips them.
 - **Factory clones:** `eth_getCode` each sender. An EIP-1167 clone is `363d3d373d3d3d363d73` + 20-byte implementation + `5af43d82803e903d91602b57fd5bf3`, sometimes followed by immutable-arg bytes, so match on prefix + suffix rather than exact length. Group senders by implementation; dozens of senders usually collapse into one or two implementations, which go in `from_ignore_clones_of`.
 - **Named contracts** (fee forwarders, other products' routers): find their owner/name on Blockscout. If they're the same protocol but a different product, put them in `from_ignore` with a why-comment in the YAML.
