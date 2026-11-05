@@ -66,3 +66,14 @@ Task 3: review spec issues, quality needs fixes (0 C / 4 I / 8 M); rulings in ta
 Task 4: implementer DONE_WITH_CONCERNS 30e3bde (suite 116/1329). Rulings task-4-rulings.md: C1-C3 accepted, C4 fix (catch v2 errors; alert line).
 Task 3: fix round 1/5 + Task 4 C4 fix dispatched to one implementer (two commits, BASE 30e3bde). Task 4: review dispatched in parallel (b3b423d..30e3bde), findings go into a later round.
 Early proof (controller) on 30e3bde (pre-fix), detached worktree, D=2026-11-02: 13/13 legacy identical + parity (262 pairs) + reclass PASS. v2 table saved v2-table-30e3bde-D20261102.tsv (AERO belowLine 0.00 -> null after I3).
+Task 3: fix round 1/5 committed a66da00 (I1-I4, M1-M6, M8; parity 361 pairs). Task 4: review spec OK, quality approved, 3 M. C4 fix committed c7eed0e. Suite 117/1375, typecheck + lint clean (implementer).
+Task 4 Step 5 (controller) on c7eed0e, detached worktree, D=2026-11-02, schema p2proof_20261104t214336z: 13/13 legacy identical + 361 parity pairs + 3 reclass PASS; no incomeStatementError. Checked: VVV revenue growth 11.83 (was null), AERO belowLine.toHolders null + notMeasured [bribes], CRV fromBelowLine 7.12. Table v2-table-c7eed0e-D20261102.tsv.
+Task 4: minor (deferred): M2 Slack yields/multiples lines mix sources; M3 fragile CLI text assertion (cli.test.ts:1089).
+ROLLOUT ITEM (controller-owned, outside repo): ~/.hermes/profiles/raymond/scripts/orion-stage-soak.py pick() reads legacy keys (flows, holderFlowGrowth, income.revenue) from orion-remote `report yield --json` — must pass --legacy (or read incomeStatement) before Phase 2 reaches staging (after cutover, P4). Task 4 M1.
+G1 data: yCRV gross 91d via splitter = $560,940 crvUSD: voter (veCRV fees) 140,085 = 25%, fee_burner (auctioned vote incentives) 420,855 = 75% (Alchemy transfers, 93 days to head). Consistent-with-sdCRV treatment would make yCRV revenue ~0.56 $M/yr and move ~1.69 below the line.
+Task 3+4 fixes: scoped re-review dispatched (30e3bde..c7eed0e).
+Task 3/4 re-review: all ADDRESSED, no new C/I. Task 3: complete (commits 8f4cdc2..a66da00, 1 fix round). Task 4: complete (commits b3b423d..c7eed0e incl. 30e3bde, C4 fix).
+Task 3/4: minor (deferred): M-a ratioOf drops disclosed growth for estimate/of lines on it (unreachable); M-b sourceLabelOf not given asset metrics (latent label); M-c listingBar uses third_party inheritance (consistent with M4); M-d 'missing day' flag also fires on a null cost level.
+Controller rerun at c7eed0e: vitest 117/1375, typecheck ok, lint:promises ok, 0 leftover t_ schemas.
+Task 4 Step 6: G1 table committed to followups note 2ae7416.
+STOP at Gate G1 (R5). Proof schema p2proof_20261104t214336z and /home/hermes/.hermes/profiles/raymond/cache/scratch/p2rel kept for the next proof; cleanup.py after G2 work or if abandoned.
