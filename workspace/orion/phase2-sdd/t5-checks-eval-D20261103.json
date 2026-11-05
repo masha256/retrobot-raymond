@@ -1,0 +1,126 @@
+{
+ "cake": {
+  "price_chainlink:price": {
+   "ok": 24,
+   "breach": 0,
+   "incomplete": 67,
+   "breaches": [],
+   "maxGap": 0.30471751152073895,
+   "lastIncompleteMissing": {
+    "day": "2026-10-10",
+    "missing": [
+     "price_usd cross-check chainlink_cake_usd@2026-10-11"
+    ]
+   }
+  }
+ },
+ "crv": {
+  "splitter:sum": {
+   "ok": 91,
+   "breach": 0,
+   "incomplete": 0,
+   "breaches": [],
+   "maxGap": 5.1133039285638596e-14
+  }
+ },
+ "cvxcrv": {
+  "crv_paid:two_path": {
+   "ok": 91,
+   "breach": 0,
+   "incomplete": 0,
+   "breaches": [],
+   "maxGap": 2.770538731716375
+  }
+ },
+ "link": {
+  "price_chainlink:price": {
+   "ok": 20,
+   "breach": 0,
+   "incomplete": 71,
+   "breaches": [],
+   "maxGap": 0.41459369817579356,
+   "lastIncompleteMissing": {
+    "day": "2026-10-14",
+    "missing": [
+     "price_usd cross-check chainlink_link_usd@2026-10-15"
+    ]
+   }
+  },
+  "reserve_balance:balance": {
+   "ok": 0,
+   "breach": 0,
+   "incomplete": 91,
+   "breaches": [],
+   "maxGap": null,
+   "lastIncompleteMissing": {
+    "day": "2026-11-03",
+    "missing": [
+     "reserve_link@2026-11-03T00:00Z+6h",
+     "reserve_link@2026-11-04T00:00Z+6h"
+    ]
+   }
+  }
+ },
+ "lit": {
+  "fees_core_revision:revision": {
+   "ok": 91,
+   "breach": 0,
+   "incomplete": 0,
+   "breaches": [],
+   "maxGap": 0
+  },
+  "robinhood_partner_share:parameter": {
+   "ok": 12,
+   "breach": 0,
+   "incomplete": 79,
+   "breaches": [],
+   "maxGap": 0,
+   "lastIncompleteMissing": {
+    "day": "2026-10-22",
+    "missing": [
+     "rh_revenue_share_app@2026-10-23"
+    ]
+   }
+  }
+ },
+ "sdcrv": {
+  "crv_fee:sum": {
+   "ok": 90,
+   "breach": 1,
+   "incomplete": 0,
+   "breaches": [
+    {
+     "day": "2026-08-31",
+     "lhs": 0.04630194556798195,
+     "rhs": 0,
+     "gap": 100
+    }
+   ],
+   "maxGap": 100
+  }
+ },
+ "uni": {
+  "price_chainlink:price": {
+   "ok": 25,
+   "breach": 0,
+   "incomplete": 66,
+   "breaches": [],
+   "maxGap": 0.9357599646708221,
+   "lastIncompleteMissing": {
+    "day": "2026-10-09",
+    "missing": [
+     "price_usd cross-check chainlink_uni_usd@2026-10-10"
+    ]
+   }
+  }
+ },
+ "ycrv": {
+  "splitter:sum": {
+   "ok": 91,
+   "breach": 0,
+   "incomplete": 0,
+   "breaches": [],
+   "maxGap": 0.030253314988932547
+  }
+ }
+}

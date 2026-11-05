@@ -191,15 +191,15 @@
       "schedule_display": "15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 1447
+        "completed": 1448
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-06T08:57:25.404654-07:00",
-      "next_run_at": "2026-11-05T14:15:00-08:00",
-      "last_run_at": "2026-11-05T12:16:09.786950-08:00",
+      "next_run_at": "2026-11-05T15:15:00-08:00",
+      "last_run_at": "2026-11-05T13:16:07.776266-08:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -219,17 +219,17 @@
       ],
       "workdir": null,
       "fire_claim": {
-        "at": "2026-11-05T13:15:56.486561-08:00",
-        "by": "uranus:699275:3af038553ccb4826a10bb3c7691d8322"
+        "at": "2026-11-05T14:16:14.163892-08:00",
+        "by": "uranus:699275:ffb2b1df6fe144238e179264d06a8bab"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-11-05T13:15:00-08:00",
-        "dispatched_at": "2026-11-05T13:15:55.488927-08:00",
+        "scheduled_at": "2026-11-05T14:15:00-08:00",
+        "dispatched_at": "2026-11-05T14:15:55.492116-08:00",
         "lateness_seconds": 55.5,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "940aa7d014ea464e9eda61c5282f79be"
+        "6d47c2efbea14dffb15731f3641347c0"
       ],
       "last_failure": {
         "at": "2026-10-21T10:16:52.511613-07:00",
@@ -1236,7 +1236,7 @@
     {
       "id": "e2fb64f34263",
       "name": "orion-stage-soak",
-      "prompt": "Daily staging soak check for Orion (READ-ONLY; never write to staging, prod, the live repo/DB, or any GitHub repo; no paid/analyst calls; no `job run-now`).\n\nBackground: staging = `orion daemon` on venus (orion-stage@192.168.0.12, Postgres orion_stage), release tag from branch feat/daemon, 13 assets active since 2026-11-04 ~20:55 UTC. Goal: soak it for a few days so Mike can merge feat/daemon to main and cut prod over. Prod is still SQLite + Hermes cron (/home/hermes/git/orion, main). The injected script output (orion-stage-soak.py) holds: stage `status`, jobs from the last 30h (problem_jobs = not done / ingest not ok / failed / undelivered), interesting log lines, `snapshot_repo` (latest commits, file sizes and assets.json count of github masha256/orion-data-staging, read via API), and per-asset PARITY of price-independent report fields (flow gross/net, holder-flow growth current/prior, revenue annualized) stage vs prod for the same report day. Extra read-only probing allowed: `ssh -i ~/.ssh/orion-stage_ed25519 -o IdentitiesOnly=yes orion-stage@192.168.0.12 <status|jobs|logs N|report yield <a>>` and `node dist/cli/index.js report yield <a> --json` in /home/hermes/git/orion. The daemon heartbeat is every 15 min, so a beat up to ~16 min old is fresh.\n\nSchedule on staging (UTC): nightly 02:45 (refresh x13 + nightly_report + snapshot_push), levels every 6h at :15, disclosure_watch 16:40 (dry), retention 03:30, staging_refresh weekly Sun 10:30.\n\nKnown/expected items (mention once briefly, don't alarm): (1) staging_refresh job 4 failed EACCES on /home/orion-refresh/latest.dump at first start (2026-11-04 20:50Z). Fixed 2026-11-04: Mike restarted orion-stage's user manager and confirmed the daemon (pid 33378) now carries group 994 orion-refresh. The first real test is the Sun 2026-11-08 10:30Z slot; report its result (EACCES again = group still missing; ENOENT/no dump = expected before cutover since prod has no Postgres dump yet). (2) VVV acknowledged anomaly #2 (DefiLlama April cross-check 8.9% outside 5%) re-seen each run, expected. (3) CRV `flow.vote_incentives` is a run-rate LEVEL read at fetch time (llama.box), so stage vs prod differ by <~2% from fetch timing; not a parity failure. (4) PUMP solana.supply_burn_daily for the most recent closed day is not stable for hours after UTC close (known data issue), so a PUMP diff confined to the newest day is expected. (5) Report day may differ by one between stage and prod if one side has fetched a newer closed day; then compare carefully and say so rather than flagging. (6) The snapshot repo's first commits (2026-11-04 20:50Z) were made before assets were activated, so assets.json was empty then; from the 2026-11-05 nightly on, assets.json must list 13 assets and full/latest.json must be far larger than 312 bytes.\n\nPass criteria per day: daemon running with fresh heartbeat on the expected release; a scheduler-made nightly_report done for today's 02:45 UTC slot with all 13 refreshes done on that release, no failed sources, delivered true; `soak:` in status names the tag; levels and snapshot_push runs done (pushed) and a new 'full seq N day <yesterday>' commit in orion-data-staging with 13 assets; no unexpected daemon restarts or lease/retry errors in logs; parity match on every asset except the known items above.\n\nOutput (Slack, short, no tables): first line `STAGING SOAK day N (<date>): PASS` or `... : ISSUES (k)`, where N = count of scheduled nightlies done on the current release since 2026-11-05. Then bullets: nightly (slot, refreshes done/13, failed sources), soak line, levels/snapshot counts + snapshot commit sha and asset count, parity (\"13/13 match\" or list the asset + field + stage vs prod + likely cause), anything new in logs. Then one line `Merge readiness:` = number of clean consecutive nightlies out of the 3 Mike's gate needs, plus open blockers. If anything is new and unexplained, investigate read-only and give the cause or say plainly it is unknown. Never fabricate; if the script failed or SSH is down, say so with the error. Never print the GH_PAT.",
+      "prompt": "Daily staging soak check for Orion (READ-ONLY; never write to staging, prod, the live repo/DB, or any GitHub repo; no paid/analyst calls; no `job run-now`).\n\nBackground: staging = `orion daemon` on venus (orion-stage@192.168.0.12, Postgres orion_stage), release tag from branch feat/daemon, 13 assets active since 2026-11-04 ~20:55 UTC. Goal: soak it so Mike can merge feat/daemon to main and cut prod over. Prod is still SQLite + Hermes cron (/home/hermes/git/orion, main). The injected script output (orion-stage-soak.py) holds: stage `status`, jobs from the last 30h (problem_jobs = not done / ingest not ok / failed / undelivered), interesting log lines, `snapshot_repo` (latest commits, file sizes and assets.json count of github masha256/orion-data-staging, read via API), and per-asset PARITY of price-independent report fields (flow gross/net, holder-flow growth current/prior, revenue annualized) stage vs prod for the same report day. Extra read-only probing allowed: `ssh -i ~/.ssh/orion-stage_ed25519 -o IdentitiesOnly=yes orion-stage@192.168.0.12 <status|jobs|logs N|report yield <a>>` and `node dist/cli/index.js report yield <a> --json` in /home/hermes/git/orion. The daemon heartbeat is every 15 min, so a beat up to ~16 min old is fresh.\n\nSchedule on staging (UTC): nightly 02:45 (refresh x13 + nightly_report + snapshot_push), levels every 6h at :15, disclosure_watch 16:40 (dry), retention 03:30, staging_refresh weekly Sun 10:30.\n\nRelease history: orion-2026.11.04.2 (soak day 1, 2026-11-05 nightly: PASS). orion-2026.11.05.1 (f1d2a23: adds `load-prod --stdin` for prod's one-time initial load + a test-only watcher fix) deployed to staging 2026-11-05 21:53Z by Raymond; that drain/stop/start at 21:53Z is expected, not an unexpected restart.\n\nKnown/expected items (mention once briefly, don't alarm): (1) staging_refresh job 4 failed EACCES on /home/orion-refresh/latest.dump at first start (2026-11-04 20:50Z). Fixed 2026-11-04: Mike restarted orion-stage's user manager and confirmed the daemon carries group 994 orion-refresh (later daemons start under the same user manager). The first real test is the Sun 2026-11-08 10:30Z slot; report its result (EACCES again = group still missing; skipped 'no dump yet' = expected before cutover since prod has no Postgres dump yet). (2) VVV acknowledged anomaly #2 (DefiLlama April cross-check 8.9% outside 5%) re-seen each run, expected. (3) CRV `flow.vote_incentives` is a run-rate LEVEL read at fetch time (llama.box), so stage vs prod differ by <~2% from fetch timing; not a parity failure. (4) PUMP solana.supply_burn_daily for the most recent closed day is not stable for hours after UTC close (known data issue), so a PUMP diff confined to the newest day is expected. (5) Report day may differ by one between stage and prod if one side has fetched a newer closed day; then compare carefully and say so rather than flagging. (6) The snapshot repo's first commits (2026-11-04 20:50Z) predate asset activation (empty assets.json); from the 2026-11-05 nightly on, assets.json must list 13 assets and full/latest.json must be tens of KB.\n\nPass criteria per day: daemon running with fresh heartbeat on the expected release; a scheduler-made nightly_report done for today's 02:45 UTC slot with all 13 refreshes done on that release, no failed sources, delivered true; `soak:` in status names the tag; levels and snapshot_push runs done (pushed) and a new 'full seq N day <yesterday>' commit in orion-data-staging with 13 assets; no unexpected daemon restarts or lease/retry errors in logs; parity match on every asset except the known items above.\n\nOutput (Slack, short, no tables): first line `STAGING SOAK day N (<date>, <release>): PASS` or `... : ISSUES (k)`, where N counts scheduled nightlies since 2026-11-05 across releases (2026-11-06 = day 2). Then bullets: nightly (slot, refreshes done/13, failed sources), soak line, levels/snapshot counts + snapshot commit sha and asset count, parity (\"13/13 match\" or list the asset + field + stage vs prod + likely cause), anything new in logs. Then one line `Merge readiness:`. Mike's gate (2026-11-05): ONE clean scheduled nightly on release orion-2026.11.05.1, then the prod cutover. So on 2026-11-06 a PASS on orion-2026.11.05.1 means `Merge readiness: GATE MET, ready for cutover on Mike's go`; say also whether `soak:` names orion-2026.11.05.1 (deploy.sh prod requires it). List open items you cannot see (prod .env ANTHROPIC_API_KEY, Mike's orion-host.sh re-run from /home/hermes/orion-provision-f1d2a23 for load-prod, backups decision) only as 'to confirm'. After the cutover (prod on the daemon), this job's prod-parity part no longer applies: say so and suggest Mike remove the job. If anything is new and unexplained, investigate read-only and give the cause or say plainly it is unknown. Never fabricate; if the script failed or SSH is down, say so with the error. Never print the GH_PAT.",
       "skills": [
         "orion"
       ],
@@ -1301,5 +1301,5 @@
       ]
     }
   ],
-  "updated_at": "2026-11-05T13:15:56.487127-08:00"
+  "updated_at": "2026-11-05T14:16:14.166753-08:00"
 }

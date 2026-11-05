@@ -69,3 +69,10 @@ Until then: no WAL archive, no PITR, no dumps on venus. Fine while venus holds n
   (CRV vote_incentives level differs 0.7% = fetch timing, expected).
 - Proposed merge gate: 3 consecutive clean scheduled nightlies (11-05/06/07 02:45 UTC) + parity clean.
 - DONE (Mike, 2026-11-04 ~21:30Z): daemon pid 33378 has group 994 orion-refresh (Groups: 994 1005). Sun 11-08 10:30Z staging_refresh is the first real read test.
+
+## Cutover prep (Mike, 2026-11-05: cut over after one more soak pass; "Proceed")
+- Built I-2 data route: `orion-remote load-prod --stdin <sha256>` + staging_refresh prod mode (empty prod only).
+  feat/daemon f1d2a23 (+48dcf2d test-only watcher date fix), tag orion-2026.11.05.1 pushed, built (1208/1208), deployed
+  to staging 21:53Z. Gate: 2026-11-06 02:45Z nightly on .05.1 clean -> cutover on Mike's go.
+- Mike owes before cutover: orion-host.sh re-run from a f1d2a23 provision snapshot (installs orion-remote with
+  load-prod); ANTHROPIC_API_KEY in ~orion-prod/shared/.env (he'll add 2026-11-05); backups decision (before vs week 1).
