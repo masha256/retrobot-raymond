@@ -76,3 +76,7 @@ Until then: no WAL archive, no PITR, no dumps on venus. Fine while venus holds n
   to staging 21:53Z. Gate: 2026-11-06 02:45Z nightly on .05.1 clean -> cutover on Mike's go.
 - Mike owes before cutover: orion-host.sh re-run from a f1d2a23 provision snapshot (installs orion-remote with
   load-prod); ANTHROPIC_API_KEY in ~orion-prod/shared/.env (he'll add 2026-11-05); backups decision (before vs week 1).
+- DONE (Mike, 2026-11-06 ~00:50Z): backups enabled. Spaces bucket orion-backups (sfo3; endpoint must be
+  sfo3.digitaloceanspaces.com, NOT the bucket URL), pgbackrest.conf filled, age recipient in /etc/orion/dump-recipient
+  (private key on Mike's machine only), orion-host.sh --enable-backups: SELF-CHECK 52/0 (pgbackrest check ok).
+  Open: first full backup (timer Sun 09:00Z, or by hand now), healthchecks backups check unpause, restore drill (spec 10.3).
