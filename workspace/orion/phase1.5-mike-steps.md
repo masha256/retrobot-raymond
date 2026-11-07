@@ -80,3 +80,14 @@ Until then: no WAL archive, no PITR, no dumps on venus. Fine while venus holds n
   sfo3.digitaloceanspaces.com, NOT the bucket URL), pgbackrest.conf filled, age recipient in /etc/orion/dump-recipient
   (private key on Mike's machine only), orion-host.sh --enable-backups: SELF-CHECK 52/0 (pgbackrest check ok).
   Open: first full backup (timer Sun 09:00Z, or by hand now), healthchecks backups check unpause, restore drill (spec 10.3).
+
+## PROD CUTOVER (Mike's go 2026-11-06 ~23:50Z: "cut over as is now", option a: orion-2026.11.05.1 with the known Base/VVV issue)
+- [x] 23:54Z paused 13 orion-<asset> + orion-disclosure-watch Hermes jobs (nothing was running).
+- [x] 23:55Z final SQLite backup -> backups/orion-final-20261106T235540Z.db (400, integrity ok); import into orion_dev
+      PROOF_OK, exclusions as expected; dump .worktrees/prod-import-20261106T235540Z/latest.dump sha a47c5c9e...
+- [x] GitHub main 33efeea -> f1d2a23 (ff). Local /home/hermes/git/orion checkout left on 33efeea + its built dist (fallback).
+- [ ] Mike: untar workspace/orion/orion-prod-disclosure-state.tgz (sha 4f896e61...) into ~orion-prod/home/ BEFORE deploy
+      (prod's first tick runs disclosure_watch for real).
+- [ ] deploy.sh prod orion-2026.11.05.1 --no-soak (gate would refuse VVV burn_sink: prod has no nightly to match).
+- [ ] load-prod --stdin a47c5c9e...; cmp 13 reports vs ref; anomalies/proposals; asset activate x13 --for mike.
+- [ ] watch: levels :15, deadman, first orion-data commit, 00:45Z nightly; then Base block-time fix release; remove Hermes jobs.
