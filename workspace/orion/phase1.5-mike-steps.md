@@ -86,8 +86,9 @@ Until then: no WAL archive, no PITR, no dumps on venus. Fine while venus holds n
 - [x] 23:55Z final SQLite backup -> backups/orion-final-20261106T235540Z.db (400, integrity ok); import into orion_dev
       PROOF_OK, exclusions as expected; dump .worktrees/prod-import-20261106T235540Z/latest.dump sha a47c5c9e...
 - [x] GitHub main 33efeea -> f1d2a23 (ff). Local /home/hermes/git/orion checkout left on 33efeea + its built dist (fallback).
-- [ ] Mike: untar workspace/orion/orion-prod-disclosure-state.tgz (sha 4f896e61...) into ~orion-prod/home/ BEFORE deploy
+- [x] Mike: untar workspace/orion/orion-prod-disclosure-state.tgz (sha 4f896e61...) into ~orion-prod/home/ BEFORE deploy
       (prod's first tick runs disclosure_watch for real).
-- [ ] deploy.sh prod orion-2026.11.05.1 --no-soak (gate would refuse VVV burn_sink: prod has no nightly to match).
-- [ ] load-prod --stdin a47c5c9e...; cmp 13 reports vs ref; anomalies/proposals; asset activate x13 --for mike.
+- [x] 00:23Z deploy.sh prod orion-2026.11.05.1 --no-soak (migrations 1,2; first tick: nightly/levels/snapshot x2/disclosure 0 posts/retention done) (gate would refuse VVV burn_sink: prod has no nightly to match).
+- [x] 00:24Z load-prod job 11 done (initial_load, 10 tables); 13/13 reports cmp identical; anomalies 16=16, proposals 2=2; 00:25Z activated x13. Was: load-prod --stdin a47c5c9e...; cmp 13 reports vs ref; anomalies/proposals; asset activate x13 --for mike.
 - [ ] watch: levels :15, deadman, first orion-data commit, 00:45Z nightly; then Base block-time fix release; remove Hermes jobs.
+- Follow-up: prod watcher 'ytdlp: no venv' -> Mike re-runs orion-host.sh --with-watcher before the Q4 call window (2027-01-01).
