@@ -191,20 +191,20 @@
       "schedule_display": "15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 1491
+        "completed": 1492
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-06T08:57:25.404654-07:00",
-      "next_run_at": "2026-11-07T10:15:00-08:00",
-      "last_run_at": "2026-11-07T08:32:32.074347-08:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again.",
+      "next_run_at": "2026-11-07T11:15:00-08:00",
+      "last_run_at": "2026-11-07T09:16:06.220413-08:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "last_delivery_unverified": null,
-      "failure_streak": 9,
+      "failure_streak": 0,
       "deliver": "local",
       "origin": {
         "platform": "telegram",
@@ -219,17 +219,17 @@
       ],
       "workdir": null,
       "fire_claim": {
-        "at": "2026-11-07T09:15:52.940059-08:00",
-        "by": "uranus:1680091:b6dac875b6344075b9c017bdccf2add0"
+        "at": "2026-11-07T10:15:52.951968-08:00",
+        "by": "uranus:1680091:b24bcacf333a4d62bfb8d0a92c7bc832"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-11-07T09:15:00-08:00",
-        "dispatched_at": "2026-11-07T09:15:51.936413-08:00",
+        "scheduled_at": "2026-11-07T10:15:00-08:00",
+        "dispatched_at": "2026-11-07T10:15:51.936655-08:00",
         "lateness_seconds": 51.9,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "bddcd1e89a9246c2a69cc31334fd8450"
+        "12e240a90bd8461488c39d716d926129"
       ],
       "last_failure": {
         "at": "2026-11-07T08:32:32.074347-08:00",
@@ -1360,5 +1360,5 @@
       ]
     }
   ],
-  "updated_at": "2026-11-07T09:15:52.940680-08:00"
+  "updated_at": "2026-11-07T10:15:52.952550-08:00"
 }
