@@ -1,0 +1,325 @@
+{
+  "asset": "link",
+  "day": "2026-11-05",
+  "windowDays": 91,
+  "price": 10.88,
+  "marketCap": 8343327678.222738,
+  "fdv": 10880000000,
+  "incomeStatement": {
+    "schema": 2,
+    "day": "2026-11-05",
+    "windowDays": 91,
+    "category": "oracle",
+    "scope": "protocol_share_only",
+    "revenue": {
+      "annualized": 56610205.94751208,
+      "growth": {
+        "current": 14113777.37321534,
+        "prior": 14934010.577884868,
+        "change": -0.054923839807919816,
+        "annualized": -0.2027442926921431
+      },
+      "growthExNew": null,
+      "excludedFromExNew": [],
+      "provisional": false,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "onchain_fees",
+          "label": "on-chain service fees converted to LINK (Payment Abstraction)",
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "annualized": 56610205.94751208,
+          "windowSum": 14113777.37321534,
+          "settlement": "daily",
+          "started": null,
+          "daysMeasured": 91,
+          "provisionalDays": 0,
+          "coverage": null,
+          "isNew": false,
+          "growth": {
+            "current": 14113777.37321534,
+            "prior": 14934010.577884868,
+            "change": -0.054923839807919816,
+            "annualized": -0.2027442926921431
+          }
+        }
+      ]
+    },
+    "costOfRevenue": {
+      "annualized": null,
+      "measuredAnnualized": 0,
+      "notMeasured": [
+        "node_operators"
+      ],
+      "lines": [
+        {
+          "id": "node_operators",
+          "label": null,
+          "of": null,
+          "share": 1,
+          "method": "not_measured",
+          "sourceTypes": [],
+          "annualized": null,
+          "growth": {
+            "current": null,
+            "prior": null,
+            "change": null,
+            "annualized": null,
+            "note": "not measured"
+          },
+          "notMeasured": "fees paid to node operators (CCIP fee tokens, off-chain Data Feeds): not read yet (Phase 3)",
+          "to": "node_operators"
+        }
+      ]
+    },
+    "grossProfit": {
+      "annualized": null,
+      "growth": {
+        "current": null,
+        "prior": null,
+        "change": null,
+        "annualized": null,
+        "note": "cost of revenue not measured"
+      }
+    },
+    "holders": {
+      "annualized": 56610205.94751208,
+      "growth": {
+        "current": 14113777.37321534,
+        "prior": 14934010.577884868,
+        "change": -0.054923839807919816,
+        "annualized": -0.2027442926921431
+      },
+      "remainder": false,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "reserve",
+          "label": null,
+          "of": "onchain_fees",
+          "share": 1,
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "annualized": 56610205.94751208,
+          "growth": {
+            "current": 14113777.37321534,
+            "prior": 14934010.577884868,
+            "change": -0.054923839807919816,
+            "annualized": -0.2027442926921431
+          },
+          "note": "fees converted to LINK and held in the Chainlink Reserve",
+          "bucket": "hold",
+          "haircut": 0.05,
+          "recipientBase": "all",
+          "valuedPer": null,
+          "captureRule": "discretionary",
+          "paidMetric": null,
+          "gross": 56610205.94751208,
+          "net": 53779695.65013648,
+          "yield": 0.0049429867325493084
+        }
+      ],
+      "byBucket": {
+        "burn": null,
+        "hold": {
+          "annualized": 56610205.94751208
+        },
+        "cash": null
+      }
+    },
+    "protocol": {
+      "annualized": 0,
+      "growth": {
+        "current": 0,
+        "prior": 0,
+        "change": null,
+        "annualized": null,
+        "note": "no lines"
+      },
+      "remainder": false,
+      "notMeasured": [],
+      "lines": []
+    },
+    "operatingCosts": {
+      "annualized": 0,
+      "growth": {
+        "current": 0,
+        "prior": 0,
+        "change": null,
+        "annualized": null,
+        "note": "no lines"
+      },
+      "remainder": false,
+      "notMeasured": [],
+      "lines": []
+    },
+    "unreconciled": {
+      "annualized": 0,
+      "pct": 0,
+      "basis": "revenue"
+    },
+    "belowLine": {
+      "toHolders": 0,
+      "toProtocol": 0,
+      "notMeasured": [],
+      "lines": []
+    },
+    "holderFlow": {
+      "gross": 56610205.94751208,
+      "net": 53779695.65013648,
+      "netOfDilution": -707820054.1098636,
+      "growth": {
+        "current": 13408088.504554572,
+        "prior": 14187310.048990624,
+        "change": -0.054923839807919816,
+        "annualized": -0.2027442926921431
+      },
+      "byBucket": {
+        "burn": null,
+        "hold": {
+          "gross": 56610205.94751208,
+          "net": 53779695.65013648,
+          "yield": 0.0049429867325493084,
+          "fromRevenue": 56610205.94751208,
+          "fromBelowLine": 0
+        },
+        "cash": null
+      },
+      "fromRevenue": 56610205.94751208,
+      "fromBelowLine": 0,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "reserve",
+          "section": "holders",
+          "fromBelowLine": false,
+          "bucket": "hold",
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "metric": "flow_usd.reserve",
+          "haircut": 0.05,
+          "recipientBase": "all",
+          "gross": 56610205.94751208,
+          "net": 53779695.65013648,
+          "yield": 0.0049429867325493084,
+          "growth": {
+            "current": 14113777.37321534,
+            "prior": 14934010.577884868,
+            "change": -0.054923839807919816,
+            "annualized": -0.2027442926921431
+          }
+        }
+      ]
+    },
+    "volume": null,
+    "dilution": {
+      "pct": 0.069999977,
+      "tokensPerYear": 69999977,
+      "emissionsPerYear": 0,
+      "releases": [
+        {
+          "id": "releases",
+          "tokensPerYear": 69999977,
+          "yield": 0.069999977
+        }
+      ],
+      "supply": null
+    },
+    "ratios": {
+      "takeRate": null,
+      "payoutRatio": 1,
+      "payoutRatioBasis": "revenue"
+    },
+    "multiples": {
+      "mcapToRevenue": 147.3820407217475,
+      "mcapToGrossProfit": null,
+      "mcapToHolderFlow": {
+        "burn": null,
+        "hold": 155.1389902334184,
+        "cash": null,
+        "total": 155.1389902334184
+      }
+    },
+    "yields": {
+      "cash": 0,
+      "buyback": 0.0049429867325493084,
+      "shareholder": 0.0049429867325493084,
+      "dilution": 0.069999977,
+      "netShareholder": -0.0650569902674507,
+      "multiple": 202.30683473517183,
+      "pegTrailing": null,
+      "dilutionLines": [
+        {
+          "id": "releases",
+          "tokensPerYear": 69999977,
+          "yield": 0.069999977
+        }
+      ]
+    },
+    "perToken": {
+      "revenue": 0.0738217488828309,
+      "grossProfit": null,
+      "holderFlow": {
+        "total": 0.07013066143868935,
+        "netOfDilution": -0.9230228615874967,
+        "byBucket": {
+          "burn": null,
+          "hold": 0.07013066143868935,
+          "cash": null
+        }
+      },
+      "dilution": 0.9931535230261861,
+      "circulatingSupply": 766849970.424884,
+      "totalSupply": 1000000000,
+      "supplyAsOf": "2026-11-06T23:59:59.999Z",
+      "perTokenFdv": {
+        "revenue": 0.05661020594751208,
+        "grossProfit": null,
+        "holderFlow": {
+          "total": 0.053779695650136475,
+          "netOfDilution": -0.7078200541098636,
+          "byBucket": {
+            "burn": null,
+            "hold": 0.053779695650136475,
+            "cash": null
+          }
+        },
+        "dilution": 0.7615997497600001
+      }
+    },
+    "priceBasis": {
+      "price": 10.88,
+      "metric": "price_usd",
+      "sourceType": "market_data",
+      "source": "market_data:coingecko",
+      "day": "2026-11-05",
+      "asOf": "2026-11-06T23:59:59.999Z",
+      "flows": "each flow day's USD at that day's price (the stored value)"
+    },
+    "checks": [],
+    "provenance": {
+      "methods": {
+        "measured": 1,
+        "derived": 0,
+        "disclosed": 0
+      },
+      "thirdParty": [],
+      "sources": [
+        "log_scan:eip155:1"
+      ],
+      "basis": "observations"
+    },
+    "flags": [
+      "cost of revenue not measured: node_operators",
+      "payout ratio on revenue: cost of revenue not measured"
+    ]
+  },
+  "notes": []
+}

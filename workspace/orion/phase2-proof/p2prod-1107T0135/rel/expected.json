@@ -1,0 +1,25 @@
+{
+  "_meta": {
+    "source": "/home/hermes/.hermes/profiles/raymond/workspace/orion/phase2-proof/p2prod-1107T0135/rel/old",
+    "new": "/home/hermes/.hermes/profiles/raymond/workspace/orion/phase2-proof/p2prod-1107T0135/rel/new",
+    "ycrvStycSeparate": false
+  },
+  "sdcrv": {
+    "incomeStatement.revenue.annualized": 1912487.3257621725,
+    "incomeStatement.belowLine.toHolders": 1745190.1235775037,
+    "incomeStatement.operatingCosts.annualized": 115335.75946890395,
+    "incomeStatement.ratios.payoutRatio": 0.47065512850083613
+  },
+  "ycrv": {
+    "incomeStatement.revenue.annualized": 561554.8970042452,
+    "incomeStatement.unreconciled.annualized": -88.1769470104191,
+    "incomeStatement.belowLine.toHolders": 1216756.4822420988,
+    "incomeStatement.holderFlow.gross": 1621762.8827682796,
+    "incomeStatement.holderFlow.net": 1621762.8827682796
+  },
+  "lit": {
+    "incomeStatement.revenue.annualized": 54149901.013186805,
+    "incomeStatement.costOfRevenue.annualized": 9515819.11730769,
+    "incomeStatement.grossProfit.annualized": 44634081.89587911
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "asset": "hype",
+  "day": "2026-11-05",
+  "windowDays": 91,
+  "price": 78.5,
+  "marketCap": 18793434928.370106,
+  "fdv": 74579472960.22815,
+  "flows": [
+    {
+      "id": "af_buyback",
+      "metric": "flow_usd.af_buyback",
+      "bucket": "burn",
+      "recipientBase": "all",
+      "haircut": 0,
+      "gross": 846645873.7362638,
+      "net": 846645873.7362638,
+      "yield": 0.011352264103391617,
+      "growth": {
+        "current": 211081574,
+        "prior": 140158706,
+        "change": 0.5060182847293124,
+        "annualized": 4.167436605365167
+      }
+    },
+    {
+      "id": "reserve_yield",
+      "metric": "flow_usd.reserve_yield",
+      "bucket": "burn",
+      "recipientBase": "all",
+      "haircut": 0,
+      "gross": 186882662.15267488,
+      "net": 186882662.15267488,
+      "yield": 0.0025058190241212344,
+      "growth": {
+        "current": 36864525.136966005,
+        "prior": 0,
+        "change": null,
+        "annualized": null,
+        "note": "not meaningful: a window is zero or negative"
+      }
+    }
+  ],
+  "buckets": {
+    "burn": {
+      "gross": 1033528535.8889387,
+      "net": 1033528535.8889387,
+      "yield": 0.013858083127512851,
+      "growth": {
+        "current": 247946099.136966,
+        "prior": 140158706,
+        "change": 0.7690381583357797,
+        "annualized": 8.855330431497958
+      }
+    },
+    "hold": null,
+    "cash": null
+  },
+  "yields": {
+    "cash": 0,
+    "buyback": 0.013858083127512851,
+    "shareholder": 0.013858083127512851,
+    "dilution": 0.010455244603622012,
+    "netShareholder": 0.0034028385238908387,
+    "multiple": 72.16005206482498,
+    "pegTrailing": 0.08148770124732485
+  },
+  "holderFlowGrowth": {
+    "current": 247946099.136966,
+    "prior": 140158706,
+    "change": 0.7690381583357797,
+    "annualized": 8.855330431497958
+  },
+  "supply": null,
+  "income": {
+    "revenue": {
+      "annualized": 1033528535.8889387,
+      "growth": {
+        "current": 247946099.136966,
+        "prior": 140158706,
+        "change": 0.7690381583357797,
+        "annualized": 8.855330431497958
+      }
+    },
+    "holders": {
+      "annualized": 1033528535.8889387,
+      "growth": {
+        "current": 247946099.136966,
+        "prior": 140158706,
+        "change": 0.7690381583357797,
+        "annualized": 8.855330431497958
+      }
+    },
+    "protocol": {
+      "annualized": 2.988419689974942e-8,
+      "growth": {
+        "current": -1.4901161193847656e-8,
+        "prior": 0,
+        "change": null,
+        "annualized": null,
+        "note": "not meaningful: a window is zero or negative"
+      }
+    },
+    "costs": {
+      "annualized": 0
+    },
+    "payoutRatio": 1,
+    "protocolMargin": 2.8914728391167256e-17,
+    "lines": [
+      {
+        "id": "af_buyback",
+        "to": "holders",
+        "annualized": 846645873.7362638,
+        "basis": "measured"
+      },
+      {
+        "id": "reserve_yield",
+        "to": "holders",
+        "annualized": 186882662.15267488,
+        "basis": "measured",
+        "note": "USDC reserve yield (AQAv2): a revenue stream paid to holders"
+      },
+      {
+        "id": "protocol_income",
+        "to": "protocol",
+        "annualized": 2.988419689974942e-8,
+        "basis": "remainder",
+        "note": "revenue less holders and costs"
+      }
+    ],
+    "checks": [],
+    "outsideRevenue": []
+  },
+  "revenue": {
+    "basis": "streams",
+    "streams": [
+      {
+        "id": "trading",
+        "label": "trading fees (DefiLlama dailyRevenue)",
+        "basis": "daily",
+        "metric": "flow_usd.revenue_proxy",
+        "annualized": 846645873.7362638,
+        "daysInWindow": null,
+        "provisionalDays": 0,
+        "started": null,
+        "isNew": false,
+        "growth": {
+          "current": 211081574,
+          "prior": 140158706,
+          "change": 0.5060182847293124,
+          "annualized": 4.167436605365167
+        },
+        "holderFlow": null
+      },
+      {
+        "id": "reserve_yield",
+        "label": "USDC reserve yield (AQAv2)",
+        "basis": "periodic",
+        "metric": "flow_usd.reserve_yield",
+        "annualized": 186882662.15267488,
+        "daysInWindow": 72,
+        "provisionalDays": 12,
+        "started": "2026-08-26",
+        "isNew": true,
+        "growth": {
+          "current": 36864525.136966005,
+          "prior": 0,
+          "change": null,
+          "annualized": null,
+          "note": "not meaningful: a window is zero or negative"
+        },
+        "holderFlow": "burn"
+      }
+    ],
+    "annualized": 1033528535.8889387,
+    "growth": {
+      "current": 247946099.13696504,
+      "prior": 140158706,
+      "change": 0.7690381583357728,
+      "annualized": 8.855330431497803
+    },
+    "growthExNew": {
+      "current": 211081574,
+      "prior": 140158706,
+      "change": 0.5060182847293124,
+      "annualized": 4.167436605365167
+    },
+    "excludedFromExNew": [
+      "reserve_yield"
+    ],
+    "provisional": true
+  },
+  "volume": null,
+  "revenueDisclosed": null,
+  "notes": [
+    "revenue: reserve_yield has 12 unpaid day(s) at the last period's daily rate (provisional)"
+  ]
+}

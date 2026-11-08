@@ -1,0 +1,102 @@
+[
+  {
+    "metric": "flow_usd.burn",
+    "days": 182,
+    "sumLegacy": 16138853.727503512,
+    "sumHourly": 16138853.727503512,
+    "gapPct": 0,
+    "p50DayGapPct": 0,
+    "p90DayGapPct": 0,
+    "legacyZeroDays": 0,
+    "hourlyCovered": 115,
+    "usdNative": 0,
+    "beyondHourly": 67,
+    "beyond": {
+      "days": 67,
+      "sumLegacy": 7596625.494764524,
+      "sumHourly": 7652042.584673285,
+      "gapPct": 0.7294961420298174,
+      "p50DayGapPct": 0,
+      "p90DayGapPct": 2.1540767619219214,
+      "legacyZeroDays": 0
+    },
+    "unpriced": 0,
+    "noTokens": 0,
+    "noHourly": 0
+  },
+  {
+    "metric": "flow_usd.fees",
+    "days": 182,
+    "sumLegacy": 0,
+    "sumHourly": 0,
+    "gapPct": null,
+    "p50DayGapPct": null,
+    "p90DayGapPct": null,
+    "legacyZeroDays": 0,
+    "hourlyCovered": 0,
+    "usdNative": 0,
+    "beyondHourly": 0,
+    "beyond": {
+      "days": 0,
+      "sumLegacy": 0,
+      "sumHourly": 0,
+      "gapPct": null,
+      "p50DayGapPct": null,
+      "p90DayGapPct": null,
+      "legacyZeroDays": 0
+    },
+    "unpriced": 0,
+    "noTokens": 182,
+    "noHourly": 0
+  },
+  {
+    "metric": "flow_usd.llama_revenue",
+    "days": 182,
+    "sumLegacy": 0,
+    "sumHourly": 0,
+    "gapPct": null,
+    "p50DayGapPct": null,
+    "p90DayGapPct": null,
+    "legacyZeroDays": 0,
+    "hourlyCovered": 0,
+    "usdNative": 0,
+    "beyondHourly": 0,
+    "beyond": {
+      "days": 0,
+      "sumLegacy": 0,
+      "sumHourly": 0,
+      "gapPct": null,
+      "p50DayGapPct": null,
+      "p90DayGapPct": null,
+      "legacyZeroDays": 0
+    },
+    "unpriced": 0,
+    "noTokens": 182,
+    "noHourly": 0
+  },
+  {
+    "metric": "flow_usd.treasury",
+    "days": 182,
+    "sumLegacy": 5930665.185466455,
+    "sumHourly": 5930665.185466455,
+    "gapPct": 0,
+    "p50DayGapPct": 0,
+    "p90DayGapPct": 0,
+    "legacyZeroDays": 0,
+    "hourlyCovered": 115,
+    "usdNative": 0,
+    "beyondHourly": 67,
+    "beyond": {
+      "days": 67,
+      "sumLegacy": 2830079.5859764894,
+      "sumHourly": 2853774.450732545,
+      "gapPct": 0.8372508276257573,
+      "p50DayGapPct": 0,
+      "p90DayGapPct": 1.679250024046843,
+      "legacyZeroDays": 0
+    },
+    "unpriced": 0,
+    "noTokens": 0,
+    "noHourly": 0
+  }
+]

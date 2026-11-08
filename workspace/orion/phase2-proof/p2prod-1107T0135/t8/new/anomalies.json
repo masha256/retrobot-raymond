@@ -1,0 +1,451 @@
+[
+  {
+    "id": 16,
+    "assetId": "vvv",
+    "kind": "unlisted_sender",
+    "metricKey": "flow_usd.burn",
+    "dedupeKey": "0xffc033700fb6c0c8c709a0d09c10c8bb040a4618",
+    "severity": "degrading",
+    "status": "open",
+    "detail": {
+      "sender": "0xffc033700fb6c0c8c709a0d09c10c8bb040a4618",
+      "transfers": 1,
+      "tokens": 0.11330469911940108,
+      "first": {
+        "tx": "0x84663c3807126c6289d24bbcccbabcaf2abcf77ae981e1a5b6ac1fef128699b2",
+        "day": "2026-11-04"
+      },
+      "last": {
+        "tx": "0x84663c3807126c6289d24bbcccbabcaf2abcf77ae981e1a5b6ac1fef128699b2",
+        "day": "2026-11-04"
+      },
+      "scan": "transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe]"
+    },
+    "occurrences": 1,
+    "firstSeenAt": "2026-11-05T13:05:57.147Z",
+    "lastSeenAt": "2026-11-05T13:05:57.147Z",
+    "note": null,
+    "decidedAt": null,
+    "decidedBy": null
+  },
+  {
+    "id": 15,
+    "assetId": "hype",
+    "kind": "revenue_payment",
+    "metricKey": "flow_usd.reserve_yield",
+    "dedupeKey": "accrual:2026-09-25",
+    "severity": "advisory",
+    "status": "open",
+    "detail": {
+      "period": [
+        "2026-09-25",
+        "2026-10-24"
+      ],
+      "paid": 15916963.17974695,
+      "accrued": 14580776.68532028,
+      "diff_pct": 9.164028249413647,
+      "tolerance_pct": 2,
+      "basis": "the 2026-08-26 to 2026-09-24 period's daily rate"
+    },
+    "occurrences": 4,
+    "firstSeenAt": "2026-11-04T13:10:57.177Z",
+    "lastSeenAt": "2026-11-07T00:45:38.600Z",
+    "note": null,
+    "decidedAt": null,
+    "decidedBy": null
+  },
+  {
+    "id": 14,
+    "assetId": "vvv",
+    "kind": "unlisted_sender",
+    "metricKey": "flow_usd.burn",
+    "dedupeKey": "0x5e69efb017f5472dfb99659f0a390f4de2622a3a",
+    "severity": "degrading",
+    "status": "acknowledged",
+    "detail": {
+      "sender": "0x5e69efb017f5472dfb99659f0a390f4de2622a3a",
+      "transfers": 1,
+      "tokens": 0.04666825599981727,
+      "first": {
+        "tx": "0x9c2ea4ff20394e2ce5ceac15735ddfd6739769b3d3f8837766872fd386fcd595",
+        "day": "2026-11-02"
+      },
+      "last": {
+        "tx": "0x9c2ea4ff20394e2ce5ceac15735ddfd6739769b3d3f8837766872fd386fcd595",
+        "day": "2026-11-02"
+      },
+      "scan": "transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe]"
+    },
+    "occurrences": 1,
+    "firstSeenAt": "2026-11-03T13:05:57.177Z",
+    "lastSeenAt": "2026-11-03T13:05:57.177Z",
+    "note": "dust: 0.047 VVV from unlisted sender 0x5e69…2a3a on 2026-11-02; acked by Mike 2026-11-03",
+    "decidedAt": "2026-11-04T00:51:10.761Z",
+    "decidedBy": null
+  },
+  {
+    "id": 13,
+    "assetId": "cake",
+    "kind": "cross_check_mismatch",
+    "metricKey": "total_supply",
+    "dedupeKey": "coingecko",
+    "severity": "degrading",
+    "status": "resolved",
+    "detail": {
+      "primary": 363547688.1158702,
+      "check": 354044051.09020185,
+      "diff_pct": 2.614137659607209,
+      "tolerance_pct": 2.5,
+      "primary_source": "chain_levels",
+      "check_source": "coingecko"
+    },
+    "occurrences": 1,
+    "firstSeenAt": "2026-10-29T12:45:03.149Z",
+    "lastSeenAt": "2026-10-29T12:45:03.149Z",
+    "note": "Cause understood and gone. On-chain total_supply (totalSupply minus dead) went 335.12M on Oct 26 (obs 26723) → 343.48M Oct 27 → 363.55M Oct 29 (obs 27565), stayed flat through Nov 1 (obs 28166), and fell back to 334.91M after the Monday Nov 2 burn (obs 28364). That is a drop of 28.64M, which reverses the whole 28.4M mid-week jump plus about 214k CAKE of net weekly deflation (335.12M → 334.91M, week on week). This fits the chef's gross mint-and-return: CAKE minted mid-week and sent back to the dead address in the weekly burn transaction. It was not dilution. The cross-check has not re-fired since Oct 29 (last_seen unchanged), and the normal gap between on-chain supply and CoinGecko is about 1.7%, inside the 2.5% tolerance. Residual risk: a future mid-week harvest of this size will trip it again. That would be a recurrence of a known mechanism, not a data fault; see the journal. [evidence: #28364, #28166, #27565, #26723]",
+    "decidedAt": "2026-11-02T13:47:20.505Z",
+    "decidedBy": "onchain-dex-analyst"
+  },
+  {
+    "id": 12,
+    "assetId": "vvv",
+    "kind": "unlisted_sender",
+    "metricKey": "flow_usd.burn",
+    "dedupeKey": "0x610e59d9b1a91fd439b139acf1db848b983cdf47",
+    "severity": "degrading",
+    "status": "resolved",
+    "detail": {
+      "sender": "0x610e59d9b1a91fd439b139acf1db848b983cdf47",
+      "transfers": 1,
+      "tokens": 0.03934162691070899,
+      "first": {
+        "tx": "0xef09d639b54c858d369db117698e8b1672085815ef98952f06ab753edc9d45c6",
+        "day": "2026-10-28"
+      },
+      "last": {
+        "tx": "0xef09d639b54c858d369db117698e8b1672085815ef98952f06ab753edc9d45c6",
+        "day": "2026-10-28"
+      },
+      "scan": "transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe]"
+    },
+    "occurrences": 1,
+    "firstSeenAt": "2026-10-29T12:05:03.055Z",
+    "lastSeenAt": "2026-10-29T12:05:03.055Z",
+    "note": "One transfer of 0.0393 VVV (about $0.92 at $23.46) from 0x610e59…cdf47 to the burn sink on 2026-10-28 (tx 0xef09d6…45c6). This is a new sender, but a single transfer of a trivial amount: third-party dust sent to the dead address, not a Venice burn leg. It looks nothing like the programmatic burn (thousands of aerodrome_pool swaps a day of ~0.15 VVV each) or the monthly buyback_safe lump. The flow excluded it correctly. Obs 27460 (day 2026-10-28) lists only aerodrome_pool as a sender: 6,115 transfers, 907.57 VVV, $22.18k. That is in line with obs 27262 (day 2026-10-27: 6,410 transfers, 906.80 VVV, $23.0k). Effect on flow_usd.burn: nil. This is the sixth unlisted-sender dust event in nine days (anomalies 6-10, 12), from five senders. The fix belongs in the detector (a minimum size before a degrading anomaly is raised), not in the allowlist. If any unlisted sender starts sending recurring or material amounts, treat it as a possible new burn leg. [evidence: #27460, #27262]",
+    "decidedAt": "2026-10-29T12:06:56.889Z",
+    "decidedBy": "ai-infra-analyst"
+  },
+  {
+    "id": 11,
+    "assetId": "ycrv",
+    "kind": "cross_check_mismatch",
+    "metricKey": "price_usd",
+    "dedupeKey": "http_json:https://coins.llama.fi/prices/current/ethereum:0xFCc5c47bE19d06BF83eB04298b026F81069ff65b",
+    "severity": "degrading",
+    "status": "resolved",
+    "detail": {
+      "primary": 0.181373,
+      "check": 0.18674262214420032,
+      "diff_pct": 2.9605410641056324,
+      "tolerance_pct": 2,
+      "primary_source": "coingecko",
+      "check_source": "http_json:https://coins.llama.fi/prices/current/ethereum:0xFCc5c47bE19d06BF83eB04298b026F81069ff65b"
+    },
+    "occurrences": 1,
+    "firstSeenAt": "2026-10-28T12:25:30.169Z",
+    "lastSeenAt": "2026-10-28T12:25:30.169Z",
+    "note": "The cross-check has passed on both fetches since the breach: occurrences is still 1 and last_seen is 10/28. CoinGecko read $0.175993 on 10/29 (id 27506) and $0.154326 on 10/30 (id 27704). I re-fetched the DefiLlama check endpoint at 10/30 ~12:30 UTC. It returned $0.15431694 with confidence 0.99, which is 0.006% from the primary and well inside the 2% tolerance. The 2.96% gap on 10/28 was a one-off: two pricing methods drifted apart on a thin market (about $6–13k of daily DEX volume). Neither source was broken. If it recurs on 3 or more fetches, I will propose a tolerance change instead of resolving. [evidence: #27704, #27506]",
+    "decidedAt": "2026-10-30T12:26:30.380Z",
+    "decidedBy": "onchain-dex-analyst"
+  },
+  {
+    "id": 10,
+    "assetId": "vvv",
+    "kind": "unlisted_sender",
+    "metricKey": "flow_usd.burn",
+    "dedupeKey": "0xc124e0b40d3afa80836c146eb2919b617b4d6cb2",
+    "severity": "degrading",
+    "status": "resolved",
+    "detail": {
+      "sender": "0xc124e0b40d3afa80836c146eb2919b617b4d6cb2",
+      "transfers": 1,
+      "tokens": 0.000838429462197187,
+      "first": {
+        "tx": "0x4c92110c162a0c938cecc12d68bccd3346b66c491ff07802a58e63308f65ea2d",
+        "day": "2026-10-27"
+      },
+      "last": {
+        "tx": "0x4c92110c162a0c938cecc12d68bccd3346b66c491ff07802a58e63308f65ea2d",
+        "day": "2026-10-27"
+      },
+      "scan": "transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe]"
+    },
+    "occurrences": 1,
+    "firstSeenAt": "2026-10-28T12:05:30.131Z",
+    "lastSeenAt": "2026-10-28T12:05:30.131Z",
+    "note": "One transfer of 0.000838 VVV (about $0.02 at $24.41) from 0xc124e0…6cb2 to the burn sink on 2026-10-27 (tx 0x4c9211…ea2d). This is a new sender, but it sent a single transfer of a trivial amount: third-party dust sent to the dead address, not a Venice burn leg. It does not resemble the programmatic burn (thousands of aerodrome_pool swaps a day of ~0.14 VVV each) or the monthly buyback_safe lump. The flow excluded it correctly. Obs 27262 (day 2026-10-27) lists only aerodrome_pool as a sender: 6,410 transfers, 906.80 VVV, $23.0k. That is in line with obs 27064 (day 2026-10-26: 6,616 transfers, $24.0k). Effect on flow_usd.burn: nil. This is the fifth unlisted-sender dust event in eight days (anomalies 6-10), from four senders. The fix belongs in the detector (a minimum size before it raises a degrading anomaly), not in the allowlist. If any unlisted sender starts sending recurring or material amounts, treat it as a possible new burn leg. [evidence: #27262, #27064]",
+    "decidedAt": "2026-10-28T12:06:38.477Z",
+    "decidedBy": "ai-infra-analyst"
+  },
+  {
+    "id": 9,
+    "assetId": "vvv",
+    "kind": "unlisted_sender",
+    "metricKey": "flow_usd.burn",
+    "dedupeKey": "0xcb844c8f5751a65470d875a249c0e12e6f2aa737",
+    "severity": "degrading",
+    "status": "resolved",
+    "detail": {
+      "sender": "0xcb844c8f5751a65470d875a249c0e12e6f2aa737",
+      "transfers": 1,
+      "tokens": 0.018447709461534473,
+      "first": {
+        "tx": "0x57f8b1f13b91d354eb8805bd1c58f465f4ad977567f1929a0d9e1d36c8c85734",
+        "day": "2026-10-26"
+      },
+      "last": {
+        "tx": "0x57f8b1f13b91d354eb8805bd1c58f465f4ad977567f1929a0d9e1d36c8c85734",
+        "day": "2026-10-26"
+      },
+      "scan": "transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe]"
+    },
+    "occurrences": 1,
+    "firstSeenAt": "2026-10-27T12:05:30.151Z",
+    "lastSeenAt": "2026-10-27T12:05:30.151Z",
+    "note": "One transfer of 0.0184 VVV (about $0.47 at $25.38) from 0xcb844c…a737 to the burn sink on 2026-10-26 (tx 0x57f8b1…5734). This sender is new, but the event is a single transfer of a trivial amount: third-party dust sent to the dead address, not a Venice burn leg. The flow excluded it correctly. Obs 27064 (day 2026-10-26) lists only aerodrome_pool as a sender: 6,616 transfers, 964.75 VVV, $24.0k. That is in line with the trend (obs 26618: 6,000 transfers, $21.6k). Effect on flow_usd.burn: nil. This is the fourth dust event in seven days (anomalies 6-9). If any unlisted sender starts sending recurring or material amounts, treat it as a possible new burn leg rather than dust. [evidence: #27064, #26618] [evidence: #27064, #26618]",
+    "decidedAt": "2026-10-27T12:06:47.423Z",
+    "decidedBy": "ai-infra-analyst"
+  },
+  {
+    "id": 8,
+    "assetId": "vvv",
+    "kind": "unlisted_sender",
+    "metricKey": "flow_usd.burn",
+    "dedupeKey": "0xb4595ef72e2672d0b78acb4f13b3a8f08b72ac2d",
+    "severity": "degrading",
+    "status": "resolved",
+    "detail": {
+      "sender": "0xb4595ef72e2672d0b78acb4f13b3a8f08b72ac2d",
+      "transfers": 1,
+      "tokens": 0.03962719774558496,
+      "first": {
+        "tx": "0xe4f1924d0911ca2759f9a0dade13f80b5477cb94992b4b2e65f894895e451393",
+        "day": "2026-10-26"
+      },
+      "last": {
+        "tx": "0xe4f1924d0911ca2759f9a0dade13f80b5477cb94992b4b2e65f894895e451393",
+        "day": "2026-10-26"
+      },
+      "scan": "transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe]"
+    },
+    "occurrences": 1,
+    "firstSeenAt": "2026-10-27T12:05:30.151Z",
+    "lastSeenAt": "2026-10-27T12:05:30.151Z",
+    "note": "One transfer of 0.0396 VVV (about $1.00 at $25.38) from 0xb4595e…2ac2d to the burn sink on 2026-10-26 (tx 0xe4f192…1393). This is the same sender as anomaly 6 (0.0074 VVV on 20 Oct), so it is a repeat dust sender, not a new one. Both amounts are trivial and both were single transfers. It does not look like the programmatic burn (thousands of aerodrome_pool swaps a day) or the monthly buyback_safe lump, so it is not a new Venice burn leg. The flow excluded it correctly. Obs 27064 (day 2026-10-26) lists only aerodrome_pool as a sender: 6,616 transfers, 964.75 VVV, $24.0k. Effect on flow_usd.burn: nil. Dust is now recurring: four unlisted-sender events in seven days from three senders (anomalies 6, 7, 8, 9). Allowlisting is the wrong fix. The right one is a minimum-size threshold before unlisted_sender raises a degrading anomaly; that is flagged in the journal for the user. [evidence: #27064, #26618] [evidence: #27064, #26618]",
+    "decidedAt": "2026-10-27T12:06:47.423Z",
+    "decidedBy": "ai-infra-analyst"
+  },
+  {
+    "id": 7,
+    "assetId": "vvv",
+    "kind": "unlisted_sender",
+    "metricKey": "flow_usd.burn",
+    "dedupeKey": "0xbdc0204f0bcec6620adece8c7eb4718c94e772c9",
+    "severity": "degrading",
+    "status": "resolved",
+    "detail": {
+      "sender": "0xbdc0204f0bcec6620adece8c7eb4718c94e772c9",
+      "transfers": 1,
+      "tokens": 0.15831552283701417,
+      "first": {
+        "tx": "0x23748adf00b47e926b1906b6ceb28a54c26df2c2b9b0d615cb1a161e23588307",
+        "day": "2026-10-22"
+      },
+      "last": {
+        "tx": "0x23748adf00b47e926b1906b6ceb28a54c26df2c2b9b0d615cb1a161e23588307",
+        "day": "2026-10-22"
+      },
+      "scan": "transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe]"
+    },
+    "occurrences": 1,
+    "firstSeenAt": "2026-10-23T12:05:18.917Z",
+    "lastSeenAt": "2026-10-23T12:05:18.917Z",
+    "note": "One transfer of 0.158 VVV (about $4.10 at $25.96) from 0xbdc020…72c9 to the burn sink on 2026-10-22 (tx 0x23748a…8307). It is a third-party transfer to the dead address, not a new Venice burn leg: it is a single transfer, a trivial amount, and it does not look like the programmatic burn (~6,000 swaps a day of ~0.13 VVV each, all from aerodrome_pool) or the monthly buyback_safe lump. The flow excluded it correctly. Obs 25150 (day 2026-10-22) lists only aerodrome_pool as a sender: 5,955 transfers, 802.03 VVV, $21.47k, in line with the previous day (obs 24960: 6,050 transfers, $21.48k). Effect on flow_usd.burn: nil. This is the second such dust event in three days, from a different sender than anomaly 6 (0xb4595e…). If unlisted dust keeps appearing, the fix is a minimum-size threshold for unlisted senders in the asset config, not a change to the allowlist. If any unlisted sender sends recurring or material amounts, treat it as a possible new burn leg. [evidence: #25150, #24960]",
+    "decidedAt": "2026-10-23T12:06:51.419Z",
+    "decidedBy": "ai-infra-analyst"
+  },
+  {
+    "id": 6,
+    "assetId": "vvv",
+    "kind": "unlisted_sender",
+    "metricKey": "flow_usd.burn",
+    "dedupeKey": "0xb4595ef72e2672d0b78acb4f13b3a8f08b72ac2d",
+    "severity": "degrading",
+    "status": "resolved",
+    "detail": {
+      "sender": "0xb4595ef72e2672d0b78acb4f13b3a8f08b72ac2d",
+      "transfers": 1,
+      "tokens": 0.00743558174401167,
+      "first": {
+        "tx": "0xfe23d12e84f9e801d39f70f615b9b1596f528598c19c627363e8907593808bd3",
+        "day": "2026-10-20"
+      },
+      "last": {
+        "tx": "0xfe23d12e84f9e801d39f70f615b9b1596f528598c19c627363e8907593808bd3",
+        "day": "2026-10-20"
+      },
+      "scan": "transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe]"
+    },
+    "occurrences": 1,
+    "firstSeenAt": "2026-10-21T12:05:47.733Z",
+    "lastSeenAt": "2026-10-21T12:05:47.733Z",
+    "note": "One transfer of 0.0074 VVV (about $0.20 at $27.55) from 0xb4595e…2ac2d to the burn sink on 2026-10-20 (tx 0xfe23d1…8bd3). This is dust sent to the dead address by a third party. It is not a new Venice burn source. The flow excludes it correctly: obs 24771 (day 2026-10-20) lists only aerodrome_pool as a sender (6,398 transfers, 902.24 VVV, $22.47k). No buyback_safe or unlisted contribution was counted. Today's fetch (obs 24960, day 2026-10-21) raised no new unlisted transfers, and occurrences are still 1. The effect on flow_usd.burn is nil. If this sender or others start sending material, recurring amounts, the anomaly should reopen and be treated as a possible new burn leg. [evidence: #24771, #24960]",
+    "decidedAt": "2026-10-22T12:10:13.767Z",
+    "decidedBy": "ai-infra-analyst"
+  },
+  {
+    "id": 5,
+    "assetId": "cake",
+    "kind": "unlisted_sender",
+    "metricKey": "flow_usd.burn",
+    "dedupeKey": "0x9f1f362858622d67f4641f328c8e088985f95a30",
+    "severity": "degrading",
+    "status": "acknowledged",
+    "detail": {
+      "sender": "0x9f1f362858622d67f4641f328c8e088985f95a30",
+      "transfers": 2,
+      "tokens": 701.9006843811432,
+      "first": {
+        "tx": "0xfc78a02a831f0420fbb2467c26b262b756462ff0b3157cd3147002645d318fb1",
+        "day": "2026-06-01"
+      },
+      "last": {
+        "tx": "0xe726d0338d55a13fc8e5b3ebe15f1eb07b725394c7b8a42769c95b2fab103acf",
+        "day": "2026-06-08"
+      },
+      "scan": "transfer_flow:token>burner[converter_a,converter_b,converter_c,converter_owner,product_a,product_b,product_c]"
+    },
+    "occurrences": 1,
+    "firstSeenAt": "2026-10-12T19:18:12.516Z",
+    "lastSeenAt": "2026-10-12T19:18:12.516Z",
+    "note": "Mike 2026-10-12: EOA 0x9f1f sent 702 CAKE directly to the burner on 2026-06-01/08; not counted; none since",
+    "decidedAt": "2026-10-12T19:41:00.954Z",
+    "decidedBy": null
+  },
+  {
+    "id": 4,
+    "assetId": "cake",
+    "kind": "unlisted_sender",
+    "metricKey": "flow_usd.burn",
+    "dedupeKey": "0xfa206dab60c014beb6833004d8848910165e6047",
+    "severity": "degrading",
+    "status": "acknowledged",
+    "detail": {
+      "sender": "0xfa206dab60c014beb6833004d8848910165e6047",
+      "transfers": 1,
+      "tokens": 39682.54477,
+      "first": {
+        "tx": "0x01169e7e17232143d155f1afd418702b189abf10285127023dc0f31241a99a62",
+        "day": "2025-12-22"
+      },
+      "last": {
+        "tx": "0x01169e7e17232143d155f1afd418702b189abf10285127023dc0f31241a99a62",
+        "day": "2025-12-22"
+      },
+      "scan": "transfer_flow:token>burner[converter_a,converter_b,converter_c,converter_owner,product_a,product_b,product_c]"
+    },
+    "occurrences": 1,
+    "firstSeenAt": "2026-10-12T19:18:12.516Z",
+    "lastSeenAt": "2026-10-12T19:18:12.516Z",
+    "note": "Mike 2026-10-12: one-off team burn from Safe 0xfa20 (same signer 0xd099 as 0xecc9), 39.7k CAKE on 2025-12-22; not counted; none since",
+    "decidedAt": "2026-10-12T19:41:00.379Z",
+    "decidedBy": null
+  },
+  {
+    "id": 3,
+    "assetId": "cake",
+    "kind": "unlisted_sender",
+    "metricKey": "flow_usd.burn",
+    "dedupeKey": "0xecc90d54b10add1ab746abe7e83abe178b72aa9e",
+    "severity": "degrading",
+    "status": "acknowledged",
+    "detail": {
+      "sender": "0xecc90d54b10add1ab746abe7e83abe178b72aa9e",
+      "transfers": 2,
+      "tokens": 118031.99239655808,
+      "first": {
+        "tx": "0x413d259fd80670ca5957f705ee9fe2314dc7c542d658b0b3955f443b40c76046",
+        "day": "2025-10-20"
+      },
+      "last": {
+        "tx": "0x24202a7fdaa8aeee0e84c10e6b37320a9203e35558d3534f03a998fa1b691582",
+        "day": "2025-10-27"
+      },
+      "scan": "transfer_flow:token>burner[converter_a,converter_b,converter_c,converter_owner,product_a,product_b,product_c]"
+    },
+    "occurrences": 1,
+    "firstSeenAt": "2026-10-12T19:18:12.516Z",
+    "lastSeenAt": "2026-10-12T19:18:12.516Z",
+    "note": "Mike 2026-10-12: one-off team burns from Safe 0xecc9 (signer 0xd099, also signs 0xfa20), 118k CAKE on 2025-10-20/27; not counted as holder flow; none since",
+    "decidedAt": "2026-10-12T19:40:59.818Z",
+    "decidedBy": null
+  },
+  {
+    "id": 2,
+    "assetId": "vvv",
+    "kind": "cross_check_mismatch",
+    "metricKey": "flow_usd.burn",
+    "dedupeKey": "defillama:venice:dailyHoldersRevenue",
+    "severity": "degrading",
+    "status": "acknowledged",
+    "detail": {
+      "months": [
+        {
+          "month": "2026-04",
+          "primary": 135704.1237434594,
+          "check": 147822.03,
+          "diff_pct": 8.929652189088058
+        }
+      ],
+      "tolerance_pct": 5,
+      "primary_source": "transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe]",
+      "check_source": "defillama:venice:dailyHoldersRevenue"
+    },
+    "occurrences": 28,
+    "firstSeenAt": "2026-10-12T15:53:29.664Z",
+    "lastSeenAt": "2026-11-07T01:11:50.151Z",
+    "note": "April is pre-window backfill history (200-day backfill 2026-10-12); tokens within 1.5% of Venice burn history; USD gap is daily CoinGecko close vs execution-time pricing. May-Oct within tolerance. Acked by Mike 2026-10-14.",
+    "decidedAt": "2026-10-14T16:39:47.577Z",
+    "decidedBy": null
+  },
+  {
+    "id": 1,
+    "assetId": "vvv",
+    "kind": "revenue_disclosure_stale",
+    "metricKey": "revenue_run_rate_usd",
+    "dedupeKey": "2026-08-17T00:00:00.000Z",
+    "severity": "advisory",
+    "status": "acknowledged",
+    "detail": {
+      "revenue_observed_at": "2026-08-17T00:00:00.000Z",
+      "index_at_disclosure": {
+        "value": 10428.849599212428,
+        "observed_at": "2026-08-17T00:00:00.000Z"
+      },
+      "index_latest": {
+        "value": 21239.09108705108,
+        "observed_at": "2026-11-03T00:00:00.000Z"
+      },
+      "move_pct": 103.65708494496869,
+      "threshold_pct": 30,
+      "basis": "near_disclosure",
+      "note": "usage_index has moved since the revenue figure was disclosed; the disclosed revenue may be stale"
+    },
+    "occurrences": 42,
+    "firstSeenAt": "2026-09-20T14:46:17.571Z",
+    "lastSeenAt": "2026-11-03T13:05:57.177Z",
+    "note": "watching for new disclosure",
+    "decidedAt": "2026-09-20T15:08:12.309Z",
+    "decidedBy": null
+  }
+]

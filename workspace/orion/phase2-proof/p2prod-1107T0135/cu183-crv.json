@@ -1,0 +1,77 @@
+[
+  {
+    "metric": "flow_usd.curve_treasury",
+    "days": 182,
+    "sumLegacy": 210527.71551755123,
+    "sumHourly": 210527.71551755126,
+    "gapPct": 2.220446049250313e-14,
+    "p50DayGapPct": 0,
+    "p90DayGapPct": 0,
+    "legacyZeroDays": 0,
+    "hourlyCovered": 116,
+    "usdNative": 0,
+    "beyondHourly": 66,
+    "beyond": {
+      "days": 66,
+      "sumLegacy": 124407.95569188539,
+      "sumHourly": 124406.91321354688,
+      "gapPct": -0.0008379515061607279,
+      "p50DayGapPct": 0,
+      "p90DayGapPct": 0.00029191191334176946,
+      "legacyZeroDays": 0
+    },
+    "unpriced": 0,
+    "noTokens": 0,
+    "noHourly": 0
+  },
+  {
+    "metric": "flow_usd.fees",
+    "days": 182,
+    "sumLegacy": 1894749.4396579615,
+    "sumHourly": 1894749.4396579613,
+    "gapPct": -1.1102230246251565e-14,
+    "p50DayGapPct": 0,
+    "p90DayGapPct": 1.5341610594508264e-14,
+    "legacyZeroDays": 0,
+    "hourlyCovered": 115,
+    "usdNative": 0,
+    "beyondHourly": 67,
+    "beyond": {
+      "days": 67,
+      "sumLegacy": 1119671.6012269687,
+      "sumHourly": 1119662.2189219221,
+      "gapPct": -0.0008379515061607279,
+      "p50DayGapPct": 0,
+      "p90DayGapPct": 0.0002919119132995341,
+      "legacyZeroDays": 0
+    },
+    "unpriced": 0,
+    "noTokens": 0,
+    "noHourly": 0
+  },
+  {
+    "metric": "flow_usd.protocol_revenue",
+    "days": 182,
+    "sumLegacy": 2105277.155175512,
+    "sumHourly": 2105277.155175512,
+    "gapPct": 0,
+    "p50DayGapPct": 0,
+    "p90DayGapPct": 0,
+    "legacyZeroDays": 0,
+    "hourlyCovered": 117,
+    "usdNative": 0,
+    "beyondHourly": 65,
+    "beyond": {
+      "days": 65,
+      "sumLegacy": 1244079.5569188541,
+      "sumHourly": 1244069.1321354692,
+      "gapPct": -0.0008379515061496257,
+      "p50DayGapPct": 0,
+      "p90DayGapPct": 0.0002919119133671106,
+      "legacyZeroDays": 0
+    },
+    "unpriced": 0,
+    "noTokens": 0,
+    "noHourly": 0
+  }
+]

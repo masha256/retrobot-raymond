@@ -1,0 +1,149 @@
+id: uni
+symbol: UNI
+name: Uniswap
+chain: ethereum
+
+# Read live on 2026-10-11; see docs/superpowers/specs/2026-10-11-orion-uni-onboarding-design.md section 1.
+contracts:
+  token: "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984" # UNI; totalSupply() stays 1e9, burns go to dead
+  dead: "0x000000000000000000000000000000000000dEaD" # every fee burn ends here (Firepit / L2 burns bridged back)
+  timelock: "0x1a9C8182C09F50C8318d769245beA52c32BE35BC" # DAO Timelock: the treasury (262.2M UNI), the 100M one-off burn (2025-12-27)
+  vesting: "0xca046a83edb78f74ae338bb5a291bf6fdac9e1d2" # UNIVesting: 5M UNI a quarter from the Timelock to Uniswap Labs
+  chainlink_uni_usd: "0x553303d460EE0afB37EdFf9bE42922D8FF63220e" # Chainlink UNI / USD, 8 decimals
+
+ingest: { chain_id: 1, rpc_url_env: ORION_ETH_RPC_URL, backfill_days: 100 }
+
+external_ids:
+  coingecko: uniswap
+  defillama: uniswap
+
+# Every metric is fetched: no manual metric, so a bootstrap run finds nothing to research and writes only its journal.
+# DefiLlama only for gross swap fees, the one series with no on-chain source (Mike, 2026-10-11).
+metrics:
+  price_usd:
+    type: level
+    unit: usd
+    staleness_days: 3
+    critical: true
+    source: { type: coingecko, id: uniswap, field: price }
+    cross_checks:
+      - { tolerance_pct: 2, source: { type: contract_read, contract: chainlink_uni_usd, function: latestAnswer, decimals: 8 } }
+
+  # 1e9 less the burned UNI at dead. The Timelock's treasury stays inside (Mike, 2026-10-11):
+  # treasury UNI can be spent, and the burn reaches every token.
+  total_supply:
+    type: level
+    unit: tokens
+    staleness_days: 7
+    critical: true
+    source: { type: erc20_supply, token: token, subtract_balances: [ dead ] }
+    cross_checks:
+      - { tolerance_pct: 2, source: { type: coingecko, id: uniswap, field: total_supply } }
+
+  # CoinGecko's own definition; display only, the report's market cap basis (FDV uses total_supply).
+  circulating_supply:
+    type: level
+    unit: tokens
+    staleness_days: 14
+    source: { type: coingecko, id: uniswap, field: circulating_supply }
+
+  # No staking: UNI pays no one for staking, and the burn reaches every holder.
+  staked_supply:
+    type: level
+    unit: tokens
+    staleness_days: 7
+    source: { type: constant, value: 0, note: "UNI has no staking (2026-10-11); the fee burn reaches all holders" }
+
+  staker_emission_share:
+    type: level
+    unit: ratio
+    staleness_days: 7
+    source: { type: constant, value: 0, note: "no staking, no staking rewards" }
+
+  # The minter (up to 2 percent a year by governance) has never been used. The Labs vest is not an emission here: the
+  # Timelock's UNI is already in total supply, so it is reported as dilution instead (reporting.dilution).
+  emission_rate_annual:
+    type: schedule
+    unit: tokens_per_year
+    staleness_days: 45
+    critical: true
+    source: { type: constant, value: 0, note: "UNI minter never used; the Labs vest moves treasury UNI already counted in total supply" }
+
+  # The holder flow, read on chain: every UNI transfer to dead, at each day's price. Anyone may burn to release a chain's
+  # fee jar (Firepit): 75 percent arrives through five L2 bridge contracts, 25 percent from mainnet searcher contracts that
+  # rotate weekly (2026-07-03..10-11), so every sender counts (from_any, Mike 2026-10-11) and an unlisted-sender alarm would
+  # only be noise. The Timelock is ignored: it made the one-off 100M treasury burn, which is a supply event, not a flow.
+  flow_usd.burn:
+    type: flow
+    unit: usd
+    cadence: daily
+    staleness_days: 5
+    critical: true
+    source: { type: transfer_flow, token: token, to: dead, from_any: true, from_ignore: [ timelock ], unit: usd, price_coingecko_id: uniswap }
+
+  # The same burn in UNI: the flow's own measure, flat at about 23.6M a year while the dollar value tracked the price.
+  flow_tokens.burn:
+    type: flow
+    unit: tokens
+    cadence: daily
+    staleness_days: 5
+    monitor_only: true
+    source: { type: transfer_flow, token: token, to: dead, from_any: true, from_ignore: [ timelock ], unit: tokens }
+
+  # Report-only (monitor_only, never a driver). The Labs growth budget: UNIVesting pulls quarterlyVestingAmount each
+  # calendar quarter, as far as the Timelock's allowance reaches (20M on 2026-10-11: four quarters, to 2027-10).
+  labs_vest_rate: { type: level, unit: tokens_per_year, staleness_days: 7, monitor_only: true, source: { type: contract_read, contract: vesting, function: quarterlyVestingAmount, decimals: 18, scale: 4 } }
+  labs_vest_approved: { type: level, unit: tokens, staleness_days: 7, monitor_only: true, source: { type: contract_read, contract: token, function: allowance, args: [ timelock, vesting ], decimals: 18 } }
+  treasury_uni: { type: level, unit: tokens, staleness_days: 7, monitor_only: true, source: { type: contract_read, contract: token, function: balanceOf, args: [ timelock ], decimals: 18 } }
+
+  # Gross swap fees, LPs and protocol, every Uniswap version and chain: display only, the protocol's gross (reporting volume).
+  flow_usd.swap_fees:
+    type: flow
+    unit: usd
+    cadence: daily
+    staleness_days: 5
+    monitor_only: true
+    source: { type: defillama, slug: uniswap, data_type: dailyFees, backfill_days: 100 }
+
+holder_flows:
+  - { id: burn, kind: burn, capture_rule: programmatic, recipient_base: all, metric: flow_usd.burn, window_days: 91 }
+
+# Report-only holder yield and growth (orion report yield). A burn: no haircut. The Labs vest is the report's dilution
+# (Mike, 2026-10-11), capped by what governance has approved, so the net shareholder yield shows the burn against it.
+reporting:
+  window_days: 91
+  haircuts: { burn: 0 }
+  income:
+    lines:
+      - { id: burn, to: holders, metric: flow_usd.burn, note: "every protocol fee burns UNI" }
+  # Revenue (Mike, 2026-10-12): the burns are the protocol fees switched on, v2 plus selected v3 pools (and a small
+  # Unichain sequencer share); v4 and the other v3 pools are upside, not revenue.
+  revenue:
+    - { id: protocol_fees, label: "protocol fees (v2 + selected v3)", metric: flow_usd.burn, settlement: daily }
+  volume: [ flow_usd.swap_fees ]
+  # The burn in UNI against the vest in UNI (Mike, 2026-10-11): the USD net shareholder yield values the burn at each day's
+  # price and the vest at spot, so a rally alone can turn it negative; the token line cannot.
+  burned_tokens: [ flow_tokens.burn ]
+  dilution:
+    - { id: labs_vest, metric: labs_vest_rate, cap_metric: labs_vest_approved, note: "Timelock to Uniswap Labs via UNIVesting" }
+
+# Income statement v2 (spec 2026-10-28 §6/§8, Phase 2 Task 2), beside reporting for one release (the report still reads
+# reporting; Task 11 removes it). Revenue = what users pay; each section says where it goes.
+income_statement:
+  category: dex
+  scope: protocol_share_only
+  window_days: 91
+  revenue:
+    - { id: protocol_fees, label: "protocol fees (v2 + selected v3)", metric: flow_usd.burn, settlement: daily }
+  cost_of_revenue:
+    - { id: lps, to: lps, not_measured: "swap fees to LPs: v2 gross not derived, v3/v4 pools not scanned yet (Phase 3)" }
+  holders:
+    - { id: burn, of: protocol_fees, bucket: burn, haircut: 0, recipient_base: all, capture_rule: programmatic, note: "every protocol fee burns UNI" }
+  volume: [ flow_usd.swap_fees ]
+  burned_tokens: [ flow_tokens.burn ]
+  dilution:
+    - { id: labs_vest, metric: labs_vest_rate, cap_metric: labs_vest_approved, note: "Timelock to Uniswap Labs via UNIVesting" }
+  # Reconciliation checks (spec §5, Phase 2 Task 5): CoinGecko's price vs the Chainlink UNI/USD feed, the reading the
+  # price cross-check already stores in each fetch run's detail.
+  checks:
+    - { id: price_chainlink, type: price, level: price_usd, against: chainlink_uni_usd, tolerance_pct: 2 }

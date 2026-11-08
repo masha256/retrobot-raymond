@@ -1,0 +1,241 @@
+id: lit
+symbol: LIT
+name: Lighter
+chain: ethereum
+
+# Read live on 2026-10-16; see docs/superpowers/notes/2026-10-16-lit-onboarding.md.
+# The fee route: Lighter's treasury account (L2 account 0, also the fee account) buys LIT on its own LIT/USDC spot market
+# (2049) every day. The bought LIT is withdrawn to an L1 wallet that pays the staking rewards; each quarter an equal count
+# is burned from the ecosystem reserve to dead (2026-07-10 15.64M = everything bought to Q2; 2026-10-09 2.45M = Q3). On a
+# total-supply basis that is one buyback-and-burn: the buys are the holder flow, counted once.
+contracts:
+  token: "0x232CE3bd40fCd6f80f3d55A522d03f25Df784Ee2" # LIT (ERC-20, 1B minted); burns go to dead
+  dead: "0x000000000000000000000000000000000000dEaD" # 18.09M LIT on 2026-10-16: the two quarterly burns
+  burn_safe: "0x3dd7c834eaa70c98e1c224808a3c62163b344dae" # Safe (2 of 3): sends each quarter's burn from the reserve to dead
+  ecosystem_reserve: "0xe554dcb002e4f3546d67e6deed84323eed989d62" # 231.8M LIT on 2026-10-16: the burns are drawn from here
+  buyback_wallet: "0x1a51016fad47de690d1f48adf2f6407f3cdc160d" # the bought LIT, withdrawn from the L2; funds staking rewards
+  prime_passthrough: "0xab00e8f5f76e0522d9599b8735d4f6cfdc6e5f48" # holds nothing: forwards each transfer to Coinbase Prime 1 (0xcd53…ca7b) within minutes
+
+ingest: { chain_id: 1, rpc_url_env: ORION_ETH_RPC_URL, backfill_days: 100 }
+
+external_ids:
+  coingecko: lighter
+  defillama: lighter
+
+# Every metric is fetched: no manual metric, so a bootstrap run finds nothing to research and writes only its journal.
+# Lighter's own API for the buybacks and a price check (Mike, 2026-10-16), and for the fees, revenue, the Robinhood
+# instance's fee account and the staking pool (Mike, 2026-10-23; fees accrue inside the L2, no on-chain source).
+# DefiLlama only for display series (its fees and revenue, the category share) and the unlock schedule (no vesting
+# contract on chain).
+metrics:
+  price_usd:
+    type: level
+    unit: usd
+    staleness_days: 3
+    critical: true
+    source: { type: coingecko, id: lighter, field: price }
+    cross_checks:
+      - { tolerance_pct: 2, source: { type: http_json, url: "https://mainnet.zklighter.elliot.ai/api/v1/orderBookDetails?market_id=2049", path: spot_order_book_details.0.last_trade_price } }
+
+  # 1B less dead: 981.91M on 2026-10-16. The team, investor and ecosystem allocations stay inside (total_supply, the FDV
+  # basis on every Orion asset): they are already minted and can be sold. CoinGecko's total (1B) has not netted the burns,
+  # so the cross-check is 2.5 percent (1.8 percent apart on 2026-10-16; it widens by each quarter's burn).
+  total_supply:
+    type: level
+    unit: tokens
+    staleness_days: 7
+    critical: true
+    source: { type: erc20_supply, token: token, subtract_balances: [ dead ] }
+    cross_checks:
+      - { tolerance_pct: 2.5, source: { type: coingecko, id: lighter, field: total_supply } }
+
+  # CoinGecko's own definition (250M on 2026-10-16: the airdrop); display only, the report's market cap basis.
+  circulating_supply:
+    type: level
+    unit: tokens
+    staleness_days: 14
+    source: { type: coingecko, id: lighter, field: circulating_supply }
+
+  # LIT staking pays rewards in bought LIT (redistribution), not a fee share the model values: the burn reaches every holder.
+  staked_supply:
+    type: level
+    unit: tokens
+    staleness_days: 7
+    source: { type: constant, value: 0, note: "staking rewards are bought LIT passed on, not a fee share; the burn reaches every holder" }
+
+  staker_emission_share:
+    type: level
+    unit: ratio
+    staleness_days: 7
+    source: { type: constant, value: 0, note: "no emissions" }
+
+  # No minting: all 1B were minted at launch. The unlocks are tokens already in total supply, so they are reported as
+  # dilution (reporting.dilution), never counted as an emission.
+  emission_rate_annual:
+    type: schedule
+    unit: tokens_per_year
+    staleness_days: 45
+    critical: true
+    source: { type: constant, value: 0, note: "1B minted at launch; unlocks move tokens already in total supply" }
+
+  # The holder flow: USDC the treasury account spends on LIT each completed UTC day, read from Lighter's trades (account 0
+  # the bid on market 2049). Matches DefiLlama's holders revenue to the dollar for June to September 2026. The API keeps
+  # about 150 days of trades, so history starts 2026-05-24 (Mike, 2026-10-16: no DefiLlama stitch before it).
+  flow_usd.buyback:
+    type: flow
+    unit: usd
+    cadence: daily
+    staleness_days: 4
+    critical: true
+    source: { type: adapter, name: lit.treasury_buys_daily, params: { account: 0, market: 2049, unit: usd, days: 7 } }
+    cross_checks:
+      - { tolerance_pct: 5, source: { type: defillama, slug: lighter, data_type: dailyHoldersRevenue, compare: monthly_sum } }
+
+  # The same buys in LIT: the tokens the quarterly burn removes.
+  flow_tokens.buyback:
+    type: flow
+    unit: tokens
+    cadence: daily
+    staleness_days: 4
+    monitor_only: true
+    source: { type: adapter, name: lit.treasury_buys_daily, params: { account: 0, market: 2049, unit: tokens, days: 7 } }
+
+  # Report-only: the quarterly burns as executed, reserve LIT to dead from the Safe. Any other sender raises an unlisted
+  # anomaly. The supply falls by these; the buys above are the flow, so this is the check that the count matches.
+  flow_tokens.burn:
+    type: flow
+    unit: tokens
+    cadence: daily
+    staleness_days: 120
+    monitor_only: true
+    source: { type: transfer_flow, token: token, to: dead, from_allowlist: [ burn_safe ], unit: tokens }
+
+  # Report-only (2026-10-16): bought LIT the buyback wallet sends to Coinbase Prime, through the pass-through wallet. 3.0M
+  # in September 2026, about 31 percent of a year's buys; possibly the 11M USD LIT pledge to Robinhood users, possibly sold.
+  # Either way the valuation is unchanged while each quarter's burn matches the buys; it is watched in case it recurs.
+  # Other senders into the pass-through (1.3M in May-June) are not bought LIT; a monitor-only scan raises no anomaly.
+  flow_tokens.routed_to_prime:
+    type: flow
+    unit: tokens
+    cadence: daily
+    staleness_days: 120
+    monitor_only: true
+    source: { type: transfer_flow, token: token, to: prime_passthrough, from_allowlist: [ buyback_wallet ], unit: tokens }
+  routed_to_prime_rate: { type: level, unit: tokens_per_year, staleness_days: 120, monitor_only: true, source: { type: derived, name: flow_annualized, params: { metric: flow_tokens.routed_to_prime, days: 91 } } }
+
+  # Report-only: team and investor tokens unlocking over the next 365 days. Allocation sizes from DefiLlama's emissions
+  # dataset (no vesting contract on chain); timing from Lighter's own terms (Q3 2026 call, doc #1 at 12:27-12:33: no cliff,
+  # 36 monthly tranches, the first on 2027-01-29), applied by proposal #3 (Mike, 2026-10-24). DefiLlama models a weekly
+  # linear release from 2026-12-29 instead, which overstated the next-365-day figure (136.0M vs 124.9M on 2026-10-24).
+  unlocks_next_year: { type: level, unit: tokens_per_year, staleness_days: 14, monitor_only: true, source: { type: adapter, name: lit.unlocks_next_year, params: { allocations: [ Team, Investors ], tranches: { first: 2027-01-29, every_months: 1, count: 36 } } } }
+  reserve_lit: { type: level, unit: tokens, staleness_days: 7, monitor_only: true, source: { type: contract_read, contract: token, function: balanceOf, args: [ ecosystem_reserve ], decimals: 18 } }
+
+  # Revenue from Lighter's own exchangeMetrics (Mike, 2026-10-23, pick 2a): the four revenue kinds per completed UTC day,
+  # gross. Liquidation fees go to the LLP and are not revenue. Core: from 2025-01-17. The Robinhood instance (RH) is a
+  # separate exchange with its own API, from 2026-06-26; reporting.revenue keeps Lighter's half of it.
+  flow_usd.fees_core:
+    type: flow
+    unit: usd
+    cadence: daily
+    staleness_days: 5
+    monitor_only: true
+    source: { type: adapter, name: lit.exchange_fees_daily, params: { kinds: [ maker_fee, taker_fee, transfer_fee, withdraw_fee ] } }
+  flow_usd.fees_rh:
+    type: flow
+    unit: usd
+    cadence: daily
+    staleness_days: 5
+    monitor_only: true
+    source: { type: adapter, name: lit.exchange_fees_daily, params: { api: "https://api.rh.lighter.xyz/api/v1", kinds: [ maker_fee, taker_fee, transfer_fee, withdraw_fee ] } }
+
+  # The Robinhood split as Lighter's own app applies it: the constant in the stats page's exchange-stats chunk (0.5 on
+  # 2026-10-23). Display and watch only: reporting.revenue's share is config, and a reading off 0.5 is reported, never
+  # applied (Mike decides whether the share changes).
+  rh_revenue_share_app:
+    type: level
+    unit: ratio
+    staleness_days: 3
+    monitor_only: true
+    source: { type: adapter, name: lit.app_fee_share }
+    watch: { outside: [ 0.5, 0.5 ] }
+
+  # Watching the RH fee account (Mike, 2026-10-23, pick 1a; the holder flow stays the measured Core buys). RH L2 account
+  # 0 holds the RH fees to date, both halves ($3.49M on 2026-10-23, USDG plus cents of stock tokens), and fees add about
+  # 1.5 percent a day: a payout of Lighter's half, or a buyback, shows as a fall of more than 5 percent.
+  rh_fee_account_usd:
+    type: level
+    unit: usd
+    staleness_days: 3
+    monitor_only: true
+    source: { type: http_json, url: "https://api.rh.lighter.xyz/api/v1/account?by=index&value=0", path: accounts.0.total_asset_value }
+    watch: { change_pct: 5 }
+  # RH buybacks in USDC ($125 in all of Q3 2026: noise). A day above $1k is reported; if buybacks start, a second
+  # holder-flow member goes to Mike as a valuation change.
+  flow_usd.rh_buyback:
+    type: flow
+    unit: usd
+    cadence: daily
+    staleness_days: 5
+    monitor_only: true
+    source: { type: adapter, name: lit.exchange_fees_daily, params: { api: "https://api.rh.lighter.xyz/api/v1", kinds: [ buyback_usdc ] } }
+    watch: { above: 1000 }
+
+  # Staked LIT (Mike, 2026-10-23, pick 3a): display only; staked_supply stays the constant 0 above. The staking pool's
+  # LIT balance (110.9M on 2026-10-23, 11.3 percent of total supply) and the newest day's rewards x 365 over it (a fixed
+  # 6 percent APR since 2026-07-07). The band is 6 percent +/- 5 percent of it: stakes and unstakes between the reward and
+  # the read move the ratio by up to about 1 percent. Levels: history starts the day this goes live.
+  staked_tokens_reported:
+    type: level
+    unit: tokens
+    staleness_days: 3
+    monitor_only: true
+    source: { type: adapter, name: lit.staking_pool, params: { field: staked } }
+  staking_apr:
+    type: level
+    unit: ratio
+    staleness_days: 3
+    monitor_only: true
+    source: { type: adapter, name: lit.staking_pool, params: { field: apr } }
+    watch: { outside: [ 0.057, 0.063 ] }
+
+  # Display only, no report line since 2026-10-23 (revenue and volume read Lighter's API): DefiLlama's gross fees and its
+  # revenue (Lighter perps, spot and Robinhood perps; it counts the Robinhood instance at 100 percent).
+  flow_usd.fees:
+    type: flow
+    unit: usd
+    cadence: daily
+    staleness_days: 5
+    monitor_only: true
+    source: { type: defillama, slug: lighter, data_type: dailyFees, backfill_days: 150 }
+  flow_usd.llama_revenue:
+    type: flow
+    unit: usd
+    cadence: daily
+    staleness_days: 5
+    monitor_only: true
+    source: { type: defillama, slug: lighter, data_type: dailyRevenue, backfill_days: 150 }
+
+# discretionary (Mike, 2026-10-16): the burn policy dates from June 2026, the team executes each burn, and the burned LIT
+# is drawn from the reserve rather than being the bought LIT.
+holder_flows:
+  - { id: buyback, kind: burn, capture_rule: discretionary, recipient_base: all, metric: flow_usd.buyback, window_days: 91 }
+
+# Report-only holder yield and growth. A burn: no haircut. Revenue = Lighter Core fees + Lighter's 50 percent of the
+# Robinhood instance's fees, both from Lighter's API (Mike, 2026-10-23, pick 2a); paid to holders = the buys. Volume =
+# the gross fees of both. The unlocks are the dilution, the buys in LIT the tokens removed.
+# The 0.5: the Q3 2026 call (05:20, "a 50-50 ref share"), and Lighter's app constant (exchange-stats chunk:
+# `return <set of maker_fee, taker_fee, transfer_fee, withdraw_fee>.has(kind)?.5:1`), watched by rh_revenue_share_app.
+# The Robinhood stream is dated from its first day so it stays out of the ex-new-streams growth until it has 180 days.
+reporting:
+  window_days: 91
+  haircuts: { buyback: 0 }
+  revenue:
+    - { id: core, label: "Lighter Core fees (Lighter API)", metric: flow_usd.fees_core, settlement: daily }
+    - { id: robinhood, label: "Lighter's 50% of Robinhood-instance fees (Lighter API)", metric: flow_usd.fees_rh, settlement: daily, share: 0.5, started: "2026-06-26" }
+  income:
+    lines:
+      - { id: buyback, to: holders, metric: flow_usd.buyback, note: "treasury buys LIT daily; an equal count is burned quarterly" }
+  volume: [ flow_usd.fees_core, flow_usd.fees_rh ]
+  burned_tokens: [ flow_tokens.buyback ]
+  dilution:
+    - { id: unlocks, metric: unlocks_next_year, note: "team and investor vesting, 36 monthly tranches from 2027-01-29 (Lighter terms; sizes from DefiLlama emissions)" }

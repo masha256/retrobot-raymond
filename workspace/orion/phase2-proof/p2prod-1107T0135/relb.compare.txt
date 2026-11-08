@@ -1,0 +1,16 @@
+PASS aero
+PASS cake
+PASS crv
+PASS cvxcrv
+PASS hype
+PASS link
+PASS lit
+PASS pump
+PASS sdcrv
+PASS sky
+PASS uni
+PASS vvv
+PASS ycrv
+PASS anomalies.json
+PASS proposals.json
+OK: 13/13 assets identical (+ parity, reclass)

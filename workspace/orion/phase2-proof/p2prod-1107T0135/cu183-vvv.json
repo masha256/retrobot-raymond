@@ -1,0 +1,77 @@
+[
+  {
+    "metric": "flow_usd.burn",
+    "days": 182,
+    "sumLegacy": 2880868.4605519343,
+    "sumHourly": 2880868.4605519334,
+    "gapPct": -3.3306690738754696e-14,
+    "p50DayGapPct": 1.2841575652230882e-13,
+    "p90DayGapPct": 3.0828628709447957e-13,
+    "legacyZeroDays": 0,
+    "hourlyCovered": 115,
+    "usdNative": 0,
+    "beyondHourly": 67,
+    "beyond": {
+      "days": 67,
+      "sumLegacy": 615115.4773895507,
+      "sumHourly": 629912.2090768893,
+      "gapPct": 2.4055209519574294,
+      "p50DayGapPct": 3.1625169803743427,
+      "p90DayGapPct": 8.510037405750538,
+      "legacyZeroDays": 0
+    },
+    "unpriced": 0,
+    "noTokens": 0,
+    "noHourly": 0
+  },
+  {
+    "metric": "flow_usd.burn_programmatic",
+    "days": 182,
+    "sumLegacy": 1769811.275000278,
+    "sumHourly": 1769811.275000277,
+    "gapPct": -5.551115123125783e-14,
+    "p50DayGapPct": 1.2841575652230882e-13,
+    "p90DayGapPct": 3.0828628709447957e-13,
+    "legacyZeroDays": 0,
+    "hourlyCovered": 115,
+    "usdNative": 0,
+    "beyondHourly": 67,
+    "beyond": {
+      "days": 67,
+      "sumLegacy": 199492.9219494409,
+      "sumHourly": 199258.99150131104,
+      "gapPct": -0.11726253034137768,
+      "p50DayGapPct": 3.1625169803743427,
+      "p90DayGapPct": 8.413517893284787,
+      "legacyZeroDays": 0
+    },
+    "unpriced": 0,
+    "noTokens": 0,
+    "noHourly": 0
+  },
+  {
+    "metric": "flow_usd.revenue_proxy",
+    "days": 182,
+    "sumLegacy": 0,
+    "sumHourly": 0,
+    "gapPct": null,
+    "p50DayGapPct": null,
+    "p90DayGapPct": null,
+    "legacyZeroDays": 0,
+    "hourlyCovered": 0,
+    "usdNative": 0,
+    "beyondHourly": 0,
+    "beyond": {
+      "days": 0,
+      "sumLegacy": 0,
+      "sumHourly": 0,
+      "gapPct": null,
+      "p50DayGapPct": null,
+      "p90DayGapPct": null,
+      "legacyZeroDays": 0
+    },
+    "unpriced": 0,
+    "noTokens": 182,
+    "noHourly": 0
+  }
+]

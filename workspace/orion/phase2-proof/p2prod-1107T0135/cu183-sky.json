@@ -1,0 +1,52 @@
+[
+  {
+    "metric": "flow_usd.buyback",
+    "days": 182,
+    "sumLegacy": 8709104.105107972,
+    "sumHourly": 8709104.105107972,
+    "gapPct": 0,
+    "p50DayGapPct": 0,
+    "p90DayGapPct": 1.4278304458926208e-14,
+    "legacyZeroDays": 0,
+    "hourlyCovered": 111,
+    "usdNative": 0,
+    "beyondHourly": 71,
+    "beyond": {
+      "days": 71,
+      "sumLegacy": 2655468.8584465887,
+      "sumHourly": 2652708.4359469516,
+      "gapPct": -0.10395235820057636,
+      "p50DayGapPct": 0.9582105528614264,
+      "p90DayGapPct": 3.038613509947093,
+      "legacyZeroDays": 0
+    },
+    "unpriced": 0,
+    "noTokens": 0,
+    "noHourly": 0
+  },
+  {
+    "metric": "flow_usd.stakers",
+    "days": 182,
+    "sumLegacy": 6249555.217775783,
+    "sumHourly": 6249555.217775783,
+    "gapPct": 0,
+    "p50DayGapPct": 0,
+    "p90DayGapPct": 3.1709896760708426e-14,
+    "legacyZeroDays": 0,
+    "hourlyCovered": 111,
+    "usdNative": 0,
+    "beyondHourly": 71,
+    "beyond": {
+      "days": 71,
+      "sumLegacy": 0,
+      "sumHourly": 0,
+      "gapPct": null,
+      "p50DayGapPct": 0,
+      "p90DayGapPct": 0,
+      "legacyZeroDays": 0
+    },
+    "unpriced": 0,
+    "noTokens": 0,
+    "noHourly": 0
+  }
+]

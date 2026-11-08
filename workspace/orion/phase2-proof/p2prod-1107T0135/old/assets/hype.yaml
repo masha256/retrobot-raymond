@@ -1,0 +1,148 @@
+id: hype
+symbol: HYPE
+name: Hyperliquid
+
+# HyperCore addresses, read from the info API on 2026-09-24; see docs/superpowers/specs/2026-09-24-orion-hype-onboarding-design.md
+# section 2. Nothing here is read over an RPC (no chain, no ingest block): the fund lives on HyperCore, which no EVM RPC exposes.
+contracts:
+  assistance_fund: "0xfefefefefefefefefefefefefefefefefefefefe" # converts about 99 percent of protocol fees to HYPE inside L1 execution; listed as non-circulating
+  unvested: "0x43e9abea1910387c4292bca4b94de81462f8a251" # unvested contributor and foundation tokens (attribution unconfirmed); inside the total supply; read by nothing, documentation only
+  zero: "0x0000000000000000000000000000000000000000"
+  dead: "0x000000000000000000000000000000000000dead"
+  # USDC reserve yield (AQAv2): the system interest address for USDC (0x50..00 + token index 0) pays the Assistance Fund each
+  # 30-day interval; the treasury funds it. Read from Hyperliquid's ledger (Mike, 2026-10-12, option A).
+  system_interest: "0x5000000000000000000000000000000000000000"
+  aqa_treasury: "0x8536a52900b5e7b23b08d6dcc50fd5689b5e270c"
+
+external_ids:
+  coingecko: hyperliquid
+  defillama: hyperliquid
+  hyperliquid_info: "https://api.hyperliquid.xyz/info"
+  hyperliquid_token: "0x0d01dc56dcaaca66ad901c959b4011ec" # HYPE's token id on HyperCore
+
+# Every metric but staker_emission_share is fetched. That one is 1.0 by construction (all staking rewards go to stakers): the
+# bootstrap records it with the staking docs page as the citation and the user confirms it once.
+metrics:
+  price_usd:
+    type: level
+    unit: usd
+    staleness_days: 3
+    critical: true
+    source: { type: coingecko, id: hyperliquid, field: price }
+    cross_checks:
+      - { tolerance_pct: 2, source: { type: http_json, url: "https://coins.llama.fi/prices/current/hyperliquid:0x0d01dc56dcaaca66ad901c959b4011ec", path: "coins.hyperliquid:0x0d01dc56dcaaca66ad901c959b4011ec.price" } }
+
+  # Total supply (the HYPE/USDC pair in the spot meta) less the HYPE held at the fund and the two dead addresses (their
+  # clearinghouse balances), about 951.3M. The docs call the fund's HYPE burned; the chain still holds it, so it is subtracted
+  # here. A fund emptied by a vote shows as a supply jump. Four small requests: the 5 MB tokenDetails reply is avoided.
+  total_supply:
+    type: level
+    unit: tokens
+    staleness_days: 7
+    critical: true
+    source: { type: adapter, name: hype.total_supply, params: { subtract: [assistance_fund, zero, dead] } }
+    cross_checks:
+      - { tolerance_pct: 2, source: { type: coingecko, id: hyperliquid, field: total_supply } }
+
+  # CoinGecko's own definition (222M against the API's 299M); display only, the report's market cap basis; no consistent
+  # cross-check.
+  circulating_supply:
+    type: level
+    unit: tokens
+    staleness_days: 14
+    source: { type: coingecko, id: hyperliquid, field: circulating_supply }
+
+  # The sum of validator stake (about 441M).
+  staked_supply:
+    type: level
+    unit: tokens
+    staleness_days: 7
+    source: { type: adapter, name: hype.staked_supply }
+
+  # Manual, by construction 1.0: staking rewards from the emissions reserve all go to stakers. Researched by the bootstrap.
+  staker_emission_share:
+    type: level
+    unit: ratio
+    cadence: event
+    staleness_days: 400
+
+  # Staking rewards a year from the future-emissions reserve: the docs' rate, inversely proportional to the square root of
+  # total stake (2.37 percent at 400M), times the stake; about 10M HYPE a year. Dilution, never value.
+  emission_rate_annual:
+    type: schedule
+    unit: tokens_per_year
+    staleness_days: 45
+    critical: true
+    source: { type: adapter, name: hype.emission_rate_annual }
+
+  # DefiLlama's holders revenue for the hyperliquid parent (perps, spot orderbook, HLP): 99 percent of protocol trading fees,
+  # excluding builder fees and deployer shares, converted to HYPE by the fund, plus HIP-1 auction burns. Revenue and holders
+  # revenue are the same series for HYPE. Backfilled nine days beyond the 91-day window so the first fetch fills the window
+  # even when DefiLlama has not posted the newest day yet.
+  flow_usd.af_buyback:
+    type: flow
+    unit: usd
+    cadence: daily
+    staleness_days: 4
+    critical: true
+    source: { type: defillama, slug: hyperliquid, data_type: dailyHoldersRevenue, backfill_days: 100 }
+
+# burn, chosen by the user on 2026-09-24: the fund's HYPE is burned per the docs and behaves so as long as nobody can spend it;
+# the engine shrinks the supply forecast by the fund's purchases. programmatic: the split is protocol code, changed only by
+# network upgrade or validator vote.
+
+  # Report-only (monitor_only, never a driver). The fund's buys read from Hyperliquid itself (its own fills on the HYPE
+  # spot pair), next to the DefiLlama series the valuation reads. The info API keeps about two weeks of fills, so this
+  # series starts the day it goes live and grows forward.
+  flow_usd.af_buys_direct:
+    type: flow
+    unit: usd
+    cadence: daily
+    staleness_days: 4
+    monitor_only: true
+    source: { type: adapter, name: hype.fund_buys_daily, params: { fund: assistance_fund, pair: "@107", days: 14 } }
+  # Protocol revenue (all fees Hyperliquid keeps), a labelled DefiLlama proxy until a direct read is built.
+  flow_usd.revenue_proxy:
+    type: flow
+    unit: usd
+    cadence: daily
+    staleness_days: 4
+    monitor_only: true
+    source: { type: defillama, slug: hyperliquid, data_type: dailyRevenue, backfill_days: 365 }
+
+  # The USDC reserve yield (AQAv2), from 2026-08-26 (Mike, 2026-10-12, option A): Hyperliquid no longer publishes the daily
+  # AQA rate or balance (alignedQuoteTokenInfo was removed), so the truth is each 30-day payment from the system interest
+  # address to the Assistance Fund, due 8 days after the interval, read from Hyperliquid's ledger. One row per paid
+  # period; the report spreads it over the 30 days and runs the unpaid days at the last period's daily rate (provisional).
+  # Alerts (revenue_payment, advisory): > 10 days late, > 2% off the previous period's daily rate, a payer other than
+  # aqa_treasury. Report-only: it funds the Fund's buybacks, so the report counts it in holder flow; the valuation does not.
+  flow_usd.reserve_yield:
+    type: flow
+    unit: usd
+    cadence: monthly
+    staleness_days: 45
+    monitor_only: true
+    source:
+      type: adapter
+      name: hype.reserve_yield_payments
+      params: { interest: system_interest, fund: assistance_fund, treasury: [ aqa_treasury ], token: USDC, started: "2026-08-26", interval_days: 30, lag_days: 8 }
+
+holder_flows:
+  - { id: af_buyback, kind: burn, capture_rule: programmatic, recipient_base: all, metric: flow_usd.af_buyback, window_days: 91 }
+
+# Report-only holder yield and growth (orion report yield). The fund buys and holds, but stays a burn here as in the
+# valuation (Mike, 2026-10-10: keep the two layers in sync), so no haircut.
+reporting:
+  window_days: 91
+  haircuts: { af_buyback: 0, reserve_yield: 0 }
+  # Revenue (Mike, 2026-10-12) = trading fees (DefiLlama dailyRevenue, a labelled proxy) + the USDC reserve yield (paid
+  # every 30 days). The reserve yield is new (2026-08-26): growth is shown with and without it. It funds the Fund's
+  # buybacks, so the report also counts it as holder flow (burn bucket); the valuation keeps af_buyback only.
+  revenue:
+    - { id: trading, label: "trading fees (DefiLlama dailyRevenue)", metric: flow_usd.revenue_proxy, settlement: daily }
+    - { id: reserve_yield, label: "USDC reserve yield (AQAv2)", metric: flow_usd.reserve_yield, settlement: periodic, started: "2026-08-26", holder_flow: burn }
+  # Income statement (Mike, 2026-10-11): paid to holders = the Assistance Fund's buybacks (and the reserve yield, which
+  # funds them); protocol income = revenue less both.
+  income:
+    lines:
+      - { id: af_buyback, to: holders, metric: flow_usd.af_buyback }

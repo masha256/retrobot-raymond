@@ -1,0 +1,98 @@
+id: aero
+symbol: AERO
+name: Aerodrome Finance
+chain: base
+
+# Read live on 2026-09-23 (block 51,704,207); see docs/superpowers/specs/2026-09-23-orion-aero-onboarding-design.md section 2.
+contracts:
+  token: "0x940181a94a35a4569e4529a3cdfb74e38fd98631"
+  ve: "0xebf418fe2512e7e6bd9b87a8f0f294acdc67e6b4" # VotingEscrow: veAERO locks; supply() is the AERO locked
+  minter: "0xeB018363F0a9Af8f91F06FEe6613a751b2A33FE5" # from AERO.minter(); in its tail regime since weekly() reached TAIL_START
+  team: "0xBDE0c70BdC242577c52dFAD53389F82fd149EA5a"
+
+ingest: { chain_id: 8453, rpc_url_env: ORION_BASE_RPC_URL, backfill_days: 100 }
+
+external_ids:
+  coingecko: aerodrome-finance
+  defillama: aerodrome
+
+# Every metric is fetched: AERO has no manual metric, so a bootstrap run finds nothing to research and writes only its journal.
+metrics:
+  price_usd:
+    type: level
+    unit: usd
+    staleness_days: 3
+    critical: true
+    source: { type: coingecko, id: aerodrome-finance, field: price }
+    cross_checks:
+      - { tolerance_pct: 2, source: { type: http_json, url: "https://coins.llama.fi/prices/current/base:0x940181a94a35a4569e4529a3cdfb74e38fd98631", path: "coins.base:0x940181a94a35a4569e4529a3cdfb74e38fd98631.price" } }
+
+  # No burn sink: the ERC-20 total is the total supply. Locked AERO stays inside it.
+  total_supply:
+    type: level
+    unit: tokens
+    staleness_days: 7
+    critical: true
+    source: { type: erc20_supply, token: token }
+    cross_checks:
+      - { tolerance_pct: 2, source: { type: coingecko, id: aerodrome-finance, field: total_supply } }
+
+  # CoinGecko's own definition (about 0.99B against 0.93B unlocked on chain); display only, the report's market cap
+  # basis (FDV uses total_supply).
+  circulating_supply:
+    type: level
+    unit: tokens
+    staleness_days: 14
+    source: { type: coingecko, id: aerodrome-finance, field: circulating_supply }
+
+  # Staking is locking for AERO: both metrics read the escrow's supply(), the AERO held in veAERO locks.
+  staked_supply:
+    type: level
+    unit: tokens
+    staleness_days: 7
+    source: { type: contract_read, contract: ve, function: supply, decimals: 18 }
+
+  locked_supply:
+    type: level
+    unit: tokens
+    staleness_days: 7
+    source: { type: contract_read, contract: ve, function: supply, decimals: 18 }
+
+  # The rebase's share of the gross weekly mint (about 0.10): what reaches lockers of every token emitted.
+  staker_emission_share:
+    type: level
+    unit: ratio
+    staleness_days: 30
+    source: { type: adapter, name: aero.staker_emission_share }
+
+  # Gross emissions in the tail regime: base to the gauges plus the rebase plus the team share, at this week's tail rate,
+  # which governance can move one basis point per epoch. The adapter refuses if the Minter leaves the tail regime.
+  emission_rate_annual:
+    type: schedule
+    unit: tokens_per_year
+    staleness_days: 45
+    critical: true
+    source: { type: adapter, name: aero.emission_rate_annual }
+
+  # 100 percent of pool fees from gauge-staked liquidity go to veAERO lockers (DefiLlama's holders revenue for the
+  # aerodrome parent: V1, Slipstream, Aero Lite). Incentives (bribes) to lockers have no usable series and are left out.
+  flow_usd.fees:
+    type: flow
+    unit: usd
+    cadence: daily
+    staleness_days: 4
+    critical: true
+    source: { type: defillama, slug: aerodrome, data_type: dailyHoldersRevenue, backfill_days: 100 }
+
+holder_flows:
+  - { id: fees, kind: fee_share, capture_rule: contractual, recipient_base: locked, metric: flow_usd.fees, window_days: 91 }
+
+# Report-only holder yield and growth (orion report yield). AERO's fees arrive as the pools' own tokens, many long-tail:
+# 2 percent. Protocol revenue waits for the post-migration rebuild (reminder 2026-11-05).
+reporting:
+  window_days: 91
+  haircuts: { fees: 0.02 }
+  # Income statement (Mike, 2026-10-11): all fees go to veAERO voters; the protocol keeps none (revisit at the rebuild).
+  income:
+    lines:
+      - { id: voter_fees, to: holders, metric: flow_usd.fees }

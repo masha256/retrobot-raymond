@@ -1,0 +1,16 @@
+PASS aero
+FAIL cake: parity revenue growth: new incomeStatement.revenue.growth.annualized 5.041869928355644 vs old income.revenue.growth.annualized 5.195269604849357 (rel 0.0295 > 1e-12)
+FAIL crv: parity revenue growth: new incomeStatement.revenue.growth.annualized 0.004029428908005839 vs old income.revenue.growth.annualized 0.004004347848219458 (rel 0.00622 > 1e-12)
+FAIL cvxcrv: parity revenue growth: new incomeStatement.revenue.growth.annualized 0.1645793992406055 vs old income.revenue.growth.annualized 0.16024913010691955 (rel 0.0263 > 1e-12)
+PASS hype
+FAIL link: parity revenue growth: new incomeStatement.revenue.growth.annualized -0.20228537939059088 vs old income.revenue.growth.annualized -0.2027442926921431 (rel 0.00226 > 1e-12)
+PASS lit
+PASS pump
+PASS sdcrv
+FAIL sky: parity revenue growth: new incomeStatement.revenue.growth.annualized 299.1364548558267 vs old income.revenue.growth.annualized 298.3135602867891 (rel 0.00275 > 1e-12)
+FAIL uni: parity revenue growth: new incomeStatement.revenue.growth.annualized 66.66537450243415 vs old income.revenue.growth.annualized 67.60505446871021 (rel 0.0139 > 1e-12)
+FAIL vvv: parity holders growth: new incomeStatement.holders.growth.annualized 108.64421833123924 vs old income.holders.growth.annualized 117.00775460230531 (rel 0.0715 > 1e-12)
+PASS ycrv
+PASS anomalies.json
+PASS proposals.json
+FAILED: 6/13 assets identical (+ parity, reclass)

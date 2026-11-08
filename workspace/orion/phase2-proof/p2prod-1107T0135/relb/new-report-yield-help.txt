@@ -1,0 +1,14 @@
+Usage: orion report yield [options] [asset]
+
+holder yield by bucket (burn, hold, cash), yields on price, 90d-over-90d growth,
+protocol revenue; every asset with a reporting block when no asset is given
+
+Options:
+  --day <yyyy-mm-dd>  the last day the report covers (default: the newest day
+                      every holder flow has)
+  --json              JSON output
+  --legacy            also the v1 keys (flows, buckets, yields,
+                      holderFlowGrowth, supply, income, revenue, volume,
+                      revenueDisclosed), in v1 order with incomeStatement last;
+                      kept one release (D9)
+  -h, --help          display help for command

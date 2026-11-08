@@ -1,0 +1,475 @@
+{
+  "asset": "hype",
+  "day": "2026-11-05",
+  "windowDays": 91,
+  "price": 78.5,
+  "marketCap": 18793434928.370106,
+  "fdv": 74579472960.22815,
+  "incomeStatement": {
+    "schema": 2,
+    "day": "2026-11-05",
+    "windowDays": 91,
+    "category": "perp_dex",
+    "scope": "protocol_share_only",
+    "revenue": {
+      "annualized": 1033528535.8889387,
+      "growth": {
+        "current": 247946099.136966,
+        "prior": 140158706,
+        "change": 0.7690381583357797,
+        "annualized": 8.855330431497958
+      },
+      "growthExNew": {
+        "current": 211081574,
+        "prior": 140158706,
+        "change": 0.5060182847293124,
+        "annualized": 4.167436605365167
+      },
+      "excludedFromExNew": [
+        "reserve_yield"
+      ],
+      "provisional": true,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "trading",
+          "label": "trading fees (DefiLlama dailyRevenue)",
+          "method": "measured",
+          "sourceTypes": [
+            "third_party"
+          ],
+          "annualized": 846645873.7362638,
+          "windowSum": 211081574,
+          "settlement": "daily",
+          "started": null,
+          "daysMeasured": 91,
+          "provisionalDays": 0,
+          "coverage": null,
+          "isNew": false,
+          "growth": {
+            "current": 211081574,
+            "prior": 140158706,
+            "change": 0.5060182847293124,
+            "annualized": 4.167436605365167
+          }
+        },
+        {
+          "id": "reserve_yield",
+          "label": "reserve yield on user deposits",
+          "method": "measured",
+          "sourceTypes": [
+            "first_party_api"
+          ],
+          "annualized": 186882662.15267488,
+          "windowSum": 36864525.136966005,
+          "settlement": "periodic",
+          "started": "2026-08-26",
+          "daysMeasured": 60,
+          "provisionalDays": 12,
+          "coverage": null,
+          "isNew": true,
+          "growth": {
+            "current": 36864525.136966005,
+            "prior": 0,
+            "change": null,
+            "annualized": null,
+            "note": "not meaningful: a window is zero or negative"
+          }
+        }
+      ]
+    },
+    "costOfRevenue": {
+      "annualized": null,
+      "measuredAnnualized": 0,
+      "notMeasured": [
+        "hlp",
+        "builders",
+        "deployers",
+        "referrers"
+      ],
+      "lines": [
+        {
+          "id": "hlp",
+          "label": null,
+          "of": null,
+          "share": 1,
+          "method": "not_measured",
+          "sourceTypes": [],
+          "annualized": null,
+          "growth": {
+            "current": null,
+            "prior": null,
+            "change": null,
+            "annualized": null,
+            "note": "not measured"
+          },
+          "notMeasured": "HLP vault share of trading fees: not read from the Hyperliquid API yet (Phase 3)",
+          "to": "lps"
+        },
+        {
+          "id": "builders",
+          "label": null,
+          "of": null,
+          "share": 1,
+          "method": "not_measured",
+          "sourceTypes": [],
+          "annualized": null,
+          "growth": {
+            "current": null,
+            "prior": null,
+            "change": null,
+            "annualized": null,
+            "note": "not measured"
+          },
+          "notMeasured": "builder fees: not read yet (Phase 3)",
+          "to": "builders"
+        },
+        {
+          "id": "deployers",
+          "label": null,
+          "of": null,
+          "share": 1,
+          "method": "not_measured",
+          "sourceTypes": [],
+          "annualized": null,
+          "growth": {
+            "current": null,
+            "prior": null,
+            "change": null,
+            "annualized": null,
+            "note": "not measured"
+          },
+          "notMeasured": "HIP-3 deployer shares: not read yet (Phase 3)",
+          "to": "deployers"
+        },
+        {
+          "id": "referrers",
+          "label": null,
+          "of": null,
+          "share": 1,
+          "method": "not_measured",
+          "sourceTypes": [],
+          "annualized": null,
+          "growth": {
+            "current": null,
+            "prior": null,
+            "change": null,
+            "annualized": null,
+            "note": "not measured"
+          },
+          "notMeasured": "referral rebates: not read yet (Phase 3)",
+          "to": "referrers"
+        }
+      ]
+    },
+    "grossProfit": {
+      "annualized": null,
+      "growth": {
+        "current": null,
+        "prior": null,
+        "change": null,
+        "annualized": null,
+        "note": "cost of revenue not measured"
+      }
+    },
+    "holders": {
+      "annualized": 1033528535.8889387,
+      "growth": {
+        "current": 247946099.136966,
+        "prior": 140158706,
+        "change": 0.7690381583357797,
+        "annualized": 8.855330431497958
+      },
+      "remainder": false,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "af_buyback",
+          "label": null,
+          "of": null,
+          "share": 1,
+          "method": "measured",
+          "sourceTypes": [
+            "third_party"
+          ],
+          "annualized": 846645873.7362638,
+          "growth": {
+            "current": 211081574,
+            "prior": 140158706,
+            "change": 0.5060182847293124,
+            "annualized": 4.167436605365167
+          },
+          "note": "burned by validator vote (Dec 2025); tokens sit in a keyless system address, not destroyed on chain",
+          "bucket": "burn",
+          "haircut": 0,
+          "recipientBase": "all",
+          "valuedPer": null,
+          "captureRule": "programmatic",
+          "paidMetric": null,
+          "gross": 846645873.7362638,
+          "net": 846645873.7362638,
+          "yield": 0.011352264103391617
+        },
+        {
+          "id": "reserve_yield_paid",
+          "label": null,
+          "of": "reserve_yield",
+          "share": 1,
+          "method": "measured",
+          "sourceTypes": [
+            "first_party_api"
+          ],
+          "annualized": 186882662.15267488,
+          "growth": {
+            "current": 36864525.136966005,
+            "prior": 0,
+            "change": null,
+            "annualized": null,
+            "note": "not meaningful: a window is zero or negative"
+          },
+          "note": "paid into the Assistance Fund",
+          "bucket": "burn",
+          "haircut": 0,
+          "recipientBase": "all",
+          "valuedPer": null,
+          "captureRule": "programmatic",
+          "paidMetric": null,
+          "gross": 186882662.15267488,
+          "net": 186882662.15267488,
+          "yield": 0.0025058190241212344
+        }
+      ],
+      "byBucket": {
+        "burn": {
+          "annualized": 1033528535.8889387
+        },
+        "hold": null,
+        "cash": null
+      }
+    },
+    "protocol": {
+      "annualized": 2.988419689974942e-8,
+      "growth": {
+        "current": -1.4901161193847656e-8,
+        "prior": 0,
+        "change": null,
+        "annualized": null,
+        "note": "not meaningful: a window is zero or negative"
+      },
+      "remainder": true,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "remainder",
+          "label": null,
+          "of": null,
+          "share": 1,
+          "method": "derived",
+          "sourceTypes": [],
+          "annualized": 2.988419689974942e-8,
+          "growth": {
+            "current": -1.4901161193847656e-8,
+            "prior": 0,
+            "change": null,
+            "annualized": null,
+            "note": "not meaningful: a window is zero or negative"
+          },
+          "note": "revenue less holders and the other uses, before the costs not measured"
+        }
+      ]
+    },
+    "operatingCosts": {
+      "annualized": 0,
+      "growth": {
+        "current": 0,
+        "prior": 0,
+        "change": null,
+        "annualized": null,
+        "note": "no lines"
+      },
+      "remainder": false,
+      "notMeasured": [],
+      "lines": []
+    },
+    "unreconciled": {
+      "annualized": 0,
+      "pct": 0,
+      "basis": "revenue"
+    },
+    "belowLine": {
+      "toHolders": 0,
+      "toProtocol": 0,
+      "notMeasured": [],
+      "lines": []
+    },
+    "holderFlow": {
+      "gross": 1033528535.8889387,
+      "net": 1033528535.8889387,
+      "netOfDilution": 253781903.6805395,
+      "growth": {
+        "current": 247946099.136966,
+        "prior": 140158706,
+        "change": 0.7690381583357797,
+        "annualized": 8.855330431497958
+      },
+      "byBucket": {
+        "burn": {
+          "gross": 1033528535.8889387,
+          "net": 1033528535.8889387,
+          "yield": 0.013858083127512851,
+          "fromRevenue": 1033528535.8889387,
+          "fromBelowLine": 0
+        },
+        "hold": null,
+        "cash": null
+      },
+      "fromRevenue": 1033528535.8889387,
+      "fromBelowLine": 0,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "af_buyback",
+          "section": "holders",
+          "fromBelowLine": false,
+          "bucket": "burn",
+          "method": "measured",
+          "sourceTypes": [
+            "third_party"
+          ],
+          "metric": "flow_usd.af_buyback",
+          "haircut": 0,
+          "recipientBase": "all",
+          "gross": 846645873.7362638,
+          "net": 846645873.7362638,
+          "yield": 0.011352264103391617,
+          "growth": {
+            "current": 211081574,
+            "prior": 140158706,
+            "change": 0.5060182847293124,
+            "annualized": 4.167436605365167
+          }
+        },
+        {
+          "id": "reserve_yield_paid",
+          "section": "holders",
+          "fromBelowLine": false,
+          "bucket": "burn",
+          "method": "measured",
+          "sourceTypes": [
+            "first_party_api"
+          ],
+          "metric": "flow_usd.reserve_yield",
+          "haircut": 0,
+          "recipientBase": "all",
+          "gross": 186882662.15267488,
+          "net": 186882662.15267488,
+          "yield": 0.0025058190241212344,
+          "growth": {
+            "current": 36864525.136966005,
+            "prior": 0,
+            "change": null,
+            "annualized": null,
+            "note": "not meaningful: a window is zero or negative"
+          }
+        }
+      ]
+    },
+    "volume": null,
+    "dilution": {
+      "pct": 0.010455244603622012,
+      "tokensPerYear": 9933078.117304448,
+      "emissionsPerYear": 9933078.117304448,
+      "releases": [],
+      "supply": null
+    },
+    "ratios": {
+      "takeRate": null,
+      "payoutRatio": 1,
+      "payoutRatioBasis": "revenue"
+    },
+    "multiples": {
+      "mcapToRevenue": 18.183760076063944,
+      "mcapToGrossProfit": null,
+      "mcapToHolderFlow": {
+        "burn": 18.183760076063944,
+        "hold": null,
+        "cash": null,
+        "total": 18.183760076063944
+      }
+    },
+    "yields": {
+      "cash": 0,
+      "buyback": 0.013858083127512851,
+      "shareholder": 0.013858083127512851,
+      "dilution": 0.010455244603622012,
+      "netShareholder": 0.0034028385238908387,
+      "multiple": 72.16005206482498,
+      "pegTrailing": 0.08148770124732485
+    },
+    "perToken": {
+      "revenue": 4.3170389221827055,
+      "grossProfit": null,
+      "holderFlow": {
+        "total": 4.3170389221827055,
+        "netOfDilution": 1.0600446121133915,
+        "byBucket": {
+          "burn": 4.3170389221827055,
+          "hold": null,
+          "cash": null
+        }
+      },
+      "dilution": 3.256994310069314,
+      "circulatingSupply": 239406814.37414145,
+      "totalSupply": 950056980.385072,
+      "supplyAsOf": "2026-11-06T23:59:59.999Z",
+      "perTokenFdv": {
+        "revenue": 1.0878595255097587,
+        "grossProfit": null,
+        "holderFlow": {
+          "total": 1.0878595255097587,
+          "netOfDilution": 0.26712282412543087,
+          "byBucket": {
+            "burn": 1.0878595255097587,
+            "hold": null,
+            "cash": null
+          }
+        },
+        "dilution": 0.820736701384328
+      }
+    },
+    "priceBasis": {
+      "price": 78.5,
+      "metric": "price_usd",
+      "sourceType": "market_data",
+      "source": "market_data:coingecko",
+      "day": "2026-11-05",
+      "asOf": "2026-11-06T23:59:59.999Z",
+      "flows": "each flow day's USD at that day's price (the stored value)"
+    },
+    "checks": [],
+    "provenance": {
+      "methods": {
+        "measured": 0.96877099847288,
+        "derived": 0.03122900152712022,
+        "disclosed": 0
+      },
+      "thirdParty": [
+        "revenue.trading",
+        "holders.af_buyback"
+      ],
+      "sources": [
+        "first_party_api:hype.reserve_yield_payments",
+        "third_party:api.llama.fi"
+      ],
+      "basis": "observations"
+    },
+    "flags": [
+      "cost of revenue not measured: hlp, builders, deployers, referrers",
+      "payout ratio on revenue: cost of revenue not measured",
+      "third_party: revenue.trading, holders.af_buyback"
+    ]
+  },
+  "notes": [
+    "revenue: reserve_yield has 12 unpaid day(s) at the last period's daily rate (provisional)"
+  ]
+}

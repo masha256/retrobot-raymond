@@ -1,0 +1,170 @@
+{
+  "asset": "uni",
+  "day": "2026-11-05",
+  "windowDays": 91,
+  "price": 6.97,
+  "marketCap": 4249259774.2824073,
+  "fdv": 6176538118.939794,
+  "flows": [
+    {
+      "id": "burn",
+      "metric": "flow_usd.burn",
+      "bucket": "burn",
+      "recipientBase": "all",
+      "haircut": 0,
+      "gross": 143922275.68969712,
+      "net": 143922275.68969712,
+      "yield": 0.023301447010967605,
+      "growth": {
+        "current": 35881992.02126695,
+        "prior": 12503894.337634115,
+        "change": 1.8696653260472331,
+        "annualized": 67.60505446871021
+      }
+    }
+  ],
+  "buckets": {
+    "burn": {
+      "gross": 143922275.68969712,
+      "net": 143922275.68969712,
+      "yield": 0.023301447010967605,
+      "growth": {
+        "current": 35881992.02126695,
+        "prior": 12503894.337634115,
+        "change": 1.8696653260472331,
+        "annualized": 67.60505446871021
+      }
+    },
+    "hold": null,
+    "cash": null
+  },
+  "yields": {
+    "cash": 0,
+    "buyback": 0.023301447010967605,
+    "shareholder": 0.023301447010967605,
+    "dilution": 0.022569277047371012,
+    "netShareholder": 0.0007321699635965927,
+    "multiple": 42.91578971594839,
+    "pegTrailing": 0.006348014960303183,
+    "dilutionLines": [
+      {
+        "id": "labs_vest",
+        "tokensPerYear": 20000000,
+        "yield": 0.022569277047371012
+      }
+    ]
+  },
+  "holderFlowGrowth": {
+    "current": 35881992.02126695,
+    "prior": 12503894.337634115,
+    "change": 1.8696653260472331,
+    "annualized": 67.60505446871021
+  },
+  "supply": {
+    "burnedPerYear": 23119345.66004447,
+    "addedPerYear": 20000000,
+    "netPerYear": -3119345.660044469,
+    "netPct": -0.0035200688204029005
+  },
+  "income": {
+    "revenue": {
+      "annualized": 143922275.68969712,
+      "growth": {
+        "current": 35881992.02126695,
+        "prior": 12503894.337634115,
+        "change": 1.8696653260472331,
+        "annualized": 67.60505446871021
+      }
+    },
+    "holders": {
+      "annualized": 143922275.68969712,
+      "growth": {
+        "current": 35881992.02126695,
+        "prior": 12503894.337634115,
+        "change": 1.8696653260472331,
+        "annualized": 67.60505446871021
+      }
+    },
+    "protocol": {
+      "annualized": 0,
+      "growth": {
+        "current": 0,
+        "prior": 0,
+        "change": null,
+        "annualized": null,
+        "note": "not meaningful: a window is zero or negative"
+      }
+    },
+    "costs": {
+      "annualized": 0
+    },
+    "payoutRatio": 1,
+    "protocolMargin": 0,
+    "lines": [
+      {
+        "id": "burn",
+        "to": "holders",
+        "annualized": 143922275.68969712,
+        "basis": "measured",
+        "note": "every protocol fee burns UNI"
+      },
+      {
+        "id": "protocol_income",
+        "to": "protocol",
+        "annualized": 0,
+        "basis": "remainder",
+        "note": "revenue less holders and costs"
+      }
+    ],
+    "checks": [],
+    "outsideRevenue": []
+  },
+  "revenue": {
+    "basis": "streams",
+    "streams": [
+      {
+        "id": "protocol_fees",
+        "label": "protocol fees (v2 + selected v3)",
+        "basis": "daily",
+        "metric": "flow_usd.burn",
+        "annualized": 143922275.68969712,
+        "daysInWindow": null,
+        "provisionalDays": 0,
+        "started": null,
+        "isNew": false,
+        "growth": {
+          "current": 35881992.02126695,
+          "prior": 12503894.337634115,
+          "change": 1.8696653260472331,
+          "annualized": 67.60505446871021
+        },
+        "holderFlow": null
+      }
+    ],
+    "annualized": 143922275.68969712,
+    "growth": {
+      "current": 35881992.02126695,
+      "prior": 12503894.337634115,
+      "change": 1.8696653260472331,
+      "annualized": 67.60505446871021
+    },
+    "growthExNew": null,
+    "excludedFromExNew": [],
+    "provisional": false
+  },
+  "volume": {
+    "metrics": [
+      "flow_usd.swap_fees"
+    ],
+    "annualized": 1614034716.3615384,
+    "growth": {
+      "current": 402403175.86,
+      "prior": null,
+      "change": null,
+      "annualized": null,
+      "note": "needs 182 complete days of every flow"
+    }
+  },
+  "revenueDisclosed": null,
+  "notes": []
+}

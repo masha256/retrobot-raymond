@@ -1,0 +1,153 @@
+{
+  "asset": "link",
+  "day": "2026-11-05",
+  "windowDays": 91,
+  "price": 10.88,
+  "marketCap": 8343327678.222738,
+  "fdv": 10880000000,
+  "flows": [
+    {
+      "id": "reserve",
+      "metric": "flow_usd.reserve",
+      "bucket": "hold",
+      "recipientBase": "all",
+      "haircut": 0.05,
+      "gross": 56610205.94751208,
+      "net": 53779695.65013648,
+      "yield": 0.0049429867325493084,
+      "growth": {
+        "current": 14113777.37321534,
+        "prior": 14934010.577884868,
+        "change": -0.054923839807919816,
+        "annualized": -0.2027442926921431
+      }
+    }
+  ],
+  "buckets": {
+    "burn": null,
+    "hold": {
+      "gross": 56610205.94751208,
+      "net": 53779695.65013648,
+      "yield": 0.0049429867325493084,
+      "growth": {
+        "current": 13408088.504554572,
+        "prior": 14187310.048990624,
+        "change": -0.054923839807919816,
+        "annualized": -0.2027442926921431
+      }
+    },
+    "cash": null
+  },
+  "yields": {
+    "cash": 0,
+    "buyback": 0.0049429867325493084,
+    "shareholder": 0.0049429867325493084,
+    "dilution": 0.069999977,
+    "netShareholder": -0.0650569902674507,
+    "multiple": 202.30683473517183,
+    "pegTrailing": null,
+    "dilutionLines": [
+      {
+        "id": "releases",
+        "tokensPerYear": 69999977,
+        "yield": 0.069999977
+      }
+    ]
+  },
+  "holderFlowGrowth": {
+    "current": 13408088.504554572,
+    "prior": 14187310.048990624,
+    "change": -0.054923839807919816,
+    "annualized": -0.2027442926921431
+  },
+  "supply": null,
+  "income": {
+    "revenue": {
+      "annualized": 56610205.94751208,
+      "growth": {
+        "current": 14113777.37321534,
+        "prior": 14934010.577884868,
+        "change": -0.054923839807919816,
+        "annualized": -0.2027442926921431
+      }
+    },
+    "holders": {
+      "annualized": 56610205.94751208,
+      "growth": {
+        "current": 14113777.37321534,
+        "prior": 14934010.577884868,
+        "change": -0.054923839807919816,
+        "annualized": -0.2027442926921431
+      }
+    },
+    "protocol": {
+      "annualized": 0,
+      "growth": {
+        "current": 0,
+        "prior": 0,
+        "change": null,
+        "annualized": null,
+        "note": "not meaningful: a window is zero or negative"
+      }
+    },
+    "costs": {
+      "annualized": 0
+    },
+    "payoutRatio": 1,
+    "protocolMargin": 0,
+    "lines": [
+      {
+        "id": "reserve",
+        "to": "holders",
+        "annualized": 56610205.94751208,
+        "basis": "measured",
+        "note": "fees converted to LINK and held in the Chainlink Reserve"
+      },
+      {
+        "id": "protocol_income",
+        "to": "protocol",
+        "annualized": 0,
+        "basis": "remainder",
+        "note": "revenue less holders and costs"
+      }
+    ],
+    "checks": [],
+    "outsideRevenue": []
+  },
+  "revenue": {
+    "basis": "streams",
+    "streams": [
+      {
+        "id": "onchain_fees",
+        "label": "on-chain service fees converted to LINK (Payment Abstraction)",
+        "basis": "daily",
+        "metric": "flow_usd.reserve",
+        "annualized": 56610205.94751208,
+        "daysInWindow": null,
+        "provisionalDays": 0,
+        "started": null,
+        "isNew": false,
+        "growth": {
+          "current": 14113777.37321534,
+          "prior": 14934010.577884868,
+          "change": -0.054923839807919816,
+          "annualized": -0.2027442926921431
+        },
+        "holderFlow": null
+      }
+    ],
+    "annualized": 56610205.94751208,
+    "growth": {
+      "current": 14113777.37321534,
+      "prior": 14934010.577884868,
+      "change": -0.054923839807919816,
+      "annualized": -0.2027442926921431
+    },
+    "growthExNew": null,
+    "excludedFromExNew": [],
+    "provisional": false
+  },
+  "volume": null,
+  "revenueDisclosed": null,
+  "notes": []
+}

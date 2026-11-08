@@ -1,0 +1,157 @@
+{
+  "asset": "pump",
+  "day": "2026-11-05",
+  "windowDays": 91,
+  "price": 0.0039807,
+  "marketCap": 1827819032.5125864,
+  "fdv": 3280267610.475786,
+  "flows": [
+    {
+      "id": "buyback",
+      "metric": "flow_usd.buyback",
+      "bucket": "burn",
+      "recipientBase": "all",
+      "haircut": 0,
+      "gross": 317492643.7989864,
+      "net": 317492643.7989864,
+      "yield": 0.09678864089778812,
+      "growth": {
+        "current": 79155700.23481578,
+        "prior": 44298841,
+        "change": 0.7868571377480458,
+        "annualized": 9.259579076574605
+      }
+    }
+  ],
+  "buckets": {
+    "burn": {
+      "gross": 317492643.7989864,
+      "net": 317492643.7989864,
+      "yield": 0.09678864089778812,
+      "growth": {
+        "current": 79155700.23481578,
+        "prior": 44298841,
+        "change": 0.7868571377480458,
+        "annualized": 9.259579076574605
+      }
+    },
+    "hold": null,
+    "cash": null
+  },
+  "yields": {
+    "cash": 0,
+    "buyback": 0.09678864089778812,
+    "shareholder": 0.09678864089778812,
+    "dilution": 0.1001161456922615,
+    "netShareholder": -0.003327504794473385,
+    "multiple": 10.331790907737116,
+    "pegTrailing": 0.011157948781791875,
+    "dilutionLines": [
+      {
+        "id": "unlocks",
+        "tokensPerYear": 82500000000.00008,
+        "yield": 0.1001161456922615
+      }
+    ]
+  },
+  "holderFlowGrowth": {
+    "current": 79155700.23481578,
+    "prior": 44298841,
+    "change": 0.7868571377480458,
+    "annualized": 9.259579076574605
+  },
+  "supply": {
+    "burnedPerYear": 76005753942.31895,
+    "addedPerYear": 82500000000.00008,
+    "netPerYear": 6494246057.681122,
+    "netPct": 0.007880956175420575
+  },
+  "income": {
+    "revenue": {
+      "annualized": 688283981.8994505,
+      "growth": {
+        "current": 171599568.09,
+        "prior": 94989720,
+        "change": 0.8065067260962555,
+        "annualized": 9.719653427458788
+      }
+    },
+    "holders": {
+      "annualized": 317492643.7989864,
+      "growth": {
+        "current": 79155700.23481578,
+        "prior": 44298841,
+        "change": 0.7868571377480458,
+        "annualized": 9.259579076574605
+      }
+    },
+    "protocol": {
+      "annualized": 370791338.1004642,
+      "growth": {
+        "current": 92443867.85518423,
+        "prior": 50690879,
+        "change": 0.8236785330785885,
+        "annualized": 10.13424330900603
+      }
+    },
+    "costs": {
+      "annualized": 0
+    },
+    "payoutRatio": 0.4612814654247874,
+    "protocolMargin": 0.5387185345752127,
+    "lines": [
+      {
+        "id": "buyback",
+        "to": "holders",
+        "annualized": 317492643.7989864,
+        "basis": "measured",
+        "note": "company wallets buy PUMP daily and burn it (supply drop)"
+      },
+      {
+        "id": "protocol_income",
+        "to": "protocol",
+        "annualized": 370791338.1004642,
+        "basis": "remainder",
+        "note": "revenue less holders and costs"
+      }
+    ],
+    "checks": [],
+    "outsideRevenue": []
+  },
+  "revenue": {
+    "basis": "streams",
+    "streams": [
+      {
+        "id": "protocol",
+        "label": "pump.fun revenue (DefiLlama dailyRevenue)",
+        "basis": "daily",
+        "metric": "flow_usd.llama_revenue",
+        "annualized": 688283981.8994505,
+        "daysInWindow": null,
+        "provisionalDays": 0,
+        "started": null,
+        "isNew": false,
+        "growth": {
+          "current": 171599568.09,
+          "prior": 94989720,
+          "change": 0.8065067260962555,
+          "annualized": 9.719653427458788
+        },
+        "holderFlow": null
+      }
+    ],
+    "annualized": 688283981.8994505,
+    "growth": {
+      "current": 171599568.09,
+      "prior": 94989720,
+      "change": 0.8065067260962555,
+      "annualized": 9.719653427458788
+    },
+    "growthExNew": null,
+    "excludedFromExNew": [],
+    "provisional": false
+  },
+  "volume": null,
+  "revenueDisclosed": null,
+  "notes": []
+}

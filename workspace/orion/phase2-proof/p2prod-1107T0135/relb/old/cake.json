@@ -1,0 +1,142 @@
+{
+  "asset": "cake",
+  "day": "2026-11-05",
+  "windowDays": 91,
+  "price": 1.93,
+  "marketCap": 633532730.7476727,
+  "fdv": 667258685.5380013,
+  "flows": [
+    {
+      "id": "burn",
+      "metric": "flow_usd.burn",
+      "bucket": "burn",
+      "recipientBase": "all",
+      "haircut": 0,
+      "gross": 58369262.46349844,
+      "net": 58369262.46349844,
+      "yield": 0.08747621234249821,
+      "growth": {
+        "current": 14552336.668981802,
+        "prior": 9183142.55328623,
+        "change": 0.5846793823073324,
+        "annualized": 5.338154017689789
+      }
+    }
+  ],
+  "buckets": {
+    "burn": {
+      "gross": 58369262.46349844,
+      "net": 58369262.46349844,
+      "yield": 0.08747621234249821,
+      "growth": {
+        "current": 14552336.668981802,
+        "prior": 9183142.55328623,
+        "change": 0.5846793823073324,
+        "annualized": 5.338154017689789
+      }
+    },
+    "hold": null,
+    "cash": null
+  },
+  "yields": {
+    "cash": 0,
+    "buyback": 0.08747621234249821,
+    "shareholder": 0.08747621234249821,
+    "dilution": 0.02295867161750311,
+    "netShareholder": 0.0645175407249951,
+    "multiple": 11.431679232802974,
+    "pegTrailing": 0.021415041969415304
+  },
+  "holderFlowGrowth": {
+    "current": 14552336.668981802,
+    "prior": 9183142.55328623,
+    "change": 0.5846793823073324,
+    "annualized": 5.338154017689789
+  },
+  "supply": {
+    "burnedPerYear": 27971613.28238964,
+    "addedPerYear": 7937498.987147017,
+    "netPerYear": -20034114.295242622,
+    "netPct": -0.05794730204020131
+  },
+  "income": {
+    "revenue": {
+      "annualized": 79737431.98353486,
+      "growth": {
+        "current": 19879743.316442937,
+        "prior": 12616480.67726804,
+        "change": 0.5756964105102309,
+        "annualized": 5.195269604849357
+      }
+    },
+    "holders": {
+      "annualized": 58369262.46349844,
+      "growth": {
+        "current": 14552336.668981802,
+        "prior": 9183142.55328623,
+        "change": 0.5846793823073324,
+        "annualized": 5.338154017689789
+      }
+    },
+    "protocol": {
+      "annualized": 21368169.52003641,
+      "growth": {
+        "current": 5327406.647461133,
+        "prior": 3433338.1239818097,
+        "change": 0.5516696739681088,
+        "annualized": 4.824971227884811
+      }
+    },
+    "costs": {
+      "annualized": 0
+    },
+    "payoutRatio": 0.7320183383326319,
+    "protocolMargin": 0.26798166166736803,
+    "lines": [
+      {
+        "id": "burn",
+        "to": "holders",
+        "annualized": 58369262.46349844,
+        "basis": "measured",
+        "note": "fee-funded CAKE burned (weekly)"
+      },
+      {
+        "id": "treasury",
+        "to": "protocol",
+        "annualized": 21368169.52003641,
+        "basis": "measured",
+        "note": "the converters' treasury share"
+      }
+    ],
+    "checks": [],
+    "outsideRevenue": []
+  },
+  "revenue": {
+    "basis": "income",
+    "streams": [],
+    "annualized": 79737431.98353486,
+    "growth": {
+      "current": 19879743.316442937,
+      "prior": 12616480.67726804,
+      "change": 0.5756964105102309,
+      "annualized": 5.195269604849357
+    },
+    "growthExNew": null,
+    "excludedFromExNew": [],
+    "provisional": false
+  },
+  "volume": {
+    "metrics": [
+      "flow_usd.fees"
+    ],
+    "annualized": 208743552.50384605,
+    "growth": {
+      "current": 52042913.089999974,
+      "prior": 27292089.95,
+      "change": 0.9068863244018428,
+      "annualized": 12.316181589319987
+    }
+  },
+  "revenueDisclosed": null,
+  "notes": []
+}

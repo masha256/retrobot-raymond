@@ -1,0 +1,4 @@
+legacy=--legacy
+assets=aero cake crv cvxcrv hype link lit pump sdcrv sky uni vvv ycrv
+day=2026-11-05
+ORION_DB_SCHEMA=p2proof_20261107t013545z
