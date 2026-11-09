@@ -1,0 +1,42 @@
+
+ RUN  v5.0.1 /home/hermes/git/orion/.worktrees/aero-supply
+
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+ ❯ tests/config/load.test.ts (18 tests | 1 failed) 238ms
+   ❯ metric watch (5)
+     × an asset without watch/share keeps its hash 28ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/config/load.test.ts > metric watch > an asset without watch/share keeps its hash
+AssertionError: expected 'e9e96f3c78e997fdc260433fe6bb1aa4e3958…' to be 'c1065fd5aad2898493b9c35f74349d10b5494…' // Object.is equality
+
+Expected: "c1065fd5aad2898493b9c35f74349d10b549426dc8f17610ae7fa1e12436ca8b"
+Received: "e9e96f3c78e997fdc260433fe6bb1aa4e3958b959d0c3679ff9219a9aaaa9779"
+
+ ❯ tests/config/load.test.ts:209:27
+    207|     expect(asset('vvv')).toBe('433d0306b2cad2849a717180e24568d5c0bf3ed…
+    208|     expect(asset('hype')).toBe('7a52e7974c9c90234ac9ac27d6d0495291b047…
+    209|     expect(asset('aero')).toBe('c1065fd5aad2898493b9c35f74349d10b54942…
+       |                           ^
+    210|   });
+    211| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 132 passed (133)
+      Tests  1 failed | 1559 passed (1560)
+   Start at  21:18:40
+   Duration  87.06s (tests 81%, import 17%, transform 2%)
+
+    Isolate  133 workers spawned · ~98ms startup each (spawn + environment, per file)
+             at least ~6.40s faster with isolate: false — reuses workers across files instead of one per file
+

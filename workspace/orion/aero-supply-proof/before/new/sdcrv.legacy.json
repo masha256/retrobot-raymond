@@ -1,0 +1,870 @@
+{
+  "asset": "sdcrv",
+  "day": "2026-11-09",
+  "windowDays": 91,
+  "price": 0.134293,
+  "marketCap": 15987579.854093065,
+  "fdv": 15987579.854093065,
+  "flows": [
+    {
+      "id": "fees",
+      "metric": "flow_usd.fees",
+      "bucket": "cash",
+      "recipientBase": "staked",
+      "haircut": 0,
+      "gross": null,
+      "net": null,
+      "yield": null,
+      "growth": {
+        "current": null,
+        "prior": 192184.95801476727,
+        "change": null,
+        "annualized": null,
+        "note": "needs 182 complete days of every flow"
+      }
+    },
+    {
+      "id": "crv",
+      "metric": "flow_usd.crv",
+      "bucket": "cash",
+      "recipientBase": "staked",
+      "haircut": 0.005,
+      "gross": null,
+      "net": null,
+      "yield": null,
+      "growth": {
+        "current": null,
+        "prior": 51257.84600710596,
+        "change": null,
+        "annualized": null,
+        "note": "needs 182 complete days of every flow"
+      }
+    },
+    {
+      "id": "bribes",
+      "metric": "flow_usd.bribes",
+      "bucket": "cash",
+      "recipientBase": "staked",
+      "haircut": 0.05,
+      "gross": null,
+      "net": null,
+      "yield": null,
+      "growth": {
+        "current": null,
+        "prior": 450635.67953695706,
+        "change": null,
+        "annualized": null,
+        "note": "needs 182 complete days of every flow"
+      }
+    }
+  ],
+  "buckets": {
+    "burn": null,
+    "hold": null,
+    "cash": {
+      "gross": null,
+      "net": null,
+      "yield": null,
+      "growth": {
+        "current": null,
+        "prior": 671290.4103519468,
+        "change": null,
+        "annualized": null,
+        "note": "needs 182 complete days of every flow"
+      }
+    }
+  },
+  "yields": {
+    "cash": null,
+    "buyback": 0,
+    "shareholder": null,
+    "dilution": 0,
+    "netShareholder": null,
+    "multiple": null,
+    "pegTrailing": null
+  },
+  "holderFlowGrowth": {
+    "current": null,
+    "prior": 671290.4103519468,
+    "change": null,
+    "annualized": null,
+    "note": "needs 182 complete days of every flow"
+  },
+  "supply": null,
+  "income": {
+    "revenue": {
+      "annualized": null,
+      "growth": {
+        "current": null,
+        "prior": 938002.7985588918,
+        "change": null,
+        "annualized": null,
+        "note": "needs 182 complete days of every flow"
+      }
+    },
+    "holders": {
+      "annualized": null,
+      "growth": {
+        "current": null,
+        "prior": 694078.4835588303,
+        "change": null,
+        "annualized": null,
+        "note": "needs 182 complete days of every flow"
+      }
+    },
+    "protocol": {
+      "annualized": null,
+      "growth": {
+        "current": null,
+        "prior": 216018.20897702058,
+        "change": null,
+        "annualized": null,
+        "note": "needs 182 complete days of every flow"
+      }
+    },
+    "costs": {
+      "annualized": null
+    },
+    "payoutRatio": null,
+    "protocolMargin": null,
+    "lines": [
+      {
+        "id": "vecrv_fees",
+        "to": "holders",
+        "annualized": null,
+        "basis": "measured"
+      },
+      {
+        "id": "crv_fee_share",
+        "to": "holders",
+        "annualized": null,
+        "basis": "measured"
+      },
+      {
+        "id": "vote_incentives",
+        "to": "holders",
+        "annualized": null,
+        "basis": "measured"
+      },
+      {
+        "id": "vesdt",
+        "to": "protocol",
+        "annualized": null,
+        "basis": "measured"
+      },
+      {
+        "id": "treasury_crv",
+        "to": "protocol",
+        "annualized": null,
+        "basis": "measured"
+      },
+      {
+        "id": "liquidity_fee",
+        "to": "protocol",
+        "annualized": null,
+        "basis": "measured"
+      },
+      {
+        "id": "treasury_fees",
+        "to": "protocol",
+        "annualized": null,
+        "basis": "measured"
+      },
+      {
+        "id": "boost_delegators",
+        "to": "cost",
+        "annualized": null,
+        "basis": "measured"
+      }
+    ],
+    "checks": [
+      {
+        "total": [
+          "flow_usd.sd_rev_crv"
+        ],
+        "parts": [
+          "vesdt",
+          "treasury_crv",
+          "crv_fee_share",
+          "boost_delegators"
+        ],
+        "measured": null,
+        "sumOfParts": null,
+        "gapPct": null
+      }
+    ],
+    "outsideRevenue": []
+  },
+  "revenue": {
+    "basis": "income",
+    "streams": [],
+    "annualized": null,
+    "growth": {
+      "current": null,
+      "prior": 938002.7985588918,
+      "change": null,
+      "annualized": null,
+      "note": "needs 182 complete days of every flow"
+    },
+    "growthExNew": null,
+    "excludedFromExNew": [],
+    "provisional": false
+  },
+  "volume": {
+    "metrics": [
+      "flow_usd.sd_gross_crv"
+    ],
+    "annualized": null,
+    "growth": {
+      "current": null,
+      "prior": 1452354.4433409069,
+      "change": null,
+      "annualized": null,
+      "note": "needs 182 complete days of every flow"
+    }
+  },
+  "revenueDisclosed": null,
+  "notes": [
+    "yields are per token of each flow's recipients (staked or locked supply), i.e. to a holder in every flow's base"
+  ],
+  "incomeStatement": {
+    "schema": 2,
+    "day": "2026-11-09",
+    "windowDays": 91,
+    "category": "liquid_locker",
+    "scope": "complete",
+    "revenue": {
+      "annualized": null,
+      "growth": {
+        "current": null,
+        "prior": 487367.11902193463,
+        "change": null,
+        "annualized": null,
+        "note": "needs 182 complete days of every flow"
+      },
+      "growthExNew": null,
+      "excludedFromExNew": [],
+      "provisional": false,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "vecrv_fees_rev",
+          "label": "veCRV crvUSD fees: stakers' 85 percent",
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "mixed",
+          "annualized": null,
+          "windowSum": null,
+          "settlement": "daily",
+          "started": null,
+          "daysMeasured": 90,
+          "provisionalDays": 0,
+          "coverage": null,
+          "isNew": false,
+          "growth": {
+            "current": null,
+            "prior": 192184.95801476727,
+            "change": null,
+            "annualized": null,
+            "note": "needs 182 complete days of every flow"
+          }
+        },
+        {
+          "id": "crv_fee_share_rev",
+          "label": "CRV fee: accumulator part",
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "mixed",
+          "annualized": null,
+          "windowSum": null,
+          "settlement": "daily",
+          "started": null,
+          "daysMeasured": 90,
+          "provisionalDays": 0,
+          "coverage": null,
+          "isNew": false,
+          "growth": {
+            "current": null,
+            "prior": 51257.84600710596,
+            "change": null,
+            "annualized": null,
+            "note": "needs 182 complete days of every flow"
+          }
+        },
+        {
+          "id": "vesdt_rev",
+          "label": "CRV fee: veSDT part",
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "mixed",
+          "annualized": null,
+          "windowSum": null,
+          "settlement": "daily",
+          "started": null,
+          "daysMeasured": 90,
+          "provisionalDays": 0,
+          "coverage": null,
+          "isNew": false,
+          "growth": {
+            "current": null,
+            "prior": 94996.74243617615,
+            "change": null,
+            "annualized": null,
+            "note": "needs 182 complete days of every flow"
+          }
+        },
+        {
+          "id": "treasury_crv_rev",
+          "label": "CRV fee: treasury part",
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "mixed",
+          "annualized": null,
+          "windowSum": null,
+          "settlement": "daily",
+          "started": null,
+          "daysMeasured": 90,
+          "provisionalDays": 0,
+          "coverage": null,
+          "isNew": false,
+          "growth": {
+            "current": null,
+            "prior": 87106.47395000311,
+            "change": null,
+            "annualized": null,
+            "note": "needs 182 complete days of every flow"
+          }
+        },
+        {
+          "id": "liquidity_fee_rev",
+          "label": "veCRV crvUSD fees: liquidity part (10 percent)",
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "mixed",
+          "annualized": null,
+          "windowSum": null,
+          "settlement": "daily",
+          "started": null,
+          "daysMeasured": 90,
+          "provisionalDays": 0,
+          "coverage": null,
+          "isNew": false,
+          "growth": {
+            "current": null,
+            "prior": 22609.99506056086,
+            "change": null,
+            "annualized": null,
+            "note": "needs 182 complete days of every flow"
+          }
+        },
+        {
+          "id": "treasury_fees_rev",
+          "label": "veCRV crvUSD fees: treasury part",
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "mixed",
+          "annualized": null,
+          "windowSum": null,
+          "settlement": "daily",
+          "started": null,
+          "daysMeasured": 90,
+          "provisionalDays": 0,
+          "coverage": null,
+          "isNew": false,
+          "growth": {
+            "current": null,
+            "prior": 11304.99753028043,
+            "change": null,
+            "annualized": null,
+            "note": "needs 182 complete days of every flow"
+          }
+        },
+        {
+          "id": "boost_delegators_rev",
+          "label": "CRV fee: boost delegators part",
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "mixed",
+          "annualized": null,
+          "windowSum": null,
+          "settlement": "daily",
+          "started": null,
+          "daysMeasured": 90,
+          "provisionalDays": 0,
+          "coverage": null,
+          "isNew": false,
+          "growth": {
+            "current": null,
+            "prior": 27906.106023040848,
+            "change": null,
+            "annualized": null,
+            "note": "needs 182 complete days of every flow"
+          }
+        }
+      ]
+    },
+    "costOfRevenue": {
+      "annualized": 0,
+      "measuredAnnualized": 0,
+      "notMeasured": [],
+      "lines": []
+    },
+    "grossProfit": {
+      "annualized": null,
+      "growth": {
+        "current": null,
+        "prior": 487367.11902193463,
+        "change": null,
+        "annualized": null,
+        "note": "needs 182 complete days of every flow"
+      }
+    },
+    "holders": {
+      "annualized": null,
+      "growth": {
+        "current": null,
+        "prior": 243442.80402187322,
+        "change": null,
+        "annualized": null,
+        "note": "needs 182 complete days of every flow"
+      },
+      "remainder": false,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "vecrv_fees",
+          "label": null,
+          "of": "vecrv_fees_rev",
+          "share": 1,
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "mixed",
+          "annualized": null,
+          "growth": {
+            "current": null,
+            "prior": 192184.95801476727,
+            "change": null,
+            "annualized": null,
+            "note": "needs 182 complete days of every flow"
+          },
+          "bucket": "cash",
+          "haircut": 0,
+          "recipientBase": "staked",
+          "valuedPer": "recipients",
+          "captureRule": "programmatic",
+          "paidMetric": null,
+          "gross": null,
+          "net": null,
+          "yield": null
+        },
+        {
+          "id": "crv_fee_share",
+          "label": null,
+          "of": "crv_fee_share_rev",
+          "share": 1,
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "mixed",
+          "annualized": null,
+          "growth": {
+            "current": null,
+            "prior": 51257.84600710596,
+            "change": null,
+            "annualized": null,
+            "note": "needs 182 complete days of every flow"
+          },
+          "bucket": "cash",
+          "haircut": 0.005,
+          "recipientBase": "staked",
+          "valuedPer": "recipients",
+          "captureRule": "programmatic",
+          "paidMetric": null,
+          "gross": null,
+          "net": null,
+          "yield": null
+        }
+      ],
+      "byBucket": {
+        "burn": null,
+        "hold": null,
+        "cash": {
+          "annualized": null
+        }
+      }
+    },
+    "protocol": {
+      "annualized": null,
+      "growth": {
+        "current": null,
+        "prior": 216018.20897702058,
+        "change": null,
+        "annualized": null,
+        "note": "needs 182 complete days of every flow"
+      },
+      "remainder": false,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "vesdt",
+          "label": null,
+          "of": "vesdt_rev",
+          "share": 1,
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "mixed",
+          "annualized": null,
+          "growth": {
+            "current": null,
+            "prior": 94996.74243617615,
+            "change": null,
+            "annualized": null,
+            "note": "needs 182 complete days of every flow"
+          }
+        },
+        {
+          "id": "treasury_crv",
+          "label": null,
+          "of": "treasury_crv_rev",
+          "share": 1,
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "mixed",
+          "annualized": null,
+          "growth": {
+            "current": null,
+            "prior": 87106.47395000311,
+            "change": null,
+            "annualized": null,
+            "note": "needs 182 complete days of every flow"
+          }
+        },
+        {
+          "id": "liquidity_fee",
+          "label": null,
+          "of": "liquidity_fee_rev",
+          "share": 1,
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "mixed",
+          "annualized": null,
+          "growth": {
+            "current": null,
+            "prior": 22609.99506056086,
+            "change": null,
+            "annualized": null,
+            "note": "needs 182 complete days of every flow"
+          }
+        },
+        {
+          "id": "treasury_fees",
+          "label": null,
+          "of": "treasury_fees_rev",
+          "share": 1,
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "mixed",
+          "annualized": null,
+          "growth": {
+            "current": null,
+            "prior": 11304.99753028043,
+            "change": null,
+            "annualized": null,
+            "note": "needs 182 complete days of every flow"
+          }
+        }
+      ]
+    },
+    "operatingCosts": {
+      "annualized": null,
+      "growth": {
+        "current": null,
+        "prior": 27906.106023040848,
+        "change": null,
+        "annualized": null,
+        "note": "needs 182 complete days of every flow"
+      },
+      "remainder": false,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "boost_delegators",
+          "label": null,
+          "of": "boost_delegators_rev",
+          "share": 1,
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "mixed",
+          "annualized": null,
+          "growth": {
+            "current": null,
+            "prior": 27906.106023040848,
+            "change": null,
+            "annualized": null,
+            "note": "needs 182 complete days of every flow"
+          }
+        }
+      ]
+    },
+    "unreconciled": {
+      "annualized": null,
+      "pct": null,
+      "basis": "revenue"
+    },
+    "belowLine": {
+      "toHolders": null,
+      "toProtocol": 0,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "bribes",
+          "label": null,
+          "to": "holders",
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "mixed",
+          "annualized": null,
+          "growth": {
+            "current": null,
+            "prior": 450635.67953695706,
+            "change": null,
+            "annualized": null,
+            "note": "needs 182 complete days of every flow"
+          },
+          "bucket": "cash",
+          "haircut": 0.05,
+          "recipientBase": "staked",
+          "captureRule": "programmatic",
+          "note": "vote incentives (Votemarket, botmarket to merkle stash): third parties, not paid by users"
+        }
+      ]
+    },
+    "holderFlow": {
+      "gross": null,
+      "net": null,
+      "netOfDilution": null,
+      "growth": {
+        "current": null,
+        "prior": 671290.4103519468,
+        "change": null,
+        "annualized": null,
+        "note": "needs 182 complete days of every flow"
+      },
+      "byBucket": {
+        "burn": null,
+        "hold": null,
+        "cash": {
+          "gross": null,
+          "net": null,
+          "yield": null,
+          "fromRevenue": null,
+          "fromBelowLine": null
+        }
+      },
+      "fromRevenue": null,
+      "fromBelowLine": null,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "vecrv_fees",
+          "section": "holders",
+          "fromBelowLine": false,
+          "bucket": "cash",
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "mixed",
+          "metric": "flow_usd.fees",
+          "haircut": 0,
+          "recipientBase": "staked",
+          "gross": null,
+          "net": null,
+          "yield": null,
+          "growth": {
+            "current": null,
+            "prior": 192184.95801476727,
+            "change": null,
+            "annualized": null,
+            "note": "needs 182 complete days of every flow"
+          }
+        },
+        {
+          "id": "crv_fee_share",
+          "section": "holders",
+          "fromBelowLine": false,
+          "bucket": "cash",
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "mixed",
+          "metric": "flow_usd.crv",
+          "haircut": 0.005,
+          "recipientBase": "staked",
+          "gross": null,
+          "net": null,
+          "yield": null,
+          "growth": {
+            "current": null,
+            "prior": 51257.84600710596,
+            "change": null,
+            "annualized": null,
+            "note": "needs 182 complete days of every flow"
+          }
+        },
+        {
+          "id": "bribes",
+          "section": "below_line",
+          "fromBelowLine": true,
+          "bucket": "cash",
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "mixed",
+          "metric": "flow_usd.bribes",
+          "haircut": 0.05,
+          "recipientBase": "staked",
+          "gross": null,
+          "net": null,
+          "yield": null,
+          "growth": {
+            "current": null,
+            "prior": 450635.67953695706,
+            "change": null,
+            "annualized": null,
+            "note": "needs 182 complete days of every flow"
+          }
+        }
+      ]
+    },
+    "volume": {
+      "metrics": [
+        "flow_usd.sd_gross_crv"
+      ],
+      "annualized": null,
+      "growth": {
+        "current": null,
+        "prior": 1452354.4433409066,
+        "change": null,
+        "annualized": null,
+        "note": "needs 182 complete days of every flow"
+      }
+    },
+    "dilution": {
+      "pct": 0,
+      "tokensPerYear": 0,
+      "emissionsPerYear": 0,
+      "releases": [],
+      "supply": null
+    },
+    "ratios": {
+      "takeRate": null,
+      "payoutRatio": null,
+      "payoutRatioBasis": "revenue"
+    },
+    "multiples": {
+      "mcapToRevenue": null,
+      "mcapToGrossProfit": null,
+      "mcapToHolderFlow": {
+        "burn": null,
+        "hold": null,
+        "cash": null,
+        "total": null
+      }
+    },
+    "yields": {
+      "cash": null,
+      "buyback": 0,
+      "shareholder": null,
+      "dilution": 0,
+      "netShareholder": null,
+      "multiple": null,
+      "pegTrailing": null
+    },
+    "perToken": {
+      "revenue": null,
+      "grossProfit": null,
+      "holderFlow": {
+        "total": null,
+        "netOfDilution": null,
+        "byBucket": {
+          "burn": null,
+          "hold": null,
+          "cash": null
+        }
+      },
+      "dilution": 0,
+      "circulatingSupply": 119049986.62695052,
+      "totalSupply": 119049986.62695052,
+      "supplyAsOf": "2026-11-10T23:59:59.999Z",
+      "perTokenFdv": {
+        "revenue": null,
+        "grossProfit": null,
+        "holderFlow": {
+          "total": null,
+          "netOfDilution": null,
+          "byBucket": {
+            "burn": null,
+            "hold": null,
+            "cash": null
+          }
+        },
+        "dilution": 0
+      }
+    },
+    "priceBasis": {
+      "price": 0.134293,
+      "metric": "price_usd",
+      "sourceType": "market_data",
+      "source": "market_data:coingecko",
+      "day": "2026-11-09",
+      "asOf": "2026-11-10T23:59:59.999Z",
+      "flows": "each flow day's USD from its tokens x hourly prices where every hour is priced and the stored value was itself hourly-priced at ingest (the G2-signed days), else the stored value (per line: priceBasis)"
+    },
+    "checks": [],
+    "provenance": {
+      "methods": {
+        "measured": null,
+        "derived": null,
+        "disclosed": null
+      },
+      "thirdParty": [],
+      "sources": [
+        "log_scan:eip155:1"
+      ],
+      "basis": "observations"
+    },
+    "flags": []
+  }
+}

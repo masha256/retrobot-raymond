@@ -1,0 +1,275 @@
+{
+ "schema": "p2proof_20261109t213402z",
+ "prod_migration": 5,
+ "tables": {
+  "agent_runs": {
+   "prod": 64,
+   "copied": 64,
+   "local": 64
+  },
+  "agent_transcripts": {
+   "prod": 1,
+   "copied": 1,
+   "local": 1
+  },
+  "anomalies": {
+   "prod": 16,
+   "copied": 16,
+   "local": 16
+  },
+  "asset_registry": {
+   "prod": 13,
+   "copied": 13,
+   "local": 13
+  },
+  "asset_state_events": {
+   "prod": 26,
+   "copied": 26,
+   "local": 26
+  },
+  "check_results": {
+   "prod": 0,
+   "copied": 0,
+   "local": 0
+  },
+  "coverage": {
+   "prod": 13,
+   "copied": 13,
+   "local": 13
+  },
+  "daemon_heartbeat": {
+   "prod": 3,
+   "copied": 3,
+   "local": 3
+  },
+  "day_blocks": {
+   "prod": 10,
+   "copied": 10,
+   "local": 10
+  },
+  "documents": {
+   "prod": 1,
+   "copied": 1,
+   "local": 1
+  },
+  "fetch_cursors": {
+   "prod": 55,
+   "copied": 55,
+   "local": 55
+  },
+  "fetch_runs": {
+   "prod": 488,
+   "copied": 488,
+   "local": 488
+  },
+  "jobs": {
+   "prod": 237,
+   "copied": 237,
+   "local": 237
+  },
+  "journal": {
+   "prod": 59,
+   "copied": 59,
+   "local": 59
+  },
+  "latest_levels": {
+   "prod": 65,
+   "copied": 65,
+   "local": 65
+  },
+  "proposals": {
+   "prod": 2,
+   "copied": 2,
+   "local": 2
+  },
+  "snapshots_out": {
+   "prod": 74,
+   "copied": 74,
+   "local": 74
+  },
+  "tokens": {
+   "prod": 14,
+   "copied": 14,
+   "local": 14
+  },
+  "observations": {
+   "prod": 27341,
+   "copied": 27341,
+   "local": 27341
+  },
+  "prices": {
+   "prod": 90052,
+   "copied": 90052,
+   "local": 90052
+  },
+  "watch_state": {
+   "prod": 3,
+   "copied": 3,
+   "local": 3
+  }
+ },
+ "sequences_set": 10,
+ "observation_sums": {
+  "prod": [
+   {
+    "asset_id": "aero",
+    "n": 574,
+    "s": 235699953125.9686,
+    "m": 29592
+   },
+   {
+    "asset_id": "cake",
+    "n": 2436,
+    "s": 20681842932.36086,
+    "m": 29605
+   },
+   {
+    "asset_id": "crv",
+    "n": 1630,
+    "s": 256776048156.65662,
+    "m": 29624
+   },
+   {
+    "asset_id": "cvxcrv",
+    "n": 2752,
+    "s": 36888137696.42285,
+    "m": 29637
+   },
+   {
+    "asset_id": "hype",
+    "n": 958,
+    "s": 74693941538.00435,
+    "m": 29645
+   },
+   {
+    "asset_id": "link",
+    "n": 3261,
+    "s": 50266447221.85549,
+    "m": 29657
+   },
+   {
+    "asset_id": "lit",
+    "n": 2346,
+    "s": 46106722319.247604,
+    "m": 29679
+   },
+   {
+    "asset_id": "pump",
+    "n": 1513,
+    "s": 35715080516010.27,
+    "m": 29691
+   },
+   {
+    "asset_id": "sdcrv",
+    "n": 3925,
+    "s": 10685805753.405544,
+    "m": 29707
+   },
+   {
+    "asset_id": "sky",
+    "n": 2644,
+    "s": 1690327973146.4893,
+    "m": 29720
+   },
+   {
+    "asset_id": "uni",
+    "n": 1116,
+    "s": 55102460662.71224,
+    "m": 29733
+   },
+   {
+    "asset_id": "vvv",
+    "n": 2123,
+    "s": 8925669955.530577,
+    "m": 29750
+   },
+   {
+    "asset_id": "ycrv",
+    "n": 2063,
+    "s": 6421698671.9412565,
+    "m": 30126
+   }
+  ],
+  "local": [
+   {
+    "asset_id": "aero",
+    "n": 574,
+    "s": 235699953125.9686,
+    "m": 29592
+   },
+   {
+    "asset_id": "cake",
+    "n": 2436,
+    "s": 20681842932.36086,
+    "m": 29605
+   },
+   {
+    "asset_id": "crv",
+    "n": 1630,
+    "s": 256776048156.65662,
+    "m": 29624
+   },
+   {
+    "asset_id": "cvxcrv",
+    "n": 2752,
+    "s": 36888137696.42285,
+    "m": 29637
+   },
+   {
+    "asset_id": "hype",
+    "n": 958,
+    "s": 74693941538.00435,
+    "m": 29645
+   },
+   {
+    "asset_id": "link",
+    "n": 3261,
+    "s": 50266447221.85549,
+    "m": 29657
+   },
+   {
+    "asset_id": "lit",
+    "n": 2346,
+    "s": 46106722319.247604,
+    "m": 29679
+   },
+   {
+    "asset_id": "pump",
+    "n": 1513,
+    "s": 35715080516010.27,
+    "m": 29691
+   },
+   {
+    "asset_id": "sdcrv",
+    "n": 3925,
+    "s": 10685805753.405544,
+    "m": 29707
+   },
+   {
+    "asset_id": "sky",
+    "n": 2644,
+    "s": 1690327973146.4893,
+    "m": 29720
+   },
+   {
+    "asset_id": "uni",
+    "n": 1116,
+    "s": 55102460662.71224,
+    "m": 29733
+   },
+   {
+    "asset_id": "vvv",
+    "n": 2123,
+    "s": 8925669955.530577,
+    "m": 29750
+   },
+   {
+    "asset_id": "ycrv",
+    "n": 2063,
+    "s": 6421698671.9412565,
+    "m": 30126
+   }
+  ]
+ },
+ "observation_sum_errors": []
+}

@@ -1,0 +1,589 @@
+{
+  "asset": "ycrv",
+  "day": "2026-11-09",
+  "windowDays": 91,
+  "price": 0.130887,
+  "marketCap": 9419021.629733682,
+  "fdv": 9419021.629733682,
+  "flows": [
+    {
+      "id": "fees",
+      "metric": "flow_usd.fees",
+      "bucket": "cash",
+      "recipientBase": "staked",
+      "haircut": 0,
+      "gross": null,
+      "net": null,
+      "yield": null,
+      "growth": {
+        "current": null,
+        "prior": 427150.8953761116,
+        "change": null,
+        "annualized": null,
+        "note": "needs 182 complete days of every flow"
+      }
+    }
+  ],
+  "buckets": {
+    "burn": null,
+    "hold": null,
+    "cash": {
+      "gross": null,
+      "net": null,
+      "yield": null,
+      "growth": {
+        "current": null,
+        "prior": 427150.8953761116,
+        "change": null,
+        "annualized": null,
+        "note": "needs 182 complete days of every flow"
+      }
+    }
+  },
+  "yields": {
+    "cash": null,
+    "buyback": 0,
+    "shareholder": null,
+    "dilution": 0,
+    "netShareholder": null,
+    "multiple": null,
+    "pegTrailing": null
+  },
+  "holderFlowGrowth": {
+    "current": null,
+    "prior": 427150.8953761116,
+    "change": null,
+    "annualized": null,
+    "note": "needs 182 complete days of every flow"
+  },
+  "supply": null,
+  "income": {
+    "revenue": {
+      "annualized": null,
+      "growth": {
+        "current": null,
+        "prior": 630494.5647366494,
+        "change": null,
+        "annualized": null,
+        "note": "needs 182 complete days of every flow"
+      }
+    },
+    "holders": {
+      "annualized": null,
+      "growth": {
+        "current": null,
+        "prior": 427150.8953761116,
+        "change": null,
+        "annualized": null,
+        "note": "needs 182 complete days of every flow"
+      }
+    },
+    "protocol": {
+      "annualized": null,
+      "growth": {
+        "current": null,
+        "prior": 203343.6693605378,
+        "change": null,
+        "annualized": null,
+        "note": "needs 182 complete days of every flow"
+      }
+    },
+    "costs": {
+      "annualized": 0
+    },
+    "payoutRatio": null,
+    "protocolMargin": null,
+    "lines": [
+      {
+        "id": "ybs_payout",
+        "to": "holders",
+        "annualized": null,
+        "basis": "measured"
+      },
+      {
+        "id": "treasury",
+        "to": "protocol",
+        "annualized": null,
+        "basis": "measured"
+      },
+      {
+        "id": "styc_fee",
+        "to": "protocol",
+        "annualized": null,
+        "basis": "measured"
+      }
+    ],
+    "checks": [
+      {
+        "total": [
+          "flow_usd.yearn_gross"
+        ],
+        "parts": [
+          "ybs_payout",
+          "treasury"
+        ],
+        "measured": null,
+        "sumOfParts": null,
+        "gapPct": null
+      }
+    ],
+    "outsideRevenue": []
+  },
+  "revenue": {
+    "basis": "income",
+    "streams": [],
+    "annualized": null,
+    "growth": {
+      "current": null,
+      "prior": 630494.5647366494,
+      "change": null,
+      "annualized": null,
+      "note": "needs 182 complete days of every flow"
+    },
+    "growthExNew": null,
+    "excludedFromExNew": [],
+    "provisional": false
+  },
+  "volume": {
+    "metrics": [
+      "flow_usd.yearn_gross"
+    ],
+    "annualized": null,
+    "growth": {
+      "current": null,
+      "prior": 600590.6882473784,
+      "change": null,
+      "annualized": null,
+      "note": "needs 182 complete days of every flow"
+    }
+  },
+  "revenueDisclosed": null,
+  "notes": [
+    "yields are per token of each flow's recipients (staked or locked supply), i.e. to a holder in every flow's base"
+  ],
+  "incomeStatement": {
+    "schema": 2,
+    "day": "2026-11-09",
+    "windowDays": 91,
+    "category": "liquid_locker",
+    "scope": "complete",
+    "revenue": {
+      "annualized": null,
+      "growth": {
+        "current": null,
+        "prior": 159140.69628057705,
+        "change": null,
+        "annualized": null,
+        "note": "needs 182 complete days of every flow"
+      },
+      "growthExNew": null,
+      "excludedFromExNew": [],
+      "provisional": false,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "fees_rev",
+          "label": "veCRV fees Yearn's voter sends the splitter (crvUSD)",
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "mixed",
+          "annualized": null,
+          "windowSum": null,
+          "settlement": "daily",
+          "started": null,
+          "daysMeasured": 90,
+          "provisionalDays": 0,
+          "coverage": null,
+          "isNew": false,
+          "growth": {
+            "current": null,
+            "prior": 159140.69628057705,
+            "change": null,
+            "annualized": null,
+            "note": "needs 182 complete days of every flow"
+          }
+        }
+      ]
+    },
+    "costOfRevenue": {
+      "annualized": 0,
+      "measuredAnnualized": 0,
+      "notMeasured": [],
+      "lines": []
+    },
+    "grossProfit": {
+      "annualized": null,
+      "growth": {
+        "current": null,
+        "prior": 159140.69628057705,
+        "change": null,
+        "annualized": null,
+        "note": "needs 182 complete days of every flow"
+      }
+    },
+    "holders": {
+      "annualized": null,
+      "growth": {
+        "current": null,
+        "prior": null,
+        "change": null,
+        "annualized": null,
+        "note": "a disclosed level: no daily series"
+      },
+      "remainder": false,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "ybs_payout",
+          "label": null,
+          "of": null,
+          "share": 1,
+          "method": "derived",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": null,
+          "annualized": null,
+          "growth": {
+            "current": null,
+            "prior": null,
+            "change": null,
+            "annualized": null,
+            "note": "apportion mix n/a: a day of flow_usd.yearn_gross_fees or flow_usd.yearn_gross is missing"
+          },
+          "apportion": {
+            "by": "flow_usd.yearn_gross_fees",
+            "total": "flow_usd.yearn_gross",
+            "mix": null,
+            "bySum": null,
+            "totalSum": null,
+            "formula": "apportion_by_mix@1"
+          },
+          "bucket": "cash",
+          "haircut": 0,
+          "recipientBase": "staked",
+          "valuedPer": "recipients",
+          "captureRule": "programmatic",
+          "paidMetric": null,
+          "gross": null,
+          "net": null,
+          "yield": null
+        }
+      ],
+      "byBucket": {
+        "burn": null,
+        "hold": null,
+        "cash": {
+          "annualized": null
+        }
+      }
+    },
+    "protocol": {
+      "annualized": null,
+      "growth": {
+        "current": null,
+        "prior": null,
+        "change": null,
+        "annualized": null,
+        "note": "a disclosed level: no daily series"
+      },
+      "remainder": false,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "treasury",
+          "label": null,
+          "of": null,
+          "share": 1,
+          "method": "derived",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": null,
+          "annualized": null,
+          "growth": {
+            "current": null,
+            "prior": null,
+            "change": null,
+            "annualized": null,
+            "note": "apportion mix n/a: a day of flow_usd.yearn_gross_fees or flow_usd.yearn_gross is missing"
+          },
+          "apportion": {
+            "by": "flow_usd.yearn_gross_fees",
+            "total": "flow_usd.yearn_gross",
+            "mix": null,
+            "bySum": null,
+            "totalSum": null,
+            "formula": "apportion_by_mix@1"
+          }
+        }
+      ]
+    },
+    "operatingCosts": {
+      "annualized": 0,
+      "growth": {
+        "current": 0,
+        "prior": 0,
+        "change": null,
+        "annualized": null,
+        "note": "no lines"
+      },
+      "remainder": false,
+      "notMeasured": [],
+      "lines": []
+    },
+    "unreconciled": {
+      "annualized": null,
+      "pct": null,
+      "basis": "revenue"
+    },
+    "belowLine": {
+      "toHolders": null,
+      "toProtocol": null,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "incentives_to_holders",
+          "label": null,
+          "to": "holders",
+          "method": "derived",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": null,
+          "annualized": null,
+          "growth": {
+            "current": null,
+            "prior": null,
+            "change": null,
+            "annualized": null,
+            "note": "apportion mix n/a: a day of flow_usd.yearn_gross_incentives or flow_usd.yearn_gross is missing"
+          },
+          "bucket": "cash",
+          "haircut": 0,
+          "recipientBase": "staked",
+          "captureRule": "programmatic",
+          "note": "auctioned third-party vote incentives (Yearn FeeBurner)",
+          "apportion": {
+            "by": "flow_usd.yearn_gross_incentives",
+            "total": "flow_usd.yearn_gross",
+            "mix": null,
+            "bySum": null,
+            "totalSum": null,
+            "formula": "apportion_by_mix@1"
+          }
+        },
+        {
+          "id": "incentives_to_protocol",
+          "label": null,
+          "to": "protocol",
+          "method": "derived",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": null,
+          "annualized": null,
+          "growth": {
+            "current": null,
+            "prior": null,
+            "change": null,
+            "annualized": null,
+            "note": "apportion mix n/a: a day of flow_usd.yearn_gross_incentives or flow_usd.yearn_gross is missing"
+          },
+          "bucket": null,
+          "haircut": null,
+          "recipientBase": null,
+          "captureRule": null,
+          "note": "auctioned third-party vote incentives (Yearn FeeBurner)",
+          "apportion": {
+            "by": "flow_usd.yearn_gross_incentives",
+            "total": "flow_usd.yearn_gross",
+            "mix": null,
+            "bySum": null,
+            "totalSum": null,
+            "formula": "apportion_by_mix@1"
+          }
+        }
+      ]
+    },
+    "holderFlow": {
+      "gross": null,
+      "net": null,
+      "netOfDilution": null,
+      "growth": {
+        "current": null,
+        "prior": 427150.8953761116,
+        "change": null,
+        "annualized": null,
+        "note": "needs 182 complete days of every flow"
+      },
+      "byBucket": {
+        "burn": null,
+        "hold": null,
+        "cash": {
+          "gross": null,
+          "net": null,
+          "yield": null,
+          "fromRevenue": null,
+          "fromBelowLine": null
+        }
+      },
+      "fromRevenue": null,
+      "fromBelowLine": null,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "ybs_payout",
+          "section": "holders",
+          "fromBelowLine": false,
+          "bucket": "cash",
+          "method": "derived",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": null,
+          "metric": null,
+          "haircut": 0,
+          "recipientBase": "staked",
+          "gross": null,
+          "net": null,
+          "yield": null,
+          "growth": {
+            "current": null,
+            "prior": null,
+            "change": null,
+            "annualized": null,
+            "note": "a run-rate level: no daily series"
+          }
+        },
+        {
+          "id": "incentives_to_holders",
+          "section": "below_line",
+          "fromBelowLine": true,
+          "bucket": "cash",
+          "method": "derived",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": null,
+          "metric": null,
+          "haircut": 0,
+          "recipientBase": "staked",
+          "gross": null,
+          "net": null,
+          "yield": null,
+          "growth": {
+            "current": null,
+            "prior": null,
+            "change": null,
+            "annualized": null,
+            "note": "a run-rate level: no daily series"
+          }
+        }
+      ]
+    },
+    "volume": {
+      "metrics": [
+        "flow_usd.yearn_gross"
+      ],
+      "annualized": null,
+      "growth": {
+        "current": null,
+        "prior": 600590.6882473784,
+        "change": null,
+        "annualized": null,
+        "note": "needs 182 complete days of every flow"
+      }
+    },
+    "dilution": {
+      "pct": 0,
+      "tokensPerYear": 0,
+      "emissionsPerYear": 0,
+      "releases": [],
+      "supply": null
+    },
+    "ratios": {
+      "takeRate": null,
+      "payoutRatio": null,
+      "payoutRatioBasis": "revenue"
+    },
+    "multiples": {
+      "mcapToRevenue": null,
+      "mcapToGrossProfit": null,
+      "mcapToHolderFlow": {
+        "burn": null,
+        "hold": null,
+        "cash": null,
+        "total": null
+      }
+    },
+    "yields": {
+      "cash": null,
+      "buyback": 0,
+      "shareholder": null,
+      "dilution": 0,
+      "netShareholder": null,
+      "multiple": null,
+      "pegTrailing": null
+    },
+    "perToken": {
+      "revenue": null,
+      "grossProfit": null,
+      "holderFlow": {
+        "total": null,
+        "netOfDilution": null,
+        "byBucket": {
+          "burn": null,
+          "hold": null,
+          "cash": null
+        }
+      },
+      "dilution": 0,
+      "circulatingSupply": 71963003.42840527,
+      "totalSupply": 71963003.42840527,
+      "supplyAsOf": "2026-11-10T23:59:59.999Z",
+      "perTokenFdv": {
+        "revenue": null,
+        "grossProfit": null,
+        "holderFlow": {
+          "total": null,
+          "netOfDilution": null,
+          "byBucket": {
+            "burn": null,
+            "hold": null,
+            "cash": null
+          }
+        },
+        "dilution": 0
+      }
+    },
+    "priceBasis": {
+      "price": 0.130887,
+      "metric": "price_usd",
+      "sourceType": "market_data",
+      "source": "market_data:coingecko",
+      "day": "2026-11-09",
+      "asOf": "2026-11-10T23:59:59.999Z",
+      "flows": "each flow day's USD from its tokens x hourly prices where every hour is priced and the stored value was itself hourly-priced at ingest (the G2-signed days), else the stored value (per line: priceBasis)"
+    },
+    "checks": [],
+    "provenance": {
+      "methods": {
+        "measured": null,
+        "derived": null,
+        "disclosed": null
+      },
+      "thirdParty": [],
+      "sources": [
+        "log_scan:eip155:1"
+      ],
+      "basis": "observations"
+    },
+    "flags": [
+      "apportion mix n/a: ybs_payout, treasury (a day of flow_usd.yearn_gross_fees or flow_usd.yearn_gross is missing)",
+      "apportion mix n/a: incentives_to_holders, incentives_to_protocol (a day of flow_usd.yearn_gross_incentives or flow_usd.yearn_gross is missing)"
+    ]
+  }
+}

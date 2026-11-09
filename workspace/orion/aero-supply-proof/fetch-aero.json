@@ -1,0 +1,204 @@
+{
+  "assetId": "aero",
+  "dryRun": false,
+  "fetchRunId": 489,
+  "outcome": "ok",
+  "startedAt": "2026-11-09T21:44:29.123Z",
+  "endedAt": "2026-11-09T21:44:35.052Z",
+  "sources": [
+    {
+      "sourceId": "adapter:chain.v2_pool_twap_price",
+      "status": "ok",
+      "error": null,
+      "metricsWritten": [
+        "price_usd"
+      ],
+      "crossChecks": [],
+      "unlistedTransfers": [],
+      "conflicts": [],
+      "retiredObservationIds": [],
+      "notes": []
+    },
+    {
+      "sourceId": "adapter:chain.cl_pool_spot_price",
+      "status": "ok",
+      "error": null,
+      "metricsWritten": [],
+      "crossChecks": [
+        {
+          "metricKey": "price_usd",
+          "sourceId": "adapter:chain.cl_pool_spot_price",
+          "label": "level",
+          "primary": 0.5710250037065003,
+          "check": 0.5697257485640104,
+          "diffPct": 0.227530341763767,
+          "tolerancePct": 2,
+          "ok": true
+        }
+      ],
+      "unlistedTransfers": [],
+      "conflicts": [],
+      "retiredObservationIds": [],
+      "notes": []
+    },
+    {
+      "sourceId": "chain_levels",
+      "status": "ok",
+      "error": null,
+      "metricsWritten": [
+        "total_supply",
+        "staked_supply",
+        "locked_supply",
+        "upgrade_reserve_aero",
+        "upgrade_reserve_velo"
+      ],
+      "crossChecks": [],
+      "unlistedTransfers": [],
+      "conflicts": [],
+      "retiredObservationIds": [],
+      "notes": []
+    },
+    {
+      "sourceId": "adapter:chain.view_sum",
+      "status": "ok",
+      "error": null,
+      "metricsWritten": [
+        "circulating_supply",
+        "emission_ceiling_annual"
+      ],
+      "crossChecks": [],
+      "unlistedTransfers": [],
+      "conflicts": [],
+      "retiredObservationIds": [],
+      "notes": []
+    },
+    {
+      "sourceId": "constant",
+      "status": "ok",
+      "error": null,
+      "metricsWritten": [
+        "staker_emission_share"
+      ],
+      "crossChecks": [],
+      "unlistedTransfers": [],
+      "conflicts": [],
+      "retiredObservationIds": [],
+      "notes": []
+    },
+    {
+      "sourceId": "adapter:chain.counter_rate",
+      "status": "ok",
+      "error": null,
+      "metricsWritten": [
+        "emission_rate_annual",
+        "upgrade_release_aero",
+        "upgrade_release_velo"
+      ],
+      "crossChecks": [],
+      "unlistedTransfers": [],
+      "conflicts": [],
+      "retiredObservationIds": [],
+      "notes": []
+    }
+  ],
+  "written": [
+    {
+      "metricKey": "price_usd",
+      "value": 0.5710250037065003,
+      "observedAt": "2026-11-09T21:44:29.000Z",
+      "periodDays": null,
+      "source": "onchain",
+      "observationId": 30127
+    },
+    {
+      "metricKey": "total_supply",
+      "value": 2137675844.0443642,
+      "observedAt": "2026-11-09T21:44:29.000Z",
+      "periodDays": null,
+      "source": "onchain",
+      "observationId": 30128
+    },
+    {
+      "metricKey": "staked_supply",
+      "value": 1061419129.6404935,
+      "observedAt": "2026-11-09T21:44:29.000Z",
+      "periodDays": null,
+      "source": "onchain",
+      "observationId": 30129
+    },
+    {
+      "metricKey": "locked_supply",
+      "value": 1061419129.6404935,
+      "observedAt": "2026-11-09T21:44:29.000Z",
+      "periodDays": null,
+      "source": "onchain",
+      "observationId": 30130
+    },
+    {
+      "metricKey": "upgrade_reserve_aero",
+      "value": 357305629.6573572,
+      "observedAt": "2026-11-09T21:44:29.000Z",
+      "periodDays": null,
+      "source": "onchain",
+      "observationId": 30131
+    },
+    {
+      "metricKey": "upgrade_reserve_velo",
+      "value": 27713949.955370836,
+      "observedAt": "2026-11-09T21:44:29.000Z",
+      "periodDays": null,
+      "source": "onchain",
+      "observationId": 30132
+    },
+    {
+      "metricKey": "circulating_supply",
+      "value": 691237134.7911427,
+      "observedAt": "2026-11-09T21:44:29.000Z",
+      "periodDays": null,
+      "source": "onchain",
+      "observationId": 30133
+    },
+    {
+      "metricKey": "emission_ceiling_annual",
+      "value": 446669983.11600006,
+      "observedAt": "2026-11-09T21:44:29.000Z",
+      "periodDays": null,
+      "source": "onchain",
+      "observationId": 30134
+    },
+    {
+      "metricKey": "staker_emission_share",
+      "value": 0,
+      "observedAt": "2026-11-09T21:44:29.123Z",
+      "periodDays": null,
+      "source": "api",
+      "observationId": 30135
+    },
+    {
+      "metricKey": "emission_rate_annual",
+      "value": 213982947.88600287,
+      "observedAt": "2026-11-09T21:44:29.000Z",
+      "periodDays": null,
+      "source": "onchain",
+      "observationId": 30136
+    },
+    {
+      "metricKey": "upgrade_release_aero",
+      "value": 31302102093.523296,
+      "observedAt": "2026-11-09T21:44:29.000Z",
+      "periodDays": null,
+      "source": "onchain",
+      "observationId": 30137
+    },
+    {
+      "metricKey": "upgrade_release_velo",
+      "value": 1721479113.034689,
+      "observedAt": "2026-11-09T21:44:29.000Z",
+      "periodDays": null,
+      "source": "onchain",
+      "observationId": 30138
+    }
+  ],
+  "anomalies": [],
+  "watch": []
+}

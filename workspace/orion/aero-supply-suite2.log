@@ -1,0 +1,20 @@
+
+ RUN  v5.0.1 /home/hermes/git/orion/.worktrees/aero-supply
+
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+
+ Test Files  133 passed (133)
+      Tests  1560 passed (1560)
+   Start at  21:47:02
+   Duration  86.22s (tests 81%, import 17%, transform 2%)
+
+    Isolate  133 workers spawned · ~97ms startup each (spawn + environment, per file)
+             at least ~6.37s faster with isolate: false — reuses workers across files instead of one per file
+

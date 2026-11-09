@@ -1,0 +1,392 @@
+== deploy stage orion-2026.11.09.1 (commit 0f4b2fe636c3f2a1dfa23348b4953e25e41e33df on origin/main, sha256 157793d43429f95ec11de008462537a8df7585e7cdd4c48d591d1bbc7431efaf)
+== install orion-2026.11.09.1 on stage
+
+added 39 packages, and audited 40 packages in 4s
+
+12 packages are looking for funding
+  run `npm fund` for details
+
+1 high severity vulnerability
+
+To address all issues, run:
+  npm audit fix
+
+Run `npm audit` for details.
+{
+  "tag": "orion-2026.11.09.1",
+  "sha256": "157793d43429f95ec11de008462537a8df7585e7cdd4c48d591d1bbc7431efaf",
+  "release": {
+    "tag": "orion-2026.11.09.1",
+    "commit": "0f4b2fe636c3f2a1dfa23348b4953e25e41e33df",
+    "schema": 5,
+    "built_at": "2026-11-09T21:47:02Z",
+    "node": "v26.7.0"
+  },
+  "validate": [
+    {
+      "id": "aero",
+      "errors": [],
+      "listingBar": {
+        "ok": false,
+        "failing": [
+          {
+            "line": "revenue.fees",
+            "sourceType": "third_party"
+          },
+          {
+            "line": "holders.voter_fees",
+            "sourceType": "third_party"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cake",
+      "errors": [],
+      "listingBar": {
+        "ok": true,
+        "failing": []
+      }
+    },
+    {
+      "id": "crv",
+      "errors": [],
+      "listingBar": {
+        "ok": true,
+        "failing": []
+      }
+    },
+    {
+      "id": "cvxcrv",
+      "errors": [],
+      "listingBar": {
+        "ok": true,
+        "failing": []
+      }
+    },
+    {
+      "id": "hype",
+      "errors": [],
+      "listingBar": {
+        "ok": false,
+        "failing": [
+          {
+            "line": "revenue.trading",
+            "sourceType": "third_party"
+          },
+          {
+            "line": "holders.af_buyback",
+            "sourceType": "third_party"
+          }
+        ]
+      }
+    },
+    {
+      "id": "link",
+      "errors": [],
+      "listingBar": {
+        "ok": true,
+        "failing": []
+      }
+    },
+    {
+      "id": "lit",
+      "errors": [],
+      "listingBar": {
+        "ok": true,
+        "failing": []
+      }
+    },
+    {
+      "id": "pump",
+      "errors": [],
+      "listingBar": {
+        "ok": false,
+        "failing": [
+          {
+            "line": "revenue.protocol",
+            "sourceType": "third_party"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sdcrv",
+      "errors": [],
+      "listingBar": {
+        "ok": true,
+        "failing": []
+      }
+    },
+    {
+      "id": "sky",
+      "errors": [],
+      "listingBar": {
+        "ok": true,
+        "failing": []
+      }
+    },
+    {
+      "id": "uni",
+      "errors": [],
+      "listingBar": {
+        "ok": true,
+        "failing": []
+      }
+    },
+    {
+      "id": "vvv",
+      "errors": [],
+      "listingBar": {
+        "ok": true,
+        "failing": []
+      }
+    },
+    {
+      "id": "ycrv",
+      "errors": [],
+      "listingBar": {
+        "ok": true,
+        "failing": []
+      }
+    },
+    {
+      "id": "schedule.yaml",
+      "errors": []
+    }
+  ],
+  "db": {
+    "schema": "orion",
+    "dbAt": 5,
+    "codeRequires": 5,
+    "applied": [
+      {
+        "id": 1,
+        "name": "baseline",
+        "sha256": "38bd9522ddb31125bf52f37a287a62b9891271260f704dd4e9fd6e9e3d1ccb2a",
+        "appliedAt": "2026-11-04T20:50:07.965Z"
+      },
+      {
+        "id": 2,
+        "name": "daemon",
+        "sha256": "e1267f83cb06e79fc2c49b4ef795bdc326ab9815351dd08aedb1d058943976db",
+        "appliedAt": "2026-11-04T20:50:08.002Z"
+      },
+      {
+        "id": 3,
+        "name": "checks",
+        "sha256": "a9841bef2980a731936642c5189ff49e4275e83fda3b56053f2f49323bc2611d",
+        "appliedAt": "2026-11-08T16:04:16.078Z"
+      },
+      {
+        "id": 4,
+        "name": "provenance",
+        "sha256": "63b6ef7716c381c6e36da4fc339a400732d6e847cc6ec3eb41923a71f3173e5b",
+        "appliedAt": "2026-11-08T16:04:16.090Z"
+      },
+      {
+        "id": 5,
+        "name": "tokens_prices",
+        "sha256": "343a7f93f163ac37b6b03746a73311d3d3c890461bd095e49855eb9e5462570f",
+        "appliedAt": "2026-11-08T16:04:16.157Z"
+      }
+    ],
+    "pending": [],
+    "changed": [],
+    "state": "current"
+  },
+  "registry": {
+    "added": [],
+    "missing": [],
+    "returned": [],
+    "configChanged": [
+      "aero"
+    ]
+  }
+}
+== switch stage to orion-2026.11.09.1
+{
+  "from": "orion-2026.11.08.1",
+  "to": "orion-2026.11.09.1",
+  "migrations": [],
+  "registry": [
+    {
+      "assetId": "aero",
+      "state": "active",
+      "stateSince": "2026-11-04T20:52:10.696Z",
+      "stateBy": "mike via raymond",
+      "stateReason": null,
+      "pausedFrom": null,
+      "configHash": "e9e96f3c78e997fdc260433fe6bb1aa4e3958b959d0c3679ff9219a9aaaa9779",
+      "firstSeenRelease": "orion-2026.11.04.2",
+      "lastJobId": 210812,
+      "lastRunAt": "2026-11-09T02:45:15.297Z",
+      "lastOutcome": "done"
+    },
+    {
+      "assetId": "cake",
+      "state": "active",
+      "stateSince": "2026-11-04T20:52:11.952Z",
+      "stateBy": "mike via raymond",
+      "stateReason": null,
+      "pausedFrom": null,
+      "configHash": "def0ff7a45832e4cb3adaa3972389457b2214810e629545e59b2b30984424d0b",
+      "firstSeenRelease": "orion-2026.11.04.2",
+      "lastJobId": 210813,
+      "lastRunAt": "2026-11-09T02:45:21.791Z",
+      "lastOutcome": "done"
+    },
+    {
+      "assetId": "crv",
+      "state": "active",
+      "stateSince": "2026-11-04T20:52:13.182Z",
+      "stateBy": "mike via raymond",
+      "stateReason": null,
+      "pausedFrom": null,
+      "configHash": "dd2331c3efbb106f780d720f0e18a067658af84e35ef9023057b32d4a71cf70a",
+      "firstSeenRelease": "orion-2026.11.04.2",
+      "lastJobId": 210814,
+      "lastRunAt": "2026-11-09T02:45:27.891Z",
+      "lastOutcome": "done"
+    },
+    {
+      "assetId": "cvxcrv",
+      "state": "active",
+      "stateSince": "2026-11-04T20:52:14.430Z",
+      "stateBy": "mike via raymond",
+      "stateReason": null,
+      "pausedFrom": null,
+      "configHash": "e426e489d3d3b552f908bc92e4d5279b8643476c1f4f18ecf427cf368ed14b0f",
+      "firstSeenRelease": "orion-2026.11.04.2",
+      "lastJobId": 210815,
+      "lastRunAt": "2026-11-09T02:45:39.271Z",
+      "lastOutcome": "done"
+    },
+    {
+      "assetId": "hype",
+      "state": "active",
+      "stateSince": "2026-11-04T20:52:15.675Z",
+      "stateBy": "mike via raymond",
+      "stateReason": null,
+      "pausedFrom": null,
+      "configHash": "7a52e7974c9c90234ac9ac27d6d0495291b047aa04d566e02e89c1801c284296",
+      "firstSeenRelease": "orion-2026.11.04.2",
+      "lastJobId": 210816,
+      "lastRunAt": "2026-11-09T02:45:49.767Z",
+      "lastOutcome": "done"
+    },
+    {
+      "assetId": "link",
+      "state": "active",
+      "stateSince": "2026-11-04T20:52:16.912Z",
+      "stateBy": "mike via raymond",
+      "stateReason": null,
+      "pausedFrom": null,
+      "configHash": "036be4e28d3fa0bcb08af0f0338e1b37c9130a8e551b4cdd39bd12217aa8b6e4",
+      "firstSeenRelease": "orion-2026.11.04.2",
+      "lastJobId": 210817,
+      "lastRunAt": "2026-11-09T02:45:56.237Z",
+      "lastOutcome": "done"
+    },
+    {
+      "assetId": "lit",
+      "state": "active",
+      "stateSince": "2026-11-04T20:52:18.157Z",
+      "stateBy": "mike via raymond",
+      "stateReason": null,
+      "pausedFrom": null,
+      "configHash": "a3685331c2301c67faaf931814655cde3cf416a307fe26638b98f578f0dcce4a",
+      "firstSeenRelease": "orion-2026.11.04.2",
+      "lastJobId": 210818,
+      "lastRunAt": "2026-11-09T02:46:23.105Z",
+      "lastOutcome": "done"
+    },
+    {
+      "assetId": "pump",
+      "state": "active",
+      "stateSince": "2026-11-04T20:52:19.384Z",
+      "stateBy": "mike via raymond",
+      "stateReason": null,
+      "pausedFrom": null,
+      "configHash": "981a2959037c7a13cc62bb880481cf124cdf12afec1237ff7f83744bd328a072",
+      "firstSeenRelease": "orion-2026.11.04.2",
+      "lastJobId": 210819,
+      "lastRunAt": "2026-11-09T02:46:28.056Z",
+      "lastOutcome": "done"
+    },
+    {
+      "assetId": "sdcrv",
+      "state": "active",
+      "stateSince": "2026-11-04T20:52:20.632Z",
+      "stateBy": "mike via raymond",
+      "stateReason": null,
+      "pausedFrom": null,
+      "configHash": "ab2018a4ae3205e2dc37bbe812e2b61e3a3a45dc6bfc7bb6962042a5f4174758",
+      "firstSeenRelease": "orion-2026.11.04.2",
+      "lastJobId": 210820,
+      "lastRunAt": "2026-11-09T03:16:45.692Z",
+      "lastOutcome": "done"
+    },
+    {
+      "assetId": "sky",
+      "state": "active",
+      "stateSince": "2026-11-04T20:52:21.852Z",
+      "stateBy": "mike via raymond",
+      "stateReason": null,
+      "pausedFrom": null,
+      "configHash": "4438a38748f72d5b9cd9227dffa3ad04ea67467d3ee3452d21fb81bc3b159620",
+      "firstSeenRelease": "orion-2026.11.04.2",
+      "lastJobId": 210821,
+      "lastRunAt": "2026-11-09T02:46:36.254Z",
+      "lastOutcome": "done"
+    },
+    {
+      "assetId": "uni",
+      "state": "active",
+      "stateSince": "2026-11-04T20:52:23.092Z",
+      "stateBy": "mike via raymond",
+      "stateReason": null,
+      "pausedFrom": null,
+      "configHash": "0afe3bd337931a6055754f89705d2c21c3193572a216e5a5378865486fec1895",
+      "firstSeenRelease": "orion-2026.11.04.2",
+      "lastJobId": 210822,
+      "lastRunAt": "2026-11-09T02:46:40.094Z",
+      "lastOutcome": "done"
+    },
+    {
+      "assetId": "vvv",
+      "state": "active",
+      "stateSince": "2026-11-04T20:52:24.349Z",
+      "stateBy": "mike via raymond",
+      "stateReason": null,
+      "pausedFrom": null,
+      "configHash": "433d0306b2cad2849a717180e24568d5c0bf3ed3c62455c2208b470c9ed3f4f5",
+      "firstSeenRelease": "orion-2026.11.04.2",
+      "lastJobId": 210823,
+      "lastRunAt": "2026-11-09T02:47:00.166Z",
+      "lastOutcome": "done"
+    },
+    {
+      "assetId": "ycrv",
+      "state": "active",
+      "stateSince": "2026-11-04T20:52:25.596Z",
+      "stateBy": "mike via raymond",
+      "stateReason": null,
+      "pausedFrom": null,
+      "configHash": "65cbdcb0ec4a593b9430d0e1e871cfebef2e3d44628b3ebb7662400ae8178b3c",
+      "firstSeenRelease": "orion-2026.11.04.2",
+      "lastJobId": 210824,
+      "lastRunAt": "2026-11-09T02:47:05.404Z",
+      "lastOutcome": "done"
+    }
+  ],
+  "next": "soak on orion-2026.11.09.1 (its first scheduled nightly); to go back: orion-remote rollback"
+}
+== deploy report (stage)
+before: orion-2026.11.08.1
+after:  orion-2026.11.09.1
+migrations applied: none
+registry changes: none
+next: levels 2026-11-10T00:15:00.000Z
+next nightly: 2026-11-10T02:45:00.000Z
+soak: not gated (stage)

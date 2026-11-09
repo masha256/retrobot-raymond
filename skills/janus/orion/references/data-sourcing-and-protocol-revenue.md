@@ -5,7 +5,8 @@ Use when Mike asks to record a new series (growth, revenue, yield), to cut a thi
 ## Sourcing policy (Mike's rules)
 - **Prefer direct on-chain or first-party APIs.** Don't add new general DefiLlama dependencies for new assets. Protocol-specific feeds are fine where they are the natural source (Llama Airforce for CRV bribes stays).
 - **Store daily totals only, never raw transfer/event logs.** Mike won't grow the DB with per-transaction rows; any new bucket or metric must be derivable from daily totals (or a re-scan of the chain).
-- Keep historical pricing on CoinGecko; rebuilding price history on-chain is slow and RPC-heavy. Keyless CoinGecko stops at 365 days, which bounds every backfill.
+- **No new live CoinGecko or DefiLlama reads (licensing).** A metric you add or rebuild is read on chain (see SKILL.md, Direction). The CoinGecko price history already behind the existing assets' flows stays until Phase 3 replaces it; keyless CoinGecko stops at 365 days, which bounds those backfills.
+- **On-chain spot price for a token:** take the deepest stable pool (probe the DEX factories' `getPool(token, usdc[, tickSpacing])` and compare reserves). The primary is a basic pool's `currentCumulativePrices()` TWAP over 1 h at two blocks, times the Chainlink stable/USD feed (`latestAnswer`, 8 decimals); the cross-check is an independent CL pool's `slot0` sqrtPrice at 2%. A single-block `getReserves` spot can be moved by one swap, so don't use it as the primary.
 - VVV revenue is disclosure-based; its only daily series is DefiLlama. Keep it as a labelled proxy next to the disclosures, not as the official figure.
 
 ## DefiLlama usage audit
@@ -46,6 +47,13 @@ The recipe for an asset whose token is replaced (merger, upgrade), measured read
 2. **Daily state at UTC day boundaries.** Binary-search the first block at or after each day's 00:00Z (`eth_getBlockByNumber` timestamps; cache the lookups) and read the counters there with archive `eth_call`: totalSupply, reserve balances, ve `supply()`, Minter cumulative counters. This gives a backfillable daily series from state alone (top of the method ladder) and shows the upgrade pace and the emission ramp.
 3. **Mint-on-redeem Minters.** When rewards mint only as LPs redeem, the Minter emits thousands of events a day (one Minter read about 4.5k logs per 10k Base blocks), so a log scan is impractical. Use the cumulative counter instead (`emissionsMinted()` or similar): realised rate = Δcounter over the window × (1 + team share) × 365/days. The rate × year from `baseRate`/`emissionRate` is only the ceiling, and realised was about half of it at launch. Realised lags accrual by the unredeemed backlog. Report both, and let Mike pick which feeds dilution.
 4. **"USD-denominated" emission claims.** Grep the whole source tree for `usd|oracle|price` before describing a dollar cap. If only pools and hooks match, the on-chain cap is in tokens, and any dollar targeting is off-chain operator rate-setting within the contract's per-cooldown limits. Say so as measured, and quote the claim as claimed.
+Build it with the generic adapters, not an asset-specific one:
+- emissions = `chain.counter_rate` `rise` on the counter, with `plus_share` (teamRate) and `not_before` (activation);
+- each reserve's release = `chain.counter_rate` `fall` on `balanceOf(migration)` with `refuse_if_supply_falls`;
+- circulating = `chain.view_sum`;
+- the ceiling = `chain.view_sum` on `baseRate` with `scale: 31536000`.
+
+A live probe through the real transport needs no DB: a `.mts` script under `workspace/` that imports `src/` via tsx, builds a `SourceContext` from `createViemRpc` and `contractResolver`, and runs each adapter metric at a pinned block. A `.ts` file fails here, because tsx compiles it as CJS and top-level await breaks. Pin the asset test's fake values to that same block's raw reads, including the TWAP start block and the launch block via `fakeRpc({ callsAt })`.
 5. **Present the reserve's dilution rate as priced options:** trailing release capped at the remaining reserve, versus rate 0 with the reserve shown. Note that converting old tokens 1:1 dilutes no one economically, and that any trailing rate sits at the cap for months after an exchange batch.
 
 To trace a new protocol: start at the address that receives the gross, `io()` it, read every fee getter on the router, then reconcile getter rates with measured outflow ratios.
