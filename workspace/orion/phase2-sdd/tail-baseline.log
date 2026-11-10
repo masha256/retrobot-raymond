@@ -1,0 +1,53 @@
+
+ RUN  v5.0.1 /home/hermes/git/orion/.worktrees/phase2-tail
+
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+ ❯ tests/assets/sky.ingest.test.ts (7 tests | 1 failed) 14631ms
+   ❯ assets/sky.yaml (6)
+     × reports both halves as cash to stakers, and the treasury net payout as dilution 6611ms
+ ❯ tests/push/gitPublisher.test.ts (7 tests | 1 failed) 11471ms
+   ❯ git publisher (7)
+     × git publisher: a moved remote is refused, alerted once, outbox kept 5661ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/assets/sky.ingest.test.ts > assets/sky.yaml > reports both halves as cash to stakers, and the treasury net payout as dilution
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ tests/assets/sky.ingest.test.ts:182:3
+    180|   });
+    181|
+    182|   it('reports both halves as cash to stakers, and the treasury net pay…
+       |   ^
+    183|     const w = world();
+    184|     await fetchAsset(w.db, { config, hash: 'test' }, NOW, w.deps, { ba…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  tests/push/gitPublisher.test.ts > git publisher > git publisher: a moved remote is refused, alerted once, outbox kept
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ tests/push/gitPublisher.test.ts:146:3
+    144|   });
+    145|
+    146|   it('git publisher: a moved remote is refused, alerted once, outbox k…
+       |   ^
+    147|     const repo = bareRepo();
+    148|     const dir = join(repo.root, 'publish');
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  2 failed | 131 passed (133)
+      Tests  2 failed | 1558 passed (1560)
+   Start at  04:46:01
+   Duration  226.65s (tests 93%, import 6%, transform 1%)
+
+exit 1
