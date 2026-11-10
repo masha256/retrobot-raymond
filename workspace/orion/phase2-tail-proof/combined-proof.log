@@ -1,0 +1,46 @@
+copy rc 0
+prod_copy ok: schema p2proof_20261110t142242z, 119111 rows in 21 tables, observation sums equal; homes /home/hermes/.hermes/profiles/raymond/cache/scratch/t11p-1110T1422/old and /home/hermes/.hermes/profiles/raymond/cache/scratch/t11p-1110T1422/new
+schema p2proof_20261110t142242z
+origin-check rc 0
+{
+  "rows": 27533,
+  "equal": 27533,
+  "unmapped": 0,
+  "mismatches": {},
+  "mismatchIds": []
+}
+
+D=2026-11-08
+migrate without --breaking rc 1 (expect 1)
+migrate --breaking rc 0
+new --legacy rc 1 (expect non-zero)
+
+DONE /home/hermes/.hermes/profiles/raymond/cache/scratch/t11p-1110T1422
+origin-check: {'rows': 27533, 'equal': 27533, 'unmapped': 0, 'mismatches': {}}
+aero.default.json fields 249 diffs 0
+aero.json fields 249 diffs 0
+cake.default.json fields 239 diffs 0
+cake.json fields 231 diffs 0
+crv.default.json fields 271 diffs 0
+crv.json fields 263 diffs 0
+cvxcrv.default.json fields 365 diffs 0
+cvxcrv.json fields 357 diffs 0
+hype.default.json fields 321 diffs 0
+hype.json fields 321 diffs 0
+link.default.json fields 217 diffs 0
+link.json fields 201 diffs 0
+lit.default.json fields 258 diffs 0
+lit.json fields 258 diffs 0
+pump.default.json fields 233 diffs 0
+pump.json fields 233 diffs 0
+sdcrv.default.json fields 421 diffs 0
+sdcrv.json fields 413 diffs 0
+sky.default.json fields 261 diffs 0
+sky.json fields 261 diffs 0
+uni.default.json fields 218 diffs 0
+uni.json fields 210 diffs 0
+vvv.default.json fields 222 diffs 0
+vvv.json fields 222 diffs 0
+ycrv.default.json fields 282 diffs 0
+ycrv.json fields 266 diffs 0
+TOTAL fields 7042 diffs 0
