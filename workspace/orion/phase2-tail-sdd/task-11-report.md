@@ -51,3 +51,54 @@ Status: DONE_WITH_CONCERNS (concerns at the end).
 ## Concerns
 - 11a's own RED evidence was produced by attempt 1 and is not re-shown here.
 - The Phase 3 spec §7 text itself (on feat/phase3-third-party, another session's branch) still says `--legacy`; only the followups note records the change. The controller should tell that session.
+
+## Fix round 1 (review findings I1, M1-M7)
+Commit: b360bc2 on feat/phase2-tail ("fix: Task 11 review fixes (agent pack identical on all 13; golden guards; Lido pin; release note)").
+
+- I1 (agent pack identical on all 13): `src/agent/context.ts` `revenueStreams` lists only revenue lines with a `metric` AND a
+  `settlement` (the lines carried over from v1's `reporting.revenue`). That reproduces cc59fa7 on all 13: hype, link, lit,
+  pump, sky, uni keep it (same ids/metrics; LIT's robinhood share 0.5 via the cost line); aero, cake, crv, cvxcrv, sdcrv,
+  ycrv lose it again (their metric lines have no settlement); vvv has no metric line.
+  - `tests/agent/packGolden.test.ts` now compares the WHOLE pack (toEqual + JSON bytes) for every asset, names every
+    differing asset at once, and asserts the golden lists revenue_streams on exactly those 6.
+  - RED (before the src change): `expected [ 'aero', 'cake', 'crv', …(3) ] to deeply equal []` = aero, cake, crv, cvxcrv,
+    sdcrv, ycrv. Plus new `tests/agent/context.test.ts` "a metric revenue line with no settlement is not a stream (AERO)":
+    RED on HEAD's context.ts, GREEN after. Golden file `tests/agent/golden/packs-13.json` untouched (cc59fa7's).
+- M1: README.md: `--legacy` dropped from the command list; YAML contents and the report paragraph describe
+  income_statement / v2 only (`--legacy` refused).
+- M2: src/config/incomeStatement.ts comments no longer say the keys are shared with `reporting` (3 places).
+- M3: tests/report/v2Golden.test.ts writes the golden only under UPDATE_GOLDEN=1 (`readGolden`); a missing file throws.
+  RED: HEAD's test with the golden deleted passed 66/66 and silently recreated the file; new test with it deleted fails
+  ("golden ... is missing"); plus a test pinning that `readGolden(missing, now, false)` throws and writes nothing.
+  Golden restored byte-identical (`git diff --quiet`).
+- M4: tests/config/load.test.ts pins the T10 Lido shape (income_statement: revenue metric line, `remainder: protocol`, no
+  holders): loads; `holderFlowMetrics` = []; no statement error; yields cash/buyback/shareholder = 0 (numbers),
+  multiple null, netShareholder = -dilution; holderFlow gross/net 0, lines [], byBucket all null; flags []; ratios
+  {takeRate 1, payoutRatio 0, basis grossProfit}; mcapToHolderFlow.total null; protocol remainder = revenue.
+  Characterisation pin (passes on HEAD, as ruled: "pin what the code does today").
+- M5: deploy.md Task 11 release note lists the v1 snapshot fields with no direct v2 equivalent (per-bucket growth,
+  disclosure dates, revenue stream metric names, protocolMargin, revenue.basis) and the nearest v2 field for each, plus
+  the one-line map of everything that does map.
+- M6: new `tests/app/golden/refresh-rows-orion-2026.11.09.1.json` (NOT under tests/fixtures): lit + aero refresh job rows
+  generated in a detached worktree at 0f4b2fe (= tag orion-2026.11.09.1, the release on prod) with its own
+  `summarizeHolderYield(yieldReport(syntheticInput(repoAsset(id)), { legacy: true }))` on the v1 fixture's envelope.
+  `tests/app/tickReport.test.ts` parses each through HEAD's TickReportSchema (round-trips equal) and prints it with
+  `formatAssetBlock` (alert false, lines pinned: the statement's block). Characterisation test (passes on HEAD).
+- M7: tests/app/inbox.test.ts proposal edits use `['income_statement','window_days']`.
+
+Invariants: tests/report/golden/v2-report-13.json, tests/agent/golden/packs-13.json, assets/*.yaml unchanged;
+`git diff --stat cc59fa7 -- tests/fixtures` = only aero.yaml, hype.yaml, disclosure/lit-q3-run.json (R11.7). No hash pin moved.
+
+Verification: `npx vitest run --maxWorkers=2` 138 files / 1677 tests passed, 0 failed, 0 skipped, first run (1672 + 5
+new). `npm run typecheck` clean; `npm run lint:promises` exit 0; harness `/usr/bin/python3 -m unittest test_compare.py
+test_prod_copy.py`: 96 tests OK.
+
+Deviations (fix round 1):
+- The base worktree `.worktrees/t11fix-base` was checked out at 0f4b2fe (the prod release, for M6), not cc59fa7: the I1
+  reference is the existing cc59fa7 golden, so no cc59fa7 output was needed. Removed at the end.
+- M6's fixture lives in tests/app/golden/ so tests/fixtures stays at R11.7's three edits.
+
+Concerns (fix round 1):
+- I1's rule keys on `settlement` being declared. It reproduces cc59fa7 exactly, but a future asset whose metric revenue
+  line declares `settlement` gets revenue_streams and one that omits it does not; the comment says so. If the controller
+  prefers a semantic rule (e.g. every metric line), that is the reviewer's option (b) and needs a ruling plus a golden delta.
