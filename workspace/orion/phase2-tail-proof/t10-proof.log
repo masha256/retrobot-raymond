@@ -1,20 +1,20 @@
-copy rc 2
-prod_copy.py: refused: /home/hermes/.hermes/profiles/raymond/workspace/orion/phase2-tail-proof/p-1110T0515 is not inside $TMPDIR (/home/hermes/.hermes/profiles/raymond/cache/scratch)
-cat: /home/hermes/.hermes/profiles/raymond/workspace/orion/phase2-tail-proof/p-1110T0515/schema: No such file or directory
-schema 
-/home/hermes/.hermes/profiles/raymond/workspace/orion/phase2-tail-proof/t10-proof.sh: line 14: /home/hermes/.hermes/profiles/raymond/workspace/orion/phase2-tail-proof/p-1110T0515/origin-check.txt: No such file or directory
-origin-check rc 1
-tail: cannot open '/home/hermes/.hermes/profiles/raymond/workspace/orion/phase2-tail-proof/p-1110T0515/origin-check.txt' for reading: No such file or directory
+copy rc 0
+prod_copy ok: schema p2proof_20261110t052530z, 119084 rows in 21 tables, observation sums equal; homes /home/hermes/.hermes/profiles/raymond/cache/scratch/t10p-1110T0525/old and /home/hermes/.hermes/profiles/raymond/cache/scratch/t10p-1110T0525/new
+schema p2proof_20261110t052530z
+origin-check rc 0
+  "mismatches": {},
+  "mismatchIds": []
+}
 D=2026-11-08
-ls: cannot access '/home/hermes/.hermes/profiles/raymond/workspace/orion/phase2-tail-proof/p-1110T0515/new/assets': No such file or directory
-/home/hermes/.hermes/profiles/raymond/workspace/orion/phase2-tail-proof/t10-proof.sh: line 23: cd: /home/hermes/.hermes/profiles/raymond/workspace/orion/phase2-tail-proof/p-1110T0515/new: No such file or directory
 migrate without --breaking rc 1 (expect refusal)
-tail: cannot open '/home/hermes/.hermes/profiles/raymond/workspace/orion/phase2-tail-proof/p-1110T0515/migrate-plain.json' for reading: No such file or directory
+{
+  "error": {
+    "code": "migration_breaking",
+    "message": "migration(s) 6 are breaking (not expand-only): rerun with --breaking"
+  }
+}
 
-/home/hermes/.hermes/profiles/raymond/workspace/orion/phase2-tail-proof/t10-proof.sh: line 24: cd: /home/hermes/.hermes/profiles/raymond/workspace/orion/phase2-tail-proof/p-1110T0515/new: No such file or directory
-migrate --breaking rc 1
-ERROR:  zero-length delimited identifier at or near """"
-LINE 1: select max(id) from "".schema_migrations; select count(*) fr...
-                            ^
-ls: cannot access '/home/hermes/.hermes/profiles/raymond/workspace/orion/phase2-tail-proof/p-1110T0515/new/assets': No such file or directory
-DONE /home/hermes/.hermes/profiles/raymond/workspace/orion/phase2-tail-proof/p-1110T0515
+migrate --breaking rc 0
+6
+0
+DONE /home/hermes/.hermes/profiles/raymond/cache/scratch/t10p-1110T0525

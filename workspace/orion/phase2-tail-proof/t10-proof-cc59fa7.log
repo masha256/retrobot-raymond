@@ -1,0 +1,48 @@
+copy rc 0
+prod_copy ok: schema p2proof_20261110t054228z, 119084 rows in 21 tables, observation sums equal; homes /home/hermes/.hermes/profiles/raymond/cache/scratch/t10p-1110T0542/old and /home/hermes/.hermes/profiles/raymond/cache/scratch/t10p-1110T0542/new
+schema p2proof_20261110t054228z
+origin-check rc 0
+  "mismatches": {},
+  "mismatchIds": []
+}
+D=2026-11-08
+migrate without --breaking rc 1 (expect refusal)
+{
+  "error": {
+    "code": "migration_breaking",
+    "message": "migration(s) 6 are breaking (not expand-only): rerun with --breaking"
+  }
+}
+
+migrate --breaking rc 0
+6
+0
+DONE /home/hermes/.hermes/profiles/raymond/cache/scratch/t10p-1110T0542
+origin-check: {'rows': 27533, 'equal': 27533, 'unmapped': 0, 'mismatches': {}}
+aero.json fields 249 diffs 0
+aero.legacy.json fields 322 diffs 0
+cake.json fields 231 diffs 0
+cake.legacy.json fields 310 diffs 0
+crv.json fields 263 diffs 0
+crv.legacy.json fields 351 diffs 0
+cvxcrv.json fields 357 diffs 0
+cvxcrv.legacy.json fields 472 diffs 0
+hype.json fields 321 diffs 0
+hype.legacy.json fields 443 diffs 0
+link.json fields 201 diffs 0
+link.legacy.json fields 290 diffs 0
+lit.json fields 258 diffs 0
+lit.legacy.json fields 375 diffs 0
+pump.json fields 233 diffs 0
+pump.legacy.json fields 324 diffs 0
+sdcrv.json fields 413 diffs 0
+sdcrv.legacy.json fields 543 diffs 0
+sky.json fields 261 diffs 0
+sky.legacy.json fields 383 diffs 0
+uni.json fields 210 diffs 0
+uni.legacy.json fields 308 diffs 0
+vvv.json fields 222 diffs 0
+vvv.legacy.json fields 320 diffs 0
+ycrv.json fields 266 diffs 0
+ycrv.legacy.json fields 350 diffs 0
+TOTAL fields 8276 diffs 0

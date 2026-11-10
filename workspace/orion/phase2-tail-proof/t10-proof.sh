@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 # Task 10 controller proof on a read-only prod copy (G3). Never writes prod.
 set -uo pipefail
-WT=/home/hermes/git/orion/.worktrees/proof-0bd7a40
+WT=/home/hermes/git/orion/.worktrees/proof-cc59fa7
 R=/home/hermes/git/orion/.worktrees/rel-2026.11.09.1/orion-2026.11.09.1
 BASE=/home/hermes/.hermes/profiles/raymond/workspace/orion/phase2-tail-proof
-mkdir -p $BASE; P=$BASE/p-$(date -u +%m%dT%H%M); echo $P > $BASE/last-P
+mkdir -p $BASE; P=$TMPDIR/t10p-$(date -u +%m%dT%H%M); echo $P > $BASE/last-P
 cd $WT
 export P2_PROD_SSH='-i /home/hermes/.ssh/orion-prod_ed25519 -o IdentitiesOnly=yes -o BatchMode=yes orion-prod@192.168.0.12'
-/usr/bin/python3 tools/phase2-proof/prod_copy.py "$P" "$R" "$WT" > $P.copy.log 2>&1; echo "copy rc $?"; tail -1 $P.copy.log
+/usr/bin/python3 tools/phase2-proof/prod_copy.py "$P" "$R" "$WT" > $P.copy.log 2>&1; rc=$?; echo "copy rc $rc"; tail -1 $P.copy.log; [ $rc -eq 0 ] || exit 1
 S=$(cat $P/schema); echo "schema $S"
 URL='postgresql://orion_dev@/orion_dev?host=/var/run/postgresql'
 # 1. origin check before the drop
