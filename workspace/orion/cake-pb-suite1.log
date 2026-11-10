@@ -1,0 +1,91 @@
+
+ RUN  v5.0.1 /home/hermes/git/orion/.worktrees/cake-pending-burn
+
+ ❯ tests/assets/lit.ingest.test.ts (7 tests | 3 failed) 37995ms
+   ❯ assets/lit.yaml (7)
+     × fetches every metric and reads the buys from Lighter 6502ms
+     × reports the buys as the payout, the unlocks as dilution, and the market cap on circulating supply 8606ms
+     × orion report yield lit --json --legacy carries the same streams, shares and totals (what the coinrevs feed reads) 16891ms
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+ ❯ tests/tools/sourcesRegister.test.ts (5 tests | 1 failed) 398ms
+   ❯ sources register (docs/ops/sources-register.md) (5)
+     × the committed register is what the 13 asset YAMLs generate (run npx tsx tools/sources-register/generate.ts) 211ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 4 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/assets/lit.ingest.test.ts > assets/lit.yaml > fetches every metric and reads the buys from Lighter
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ tests/assets/lit.ingest.test.ts:222:3
+    220|   });
+    221|
+    222|   it('fetches every metric and reads the buys from Lighter', async () …
+       |   ^
+    223|     const w = world();
+    224|     const r = await fetchAsset(w.db, loadAsset(ROOT, 'lit'), NOW, w.de…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/4]⎯
+
+ FAIL  tests/assets/lit.ingest.test.ts > assets/lit.yaml > reports the buys as the payout, the unlocks as dilution, and the market cap on circulating supply
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ tests/assets/lit.ingest.test.ts:283:3
+    281|   });
+    282|
+    283|   it('reports the buys as the payout, the unlocks as dilution, and the…
+       |   ^
+    284|     const w = world();
+    285|     await fetchAsset(w.db, { config, hash: 'test' }, NOW, w.deps);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/4]⎯
+
+ FAIL  tests/assets/lit.ingest.test.ts > assets/lit.yaml > orion report yield lit --json --legacy carries the same streams, shares and totals (what the coinrevs feed reads)
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ tests/assets/lit.ingest.test.ts:309:3
+    307|   });
+    308|
+    309|   it('orion report yield lit --json --legacy carries the same streams,…
+       |   ^
+    310|     const home = mkdtempSync(join(tmpdir(), 'orion-lit-report-'));
+    311|     const lines: string[] = [];
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/4]⎯
+
+ FAIL  tests/tools/sourcesRegister.test.ts > sources register (docs/ops/sources-register.md) > the committed register is what the 13 asset YAMLs generate (run npx tsx tools/sources-register/generate.ts)
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/tools/sourcesRegister.test.ts:11:37
+      9|   it('the committed register is what the 13 asset YAMLs generate (run …
+     10|     expect(loadAssets(root)).toHaveLength(13);
+     11|     expect(registerIsCurrent(root)).toBe(true);
+       |                                     ^
+     12|   });
+     13|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/4]⎯
+
+
+ Test Files  2 failed | 131 passed (133)
+      Tests  4 failed | 1556 passed (1560)
+   Start at  01:09:21
+   Duration  160.83s (tests 90%, import 9%, transform 1%)
+
+
+> orion@1.0.0 typecheck
+> tsc --noEmit
+
+DONE

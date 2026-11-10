@@ -1,0 +1,3 @@
+== deploy prod orion-2026.11.09.1 (commit 0f4b2fe636c3f2a1dfa23348b4953e25e41e33df on origin/main, sha256 157793d43429f95ec11de008462537a8df7585e7cdd4c48d591d1bbc7431efaf)
+no scheduled nightly has completed on staging for orion-2026.11.09.1 yet (soak is null): wait for it (or --no-soak)
+deploy.sh: prod refused: see above
