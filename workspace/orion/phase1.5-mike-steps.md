@@ -92,3 +92,19 @@ Until then: no WAL archive, no PITR, no dumps on venus. Fine while venus holds n
 - [x] 00:24Z load-prod job 11 done (initial_load, 10 tables); 13/13 reports cmp identical; anomalies 16=16, proposals 2=2; 00:25Z activated x13. Was: load-prod --stdin a47c5c9e...; cmp 13 reports vs ref; anomalies/proposals; asset activate x13 --for mike.
 - [ ] watch: levels :15, deadman, first orion-data commit, 00:45Z nightly; then Base block-time fix release; remove Hermes jobs.
 - Follow-up: prod watcher 'ytdlp: no venv' -> Mike re-runs orion-host.sh --with-watcher before the Q4 call window (2027-01-01).
+
+## Backups dead-man ping (2026-11-11, Slack orion-ops thread 1794416050.871779)
+- Found: --enable-backups never wired the healthchecks.io backups check (no pinger) -> daily false red; backups
+  themselves verified healthy by Mike's output (2 full + 3 diff in repo1, WAL archiving, dumps 11-06..11-11).
+- Fixed: main 47e01b2 (fix/backup-deadman): files/orion-backup-ping via ExecStopPost; --backup-deadman-url-file ->
+  /etc/orion/backup-deadman-url root:postgres 640. Snapshot /home/hermes/orion-provision-47e01b2.
+- DONE (Mike, 2026-11-11): re-ran orion-host.sh on venus with --with-watcher --enable-backups
+  --backup-deadman-url-file, --ssh-from 192.168.0.126 added (Mike's new IP). SELF-CHECK 57 passed, 0 failed
+  (52 + 4 watcher venv lines + deadman URL readable). Ran systemctl start orion-backup-diff (test ping).
+- DONE 2026-11-11 17:20Z: test diff run journal "success -> pinged", Mike confirms check green. Open: prod disclosure_watch 2026-11-12 16:40Z should no longer log
+  'ytdlp: no venv'.
+
+## venus SSH / ufw (Mike, 2026-11-11)
+- Tailscale installed on venus (manual). ufw: 22/tcp `in on tailscale0` (manual) + from 192.168.0.0/24.
+- FROM NOW ON every orion-host.sh command uses `--ssh-from 192.168.0.0/24 --ssh-from 100.64.0.0/10` instead of
+  the old per-IP --ssh-from flags (supersedes the commands above).
