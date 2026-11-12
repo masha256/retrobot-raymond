@@ -1,0 +1,24 @@
+ALLOWED     changed incomeStatement.dilution.pct: 0.1413539843675866 -> 0.14144778109123166  [lit[8] rel 0.000664 <= 0.0007]
+ALLOWED     changed incomeStatement.dilution.releases[id=unlocks].tokensPerYear: 138796789.0155082 -> 138888888.8888889  [lit[0] rel 0.000664 <= 0.0007]
+ALLOWED     changed incomeStatement.dilution.releases[id=unlocks].yield: 0.1413539843675866 -> 0.14144778109123166  [lit[10] rel 0.000664 <= 0.0007]
+ALLOWED     changed incomeStatement.dilution.supply.addedPerYear: 138796789.0155082 -> 138888888.8888889  [lit[17] rel 0.000664 <= 0.0007]
+ALLOWED     changed incomeStatement.dilution.supply.netPct: 0.1293560012921268 -> 0.12944979801577186  [lit[18] abs 9.38e-05 <= 0.0001]
+ALLOWED     changed incomeStatement.dilution.supply.netPerYear: 127015858.09243128 -> 127107957.96581197  [lit[13] abs 9.21e+04 <= 100000]
+ALLOWED     changed incomeStatement.dilution.tokensPerYear: 138796789.0155082 -> 138888888.8888889  [lit[9] rel 0.000664 <= 0.0007]
+ALLOWED     added   incomeStatement.flags: (absent) -> []  [lit[19] no bound]
+ALLOWED     removed incomeStatement.flags[0]: "third_party: holders.buyback.cross_checks" -> (absent)  [lit[20] no bound]
+ALLOWED     changed incomeStatement.holderFlow.netOfDilution: -411749172.9641469 -> -412049418.55136794  [lit[3] rel 0.000729 <= 0.0008]
+ALLOWED     changed incomeStatement.perToken.dilution: 1.8099101287622268 -> 1.811111111111111  [lit[4] rel 0.000664 <= 0.0007]
+ALLOWED     changed incomeStatement.perToken.holderFlow.netOfDilution: -1.6469966918565877 -> -1.6481976742054718  [lit[5] rel 0.000729 <= 0.0008]
+ALLOWED     changed incomeStatement.perToken.perTokenFdv.dilution: 0.46081398903833226 -> 0.46111976635741514  [lit[6] rel 0.000664 <= 0.0007]
+ALLOWED     changed incomeStatement.perToken.perTokenFdv.holderFlow.netOfDilution: -0.419335249549884 -> -0.41964102686896687  [lit[7] rel 0.000729 <= 0.0008]
+ALLOWED     added   incomeStatement.provenance.thirdParty: (absent) -> []  [lit[21] no bound]
+ALLOWED     removed incomeStatement.provenance.thirdParty[0]: "holders.buyback.cross_checks" -> (absent)  [lit[22] no bound]
+ALLOWED     changed incomeStatement.yields.dilution: 0.1413539843675866 -> 0.14144778109123166  [lit[1] rel 0.000664 <= 0.0007]
+ALLOWED     changed incomeStatement.yields.dilutionLines[id=unlocks].tokensPerYear: 138796789.0155082 -> 138888888.8888889  [lit[11] rel 0.000664 <= 0.0007]
+ALLOWED     changed incomeStatement.yields.dilutionLines[id=unlocks].yield: 0.1413539843675866 -> 0.14144778109123166  [lit[12] rel 0.000664 <= 0.0007]
+ALLOWED     changed incomeStatement.yields.netShareholder: -0.1286304446472037 -> -0.12872424137084876  [lit[2] rel 0.000729 <= 0.0008]
+WARN unmatched allowlist entry lit[14] 'incomeStatement.dilution.releases[id=unlocks].id': matched no differing path (LIT dilution: the unlocks release line keeps its id; any other release line (added or removed) has no entry and fails (fix round 1, I-1))
+WARN unmatched allowlist entry lit[15] 'incomeStatement.dilution.emissionsPerYear': matched no differing path (LIT dilution: emissions are not the unlocks line, so they must not move (fix round 1, I-1))
+WARN unmatched allowlist entry lit[16] 'incomeStatement.dilution.supply.burnedPerYear': matched no differing path (LIT dilution: tokens burned by the buyback are holder flow, which R1 must not move (fix round 1, I-1))
+OK lit: 20 differing path(s), 20 allowed, 0 not allowed

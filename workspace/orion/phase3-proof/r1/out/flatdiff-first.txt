@@ -1,0 +1,163 @@
+=== cake
+/home/hermes/git/orion/.worktrees/phase3/tools/phase3-proof/flatdiff.py:2: SyntaxWarning: invalid escape sequence '\`'
+  """Flattening diff of one asset's report before and after a release, against an allowlist (Phase 3 R1 proof).
+ALLOWED     changed incomeStatement.volume.annualized: 202140375.32747245 -> null  [cake[1] no bound]
+ALLOWED     changed incomeStatement.volume.growth.annualized: 8.641184973079586 -> null  [cake[1] no bound]
+ALLOWED     changed incomeStatement.volume.growth.change: 0.7593755077611561 -> null  [cake[1] no bound]
+ALLOWED     changed incomeStatement.volume.growth.current: 50396641.51999998 -> null  [cake[1] no bound]
+ALLOWED     added   incomeStatement.volume.growth.note: (absent) -> "not measured"  [cake[1] no bound]
+ALLOWED     changed incomeStatement.volume.growth.prior: 28644619.24 -> null  [cake[1] no bound]
+ALLOWED     added   incomeStatement.volume.metrics: (absent) -> []  [cake[1] no bound]
+ALLOWED     removed incomeStatement.volume.metrics[0]: "flow_usd.fees" -> (absent)  [cake[1] no bound]
+ALLOWED     added   incomeStatement.volume.notMeasured: (absent) -> "gross swap fees: DefiLlama removed (Phase 3 R1); on-chain v2/v3 gross not read yet (Phase 3b)"  [cake[1] no bound]
+WARN unmatched allowlist entry cake[0] 'incomeStatement.volume': matched no differing path (CAKE volume is not_measured since R1 (DefiLlama gross swap fees removed): the object changes shape)
+WARN todo allowlist entry cake[2] 'incomeStatement.provenance.thirdParty*' is a placeholder and allows nothing (fill from the first diff run)
+WARN todo allowlist entry cake[3] 'incomeStatement.provenance.sources*' is a placeholder and allows nothing (fill from the first diff run)
+WARN todo allowlist entry cake[4] 'incomeStatement.flags*' is a placeholder and allows nothing (fill from the first diff run)
+WARN todo allowlist entry cake[5] 'incomeStatement.checks*' is a placeholder and allows nothing (fill from the first diff run)
+OK cake: 9 differing path(s), 9 allowed, 0 not allowed
+=== crv
+/home/hermes/git/orion/.worktrees/phase3/tools/phase3-proof/flatdiff.py:2: SyntaxWarning: invalid escape sequence '\`'
+  """Flattening diff of one asset's report before and after a release, against an allowlist (Phase 3 R1 proof).
+WARN todo allowlist entry crv[0] 'incomeStatement.provenance.thirdParty*' is a placeholder and allows nothing (fill from the first diff run)
+WARN todo allowlist entry crv[1] 'incomeStatement.provenance.sources*' is a placeholder and allows nothing (fill from the first diff run)
+WARN todo allowlist entry crv[2] 'incomeStatement.flags*' is a placeholder and allows nothing (fill from the first diff run)
+WARN todo allowlist entry crv[3] 'incomeStatement.checks*' is a placeholder and allows nothing (fill from the first diff run)
+OK crv: 0 differing path(s), 0 allowed, 0 not allowed
+=== cvxcrv
+/home/hermes/git/orion/.worktrees/phase3/tools/phase3-proof/flatdiff.py:2: SyntaxWarning: invalid escape sequence '\`'
+  """Flattening diff of one asset's report before and after a release, against an allowlist (Phase 3 R1 proof).
+WARN todo allowlist entry cvxcrv[0] 'incomeStatement.provenance.thirdParty*' is a placeholder and allows nothing (fill from the first diff run)
+WARN todo allowlist entry cvxcrv[1] 'incomeStatement.provenance.sources*' is a placeholder and allows nothing (fill from the first diff run)
+WARN todo allowlist entry cvxcrv[2] 'incomeStatement.flags*' is a placeholder and allows nothing (fill from the first diff run)
+WARN todo allowlist entry cvxcrv[3] 'incomeStatement.checks*' is a placeholder and allows nothing (fill from the first diff run)
+OK cvxcrv: 0 differing path(s), 0 allowed, 0 not allowed
+=== hype
+/home/hermes/git/orion/.worktrees/phase3/tools/phase3-proof/flatdiff.py:2: SyntaxWarning: invalid escape sequence '\`'
+  """Flattening diff of one asset's report before and after a release, against an allowlist (Phase 3 R1 proof).
+WARN todo allowlist entry hype[0] 'incomeStatement.provenance.thirdParty*' is a placeholder and allows nothing (fill from the first diff run)
+WARN todo allowlist entry hype[1] 'incomeStatement.provenance.sources*' is a placeholder and allows nothing (fill from the first diff run)
+WARN todo allowlist entry hype[2] 'incomeStatement.flags*' is a placeholder and allows nothing (fill from the first diff run)
+WARN todo allowlist entry hype[3] 'incomeStatement.checks*' is a placeholder and allows nothing (fill from the first diff run)
+OK hype: 0 differing path(s), 0 allowed, 0 not allowed
+=== link
+/home/hermes/git/orion/.worktrees/phase3/tools/phase3-proof/flatdiff.py:2: SyntaxWarning: invalid escape sequence '\`'
+  """Flattening diff of one asset's report before and after a release, against an allowlist (Phase 3 R1 proof).
+WARN todo allowlist entry link[0] 'incomeStatement.provenance.thirdParty*' is a placeholder and allows nothing (fill from the first diff run)
+WARN todo allowlist entry link[1] 'incomeStatement.provenance.sources*' is a placeholder and allows nothing (fill from the first diff run)
+WARN todo allowlist entry link[2] 'incomeStatement.flags*' is a placeholder and allows nothing (fill from the first diff run)
+WARN todo allowlist entry link[3] 'incomeStatement.checks*' is a placeholder and allows nothing (fill from the first diff run)
+OK link: 0 differing path(s), 0 allowed, 0 not allowed
+=== lit
+/home/hermes/git/orion/.worktrees/phase3/tools/phase3-proof/flatdiff.py:2: SyntaxWarning: invalid escape sequence '\`'
+  """Flattening diff of one asset's report before and after a release, against an allowlist (Phase 3 R1 proof).
+ALLOWED     changed incomeStatement.dilution.pct: 0.1413539843675866 -> 0.14144778109123166  [lit[7] rel 0.000664 <= 0.0007]
+ALLOWED     changed incomeStatement.dilution.releases[id=unlocks].tokensPerYear: 138796789.0155082 -> 138888888.8888889  [lit[0] rel 0.000664 <= 0.0007]
+ALLOWED     changed incomeStatement.dilution.releases[id=unlocks].yield: 0.1413539843675866 -> 0.14144778109123166  [lit[9] rel 0.000664 <= 0.0007]
+ALLOWED     changed incomeStatement.dilution.supply.addedPerYear: 138796789.0155082 -> 138888888.8888889  [lit[16] rel 0.000664 <= 0.0007]
+ALLOWED     changed incomeStatement.dilution.supply.netPct: 0.1293560012921268 -> 0.12944979801577186  [lit[17] abs 9.38e-05 <= 0.0001]
+ALLOWED     changed incomeStatement.dilution.supply.netPerYear: 127015858.09243128 -> 127107957.96581197  [lit[12] abs 9.21e+04 <= 100000]
+ALLOWED     changed incomeStatement.dilution.tokensPerYear: 138796789.0155082 -> 138888888.8888889  [lit[8] rel 0.000664 <= 0.0007]
+NOT ALLOWED added   incomeStatement.flags: (absent) -> []  [no allowlist entry matches]
+NOT ALLOWED removed incomeStatement.flags[0]: "third_party: holders.buyback.cross_checks" -> (absent)  [no allowlist entry matches]
+NOT ALLOWED changed incomeStatement.holderFlow.netOfDilution: -411749172.9641469 -> -412049418.55136794  [lit[3] rel 0.000729 > 0.0007]
+ALLOWED     changed incomeStatement.perToken.dilution: 1.8099101287622268 -> 1.811111111111111  [lit[4] rel 0.000664 <= 0.0007]
+NOT ALLOWED changed incomeStatement.perToken.holderFlow.netOfDilution: -1.6469966918565877 -> -1.6481976742054718  [lit[5] rel 0.000729 > 0.0007]
+ALLOWED     changed incomeStatement.perToken.perTokenFdv.dilution: 0.46081398903833226 -> 0.46111976635741514  [lit[6] rel 0.000664 <= 0.0007]
+NOT ALLOWED changed incomeStatement.perToken.perTokenFdv.holderFlow.netOfDilution: -0.419335249549884 -> -0.41964102686896687  [lit[6] rel 0.000729 > 0.0007]
+NOT ALLOWED added   incomeStatement.provenance.thirdParty: (absent) -> []  [no allowlist entry matches]
+NOT ALLOWED removed incomeStatement.provenance.thirdParty[0]: "holders.buyback.cross_checks" -> (absent)  [no allowlist entry matches]
+ALLOWED     changed incomeStatement.yields.dilution: 0.1413539843675866 -> 0.14144778109123166  [lit[1] rel 0.000664 <= 0.0007]
+ALLOWED     changed incomeStatement.yields.dilutionLines[id=unlocks].tokensPerYear: 138796789.0155082 -> 138888888.8888889  [lit[10] rel 0.000664 <= 0.0007]
+ALLOWED     changed incomeStatement.yields.dilutionLines[id=unlocks].yield: 0.1413539843675866 -> 0.14144778109123166  [lit[11] rel 0.000664 <= 0.0007]
+NOT ALLOWED changed incomeStatement.yields.netShareholder: -0.1286304446472037 -> -0.12872424137084876  [lit[2] rel 0.000729 > 0.0007]
+WARN unmatched allowlist entry lit[13] 'incomeStatement.dilution.releases[id=unlocks].id': matched no differing path (LIT dilution: the unlocks release line keeps its id; any other release line (added or removed) has no entry and fails (fix round 1, I-1))
+WARN unmatched allowlist entry lit[14] 'incomeStatement.dilution.emissionsPerYear': matched no differing path (LIT dilution: emissions are not the unlocks line, so they must not move (fix round 1, I-1))
+WARN unmatched allowlist entry lit[15] 'incomeStatement.dilution.supply.burnedPerYear': matched no differing path (LIT dilution: tokens burned by the buyback are holder flow, which R1 must not move (fix round 1, I-1))
+WARN todo allowlist entry lit[18] 'incomeStatement.provenance.thirdParty*' is a placeholder and allows nothing (fill from the first diff run)
+WARN todo allowlist entry lit[19] 'incomeStatement.provenance.sources*' is a placeholder and allows nothing (fill from the first diff run)
+WARN todo allowlist entry lit[20] 'incomeStatement.flags*' is a placeholder and allows nothing (fill from the first diff run)
+WARN todo allowlist entry lit[21] 'incomeStatement.checks*' is a placeholder and allows nothing (fill from the first diff run)
+unallowed: incomeStatement.flags, incomeStatement.flags[0], incomeStatement.holderFlow.netOfDilution, incomeStatement.perToken.holderFlow.netOfDilution, incomeStatement.perToken.perTokenFdv.holderFlow.netOfDilution, incomeStatement.provenance.thirdParty, incomeStatement.provenance.thirdParty[0], incomeStatement.yields.netShareholder
+FAILED lit: 20 differing path(s), 12 allowed, 8 not allowed
+=== pump
+/home/hermes/git/orion/.worktrees/phase3/tools/phase3-proof/flatdiff.py:2: SyntaxWarning: invalid escape sequence '\`'
+  """Flattening diff of one asset's report before and after a release, against an allowlist (Phase 3 R1 proof).
+ALLOWED     changed incomeStatement.dilution.pct: 0.10021224937974506 -> 0.10021224937974496  [pump[0] rel 9.69e-16 <= 1e-12; pump[8] rel 9.69e-16 <= 1e-12]
+ALLOWED     changed incomeStatement.dilution.releases[id=unlocks].tokensPerYear: 82500000000.00008 -> 82500000000  [pump[0] rel 9.25e-16 <= 1e-12; pump[1] rel 9.25e-16 <= 1e-12]
+ALLOWED     changed incomeStatement.dilution.releases[id=unlocks].yield: 0.10021224937974506 -> 0.10021224937974496  [pump[0] rel 9.69e-16 <= 1e-12; pump[10] rel 9.69e-16 <= 1e-12]
+ALLOWED     changed incomeStatement.dilution.supply.addedPerYear: 82500000000.00008 -> 82500000000  [pump[0] rel 9.25e-16 <= 1e-12]
+ALLOWED     changed incomeStatement.dilution.supply.netPct: 0.012643186026301101 -> 0.012643186026301009  [pump[0] rel 7.27e-15 <= 1e-12]
+ALLOWED     changed incomeStatement.dilution.supply.netPerYear: 10408536417.711288 -> 10408536417.711212  [pump[0] rel 7.33e-15 <= 1e-12; pump[13] rel 7.33e-15 <= 1e-12]
+ALLOWED     changed incomeStatement.dilution.tokensPerYear: 82500000000.00008 -> 82500000000  [pump[0] rel 9.25e-16 <= 1e-12; pump[9] rel 9.25e-16 <= 1e-12]
+ALLOWED     changed incomeStatement.holderFlow.netOfDilution: 23913632.90441221 -> 23913632.904412508  [pump[4] rel 1.25e-14 <= 1e-12]
+ALLOWED     changed incomeStatement.perToken.dilution: 0.0006278615633258443 -> 0.0006278615633258436  [pump[5] rel 1.04e-15 <= 1e-12]
+ALLOWED     changed incomeStatement.perToken.holderFlow.netOfDilution: 5.216966215447591e-05 -> 5.216966215447656e-05  [pump[6] rel 1.25e-14 <= 1e-12]
+ALLOWED     changed incomeStatement.perToken.perTokenFdv.dilution: 0.0003495894298387469 -> 0.0003495894298387465  [pump[7] rel 1.09e-15 <= 1e-12]
+ALLOWED     changed incomeStatement.perToken.perTokenFdv.holderFlow.netOfDilution: 2.90477447780925e-05 -> 2.904774477809286e-05  [pump[7] rel 1.25e-14 <= 1e-12]
+ALLOWED     changed incomeStatement.yields.dilution: 0.10021224937974506 -> 0.10021224937974496  [pump[2] rel 9.69e-16 <= 1e-12]
+ALLOWED     changed incomeStatement.yields.dilutionLines[id=unlocks].tokensPerYear: 82500000000.00008 -> 82500000000  [pump[11] rel 9.25e-16 <= 1e-12]
+ALLOWED     changed incomeStatement.yields.dilutionLines[id=unlocks].yield: 0.10021224937974506 -> 0.10021224937974496  [pump[12] rel 9.69e-16 <= 1e-12]
+ALLOWED     changed incomeStatement.yields.netShareholder: 0.00832673872595091 -> 0.008326738725951008  [pump[3] rel 1.17e-14 <= 1e-12]
+WARN todo allowlist entry pump[14] 'incomeStatement.provenance.thirdParty*' is a placeholder and allows nothing (fill from the first diff run)
+WARN todo allowlist entry pump[15] 'incomeStatement.provenance.sources*' is a placeholder and allows nothing (fill from the first diff run)
+WARN todo allowlist entry pump[16] 'incomeStatement.flags*' is a placeholder and allows nothing (fill from the first diff run)
+WARN todo allowlist entry pump[17] 'incomeStatement.checks*' is a placeholder and allows nothing (fill from the first diff run)
+OK pump: 16 differing path(s), 16 allowed, 0 not allowed
+=== sdcrv
+/home/hermes/git/orion/.worktrees/phase3/tools/phase3-proof/flatdiff.py:2: SyntaxWarning: invalid escape sequence '\`'
+  """Flattening diff of one asset's report before and after a release, against an allowlist (Phase 3 R1 proof).
+WARN todo allowlist entry sdcrv[0] 'incomeStatement.provenance.thirdParty*' is a placeholder and allows nothing (fill from the first diff run)
+WARN todo allowlist entry sdcrv[1] 'incomeStatement.provenance.sources*' is a placeholder and allows nothing (fill from the first diff run)
+WARN todo allowlist entry sdcrv[2] 'incomeStatement.flags*' is a placeholder and allows nothing (fill from the first diff run)
+WARN todo allowlist entry sdcrv[3] 'incomeStatement.checks*' is a placeholder and allows nothing (fill from the first diff run)
+OK sdcrv: 0 differing path(s), 0 allowed, 0 not allowed
+=== sky
+/home/hermes/git/orion/.worktrees/phase3/tools/phase3-proof/flatdiff.py:2: SyntaxWarning: invalid escape sequence '\`'
+  """Flattening diff of one asset's report before and after a release, against an allowlist (Phase 3 R1 proof).
+WARN todo allowlist entry sky[0] 'incomeStatement.provenance.thirdParty*' is a placeholder and allows nothing (fill from the first diff run)
+WARN todo allowlist entry sky[1] 'incomeStatement.provenance.sources*' is a placeholder and allows nothing (fill from the first diff run)
+WARN todo allowlist entry sky[2] 'incomeStatement.flags*' is a placeholder and allows nothing (fill from the first diff run)
+WARN todo allowlist entry sky[3] 'incomeStatement.checks*' is a placeholder and allows nothing (fill from the first diff run)
+OK sky: 0 differing path(s), 0 allowed, 0 not allowed
+=== uni
+/home/hermes/git/orion/.worktrees/phase3/tools/phase3-proof/flatdiff.py:2: SyntaxWarning: invalid escape sequence '\`'
+  """Flattening diff of one asset's report before and after a release, against an allowlist (Phase 3 R1 proof).
+ALLOWED     changed incomeStatement.volume.annualized: 1585563727.6126373 -> null  [uni[1] no bound]
+ALLOWED     changed incomeStatement.volume.growth.current: 395304929.35 -> null  [uni[1] no bound]
+ALLOWED     changed incomeStatement.volume.growth.note: "needs 182 complete days of every flow" -> "not measured"  [uni[1] no bound]
+ALLOWED     added   incomeStatement.volume.metrics: (absent) -> []  [uni[1] no bound]
+ALLOWED     removed incomeStatement.volume.metrics[0]: "flow_usd.swap_fees" -> (absent)  [uni[1] no bound]
+ALLOWED     added   incomeStatement.volume.notMeasured: (absent) -> "gross swap fees: DefiLlama removed (Phase 3 R1); v2 x6 derived and v3/v4 scans not built (Phase 3b)"  [uni[1] no bound]
+WARN unmatched allowlist entry uni[0] 'incomeStatement.volume': matched no differing path (UNI volume is not_measured since R1 (DefiLlama gross swap fees removed): the object changes shape)
+WARN todo allowlist entry uni[2] 'incomeStatement.provenance.thirdParty*' is a placeholder and allows nothing (fill from the first diff run)
+WARN todo allowlist entry uni[3] 'incomeStatement.provenance.sources*' is a placeholder and allows nothing (fill from the first diff run)
+WARN todo allowlist entry uni[4] 'incomeStatement.flags*' is a placeholder and allows nothing (fill from the first diff run)
+WARN todo allowlist entry uni[5] 'incomeStatement.checks*' is a placeholder and allows nothing (fill from the first diff run)
+OK uni: 6 differing path(s), 6 allowed, 0 not allowed
+=== vvv
+/home/hermes/git/orion/.worktrees/phase3/tools/phase3-proof/flatdiff.py:2: SyntaxWarning: invalid escape sequence '\`'
+  """Flattening diff of one asset's report before and after a release, against an allowlist (Phase 3 R1 proof).
+NOT ALLOWED removed incomeStatement.flags[3]: "third_party: revenue.business.cross_check, holders.burn.cross_checks" -> (absent)  [no allowlist entry matches]
+NOT ALLOWED removed incomeStatement.provenance.sources[2]: "third_party:api.llama.fi" -> (absent)  [no allowlist entry matches]
+NOT ALLOWED added   incomeStatement.provenance.thirdParty: (absent) -> []  [no allowlist entry matches]
+NOT ALLOWED removed incomeStatement.provenance.thirdParty[0]: "revenue.business.cross_check" -> (absent)  [no allowlist entry matches]
+NOT ALLOWED removed incomeStatement.provenance.thirdParty[1]: "holders.burn.cross_checks" -> (absent)  [no allowlist entry matches]
+ALLOWED     removed incomeStatement.revenue.lines[id=business].crossCheck.annualized: 11444739.45054945 -> (absent)  [vvv[1] no bound]
+ALLOWED     removed incomeStatement.revenue.lines[id=business].crossCheck.metric: "flow_usd.revenue_proxy" -> (absent)  [vvv[1] no bound]
+ALLOWED     removed incomeStatement.revenue.lines[id=business].crossCheck.sourceType: "third_party" -> (absent)  [vvv[1] no bound]
+WARN unmatched allowlist entry vvv[0] 'incomeStatement.revenue.lines[id=business].crossCheck': matched no differing path (VVV business line: the DefiLlama revenue_proxy cross-check is dropped in R1)
+WARN todo allowlist entry vvv[2] 'incomeStatement.provenance.thirdParty*' is a placeholder and allows nothing (fill from the first diff run)
+WARN todo allowlist entry vvv[3] 'incomeStatement.provenance.sources*' is a placeholder and allows nothing (fill from the first diff run)
+WARN todo allowlist entry vvv[4] 'incomeStatement.flags*' is a placeholder and allows nothing (fill from the first diff run)
+WARN todo allowlist entry vvv[5] 'incomeStatement.checks*' is a placeholder and allows nothing (fill from the first diff run)
+unallowed: incomeStatement.flags[3], incomeStatement.provenance.sources[2], incomeStatement.provenance.thirdParty, incomeStatement.provenance.thirdParty[0], incomeStatement.provenance.thirdParty[1]
+FAILED vvv: 8 differing path(s), 3 allowed, 5 not allowed
+=== ycrv
+/home/hermes/git/orion/.worktrees/phase3/tools/phase3-proof/flatdiff.py:2: SyntaxWarning: invalid escape sequence '\`'
+  """Flattening diff of one asset's report before and after a release, against an allowlist (Phase 3 R1 proof).
+WARN todo allowlist entry ycrv[0] 'incomeStatement.provenance.thirdParty*' is a placeholder and allows nothing (fill from the first diff run)
+WARN todo allowlist entry ycrv[1] 'incomeStatement.provenance.sources*' is a placeholder and allows nothing (fill from the first diff run)
+WARN todo allowlist entry ycrv[2] 'incomeStatement.flags*' is a placeholder and allows nothing (fill from the first diff run)
+WARN todo allowlist entry ycrv[3] 'incomeStatement.checks*' is a placeholder and allows nothing (fill from the first diff run)
+OK ycrv: 0 differing path(s), 0 allowed, 0 not allowed

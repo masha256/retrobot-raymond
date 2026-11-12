@@ -1,0 +1,20 @@
+{
+  "asset": "vvv",
+  "perMetric": [
+    {
+      "metric": "flow_usd.revenue_proxy",
+      "configured": false,
+      "observations": 345,
+      "superseded": 6,
+      "firstDay": "2025-12-09",
+      "lastDay": "2026-11-12",
+      "valueSum": 4842203.43,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 1
+    }
+  ],
+  "exportFile": "/home/hermes/.hermes/profiles/raymond/cache/scratch/p3r1-20261112T223129Z/new/purged/vvv-flow_usd.revenue_proxy-20261112T224249Z.json",
+  "exportSha256": "b2abc87e213e01305c1380598ebcd68a3b0dceb4d553254b7a5f5899b3e97129",
+  "applied": true
+}

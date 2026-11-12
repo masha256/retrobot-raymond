@@ -1,0 +1,34 @@
+dry 1 cake exit 0
+dry 2 lit exit 0
+dry 3 uni exit 0
+dry 4 vvv exit 0
+dry 5 lit exit 0
+dry 6 pump exit 0
+yes 1 cake exit 0
+yes 2 lit exit 0
+yes 3 uni exit 0
+yes 4 vvv exit 0
+yes 5 lit exit 0
+yes 6 pump exit 0
+after-purge aero identical
+after-purge cake identical
+after-purge crv identical
+after-purge cvxcrv identical
+after-purge hype identical
+after-purge link identical
+after-purge lit identical
+after-purge pump identical
+after-purge sdcrv identical
+after-purge sky identical
+after-purge uni identical
+after-purge vvv identical
+after-purge ycrv identical
+total 1884
+drwx------ 2 hermes hermes   4096 Nov 12 22:42 .
+drwxrwxr-x 6 hermes hermes   4096 Nov 12 22:42 ..
+-rw------- 1 hermes hermes 852922 Nov 12 22:42 cake-flow_usd.fees+1-20261112T224242Z.json
+-rw------- 1 hermes hermes 405220 Nov 12 22:42 lit-flow_usd.fees+1-20261112T224245Z.json
+-rw------- 1 hermes hermes  41214 Nov 12 22:42 lit-unlocks_next_year-20261112T224251Z.json
+-rw------- 1 hermes hermes  36924 Nov 12 22:42 pump-unlocks_next_year-20261112T224252Z.json
+-rw------- 1 hermes hermes 203476 Nov 12 22:42 uni-flow_usd.swap_fees-20261112T224247Z.json
+-rw------- 1 hermes hermes 366542 Nov 12 22:42 vvv-flow_usd.revenue_proxy-20261112T224249Z.json

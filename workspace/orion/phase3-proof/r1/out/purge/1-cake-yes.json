@@ -1,0 +1,32 @@
+{
+  "asset": "cake",
+  "perMetric": [
+    {
+      "metric": "flow_usd.fees",
+      "configured": false,
+      "observations": 398,
+      "superseded": 5,
+      "firstDay": "2025-10-16",
+      "lastDay": "2026-11-12",
+      "valueSum": 214058592.69999984,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 1
+    },
+    {
+      "metric": "flow_usd.llama_revenue",
+      "configured": false,
+      "observations": 398,
+      "superseded": 5,
+      "firstDay": "2025-10-16",
+      "lastDay": "2026-11-12",
+      "valueSum": 72094501.06999995,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 1
+    }
+  ],
+  "exportFile": "/home/hermes/.hermes/profiles/raymond/cache/scratch/p3r1-20261112T223129Z/new/purged/cake-flow_usd.fees+1-20261112T224242Z.json",
+  "exportSha256": "8a8a19861a79c433a33be44e95240af88b85d06b80ccb09d3fec536fea9c4d16",
+  "applied": true
+}

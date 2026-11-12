@@ -1,0 +1,20 @@
+{
+  "asset": "pump",
+  "perMetric": [
+    {
+      "metric": "unlocks_next_year",
+      "configured": true,
+      "observations": 29,
+      "superseded": 0,
+      "firstDay": "2026-10-16",
+      "lastDay": "2026-11-12",
+      "valueSum": 2392500000000.0015,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 0
+    }
+  ],
+  "exportFile": "/home/hermes/.hermes/profiles/raymond/cache/scratch/p3r1-20261112T223129Z/new/purged/pump-unlocks_next_year-20261112T224252Z.json",
+  "exportSha256": "08ac81f86680f9801f5742a62682ff56cb3baf75bea56772ed5d45297fb33831",
+  "applied": true
+}

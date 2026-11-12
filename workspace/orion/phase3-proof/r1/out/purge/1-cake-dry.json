@@ -1,0 +1,32 @@
+{
+  "asset": "cake",
+  "perMetric": [
+    {
+      "metric": "flow_usd.fees",
+      "configured": false,
+      "observations": 398,
+      "superseded": 5,
+      "firstDay": "2025-10-16",
+      "lastDay": "2026-11-12",
+      "valueSum": 214058592.69999984,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 1
+    },
+    {
+      "metric": "flow_usd.llama_revenue",
+      "configured": false,
+      "observations": 398,
+      "superseded": 5,
+      "firstDay": "2025-10-16",
+      "lastDay": "2026-11-12",
+      "valueSum": 72094501.06999995,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 1
+    }
+  ],
+  "exportFile": null,
+  "exportSha256": null,
+  "applied": false
+}

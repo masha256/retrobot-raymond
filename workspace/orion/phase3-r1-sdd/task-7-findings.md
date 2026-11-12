@@ -1,0 +1,8 @@
+# Task 7 tooling findings (fix round 1) + Task 8 concern 1 — controller rulings binding
+
+- I-1 (fix): tools/phase3-proof/r1-allowlist.json LIT `incomeStatement.dilution.*` is unbounded, so dilution fields outside the unlocks line can move freely (burnedPerYear -> 0/null passes). Add for LIT: `abs: 0` on every burnedPerYear and emissionsPerYear path (exact paths from the golden LIT report), rel 0.0007 on supply.addedPerYear paths, abs 0.0001 on supply.netPct paths, and refuse a new/removed `dilution.releases[...]` element (no glob entry may allow an added release line: make the release-line entries exact `[id=unlocks]` paths). Test: the reviewer's probes (burnedPerYear -> 0, -> null; emissionsPerYear change; a new 9e9 release line) each exit 1.
+- M (fix): flatdiff path collisions: a literal dotted key vs nested keys, and list ids 1 vs "1", must not map to the same flattened path (escape dots in keys, e.g. `a\.b`, and type-tag non-string ids, e.g. `[id=#1]`). Test both.
+- M (fix): refuse an allowlist with a duplicate asset key (parse with object_pairs_hook) and a bare `"*"`/empty glob. Test both.
+- M (fix): tools/phase2-proof/test_prod_copy.py: pin ORION_ENV_FILE in the old-release migrate env and that an inherited ORION_DATABASE_URL is stripped (if prod_copy doesn't strip it, make it strip it).
+- Task 8 concern 1 (fix): docs/ops/deploy.md Task 3 verb-reference comment and global wording: the purge export file is ONE per call, named `<asset>-<first metric>[+N]-<UTCstamp>.json` (src/db/purge.ts) — fix the one-file-per-metric wording.
+- Deferred: id-keyed list reorder / dict key reorder show no diff (acceptable: report key order is checked by the v2 golden tests); the todo globs get exact paths when the controller fills them (R6).

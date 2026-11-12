@@ -1,0 +1,10 @@
+ALLOWED     removed incomeStatement.flags[3]: "third_party: revenue.business.cross_check, holders.burn.cross_checks" -> (absent)  [vvv[2] no bound]
+ALLOWED     removed incomeStatement.provenance.sources[2]: "third_party:api.llama.fi" -> (absent)  [vvv[3] no bound]
+ALLOWED     added   incomeStatement.provenance.thirdParty: (absent) -> []  [vvv[4] no bound]
+ALLOWED     removed incomeStatement.provenance.thirdParty[0]: "revenue.business.cross_check" -> (absent)  [vvv[5] no bound]
+ALLOWED     removed incomeStatement.provenance.thirdParty[1]: "holders.burn.cross_checks" -> (absent)  [vvv[6] no bound]
+ALLOWED     removed incomeStatement.revenue.lines[id=business].crossCheck.annualized: 11444739.45054945 -> (absent)  [vvv[1] no bound]
+ALLOWED     removed incomeStatement.revenue.lines[id=business].crossCheck.metric: "flow_usd.revenue_proxy" -> (absent)  [vvv[1] no bound]
+ALLOWED     removed incomeStatement.revenue.lines[id=business].crossCheck.sourceType: "third_party" -> (absent)  [vvv[1] no bound]
+WARN unmatched allowlist entry vvv[0] 'incomeStatement.revenue.lines[id=business].crossCheck': matched no differing path (VVV business line: the DefiLlama revenue_proxy cross-check is dropped in R1)
+OK vvv: 8 differing path(s), 8 allowed, 0 not allowed

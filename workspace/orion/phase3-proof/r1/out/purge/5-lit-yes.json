@@ -1,0 +1,20 @@
+{
+  "asset": "lit",
+  "perMetric": [
+    {
+      "metric": "unlocks_next_year",
+      "configured": true,
+      "observations": 31,
+      "superseded": 0,
+      "firstDay": "2026-10-16",
+      "lastDay": "2026-11-12",
+      "valueSum": 4172117398.253559,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 0
+    }
+  ],
+  "exportFile": "/home/hermes/.hermes/profiles/raymond/cache/scratch/p3r1-20261112T223129Z/new/purged/lit-unlocks_next_year-20261112T224251Z.json",
+  "exportSha256": "e2db6291d0f6147dfde23bfef48af1c00730b4642a8dcbf0f3f546481cc23796",
+  "applied": true
+}

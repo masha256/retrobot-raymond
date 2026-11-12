@@ -1,0 +1,20 @@
+{
+  "asset": "uni",
+  "perMetric": [
+    {
+      "metric": "flow_usd.swap_fees",
+      "configured": false,
+      "observations": 191,
+      "superseded": 59,
+      "firstDay": "2026-07-04",
+      "lastDay": "2026-11-12",
+      "valueSum": 721115173.4099997,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 1
+    }
+  ],
+  "exportFile": null,
+  "exportSha256": null,
+  "applied": false
+}

@@ -1,0 +1,20 @@
+{
+  "asset": "uni",
+  "perMetric": [
+    {
+      "metric": "flow_usd.swap_fees",
+      "configured": false,
+      "observations": 191,
+      "superseded": 59,
+      "firstDay": "2026-07-04",
+      "lastDay": "2026-11-12",
+      "valueSum": 721115173.4099997,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 1
+    }
+  ],
+  "exportFile": "/home/hermes/.hermes/profiles/raymond/cache/scratch/p3r1-20261112T223129Z/new/purged/uni-flow_usd.swap_fees-20261112T224247Z.json",
+  "exportSha256": "b737869b3847fbea0a5d6b33dcaf5e4dcbac95f5b182617dd1981699afc003fe",
+  "applied": true
+}

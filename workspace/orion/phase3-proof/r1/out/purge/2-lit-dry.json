@@ -1,0 +1,32 @@
+{
+  "asset": "lit",
+  "perMetric": [
+    {
+      "metric": "flow_usd.fees",
+      "configured": false,
+      "observations": 191,
+      "superseded": 0,
+      "firstDay": "2026-05-05",
+      "lastDay": "2026-11-11",
+      "valueSum": 27563562,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 1
+    },
+    {
+      "metric": "flow_usd.llama_revenue",
+      "configured": false,
+      "observations": 191,
+      "superseded": 0,
+      "firstDay": "2026-05-05",
+      "lastDay": "2026-11-11",
+      "valueSum": 21875926,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 1
+    }
+  ],
+  "exportFile": null,
+  "exportSha256": null,
+  "applied": false
+}

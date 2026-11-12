@@ -1,0 +1,8 @@
+ALLOWED     changed incomeStatement.volume.annualized: 1585563727.6126373 -> null  [uni[1] no bound]
+ALLOWED     changed incomeStatement.volume.growth.current: 395304929.35 -> null  [uni[1] no bound]
+ALLOWED     changed incomeStatement.volume.growth.note: "needs 182 complete days of every flow" -> "not measured"  [uni[1] no bound]
+ALLOWED     added   incomeStatement.volume.metrics: (absent) -> []  [uni[1] no bound]
+ALLOWED     removed incomeStatement.volume.metrics[0]: "flow_usd.swap_fees" -> (absent)  [uni[1] no bound]
+ALLOWED     added   incomeStatement.volume.notMeasured: (absent) -> "gross swap fees: DefiLlama removed (Phase 3 R1); v2 x6 derived and v3/v4 scans not built (Phase 3b)"  [uni[1] no bound]
+WARN unmatched allowlist entry uni[0] 'incomeStatement.volume': matched no differing path (UNI volume is not_measured since R1 (DefiLlama gross swap fees removed): the object changes shape)
+OK uni: 6 differing path(s), 6 allowed, 0 not allowed

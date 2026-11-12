@@ -1,0 +1,20 @@
+{
+  "asset": "pump",
+  "perMetric": [
+    {
+      "metric": "unlocks_next_year",
+      "configured": true,
+      "observations": 29,
+      "superseded": 0,
+      "firstDay": "2026-10-16",
+      "lastDay": "2026-11-12",
+      "valueSum": 2392500000000.0015,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 0
+    }
+  ],
+  "exportFile": null,
+  "exportSha256": null,
+  "applied": false
+}

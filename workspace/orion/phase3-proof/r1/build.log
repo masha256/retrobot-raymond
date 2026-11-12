@@ -1,0 +1,5 @@
+
+> orion@1.0.0 build
+> tsc -p tsconfig.build.json && node scripts/build/copy-migrations.mjs
+
+copied 7 migration(s) to dist/db/pg/migrations

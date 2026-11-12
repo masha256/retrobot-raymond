@@ -1,0 +1,20 @@
+{
+  "asset": "vvv",
+  "perMetric": [
+    {
+      "metric": "flow_usd.revenue_proxy",
+      "configured": false,
+      "observations": 345,
+      "superseded": 6,
+      "firstDay": "2025-12-09",
+      "lastDay": "2026-11-12",
+      "valueSum": 4842203.43,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 1
+    }
+  ],
+  "exportFile": null,
+  "exportSha256": null,
+  "applied": false
+}

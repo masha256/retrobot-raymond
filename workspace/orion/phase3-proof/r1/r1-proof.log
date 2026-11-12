@@ -1,0 +1,80 @@
+== carry check (Task 4): disclosed rows with an adapter locator (want 0)
+SET
+0
+== purge counts before (prod copy)
+SET
+cake flow_usd.fees third_party 398
+cake flow_usd.llama_revenue third_party 398
+lit flow_usd.fees third_party 191
+lit flow_usd.llama_revenue third_party 191
+lit unlocks_next_year third_party 31
+pump unlocks_next_year third_party 29
+uni flow_usd.swap_fees third_party 191
+vvv flow_usd.revenue_proxy third_party 345
+== old reports (before any write)
+old aero 0
+old cake 0
+old crv 0
+old cvxcrv 0
+old hype 0
+old link 0
+old lit 0
+old pump 0
+old sdcrv 0
+old sky 0
+old uni 0
+old vvv 0
+old ycrv 0
+== new dist migrate (0007)
+migrate 0
+{
+  "applied": [
+    7
+  ],
+  "status": {
+    "schema": "p2proof_20261112t223129z",
+    "dbAt": 7,
+    "codeRequires": 7,
+    "applied": [
+      {
+        "id": 1,
+        "name": "baseline",
+        "sha256": "38bd9522ddb31125bf52f37a287a62b9891271260f704dd4e9fd6e9e3d1ccb2a",
+        "appliedAt": "2026-11-12T22:31:30.152Z"
+      },
+      {
+        "id": 2,
+        "name": "daemon",
+        "sha256": "e1267f83cb06e79fc2c49b4ef795bdc326ab9815351dd08aedb1d058943976db",
+        "appliedAt": "2026-11-12T22:31:30.172Z"
+== fetch lit/pump unlocks on the new home
+fetch lit 0
+fetch pump 0
+SET
+pump disclosure disclosed 82500000000 https://blockworks.com/token-transparency/filing/pump
+lit disclosure disclosed 138888888.8888889 https://x.com/Lighter_xyz/status/2005862687331303804
+== new reports
+new aero 0
+new cake 0
+new crv 0
+new cvxcrv 0
+new hype 0
+new link 0
+new lit 0
+new pump 0
+new sdcrv 0
+new sky 0
+new uni 0
+new vvv 0
+new ycrv 0
+== default days old/new
+aero 2026-11-11 2026-11-11
+cake 2026-11-11 2026-11-11
+crv 2026-11-11 2026-11-11
+cvxcrv 2026-11-11 2026-11-11
+hype 2026-11-10 2026-11-10
+link 2026-11-11 2026-11-11
+lit 2026-11-10 2026-11-10
+pump 2026-11-10 2026-11-10
+sdcrv 2026-11-11 2026-11-11
+sky 2026-11-11 2026-11-11

@@ -1,0 +1,21 @@
+
+ RUN  v5.0.1 /home/hermes/git/orion/.worktrees/phase3
+
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+
+ Test Files  144 passed (144)
+      Tests  1745 passed (1745)
+   Start at  22:20:54
+   Duration  94.03s (tests 81%, import 17%, transform 2%)
+
+    Isolate  144 workers spawned · ~98ms startup each (spawn + environment, per file)
+             at least ~6.98s faster with isolate: false — reuses workers across files instead of one per file
+
+exit 0

@@ -1,0 +1,11 @@
+ALLOWED     changed incomeStatement.volume.annualized: 202140375.32747245 -> null  [cake[1] no bound]
+ALLOWED     changed incomeStatement.volume.growth.annualized: 8.641184973079586 -> null  [cake[1] no bound]
+ALLOWED     changed incomeStatement.volume.growth.change: 0.7593755077611561 -> null  [cake[1] no bound]
+ALLOWED     changed incomeStatement.volume.growth.current: 50396641.51999998 -> null  [cake[1] no bound]
+ALLOWED     added   incomeStatement.volume.growth.note: (absent) -> "not measured"  [cake[1] no bound]
+ALLOWED     changed incomeStatement.volume.growth.prior: 28644619.24 -> null  [cake[1] no bound]
+ALLOWED     added   incomeStatement.volume.metrics: (absent) -> []  [cake[1] no bound]
+ALLOWED     removed incomeStatement.volume.metrics[0]: "flow_usd.fees" -> (absent)  [cake[1] no bound]
+ALLOWED     added   incomeStatement.volume.notMeasured: (absent) -> "gross swap fees: DefiLlama removed (Phase 3 R1); on-chain v2/v3 gross not read yet (Phase 3b)"  [cake[1] no bound]
+WARN unmatched allowlist entry cake[0] 'incomeStatement.volume': matched no differing path (CAKE volume is not_measured since R1 (DefiLlama gross swap fees removed): the object changes shape)
+OK cake: 9 differing path(s), 9 allowed, 0 not allowed
