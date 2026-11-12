@@ -64,3 +64,26 @@ node_modules: `npm ci` in the worktree (live checkout's lock is older, no pg).
 - Task 1: complete (commits e61d663..8e3304f, review clean after 1 fix round)
 - Task 2: fix round 1/5 (I-1 + M1-M5 fixed; commit de7f7e4; purge 18/18, full 1712/1712). Scoped re-review dispatched.
 - Task 3: dispatched (BASE de7f7e4). Carries: R3 (--json), R4 (section skeleton), R8 (drop backfill exclusion in tests/release/orionRemote.test.ts), R10 (drain/finish backfills before rollback), R11 (sizing sentence).
+- Task 2: re-review 1: I-1, M1-M5 ADDRESSED; no new breakage.
+- Task 2: minor (deferred): RR-1 export file left in purged/ when the dir fsync fails (nothing deleted) — best-effort unlink
+- Task 2: minor (deferred): RR-2 DB-dependent refusals (open anomaly, dangling ref) still run under the lock; a refused --yes may abandon orphaned agent runs
+- Task 2: complete (commits 8e3304f..de7f7e4, review clean after 1 fix round)
+- Task 3: implementer DONE e88130f (py 51/51, orionRemote 2/2, full 1712/1712, tc clean). Review dispatched; Task 4 dispatched in parallel (BASE e88130f).
+- Task 3: minor (deferred): the nine-rung list in orion-remote is not pinned against TS SourceType (JOB_KINDS is)
+- Task 3: review: spec ✅, quality needs fixes: I-1 rollback note (no drain verb; a running backfill makes rollback abort). Minors 1-5 folded into the round (task-3-findings.md).
+- Task 4: implementer DONE 69caa3f (22 new; full 1735/1735; tc clean). Review dispatched with Task 3 fix round in parallel.
+- Ruling R16: Task 4's 180 days (not the plan's "182") for linear start 2026-07-12 / 3y at now 2029-01-12 is correct under the plan's own rule (start + years x 365 d = 2029-07-11, 2028 leap); the plan's 182 was a controller arithmetic slip. Cost if wrong: none (test pins the rule).
+- Carry to Task 6: tools/sources-register TERMS needs entries for x.com (Lighter's own post, first party) and blockworks.com (third party, compiled by Blockworks) once LIT/PUMP switch.
+- Task 4: review: spec ✅, quality Approved; 0 Critical/Important; 7 minors.
+- Task 4: minor (deferred): M1 the "tranche on now+365d counts; on now does not" test also passes with swapped window ends (only month-end test catches it) — strengthen
+- Task 4: minor (deferred): M2-M7 originOf condition could be tighter; tranche loop duplicated with lit.ts (lit adapter retires in R8); a few validation tests missing; billions print as 50000.00M in detail; one test monkeypatches the shared registry; schedule_steps path has no citation guard (hypothetical)
+- Carry to Task 7: on the prod copy, `select count(*) from observations where method='disclosed' and locator ? 'adapter'` must be 0 (Task 4 reviewer's prod-side check; my sql-ro attempt timed out on approval, not retried).
+- Task 4: complete (commits e88130f..69caa3f, review clean)
+- Task 3: fix round 1/5 (I-1, M1-M5; commit 6f97c21; py 52 OK, vitest 1735/1735, flake tests/push/gitPublisher.test.ts timeout once under load, 7/7 alone). Scoped re-review dispatched; Task 5 dispatched in parallel (BASE 6f97c21).
+- Task 3: minor (deferred): flake tests/push/gitPublisher.test.ts "a moved remote is refused..." timed out once at --maxWorkers=2 (load-sensitive)
+- Task 3: re-review 1: I-1, M1-M5 ADDRESSED; no new breakage.
+- Task 3: minor (deferred): assert_refused per-word substring check could false-fail on short numbers (e.g. '1' inside argc '10')
+- Task 3: complete (commits de7f7e4..6f97c21, review clean after 1 fix round)
+- Task 5: implementer DONE 6a1c55f (6 new; full 1741/1741; tc clean; all 13 reports cmp-identical before/after). Review dispatched; Task 6 dispatched in parallel (BASE 6a1c55f).
+- Ruling R17: Task 5's one-line `as string[]` cast in tests/assets/lockers.ingest.test.ts accepted (type widening). Cost: none.
+- Carry to Task 6 (binding): drop the CAKE/UNI volume pairs from PARITY_PATHS (src/report/parity.ts) and regenerate tools/phase2-proof/parity.json; TERMS rows for x.com and blockworks.com; hash pins to re-pin (12 assets): cake 2f7d698f (tests/assets/cake.ingest.test.ts), crv 02417b36, hype f7dcfeec (+ tests/config/load.test.ts), link 6bc20338, lit a3e049f1 (+ tests/agent/disclosure.e2e.test.ts HASH, tests/config/load.test.ts), pump 3a2f142b, sky cef8a54b, uni e6316937, vvv fa05d392 (+ tests/config/load.test.ts), ycrv d594acfc, cvxcrv e9ecdb0d + sdcrv 0583401d (tests/assets/lockers.ingest.test.ts). AERO 3c413feb must not move. disclosure e2e: re-pin its LIT HASH constant only; fixtures must stay byte-unchanged (`git diff --quiet -- tests/fixtures`).
