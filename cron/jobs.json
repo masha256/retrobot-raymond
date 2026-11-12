@@ -191,15 +191,15 @@
       "schedule_display": "15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 1596
+        "completed": 1597
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-06T08:57:25.404654-07:00",
-      "next_run_at": "2026-11-11T19:15:00-08:00",
-      "last_run_at": "2026-11-11T17:15:58.626366-08:00",
+      "next_run_at": "2026-11-11T20:15:00-08:00",
+      "last_run_at": "2026-11-11T18:16:00.553297-08:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -219,17 +219,17 @@
       ],
       "workdir": null,
       "fire_claim": {
-        "at": "2026-11-11T18:15:47.275712-08:00",
-        "by": "uranus:2102690:f3e6ed82299e4b0889888a60f9c2e638"
+        "at": "2026-11-11T19:15:47.288078-08:00",
+        "by": "uranus:2102690:5ed8a053451e48678d330640f2477d0a"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-11-11T18:15:00-08:00",
-        "dispatched_at": "2026-11-11T18:15:46.242268-08:00",
+        "scheduled_at": "2026-11-11T19:15:00-08:00",
+        "dispatched_at": "2026-11-11T19:15:46.248669-08:00",
         "lateness_seconds": 46.2,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "36761cc5c0b34e4eaded2bcbadecb86e"
+        "875c498559da436bb95a82858c116f27"
       ],
       "last_failure": {
         "at": "2026-11-07T08:32:32.074347-08:00",
@@ -1260,9 +1260,9 @@
         "times": null,
         "completed": 5
       },
-      "enabled": true,
-      "state": "scheduled",
-      "paused_at": null,
+      "enabled": false,
+      "state": "paused",
+      "paused_at": "2026-11-11T19:06:03.991479-08:00",
       "paused_reason": null,
       "created_at": "2026-11-04T13:22:34.685359-08:00",
       "next_run_at": "2026-11-12T06:30:00-08:00",
@@ -1471,5 +1471,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-11-11T18:15:47.276285-08:00"
+  "updated_at": "2026-11-11T19:15:47.288683-08:00"
 }
