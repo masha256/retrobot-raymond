@@ -191,15 +191,15 @@
       "schedule_display": "15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 1597
+        "completed": 1598
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-06T08:57:25.404654-07:00",
-      "next_run_at": "2026-11-11T20:15:00-08:00",
-      "last_run_at": "2026-11-11T18:16:00.553297-08:00",
+      "next_run_at": "2026-11-11T21:15:00-08:00",
+      "last_run_at": "2026-11-11T19:15:58.604862-08:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -219,17 +219,17 @@
       ],
       "workdir": null,
       "fire_claim": {
-        "at": "2026-11-11T19:15:47.288078-08:00",
-        "by": "uranus:2102690:5ed8a053451e48678d330640f2477d0a"
+        "at": "2026-11-11T20:15:47.280629-08:00",
+        "by": "uranus:2102690:74815b9fc8764a54bf1c17db3fd9a705"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-11-11T19:15:00-08:00",
-        "dispatched_at": "2026-11-11T19:15:46.248669-08:00",
+        "scheduled_at": "2026-11-11T20:15:00-08:00",
+        "dispatched_at": "2026-11-11T20:15:46.240336-08:00",
         "lateness_seconds": 46.2,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "875c498559da436bb95a82858c116f27"
+        "531284bdb12c45f882417081c12d01b8"
       ],
       "last_failure": {
         "at": "2026-11-07T08:32:32.074347-08:00",
@@ -1173,67 +1173,6 @@
       }
     },
     {
-      "id": "c99cb6b3425f",
-      "name": "orion-staging-first-nightly-check",
-      "prompt": "One-shot, CHECK ONLY (no writes, no deploys, no activations, no run-now). Context: Orion Phase 1.5 staging went live 2026-11-04 ~20:50 UTC on venus (192.168.0.12) as Unix user orion-stage, release orion-2026.11.04.2 (feat/daemon f5f36fa), Postgres orion_stage, 13 assets active (aero cake crv cvxcrv hype link lit pump sdcrv sky uni vvv ycrv), staging data loaded from a proven copy of live and 13 run-now refreshes all ingest ok with 0 failed sources. The first SCHEDULED staging nightly was due at 2026-11-05T02:45:00Z (nightly_report waits for the slot's refresh jobs, posts to #orion-staging, pings the healthchecks stage-nightly check, records a full snapshot, then snapshot_push commits to github masha256/orion-data-staging). The earlier staging_refresh EACCES (job 4) is FIXED: Mike restarted orion-stage's user manager on 2026-11-04 and the daemon pid 33378 carries group 994 orion-refresh; do not ask him for it again (the first real read test is Sun 2026-11-08 10:30Z).\n\nDo, from uranus as hermes: ST='ssh -i ~/.ssh/orion-stage_ed25519 -o IdentitiesOnly=yes -o BatchMode=yes orion-stage@192.168.0.12' (forced command orion-remote; output is JSON; no --json flag).\n1. `$ST status` and `$ST jobs`: for slot 2026-11-05T02:45:00Z list each refresh (asset, status, ingest.outcome, sources_failed) and the nightly_report (status, delivered, deadman) and the snapshot_push after it (pushed, ref). Also report whether status shows `soak` for orion-2026.11.04.2 now.\n2. `$ST logs 200` and pick out any ALERT / failed / undelivered lines since 02:00Z.\n3. GitHub: with GH_PAT from ~/.hermes/profiles/raymond/.env (never print it), `curl -s -H \"Authorization: Bearer ***\" https://api.github.com/repos/masha256/orion-data-staging/commits?per_page=5` and the tree of main: confirm a new 'full seq N day 2026-11-04' commit and that assets.json now lists 13 active assets and full/latest.json has 13 asset reports (sizes are enough; print no data). Before activation assets.json was 3 bytes and full/latest.json 312 bytes; they must be far larger now.\n4. Reply in 5-8 short bullets for Mike: nightly ran yes/no; refreshes N/13 ok with any failed sources named; Slack delivered and dead-man pinged yes/no; snapshot commit sha and asset count; soak status; anything that needs him (exact command). If something failed, quote the error line and say what you would do, but do not change anything.",
-      "skills": [
-        "orion"
-      ],
-      "skill": "orion",
-      "model": null,
-      "provider": null,
-      "base_url": null,
-      "script": null,
-      "no_agent": false,
-      "monitor_script": null,
-      "monitor_url": null,
-      "monitor_state": null,
-      "context_from": null,
-      "schedule": {
-        "kind": "once",
-        "run_at": "2026-11-04T19:40:00-08:00",
-        "display": "once at 2026-11-04 19:40"
-      },
-      "schedule_display": "once at 2026-11-04 19:40",
-      "repeat": {
-        "times": 1,
-        "completed": 1
-      },
-      "enabled": false,
-      "state": "completed",
-      "paused_at": null,
-      "paused_reason": null,
-      "created_at": "2026-11-04T13:06:05.802783-08:00",
-      "next_run_at": null,
-      "last_run_at": "2026-11-04T19:41:59.961112-08:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
-      "last_delivery_unverified": null,
-      "last_failure": null,
-      "failure_streak": 0,
-      "deliver": "slack:C0CB8SJKM8C:1793827233.945569",
-      "origin": {
-        "platform": "slack",
-        "chat_id": "C0CB8SJKM8C",
-        "chat_name": "orion-dev",
-        "thread_id": "1793249245.302979",
-        "user_id": "U0CBKGZFU9E",
-        "scope_id": "T0CAUSENDB6"
-      },
-      "enabled_toolsets": [
-        "terminal",
-        "file"
-      ],
-      "workdir": null,
-      "timezone": "America/Los_Angeles",
-      "run_claim": null,
-      "fire_claim": null,
-      "canonical_completions": [
-        "54b903826564433e891db8b2c8cf76ad"
-      ]
-    },
-    {
       "id": "e2fb64f34263",
       "name": "orion-stage-soak",
       "prompt": "Daily staging soak check for Orion (READ-ONLY; never write to staging, prod, the live repo/DB, or any database; no deploys, no run-now, no ack/approve). The old SQLite tree /home/hermes/git/orion/orion.db is retired: never read it.\n\nThe release under soak is whatever STAGING runs now: read it from the script output's staging `status` (`current: releases/<tag>`) and compare with prod's (`ssh -i ~/.ssh/orion-prod_ed25519 -o IdentitiesOnly=yes -o BatchMode=yes orion-prod@192.168.0.12 status`). Mike's rule (2026-11-11): this job runs ONLY while staging runs a tag newer than prod. If staging and prod run the same tag (prod has deployed it), do not report health: run `hermes --profile raymond cron pause e2fb64f34263` and reply with one line: 'Soak check paused: prod and staging both on <tag>; it resumes with the next staging deploy.' Whoever deploys a new tag to staging resumes this job (`hermes --profile raymond cron resume e2fb64f34263`); whoever deploys that tag to prod pauses it. The gate for a tag: one clean SCHEDULED staging nightly_report (02:45 UTC) on that tag (status line `soak: ... (release <tag>) done, no failed sources`) before `deploy.sh prod <tag>`. Known queue (2026-11-10): orion-2026.11.10.1 = CAKE total_supply fix (R0 of Phase 3), then one combined release of Phase 2 Tasks 10+11 (0006 `-- breaking`: provenance NOT NULL, observations.source dropped; v1 report retired, snapshot orion.snapshot/2). Report yield over orion-remote prints the v2 statement only; when a tag changes an asset's values on purpose (CAKE supply for the CAKE fix), parity diffs on that asset are expected: say so.\n\nThe script output above (scripts/orion-stage-soak.py) has: staging status/jobs/logs, the orion-data-staging snapshot repo, `report_shape` per asset and `parity` stage vs prod (compares only price-independent fields; v1/v2 mixes go through the Phase 2 parity map). Expected, not failures: CRV `vote_incentives` (a level read at fetch time), PUMP's newest closed day, a day mismatch where stage and prod reported different closed days.\n\nReport, short, bullets:\n1. GATE line first: PASS or FAIL for <tag on staging>, naming the scheduled nightly_report job (id, slot, release, status) and failed sources if any.\n2. Problem jobs, failed sources, anomalies raised, and alertFlags (check-breach ALERTs: asset, check id, day, gap; a breach is a real finding).\n3. Parity: N/13 match; list each diff with rel gap; say which are expected.\n4. Snapshot repo: latest commit time, file count, assets_json_active.\n5. Log lines of interest, deduped, only if they show errors.\nIf the gate passes, end with: \"Ready for prod: deploy.sh prod <tag> (needs Mike's go).\" Never deploy yourself.",
@@ -1471,5 +1410,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-11-11T19:15:47.288683-08:00"
+  "updated_at": "2026-11-11T20:15:47.281212-08:00"
 }
