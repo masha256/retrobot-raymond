@@ -191,15 +191,15 @@
       "schedule_display": "15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 1611
+        "completed": 1612
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-06T08:57:25.404654-07:00",
-      "next_run_at": "2026-11-12T10:15:00-08:00",
-      "last_run_at": "2026-11-12T08:16:00.625054-08:00",
+      "next_run_at": "2026-11-12T11:15:00-08:00",
+      "last_run_at": "2026-11-12T09:16:02.582354-08:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -219,17 +219,17 @@
       ],
       "workdir": null,
       "fire_claim": {
-        "at": "2026-11-12T09:15:47.280363-08:00",
-        "by": "uranus:2102690:24fb2971842d42eb8195f67b1f83791d"
+        "at": "2026-11-12T10:15:47.282063-08:00",
+        "by": "uranus:2102690:a2fb5c4d5e3a481e8bedcccacbb451cc"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-11-12T09:15:00-08:00",
-        "dispatched_at": "2026-11-12T09:15:46.242120-08:00",
+        "scheduled_at": "2026-11-12T10:15:00-08:00",
+        "dispatched_at": "2026-11-12T10:15:46.239173-08:00",
         "lateness_seconds": 46.2,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "2ebad50ed6544a50be043542d18051f3"
+        "47bf7f5a16a0480d8ecf8b0e665de063"
       ],
       "last_failure": {
         "at": "2026-11-07T08:32:32.074347-08:00",
@@ -546,60 +546,6 @@
       },
       "canonical_completions": [
         "02e215ae3c3e44b1951e56738cb78c75"
-      ]
-    },
-    {
-      "id": "1cc5afa274dd",
-      "name": "reminder-orion-aero-rebuild",
-      "prompt": "Reminder for Mike (orion-dev): follow up on the AERO model rebuild. Do NOT change anything; just check and report briefly, then ask Mike whether to start.\n\nBackground (decided 2026-10-09, option 1 'hold, rebuild after the migration'): Aerodrome and Velodrome merged into 'Aero' (launch planned 2026-10-21 on 7 chains; AERO -> new AERO 1:1 and VELO -> ~0.044 AERO, conversion 2026-11-02..04; 'predictive allocation' may replace weekly gauge voting and shrink the bribe market). Orion's AERO asset (/home/hermes/git/orion/assets/aero.yaml) still uses DefiLlama 'aerodrome' dailyHoldersRevenue on Base as its holder flow (~$69M/yr, includes ~$5.6M/yr classic-pool bribes, misses ~$6.4M/yr Slipstream bribes; on-chain voter fees were ~$70M/yr over 91 days to 2026-10-09). DefiLlama now shows a $7.92M bribe-pricing spike on 2026-09-09 that Orion's stored row ($274K) does not have: never re-backfill AERO from DefiLlama without handling that.\n\nAdded 2026-10-24 (Mike chose to wait for the merger rather than raise budgets):\n- Since the merger, the sources defillama_share:dexs/Base:Dexs:parent#aerodrome:30d and :1y fail every tick ('parent parent#aerodrome not found in category Dexs' at api.llama.fi/overview/dexs/Base). The rebuild must repoint or replace the dominance sources.\n- Analyst deep run #44 (2026-10-24) ended budget_exhausted at the default 2M deep input-token cap: 5 requests, 2.10M of the 2.45M were cache reads. It spent the budget on merger research (11 web searches, DefiLlama PR #10324, the dailyHoldersRevenue API, aero.xyz/economics/metrics). It had staged, but did not commit, base rev_growth_y1 0.30 -> 0.25 (12m expected $0.486 -> $0.475): 7d holder revenue $203K/day vs $287K/day the week before, 30d $262K/day; per PR #10324, staked-LP fees stopped reaching legacy voters on 15 Oct; aero.xyz showed 22 Oct swap fees of $104K on $178M volume (30-day lows). Check whether the fee-only combined Aero series has recovered. (The budget question is settled by the weighted-units change below; no AERO deep override is needed.)\n\nCheck and report: (1) the last few orion-aero signals in /home/hermes/git/orion/orion.db (status, grade, failed sources, any price/supply jumps around the migration); (2) whether Aero actually launched and the migration happened, the new token address and whether CoinGecko id aerodrome-finance and the Base Minter/VotingEscrow still apply; (3) whether weekly bribes/voting still exist. Then propose the rebuild plan: new token and supply incl. VELO dilution, fees on-chain across chains, fixed dominance sources, bribes as a separate vote_incentives component only if the bribe market survives, then recalibration with Mike's OK.\n\nAdded 2026-10-24 (later): orion main 4a2f126 (merged + pushed) changed the analyst budget. The input cap now counts weighted units (uncached x1, cache write x1.25, cache read x0.1; same caps, same YAML key), so #44's 2.45M raw tokens are ~604K units against the 2M deep cap. When any budget runs out, the run gets one journal-only reserve request that commits what was staged (summary.reserve; tick report agent.reserve; CLI 'finished on reserve after ...'). Mike's pick: AERO's lost rev_growth_y1 0.30 -> 0.25 waits for the next scheduled deep (~2026-11-23), no paid re-run. That deep falls after this reminder: in your plan, say whether the rebuild should land before it (so the deep researches the rebuilt model rather than the merger again), and list the agent_runs to check after it runs (outcome, summary.reserve, any web search inside the reserve).",
-      "skills": [],
-      "skill": null,
-      "model": null,
-      "provider": null,
-      "base_url": null,
-      "script": null,
-      "no_agent": false,
-      "monitor_script": null,
-      "monitor_url": null,
-      "monitor_state": null,
-      "context_from": null,
-      "schedule": {
-        "kind": "once",
-        "run_at": "2026-11-05T10:00:00-08:00",
-        "display": "once at 2026-11-05 10:00"
-      },
-      "schedule_display": "once at 2026-11-05 10:00",
-      "repeat": {
-        "times": 1,
-        "completed": 1
-      },
-      "enabled": false,
-      "state": "completed",
-      "paused_at": null,
-      "paused_reason": null,
-      "created_at": "2026-10-09T07:36:42.766049-07:00",
-      "next_run_at": null,
-      "last_run_at": "2026-11-05T10:04:30.713426-08:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
-      "last_delivery_unverified": null,
-      "failure_streak": 0,
-      "deliver": "slack:C0CB8SJKM8C",
-      "origin": {
-        "platform": "telegram",
-        "chat_id": "1620897892",
-        "chat_name": "Mike M",
-        "thread_id": "16021",
-        "user_id": "1620897892",
-        "scope_id": null
-      },
-      "enabled_toolsets": null,
-      "workdir": null,
-      "run_claim": null,
-      "fire_claim": null,
-      "canonical_completions": [
-        "1636839154d74ddc9100eb45dae9fd04"
       ]
     },
     {
@@ -1410,5 +1356,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-11-12T09:15:47.280952-08:00"
+  "updated_at": "2026-11-12T10:15:47.282656-08:00"
 }
