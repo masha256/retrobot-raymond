@@ -1,0 +1,50 @@
+
+added 89 packages, and audited 90 packages in 5s
+
+25 packages are looking for funding
+  run `npm fund` for details
+
+5 vulnerabilities (2 moderate, 3 high)
+
+To address all issues, run:
+  npm audit fix
+
+Run `npm audit` for details.
+npm warn install-scripts 2 packages have install scripts not yet covered by allowScripts:
+npm warn install-scripts   better-sqlite3@13.0.3 (install: node-gyp rebuild)
+npm warn install-scripts   esbuild@0.28.2 (postinstall: node install.js)
+npm warn install-scripts
+npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+
+> orion@1.0.0 build
+> tsc -p tsconfig.build.json && node scripts/build/copy-migrations.mjs
+
+copied 7 migration(s) to dist/db/pg/migrations
+
+ RUN  v5.0.1 /home/hermes/.hermes/profiles/raymond/cache/scratch/orion-build-orion-2026.11.12.1
+
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+
+ Test Files  144 passed (144)
+      Tests  1745 passed (1745)
+   Start at  23:26:53
+   Duration  97.08s (tests 80%, import 18%, transform 2%)
+
+    Isolate  144 workers spawned · ~98ms startup each (spawn + environment, per file)
+             at least ~6.93s faster with isolate: false — reuses workers across files instead of one per file
+
+
+> orion@1.0.0 typecheck
+> tsc --noEmit
+
+tarball: /home/hermes/orion-releases/orion-2026.11.12.1.tgz
+sha256:  3135b60bd3dc9084a7cefa650f280895636f96e6a42858163ff26cf101c55e72
+RELEASE: {"tag":"orion-2026.11.12.1","commit":"8f50ac6decd586d733f45b7e74e4c3896aadf0ae","schema":7,"built_at":"2026-11-12T23:26:11Z","node":"v26.7.0"}
+exit 0

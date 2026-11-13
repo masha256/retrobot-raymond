@@ -133,3 +133,12 @@ node_modules: `npm ci` in the worktree (live checkout's lock is older, no pg).
 - Final fix wave dispatched (BASE ee295f6), findings in final-findings.md.
 - Final fix wave DONE c0e4750 (py 134 OK; flatdiff on real outputs 12/12 exit 0, aero cmp identical). No src/assets/tests change since 35333a6 (suite 1745/1745 stands). Scoped re-review dispatched.
 - Final re-review: all ADDRESSED, 0 new C/I; N1-N4 wording minors -> followups note (e95550d). Branch pushed: GitHub feat/phase3-third-party = e95550d (ls-remote confirmed). STOP point: no tag/merge/deploy.
+- RELEASE (Mike 2026-11-12 "Recommendations approved, go for next step"; R27 = (b) keep LIT/PUMP third-party unlock rows until R8):
+  - 8f50ac6 (docs N1-N4 + R27 decided) pushed: GitHub main = feat/phase3-third-party = 8f50ac6 (ff from 763868e; ls-remote confirmed); origin/gh main update-ref'd.
+  - tag orion-2026.11.12.1 (annotated cbc9859 -> 8f50ac6) pushed, ls-remote confirmed.
+  - build.sh: 1745/1745 (144 files) = ledger baseline at 35333a6; tgz sha256 3135b60b...; RELEASE schema 7.
+  - provision snapshot /home/hermes/orion-provision-8f50ac6 (git archive scripts/provision) for Mike's orion-host.sh re-run.
+  - stage step 0 (before/) saved 23:29Z; deploy.sh stage orion-2026.11.12.1 23:30Z: migrations applied 7, registry no change; status current 2026.11.12.1, daemon heartbeat on tag.
+  - stage step 3: aero cmp identical; 12 assets flatdiff exit 0 (cake 9, lit 4, uni 6, vvv 8 allowed; others 0).
+  - soak cron e2fb64f34263 resumed, catch_up false, next 2026-11-13 06:30 PT; prompt "Known queue" updated for R1.
+  - BLOCKED: step 5 `job run-now refresh lit/pump` command timed out on approval (not run, not retried). Waiting on Mike: approve step 5; orion-host.sh re-run (steps 4, 6 need the new verbs); purge --yes go after dry-run counts.
