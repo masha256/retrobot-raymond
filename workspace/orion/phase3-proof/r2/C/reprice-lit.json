@@ -1,0 +1,64 @@
+{
+  "asset": "lit",
+  "from": null,
+  "applied": false,
+  "perMetric": [
+    {
+      "metric": "flow_usd.buyback",
+      "rows": 193,
+      "repriced": 0,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {
+        "usd_native": 193
+      },
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 0
+    },
+    {
+      "metric": "flow_usd.fees_core",
+      "rows": 382,
+      "repriced": 0,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {
+        "usd_native": 382
+      },
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 0
+    },
+    {
+      "metric": "flow_usd.fees_rh",
+      "rows": 140,
+      "repriced": 0,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {
+        "usd_native": 140
+      },
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 0
+    },
+    {
+      "metric": "flow_usd.rh_buyback",
+      "rows": 318,
+      "repriced": 0,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {
+        "usd_native": 318
+      },
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 0
+    }
+  ],
+  "derived": [],
+  "remapped": [],
+  "days": 0,
+  "exportFile": null,
+  "exportSha256": null
+}

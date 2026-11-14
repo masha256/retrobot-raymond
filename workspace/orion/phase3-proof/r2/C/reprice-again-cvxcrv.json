@@ -1,0 +1,89 @@
+{
+  "asset": "cvxcrv",
+  "from": null,
+  "applied": false,
+  "perMetric": [
+    {
+      "metric": "flow_usd.convex_gross_crv",
+      "rows": 397,
+      "repriced": 0,
+      "unchanged": 397,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 0
+    },
+    {
+      "metric": "flow_usd.convex_rev_cvx",
+      "rows": 397,
+      "repriced": 0,
+      "unchanged": 397,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 0
+    },
+    {
+      "metric": "flow_usd.convex_rev_cvxcrv",
+      "rows": 397,
+      "repriced": 0,
+      "unchanged": 397,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 0
+    },
+    {
+      "metric": "flow_usd.convex_rev_treasury",
+      "rows": 397,
+      "repriced": 0,
+      "unchanged": 397,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 0
+    },
+    {
+      "metric": "flow_usd.crv",
+      "rows": 233,
+      "repriced": 0,
+      "unchanged": 233,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 103
+    },
+    {
+      "metric": "flow_usd.cvx",
+      "rows": 233,
+      "repriced": 0,
+      "unchanged": 233,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 103
+    },
+    {
+      "metric": "flow_usd.fees",
+      "rows": 233,
+      "repriced": 0,
+      "unchanged": 233,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 103
+    }
+  ],
+  "derived": [],
+  "remapped": [],
+  "days": 0,
+  "exportFile": null,
+  "exportSha256": null
+}

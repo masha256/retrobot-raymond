@@ -1,0 +1,20 @@
+{
+  "asset": "aero",
+  "perMetric": [
+    {
+      "metric": "price_usd",
+      "configured": true,
+      "observations": 45,
+      "superseded": 20,
+      "firstDay": "2026-09-24",
+      "lastDay": "2026-11-10",
+      "valueSum": 33.469242,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 0
+    }
+  ],
+  "exportFile": "/home/hermes/.hermes/profiles/raymond/cache/scratch/p3r2-20261114T185657Z/new/purged/aero-price_usd-20261114T222138Z.json",
+  "exportSha256": "5d4ecbdf6b87f375fc3e0072b83bfcc21558ee0e8227872030f49cb68660731a",
+  "applied": true
+}

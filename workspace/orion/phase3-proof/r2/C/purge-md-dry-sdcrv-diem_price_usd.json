@@ -1,0 +1,20 @@
+{
+  "asset": "sdcrv",
+  "perMetric": [
+    {
+      "metric": "diem_price_usd",
+      "configured": false,
+      "observations": 0,
+      "superseded": 0,
+      "firstDay": null,
+      "lastDay": null,
+      "valueSum": 0,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 0
+    }
+  ],
+  "exportFile": null,
+  "exportSha256": null,
+  "applied": false
+}

@@ -1,0 +1,89 @@
+{
+  "asset": "ycrv",
+  "from": null,
+  "applied": true,
+  "perMetric": [
+    {
+      "metric": "flow_usd.fees",
+      "rows": 233,
+      "repriced": 233,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 1123055.937949467,
+      "newSum": 1123105.5741948662,
+      "inactiveCoingeckoRows": 103
+    },
+    {
+      "metric": "flow_usd.yearn_gross",
+      "rows": 397,
+      "repriced": 397,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 3563694.3907764074,
+      "newSum": 3565231.0008853413,
+      "inactiveCoingeckoRows": 0
+    },
+    {
+      "metric": "flow_usd.yearn_gross_fees",
+      "rows": 188,
+      "repriced": 188,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 320307.80477561743,
+      "newSum": 320364.6524846611,
+      "inactiveCoingeckoRows": 0
+    },
+    {
+      "metric": "flow_usd.yearn_gross_incentives",
+      "rows": 188,
+      "repriced": 188,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 869950.4459647575,
+      "newSum": 869944.2510355054,
+      "inactiveCoingeckoRows": 0
+    },
+    {
+      "metric": "flow_usd.yearn_revenue",
+      "rows": 397,
+      "repriced": 397,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 866063.1137661176,
+      "newSum": 866396.6951432033,
+      "inactiveCoingeckoRows": 0
+    },
+    {
+      "metric": "flow_usd.yearn_styc_fee",
+      "rows": 396,
+      "repriced": 396,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 148324.62891012864,
+      "newSum": 148969.70428374494,
+      "inactiveCoingeckoRows": 0
+    }
+  ],
+  "derived": [],
+  "remapped": [
+    {
+      "from": "coingecko:crvusd",
+      "to": "eip155:1/0xf939e0a03fb07f59a73314e73794be0e57ac1b4e",
+      "rows": 630
+    },
+    {
+      "from": "coingecko:yearn-crv",
+      "to": "eip155:1/0xfcc5c47be19d06bf83eb04298b026f81069ff65b",
+      "rows": 396
+    }
+  ],
+  "days": 397,
+  "exportFile": "/home/hermes/.hermes/profiles/raymond/cache/scratch/p3r2-20261114T185657Z/new/repriced/ycrv-20261114T222111Z.json",
+  "exportSha256": "bde7c5d570c365d624e285f563288e375017478a9c15266dc336063cdeb261b5"
+}

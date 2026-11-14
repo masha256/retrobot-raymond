@@ -1,0 +1,53 @@
+asset | metric | rows | repriced | unchanged | refused | skipped | old -> new USD (delta %) | inactive CG rows
+cake | flow_usd.burn | 395 | 395 | 0 | 0 | {} | 67,996,158 -> 66,697,401 (-1.910%) | 100
+cake | flow_usd.treasury | 395 | 395 | 0 | 0 | {} | 30,885,936 -> 30,232,701 (-2.115%) | 100
+crv | flow_usd.curve_treasury | 396 | 396 | 0 | 0 | {} | 881,537 -> 881,612 (+0.009%) | 0
+crv | flow_usd.fees | 233 | 233 | 0 | 0 | {} | 3,707,823 -> 3,707,308 (-0.014%) | 104
+crv | flow_usd.protocol_revenue | 397 | 397 | 0 | 0 | {} | 8,815,367 -> 8,816,125 (+0.009%) | 0
+cvxcrv | flow_usd.convex_gross_crv | 397 | 397 | 0 | 0 | {} | 23,440,643 -> 23,418,181 (-0.096%) | 0
+cvxcrv | flow_usd.convex_rev_cvx | 397 | 397 | 0 | 0 | {} | 1,054,834 -> 1,053,823 (-0.096%) | 0
+cvxcrv | flow_usd.convex_rev_cvxcrv | 397 | 397 | 0 | 0 | {} | 2,344,075 -> 2,341,829 (-0.096%) | 0
+cvxcrv | flow_usd.convex_rev_treasury | 397 | 397 | 0 | 0 | {} | 468,815 -> 468,366 (-0.096%) | 0
+cvxcrv | flow_usd.crv | 233 | 233 | 0 | 0 | {} | 1,124,892 -> 1,124,744 (-0.013%) | 103
+cvxcrv | flow_usd.cvx | 233 | 233 | 0 | 0 | {} | 469,511 -> 469,019 (-0.105%) | 103
+cvxcrv | flow_usd.fees | 233 | 233 | 0 | 0 | {} | 1,976,017 -> 1,976,081 (+0.003%) | 103
+link | flow_usd.reserve | 391 | 391 | 0 | 0 | {} | 64,355,161 -> 62,971,948 (-2.149%) | 100
+pump | flow_usd.buyback | 391 | 28 | 0 | 0 | {'defillama_history': 363} | 19,528,060 -> 19,524,410 (-0.019%) | 0
+sdcrv | flow_usd.bribes | 233 | 233 | 0 | 0 | {} | 1,211,120 -> 1,208,797 (-0.192%) | 103
+sdcrv | flow_usd.crv | 233 | 233 | 0 | 0 | {} | 140,884 -> 140,636 (-0.176%) | 103
+sdcrv | flow_usd.fees | 233 | 233 | 0 | 0 | {} | 490,532 -> 490,542 (+0.002%) | 103
+sdcrv | flow_usd.sd_boost_delegation | 396 | 396 | 0 | 0 | {} | 150,502 -> 150,561 (+0.039%) | 0
+sdcrv | flow_usd.sd_gross_crv | 397 | 397 | 0 | 0 | {} | 7,727,330 -> 7,717,164 (-0.132%) | 0
+sdcrv | flow_usd.sd_rev_crv | 397 | 397 | 0 | 0 | {} | 1,373,277 -> 1,373,916 (+0.047%) | 0
+sdcrv | flow_usd.sd_rev_crv_treasury | 396 | 396 | 0 | 0 | {} | 457,851 -> 458,064 (+0.047%) | 0
+sdcrv | flow_usd.sd_rev_crv_vesdt | 396 | 396 | 0 | 0 | {} | 499,324 -> 499,556 (+0.047%) | 0
+sdcrv | flow_usd.sd_rev_fees_liquidity | 397 | 397 | 0 | 0 | {} | 118,942 -> 118,942 (-0.000%) | 0
+sdcrv | flow_usd.sd_rev_fees_treasury | 397 | 397 | 0 | 0 | {} | 59,471 -> 59,471 (-0.000%) | 0
+sky | flow_usd.buyback | 391 | 391 | 0 | 0 | {} | 51,471,911 -> 51,567,964 (+0.187%) | 100
+sky | flow_usd.stakers | 391 | 391 | 0 | 0 | {} | 11,426,885 -> 11,426,978 (+0.001%) | 100
+uni | flow_usd.burn | 233 | 233 | 0 | 0 | {} | 56,392,972 -> 56,432,235 (+0.070%) | 101
+vvv | flow_usd.burn | 233 | 233 | 0 | 0 | {} | 4,408,866 -> 4,451,150 (+0.959%) | 112
+vvv | flow_usd.burn_programmatic | 233 | 233 | 0 | 0 | {} | 2,172,328 -> 2,172,496 (+0.008%) | 112
+vvv | derived | [{"metric": "usage_index", "rows": 204, "recomputed": 204, "unchanged": 0, "incomplete": 0}]
+ycrv | flow_usd.fees | 233 | 233 | 0 | 0 | {} | 1,123,056 -> 1,123,106 (+0.004%) | 103
+ycrv | flow_usd.yearn_gross | 397 | 397 | 0 | 0 | {} | 3,563,694 -> 3,565,231 (+0.043%) | 0
+ycrv | flow_usd.yearn_gross_fees | 188 | 188 | 0 | 0 | {} | 320,308 -> 320,365 (+0.018%) | 0
+ycrv | flow_usd.yearn_gross_incentives | 188 | 188 | 0 | 0 | {} | 869,950 -> 869,944 (-0.001%) | 0
+ycrv | flow_usd.yearn_revenue | 397 | 397 | 0 | 0 | {} | 866,063 -> 866,397 (+0.039%) | 0
+ycrv | flow_usd.yearn_styc_fee | 396 | 396 | 0 | 0 | {} | 148,325 -> 148,970 (+0.435%) | 0
+ycrv | remapped | [{"from": "coingecko:crvusd", "to": "eip155:1/0xf939e0a03fb07f59a73314e73794be0e57ac1b4e", "rows": 630}, {"from": "coingecko:yearn-crv", "to": "eip155:1/0xfcc5c47be19d06bf83eb04298b026f81069ff65b", "rows": 396}]
+inactive CoinGecko rows total 1650
+
+aero {"applied": false, "perMetric": [1, [{"metric": "price_usd", "tokenRef": "eip155:8453/0x3f5bf3edac59d650d8fdf9657a71f2f904a3a4ee", "rows": 45, "rebuilt": 20, "refused": [{"id": 417, "observedAt": "2026-09-24T01:38:28.381Z", "reason": "no chain/first-party price of eip155:8453/0x3f5bf3edac59d650d8fdf9657a71f2f904a3a4ee in the 6 h to 2026-09-24T00:38:28.381Z"}, {"id": 516, "observedAt": "2026-09-24T
+cake {"applied": false, "perMetric": [1, [{"metric": "price_usd", "tokenRef": "eip155:56/0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82", "rows": 35, "rebuilt": 35, "refused": []}]], "days": 0}
+crv {"applied": false, "perMetric": [1, [{"metric": "price_usd", "tokenRef": "eip155:1/0xd533a949740bb3306d119cc777fa900ba034cd52", "rows": 38, "rebuilt": 38, "refused": []}]], "days": 0}
+cvxcrv {"applied": false, "perMetric": [1, [{"metric": "price_usd", "tokenRef": "eip155:1/0x62b9c7356a2dc64a1969e19c23e4f579f9810aa7", "rows": 37, "rebuilt": 37, "refused": []}]], "days": 0}
+hype {"applied": false, "perMetric": [1, [{"metric": "price_usd", "tokenRef": "hyperliquid:spot/@107", "rows": 50, "rebuilt": 50, "refused": []}]], "days": 0}
+link {"applied": false, "perMetric": [1, [{"metric": "price_usd", "tokenRef": "eip155:1/0x514910771af9ca656af840dff83e8264ecf986ca", "rows": 32, "rebuilt": 32, "refused": []}]], "days": 0}
+lit {"applied": false, "perMetric": [1, [{"metric": "price_usd", "tokenRef": "eip155:1/0x232ce3bd40fcd6f80f3d55a522d03f25df784ee2", "rows": 33, "rebuilt": 33, "refused": []}]], "days": 0}
+pump {"applied": false, "perMetric": [1, [{"metric": "price_usd", "tokenRef": "solana:mainnet/pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn", "rows": 32, "rebuilt": 32, "refused": []}]], "days": 0}
+sdcrv {"applied": false, "perMetric": [1, [{"metric": "price_usd", "tokenRef": "eip155:1/0xd1b5651e55d4ceed36251c61c50c889b36f6abb5", "rows": 37, "rebuilt": 37, "refused": []}]], "days": 0}
+sky {"applied": false, "perMetric": [1, [{"metric": "price_usd", "tokenRef": "eip155:1/0x56072c95faa701256059aa122697b133aded9279", "rows": 31, "rebuilt": 31, "refused": []}]], "days": 0}
+uni {"applied": false, "perMetric": [1, [{"metric": "price_usd", "tokenRef": "eip155:1/0x1f9840a85d5af5bf1d1762f925bdaddc4201f984", "rows": 35, "rebuilt": 35, "refused": []}]], "days": 0}
+vvv {"applied": false, "perMetric": [2, [{"metric": "diem_price_usd", "tokenRef": "eip155:8453/0xf4d97f2da56e8c3098f3a8d538db630a2606a024", "rows": 52, "rebuilt": 52, "refused": []}, {"metric": "price_usd", "tokenRef": "eip155:8453/0xacfe6019ed1a7dc6f7b508c02d1b04ec88cc21bf", "rows": 52, "rebuilt": 52, "refused": []}]], "days": 0}
+ycrv {"applied": false, "perMetric": [1, [{"metric": "price_usd", "tokenRef": "eip155:1/0xfcc5c47be19d06bf83eb04298b026f81069ff65b", "rows": 37, "rebuilt": 37, "refused": []}]], "days": 0}

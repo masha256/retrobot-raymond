@@ -1,0 +1,20 @@
+{
+  "asset": "lit",
+  "perMetric": [
+    {
+      "metric": "price_usd",
+      "configured": true,
+      "observations": 33,
+      "superseded": 33,
+      "firstDay": "2026-10-16",
+      "lastDay": "2026-11-14",
+      "valueSum": 106.05000000000001,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 0
+    }
+  ],
+  "exportFile": "/home/hermes/.hermes/profiles/raymond/cache/scratch/p3r2-20261114T185657Z/new/purged/lit-price_usd-20261114T222156Z.json",
+  "exportSha256": "37b91a88075809fef63d51932da7fcf7076d5125803d777fce08249e845364fa",
+  "applied": true
+}

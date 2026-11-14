@@ -1,0 +1,140 @@
+{
+  "asset": "aero",
+  "applied": true,
+  "perMetric": [
+    {
+      "metric": "price_usd",
+      "tokenRef": "eip155:8453/0x3f5bf3edac59d650d8fdf9657a71f2f904a3a4ee",
+      "rows": 45,
+      "rebuilt": 20,
+      "refused": [
+        {
+          "id": 417,
+          "observedAt": "2026-09-24T01:38:28.381Z",
+          "reason": "no chain/first-party price of eip155:8453/0x3f5bf3edac59d650d8fdf9657a71f2f904a3a4ee in the 6 h to 2026-09-24T00:38:28.381Z"
+        },
+        {
+          "id": 516,
+          "observedAt": "2026-09-24T01:51:44.515Z",
+          "reason": "no chain/first-party price of eip155:8453/0x3f5bf3edac59d650d8fdf9657a71f2f904a3a4ee in the 6 h to 2026-09-24T00:51:44.515Z"
+        },
+        {
+          "id": 523,
+          "observedAt": "2026-09-24T01:54:12.202Z",
+          "reason": "no chain/first-party price of eip155:8453/0x3f5bf3edac59d650d8fdf9657a71f2f904a3a4ee in the 6 h to 2026-09-24T00:54:12.202Z"
+        },
+        {
+          "id": 531,
+          "observedAt": "2026-09-24T01:54:14.261Z",
+          "reason": "no chain/first-party price of eip155:8453/0x3f5bf3edac59d650d8fdf9657a71f2f904a3a4ee in the 6 h to 2026-09-24T00:54:14.261Z"
+        },
+        {
+          "id": 720,
+          "observedAt": "2026-10-03T08:39:58.233Z",
+          "reason": "no chain/first-party price of eip155:8453/0x3f5bf3edac59d650d8fdf9657a71f2f904a3a4ee in the 6 h to 2026-10-03T07:39:58.233Z"
+        },
+        {
+          "id": 773,
+          "observedAt": "2026-10-03T08:52:42.988Z",
+          "reason": "no chain/first-party price of eip155:8453/0x3f5bf3edac59d650d8fdf9657a71f2f904a3a4ee in the 6 h to 2026-10-03T07:52:42.988Z"
+        },
+        {
+          "id": 795,
+          "observedAt": "2026-10-03T10:03:54.152Z",
+          "reason": "no chain/first-party price of eip155:8453/0x3f5bf3edac59d650d8fdf9657a71f2f904a3a4ee in the 6 h to 2026-10-03T09:03:54.152Z"
+        },
+        {
+          "id": 832,
+          "observedAt": "2026-10-04T00:15:11.507Z",
+          "reason": "no chain/first-party price of eip155:8453/0x3f5bf3edac59d650d8fdf9657a71f2f904a3a4ee in the 6 h to 2026-10-03T23:15:11.507Z"
+        },
+        {
+          "id": 863,
+          "observedAt": "2026-10-05T00:15:11.660Z",
+          "reason": "no chain/first-party price of eip155:8453/0x3f5bf3edac59d650d8fdf9657a71f2f904a3a4ee in the 6 h to 2026-10-04T23:15:11.660Z"
+        },
+        {
+          "id": 898,
+          "observedAt": "2026-10-06T00:15:11.540Z",
+          "reason": "no chain/first-party price of eip155:8453/0x3f5bf3edac59d650d8fdf9657a71f2f904a3a4ee in the 6 h to 2026-10-05T23:15:11.540Z"
+        },
+        {
+          "id": 935,
+          "observedAt": "2026-10-07T00:15:11.524Z",
+          "reason": "no chain/first-party price of eip155:8453/0x3f5bf3edac59d650d8fdf9657a71f2f904a3a4ee in the 6 h to 2026-10-06T23:15:11.524Z"
+        },
+        {
+          "id": 968,
+          "observedAt": "2026-10-08T00:15:11.668Z",
+          "reason": "no chain/first-party price of eip155:8453/0x3f5bf3edac59d650d8fdf9657a71f2f904a3a4ee in the 6 h to 2026-10-07T23:15:11.668Z"
+        },
+        {
+          "id": 1120,
+          "observedAt": "2026-10-09T00:15:11.584Z",
+          "reason": "no chain/first-party price of eip155:8453/0x3f5bf3edac59d650d8fdf9657a71f2f904a3a4ee in the 6 h to 2026-10-08T23:15:11.584Z"
+        },
+        {
+          "id": 1914,
+          "observedAt": "2026-10-10T00:15:11.574Z",
+          "reason": "no chain/first-party price of eip155:8453/0x3f5bf3edac59d650d8fdf9657a71f2f904a3a4ee in the 6 h to 2026-10-09T23:15:11.574Z"
+        },
+        {
+          "id": 6657,
+          "observedAt": "2026-10-11T00:15:11.534Z",
+          "reason": "no chain/first-party price of eip155:8453/0x3f5bf3edac59d650d8fdf9657a71f2f904a3a4ee in the 6 h to 2026-10-10T23:15:11.534Z"
+        },
+        {
+          "id": 8950,
+          "observedAt": "2026-10-12T12:15:11.591Z",
+          "reason": "no chain/first-party price of eip155:8453/0x3f5bf3edac59d650d8fdf9657a71f2f904a3a4ee in the 6 h to 2026-10-12T11:15:11.591Z"
+        },
+        {
+          "id": 14477,
+          "observedAt": "2026-10-13T12:15:11.599Z",
+          "reason": "no chain/first-party price of eip155:8453/0x3f5bf3edac59d650d8fdf9657a71f2f904a3a4ee in the 6 h to 2026-10-13T11:15:11.599Z"
+        },
+        {
+          "id": 15213,
+          "observedAt": "2026-10-14T12:15:11.573Z",
+          "reason": "no chain/first-party price of eip155:8453/0x3f5bf3edac59d650d8fdf9657a71f2f904a3a4ee in the 6 h to 2026-10-14T11:15:11.573Z"
+        },
+        {
+          "id": 15334,
+          "observedAt": "2026-10-15T12:15:11.669Z",
+          "reason": "no chain/first-party price of eip155:8453/0x3f5bf3edac59d650d8fdf9657a71f2f904a3a4ee in the 6 h to 2026-10-15T11:15:11.669Z"
+        },
+        {
+          "id": 15455,
+          "observedAt": "2026-10-16T12:15:11.553Z",
+          "reason": "no chain/first-party price of eip155:8453/0x3f5bf3edac59d650d8fdf9657a71f2f904a3a4ee in the 6 h to 2026-10-16T11:15:11.553Z"
+        },
+        {
+          "id": 23961,
+          "observedAt": "2026-10-17T12:15:11.570Z",
+          "reason": "no chain/first-party price of eip155:8453/0x3f5bf3edac59d650d8fdf9657a71f2f904a3a4ee in the 6 h to 2026-10-17T11:15:11.570Z"
+        },
+        {
+          "id": 24156,
+          "observedAt": "2026-10-18T12:15:11.593Z",
+          "reason": "no chain/first-party price of eip155:8453/0x3f5bf3edac59d650d8fdf9657a71f2f904a3a4ee in the 6 h to 2026-10-18T11:15:11.593Z"
+        },
+        {
+          "id": 24372,
+          "observedAt": "2026-10-19T14:24:45.140Z",
+          "reason": "no chain/first-party price of eip155:8453/0x3f5bf3edac59d650d8fdf9657a71f2f904a3a4ee in the 6 h to 2026-10-19T13:24:45.140Z"
+        },
+        {
+          "id": 24565,
+          "observedAt": "2026-10-20T12:15:47.765Z",
+          "reason": "no chain/first-party price of eip155:8453/0x3f5bf3edac59d650d8fdf9657a71f2f904a3a4ee in the 6 h to 2026-10-20T11:15:47.765Z"
+        },
+        {
+          "id": 24786,
+          "observedAt": "2026-10-21T12:15:47.974Z",
+          "reason": "no chain/first-party price of eip155:8453/0x3f5bf3edac59d650d8fdf9657a71f2f904a3a4ee in the 6 h to 2026-10-21T11:15:47.974Z"
+        }
+      ]
+    }
+  ],
+  "days": 20
+}

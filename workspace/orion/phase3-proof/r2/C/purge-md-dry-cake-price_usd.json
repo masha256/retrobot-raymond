@@ -1,0 +1,20 @@
+{
+  "asset": "cake",
+  "perMetric": [
+    {
+      "metric": "price_usd",
+      "configured": true,
+      "observations": 35,
+      "superseded": 35,
+      "firstDay": "2026-10-12",
+      "lastDay": "2026-11-14",
+      "valueSum": 71.27,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 0
+    }
+  ],
+  "exportFile": null,
+  "exportSha256": null,
+  "applied": false
+}

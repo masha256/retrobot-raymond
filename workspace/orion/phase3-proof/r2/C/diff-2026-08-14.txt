@@ -1,0 +1,87 @@
+== aero: 0 changed
+anomalies.json: ERROR [Errno 2] No such file or directory: 'C/rep-2026-08-14/anomalies.json'
+== cake: 57 changed
+   incomeStatement.holderFlow.growth.change: -0.3079279150883403 -> -0.25617885446625166 +16.8056%
+   incomeStatement.holderFlow.lines[burn].growth.change: -0.3079279150883403 -> -0.25617885446625166 +16.8056%
+   incomeStatement.holders.growth.change: -0.3079279150883403 -> -0.25617885446625166 +16.8056%
+   incomeStatement.holders.lines[burn].growth.change: -0.3079279150883403 -> -0.25617885446625166 +16.8056%
+   incomeStatement.revenue.lines[burn_rev].growth.change: -0.3079279150883403 -> -0.25617885446625166 +16.8056%
+   incomeStatement.revenue.growth.change: -0.3276676992127612 -> -0.2746845426191463 +16.1698%
+   incomeStatement.protocol.growth.change: -0.37543963048323803 -> -0.32003412292335065 +14.7575%
+   incomeStatement.protocol.lines[treasury].growth.change: -0.37543963048323803 -> -0.32003412292335065 +14.7575%
+== crv: 34 changed
+   incomeStatement.protocol.growth.annualized: 1.006938316813982 -> 1.007274748182712 +0.0334%
+   incomeStatement.protocol.lines[treasury].growth.annualized: 1.006938316813982 -> 1.007274748182712 +0.0334%
+   incomeStatement.revenue.lines[treasury_rev].growth.annualized: 1.006938316813982 -> 1.007274748182712 +0.0334%
+   incomeStatement.protocol.growth.change: 0.18966940007521238 -> 0.1897191176519415 +0.0262%
+   incomeStatement.protocol.lines[treasury].growth.change: 0.18966940007521238 -> 0.1897191176519415 +0.0262%
+   incomeStatement.revenue.lines[treasury_rev].growth.change: 0.18966940007521238 -> 0.1897191176519415 +0.0262%
+   incomeStatement.protocol.annualized: 643031.343661191 -> 643084.7175969412 +0.0083%
+   incomeStatement.protocol.lines[treasury].annualized: 643031.343661191 -> 643084.7175969412 +0.0083%
+== cvxcrv: 99 changed
+   incomeStatement.volume.growth.change: -0.03866365609689104 -> -0.04218654214497264 -9.1116%
+   incomeStatement.operatingCosts.growth.change: -0.038663656096891486 -> -0.04218654214497275 -9.1116%
+   incomeStatement.operatingCosts.lines[callers].growth.change: -0.038663656096891486 -> -0.04218654214497275 -9.1116%
+   incomeStatement.revenue.lines[callers_fee].growth.change: -0.038663656096891486 -> -0.04218654214497275 -9.1116%
+   incomeStatement.holders.lines[crv].growth.change: -0.038663656096891486 -> -0.04218654214497264 -9.1116%
+   incomeStatement.revenue.lines[platform_cvxcrv].growth.change: -0.038663656096891486 -> -0.04218654214497264 -9.1116%
+   incomeStatement.protocol.growth.change: -0.03866365609689104 -> -0.04218654214497186 -9.1116%
+   incomeStatement.protocol.lines[cvx_stakers].growth.change: -0.03866365609689115 -> -0.04218654214497175 -9.1116%
+== hype: 0 changed
+== link: 40 changed
+   incomeStatement.holderFlow.growth.annualized: -0.10201294324104138 -> 0.03945874785408665 +138.6801%
+   incomeStatement.holderFlow.lines[reserve].growth.annualized: -0.10201294324104138 -> 0.03945874785408665 +138.6801%
+   incomeStatement.holders.growth.annualized: -0.10201294324104138 -> 0.03945874785408665 +138.6801%
+   incomeStatement.holders.lines[reserve].growth.annualized: -0.10201294324104138 -> 0.03945874785408665 +138.6801%
+   incomeStatement.revenue.growth.annualized: -0.10201294324104138 -> 0.03945874785408665 +138.6801%
+   incomeStatement.revenue.lines[onchain_fees].growth.annualized: -0.10201294324104138 -> 0.03945874785408665 +138.6801%
+   incomeStatement.holderFlow.growth.change: -0.026469581062382286 -> 0.009695225903076254 +136.6278%
+   incomeStatement.holderFlow.lines[reserve].growth.change: -0.026469581062382286 -> 0.009695225903076254 +136.6278%
+== lit: 0 changed
+proposals.json: ERROR [Errno 2] No such file or directory: 'C/rep-2026-08-14/proposals.json'
+== pump: 0 changed
+== sdcrv: 113 changed
+   incomeStatement.protocol.growth.change: -0.15469848022229704 -> -0.16118508170746304 -4.1931%
+   incomeStatement.protocol.lines[vesdt].growth.change: -0.19746174081310452 -> -0.2044548070570843 -3.5415%
+   incomeStatement.revenue.lines[vesdt_rev].growth.change: -0.19746174081310452 -> -0.2044548070570843 -3.5415%
+   incomeStatement.protocol.lines[treasury_crv].growth.change: -0.19746174081310452 -> -0.20445480705708408 -3.5415%
+   incomeStatement.revenue.lines[treasury_crv_rev].growth.change: -0.19746174081310452 -> -0.20445480705708408 -3.5415%
+   incomeStatement.protocol.growth.annualized: -0.4903822695533786 -> -0.5058876037939076 -3.1619%
+   incomeStatement.operatingCosts.growth.change: -0.21905497433782462 -> -0.22595602505407353 -3.1504%
+   incomeStatement.operatingCosts.lines[boost_delegators].growth.change: -0.21905497433782462 -> -0.22595602505407353 -3.1504%
+== sky: 40 changed
+   incomeStatement.holderFlow.growth.prior: 10159266.305810992 -> 10183946.551948434 +0.2429%
+   incomeStatement.holderFlow.lines[buyback].growth.prior: 10159266.305810992 -> 10183946.551948434 +0.2429%
+   incomeStatement.holders.growth.prior: 10159266.305810992 -> 10183946.551948434 +0.2429%
+   incomeStatement.holders.lines[buyback].growth.prior: 10159266.305810992 -> 10183946.551948434 +0.2429%
+   incomeStatement.revenue.growth.prior: 10159266.305810992 -> 10183946.551948434 +0.2429%
+   incomeStatement.revenue.lines[surplus_buyback].growth.prior: 10159266.305810992 -> 10183946.551948434 +0.2429%
+   incomeStatement.holderFlow.growth.change: -0.6659103587313393 -> -0.666727856950788 -0.1228%
+   incomeStatement.holderFlow.lines[buyback].growth.change: -0.6659103587313393 -> -0.666727856950788 -0.1228%
+== uni: 22 changed
+   incomeStatement.holderFlow.growth.current: 14016225.02516753 -> 14066704.595519999 +0.3602%
+   incomeStatement.holderFlow.lines[burn].growth.current: 14016225.02516753 -> 14066704.595519999 +0.3602%
+   incomeStatement.holders.growth.current: 14016225.02516753 -> 14066704.595519999 +0.3602%
+   incomeStatement.holders.lines[burn].growth.current: 14016225.02516753 -> 14066704.595519999 +0.3602%
+   incomeStatement.revenue.growth.current: 14016225.02516753 -> 14066704.595519999 +0.3602%
+   incomeStatement.revenue.lines[protocol_fees].growth.current: 14016225.02516753 -> 14066704.595519999 +0.3602%
+   incomeStatement.revenue.lines[protocol_fees].windowSum: 14016225.02516753 -> 14066704.595519999 +0.3602%
+   incomeStatement.holderFlow.byBucket.burn.fromRevenue: 56218924.55149614 -> 56421397.55345934 +0.3602%
+== vvv: 20 changed
+   incomeStatement.ratios.payoutRatio: 0.0693080039427803 -> 0.07001403312149558 +1.0187%
+   incomeStatement.holderFlow.byBucket.burn.fromRevenue: 4851560.275994621 -> 4900982.31850469 +1.0187%
+   incomeStatement.holderFlow.byBucket.burn.gross: 4851560.275994621 -> 4900982.31850469 +1.0187%
+   incomeStatement.holderFlow.byBucket.burn.net: 4851560.275994621 -> 4900982.31850469 +1.0187%
+   incomeStatement.holderFlow.fromRevenue: 4851560.275994621 -> 4900982.31850469 +1.0187%
+   incomeStatement.holderFlow.gross: 4851560.275994621 -> 4900982.31850469 +1.0187%
+   incomeStatement.holderFlow.lines[burn].gross: 4851560.275994621 -> 4900982.31850469 +1.0187%
+   incomeStatement.holderFlow.lines[burn].net: 4851560.275994621 -> 4900982.31850469 +1.0187%
+== ycrv: 68 changed
+   incomeStatement.unreconciled.annualized: -50.79414251548587 -> -50.834004151052795 -0.0785%
+   incomeStatement.volume.growth.change: -0.23486635148316293 -> -0.23470466464512174 +0.0688%
+   incomeStatement.holderFlow.lines[ybs_payout].growth.current: 113171.89956296445 -> 113248.59631804076 +0.0678%
+   incomeStatement.holders.growth.current: 113171.89956296445 -> 113248.59631804076 +0.0678%
+   incomeStatement.holders.lines[ybs_payout].growth.current: 113171.89956296445 -> 113248.59631804076 +0.0678%
+   incomeStatement.holderFlow.byBucket.cash.fromRevenue: 453931.24549980246 -> 454238.875341592 +0.0678%
+   incomeStatement.holderFlow.fromRevenue: 453931.24549980246 -> 454238.875341592 +0.0678%
+   incomeStatement.holderFlow.lines[ybs_payout].gross: 453931.24549980246 -> 454238.875341592 +0.0678%

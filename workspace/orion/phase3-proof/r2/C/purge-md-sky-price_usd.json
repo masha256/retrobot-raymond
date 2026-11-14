@@ -1,0 +1,20 @@
+{
+  "asset": "sky",
+  "perMetric": [
+    {
+      "metric": "price_usd",
+      "configured": true,
+      "observations": 31,
+      "superseded": 31,
+      "firstDay": "2026-10-16",
+      "lastDay": "2026-11-14",
+      "valueSum": 2.0738690000000006,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 0
+    }
+  ],
+  "exportFile": "/home/hermes/.hermes/profiles/raymond/cache/scratch/p3r2-20261114T185657Z/new/purged/sky-price_usd-20261114T222204Z.json",
+  "exportSha256": "b7c929f998a922033f2de19fa331bd037075f4b30c35ab88ea4ac5dbd70202bf",
+  "applied": true
+}

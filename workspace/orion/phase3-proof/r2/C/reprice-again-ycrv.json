@@ -1,0 +1,78 @@
+{
+  "asset": "ycrv",
+  "from": null,
+  "applied": false,
+  "perMetric": [
+    {
+      "metric": "flow_usd.fees",
+      "rows": 233,
+      "repriced": 0,
+      "unchanged": 233,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 103
+    },
+    {
+      "metric": "flow_usd.yearn_gross",
+      "rows": 397,
+      "repriced": 0,
+      "unchanged": 397,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 0
+    },
+    {
+      "metric": "flow_usd.yearn_gross_fees",
+      "rows": 188,
+      "repriced": 0,
+      "unchanged": 188,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 0
+    },
+    {
+      "metric": "flow_usd.yearn_gross_incentives",
+      "rows": 188,
+      "repriced": 0,
+      "unchanged": 188,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 0
+    },
+    {
+      "metric": "flow_usd.yearn_revenue",
+      "rows": 397,
+      "repriced": 0,
+      "unchanged": 397,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 0
+    },
+    {
+      "metric": "flow_usd.yearn_styc_fee",
+      "rows": 396,
+      "repriced": 0,
+      "unchanged": 396,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 0
+    }
+  ],
+  "derived": [],
+  "remapped": [],
+  "days": 0,
+  "exportFile": null,
+  "exportSha256": null
+}

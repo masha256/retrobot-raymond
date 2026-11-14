@@ -1,0 +1,14 @@
+{
+  "asset": "hype",
+  "applied": true,
+  "perMetric": [
+    {
+      "metric": "price_usd",
+      "tokenRef": "hyperliquid:spot/@107",
+      "rows": 50,
+      "rebuilt": 50,
+      "refused": []
+    }
+  ],
+  "days": 44
+}

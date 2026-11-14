@@ -30,3 +30,12 @@ reprice-dry sky 0
 levels-dry sky 0
 compare uni 0
 reprice-dry uni 0
+levels-dry uni 0
+compare vvv 0
+reprice-dry vvv 0
+levels-dry vvv 0
+compare ycrv 0
+reprice-dry ycrv 0
+levels-dry ycrv 0
+purge-prices-dry 1
+done-B

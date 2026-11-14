@@ -1,0 +1,23 @@
+{
+  "asset": "uni",
+  "from": null,
+  "applied": true,
+  "perMetric": [
+    {
+      "metric": "flow_usd.burn",
+      "rows": 233,
+      "repriced": 233,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 56392971.85408202,
+      "newSum": 56432234.695701785,
+      "inactiveCoingeckoRows": 101
+    }
+  ],
+  "derived": [],
+  "remapped": [],
+  "days": 233,
+  "exportFile": "/home/hermes/.hermes/profiles/raymond/cache/scratch/p3r2-20261114T185657Z/new/repriced/uni-20261114T222108Z.json",
+  "exportSha256": "acf5629494dd2510c0afd11da3c4fcf705a64dcc171b5c70d63825006c540ace"
+}

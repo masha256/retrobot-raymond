@@ -1,0 +1,20 @@
+{
+  "asset": "hype",
+  "perMetric": [
+    {
+      "metric": "price_usd",
+      "configured": true,
+      "observations": 50,
+      "superseded": 50,
+      "firstDay": "2026-10-02",
+      "lastDay": "2026-11-14",
+      "valueSum": 4129.1,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 0
+    }
+  ],
+  "exportFile": "/home/hermes/.hermes/profiles/raymond/cache/scratch/p3r2-20261114T185657Z/new/purged/hype-price_usd-20261114T222150Z.json",
+  "exportSha256": "34618f39b3eb394201ff4caff96e1b4c7f11ac26ae8c8399f1a18cf29df0b04e",
+  "applied": true
+}

@@ -1,0 +1,111 @@
+== aero: 0 changed
+anomalies.json: ERROR [Errno 2] No such file or directory: 'C/rep-2026-11-13/anomalies.json'
+== cake: 83 changed
+   incomeStatement.protocol.growth.annualized: 4.463378506054428 -> 4.385544840387812 -1.7438%
+   incomeStatement.protocol.lines[treasury].growth.annualized: 4.463378506054428 -> 4.385544840387812 -1.7438%
+   incomeStatement.revenue.lines[treasury_rev].growth.annualized: 4.463378506054428 -> 4.385544840387812 -1.7438%
+   incomeStatement.yields.pegTrailing: 0.02170620524698906 -> 0.022057657171557426 +1.6191%
+   incomeStatement.revenue.growth.annualized: 4.679589017130023 -> 4.610600949075824 -1.4742%
+   incomeStatement.holderFlow.growth.annualized: 4.761835566995195 -> 4.696336793660301 -1.3755%
+   incomeStatement.holderFlow.lines[burn].growth.annualized: 4.761835566995195 -> 4.696336793660301 -1.3755%
+   incomeStatement.holders.growth.annualized: 4.761835566995195 -> 4.696336793660301 -1.3755%
+== crv: 83 changed
+   incomeStatement.holderFlow.growth.annualized: 0.5233521410608784 -> 0.5210447009151977 -0.4409%
+   incomeStatement.holderFlow.lines[vecrv_fees].growth.annualized: 0.5233521410608784 -> 0.5210447009151977 -0.4409%
+   incomeStatement.holders.growth.annualized: 0.5233521410608784 -> 0.5210447009151977 -0.4409%
+   incomeStatement.holders.lines[vecrv_fees].growth.annualized: 0.5233521410608784 -> 0.5210447009151977 -0.4409%
+   incomeStatement.protocol.growth.annualized: 0.5233521410608784 -> 0.5210447009151977 -0.4409%
+   incomeStatement.protocol.lines[treasury].growth.annualized: 0.5233521410608784 -> 0.5210447009151977 -0.4409%
+   incomeStatement.revenue.growth.annualized: 0.5233521410608784 -> 0.5210447009151977 -0.4409%
+   incomeStatement.revenue.lines[fees].growth.annualized: 0.5233521410608784 -> 0.5210447009151977 -0.4409%
+== cvxcrv: 158 changed
+   incomeStatement.holderFlow.lines[vecrv_fees].growth.annualized: 0.15580736304974585 -> 0.15377943492141055 -1.3016%
+   incomeStatement.holders.lines[vecrv_fees].growth.annualized: 0.15580736304974585 -> 0.15377943492141055 -1.3016%
+   incomeStatement.revenue.lines[vecrv_fees_rev].growth.annualized: 0.15580736304974585 -> 0.15377943492141055 -1.3016%
+   incomeStatement.operatingCosts.growth.annualized: 1.4019611243212267 -> 1.4197680032853306 +1.2701%
+   incomeStatement.operatingCosts.lines[callers].growth.annualized: 1.4019611243212267 -> 1.4197680032853306 +1.2701%
+   incomeStatement.revenue.lines[callers_fee].growth.annualized: 1.4019611243212267 -> 1.4197680032853306 +1.2701%
+   incomeStatement.protocol.lines[cvx_stakers].growth.annualized: 1.4019611243212218 -> 1.4197680032853253 +1.2701%
+   incomeStatement.revenue.lines[platform_cvx].growth.annualized: 1.4019611243212218 -> 1.4197680032853253 +1.2701%
+== hype: 8 changed
+   incomeStatement.holderFlow.lines[reserve_yield_paid].yield: 0.0027479128385341266 -> 0.002756226969956588 +0.3026%
+   incomeStatement.holders.lines[reserve_yield_paid].yield: 0.0027479128385341266 -> 0.002756226969956588 +0.3026%
+   incomeStatement.priceBasis.price: 71.86 -> 71.64323502 -0.3016%
+   price: 71.86 -> 71.64323502 -0.3016%
+   fdv: 68255452590.272095 -> 68049560691.91946 -0.3016%
+   marketCap: 17083346028.195602 -> 17031814283.690527 -0.3016%
+   incomeStatement.perToken.perTokenFdv.dilution: 0.7513524686418013 -> 0.7490860213437484 -0.3016%
+   incomeStatement.perToken.dilution: 3.00198232344657 -> 2.9929268734284484 -0.3016%
+== link: 65 changed
+   incomeStatement.holderFlow.lines[reserve].growth.change: -0.06584575002490689 -> -0.05915443495477446 +10.1621%
+   incomeStatement.holders.growth.change: -0.06584575002490689 -> -0.05915443495477446 +10.1621%
+   incomeStatement.holders.lines[reserve].growth.change: -0.06584575002490689 -> -0.05915443495477446 +10.1621%
+   incomeStatement.revenue.growth.change: -0.06584575002490689 -> -0.05915443495477446 +10.1621%
+   incomeStatement.revenue.lines[onchain_fees].growth.change: -0.06584575002490689 -> -0.05915443495477446 +10.1621%
+   incomeStatement.holderFlow.growth.change: -0.06584575002490678 -> -0.05915443495477446 +10.1621%
+   incomeStatement.holderFlow.lines[reserve].growth.annualized: -0.23906194228392397 -> -0.21696286066723913 +9.2441%
+   incomeStatement.holders.growth.annualized: -0.23906194228392397 -> -0.21696286066723913 +9.2441%
+== lit: 19 changed
+   incomeStatement.holderFlow.netOfDilution: -412743739.0336073 -> -407478292.3669407 +1.2757%
+   incomeStatement.perToken.holderFlow.netOfDilution: -1.6509749561344291 -> -1.6299131694677627 +1.2757%
+   incomeStatement.perToken.perTokenFdv.holderFlow.netOfDilution: -0.42034813952833533 -> -0.414985682146665 +1.2757%
+   incomeStatement.holderFlow.byBucket.burn.yield: 0.012900949431190245 -> 0.013052272836324442 +1.1730%
+   incomeStatement.holderFlow.lines[buyback].yield: 0.012900949431190245 -> 0.013052272836324442 +1.1730%
+   incomeStatement.holders.lines[buyback].yield: 0.012900949431190245 -> 0.013052272836324442 +1.1730%
+   incomeStatement.yields.buyback: 0.012900949431190245 -> 0.013052272836324442 +1.1730%
+   incomeStatement.yields.shareholder: 0.012900949431190245 -> 0.013052272836324442 +1.1730%
+proposals.json: ERROR [Errno 2] No such file or directory: 'C/rep-2026-11-13/proposals.json'
+== pump: 48 changed
+   incomeStatement.yields.netShareholder: 0.008674016828429595 -> 0.009335575949023678 +7.6269%
+   incomeStatement.perToken.perTokenFdv.holderFlow.netOfDilution: 3.0008455139298467e-05 -> 3.2100690661369886e-05 +6.9722%
+   incomeStatement.holderFlow.netOfDilution: 24693901.230412602 -> 26415597.901999414 +6.9722%
+   incomeStatement.perToken.holderFlow.netOfDilution: 5.38407535133869e-05 -> 5.7594613434295606e-05 +6.9722%
+   incomeStatement.perToken.dilution: 0.00062229849244563 -> 0.000618512713835443 -0.6084%
+   incomeStatement.perToken.perTokenFdv.dilution: 0.00034684166129221464 -> 0.0003447316357042023 -0.6084%
+   incomeStatement.priceBasis.price: 0.00345958 -> 0.0034385335020199735 -0.6084%
+   price: 0.00345958 -> 0.0034385335020199735 -0.6084%
+== sdcrv: 179 changed
+   incomeStatement.belowLine.lines[bribes].growth.annualized: 0.06860698129238663 -> 0.11327759682355709 +65.1109%
+   incomeStatement.holderFlow.lines[bribes].growth.annualized: 0.06860698129238663 -> 0.11327759682355709 +65.1109%
+   incomeStatement.belowLine.lines[bribes].growth.change: 0.016681131092613155 -> 0.027114705560787433 +62.5472%
+   incomeStatement.holderFlow.lines[bribes].growth.change: 0.016681131092613155 -> 0.027114705560787433 +62.5472%
+   incomeStatement.holderFlow.growth.annualized: 0.22970576206866422 -> 0.26186627077666524 +14.0007%
+   incomeStatement.holderFlow.growth.change: 0.05290404545392202 -> 0.05970295598909292 +12.8514%
+   incomeStatement.yields.pegTrailing: 0.210705764652471 -> 0.1842574580099089 -12.5522%
+   incomeStatement.volume.growth.annualized: 0.4604007759915123 -> 0.46687628404531756 +1.4065%
+== sky: 78 changed
+   incomeStatement.yields.netShareholder: 0.03931753764105221 -> 0.03943114396006224 +0.2889%
+   incomeStatement.yields.pegTrailing: 0.00039413101760954065 -> 0.0003930241636475104 -0.2808%
+   incomeStatement.holderFlow.lines[buyback].yield: 0.033946607597737884 -> 0.03401519896211068 +0.2021%
+   incomeStatement.holders.lines[buyback].yield: 0.033946607597737884 -> 0.03401519896211068 +0.2021%
+   incomeStatement.perToken.holderFlow.netOfDilution: 0.0013431793115416036 -> 0.0013458084484718376 +0.1957%
+   incomeStatement.holderFlow.netOfDilution: 31451797.499948908 -> 31513361.195591632 +0.1957%
+   incomeStatement.perToken.perTokenFdv.holderFlow.netOfDilution: 0.0013410889588392717 -> 0.001343714004116634 +0.1957%
+   incomeStatement.holderFlow.byBucket.cash.yield: 0.06150830803576504 -> 0.06162191435477507 +0.1847%
+== uni: 66 changed
+   incomeStatement.yields.netShareholder: 0.005066619574375084 -> 0.005320816922158626 +5.0171%
+   incomeStatement.perToken.holderFlow.netOfDilution: 0.04254732130074924 -> 0.044295189955482345 +4.1081%
+   incomeStatement.perToken.perTokenFdv.holderFlow.netOfDilution: 0.02918372874840048 -> 0.030382613264466698 +4.1081%
+   incomeStatement.holderFlow.netOfDilution: 25854811.399270713 -> 26916942.058434576 +4.1081%
+   incomeStatement.holderFlow.growth.annualized: 39.032402397830104 -> 38.53221232091373 -1.2815%
+   incomeStatement.holderFlow.lines[burn].growth.annualized: 39.032402397830104 -> 38.53221232091373 -1.2815%
+   incomeStatement.holders.growth.annualized: 39.032402397830104 -> 38.53221232091373 -1.2815%
+   incomeStatement.holders.lines[burn].growth.annualized: 39.032402397830104 -> 38.53221232091373 -1.2815%
+== vvv: 56 changed
+   incomeStatement.perToken.perTokenFdv.holderFlow.netOfDilution: -0.3273512215493577 -> -0.32030755337188743 +2.1517%
+   incomeStatement.perToken.holderFlow.netOfDilution: -0.5430969639572942 -> -0.5314110604063588 +2.1517%
+   incomeStatement.holderFlow.netOfDilution: -26595021.57505641 -> -26022772.275784697 +2.1517%
+   incomeStatement.holderFlow.growth.annualized: 31.598628859131118 -> 30.952710400819317 -2.0441%
+   incomeStatement.holderFlow.lines[burn].growth.annualized: 31.598628859131118 -> 30.952710400819317 -2.0441%
+   incomeStatement.holders.growth.annualized: 31.598628859131118 -> 30.952710400819317 -2.0441%
+   incomeStatement.holders.lines[burn].growth.annualized: 31.598628859131118 -> 30.952710400819317 -2.0441%
+   incomeStatement.holderFlow.byBucket.burn.yield: 0.007460708561848565 -> 0.007601302945384215 +1.8845%
+== ycrv: 122 changed
+   incomeStatement.holderFlow.lines[ybs_payout].growth.change: -0.008890830650433057 -> -0.009648454797939743 -8.5214%
+   incomeStatement.holders.growth.change: -0.008890830650433057 -> -0.009648454797939743 -8.5214%
+   incomeStatement.holders.lines[ybs_payout].growth.change: -0.008890830650433057 -> -0.009648454797939743 -8.5214%
+   incomeStatement.belowLine.lines[incentives_to_holders].growth.change: -0.008890830650433057 -> -0.009648454797939632 -8.5214%
+   incomeStatement.holderFlow.growth.change: -0.008890830650433057 -> -0.009648454797939632 -8.5214%
+   incomeStatement.holderFlow.lines[incentives_to_holders].growth.change: -0.008890830650433057 -> -0.009648454797939632 -8.5214%
+   incomeStatement.holderFlow.lines[ybs_payout].growth.annualized: -0.03518653615316969 -> -0.03814133084949778 -8.3975%
+   incomeStatement.holders.growth.annualized: -0.03518653615316969 -> -0.03814133084949778 -8.3975%

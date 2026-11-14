@@ -1,0 +1,45 @@
+{
+  "asset": "crv",
+  "from": null,
+  "applied": true,
+  "perMetric": [
+    {
+      "metric": "flow_usd.curve_treasury",
+      "rows": 396,
+      "repriced": 396,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 881536.6981981897,
+      "newSum": 881612.4606243566,
+      "inactiveCoingeckoRows": 0
+    },
+    {
+      "metric": "flow_usd.fees",
+      "rows": 233,
+      "repriced": 233,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 3707822.7226860193,
+      "newSum": 3707307.892486068,
+      "inactiveCoingeckoRows": 104
+    },
+    {
+      "metric": "flow_usd.protocol_revenue",
+      "rows": 397,
+      "repriced": 397,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 8815366.9819819,
+      "newSum": 8816124.606243566,
+      "inactiveCoingeckoRows": 0
+    }
+  ],
+  "derived": [],
+  "remapped": [],
+  "days": 397,
+  "exportFile": "/home/hermes/.hermes/profiles/raymond/cache/scratch/p3r2-20261114T185657Z/new/repriced/crv-20261114T222052Z.json",
+  "exportSha256": "56ae1956fdeffe4e7689cf928880a85d49d65ef2fd55ec840c887a57325923cd"
+}

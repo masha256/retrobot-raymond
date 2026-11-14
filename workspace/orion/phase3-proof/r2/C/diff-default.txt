@@ -1,0 +1,49 @@
+== aero: 0 changed
+== cake: 83 changed
+   incomeStatement.protocol.growth.annualized: 4.463378506054428 -> 4.385544840387812 -1.7438%
+   incomeStatement.protocol.lines[treasury].growth.annualized: 4.463378506054428 -> 4.385544840387812 -1.7438%
+   incomeStatement.revenue.lines[treasury_rev].growth.annualized: 4.463378506054428 -> 4.385544840387812 -1.7438%
+== crv: 83 changed
+   incomeStatement.holderFlow.growth.annualized: 0.5233521410608784 -> 0.5210447009151977 -0.4409%
+   incomeStatement.holderFlow.lines[vecrv_fees].growth.annualized: 0.5233521410608784 -> 0.5210447009151977 -0.4409%
+   incomeStatement.holders.growth.annualized: 0.5233521410608784 -> 0.5210447009151977 -0.4409%
+== cvxcrv: 158 changed
+   incomeStatement.holderFlow.lines[vecrv_fees].growth.annualized: 0.15580736304974585 -> 0.15377943492141055 -1.3016%
+   incomeStatement.holders.lines[vecrv_fees].growth.annualized: 0.15580736304974585 -> 0.15377943492141055 -1.3016%
+   incomeStatement.revenue.lines[vecrv_fees_rev].growth.annualized: 0.15580736304974585 -> 0.15377943492141055 -1.3016%
+== hype: 22 changed
+   incomeStatement.yields.netShareholder: 0.005053560343060086 -> 0.0049992068080124755 -1.0755%
+   incomeStatement.perToken.holderFlow.netOfDilution: 1.4520761325101819 -> 1.4415110347850955 -0.7276%
+   incomeStatement.holderFlow.netOfDilution: 347636921.1129863 -> 345107564.72307193 -0.7276%
+== link: 65 changed
+   incomeStatement.holderFlow.lines[reserve].growth.change: -0.06584575002490689 -> -0.05915443495477446 +10.1621%
+   incomeStatement.holders.growth.change: -0.06584575002490689 -> -0.05915443495477446 +10.1621%
+   incomeStatement.holders.lines[reserve].growth.change: -0.06584575002490689 -> -0.05915443495477446 +10.1621%
+== lit: 21 changed
+   incomeStatement.perToken.perTokenFdv.holderFlow.netOfDilution: -0.4336235068119929 -> -0.4339007736011747 -0.0639%
+   incomeStatement.perToken.holderFlow.netOfDilution: -1.7031157814593563 -> -1.7042047847926898 -0.0639%
+   incomeStatement.holderFlow.netOfDilution: -425778945.3648391 -> -426051196.19817245 -0.0639%
+== pump: 58 changed
+   incomeStatement.yields.netShareholder: 0.007394660964269717 -> 0.007733823908701851 +4.5866%
+   incomeStatement.perToken.perTokenFdv.holderFlow.netOfDilution: 2.5920135345006394e-05 -> 2.702270589625652e-05 +4.2537%
+   incomeStatement.holderFlow.netOfDilution: 21332196.595236003 -> 22239608.977398455 +4.2537%
+== sdcrv: 179 changed
+   incomeStatement.belowLine.lines[bribes].growth.annualized: 0.06860698129238663 -> 0.11327759682355709 +65.1109%
+   incomeStatement.holderFlow.lines[bribes].growth.annualized: 0.06860698129238663 -> 0.11327759682355709 +65.1109%
+   incomeStatement.belowLine.lines[bribes].growth.change: 0.016681131092613155 -> 0.027114705560787433 +62.5472%
+== sky: 78 changed
+   incomeStatement.yields.netShareholder: 0.03931753764105221 -> 0.03943114396006224 +0.2889%
+   incomeStatement.yields.pegTrailing: 0.00039413101760954065 -> 0.0003930241636475104 -0.2808%
+   incomeStatement.holderFlow.lines[buyback].yield: 0.033946607597737884 -> 0.03401519896211068 +0.2021%
+== uni: 66 changed
+   incomeStatement.yields.netShareholder: 0.005066619574375084 -> 0.005320816922158626 +5.0171%
+   incomeStatement.perToken.holderFlow.netOfDilution: 0.04254732130074924 -> 0.044295189955482345 +4.1081%
+   incomeStatement.perToken.perTokenFdv.holderFlow.netOfDilution: 0.02918372874840048 -> 0.030382613264466698 +4.1081%
+== vvv: 56 changed
+   incomeStatement.perToken.perTokenFdv.holderFlow.netOfDilution: -0.3273512215493577 -> -0.32030755337188743 +2.1517%
+   incomeStatement.perToken.holderFlow.netOfDilution: -0.5430969639572942 -> -0.5314110604063588 +2.1517%
+   incomeStatement.holderFlow.netOfDilution: -26595021.57505641 -> -26022772.275784697 +2.1517%
+== ycrv: 122 changed
+   incomeStatement.holderFlow.lines[ybs_payout].growth.change: -0.008890830650433057 -> -0.009648454797939743 -8.5214%
+   incomeStatement.holders.growth.change: -0.008890830650433057 -> -0.009648454797939743 -8.5214%
+   incomeStatement.holders.lines[ybs_payout].growth.change: -0.008890830650433057 -> -0.009648454797939743 -8.5214%

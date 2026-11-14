@@ -18,7 +18,14 @@ Orion's rule: no live CoinGecko/DefiLlama read; CoinGecko only as a labelled dev
 - A token with no second venue of real depth (sdCRV: ~$430 pool) gets a sanity bound in quote units, labelled
   `no_independent_check`; a same-venue check (HYPE perp vs spot) is labelled `same_venue`. Tell Mike both labels.
 - `valid_from` = the first hour Orion needs (oldest flow row / oldest price_usd row to rebuild), not the method's
-  birth: history on Solana costs ~8-15 requests per hour.
+  birth: history on Solana costs ~8-15 requests per hour. But it can never be earlier than the first hour every
+  contract the method reads exists: find the token's and each pool's creation block (binary-search `eth_getCode`
+  non-empty between two blocks) before setting it. An asset's history start is not its pool's: after a token
+  migration the priced address and its pools can be weeks younger than the asset's oldest rows, so every hour before
+  creation is a `call_failed` re-read on every run, and those older price levels cannot be rebuilt (refused rows stop
+  the release). Raise those to Mike as a decision (keep/delete/price the predecessor token) before the release.
+- Never estimate a historical block as `head - days x blocks_per_day`: chains change block time (Base sped up), so the
+  estimate lands at the wrong date. Read the block's timestamp, or use the stored `hour_blocks` row.
 - Measure archive reach before promising a history horizon: one multicall per chain at the horizon's first hour
   reading every primary, check and feed (non-zero answers).
 
@@ -55,10 +62,30 @@ multicalls for N hours, not 2N. Search each hour's block from the previous hour'
   reserve_x @152, reserve_y @184. The pair OWNS spam token accounts (a second USDC account), so take reserves from the
   LbPair's reserve keys, never "owner == pair". Live price = active-bin price (1 + bin_step/1e4)^active_id x
   10^(dec_x - dec_y), NOT the reserve ratio; history = a swap's execution price from the reserve deltas.
+- Any check priced from ONE swap's execution (Meteora history, last-trade checks) needs a minimum notional: dust
+  swaps (a few raw USDC units) round to absurd prices and give check gaps of 10^5 %, i.e. false WATCH breaches. Skip
+  to the previous qualifying swap, or no reading when none is in the window.
 - Finding a Solana pool address: `getProgramAccounts` with memcmp on the mint is refused by the provider (scan limit);
   look the address up once from a pool directory as a dev-only reference, then verify owner program, mints and bin
   step on chain.
 - Decimals and quote-token addresses an implementer "knows" must be read on chain (decimals(), symbol()) before review.
+
+## Proving a price swap on the prod copy (before the release)
+1. Copy `prices.yaml` into BOTH proof homes from each side's own config source (see `subagent-execution.md`).
+2. Old and new homes share ONE schema: save the old release's baseline reports (D, D-91, default day) BEFORE writing
+   any chain price, and diff old vs new at that point too; it isolates the method change (per-transfer vs hourly view)
+   from the price-source change. Expect zero numeric diffs there.
+3. Smoke one day for all refs first, then size the full rebuild from its per-chain call counts; plan estimates were
+   ~3x low (BNB/Base block search dominates). Run the full rebuild with a stop time clear of prod's nightly (shared
+   RPC key); a driver that calls `writeChainPrices` in 10-min budgets resumes for free (stored hours are skipped).
+   Per-run `missing` lists repeat across resumed runs: count from the DB, not by summing them.
+4. Read the result from the DB: per ref rows, check-gap median/p99/max, over-tolerance counts, and chain vs CoinGecko
+   (dev-only reference) by month. A month where CoinGecko diverges while both independent chain sources agree is a
+   CoinGecko fact to report, not a reader bug (confirm `hour_blocks.block_ts` is on the hour first). A ref with few
+   rows -> check contract creation (valid_from rule above); a giant max gap -> look at the check's `detail` for dust.
+5. Dry runs for every asset (compare-usd, reprice, rebuild-price-levels, purge-prices), then `pg_dump -n <schema>`
+   before any `--yes`, so the apply can be redone after fixes. Report per-metric old->new sums, refused, skipped by
+   reason, remaps, derived recomputes and inactive CoinGecko rows.
 
 ## Re-pricing stored history (release side)
 Adding chain prices does not change stored `value`: re-value in place from the chain-only view (`data reprice`), with an

@@ -1,0 +1,20 @@
+{
+  "asset": "sdcrv",
+  "perMetric": [
+    {
+      "metric": "price_usd",
+      "configured": true,
+      "observations": 37,
+      "superseded": 37,
+      "firstDay": "2026-10-09",
+      "lastDay": "2026-11-14",
+      "valueSum": 6.212340999999998,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 0
+    }
+  ],
+  "exportFile": "/home/hermes/.hermes/profiles/raymond/cache/scratch/p3r2-20261114T185657Z/new/purged/sdcrv-price_usd-20261114T222202Z.json",
+  "exportSha256": "15e3e8f2b7d357fbf4ea615871f99da5c9c904ddf3c8ff54dd878b4e3a3c8072",
+  "applied": true
+}
