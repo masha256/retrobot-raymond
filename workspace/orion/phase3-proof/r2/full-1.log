@@ -4,3 +4,9 @@
 {"run":4,"elapsedS":2548,"stoppedByBudget":true,"reachedMs":1792195200000,"calls":{"eip155:1":772,"eip155:56":1109,"eip155:8453":506,"hyperliquid":2,"lighter":1,"solana":1969},"errors":0}
 {"run":5,"elapsedS":3156,"stoppedByBudget":true,"reachedMs":1791244800000,"calls":{"eip155:1":1349,"eip155:56":1923,"eip155:8453":915,"hyperliquid":2,"lighter":1,"solana":1315},"errors":0}
 {"run":6,"elapsedS":3757,"stoppedByBudget":true,"reachedMs":1788825600000,"calls":{"eip155:1":3143,"eip155:56":4503,"eip155:8453":2403,"hyperliquid":2,"lighter":1},"errors":0}
+{"run":7,"elapsedS":4363,"stoppedByBudget":true,"reachedMs":1786320000000,"calls":{"eip155:1":3215,"eip155:56":4283,"eip155:8453":2787},"errors":0}
+{"run":8,"elapsedS":4968,"stoppedByBudget":true,"reachedMs":1783814400000,"calls":{"eip155:1":3193,"eip155:56":4637,"eip155:8453":2787},"errors":0}
+{"run":9,"elapsedS":5571,"stoppedByBudget":true,"reachedMs":1781395200000,"calls":{"eip155:1":3118,"eip155:56":4469,"eip155:8453":2715},"errors":0}
+{"run":10,"elapsedS":6177,"stoppedByBudget":true,"reachedMs":1778976000000,"calls":{"eip155:1":3112,"eip155:56":4711,"eip155:8453":2715},"errors":0}
+{"run":11,"elapsedS":6780,"stoppedByBudget":true,"reachedMs":1776556800000,"calls":{"eip155:1":3067,"eip155:56":4671,"eip155:8453":2715},"errors":0}
+{"run":12,"elapsedS":7382,"stoppedByBudget":true,"reachedMs":1774137600000,"calls":{"eip155:1":3108,"eip155:56":4503,"eip155:8453":2715},"errors":0}
