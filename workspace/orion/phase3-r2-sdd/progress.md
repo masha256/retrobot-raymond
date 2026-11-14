@@ -92,3 +92,27 @@ Task 3: complete (commits 1d8e9bd..bd4feed, review clean after fix round 1)
 Task 4: fix round 1 committed b50e94b; reported tests/prices 82/82, full 1836/1836, typecheck/lint clean. Re-review dispatched (review-bd4feed..b50e94b.diff) with Task 5 implementer.
 Task 5: dispatched (BASE b50e94b)
 Ruling R17: report/golden fixtures seeding prices with source 'coingecko' are re-seeded with a chain source and identical values, so goldens move only on priceBasis/source labels; any value path moving is a stop — cost if wrong: a golden hides a real value move (mitigated by the flattened path list the implementer must report).
+Task 4: fix round 1/5 (5 addressed, 0 open; commits 27a6ff1..b50e94b)
+Task 4: minor (deferred): a failed LbPair read is not cached (one extra request per PUMP hour while the pair account is bad)
+Task 4: complete (commits a4d49c7..b50e94b, review clean after fix round 1)
+Task 5: committed 7ff7562; reported 1856/1856 (150 files), typecheck/lint/py clean; golden moves: only incomeStatement.priceBasis.flows (39 entries) per implementer; priceBasis.source stays market_data:coingecko until Task 6.
+Carry to Task 9: docs/ops/deploy.md:308 says compare-usd reads flow_usd_v (now flow_usd_chain_v); UsdComparison dropped beyondHourly/beyond, gained dailyMean.
+Ruling R18 (amends R7): Task 6 split so each commit is green — 6a = code (flow.ts reads/ensures chain prices; tokenBackfill price part deleted; solana supply_burn_daily daily mean; levels writes recent hours + alerts; daemon sharedHttpCache removed; coingeckoHourly.ts deleted; price_coingecko_id retired from the schema with its 3-place test) PLUS the mechanical YAML edits that retirement forces (drop price_coingecko_id from 34 transfer_flow lines; share_price.underlying on yCRV's share-priced members) and their hash re-pins. 6b = price.token / price.token_check adapters, every price_usd/diem_price_usd source + cross-check + type:price check repointed, entriesFor from refs (R11), goldens. — cost if wrong: none (two reviews over one task range).
+Ruling R19: a dry-run fetch computes chain prices in memory and writes no prices rows (writer gets a dryRun option returning the rows) — cost if wrong: dry runs would write prices.
+Task 5: review dispatched (review-b50e94b..7ff7562.diff, 942 KB: per-file diffs) with Task 6a implementer.
+Task 6a: dispatched (BASE 7ff7562)
+Task 5: review clean (spec ✅, quality Approved; 17,401 golden values compared, only priceBasis.flows text moved).
+Task 5: minor (deferred): 0008 daily_mean count does not check each price is hour-aligned (writer only stores aligned rows)
+Task 5: minor (deferred): sumHourly field name now also covers daily_mean and usd_native days
+Task 5: minor (deferred): compare-usd --json dropped beyondHourly/beyond, gained dailyMean (consumers: none found)
+Task 5: minor (deferred): hours_priced/hours_needed read n/24 on days without hourly buckets (use usd_basis, not hours_needed > 0)
+Carry to Task 10: tools/phase2-proof/compare.py and tools/phase3-proof/r1-allowlist.json will fail on the new priceBasis.flows text; R2 allowlist must include it.
+Carry to Task 6b: priceBasis.source must move from market_data:coingecko to the chain method when price_usd sources change (goldens).
+Task 5: complete (commits b50e94b..7ff7562, review clean)
+Task 6a: committed 7063c22; reported 1861/1861 (150 files), typecheck/lint/py clean, sources-register current, no golden path moved, 9 asset hash re-pins. Controller: ingest+levels+prices 40 files 517/517; no CoinGecko in flow.ts/solana.ts price paths (levels.ts keeps /coins/markets for remaining coingecko sources until 6b).
+Carry to Task 9: a scan with no stored prices writes every hour of its range inline (no budget) — the release block runs backfill-prices BEFORE the first nightly on the new tag; ORION_ETH_RPC_URL is required on every env (off-chain USD feeds); docs/ops mentions of the shared market_chart cache.
+Task 6a: minor (deferred): prices.yaml ref check at load runs only when the prices map is non-empty (a root without prices.yaml fails later with unknown_price_ref)
+Ruling R20: Task 6a is reviewed on its own now (in parallel with 6b's implementer); 6b gets its own review — cost if wrong: none.
+Ruling R21: AERO keeps its own price_usd adapters (chain.v2_pool_twap_price + cl spot check) in 6b — unchanged report bytes; its prices.yaml entry serves history/level rebuild only — cost if wrong: two definitions of AERO's price (same pools).
+Task 6a: review dispatched (review-7ff7562..7063c22.diff, 391 KB) with Task 6b implementer.
+Task 6b: dispatched (BASE 7063c22)
