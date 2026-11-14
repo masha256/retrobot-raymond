@@ -191,15 +191,15 @@
       "schedule_display": "15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 1643
+        "completed": 1644
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-06T08:57:25.404654-07:00",
-      "next_run_at": "2026-11-13T18:15:00-08:00",
-      "last_run_at": "2026-11-13T16:16:00.558407-08:00",
+      "next_run_at": "2026-11-13T19:15:00-08:00",
+      "last_run_at": "2026-11-13T17:16:02.625261-08:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -219,17 +219,17 @@
       ],
       "workdir": null,
       "fire_claim": {
-        "at": "2026-11-13T17:15:47.334536-08:00",
-        "by": "uranus:2102690:75082b308c2645e08a5360c52f03a576"
+        "at": "2026-11-13T18:15:47.291578-08:00",
+        "by": "uranus:2102690:e2a163c5d13b48ae9cc896f9c16ae64d"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-11-13T17:15:00-08:00",
-        "dispatched_at": "2026-11-13T17:15:46.278007-08:00",
-        "lateness_seconds": 46.3,
+        "scheduled_at": "2026-11-13T18:15:00-08:00",
+        "dispatched_at": "2026-11-13T18:15:46.243456-08:00",
+        "lateness_seconds": 46.2,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "cbd0831ce23040769535599b9aabf2f8"
+        "5ef97b70564646bcb8bab0552ced16ec"
       ],
       "last_failure": {
         "at": "2026-11-07T08:32:32.074347-08:00",
@@ -1187,65 +1187,6 @@
       "catch_up": false
     },
     {
-      "id": "d2e84c857a36",
-      "name": "orion-prod-first-levels-check",
-      "prompt": "One-shot, CHECK ONLY (no writes, no run-now, no deploys). Orion prod was cut over to the daemon on venus at 2026-11-07 ~00:25Z (release orion-2026.11.05.1, 13 assets active, first nightly 00:45Z done with one known failed source: vvv transfer_flow burn_sink, caused by Base's new 200 ms block time; a fix is pending). Verify the first hourly `levels` job on prod after activation (slot 2026-11-07T01:15:00Z) and its snapshot_push: run `ssh -i ~/.ssh/orion-prod_ed25519 -o IdentitiesOnly=yes -o BatchMode=yes orion-prod@192.168.0.12 status` and `... jobs`, and `... logs 40`. Report in 3-5 short bullets: levels job status, assets read / rows / failed / fired / undelivered / deadman (true = the hourly healthchecks ping was sent), the snapshot_push after it (pushed, ref), daemon heartbeat age and release, and any ALERT or failed job since 00:45Z other than the known VVV source. Never fabricate; if SSH fails say so.",
-      "skills": [
-        "orion"
-      ],
-      "skill": "orion",
-      "model": null,
-      "provider": null,
-      "base_url": null,
-      "script": null,
-      "no_agent": false,
-      "monitor_script": null,
-      "monitor_url": null,
-      "monitor_state": null,
-      "context_from": null,
-      "schedule": {
-        "kind": "once",
-        "run_at": "2026-11-06T17:26:26.732476-08:00",
-        "display": "once in 35m"
-      },
-      "schedule_display": "once in 35m",
-      "repeat": {
-        "times": 1,
-        "completed": 1
-      },
-      "enabled": false,
-      "state": "completed",
-      "paused_at": null,
-      "paused_reason": null,
-      "created_at": "2026-11-06T16:51:26.732530-08:00",
-      "next_run_at": null,
-      "last_run_at": "2026-11-06T17:27:20.641900-08:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
-      "last_delivery_unverified": null,
-      "last_failure": null,
-      "failure_streak": 0,
-      "deliver": "slack:C0CB8SJKM8C:1793827233.945569",
-      "origin": {
-        "platform": "slack",
-        "chat_id": "C0CB8SJKM8C",
-        "chat_name": "orion-dev",
-        "thread_id": "1793827233.945569",
-        "user_id": "U0CBKGZFU9E",
-        "scope_id": "T0CAUSENDB6"
-      },
-      "enabled_toolsets": [
-        "terminal"
-      ],
-      "workdir": null,
-      "run_claim": null,
-      "fire_claim": null,
-      "canonical_completions": [
-        "2ad3701c6c8d4afcb1b78075bda8a483"
-      ]
-    },
-    {
       "id": "7d60bfcec67e",
       "name": "orion-prod-phase2-first-nightly-check",
       "prompt": "One-shot, CHECK ONLY (no writes, no deploys, no run-now, no ack/approve; never read /home/hermes/git/orion/orion.db). Orion Phase 2 release 2 (tag orion-2026.11.08.1, main b354680) was deployed to prod (orion-prod@venus) on 2026-11-09 and Mike ran the one-time backfills there (provenance, yCRV by-sender 183 d, token backfill, compare-usd) ~19:00Z. Staging passed its soak on this tag (02:45Z nightly 2026-11-09, no failed sources). Tonight's 00:45 UTC prod nightly is the first prod nightly on the new release.\n\nCheck via `ssh -i ~/.ssh/orion-prod_ed25519 -o IdentitiesOnly=yes -o BatchMode=yes orion-prod@192.168.0.12 status` and `... jobs`, `... logs 300`: the 2026-11-10T00:45Z nightly_report on release orion-2026.11.08.1 is done, sources failed, anomalies raised, alertFlags (Phase 2 check-breach ALERTs name asset, check id, day, gap). Then run `python3 ~/.hermes/profiles/raymond/workspace/orion/phase2-sdd/v2_state.py` (read-only report yield on both envs): expected on prod yCRV v2 revenue present (~$646k/yr on day 2026-11-08; it may move a little for day 2026-11-09), checks now listed with status ok for ycrv (gross_by_sender, splitter) and crv (splitter), price bases 'mixed' on crv/ycrv/vvv and 'legacy' on aero, and prod equal to stage for ycrv/crv revenue on the same day.\n\nReply short, bullets: first line PASS or FAIL for Phase 2 release 2 on prod (the nightly job id, release, status); then failed sources / alerts / anomalies; then the v2 state per asset prod vs stage; then anything unexpected. If PASS end with: 'Phase 2 release 2 complete on prod. Next on the roadmap: Task 10 (G3, provenance NOT NULL, own breaking release) and Task 11 (G4, retire v1 one release later) -- both need Mike's go.'",
@@ -1356,5 +1297,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-11-13T17:15:47.335122-08:00"
+  "updated_at": "2026-11-13T18:15:47.292169-08:00"
 }
