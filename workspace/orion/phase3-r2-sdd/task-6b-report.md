@@ -129,3 +129,96 @@ Final runs (after the commit):
 6. Templates (docs/templates/T*.md) still show a CoinGecko price_usd and a Chainlink price check; docs/ops and the
    ingestion spec are Task 9's. VVV's `external_ids.coingecko_diem` is now unread (R8 drops coingecko ids).
 7. RED evidence for the asset/golden re-pins is the base suite's own failures (116 failing before the test updates).
+
+## Fix wave (task-6-findings.md A-G; Ruling R23) — commit 7202a46
+
+`fix(prices): post flow-scan breaches; alert on levels price failures; PUMP burn ensures its hours; levels fills gaps; AERO hash covers its entry; level price cross-checks only where they existed`
+
+RED run (tests written first, code untouched), `npx vitest run tests/daemon/refresh.test.ts tests/daemon/levelsJob.test.ts tests/levels/levels.test.ts tests/assets/pump.ingest.test.ts tests/prices/config.test.ts tests/assets/lit.ingest.test.ts tests/ingest/adapters.price.test.ts --maxWorkers=1`:
+`Test Files 7 failed (7); Tests 10 failed | 78 passed (88)` — each new/changed test failed for its own reason (quoted per item). GREEN: the same files pass (with the re-pinned files: 17 files 193/193 after the fixes below).
+
+Per item:
+- **A** flow-scan breaches. `FlowScanResult.breaches` (the writer's `w.breaches`); fetchAsset collects them (and C's) into
+  `FetchResult.priceBreaches` (absent when none, so no JSON byte moves), deduped by ref|hour|check, sorted; the refresh job
+  posts each once via `formatPriceBreach` (`RefreshJobResult.breaches`, undelivered kept). Test: tests/daemon/refresh.test.ts
+  "a breach the nightly scan's own price write reports is posted once" (writer fake returns the breach on every call; one
+  post `ORION WATCH dev price MINI 2026-09-18T05:00:00.000Z: +2.50% vs chain:chainlink`, no cross_check_mismatch). RED:
+  `expected [] to deeply equal [ Array(1) ]`. GREEN.
+- **B** levels price failure alert. src/daemon/jobs/levels.ts: when the price summary has errors (prices.yaml unreadable,
+  writer threw, writer chain errors) one `ORION ALERT <env> levels prices: <reasons joined by "; ">` (slackClean) is posted;
+  reads, onLevels/snapshot_push and the dead-man rule unchanged (an undelivered alert withholds the ping like any post).
+  Test: tests/daemon/levelsJob.test.ts "a price write that throws or reports chain errors posts one ORION ALERT ..." (throw:
+  `ORION ALERT dev levels prices: rpc down`, ping sent, snapshot_push enqueued, rows 5; two chain errors: one line
+  `eip155:1: timeout; eip155:56: refused`; clean: no post; undelivered: deadman false). RED `expected [] to deeply equal [ Array(1) ]`. GREEN.
+- **C** PUMP burn ensures its hours. run.ts `ctx.chainHourPrices` now first calls the run's price writer (priceWriterOf:
+  injected or writeChainPrices) for the whole hours of the asked range with `{ dryRun }`, notes writer chain errors on the
+  running batch, keeps its breaches (A), and reads with the dry run's rows ranked in (CHAIN_DRY_RUN_SOURCE, R19). Skipped
+  (stored rows only) when there is no injected writer and the ref is not in the asset's prices.yaml. solana.ts unchanged
+  (it already asks [windowStart, todayStart)). Test: tests/assets/pump.ingest.test.ts "a burn day with no stored PUMP
+  prices ..." (no seeded prices; dry run: writer called dryRun with [PUMP ref] to todayStart, `prices` table empty, 7 days
+  at 5M USD in `written`; real run: writer called, 7 stored days at 5M). RED `expected 0 to be greater than 0`. GREEN.
+- **D** levels fills gaps. `recentPriceHours` now returns from the earliest hour of the last 48 h (from each ref's
+  valid_from) that any ref lacks under its primary's source, to the top of the hour; null when complete. The writer skips
+  stored hours per ref, so a never-writable ref costs only its own hours (doc comment says so). Tests: tests/levels/levels.test.ts
+  "recentPriceHours: from the earliest hour ... (a gap inside the window included)" (gap 10 h back -> from TO-10h; cap; a
+  valid_from after the window asks nothing) and "runLevels: a gap 10 h back inside the window is filled" (every ref stored
+  but one hour; one writer call [TO-10h, TO); the hour is written). RED `expected null to ...` (both). GREEN. (Test refs A/B now
+  picked among refs valid before the window: LIT, AERO, HYPE, PUMP start after the harness NOW.)
+- **E** entriesFor adds the asset's own `token` contract's ref (on its ingest chain) when prices.yaml has it. Hash diff over
+  all 13 assets with only E applied: **aero only** (3c413feb4fbd… -> 035327b9eec2…, its pre-6b value). Tests:
+  tests/prices/config.test.ts (entriesFor(aero) = [AERO]; own token adds CRV+crvUSD, an unpriced token adds nothing; the R11
+  cases run with the token removed so each shows what it adds) — RED `expected [] to deeply equal [ Array(1) ]`;
+  tests/config/load.test.ts (an AERO entry edit moves ['aero']; every asset's hash now differs from its config-only hash). GREEN.
+- **F** R22. Removed `price.token_check` cross_checks from price_usd of crv, cvxcrv, hype, sdcrv, sky, ycrv and VVV
+  diem_price_usd (comment line before `source:`; a comment after the last key broke tests/config/edit.test.ts round-trip, so
+  it sits before). CAKE/LINK/LIT/PUMP/UNI/VVV price_usd keep theirs at prices.yaml tolerance (2/2/3/2/2/2). LIT zero
+  liquidity: `NoReading` (src/ingest/types.ts) thrown by price.token_check when the check's `skipped` is `zero_liquidity`;
+  the adapter source returns `{ ok: false, noReading: true }`; the level cross-check step notes
+  `<metric>: cross-check skipped, the check has no reading this run: ...` and does not mark the source failed (no anomaly,
+  no streak); a primary with no reading still fails. Tests: tests/ingest/adapters.price.test.ts "price.token_check is a
+  cross-check on CAKE, LINK, LIT, PUMP, UNI and VVV price_usd only, each at its prices.yaml check tolerance" (RED: 12 found
+  vs 6) and "a check ... zero in-range liquidity ... is no reading (NoReading)" (RED: NoReading undefined);
+  tests/assets/lit.ingest.test.ts "a zero-liquidity v4 check pool gives no check reading (R22)" (3 runs: all sources ok,
+  no crossChecks, one skip note naming zero_liquidity, no anomaly rows) (RED: source failed). GREEN.
+  Updated expectations (cross-check lists/plans back to no price check): crv, hype, lockers (cvxcrv, sdcrv), sky, vvv
+  (diem), ycrv ingest tests; adapters.price rung test and provenance/adapterOrigins HYPE test read the check as
+  price.token_check of the same ref (no cross-check left to take it from).
+- **G** assets/pump.yaml burn comment reflowed (and says the fetch ensures the hours). No hash move (comment only).
+
+Hash re-pins (all 13 hashed before/after by script; moved exactly aero + F's 7):
+| asset | old | new | why |
+|---|---|---|---|
+| aero | 3c413feb4fbd… | 035327b9eec2… | E |
+| crv | 9787bef1f28e… | c25e74237267… | F |
+| cvxcrv | e2ba388d44ea… | 5df3f84495c0… | F |
+| hype | af6d3b0124f2… | 74c59b28b4d6… | F |
+| sdcrv | 357ee9ca0f15… | 09a7ff1a81fd… | F |
+| sky | be03451c4a2e… | 215dfdf1f070… | F |
+| vvv | b9e654a8fe83… | 359d286886b9… | F (diem) |
+| ycrv | 908f12e73f67… | 9d7e62d3b7b0… | F |
+Pins in tests/assets/{aero,crv,hype,lockers,sky,vvv,ycrv}.ingest.test.ts and tests/config/load.test.ts (vvv, hype, aero).
+RED before re-pin: 8 files, 22 failed (hash pins + cross-check lists).
+
+Goldens (flattened old vs new; scratch golden_diff.py; values that are JSON strings parsed):
+- tests/agent/golden/packs-13.json (UPDATE_GOLDEN=1 packGolden only): 26 changed paths, all under
+  `<asset>.adapter_params[i]` of crv, cvxcrv, hype, sdcrv, sky, ycrv, vvv (the removed price.token_check entries; vvv's
+  index shift). Script check: removing exactly the R22 entries (price.token_check on F's assets, vvv's diem_price_usd)
+  from the old pack gives the new pack for all 13 assets: 0 mismatches. No value path moved.
+- tests/report/golden/v1-report-13.json, v2-report-13.json: unchanged (v2Golden + parity pass without update).
+- docs/ops/sources-register.md regenerated (the removed cross-check uses drop from the Ethereum RPC and Hyperliquid rows); `--check` current.
+
+Final runs:
+- `npx vitest run --maxWorkers=2`: 151 files, **1887/1888**; the one failure tests/push/gitPublisher.test.ts "a moved remote
+  is refused, alerted once, outbox kept" timed out at 5000 ms (load); alone at `--maxWorkers=1`: 7/7 passed. (First full run
+  had 3 real failures, fixed: tests/config/edit.test.ts VVV round-trip x2 -> comment moved before `source:`;
+  adapterOrigins HYPE check source.)
+- `npm run typecheck`: clean. `npm run lint:promises`: clean. `python3 -m unittest scripts/provision/test/test_orion_remote.py`: 52 OK.
+- `npx tsx tools/sources-register/generate.ts --check`: current.
+
+Concerns:
+1. C runs the real writer inside any fetch that prices a burn (PUMP's 7-day window, or the backfill window on a first
+   adapter-flow fetch: up to backfill_days of hours, clipped by PUMP's valid_from 2026-10-12; stored hours skipped). Asset
+   tests that give no writer now exercise writeChainPrices over their fakes (pump: chain errors noted, stored rows used).
+2. A breach from a CLI `orion fetch` (no notify) is in FetchResult.priceBreaches but not printed by fetchSummary.
+3. NoReading is honoured only for level cross-checks (flow cross-checks keep failing on any error); only `zero_liquidity`
+   maps to it.

@@ -1,0 +1,64 @@
+== aero: 1 changed
+   incomeStatement.priceBasis.flows: each flow day's USD from its tokens x hourly prices where ev -> each flow day's USD from its tokens x the chain/first-party  
+== anomalies: 0 changed
+== cake: 3 changed
+   incomeStatement.priceBasis.flows: each flow day's USD from its tokens x hourly prices where ev -> each flow day's USD from its tokens x the chain/first-party  
+   incomeStatement.priceBasis.source: market_data:coingecko -> contract_state:price.token 
+   incomeStatement.priceBasis.sourceType: market_data -> contract_state 
+== crv: 3 changed
+   incomeStatement.priceBasis.flows: each flow day's USD from its tokens x hourly prices where ev -> each flow day's USD from its tokens x the chain/first-party  
+   incomeStatement.priceBasis.source: market_data:coingecko -> contract_state:price.token 
+   incomeStatement.priceBasis.sourceType: market_data -> contract_state 
+== cvxcrv: 17 changed
+   incomeStatement.belowLine.lines[cvx_rewards].priceBasis: mixed -> legacy 
+   incomeStatement.holderFlow.lines[crv].priceBasis: mixed -> legacy 
+   incomeStatement.holderFlow.lines[cvx_rewards].priceBasis: mixed -> legacy 
+   incomeStatement.holderFlow.lines[vecrv_fees].priceBasis: mixed -> legacy 
+   incomeStatement.holders.lines[crv].priceBasis: mixed -> legacy 
+   incomeStatement.holders.lines[vecrv_fees].priceBasis: mixed -> legacy 
+== hype: 3 changed
+   incomeStatement.priceBasis.flows: each flow day's USD from its tokens x hourly prices where ev -> each flow day's USD from its tokens x the chain/first-party  
+   incomeStatement.priceBasis.source: market_data:coingecko -> first_party_api:price.token 
+   incomeStatement.priceBasis.sourceType: market_data -> first_party_api 
+== link: 3 changed
+   incomeStatement.priceBasis.flows: each flow day's USD from its tokens x hourly prices where ev -> each flow day's USD from its tokens x the chain/first-party  
+   incomeStatement.priceBasis.source: market_data:coingecko -> contract_state:price.token 
+   incomeStatement.priceBasis.sourceType: market_data -> contract_state 
+== lit: 3 changed
+   incomeStatement.priceBasis.flows: each flow day's USD from its tokens x hourly prices where ev -> each flow day's USD from its tokens x the chain/first-party  
+   incomeStatement.priceBasis.source: market_data:coingecko -> contract_state:price.token 
+   incomeStatement.priceBasis.sourceType: market_data -> contract_state 
+== proposals: 0 changed
+== pump: 3 changed
+   incomeStatement.priceBasis.flows: each flow day's USD from its tokens x hourly prices where ev -> each flow day's USD from its tokens x the chain/first-party  
+   incomeStatement.priceBasis.source: market_data:coingecko -> contract_state:price.token 
+   incomeStatement.priceBasis.sourceType: market_data -> contract_state 
+== sdcrv: 3 changed
+   incomeStatement.priceBasis.flows: each flow day's USD from its tokens x hourly prices where ev -> each flow day's USD from its tokens x the chain/first-party  
+   incomeStatement.priceBasis.source: market_data:coingecko -> contract_state:price.token 
+   incomeStatement.priceBasis.sourceType: market_data -> contract_state 
+== sky: 6 changed
+   incomeStatement.holderFlow.lines[buyback].priceBasis: mixed -> legacy 
+   incomeStatement.holders.lines[buyback].priceBasis: mixed -> legacy 
+   incomeStatement.priceBasis.flows: each flow day's USD from its tokens x hourly prices where ev -> each flow day's USD from its tokens x the chain/first-party  
+   incomeStatement.priceBasis.source: market_data:coingecko -> contract_state:price.token 
+   incomeStatement.priceBasis.sourceType: market_data -> contract_state 
+   incomeStatement.revenue.lines[surplus_buyback].priceBasis: mixed -> legacy 
+== uni: 6 changed
+   incomeStatement.holderFlow.lines[burn].priceBasis: mixed -> legacy 
+   incomeStatement.holders.lines[burn].priceBasis: mixed -> legacy 
+   incomeStatement.priceBasis.flows: each flow day's USD from its tokens x hourly prices where ev -> each flow day's USD from its tokens x the chain/first-party  
+   incomeStatement.priceBasis.source: market_data:coingecko -> contract_state:price.token 
+   incomeStatement.priceBasis.sourceType: market_data -> contract_state 
+   incomeStatement.revenue.lines[protocol_fees].priceBasis: mixed -> legacy 
+== vvv: 6 changed
+   incomeStatement.holderFlow.lines[burn].priceBasis: mixed -> legacy 
+   incomeStatement.holders.lines[burn].priceBasis: mixed -> legacy 
+   incomeStatement.priceBasis.flows: each flow day's USD from its tokens x hourly prices where ev -> each flow day's USD from its tokens x the chain/first-party  
+   incomeStatement.priceBasis.source: market_data:coingecko -> contract_state:price.token 
+   incomeStatement.priceBasis.sourceType: market_data -> contract_state 
+   incomeStatement.protocol.lines[remainder].priceBasis: mixed -> legacy 
+== ycrv: 3 changed
+   incomeStatement.priceBasis.flows: each flow day's USD from its tokens x hourly prices where ev -> each flow day's USD from its tokens x the chain/first-party  
+   incomeStatement.priceBasis.source: market_data:coingecko -> contract_state:price.token 
+   incomeStatement.priceBasis.sourceType: market_data -> contract_state 

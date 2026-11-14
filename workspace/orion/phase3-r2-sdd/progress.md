@@ -140,3 +140,46 @@ Task 6: fix wave committed 7202a46 (A-G); reported 1887/1888 (gitPublisher load 
 Task 6: minor (deferred): FetchResult.priceBreaches not printed by the CLI fetch summary
 Task 6: fix-wave re-review dispatched (review-661bf9c..7202a46.diff) with Task 7 implementer.
 Task 7: dispatched (BASE 7202a46)
+Task 6: fix round 1/5 (7 addressed, 0 open; commits 661bf9c..7202a46)
+Task 6: minor (deferred): refresh result gains an empty undelivered: [] when there are breaches
+Task 6: minor (deferred): 'no breaches on a dry run' holds only through the writer's behaviour, not enforced in flow/fetch
+Task 6: minor (deferred): CLI `orion fetch`/`tick` return breaches but neither prints nor posts them (a CLI-run scan's breach is never reported)
+Task 6: complete (commits 7ff7562..7202a46, review clean after fix wave)
+Task 7: committed 6373b45 (R24 config fixes) + 6c0b54e (prices backfill job + remote verb); reported 1904/1904 (151 files), typecheck/lint clean, py 54 OK.
+Ruling R25: Task 7 departures accepted: the CoinGecko price refusal lives in the loader (parseAssetObject, runs when prices.yaml is present), not zod (495 fixture failures otherwise); ref regex allows upper case ^[A-Za-z0-9:/._@-]{1,120}$ (base58 PUMP ref) and dates use [0-9]; op prices max_attempts 3 (lost lease re-queues; budget deferral uses none); a stopped chain fails the job with one ALERT; no per-run start line; progress kept in jobs.result_json — cost if wrong: small rework.
+Carry to Task 9: docs/templates T3-T8, T10 still use `coingecko field: price` and now fail to load in a real home: replace with a price.token ref placeholder (+ templates test).
+Task 7: review dispatched (review-7202a46..6c0b54e.diff) with Task 8 implementer.
+Task 8: dispatched (BASE 6c0b54e)
+Ruling R26: reprice scope — CoinGecko-priced-at-write rows only: (a) transfer_flow log-scan rows, (b) PUMP flow_usd.buyback rows from solana.supply_burn_daily (amount from the flow_tokens.buyback twin when missing, daily_mean); usd_native, DefiLlama (R4-R6), periodic/disclosed and manual rows are `skipped` with a reason, never `refused`; coingecko:* token refs remapped before pricing; derived rows recomputed in the same tx; export first — cost if wrong: a CoinGecko-derived row misclassified as skipped survives (the Task 10 proof counts skipped by reason).
+Task 7: review — spec ✅ (with R25), quality Needs fixes: 1 Important (open-ended job vs 400-day cap) + minors; task-7-findings.md (items 1-5, rulings R27, R28).
+Task 7: minor (deferred): permanently missing hours re-read every run
+Task 7: minor (deferred): http_json source pointed at a CoinGecko price URL still loads (R8)
+Task 7: minor (deferred): lease-gone progress-save path untested
+Task 8: committed 13ece08; reported 1924/1924 (154 files), typecheck/lint clean, py 59 OK (1 skipped).
+Ruling R29: PUMP DefiLlama-history rows are told apart by the adapter's own rule — a buyback row with no amount whose day starts before the first stored solana.token_supply reading is skipped as defillama_history (expected dry run ~21 repriced / ~369 skipped on prod data); coingecko:* remap covers every row of the asset; derived rows get marker basis 'derived'; per-day apply with reprice_conflict on a row changed after export — accepted — cost if wrong: the Task 10 dry run shows other counts and we stop.
+Task 7: fix round 1 dispatched (findings 1-5) with Task 8 review (review-6c0b54e..13ece08.diff).
+Task 7: fix round 1 committed c5e6172 (items 1-5); reported 1928/1928 (154 files), typecheck/lint clean, py 59 OK. Re-review dispatched (review-13ece08..c5e6172.diff).
+Task 7: minor (deferred): a repeatedly failing chain inside budget-limited runs posts one ALERT every 10 min until the job fails
+Task 8: review — spec ✅ (R26/R29), quality Needs fixes: 1 Important (stale derived rows after an interrupted --yes) + minors; task-8-findings.md (items 1-5; R30, R31).
+Task 8: minor (deferred): reprice refuses a log_scan row with hourly_amounts but amount null as 'no token amounts' (none known)
+Task 8: minor (deferred): CLI tests written after the code
+Carry to Task 9/10: dry run must show zero coingecko:* refs other than the two remapped, and PUMP ~21 repriced / ~369 defillama_history.
+Task 8: fix round 1 dispatched (findings 1-5) with Task 7 re-review.
+Task 7: fix round 1/5 (5 addressed, 0 open; commits 13ece08..c5e6172)
+Carry to Task 9: plan doc :303 still says lock `prices` and 20-min budget (R27/R28 replaced them: `job:prices`, 10 min, cap 550) — amend the plan text.
+Task 7: complete (commits 7202a46..c5e6172, review clean after fix round 1)
+Task 8: fix round 1 committed 3aca04e (items 1-5); reported 1930/1930 (154 files), py 59, typecheck/lint clean; `data reprice` exits 3 when rows are refused.
+Task 8: fix-round re-review dispatched (review-c5e6172..3aca04e.diff) with Task 9 implementer.
+Task 9: dispatched (BASE 3aca04e)
+Task 10 (controller) started early on code-final 3aca04e: detached .worktrees/proof-3aca04e (built), old side .worktrees/rel-2026.11.12.1 (tgz sha OK); prod_copy.py running 18:58Z (copy dir in workspace/orion/phase3-proof/r2/copy-dir.txt). Price-writer driver: workspace/orion/phase3-proof/r2/r2-prices.ts (calls writeChainPrices directly; no daemon on the copy, so no watcher/analyst/Slack).
+Task 10: prod copy OK (p2proof_20261114t185657z, 119,774 rows / 21 tables, sums equal). Stage A (new dist migrated 0008; old vs new BEFORE chain prices, D=2026-11-13 and 2026-08-14 + default day): zero numeric diffs on all 13 at D; only priceBasis labels/basis strings (mixed -> legacy) moved. => method gap (per-transfer vs hour-bucket on CoinGecko) = 0.
+Task 10 FINDING (proof harness + product): the new home lacked prices.yaml (prod_copy copies assets/personas/skills only); Orion then silently used config-only hashes and labelled LIT's price contract_state instead of refusing. Fix wave item (Important): refuse to load an asset that names price.token/price.token_check or a usd transfer_flow when the config root has no prices.yaml; prod_copy.py copies prices.yaml into both homes when present.
+Task 10: smoke day 2026-11-12 all 17 refs x 24 h written, 0 missing, 0 breaches, 96 s; calls/day eth 120, bnb 173, base 78, solana 277, hl 2, lighter 1. Chain vs CoinGecko (dev-only reference) mean gaps -0.24%..+0.49%, check gaps within tolerances.
+Cost estimate re-measured (supersedes P6's ~50k): ~397 EVM days x 371 calls + ~33 PUMP days x 277 = ~156k RPC calls (BNB block search 7/h dominates), ~3.5M Alchemy CU est; ~6-7 h wall.
+Task 10: full rebuild running from 19:11Z with STOP_AT 23:45Z (clear of prod nightly 00:45Z, shared Alchemy key); resume after the stage nightly (~03:30Z).
+Task 8: fix round 1/5 (5 addressed, 0 open; commits 13ece08..3aca04e)
+Task 8: minor (deferred): an unknown future first_party:<x> label gets the contract_state rung
+Task 8: complete (commits c5e6172..3aca04e, review clean after fix round 1)
+Task 9: committed 4311313 (docs); reported 1950/1950 (154 files), templates test 51/51 (RED 20 first), typecheck clean.
+Task 9: note: compare-usd --days 400 reaches the first flow day only until ~2026-11-18; older days covered by the reprice dry run's refused list (release block).
+Task 9: review dispatched (review-3aca04e..4311313.diff).

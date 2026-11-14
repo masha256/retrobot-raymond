@@ -1,0 +1,423 @@
+{
+  "asset": "crv",
+  "day": "2026-11-13",
+  "windowDays": 91,
+  "price": 0.230606,
+  "marketCap": 365855552.613258,
+  "fdv": 561309967.3037013,
+  "incomeStatement": {
+    "schema": 2,
+    "day": "2026-11-13",
+    "windowDays": 91,
+    "category": "dex",
+    "scope": "protocol_share_only",
+    "revenue": {
+      "annualized": 7141788.976698775,
+      "growth": {
+        "current": 1780555.6078892837,
+        "prior": 1603174.0348813257,
+        "change": 0.1106439907012895,
+        "annualized": 0.5233521410608795
+      },
+      "growthExNew": null,
+      "excludedFromExNew": [],
+      "provisional": false,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "fees",
+          "label": "admin fees paid to veCRV (FeeAllocator)",
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "mixed",
+          "annualized": 6427610.079028899,
+          "windowSum": 1602500.0471003554,
+          "settlement": "daily",
+          "started": null,
+          "daysMeasured": 91,
+          "provisionalDays": 0,
+          "coverage": null,
+          "isNew": false,
+          "growth": {
+            "current": 1602500.0471003554,
+            "prior": 1442856.631393193,
+            "change": 0.1106439907012895,
+            "annualized": 0.5233521410608795
+          }
+        },
+        {
+          "id": "treasury_rev",
+          "label": "admin fees kept (FeeAllocator)",
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "mixed",
+          "annualized": 714178.8976698773,
+          "windowSum": 178055.56078892833,
+          "settlement": "daily",
+          "started": null,
+          "daysMeasured": 91,
+          "provisionalDays": 0,
+          "coverage": null,
+          "isNew": false,
+          "growth": {
+            "current": 178055.56078892833,
+            "prior": 160317.40348813255,
+            "change": 0.11064399070128927,
+            "annualized": 0.5233521410608784
+          }
+        }
+      ]
+    },
+    "costOfRevenue": {
+      "annualized": null,
+      "measuredAnnualized": 0,
+      "notMeasured": [
+        "lp_fees"
+      ],
+      "lines": [
+        {
+          "id": "lp_fees",
+          "label": null,
+          "of": null,
+          "share": 1,
+          "method": "not_measured",
+          "sourceTypes": [],
+          "priceBasis": null,
+          "annualized": null,
+          "growth": {
+            "current": null,
+            "prior": null,
+            "change": null,
+            "annualized": null,
+            "note": "not measured"
+          },
+          "notMeasured": "swap fees to LPs and crvUSD/LlamaLend lender interest: not read yet (Phase 3)",
+          "to": "lps"
+        }
+      ]
+    },
+    "grossProfit": {
+      "annualized": null,
+      "growth": {
+        "current": null,
+        "prior": null,
+        "change": null,
+        "annualized": null,
+        "note": "cost of revenue not measured"
+      }
+    },
+    "holders": {
+      "annualized": 6427610.079028899,
+      "growth": {
+        "current": 1602500.0471003554,
+        "prior": 1442856.631393193,
+        "change": 0.1106439907012895,
+        "annualized": 0.5233521410608795
+      },
+      "remainder": false,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "vecrv_fees",
+          "label": null,
+          "of": "fees",
+          "share": 1,
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "mixed",
+          "annualized": 6427610.079028899,
+          "growth": {
+            "current": 1602500.0471003554,
+            "prior": 1442856.631393193,
+            "change": 0.1106439907012895,
+            "annualized": 0.5233521410608795
+          },
+          "bucket": "cash",
+          "haircut": 0,
+          "recipientBase": "locked",
+          "valuedPer": null,
+          "captureRule": "programmatic",
+          "paidMetric": null,
+          "gross": 6427610.079028899,
+          "net": 6427610.079028899,
+          "yield": 0.03310666919358997
+        }
+      ],
+      "byBucket": {
+        "burn": null,
+        "hold": null,
+        "cash": {
+          "annualized": 6427610.079028899
+        }
+      }
+    },
+    "protocol": {
+      "annualized": 714178.8976698773,
+      "growth": {
+        "current": 178055.56078892833,
+        "prior": 160317.40348813255,
+        "change": 0.11064399070128927,
+        "annualized": 0.5233521410608784
+      },
+      "remainder": false,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "treasury",
+          "label": null,
+          "of": "treasury_rev",
+          "share": 1,
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "mixed",
+          "annualized": 714178.8976698773,
+          "growth": {
+            "current": 178055.56078892833,
+            "prior": 160317.40348813255,
+            "change": 0.11064399070128927,
+            "annualized": 0.5233521410608784
+          }
+        }
+      ]
+    },
+    "operatingCosts": {
+      "annualized": 0,
+      "growth": {
+        "current": 0,
+        "prior": 0,
+        "change": null,
+        "annualized": null,
+        "note": "no lines"
+      },
+      "remainder": false,
+      "notMeasured": [],
+      "lines": []
+    },
+    "unreconciled": {
+      "annualized": 0,
+      "pct": 0,
+      "basis": "revenue"
+    },
+    "belowLine": {
+      "toHolders": 7086373.550277873,
+      "toProtocol": 0,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "vote_incentives",
+          "label": null,
+          "to": "holders",
+          "method": "measured",
+          "sourceTypes": [
+            "third_party"
+          ],
+          "priceBasis": null,
+          "annualized": 7086373.550277873,
+          "growth": {
+            "current": null,
+            "prior": null,
+            "change": null,
+            "annualized": null,
+            "note": "a run-rate level: no daily series"
+          },
+          "bucket": "cash",
+          "haircut": 0.03,
+          "recipientBase": "locked",
+          "captureRule": "programmatic",
+          "note": "third parties paying veCRV voters"
+        }
+      ]
+    },
+    "holderFlow": {
+      "gross": 13513983.62930677,
+      "net": 13301392.422798436,
+      "netOfDilution": -9104718.94455203,
+      "growth": {
+        "current": 1602500.0471003554,
+        "prior": 1442856.631393193,
+        "change": 0.1106439907012895,
+        "annualized": 0.5233521410608795
+      },
+      "byBucket": {
+        "burn": null,
+        "hold": null,
+        "cash": {
+          "gross": 13513983.62930677,
+          "net": 13301392.422798436,
+          "yield": 0.06851143634124171,
+          "fromRevenue": 6427610.079028899,
+          "fromBelowLine": 7086373.550277873
+        }
+      },
+      "fromRevenue": 6427610.079028899,
+      "fromBelowLine": 7086373.550277873,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "vecrv_fees",
+          "section": "holders",
+          "fromBelowLine": false,
+          "bucket": "cash",
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "mixed",
+          "metric": "flow_usd.fees",
+          "haircut": 0,
+          "recipientBase": "locked",
+          "gross": 6427610.079028899,
+          "net": 6427610.079028899,
+          "yield": 0.03310666919358997,
+          "growth": {
+            "current": 1602500.0471003554,
+            "prior": 1442856.631393193,
+            "change": 0.1106439907012895,
+            "annualized": 0.5233521410608795
+          }
+        },
+        {
+          "id": "vote_incentives",
+          "section": "below_line",
+          "fromBelowLine": true,
+          "bucket": "cash",
+          "method": "measured",
+          "sourceTypes": [
+            "third_party"
+          ],
+          "priceBasis": null,
+          "metric": null,
+          "haircut": 0.03,
+          "recipientBase": "locked",
+          "gross": 7086373.550277873,
+          "net": 6873782.343769536,
+          "yield": 0.03540476714765174,
+          "growth": {
+            "current": null,
+            "prior": null,
+            "change": null,
+            "annualized": null,
+            "note": "a run-rate level: no daily series"
+          }
+        }
+      ]
+    },
+    "volume": null,
+    "dilution": {
+      "pct": 0.039917536962651975,
+      "tokensPerYear": 97161875.09150009,
+      "emissionsPerYear": 97161875.09150009,
+      "releases": [],
+      "supply": null
+    },
+    "ratios": {
+      "takeRate": null,
+      "payoutRatio": 0.9000000000000002,
+      "payoutRatioBasis": "revenue"
+    },
+    "multiples": {
+      "mcapToRevenue": 51.2274380840599,
+      "mcapToGrossProfit": null,
+      "mcapToHolderFlow": {
+        "burn": null,
+        "hold": null,
+        "cash": 27.505056687613074,
+        "total": 27.505056687613074
+      }
+    },
+    "yields": {
+      "cash": 0.06851143634124171,
+      "buyback": 0,
+      "shareholder": 0.06851143634124171,
+      "dilution": 0.039917536962651975,
+      "netShareholder": 0.028593899378589735,
+      "multiple": 14.596103269813243,
+      "pegTrailing": 0.27889640883527667
+    },
+    "perToken": {
+      "revenue": 0.004501611023795394,
+      "grossProfit": null,
+      "holderFlow": {
+        "total": 0.008384131057030455,
+        "netOfDilution": -0.005738884655242156,
+        "byBucket": {
+          "burn": null,
+          "hold": null,
+          "cash": 0.008384131057030455
+        }
+      },
+      "dilution": 0.014123015712272612,
+      "circulatingSupply": 1586496243,
+      "totalSupply": 2434064886.8793583,
+      "supplyAsOf": "2026-11-14T23:59:59.999Z",
+      "perTokenFdv": {
+        "revenue": 0.002934099668088573,
+        "grossProfit": null,
+        "holderFlow": {
+          "total": 0.0054646827594854105,
+          "netOfDilution": -0.00374054076932391,
+          "byBucket": {
+            "burn": null,
+            "hold": null,
+            "cash": 0.0054646827594854105
+          }
+        },
+        "dilution": 0.009205223528809321
+      }
+    },
+    "priceBasis": {
+      "price": 0.230606,
+      "metric": "price_usd",
+      "sourceType": "contract_state",
+      "source": "contract_state:price.token",
+      "day": "2026-11-13",
+      "asOf": "2026-11-14T23:59:59.999Z",
+      "flows": "each flow day's USD from its tokens x the chain/first-party hourly prices where every hour with an amount is priced (hourly), or its day amount x the mean of the day's 24 chain hours (daily_mean), else the stored value (per line: priceBasis)"
+    },
+    "checks": [
+      {
+        "id": "splitter",
+        "type": "sum",
+        "status": "ok",
+        "lhs": 0,
+        "rhs": 0,
+        "gapPct": 0,
+        "tolerancePct": 2,
+        "evaluatedAt": "2026-11-14T00:45:30.693Z"
+      }
+    ],
+    "provenance": {
+      "methods": {
+        "measured": 1.0000000000000002,
+        "derived": 0,
+        "disclosed": 0
+      },
+      "thirdParty": [
+        "below_line.vote_incentives",
+        "below_line.vote_incentives.cross_checks"
+      ],
+      "sources": [
+        "log_scan:eip155:1",
+        "third_party:llama.box"
+      ],
+      "basis": "observations"
+    },
+    "flags": [
+      "cost of revenue not measured: lp_fees",
+      "payout ratio on revenue: cost of revenue not measured",
+      "third_party: below_line.vote_incentives, below_line.vote_incentives.cross_checks"
+    ]
+  },
+  "notes": [
+    "holder-flow growth excludes vote_incentives (a run rate with no daily series)",
+    "yields are per token of each flow's recipients (staked or locked supply), i.e. to a holder in every flow's base"
+  ]
+}
