@@ -1,0 +1,13 @@
+# Final review fix wave (final-review.md) — binding rulings, ONE commit
+I1 (IMPORTANT, must fix) Ruling R32: prices.yaml integrity.
+  (a) Any asset that names price.token / price.token_check or a `unit: usd` transfer_flow is refused at load when the config root's prices.yaml is missing, empty or comment-only (everywhere, dev and test included).
+  (b) In a release root (RELEASE file) or when ORION_ENV is stage or prod: prices.yaml must exist with >= 1 entry or every asset load refuses (covers AERO's own-token entry); there the CoinGecko price refusal and the price-ref checks run unconditionally (resolves the R25 partial disagreement for the live envs; dev/test fixtures keep their current behaviour).
+  (c) The levels job and the prices backfill refuse to run on an empty prices map: levels posts one `ORION ALERT <env> levels prices: prices.yaml has no entries`; the backfill fails with an ALERT (never a 'done' with nothing written).
+  (d) Tests: missing / empty / comment-only prices.yaml in each case; the deferred Task 1 test 'a release root, not ORION_HOME, supplies prices.yaml'.
+  (e) tools/phase2-proof/prod_copy.py copies prices.yaml (when present) into both homes from their config source (old: release dir; new: worktree); unit test.
+I2 (IMPORTANT) superseded/rejected flow rows keep CoinGecko-priced value (reprice.ts:134,215-218 reads active rows only). Ruling R33: do NOT rewrite them (they're history no report reads); `data reprice` output adds per metric `inactiveCoingeckoRows` (count of superseded/rejected rows of the CoinGecko-priced classes) and the dry run prints it; followups note + spec Status line: "superseded/rejected rows keep their write-time value; Mike decides keep vs purge (R8 at the latest)". Test.
+M1 (fix): the daemon's per-asset backfill (op fetch) posts price breaches from its own writes, as refresh does.
+M2 (fix): cap WATCH posts in levels and refresh like the backfill (20 + one summary line); shared helper.
+M4 (docs): deploy.md R2 block: staging_refresh timing gaps — (i) once prod is on schema 8, a Sunday staging_refresh before prod's steps 6-8 copies prod's un-repriced state onto stage (so finish prod steps before Sunday 10:30Z or pause/accept); (ii) a prod rollback keeps schema 8, so a later staging_refresh would copy prod's re-added CoinGecko rows to stage.
+M5 (docs): followups note: add the two Task 9 deferred minors (daemon.ts:103 comment; orion-remote usage exit 3) and remove/qualify "None blocks the release"; move "Notes kept:" under its Task 6b heading.
+Also (cheap): src/daemon/daemon.ts:103 comment; orion-remote usage text mentions exit 3 for reprice/rebuild-price-levels; rollback note "after step 8" -> "after step 8a".

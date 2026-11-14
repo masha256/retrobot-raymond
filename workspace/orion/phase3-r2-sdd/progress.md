@@ -183,3 +183,26 @@ Task 8: complete (commits c5e6172..3aca04e, review clean after fix round 1)
 Task 9: committed 4311313 (docs); reported 1950/1950 (154 files), templates test 51/51 (RED 20 first), typecheck clean.
 Task 9: note: compare-usd --days 400 reaches the first flow day only until ~2026-11-18; older days covered by the reprice dry run's refused list (release block).
 Task 9: review dispatched (review-3aca04e..4311313.diff).
+Task 9: review — Needs fixes: 2 Important (rollback mechanism wrong; stop rules not enforced, prod go comment after the purge) + 6 minors; task-9-findings.md (items 1-8). Record check: all 31 rulings + 50/51 minors in the followups note.
+Carry to final fix wave (Task 10 finding): refuse loading an asset with price.token/price.token_check or a usd transfer_flow when the config root has no prices.yaml; prod_copy.py copies prices.yaml into both homes.
+Carry to Task 10: allowlist covers hourly price levels inside the reports' as-of window; market_data purge succeeds after the level rebuild.
+Task 9: fix round 1 dispatched (findings 1-8).
+Task 9: fix round 1 committed 1cac987 (items 1-8); reported 1951/1951, templates 51/51, py 60 OK; rebuild-price-levels exits 3 on refused rows.
+Task 9: minor (deferred): src/daemon/daemon.ts:103 comment 'only refresh does' (second attempt) is stale
+Task 9: minor (deferred): orion-remote usage text does not mention exit 3
+Task 9: re-review dispatched (review-4311313..1cac987.diff) with the FINAL whole-branch review (review-4498513..1cac987.diff).
+Task 9: fix round 1/5 (8 addressed, 0 open; commits 4311313..1cac987)
+Task 9: complete (commits 3aca04e..1cac987, review clean after fix round 1)
+FINAL REVIEW: ready with fixes — 0 Critical, 2 Important (I1 prices.yaml missing/empty silently accepted, incl. levels/backfill; I2 superseded/rejected rows keep CoinGecko value, uncounted), 5 minors; 53 deferred minors triaged (must-fix #5 #7 #29 #35 = I1); agrees with all rulings except partial R25 (addressed by R32), R26 scope gap (I2), R14 timing caveat (M4). Suite at 1cac987: 1951/1951, typecheck clean.
+Ruling R32: prices.yaml integrity — see final-findings.md I1 — cost if wrong: dev fixtures diverge from live rules (live envs strict).
+Ruling R33: superseded/rejected CoinGecko-priced rows are counted and surfaced, not rewritten; Mike decides keep vs purge — cost if wrong: they persist until R8 (no report reads them).
+FINAL fix wave dispatched (final-findings.md).
+FINAL fix wave committed 046908f; reported 1969/1969 (sky.ingest load timeout passes alone 7/7), typecheck/lint clean, py 61 + 69 OK, register current, no hash pins moved. 42 tests re-fixtured for R32(a) (mini asset gets a prices.yaml entry and a hand-entered price_usd).
+Ruling R34: R32(b) as implemented — dev/test roots check the CoinGecko price refusal only when prices.yaml has entries (unconditional broke 6 dev fixtures); release/stage/prod always have entries so the check always runs live — accepted — cost if wrong: none live.
+Controller check: there is NO pause mechanism for staging_refresh (orion-remote has run-now only; asset pause is per asset), so deploy.md:695 "pause staging_refresh" is wrong: must say "finish prod steps 6-8 before Sunday 10:30Z, or accept it and re-run steps 3-8 on stage". -> fix with the re-review's findings.
+FINAL fix wave: scoped re-review dispatched (review-1cac987..046908f.diff).
+FINAL fix wave: re-review — all findings ADDRESSED, no new Critical/Important; probe 15/15; 230/230 focused.
+Final: minor (deferred): ingest.cli valueInForce check toEqual -> toMatchObject (ageDays no longer pinned; text check still holds)
+Final: note: proposal approve (proposals.ts:185) skips loadAsset's strict-root check (not a live gap: a strict root without entries refuses every load first)
+Ruling R35: the one residual (deploy.md:695/:697 'pause staging_refresh' — no such mechanism) is fixed in the Task 10 tooling commit (with the R2 allowlist after Mike's sign-off), not a second fix wave — cost if wrong: none (docs; release can't start before Task 10 anyway).
+Branch state: code final at 046908f (1969/1969). Remaining: Task 10 proof on the prod copy (rebuild running), sign-off table, allowlist + 2-line doc fix commit, push branch.

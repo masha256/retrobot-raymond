@@ -1,0 +1,6 @@
+{"run":1,"elapsedS":601,"stoppedByBudget":true,"reachedMs":1794009600000,"calls":{"eip155:1":825,"eip155:56":1021,"eip155:8453":489,"hyperliquid":2,"lighter":1,"solana":1788},"errors":0}
+{"run":2,"elapsedS":1247,"stoppedByBudget":true,"reachedMs":1793404800000,"calls":{"eip155:1":674,"eip155:56":1091,"eip155:8453":510,"hyperliquid":2,"lighter":1,"solana":1990},"errors":0}
+{"run":3,"elapsedS":1888,"stoppedByBudget":true,"reachedMs":1792800000000,"calls":{"eip155:1":778,"eip155:56":1059,"eip155:8453":506,"hyperliquid":2,"lighter":1,"solana":1972},"errors":0}
+{"run":4,"elapsedS":2548,"stoppedByBudget":true,"reachedMs":1792195200000,"calls":{"eip155:1":772,"eip155:56":1109,"eip155:8453":506,"hyperliquid":2,"lighter":1,"solana":1969},"errors":0}
+{"run":5,"elapsedS":3156,"stoppedByBudget":true,"reachedMs":1791244800000,"calls":{"eip155:1":1349,"eip155:56":1923,"eip155:8453":915,"hyperliquid":2,"lighter":1,"solana":1315},"errors":0}
+{"run":6,"elapsedS":3757,"stoppedByBudget":true,"reachedMs":1788825600000,"calls":{"eip155:1":3143,"eip155:56":4503,"eip155:8453":2403,"hyperliquid":2,"lighter":1},"errors":0}

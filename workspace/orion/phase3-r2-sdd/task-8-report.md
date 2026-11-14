@@ -133,3 +133,63 @@ tests/db/reprice.test.ts (new), tests/db/priceLevels.test.ts (new), tests/db/pur
 - Decision 1 (PUMP history split) is an inference from the adapter, not stated in R26. Please confirm it.
 - CLI tests were written after the CLI code. Everything else was test-first.
 - Nothing remains open from the brief.
+
+
+## Fix round 1 (task-8-findings.md items 1-5; Rulings R30, R31)
+
+Env: `export ORION_TEST_DATABASE_URL='postgresql://orion_dev@/orion_test?host=/var/run/postgresql'`. Base c5e6172.
+
+RED command (items 1, 3, 5 tests written first):
+`npx vitest run tests/db/reprice.test.ts tests/cli/reprice.cli.test.ts --maxWorkers=1` -> `Tests 3 failed | 11 passed (14)`.
+
+1. **IMPORTANT, R30: derived rows over every repriced-or-marked day.**
+   - Test: tests/db/reprice.test.ts `R30: a day that failed mid-apply, then a rerun: ...` (adapted from
+     t8-review-probe.test.ts case 2). Five burn days, 10-04 zero burn (0 -> 0), usage_index burn_momentum 3 d and
+     burn_rate flow_annualized 2 d stored on the old values; a trigger fails the 10-04 day transaction once; rerun; then
+     assert both derived series equal derived.ts on the final flows; a third `--yes` writes nothing, no export,
+     `recomputed` 0 everywhere, snapshot equal.
+   - RED: `AssertionError ... usage_index 2026-10-05T00:00Z: expected 11.8975, received 7.666666666666667` (the old
+     CoinGecko-era value, the reviewer's stale case).
+   - Fix (src/db/reprice.ts): `changedDays` (days whose value changed in this run) replaced by `repricedDays`: every
+     flow day this run prices (repriced or unchanged, never a refused one) plus every flow day of the asset already
+     carrying `locator.repriced`. Derived rows whose window holds such a day are recomputed and written only when
+     `v !== d.value`, so a second `--yes` stays a no-op (existing `--yes twice` test still green).
+   - GREEN: see the focused run below.
+2. **MINOR: rung from the venue** (src/db/priceLevels.ts). `sourceType` is now `venueOfMethod(...).rung` and the
+   first-party origin key follows `venue.rung === 'first_party_api'`. A refactor: no behaviour change for any real
+   source label, so no RED; the existing `AERO ... first-party candle ref gets the first_party_api rung` test and the
+   CLI rebuild test pin it (GREEN).
+3. **MINOR: supply split ignores rejected readings.**
+   - Test: `PUMP: a rejected supply reading does not move the history/chain split` (rejected reading 10-20, active
+     10-24; the 10-23 row with a twin and 24 priced hours must be `defillama_history`).
+   - RED: `repriced: expected 0, received 1; skipped: expected { defillama_history: 1 }, received {}`.
+   - Fix: the first-reading query adds `AND status <> 'rejected'`.
+4. **MINOR: tautological assertion** (tests/db/reprice.test.ts Review Focus 5). `yes ? 1 : 1` -> `1`, plus a third
+   call after `--yes` asserting `repriced 0, unchanged 1` and the gap row still refused. Test-only; it passes on the
+   fixed code (it asserts existing behaviour, so no RED).
+5. **MINOR: exit 3 on refused rows** (src/cli/commands/data.ts `REPRICE_REFUSED_EXIT = 3`, set after the output,
+   dry run and `--yes`; JSON unchanged and still lists `refused`; error exits stay 1). CLI help and docs/ops/deploy.md
+   say so. orion-remote's `passthrough` already returns the CLI's exit code, so the remote verb exits 3 as well.
+   - Test: tests/cli/reprice.cli.test.ts: dry run `exit [3]`, `--yes` `exit [3]`, `--json` `exit [3]` with the
+     refused list, `--from 2026-10-05` (nothing refused) `exit []`.
+   - RED: `AssertionError: expected [] to deeply equal [ 3 ]`.
+
+R31 (rebuild-price-levels 6 h staleness refusal) accepted as is; no change.
+
+GREEN / gates:
+- `npx vitest run tests/db/reprice* tests/db/priceLevels* tests/db/purge* tests/cli/reprice* --maxWorkers=1`
+  -> `Test Files 4 passed (4); Tests 37 passed (37)` (35 before + 2 new).
+- `python3 -m unittest scripts/provision/test/test_orion_remote.py` -> `Ran 59 tests ... OK`.
+- `npx vitest run --maxWorkers=2` -> `Test Files 154 passed (154); Tests 1930 passed (1930)` (no load-sensitive
+  failures this run).
+- `npm run typecheck` -> clean; `npm run lint:promises` -> exit 0.
+
+Commit: 3aca04e. Files: src/db/reprice.ts, src/db/priceLevels.ts, src/cli/commands/data.ts, docs/ops/deploy.md,
+tests/db/reprice.test.ts, tests/cli/reprice.cli.test.ts, this report.
+
+Self-review / notes:
+- R30 widens recomputation to derived rows whose window holds any marked day, including marked days before `--from`
+  (a window may reach back past it); only in-range derived rows are written, as before.
+- A derived row stored by a later fetch on the new values is equal, so it is counted `unchanged`, never rewritten.
+- Deferred (ledger) items untouched: reprice.ts log_scan `hourly_amounts` with null amount; CLI tests written after code
+  in round 0.
