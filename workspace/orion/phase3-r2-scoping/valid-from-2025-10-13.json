@@ -1,0 +1,38 @@
+{
+ "blocks": {
+  "1": 23565380,
+  "56": 64423630,
+  "8453": 36763927
+ },
+ "results": {
+  "CRV TriCRV": true,
+  "CRV feed": true,
+  "cvxeth": true,
+  "CVX feed": true,
+  "ETH/USD": true,
+  "SKY/USDS v2": true,
+  "SKY feed": true,
+  "LINK feed": true,
+  "LINK v3": true,
+  "UNI feed": true,
+  "UNI v3": true,
+  "crvUSD feed": true,
+  "crvUSD/USDT": true,
+  "USDT/USD": true,
+  "USDS feed": true,
+  "DAI feed": true,
+  "cvxCRV pool": true,
+  "sdCRV pool": true,
+  "yCRV pool": true,
+  "USDC/USD": true,
+  "CAKE feed": true,
+  "CAKE/USDT v3": true,
+  "USDT/USD bnb": true,
+  "VVV/WETH aero": true,
+  "ETH/USD base": true,
+  "VVV/USDC v3": true,
+  "USDC/USD base": true,
+  "DIEM/VVV aero": true,
+  "DIEM/USDC slip": true
+ }
+}
