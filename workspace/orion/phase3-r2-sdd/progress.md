@@ -42,3 +42,53 @@ Task 1: committed 7b75080 (continuation implementer). Controller verify: 1 commi
 Task 1: review dispatched (package review-4498513..7b75080.diff), in parallel with Task 2 implementer.
 Ruling R13: Task 1 review runs in parallel with Task 2's implementer (reviewer in a detached worktree); any Task 1 fix lands as its own commit after Task 2 returns — cost if wrong: a fix that touches config.ts conflicts with Task 2's import of it (small).
 Task 2: dispatched (BASE 7b75080)
+Task 1: review clean (spec ✅, quality Approved; 4 named risks pass).
+Task 1: minor (deferred): check method not validated against a chain (Meteora check on an Ethereum ref would load)
+Task 1: minor (deferred): chain 'lighter' accepts any EVM ref, not only eip155:1
+Task 1: minor (deferred): valid_from checked by pattern only (2025-13-45 loads)
+Task 1: minor (deferred): Solana mint in a ref key not checked for 32 bytes
+Task 1: minor (deferred): missing prices.yaml gives config-only hashes silently at a config-root override (pack.sh prevents it for releases)
+Task 1: minor (deferred): check schema built with a type cast (no static typing on check fields)
+Task 1: minor (deferred): no test pins that a release root, not ORION_HOME, supplies prices.yaml
+Task 1: complete (commits 4498513..7b75080, review clean)
+Task 2: committed 1d8e9bd; reported 1785/1785 (147 files), typecheck + lint:promises clean.
+Controller check (Task 2 concerns 1-2): QUOTE_TOKENS verified on chain (decimals + symbol): ETH WETH c02a.. 18, USDC a0b8.. 6, USDT dac1.. 6; BNB USDT 55d3.. 18; Base WETH 4200..06 18, USDC 8335.. 6 — all match. Uniswap v3 observe([3600,0]) on LINK/WETH returns 8 words (offsets 64,160; len 2; tickCumulatives at words 3-4, two's complement): matches the decoder's picks 3,4; tick -52929 -> 0.005029 LINK/WETH (live).
+Carry to Task 3: priceHourEvm returns {prices, feedUsd, checks, missing}; withCheck() combines an off-chain primary with its EVM check (LIT); callsFor/decode take a context. The writer passes one BlockReadCache across consecutive hours of a chain-day (B(H+1h) of hour h = B(H) of hour h+1) and prunes it to the previous hour, so a v2 chain costs 1 multicall per hour.
+Task 2: review dispatched (review-7b75080..1d8e9bd.diff) with Task 3 implementer (Ruling R13 cadence).
+Task 3: dispatched (BASE 1d8e9bd)
+Task 2: review clean (spec ✅, quality Approved; 4 named risks pass, arithmetic recomputed independently).
+Task 2: minor (deferred): usd_feed value recorded on pool rows but not its age (stale ETH/USD under VVV leaves no trace)
+Task 2: minor (deferred): failed calls cached with good ones (a transient failure at one block carries into the next hour)
+Task 2: minor (deferred): v4 currency order not checked against the pool (LIT check only)
+Task 2: minor (deferred): BlockReadCache key omits the call signature
+Task 2: minor (deferred): cache test checks multicall count only, not which block's values the older hour used
+Task 2: minor (deferred): no committed tests for pool token mismatch, unknown feed, zero/negative feed, zero reserves
+Task 2: minor (deferred): v3 mean tick is float, not floored (<=0.01%)
+Task 2: complete (commits 7b75080..1d8e9bd, review clean)
+Task 3: committed a4d49c7; reported 1809/1809 (deploy.test.ts load timeout passed alone 9/9), typecheck + lint clean, py 52. Controller: focused 6 files 83/83; 0008 has no breaking line.
+Ruling R14: hour_blocks restored from prod by staging_refresh (as the implementer chose) — block-at-hour is a chain fact, identical across envs; stage only loses cache entries it can re-search — cost if wrong: a few extra getBlock calls on stage after a refresh.
+Ruling R15: registry methods return {prices, missing, feedUsd?, checks?, calls?} (not a bare Map) and PriceDeps.prices / WriteResult.errors added — accepted; Task 4 follows this shape.
+Task 3: minor (deferred): a backfill that later fills the hour joining two breach runs can report a second breach for one run
+Task 3: minor (deferred): rpc.ts:108 comment still says ~53,556,072 (switch block is 53,556,128)
+Task 3: review dispatched (review-1d8e9bd..a4d49c7.diff) with Task 4 implementer.
+Task 4: dispatched (BASE a4d49c7)
+Task 3: review — spec ❌ / Needs fixes: 1 Important (abort not checked inside a chain-day) + minors; findings + rulings in task-3-findings.md (fix items 1-4).
+Task 3: minor (deferred): a failed chain leaves no missing entry for its refs' later hours
+Task 3: minor (deferred): block-search fallback discards its bracket (extra getBlock calls)
+Task 3: minor (deferred): writeChainPrices ~230 lines
+Task 4: committed 27a6ff1; reported 1827/1827 (150 files), typecheck/lint/py clean.
+Controller probes for Task 4 concerns 1 and 4: task-4-controller-facts.md (Lighter t = candle start, open candle must be excluded; Meteora reserves from LbPair offsets, PUMP reserve is Token-2022, live price = active bin).
+Ruling R16: Task 4 departures accepted (blockSignature(slot), slotAt number|null, R15 return shape, usdAt(feed, hourMs), livePriceOffchain reads USDC/USD at the Ethereum head; PUMP signatures read on the quote vault, which every swap writes) — cost if wrong: small refactor.
+Task 3: fix round 1 dispatched (findings 1-4) with Task 4 review.
+Task 3: fix round 1 committed bd4feed (items 1-4); reported 1830/1830, typecheck clean. Re-review dispatched (review-27a6ff1..bd4feed.diff).
+Task 3: minor (deferred): an aborted chain-day does not save the hour blocks it found (re-searched next run)
+Task 4: review — spec ❌ / Needs fixes: 2 Important (Meteora reserves by owner; open candle in priceRangeOffchain) + minors; task-4-findings.md (items 1-4 fix; item 5 live facts for fixtures).
+Task 4: minor (deferred): slot search 6-8 getBlockTime per hour, 15 requests per PUMP hour with its check (above ~8 estimate) — measure in Task 10
+Task 4: fix round 1 dispatched (findings 1-4) with Task 3 re-review.
+Task 3: fix round 1/5 (4 addressed, 0 open; commits a4d49c7..bd4feed)
+Task 3: minor (deferred): a backfill writing an older breaching hour in front of an already-reported run reports it again
+Task 3: minor (deferred): an abort leaves earlier chains of the same day committed and records no missing for skipped hours
+Task 3: complete (commits 1d8e9bd..bd4feed, review clean after fix round 1)
+Task 4: fix round 1 committed b50e94b; reported tests/prices 82/82, full 1836/1836, typecheck/lint clean. Re-review dispatched (review-bd4feed..b50e94b.diff) with Task 5 implementer.
+Task 5: dispatched (BASE b50e94b)
+Ruling R17: report/golden fixtures seeding prices with source 'coingecko' are re-seeded with a chain source and identical values, so goldens move only on priceBasis/source labels; any value path moving is a stop — cost if wrong: a golden hides a real value move (mitigated by the flattened path list the implementer must report).

@@ -1,0 +1,6 @@
+# Task 3 findings (review of a4d49c7) — binding rulings
+1. IMPORTANT (fix): src/prices/writer.ts:298, 325-402 — an aborted signal is only checked before each chain-day; abort inside a multicall still finished and committed the day (23 more multicalls). Fix: check signal.aborted at the top of each hour loop and immediately before db.tx; an abort mid-day commits nothing for that day. Test: abort from inside a fake multicall -> 0 rows for that day, no further multicalls, result marks the stop.
+2. MINOR (fix, cheap): duplicate breach alert when a breach run crosses midnight (days walked newest first; reproduced 01:00 and 00:00). Fix: evaluate breach runs chronologically over the whole run's hours (or carry the run state across the day boundary in time order) so one run = one breach. Test: a run spanning 23:00-01:00 reports exactly one breach.
+3. MINOR (fix, cheap): an hour with no row (missing) must reset the consecutive count (absent != skipped check). Test.
+4. MINOR (fix, one line): stagingRefresh doc comment names hour_blocks as restored from prod (Ruling R14) .
+Deferred (ledger only): failed chain leaves no missing entry for its refs' later hours; block-search fallback discards its bracket; writeChainPrices ~230 lines.
