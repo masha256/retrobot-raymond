@@ -116,3 +116,27 @@ Ruling R20: Task 6a is reviewed on its own now (in parallel with 6b's implemente
 Ruling R21: AERO keeps its own price_usd adapters (chain.v2_pool_twap_price + cl spot check) in 6b — unchanged report bytes; its prices.yaml entry serves history/level rebuild only — cost if wrong: two definitions of AERO's price (same pools).
 Task 6a: review dispatched (review-7ff7562..7063c22.diff, 391 KB) with Task 6b implementer.
 Task 6b: dispatched (BASE 7063c22)
+Task 6a: review — spec ✅, quality Needs fixes: 1 Important (flow-scan breaches dropped) + minors; all named risks pass (value bit-equal to view in a probe).
+Task 6b: committed 661bf9c; reported 1881/1881 (151 files), typecheck/lint/py clean, register current; goldens moved only priceBasis.source/sourceType (60 entries) + pack adapter_params.
+Ruling R22: price_usd level cross-checks only where one existed before R2 (CAKE, LINK, LIT, PUMP, UNI, VVV); new ones on CRV/cvxCRV/HYPE/sdCRV/SKY/yCRV/DIEM removed, because cross_check_mismatch opens an anomaly (paid triage on prod) and P5 says price checks never open anomalies; LIT zero-liquidity = no reading — cost if wrong: those six assets have no fetch-time level check (their hourly writer check + WATCH still runs).
+Ruling R23: fix wave for 6a+6b items in task-6-findings.md (A-G) as one commit, dispatched now with the 6b review in parallel; the 6b reviewer is told E/F are being fixed — cost if wrong: the reviewer's 6b findings may overlap the wave (merged into a second round).
+Task 6a: minor (deferred): flow scan writer call has no budget or abort (a partial write shows as 'no price point')
+Task 6a: minor (deferred): view accepts non-hour-aligned prices; scan lookup does not (none stored)
+Task 6a: minor (deferred): no committed test of stored value == view usd
+Task 6a: minor (deferred): levels tests written after the code
+Task 6b: minor (deferred): consecutive:2 (cvxCRV/yCRV) does not apply at fetch time (moot after R22: no level cross-check there)
+Task 6b: minor (deferred): a config parsed without prices.yaml labels LIT's price source contract_state (production always loads prices.yaml)
+Task 6b: note: CAKE/LINK/UNI keep check id price_chainlink (continuity) though it now checks the pool
+Carry to Task 9: docs/templates still show CoinGecko prices.
+Task 6: fix wave dispatched (findings A-G) with Task 6b review (review-7063c22..661bf9c.diff).
+Task 6b: review clean (spec ✅, quality Approved; live price.token == writer value on 6 EVM families; goldens moved only priceBasis.source/sourceType).
+Task 6b: minor (deferred): VVV price_usd and diem_price_usd share one source id (a DIEM-only failure streak merges with VVV's)
+Task 6b: minor (deferred): price.ts:104/111 comment says a failed read is retried by the next adapter (EVM block cache keeps failures)
+Task 6b: minor (deferred): per-run block cache shared across chains, keyed by block number only
+Task 6b: minor (deferred): off-chain observedAt is run start (ctx.nowIso)
+Task 6b: minor (deferred): LIT's v4 check read at the Ethereum head, not the run block
+Ruling R24: two 6b minors are fixed now, as their own first commit in Task 7's dispatch: (1) refuse a `coingecko` source with `field: price` in the schema at load/filing/approve (a proposal could otherwise bring a CoinGecko price back — the global constraint); (2) config-proposal filing (agent/tools/write.ts:306) parses with ctx.loaded.prices so a bad ref is refused at filing — cost if wrong: none.
+Task 6: fix wave committed 7202a46 (A-G); reported 1887/1888 (gitPublisher load timeout, passes alone 7/7), typecheck/lint/py/register clean; hashes moved: aero (E), crv cvxcrv hype sdcrv sky vvv ycrv (F); report goldens unchanged.
+Task 6: minor (deferred): FetchResult.priceBreaches not printed by the CLI fetch summary
+Task 6: fix-wave re-review dispatched (review-661bf9c..7202a46.diff) with Task 7 implementer.
+Task 7: dispatched (BASE 7202a46)

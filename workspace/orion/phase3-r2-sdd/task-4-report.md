@@ -71,3 +71,51 @@ Status: DONE. Commit `27a6ff1 feat(prices): Hyperliquid, Lighter and PumpSwap pr
 - The Meteora check finds the pair's reserve accounts by `owner == pair` in the token balances. That holds for DLMM reserves, but it is not measured in the scoping file.
 - The candle cache is keyed on the deps object. A long-lived caller that reuses one `PriceDeps` across days keeps closed hours cached, which is harmless (they are immutable) but grows by about 1 entry per hour per coin.
 - The writer still reports `missing` without its `detail` (writer.ts collect keeps reason only). So `stale_swap`'s `last_swap_age_s` reaches the WriteResult only as the reason. For priced rows the age is stored in the row's detail.
+
+
+## Fix round 1 (task-4-findings.md items 1-4; HEAD bd4feed kept)
+
+Each finding got a failing test first. RED was `npx vitest run tests/prices/offchainMethods.test.ts tests/prices/writer.test.ts --maxWorkers=1` against the unfixed source: **7 failed | 41 passed (48)**. GREEN on the same command: **48/48**.
+
+1. **The Meteora check now uses the LbPair's own reserve accounts** (`src/prices/offchainMethods.ts` `dlmmReservesOf`/`dlmmReserves`/`dlmmExecution`).
+   - The LbPair is read with one `getMultipleAccounts([pair])` per deps object, so once per writer run. Cost: 1 request per run, not per hour. Nothing changed in prices.yaml or config.ts, and no hash pin moved.
+   - token_x/y_mint (@88/@120) must be PUMP/USDC in either order, else the read throws. reserve_x @152 and reserve_y @184 are then matched in postTokenBalances by `accountKeys(tx)[accountIndex]`, the same way `vaultReserves` does it, with a mint assertion. The check detail now carries `reserve_x`/`reserve_y`.
+   - The `dlmmTx` fixture now uses the real reserve keys 6uVEyA1R… (PUMP, programId TokenzQd…) and 5RLzTiyG… (USDC, Tokenkeg). It also lists the pair-owned spam USDC account EjYhsATU… first, moving by 1 raw.
+   - RED: the main PUMP test gave a check gap of `-99.99999968` instead of `+0.1455`, the reviewer's failure.
+   - New tests:
+     - "reads the LbPair's reserve_x/reserve_y (once per run) and ignores a pair-owned spam USDC account": two hours on one deps make exactly one `getMultipleAccounts([PAIR])`.
+     - "an LbPair whose mints are not PUMP/USDC is a check error": the reversed x/y pair still prices.
+2. **No open candle is priced.**
+   - `priceRangeOffchain` caps its fetch at `floor(now/1h)*1h`. Hours from there on are listed `missing: no_block_yet`.
+   - `priceHourOffchain` returns `no_block_yet` for a candle hour that has not closed, with no fetch.
+   - `closeAt` returns null for an unclosed hour (defence in depth).
+   - Test "never prices the still-open candle: now 14:30Z…": the range 12:00–16:00Z prices only 12:00 and 13:00, with 14:00 and 15:00 as `no_block_yet`. Every candleSnapshot endTime is before 14:00Z. One hour of 14:00Z gives `no_block_yet` with 0 requests, while 13:00Z prices.
+   - RED: the range priced 4 hours.
+3. **A check read error keeps the primary.**
+   - In `solanaHour`, the LbPair read and the pair's signature/transaction reads are wrapped in a try. A non-Orion error gives `{usd: null, reason: 'check_error', detail: {method, error}}`, so the PUMP price is written with `checkGapPct` null and `check.skipped = 'check_error'`. Nothing throws to the writer, so the Solana chain is not stopped.
+   - The live path does the same for an unreadable or malformed pair account.
+   - Test "a Meteora check read that throws keeps the PUMP primary…": the pair's getSignaturesForAddress answers -32603, and a missing LbPair account is the second case. The live test gains an "unreadable pair account" case; its RED was an `Error: solana account 9SMp…: no base64 data` throw.
+4. **The missing detail reaches the WriteResult, and the budget has its own reason.**
+   - `writer.ts` `collect` now copies the method's `detail` into `WriteResult.missing`, and `types.ts` gains `detail?`. Writer-made reasons (`no_block_yet`, `quote_missing`, `read_failed`) carry none.
+   - `lastTx` gives `no_swap` only when the signature history ends, and `read_budget_spent` when the 8/6-transaction budget or the 10-page budget is spent (with `signature_pages`).
+   - Tests: writer "a method's missing detail reaches WriteResult.missing (stale_swap with its last_swap_age_s)". Offchain "a pair whose read budget is spent… read_budget_spent; a history that ends first is no_swap" (7 non-swap pair txs give `transactions_read: 6`).
+5. **The fixtures now match the probed live shapes.**
+   - Meta token balances carry `programId`: Token-2022 for PUMP accounts, Tokenkeg for USDC.
+   - The live PUMP vault is a `spl-token-2022` account with `immutableOwner` and `transferHookAccount` extensions and `tokenAmount{amount, decimals 6, uiAmount}`.
+   - The Lighter book fixture already had the probed shape, so it is unchanged.
+
+Commands and results:
+- `npx vitest run tests/prices --maxWorkers=1`: 82/82 (4 files).
+- `npx vitest run --maxWorkers=2`: **1836/1836 (150 files)** = 1830 + 6 new. No load timeouts.
+- `npm run typecheck`: clean. `npm run lint:promises`: clean.
+
+Files changed:
+- `src/prices/offchainMethods.ts`
+- `src/prices/writer.ts`
+- `src/prices/types.ts`
+- `tests/prices/offchainMethods.test.ts`
+- `tests/prices/writer.test.ts`
+
+Concerns:
+- When the first signature past 6 h is a failed one, `stale_swap` still carries `scanned_back_s` and not `last_swap_age_s`. The last successful swap's age is unknown there; it is at least `scanned_back_s`.
+- The LbPair cache is per deps object (a WeakMap, like the candle cache). A long-lived deps object would not see a change to the pair's reserve accounts, but those accounts are fixed per pair.
