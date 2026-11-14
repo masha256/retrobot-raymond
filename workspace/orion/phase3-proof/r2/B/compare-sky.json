@@ -1,0 +1,34 @@
+[
+  {
+    "metric": "flow_usd.buyback",
+    "days": 391,
+    "sumLegacy": 51471910.91218996,
+    "sumHourly": 51567963.87462323,
+    "gapPct": 0.18661238864268181,
+    "p50DayGapPct": 0.6305289064161842,
+    "p90DayGapPct": 2.962600647196746,
+    "legacyZeroDays": 0,
+    "hourlyCovered": 391,
+    "dailyMean": 0,
+    "usdNative": 0,
+    "unpriced": 0,
+    "noTokens": 0,
+    "noHourly": 0
+  },
+  {
+    "metric": "flow_usd.stakers",
+    "days": 391,
+    "sumLegacy": 11426885.288505817,
+    "sumHourly": 11426977.797021003,
+    "gapPct": 0.00080956894945583,
+    "p50DayGapPct": 0,
+    "p90DayGapPct": 0.022763071445812064,
+    "legacyZeroDays": 0,
+    "hourlyCovered": 391,
+    "dailyMean": 0,
+    "usdNative": 0,
+    "unpriced": 0,
+    "noTokens": 0,
+    "noHourly": 0
+  }
+]

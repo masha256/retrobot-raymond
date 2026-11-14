@@ -1,0 +1,23 @@
+{
+  "asset": "link",
+  "from": null,
+  "applied": false,
+  "perMetric": [
+    {
+      "metric": "flow_usd.reserve",
+      "rows": 391,
+      "repriced": 391,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 64355160.75088862,
+      "newSum": 62971948.00367302,
+      "inactiveCoingeckoRows": 100
+    }
+  ],
+  "derived": [],
+  "remapped": [],
+  "days": 0,
+  "exportFile": null,
+  "exportSha256": null
+}

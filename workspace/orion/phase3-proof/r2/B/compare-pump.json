@@ -1,0 +1,34 @@
+[
+  {
+    "metric": "flow_usd.buyback",
+    "days": 391,
+    "sumLegacy": 2818842.2357638134,
+    "sumHourly": 2818318.878142594,
+    "gapPct": -0.018566403418374122,
+    "p50DayGapPct": 0.06611092063698484,
+    "p90DayGapPct": 0.1803215046624024,
+    "legacyZeroDays": 0,
+    "hourlyCovered": 5,
+    "dailyMean": 5,
+    "usdNative": 0,
+    "unpriced": 0,
+    "noTokens": 386,
+    "noHourly": 0
+  },
+  {
+    "metric": "flow_usd.llama_revenue",
+    "days": 398,
+    "sumLegacy": 0,
+    "sumHourly": 0,
+    "gapPct": null,
+    "p50DayGapPct": null,
+    "p90DayGapPct": null,
+    "legacyZeroDays": 0,
+    "hourlyCovered": 0,
+    "dailyMean": 0,
+    "usdNative": 0,
+    "unpriced": 0,
+    "noTokens": 398,
+    "noHourly": 0
+  }
+]

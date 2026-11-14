@@ -1,0 +1,23 @@
+{
+  "asset": "uni",
+  "from": null,
+  "applied": false,
+  "perMetric": [
+    {
+      "metric": "flow_usd.burn",
+      "rows": 233,
+      "repriced": 233,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 56392971.85408202,
+      "newSum": 56432234.695701785,
+      "inactiveCoingeckoRows": 101
+    }
+  ],
+  "derived": [],
+  "remapped": [],
+  "days": 0,
+  "exportFile": null,
+  "exportSha256": null
+}

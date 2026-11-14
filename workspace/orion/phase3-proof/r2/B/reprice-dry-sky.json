@@ -1,0 +1,34 @@
+{
+  "asset": "sky",
+  "from": null,
+  "applied": false,
+  "perMetric": [
+    {
+      "metric": "flow_usd.buyback",
+      "rows": 391,
+      "repriced": 391,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 51471910.91218996,
+      "newSum": 51567963.87462323,
+      "inactiveCoingeckoRows": 100
+    },
+    {
+      "metric": "flow_usd.stakers",
+      "rows": 391,
+      "repriced": 391,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 11426885.288505817,
+      "newSum": 11426977.797021003,
+      "inactiveCoingeckoRows": 100
+    }
+  ],
+  "derived": [],
+  "remapped": [],
+  "days": 0,
+  "exportFile": null,
+  "exportSha256": null
+}

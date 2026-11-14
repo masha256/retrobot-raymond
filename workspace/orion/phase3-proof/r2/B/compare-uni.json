@@ -1,0 +1,18 @@
+[
+  {
+    "metric": "flow_usd.burn",
+    "days": 233,
+    "sumLegacy": 56392971.85408202,
+    "sumHourly": 56432234.695701785,
+    "gapPct": 0.06962364338833904,
+    "p50DayGapPct": 0.63157124025514,
+    "p90DayGapPct": 2.4174468135946663,
+    "legacyZeroDays": 0,
+    "hourlyCovered": 233,
+    "dailyMean": 0,
+    "usdNative": 0,
+    "unpriced": 0,
+    "noTokens": 0,
+    "noHourly": 0
+  }
+]

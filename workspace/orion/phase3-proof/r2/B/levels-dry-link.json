@@ -1,0 +1,14 @@
+{
+  "asset": "link",
+  "applied": false,
+  "perMetric": [
+    {
+      "metric": "price_usd",
+      "tokenRef": "eip155:1/0x514910771af9ca656af840dff83e8264ecf986ca",
+      "rows": 32,
+      "rebuilt": 32,
+      "refused": []
+    }
+  ],
+  "days": 0
+}

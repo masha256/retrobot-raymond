@@ -1,0 +1,89 @@
+{
+  "asset": "cvxcrv",
+  "from": null,
+  "applied": false,
+  "perMetric": [
+    {
+      "metric": "flow_usd.convex_gross_crv",
+      "rows": 397,
+      "repriced": 397,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 23440642.787181728,
+      "newSum": 23418181.48328419,
+      "inactiveCoingeckoRows": 0
+    },
+    {
+      "metric": "flow_usd.convex_rev_cvx",
+      "rows": 397,
+      "repriced": 397,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 1054833.8882638584,
+      "newSum": 1053822.950996519,
+      "inactiveCoingeckoRows": 0
+    },
+    {
+      "metric": "flow_usd.convex_rev_cvxcrv",
+      "rows": 397,
+      "repriced": 397,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 2344075.3072530185,
+      "newSum": 2341828.7799922647,
+      "inactiveCoingeckoRows": 0
+    },
+    {
+      "metric": "flow_usd.convex_rev_treasury",
+      "rows": 397,
+      "repriced": 397,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 468815.06145060394,
+      "newSum": 468365.75599845307,
+      "inactiveCoingeckoRows": 0
+    },
+    {
+      "metric": "flow_usd.crv",
+      "rows": 233,
+      "repriced": 233,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 1124891.9085717944,
+      "newSum": 1124743.8780566084,
+      "inactiveCoingeckoRows": 103
+    },
+    {
+      "metric": "flow_usd.cvx",
+      "rows": 233,
+      "repriced": 233,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 469510.52112473606,
+      "newSum": 469019.0298081009,
+      "inactiveCoingeckoRows": 103
+    },
+    {
+      "metric": "flow_usd.fees",
+      "rows": 233,
+      "repriced": 233,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 1976017.343941311,
+      "newSum": 1976081.1231853464,
+      "inactiveCoingeckoRows": 103
+    }
+  ],
+  "derived": [],
+  "remapped": [],
+  "days": 0,
+  "exportFile": null,
+  "exportSha256": null
+}
