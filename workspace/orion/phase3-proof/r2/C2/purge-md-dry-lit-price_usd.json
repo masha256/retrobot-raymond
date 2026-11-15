@@ -1,0 +1,21 @@
+{
+  "asset": "lit",
+  "perMetric": [
+    {
+      "metric": "price_usd",
+      "configured": true,
+      "observations": 33,
+      "superseded": 33,
+      "firstDay": "2026-10-16",
+      "lastDay": "2026-11-14",
+      "valueSum": 106.05000000000001,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 0,
+      "withoutReplacement": []
+    }
+  ],
+  "exportFile": null,
+  "exportSha256": null,
+  "applied": false
+}

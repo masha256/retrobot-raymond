@@ -1,0 +1,64 @@
+{
+  "asset": "hype",
+  "from": null,
+  "applied": false,
+  "perMetric": [
+    {
+      "metric": "flow_usd.af_buyback",
+      "rows": 232,
+      "repriced": 0,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {
+        "third_party": 232
+      },
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 0
+    },
+    {
+      "metric": "flow_usd.af_buys_direct",
+      "rows": 47,
+      "repriced": 0,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {
+        "usd_native": 47
+      },
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 0
+    },
+    {
+      "metric": "flow_usd.reserve_yield",
+      "rows": 2,
+      "repriced": 0,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {
+        "usd_native": 2
+      },
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 0
+    },
+    {
+      "metric": "flow_usd.revenue_proxy",
+      "rows": 399,
+      "repriced": 0,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {
+        "third_party": 399
+      },
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 0
+    }
+  ],
+  "derived": [],
+  "remapped": [],
+  "days": 0,
+  "exportFile": null,
+  "exportSha256": null
+}

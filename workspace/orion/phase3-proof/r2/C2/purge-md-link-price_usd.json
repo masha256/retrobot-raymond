@@ -1,0 +1,21 @@
+{
+  "asset": "link",
+  "perMetric": [
+    {
+      "metric": "price_usd",
+      "configured": true,
+      "observations": 32,
+      "superseded": 32,
+      "firstDay": "2026-10-16",
+      "lastDay": "2026-11-14",
+      "valueSum": 362.90000000000003,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 0,
+      "withoutReplacement": []
+    }
+  ],
+  "exportFile": "/home/hermes/.hermes/profiles/raymond/cache/scratch/p3r2-20261114T185657Z/new/purged/link-price_usd-20261115T024210Z.json",
+  "exportSha256": "18b80e4052765cf54462e297baac122d55e3cf6314d758003339669d3c4381f8",
+  "applied": true
+}

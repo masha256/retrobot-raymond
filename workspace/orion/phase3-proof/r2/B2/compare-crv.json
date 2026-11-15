@@ -1,0 +1,50 @@
+[
+  {
+    "metric": "flow_usd.curve_treasury",
+    "days": 396,
+    "sumLegacy": 881536.6981981897,
+    "sumHourly": 881612.4606243566,
+    "gapPct": 0.008594358728553075,
+    "p50DayGapPct": 0,
+    "p90DayGapPct": 0.029752682386637783,
+    "legacyZeroDays": 0,
+    "hourlyCovered": 396,
+    "dailyMean": 0,
+    "usdNative": 0,
+    "unpriced": 0,
+    "noTokens": 0,
+    "noHourly": 0
+  },
+  {
+    "metric": "flow_usd.fees",
+    "days": 233,
+    "sumLegacy": 3707822.7226860193,
+    "sumHourly": 3707307.892486068,
+    "gapPct": -0.01388497343202122,
+    "p50DayGapPct": 0,
+    "p90DayGapPct": 0.021498226428867093,
+    "legacyZeroDays": 0,
+    "hourlyCovered": 233,
+    "dailyMean": 0,
+    "usdNative": 0,
+    "unpriced": 0,
+    "noTokens": 0,
+    "noHourly": 0
+  },
+  {
+    "metric": "flow_usd.protocol_revenue",
+    "days": 397,
+    "sumLegacy": 8815366.9819819,
+    "sumHourly": 8816124.606243566,
+    "gapPct": 0.008594358728508666,
+    "p50DayGapPct": 0,
+    "p90DayGapPct": 0.029752682386661556,
+    "legacyZeroDays": 0,
+    "hourlyCovered": 397,
+    "dailyMean": 0,
+    "usdNative": 0,
+    "unpriced": 0,
+    "noTokens": 0,
+    "noHourly": 0
+  }
+]

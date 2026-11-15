@@ -1,0 +1,6 @@
+{
+  "error": {
+    "code": "purge_prices_coingecko_refs",
+    "message": "active observations still carry a coingecko:* token ref (ycrv 1026): run `data reprice <asset> --yes` first, which remaps them"
+  }
+}

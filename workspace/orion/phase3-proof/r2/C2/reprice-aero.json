@@ -1,0 +1,26 @@
+{
+  "asset": "aero",
+  "from": null,
+  "applied": false,
+  "perMetric": [
+    {
+      "metric": "flow_usd.fees",
+      "rows": 233,
+      "repriced": 0,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {
+        "third_party": 232,
+        "derived": 1
+      },
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 0
+    }
+  ],
+  "derived": [],
+  "remapped": [],
+  "days": 0,
+  "exportFile": null,
+  "exportSha256": null
+}

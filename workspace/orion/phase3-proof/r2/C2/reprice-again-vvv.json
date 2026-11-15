@@ -1,0 +1,42 @@
+{
+  "asset": "vvv",
+  "from": null,
+  "applied": false,
+  "perMetric": [
+    {
+      "metric": "flow_usd.burn",
+      "rows": 233,
+      "repriced": 0,
+      "unchanged": 233,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 112
+    },
+    {
+      "metric": "flow_usd.burn_programmatic",
+      "rows": 233,
+      "repriced": 0,
+      "unchanged": 233,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 112
+    }
+  ],
+  "derived": [
+    {
+      "metric": "usage_index",
+      "rows": 204,
+      "recomputed": 0,
+      "unchanged": 204,
+      "incomplete": 0
+    }
+  ],
+  "remapped": [],
+  "days": 0,
+  "exportFile": null,
+  "exportSha256": null
+}

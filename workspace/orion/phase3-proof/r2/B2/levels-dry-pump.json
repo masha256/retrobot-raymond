@@ -1,0 +1,15 @@
+{
+  "asset": "pump",
+  "applied": false,
+  "perMetric": [
+    {
+      "metric": "price_usd",
+      "tokenRef": "solana:mainnet/pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn",
+      "rows": 32,
+      "rebuilt": 32,
+      "beforeValidFrom": [],
+      "refused": []
+    }
+  ],
+  "days": 0
+}

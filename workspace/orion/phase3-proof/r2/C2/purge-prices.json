@@ -1,0 +1,85 @@
+{
+  "source": "coingecko",
+  "applied": true,
+  "prices": [
+    {
+      "tokenRef": "coingecko:crvusd",
+      "rows": 8665,
+      "firstTs": "2025-11-18T00:00:00.000Z",
+      "lastTs": "2026-11-14T00:00:00.000Z"
+    },
+    {
+      "tokenRef": "coingecko:yearn-crv",
+      "rows": 8468,
+      "firstTs": "2025-11-18T00:00:00.000Z",
+      "lastTs": "2026-11-14T00:00:00.000Z"
+    },
+    {
+      "tokenRef": "eip155:1/0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+      "rows": 5593,
+      "firstTs": "2026-03-26T00:00:00.000Z",
+      "lastTs": "2026-11-14T00:00:00.000Z"
+    },
+    {
+      "tokenRef": "eip155:1/0x4e3fbd56cd56c3e72c1403e103b45db9da5b9d2b",
+      "rows": 5593,
+      "firstTs": "2026-03-26T00:00:00.000Z",
+      "lastTs": "2026-11-14T00:00:00.000Z"
+    },
+    {
+      "tokenRef": "eip155:1/0x514910771af9ca656af840dff83e8264ecf986ca",
+      "rows": 8665,
+      "firstTs": "2025-11-18T00:00:00.000Z",
+      "lastTs": "2026-11-14T00:00:00.000Z"
+    },
+    {
+      "tokenRef": "eip155:1/0x56072c95faa701256059aa122697b133aded9279",
+      "rows": 8665,
+      "firstTs": "2025-11-18T00:00:00.000Z",
+      "lastTs": "2026-11-14T00:00:00.000Z"
+    },
+    {
+      "tokenRef": "eip155:1/0xd1b5651e55d4ceed36251c61c50c889b36f6abb5",
+      "rows": 5578,
+      "firstTs": "2026-03-26T00:00:00.000Z",
+      "lastTs": "2026-11-14T00:00:00.000Z"
+    },
+    {
+      "tokenRef": "eip155:1/0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "rows": 8665,
+      "firstTs": "2025-11-18T00:00:00.000Z",
+      "lastTs": "2026-11-14T00:00:00.000Z"
+    },
+    {
+      "tokenRef": "eip155:1/0xdc035d45d973e3ec169d2276ddab16f1e407384f",
+      "rows": 8665,
+      "firstTs": "2025-11-18T00:00:00.000Z",
+      "lastTs": "2026-11-14T00:00:00.000Z"
+    },
+    {
+      "tokenRef": "eip155:1/0xf939e0a03fb07f59a73314e73794be0e57ac1b4e",
+      "rows": 8672,
+      "firstTs": "2025-11-17T17:00:00.000Z",
+      "lastTs": "2026-11-14T00:00:00.000Z"
+    },
+    {
+      "tokenRef": "eip155:56/0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
+      "rows": 8665,
+      "firstTs": "2025-11-18T00:00:00.000Z",
+      "lastTs": "2026-11-14T00:00:00.000Z"
+    },
+    {
+      "tokenRef": "eip155:8453/0xacfe6019ed1a7dc6f7b508c02d1b04ec88cc21bf",
+      "rows": 5593,
+      "firstTs": "2026-03-26T00:00:00.000Z",
+      "lastTs": "2026-11-14T00:00:00.000Z"
+    }
+  ],
+  "deletedTokens": [
+    "coingecko:crvusd",
+    "coingecko:yearn-crv"
+  ],
+  "keptTokens": [],
+  "exportFile": "/home/hermes/.hermes/profiles/raymond/cache/scratch/p3r2-20261114T185657Z/new/purged/prices-coingecko-20261115T024154Z.json",
+  "exportSha256": "6c1ce508c831746d065f132bf1ff5e4eb7d155917b099a0df9c4a375a9a6bcd4"
+}

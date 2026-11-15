@@ -1,0 +1,21 @@
+{
+  "asset": "uni",
+  "perMetric": [
+    {
+      "metric": "price_usd",
+      "configured": true,
+      "observations": 35,
+      "superseded": 35,
+      "firstDay": "2026-10-11",
+      "lastDay": "2026-11-14",
+      "valueSum": 246.7,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 0,
+      "withoutReplacement": []
+    }
+  ],
+  "exportFile": "/home/hermes/.hermes/profiles/raymond/cache/scratch/p3r2-20261114T185657Z/new/purged/uni-price_usd-20261115T024225Z.json",
+  "exportSha256": "c93cf93cd6ca9ffb3f95828e01d181ba3d43d487c3ec38e5c2a8de9f2cae7ecd",
+  "applied": true
+}

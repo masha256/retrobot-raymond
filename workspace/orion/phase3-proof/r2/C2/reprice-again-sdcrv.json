@@ -1,0 +1,122 @@
+{
+  "asset": "sdcrv",
+  "from": null,
+  "applied": false,
+  "perMetric": [
+    {
+      "metric": "flow_usd.bribes",
+      "rows": 233,
+      "repriced": 0,
+      "unchanged": 233,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 103
+    },
+    {
+      "metric": "flow_usd.crv",
+      "rows": 233,
+      "repriced": 0,
+      "unchanged": 233,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 103
+    },
+    {
+      "metric": "flow_usd.fees",
+      "rows": 233,
+      "repriced": 0,
+      "unchanged": 233,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 103
+    },
+    {
+      "metric": "flow_usd.sd_boost_delegation",
+      "rows": 396,
+      "repriced": 0,
+      "unchanged": 396,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 0
+    },
+    {
+      "metric": "flow_usd.sd_gross_crv",
+      "rows": 397,
+      "repriced": 0,
+      "unchanged": 397,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 0
+    },
+    {
+      "metric": "flow_usd.sd_rev_crv",
+      "rows": 397,
+      "repriced": 0,
+      "unchanged": 397,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 0
+    },
+    {
+      "metric": "flow_usd.sd_rev_crv_treasury",
+      "rows": 396,
+      "repriced": 0,
+      "unchanged": 396,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 0
+    },
+    {
+      "metric": "flow_usd.sd_rev_crv_vesdt",
+      "rows": 396,
+      "repriced": 0,
+      "unchanged": 396,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 0
+    },
+    {
+      "metric": "flow_usd.sd_rev_fees_liquidity",
+      "rows": 397,
+      "repriced": 0,
+      "unchanged": 397,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 0
+    },
+    {
+      "metric": "flow_usd.sd_rev_fees_treasury",
+      "rows": 397,
+      "repriced": 0,
+      "unchanged": 397,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 0
+    }
+  ],
+  "derived": [],
+  "remapped": [],
+  "days": 0,
+  "exportFile": null,
+  "exportSha256": null
+}

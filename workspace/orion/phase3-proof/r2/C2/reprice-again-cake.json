@@ -1,0 +1,34 @@
+{
+  "asset": "cake",
+  "from": null,
+  "applied": false,
+  "perMetric": [
+    {
+      "metric": "flow_usd.burn",
+      "rows": 395,
+      "repriced": 0,
+      "unchanged": 395,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 100
+    },
+    {
+      "metric": "flow_usd.treasury",
+      "rows": 395,
+      "repriced": 0,
+      "unchanged": 395,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 100
+    }
+  ],
+  "derived": [],
+  "remapped": [],
+  "days": 0,
+  "exportFile": null,
+  "exportSha256": null
+}

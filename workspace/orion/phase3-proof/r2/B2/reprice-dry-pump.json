@@ -1,0 +1,38 @@
+{
+  "asset": "pump",
+  "from": null,
+  "applied": false,
+  "perMetric": [
+    {
+      "metric": "flow_usd.buyback",
+      "rows": 391,
+      "repriced": 28,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {
+        "defillama_history": 363
+      },
+      "oldSum": 19528060.21087,
+      "newSum": 19524410.384922996,
+      "inactiveCoingeckoRows": 0
+    },
+    {
+      "metric": "flow_usd.llama_revenue",
+      "rows": 398,
+      "repriced": 0,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {
+        "third_party": 398
+      },
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 0
+    }
+  ],
+  "derived": [],
+  "remapped": [],
+  "days": 0,
+  "exportFile": null,
+  "exportSha256": null
+}

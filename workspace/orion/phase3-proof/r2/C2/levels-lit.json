@@ -1,0 +1,15 @@
+{
+  "asset": "lit",
+  "applied": true,
+  "perMetric": [
+    {
+      "metric": "price_usd",
+      "tokenRef": "eip155:1/0x232ce3bd40fcd6f80f3d55a522d03f25df784ee2",
+      "rows": 33,
+      "rebuilt": 33,
+      "beforeValidFrom": [],
+      "refused": []
+    }
+  ],
+  "days": 30
+}

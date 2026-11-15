@@ -1,0 +1,15 @@
+{
+  "asset": "sdcrv",
+  "applied": false,
+  "perMetric": [
+    {
+      "metric": "price_usd",
+      "tokenRef": "eip155:1/0xd1b5651e55d4ceed36251c61c50c889b36f6abb5",
+      "rows": 37,
+      "rebuilt": 37,
+      "beforeValidFrom": [],
+      "refused": []
+    }
+  ],
+  "days": 0
+}

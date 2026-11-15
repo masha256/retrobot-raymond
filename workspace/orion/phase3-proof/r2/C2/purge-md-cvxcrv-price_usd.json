@@ -1,0 +1,21 @@
+{
+  "asset": "cvxcrv",
+  "perMetric": [
+    {
+      "metric": "price_usd",
+      "configured": true,
+      "observations": 37,
+      "superseded": 37,
+      "firstDay": "2026-10-09",
+      "lastDay": "2026-11-14",
+      "valueSum": 4.631575,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 0,
+      "withoutReplacement": []
+    }
+  ],
+  "exportFile": "/home/hermes/.hermes/profiles/raymond/cache/scratch/p3r2-20261114T185657Z/new/purged/cvxcrv-price_usd-20261115T024205Z.json",
+  "exportSha256": "722ac9ae9d2a28066bdd28e20e6f9350f00c2c5c1e1efde72a777ed1558f0f77",
+  "applied": true
+}

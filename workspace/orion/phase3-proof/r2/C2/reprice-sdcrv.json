@@ -1,0 +1,122 @@
+{
+  "asset": "sdcrv",
+  "from": null,
+  "applied": true,
+  "perMetric": [
+    {
+      "metric": "flow_usd.bribes",
+      "rows": 233,
+      "repriced": 233,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 1211120.1414065622,
+      "newSum": 1208796.9698624606,
+      "inactiveCoingeckoRows": 103
+    },
+    {
+      "metric": "flow_usd.crv",
+      "rows": 233,
+      "repriced": 233,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 140883.61120819295,
+      "newSum": 140635.86505813987,
+      "inactiveCoingeckoRows": 103
+    },
+    {
+      "metric": "flow_usd.fees",
+      "rows": 233,
+      "repriced": 233,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 490532.42353747657,
+      "newSum": 490542.0206914204,
+      "inactiveCoingeckoRows": 103
+    },
+    {
+      "metric": "flow_usd.sd_boost_delegation",
+      "rows": 396,
+      "repriced": 396,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 150501.95805158422,
+      "newSum": 150560.61646821705,
+      "inactiveCoingeckoRows": 0
+    },
+    {
+      "metric": "flow_usd.sd_gross_crv",
+      "rows": 397,
+      "repriced": 397,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 7727329.510373307,
+      "newSum": 7717163.975670535,
+      "inactiveCoingeckoRows": 0
+    },
+    {
+      "metric": "flow_usd.sd_rev_crv",
+      "rows": 397,
+      "repriced": 397,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 1373277.0481481242,
+      "newSum": 1373916.2221445679,
+      "inactiveCoingeckoRows": 0
+    },
+    {
+      "metric": "flow_usd.sd_rev_crv_treasury",
+      "rows": 396,
+      "repriced": 396,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 457850.57063710043,
+      "newSum": 458063.67121972784,
+      "inactiveCoingeckoRows": 0
+    },
+    {
+      "metric": "flow_usd.sd_rev_crv_vesdt",
+      "rows": 396,
+      "repriced": 396,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 499323.5377434002,
+      "newSum": 499555.94137820357,
+      "inactiveCoingeckoRows": 0
+    },
+    {
+      "metric": "flow_usd.sd_rev_fees_liquidity",
+      "rows": 397,
+      "repriced": 397,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 118942.02660026318,
+      "newSum": 118941.83319275001,
+      "inactiveCoingeckoRows": 0
+    },
+    {
+      "metric": "flow_usd.sd_rev_fees_treasury",
+      "rows": 397,
+      "repriced": 397,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 59471.01330013159,
+      "newSum": 59470.916596375006,
+      "inactiveCoingeckoRows": 0
+    }
+  ],
+  "derived": [],
+  "remapped": [],
+  "days": 397,
+  "exportFile": "/home/hermes/.hermes/profiles/raymond/cache/scratch/p3r2-20261114T185657Z/new/repriced/sdcrv-20261115T024119Z.json",
+  "exportSha256": "6633206bd3add8744d15f273e72c13b84ed61613541e13f1f1f910db9b38bbd4"
+}

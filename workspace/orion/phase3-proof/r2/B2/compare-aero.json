@@ -1,0 +1,18 @@
+[
+  {
+    "metric": "flow_usd.fees",
+    "days": 233,
+    "sumLegacy": 0,
+    "sumHourly": 0,
+    "gapPct": null,
+    "p50DayGapPct": null,
+    "p90DayGapPct": null,
+    "legacyZeroDays": 0,
+    "hourlyCovered": 0,
+    "dailyMean": 0,
+    "usdNative": 0,
+    "unpriced": 0,
+    "noTokens": 233,
+    "noHourly": 0
+  }
+]

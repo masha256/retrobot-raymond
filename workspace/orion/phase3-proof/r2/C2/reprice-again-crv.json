@@ -1,0 +1,45 @@
+{
+  "asset": "crv",
+  "from": null,
+  "applied": false,
+  "perMetric": [
+    {
+      "metric": "flow_usd.curve_treasury",
+      "rows": 396,
+      "repriced": 0,
+      "unchanged": 396,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 0
+    },
+    {
+      "metric": "flow_usd.fees",
+      "rows": 233,
+      "repriced": 0,
+      "unchanged": 233,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 104
+    },
+    {
+      "metric": "flow_usd.protocol_revenue",
+      "rows": 397,
+      "repriced": 0,
+      "unchanged": 397,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 0,
+      "newSum": 0,
+      "inactiveCoingeckoRows": 0
+    }
+  ],
+  "derived": [],
+  "remapped": [],
+  "days": 0,
+  "exportFile": null,
+  "exportSha256": null
+}

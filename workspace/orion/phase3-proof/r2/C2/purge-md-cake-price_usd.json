@@ -1,0 +1,21 @@
+{
+  "asset": "cake",
+  "perMetric": [
+    {
+      "metric": "price_usd",
+      "configured": true,
+      "observations": 35,
+      "superseded": 35,
+      "firstDay": "2026-10-12",
+      "lastDay": "2026-11-14",
+      "valueSum": 71.27,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 0,
+      "withoutReplacement": []
+    }
+  ],
+  "exportFile": "/home/hermes/.hermes/profiles/raymond/cache/scratch/p3r2-20261114T185657Z/new/purged/cake-price_usd-20261115T024159Z.json",
+  "exportSha256": "7c62a62277478d4948e16cad7f09aa69942899614c15801d115b5dd53c33f25a",
+  "applied": true
+}

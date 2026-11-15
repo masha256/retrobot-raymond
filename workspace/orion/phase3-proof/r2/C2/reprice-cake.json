@@ -1,0 +1,34 @@
+{
+  "asset": "cake",
+  "from": null,
+  "applied": true,
+  "perMetric": [
+    {
+      "metric": "flow_usd.burn",
+      "rows": 395,
+      "repriced": 395,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 67996157.51940459,
+      "newSum": 66697400.9307082,
+      "inactiveCoingeckoRows": 100
+    },
+    {
+      "metric": "flow_usd.treasury",
+      "rows": 395,
+      "repriced": 395,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 30885935.674924597,
+      "newSum": 30232700.568131898,
+      "inactiveCoingeckoRows": 100
+    }
+  ],
+  "derived": [],
+  "remapped": [],
+  "days": 395,
+  "exportFile": "/home/hermes/.hermes/profiles/raymond/cache/scratch/p3r2-20261114T185657Z/new/repriced/cake-20261115T024107Z.json",
+  "exportSha256": "463df4de292c799972ea2b083515038f1c039df11582c7cdaa4796d0a00d669a"
+}

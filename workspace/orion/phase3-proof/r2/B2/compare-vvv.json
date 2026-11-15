@@ -1,0 +1,34 @@
+[
+  {
+    "metric": "flow_usd.burn",
+    "days": 233,
+    "sumLegacy": 4408866.3071774645,
+    "sumHourly": 4451150.107174004,
+    "gapPct": 0.9590628758169295,
+    "p50DayGapPct": 0.19875671260985842,
+    "p90DayGapPct": 5.187840583704252,
+    "legacyZeroDays": 0,
+    "hourlyCovered": 233,
+    "dailyMean": 0,
+    "usdNative": 0,
+    "unpriced": 0,
+    "noTokens": 0,
+    "noHourly": 0
+  },
+  {
+    "metric": "flow_usd.burn_programmatic",
+    "days": 233,
+    "sumLegacy": 2172327.80668142,
+    "sumHourly": 2172495.5682046544,
+    "gapPct": 0.007722661502485018,
+    "p50DayGapPct": 0.1870747451042352,
+    "p90DayGapPct": 4.910018469204182,
+    "legacyZeroDays": 0,
+    "hourlyCovered": 233,
+    "dailyMean": 0,
+    "usdNative": 0,
+    "unpriced": 0,
+    "noTokens": 0,
+    "noHourly": 0
+  }
+]

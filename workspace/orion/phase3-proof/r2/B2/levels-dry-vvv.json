@@ -1,0 +1,23 @@
+{
+  "asset": "vvv",
+  "applied": false,
+  "perMetric": [
+    {
+      "metric": "diem_price_usd",
+      "tokenRef": "eip155:8453/0xf4d97f2da56e8c3098f3a8d538db630a2606a024",
+      "rows": 52,
+      "rebuilt": 52,
+      "beforeValidFrom": [],
+      "refused": []
+    },
+    {
+      "metric": "price_usd",
+      "tokenRef": "eip155:8453/0xacfe6019ed1a7dc6f7b508c02d1b04ec88cc21bf",
+      "rows": 52,
+      "rebuilt": 52,
+      "beforeValidFrom": [],
+      "refused": []
+    }
+  ],
+  "days": 0
+}

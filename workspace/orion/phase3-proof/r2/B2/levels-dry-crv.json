@@ -1,0 +1,15 @@
+{
+  "asset": "crv",
+  "applied": false,
+  "perMetric": [
+    {
+      "metric": "price_usd",
+      "tokenRef": "eip155:1/0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "rows": 38,
+      "rebuilt": 38,
+      "beforeValidFrom": [],
+      "refused": []
+    }
+  ],
+  "days": 0
+}

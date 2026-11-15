@@ -1,0 +1,21 @@
+{
+  "asset": "vvv",
+  "perMetric": [
+    {
+      "metric": "diem_price_usd",
+      "configured": true,
+      "observations": 52,
+      "superseded": 52,
+      "firstDay": "2026-09-20",
+      "lastDay": "2026-11-14",
+      "valueSum": 93492.85999999999,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 0,
+      "withoutReplacement": []
+    }
+  ],
+  "exportFile": "/home/hermes/.hermes/profiles/raymond/cache/scratch/p3r2-20261114T185657Z/new/purged/vvv-diem_price_usd-20261115T024229Z.json",
+  "exportSha256": "db8a1adb6fbded600ebd3bec0eef83cee0093ef3edaeeb8eaabd2be06f414768",
+  "applied": true
+}

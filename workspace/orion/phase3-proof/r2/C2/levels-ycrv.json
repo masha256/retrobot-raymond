@@ -1,0 +1,15 @@
+{
+  "asset": "ycrv",
+  "applied": true,
+  "perMetric": [
+    {
+      "metric": "price_usd",
+      "tokenRef": "eip155:1/0xfcc5c47be19d06bf83eb04298b026f81069ff65b",
+      "rows": 37,
+      "rebuilt": 37,
+      "beforeValidFrom": [],
+      "refused": []
+    }
+  ],
+  "days": 37
+}

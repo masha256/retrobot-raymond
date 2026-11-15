@@ -1,0 +1,21 @@
+{
+  "asset": "pump",
+  "perMetric": [
+    {
+      "metric": "price_usd",
+      "configured": true,
+      "observations": 32,
+      "superseded": 32,
+      "firstDay": "2026-10-16",
+      "lastDay": "2026-11-14",
+      "valueSum": 0.13154815999999997,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 0,
+      "withoutReplacement": []
+    }
+  ],
+  "exportFile": "/home/hermes/.hermes/profiles/raymond/cache/scratch/p3r2-20261114T185657Z/new/purged/pump-price_usd-20261115T024216Z.json",
+  "exportSha256": "1e545aef68d75c67deaff1876e58e4372537b0a20e79cdda2dcc00d70cf49255",
+  "applied": true
+}

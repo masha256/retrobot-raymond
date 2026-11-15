@@ -1,0 +1,18 @@
+[
+  {
+    "metric": "flow_usd.reserve",
+    "days": 391,
+    "sumLegacy": 64355160.75088862,
+    "sumHourly": 62971948.00367302,
+    "gapPct": -2.149342385406916,
+    "p50DayGapPct": 0,
+    "p90DayGapPct": 0.8385687662148799,
+    "legacyZeroDays": 0,
+    "hourlyCovered": 391,
+    "dailyMean": 0,
+    "usdNative": 0,
+    "unpriced": 0,
+    "noTokens": 0,
+    "noHourly": 0
+  }
+]

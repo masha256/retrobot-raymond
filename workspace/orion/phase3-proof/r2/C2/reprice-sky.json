@@ -1,0 +1,34 @@
+{
+  "asset": "sky",
+  "from": null,
+  "applied": true,
+  "perMetric": [
+    {
+      "metric": "flow_usd.buyback",
+      "rows": 391,
+      "repriced": 391,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 51471910.91218996,
+      "newSum": 51567963.87462323,
+      "inactiveCoingeckoRows": 100
+    },
+    {
+      "metric": "flow_usd.stakers",
+      "rows": 391,
+      "repriced": 391,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 11426885.288505817,
+      "newSum": 11426977.797021003,
+      "inactiveCoingeckoRows": 100
+    }
+  ],
+  "derived": [],
+  "remapped": [],
+  "days": 391,
+  "exportFile": "/home/hermes/.hermes/profiles/raymond/cache/scratch/p3r2-20261114T185657Z/new/repriced/sky-20261115T024123Z.json",
+  "exportSha256": "345f2ed2aab57b94eb085d4d24660f59827b1c50b1e4f95dd5b3abab9c0d7748"
+}

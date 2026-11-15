@@ -1,0 +1,23 @@
+{
+  "asset": "link",
+  "from": null,
+  "applied": true,
+  "perMetric": [
+    {
+      "metric": "flow_usd.reserve",
+      "rows": 391,
+      "repriced": 391,
+      "unchanged": 0,
+      "refused": [],
+      "skipped": {},
+      "oldSum": 64355160.75088862,
+      "newSum": 62971948.00367302,
+      "inactiveCoingeckoRows": 100
+    }
+  ],
+  "derived": [],
+  "remapped": [],
+  "days": 391,
+  "exportFile": "/home/hermes/.hermes/profiles/raymond/cache/scratch/p3r2-20261114T185657Z/new/repriced/link-20261115T024116Z.json",
+  "exportSha256": "2383a590686718fcf90796de60b3e4bbfa319af085be7bbf1eae7c346876d1f0"
+}

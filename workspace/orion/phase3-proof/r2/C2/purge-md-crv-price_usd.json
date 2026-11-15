@@ -1,0 +1,21 @@
+{
+  "asset": "crv",
+  "perMetric": [
+    {
+      "metric": "price_usd",
+      "configured": true,
+      "observations": 38,
+      "superseded": 38,
+      "firstDay": "2026-10-08",
+      "lastDay": "2026-11-14",
+      "valueSum": 11.939238,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 0,
+      "withoutReplacement": []
+    }
+  ],
+  "exportFile": "/home/hermes/.hermes/profiles/raymond/cache/scratch/p3r2-20261114T185657Z/new/purged/crv-price_usd-20261115T024202Z.json",
+  "exportSha256": "18ef922b016c44ae469e80a7e3c6c68f145138793f45d540b9ebe1fed986690e",
+  "applied": true
+}

@@ -1,0 +1,69 @@
+dump 0 14M
+reprice aero 0
+reprice cake 0
+reprice crv 0
+reprice cvxcrv 0
+reprice hype 0
+reprice link 0
+reprice lit 0
+reprice pump 0
+reprice sdcrv 0
+reprice sky 0
+reprice uni 0
+reprice vvv 0
+reprice ycrv 0
+reprice-again aero 0
+reprice-again cake 0
+reprice-again crv 0
+reprice-again cvxcrv 0
+reprice-again hype 0
+reprice-again link 0
+reprice-again lit 0
+reprice-again pump 0
+reprice-again sdcrv 0
+reprice-again sky 0
+reprice-again uni 0
+reprice-again vvv 0
+reprice-again ycrv 0
+levels aero 0
+levels cake 0
+levels crv 0
+levels cvxcrv 0
+levels hype 0
+levels link 0
+levels lit 0
+levels pump 0
+levels sdcrv 0
+levels sky 0
+levels uni 0
+levels vvv 0
+levels ycrv 0
+purge-prices-dry 0
+purge-prices 0
+purge-md aero price_usd 0
+purge-md aero diem_price_usd 0
+purge-md cake price_usd 0
+purge-md cake diem_price_usd 0
+purge-md crv price_usd 0
+purge-md crv diem_price_usd 0
+purge-md cvxcrv price_usd 0
+purge-md cvxcrv diem_price_usd 0
+purge-md hype price_usd 0
+purge-md hype diem_price_usd 0
+purge-md link price_usd 0
+purge-md link diem_price_usd 0
+purge-md lit price_usd 0
+purge-md lit diem_price_usd 0
+purge-md pump price_usd 0
+purge-md pump diem_price_usd 0
+purge-md sdcrv price_usd 0
+purge-md sdcrv diem_price_usd 0
+purge-md sky price_usd 0
+purge-md sky diem_price_usd 0
+purge-md uni price_usd 0
+purge-md uni diem_price_usd 0
+purge-md vvv price_usd 0
+purge-md vvv diem_price_usd 0
+purge-md ycrv price_usd 0
+purge-md ycrv diem_price_usd 0
+done-C

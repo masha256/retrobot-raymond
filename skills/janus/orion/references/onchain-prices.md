@@ -86,6 +86,19 @@ multicalls for N hours, not 2N. Search each hour's block from the previous hour'
 5. Dry runs for every asset (compare-usd, reprice, rebuild-price-levels, purge-prices), then `pg_dump -n <schema>`
    before any `--yes`, so the apply can be redone after fixes. Report per-metric old->new sums, refused, skipped by
    reason, remaps, derived recomputes and inactive CoinGecko rows.
+6. Apply in release order on the copy: reprice `--yes` x13, reprice dry run again (must be 0 repriced/recomputed),
+   rebuild-price-levels `--yes`, purge-prices dry + `--yes`, market_data purge per price metric. Then assert from the
+   DB: 0 `coingecko` prices rows, 0 `coingecko:*` tokens, and only the still-in-scope market_data metrics left
+   (`circulating_supply`); read each purge's `withoutReplacement` list, not just its exit code.
+7. New-dist reports at D, D-91 and default day vs the step-2 old baseline; plus the OLD release's default-day reports
+   on the purged data vs the new ones (rollback check, expect 0 diffs).
+8. After a fix commit: build a fresh `.worktrees/proof-<sha>`, `drop schema` + `pg_restore` the dump, delete and
+   re-write only the price rows whose method changed (e.g. the PUMP check), rerun 5-7, and diff the reports against the
+   first run (0 diffs means the fix moved nothing else). A method that now reads more per hour (a check scanning past
+   dust swaps) is several times slower; don't wrap the writer in a short `timeout`.
+9. Sign-off table for Mike, per asset at D: price, revenue, holder flow, yield, net yield, growth, PEG as % change vs
+   the old release, then D-91 flows. Explain any large growth/PEG move from the two window sums (prior vs current
+   quarter, old vs new): they are ratios of small numbers, and a sign flip is usually a few-% shift in the prior window.
 
 ## Re-pricing stored history (release side)
 Adding chain prices does not change stored `value`: re-value in place from the chain-only view (`data reprice`), with an
@@ -93,3 +106,10 @@ export first, derived rows (e.g. VVV usage_index) recomputed over every repriced
 in this run: an interrupted run otherwise leaves derived rows stale for good), a non-zero exit when rows are refused, and
 the CoinGecko token refs remapped to address refs before pricing. Tell DefiLlama-era rows apart by the adapter's own rule
 (PUMP: days before the first stored supply reading), and skip them with a reason rather than refusing them.
+
+Purging the replaced CoinGecko price levels (`data purge --source-type market_data`) must refuse while any targeted row
+has no rebuilt row at its `observed_at`, except rows before the ref's `valid_from` (unrebuildable by definition: deleted,
+listed as `withoutReplacement`, only on Mike's decision); without that rule the purge silently deletes price history the
+rebuild refused. The release block states the expected `beforeValidFrom`/`withoutReplacement` counts per asset (any other
+= stop) and pre-checks rejected market_data price rows via `sql-ro` (expected 0): the purge sees rejected rows but the
+rebuild reads only active ones, so one rejected row stops the purge with nothing the rebuild can fix.

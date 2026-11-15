@@ -1,0 +1,21 @@
+{
+  "asset": "ycrv",
+  "perMetric": [
+    {
+      "metric": "price_usd",
+      "configured": true,
+      "observations": 37,
+      "superseded": 37,
+      "firstDay": "2026-10-09",
+      "lastDay": "2026-11-14",
+      "valueSum": 6.161618,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 0,
+      "withoutReplacement": []
+    }
+  ],
+  "exportFile": "/home/hermes/.hermes/profiles/raymond/cache/scratch/p3r2-20261114T185657Z/new/purged/ycrv-price_usd-20261115T024231Z.json",
+  "exportSha256": "8c81d9e1a90c8b6b56979bd0cddc011505365431296d8e94bbc7f925d52ebb90",
+  "applied": true
+}
