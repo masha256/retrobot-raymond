@@ -3,7 +3,15 @@
 Live since 2026-10-10 (main `901070a`, spec `docs/superpowers/specs/2026-10-10-orion-holder-yield-report-design.md`).
 
 ## Use
-- `node dist/cli/index.js report yield [asset] [--day YYYY-MM-DD] [--json]` — computed on demand from stored daily rows; nothing extra stored.
+- Live figures come from prod only: `ssh -i ~/.ssh/orion-prod_ed25519 -o IdentitiesOnly=yes orion-prod@192.168.0.12 report yield <a> --day D` (JSON, v2 under `incomeStatement`). The uranus checkout `/home/hermes/git/orion` (`node dist/cli/index.js report yield ...`) reads the frozen pre-cutover SQLite and gives stale prices and null flows. Never answer a question about a posted figure from it, and never as a dev check of live numbers.
+- Computed on demand from stored daily rows; nothing extra stored.
+
+## Explaining a posted figure ("show me how X is calculated")
+1. Pull `report yield <a> --day D` from prod. Use D = the day in the posted report. Flatten the JSON (walk to `path = value`) so every input is visible.
+2. Pull the raw daily rows: `ssh orion-prod ... data show <a> <metric>` for the flow in USD and in tokens. Skip superseded rows and key each row by `sourceDetail.day`, not `observedAt` (observedAt is D+1). Recompute in execute_code: window sum, × 365/window, ÷ denominator. Confirm it matches the report exactly before you explain anything.
+3. Show the chain in this order: numerator (source, window, sum, annualized, haircut), denominator, yield, dilution, net. Then add the caveats below as "things you should know".
+- **Yield denominator = price × the supply set by `recipient_base`.** `all` means total supply, so the denominator is FDV (UNI). The report's `mcap/holder flow` multiple divides by circulating market cap. So 1/multiple ≠ shareholder yield, and `yields.multiple` is the FDV-based inverse. Check which base each figure uses before comparing them.
+- **USD flows are priced at each day's price, the denominator at spot.** After a price fall, USD yield and net-of-dilution look better than they are; after a rally, worse. Restate the result in tokens: tokens burned per year ÷ supply, minus vest tokens per year. `dilution.supply.netPct` is the token-terms net. Do the same for growth: compare the windows in tokens, because the USD growth compounds the price move.
 - Buckets: burn (no haircut), hold (overhang haircut), cash (slippage haircut). Haircuts live in each asset's `reporting.haircuts`, fixed by hand from pool depth.
 - Growth = (cur window / prior window)^(365/window) - 1. Prints `pending` until 2 windows of daily history exist; `n/m` only when a window is zero/negative.
 

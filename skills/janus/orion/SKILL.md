@@ -7,7 +7,7 @@ description: Use when operating, debugging, or developing orion.
 
 This skill covers Mike's orion valuation pipeline (VVV/HYPE/AERO/CRV/yCRV/cvxCRV/sdCRV/UNI/CAKE/LIT/LINK/SKY/PUMP live; PUMP is on Solana; LINK is the first buy-and-hold asset; yCRV/cvxCRV/sdCRV are CRV liquid-locker wrappers): diagnosing ingest failures, vetting or swapping data endpoints and API keys, running the test suite, onboarding and calibrating new assets. Mike manages orion development from the Raymond bot's orion-dev topic.
 
-Holder yield / growth / revenue reporting, including the income statement v2 conventions (sections, `of`/`_rev` ids, not_measured never 0, payout-ratio basis, failure isolation): see `references/holder-yield-report.md`.
+Holder yield / growth / revenue reporting, including the income statement v2 conventions (sections, `of`/`_rev` ids, not_measured never 0, payout-ratio basis, failure isolation) and how to explain any posted figure (recompute it from prod's rows; check the FDV vs mcap basis and the daily-price vs spot effect): see `references/holder-yield-report.md`. Every live number comes from `ssh orion-prod`. The local `/home/hermes/git/orion` checkout holds frozen pre-cutover data.
 Price-driver questions, explaining a price-vs-target gap, and new valuation ideas (TVL/TVS, network effects, capture options): see `references/price-drivers-and-valuation-gaps.md`.
 
 ## Direction (Mike, 2026-10-27): Orion = data core for coinrevs

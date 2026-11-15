@@ -96,7 +96,13 @@ multicalls for N hours, not 2N. Search each hour's block from the previous hour'
    re-write only the price rows whose method changed (e.g. the PUMP check), rerun 5-7, and diff the reports against the
    first run (0 diffs means the fix moved nothing else). A method that now reads more per hour (a check scanning past
    dust swaps) is several times slower; don't wrap the writer in a short `timeout`.
-9. Sign-off table for Mike, per asset at D: price, revenue, holder flow, yield, net yield, growth, PEG as % change vs
+9. Release-gate allowlist from the proof: bound each moved path at max(2x the proof's move, a class floor). The
+   proof is two days; the release compares each env's own days, so fitted-only bounds fail closed. Floors: single-
+   instant price-derived fields (price, mcap, fdv, per-token, yields) = 2x the token's 90-day p99 hourly
+   |chain/CoinGecko-1| (measure on the copy before the purge; ~3-5% for volatile tokens, 10% where no pair exists);
+   summed USD flows 2%; growth/PEG by abs/rel floors. Cover every USD-derived path of a class, moved or not; non-USD
+   fields get no entry. Tell Mike the floors explicitly: they are wider than the table he signed.
+10. Sign-off table for Mike, per asset at D: price, revenue, holder flow, yield, net yield, growth, PEG as % change vs
    the old release, then D-91 flows. Explain any large growth/PEG move from the two window sums (prior vs current
    quarter, old vs new): they are ratios of small numbers, and a sign flip is usually a few-% shift in the prior window.
 

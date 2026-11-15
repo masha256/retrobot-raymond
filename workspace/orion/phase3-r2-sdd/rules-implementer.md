@@ -15,7 +15,7 @@ Tests:
 - Focused runs while iterating: `npx vitest run <files> --maxWorkers=1`.
 - Before committing: `npx vitest run --maxWorkers=2` then `npm run typecheck`. Load-sensitive files time out under
   the full run (tests/cli/{cli,ingest.cli,tick.cli,agent.cli}.test.ts, tests/agent/disclosure.e2e.test.ts,
-  tests/app/tick.test.ts, tests/assets/lit.ingest.test.ts): rerun any failing file alone at `--maxWorkers=1` before
+  tests/app/tick.test.ts, tests/assets/{lit,sky}.ingest.test.ts, tests/push/gitPublisher.test.ts): rerun any failing file alone at `--maxWorkers=1` before
   calling it real; report both runs with real counts, and name every failing test.
 - Python (orion-remote): `python3 -m unittest scripts/provision/test/test_orion_remote.py`.
 - TDD: write the failing test, run it (RED, record the output), implement, run (GREEN).
