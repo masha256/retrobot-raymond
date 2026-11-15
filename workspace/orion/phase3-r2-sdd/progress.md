@@ -244,3 +244,4 @@ Reviewer flag: R41 widens bounds beyond the signed table (CAKE price 0.53% -> bo
 Closing fix dispatched (I1 with test + M1-M4).
 Closing fix 02f39e3 (I1 sql-ro quoting with test, M1-M4). Controller verify at 02f39e3: vitest 1977/1977 (154 files), typecheck clean, orion-remote py OK; pack.sh excludes scripts/provision/test (the doc-reading test never ships). Secret scan clean. Pushed feat/phase3-third-party = 02f39e3.
 R2 code+docs COMPLETE. Awaiting Mike: go for merge/tag/stage deploy; orion-host.sh re-run at the release sha.
+Mike 2026-11-15 "Go" (merge/tag/build). main FF -> 02f39e3 pushed; tag orion-2026.11.15.1 (annotated 8bb486d -> 02f39e3) pushed; ls-remote confirmed; origin/main update-ref'd. build.sh: 1977/1977 (154 files), tgz sha256 5760205dcf6e18a4e806103d2a6fa3d9f50f97c9f1161dbcdf28ca1d587cad6a, schema 8, prices.yaml shipped. Provision snapshot /home/hermes/orion-provision-02f39e3. Waiting: Mike's orion-host.sh SELF-CHECK.

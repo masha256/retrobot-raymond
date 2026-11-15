@@ -23,7 +23,8 @@ Orion's rule: no live CoinGecko/DefiLlama read; CoinGecko only as a labelled dev
   non-empty between two blocks) before setting it. An asset's history start is not its pool's: after a token
   migration the priced address and its pools can be weeks younger than the asset's oldest rows, so every hour before
   creation is a `call_failed` re-read on every run, and those older price levels cannot be rebuilt (refused rows stop
-  the release). Raise those to Mike as a decision (keep/delete/price the predecessor token) before the release.
+  the release). Raise those to Mike as a decision (keep/delete/price the predecessor token) before the release; he has
+  chosen delete (a clean chain-only history over CoinGecko residue), so list that option first.
 - Never estimate a historical block as `head - days x blocks_per_day`: chains change block time (Base sped up), so the
   estimate lands at the wrong date. Read the block's timestamp, or use the stored `hour_blocks` row.
 - Measure archive reach before promising a history horizon: one multicall per chain at the horizon's first hour
