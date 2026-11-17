@@ -1,0 +1,268 @@
+{
+ "P1": {
+  "identifier": "RET-5",
+  "url": "https://linear.app/retrograde-capital/issue/RET-5/phase-1-remove-the-valuation-layer",
+  "title": "Phase 1: remove the valuation layer",
+  "state": "Done",
+  "labels": [],
+  "parent": null
+ },
+ "P15": {
+  "identifier": "RET-6",
+  "url": "https://linear.app/retrograde-capital/issue/RET-6/phase-15-platform-lan-server-postgres-daemon",
+  "title": "Phase 1.5: platform (LAN server, Postgres, daemon)",
+  "state": "Done",
+  "labels": [],
+  "parent": null
+ },
+ "P2": {
+  "identifier": "RET-7",
+  "url": "https://linear.app/retrograde-capital/issue/RET-7/phase-2-data-strategy-income-statement-v2",
+  "title": "Phase 2: data strategy + income statement v2",
+  "state": "Done",
+  "labels": [],
+  "parent": null
+ },
+ "PF": {
+  "identifier": "RET-8",
+  "url": "https://linear.app/retrograde-capital/issue/RET-8/platform-follow-ups-phase-15-carry-overs",
+  "title": "Platform follow-ups (Phase 1.5 carry-overs)",
+  "state": "Todo",
+  "labels": [],
+  "parent": null
+ },
+ "PF1": {
+  "identifier": "RET-9",
+  "url": "https://linear.app/retrograde-capital/issue/RET-9/backup-restore-drill-spec-103",
+  "title": "Backup restore drill (spec 10.3)",
+  "state": "Todo",
+  "labels": [
+   "Blocked"
+  ],
+  "parent": "PF"
+ },
+ "PF2": {
+  "identifier": "RET-10",
+  "url": "https://linear.app/retrograde-capital/issue/RET-10/retire-the-paused-legacy-hermes-orion-asset-cron-jobs-uranus-fallback",
+  "title": "Retire the paused legacy Hermes orion-<asset> cron jobs + uranus fallback checkout",
+  "state": "Todo",
+  "labels": [
+   "Blocked"
+  ],
+  "parent": "PF"
+ },
+ "P3": {
+  "identifier": "RET-11",
+  "url": "https://linear.app/retrograde-capital/issue/RET-11/phase-3-remove-defillama-and-coingecko-from-live-code",
+  "title": "Phase 3: remove DefiLlama and CoinGecko from live code",
+  "state": "In Progress",
+  "labels": [],
+  "parent": null
+ },
+ "R0": {
+  "identifier": "RET-12",
+  "url": "https://linear.app/retrograde-capital/issue/RET-12/r0-cake-pending-burn-supply-fix",
+  "title": "R0: CAKE pending-burn supply fix",
+  "state": "Done",
+  "labels": [],
+  "parent": "P3"
+ },
+ "R1": {
+  "identifier": "RET-13",
+  "url": "https://linear.app/retrograde-capital/issue/RET-13/r0b-r1-remote-backfillpurge-verbs-drop-defillama-cross-checks-and",
+  "title": "R0b + R1: remote backfill/purge verbs; drop DefiLlama cross-checks and display series",
+  "state": "Done",
+  "labels": [],
+  "parent": "P3"
+ },
+ "R2": {
+  "identifier": "RET-14",
+  "url": "https://linear.app/retrograde-capital/issue/RET-14/r2-price-swap-coingecko-on-chainfirst-party-hourly-prices",
+  "title": "R2: price swap (CoinGecko -> on-chain/first-party hourly prices)",
+  "state": "In Progress",
+  "labels": [],
+  "parent": "P3"
+ },
+ "R2a": {
+  "identifier": "RET-15",
+  "url": "https://linear.app/retrograde-capital/issue/RET-15/r2-rollout-deploy-orion-202611151-to-staging",
+  "title": "R2 rollout: deploy orion-2026.11.15.1 to staging",
+  "state": "Todo",
+  "labels": [
+   "Blocked"
+  ],
+  "parent": "R2"
+ },
+ "R2b": {
+  "identifier": "RET-16",
+  "url": "https://linear.app/retrograde-capital/issue/RET-16/r2-rollout-staging-soak-one-scheduled-nightly-soak-report",
+  "title": "R2 rollout: staging soak (one scheduled nightly) + soak report",
+  "state": "Todo",
+  "labels": [],
+  "parent": "R2"
+ },
+ "R2c": {
+  "identifier": "RET-17",
+  "url": "https://linear.app/retrograde-capital/issue/RET-17/r2-rollout-prod-deploy-prod-yes-steps",
+  "title": "R2 rollout: prod deploy + prod --yes steps",
+  "state": "Todo",
+  "labels": [
+   "Blocked"
+  ],
+  "parent": "R2"
+ },
+ "R2d": {
+  "identifier": "RET-18",
+  "url": "https://linear.app/retrograde-capital/issue/RET-18/decide-price-check-gaps-hype-same-venue-check-sdcrv-no-independent",
+  "title": "Decide: price-check gaps (HYPE same-venue check, sdCRV no independent check)",
+  "state": "Todo",
+  "labels": [
+   "Blocked"
+  ],
+  "parent": "R2"
+ },
+ "R3": {
+  "identifier": "RET-19",
+  "url": "https://linear.app/retrograde-capital/issue/RET-19/r3-circulating-supply-on-chain",
+  "title": "R3: circulating supply on chain",
+  "state": "Todo",
+  "labels": [],
+  "parent": "P3"
+ },
+ "R4": {
+  "identifier": "RET-20",
+  "url": "https://linear.app/retrograde-capital/issue/RET-20/r4-aero-revenue-on-chain-pool-scan-pilot",
+  "title": "R4: AERO revenue on chain (pool_scan pilot)",
+  "state": "Todo",
+  "labels": [],
+  "parent": "P3"
+ },
+ "R5": {
+  "identifier": "RET-21",
+  "url": "https://linear.app/retrograde-capital/issue/RET-21/r5-hype-revenue-on-chainfirst-party",
+  "title": "R5: HYPE revenue on chain/first-party",
+  "state": "Todo",
+  "labels": [],
+  "parent": "P3"
+ },
+ "R6": {
+  "identifier": "RET-22",
+  "url": "https://linear.app/retrograde-capital/issue/RET-22/r6-pump-revenue-from-solana-fee-accounts",
+  "title": "R6: PUMP revenue from Solana fee accounts",
+  "state": "Todo",
+  "labels": [],
+  "parent": "P3"
+ },
+ "R7": {
+  "identifier": "RET-23",
+  "url": "https://linear.app/retrograde-capital/issue/RET-23/r7-crv-vote-incentives-event-sum",
+  "title": "R7: CRV vote incentives (event_sum)",
+  "state": "Todo",
+  "labels": [],
+  "parent": "P3"
+ },
+ "R8": {
+  "identifier": "RET-24",
+  "url": "https://linear.app/retrograde-capital/issue/RET-24/r8-retire-third-party-sources",
+  "title": "R8: retire third-party sources",
+  "state": "Todo",
+  "labels": [],
+  "parent": "P3"
+ },
+ "P5": {
+  "identifier": "RET-25",
+  "url": "https://linear.app/retrograde-capital/issue/RET-25/phase-5-snapshot-export-for-the-coinrevs-site",
+  "title": "Phase 5: snapshot export for the coinrevs site",
+  "state": "Todo",
+  "labels": [],
+  "parent": null
+ },
+ "P5a": {
+  "identifier": "RET-26",
+  "url": "https://linear.app/retrograde-capital/issue/RET-26/phase-5-write-the-export-spec",
+  "title": "Phase 5: write the export spec",
+  "state": "Todo",
+  "labels": [],
+  "parent": "P5"
+ },
+ "P5b": {
+  "identifier": "RET-27",
+  "url": "https://linear.app/retrograde-capital/issue/RET-27/phase-5-mikes-decisions-on-the-export-spec",
+  "title": "Phase 5: Mike's decisions on the export spec",
+  "state": "Todo",
+  "labels": [
+   "Blocked"
+  ],
+  "parent": "P5"
+ },
+ "P5c": {
+  "identifier": "RET-28",
+  "url": "https://linear.app/retrograde-capital/issue/RET-28/phase-5-write-the-implementation-plan",
+  "title": "Phase 5: write the implementation plan",
+  "state": "Todo",
+  "labels": [],
+  "parent": "P5"
+ },
+ "P5d": {
+  "identifier": "RET-29",
+  "url": "https://linear.app/retrograde-capital/issue/RET-29/phase-5-build-proof",
+  "title": "Phase 5: build + proof",
+  "state": "Todo",
+  "labels": [],
+  "parent": "P5"
+ },
+ "P5e": {
+  "identifier": "RET-30",
+  "url": "https://linear.app/retrograde-capital/issue/RET-30/phase-5-release-stage-soak-prod",
+  "title": "Phase 5: release (stage -> soak -> prod)",
+  "state": "Todo",
+  "labels": [
+   "Blocked"
+  ],
+  "parent": "P5"
+ },
+ "P4": {
+  "identifier": "RET-31",
+  "url": "https://linear.app/retrograde-capital/issue/RET-31/phase-4-internal-comparison-tool",
+  "title": "Phase 4: internal comparison tool",
+  "state": "Todo",
+  "labels": [],
+  "parent": null
+ },
+ "P4a": {
+  "identifier": "RET-32",
+  "url": "https://linear.app/retrograde-capital/issue/RET-32/phase-4-write-the-comparison-tool-spec",
+  "title": "Phase 4: write the comparison-tool spec",
+  "state": "Todo",
+  "labels": [],
+  "parent": "P4"
+ },
+ "P4b": {
+  "identifier": "RET-33",
+  "url": "https://linear.app/retrograde-capital/issue/RET-33/phase-4-mikes-decisions-on-the-spec",
+  "title": "Phase 4: Mike's decisions on the spec",
+  "state": "Todo",
+  "labels": [
+   "Blocked"
+  ],
+  "parent": "P4"
+ },
+ "P4c": {
+  "identifier": "RET-34",
+  "url": "https://linear.app/retrograde-capital/issue/RET-34/phase-4-plan-build",
+  "title": "Phase 4: plan + build",
+  "state": "Todo",
+  "labels": [],
+  "parent": "P4"
+ },
+ "P4d": {
+  "identifier": "RET-35",
+  "url": "https://linear.app/retrograde-capital/issue/RET-35/phase-4-first-comparison-run-review",
+  "title": "Phase 4: first comparison run + review",
+  "state": "Todo",
+  "labels": [
+   "Blocked"
+  ],
+  "parent": "P4"
+ }
+}

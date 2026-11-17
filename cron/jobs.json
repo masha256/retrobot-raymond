@@ -191,15 +191,15 @@
       "schedule_display": "15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 1717
+        "completed": 1718
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-06T08:57:25.404654-07:00",
-      "next_run_at": "2026-11-16T20:15:00-08:00",
-      "last_run_at": "2026-11-16T18:16:00.588296-08:00",
+      "next_run_at": "2026-11-16T21:15:00-08:00",
+      "last_run_at": "2026-11-16T19:16:02.632364-08:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -219,17 +219,17 @@
       ],
       "workdir": null,
       "fire_claim": {
-        "at": "2026-11-16T19:15:47.302578-08:00",
-        "by": "uranus:2102690:80f71710b2b54b9a997ce6303b0a5cee"
+        "at": "2026-11-16T20:15:47.297723-08:00",
+        "by": "uranus:2102690:d2b7005ddf78470d89d5a8a954f55810"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-11-16T19:15:00-08:00",
-        "dispatched_at": "2026-11-16T19:15:46.243925-08:00",
+        "scheduled_at": "2026-11-16T20:15:00-08:00",
+        "dispatched_at": "2026-11-16T20:15:46.246373-08:00",
         "lateness_seconds": 46.2,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "5ac7438763b4469594e805c73b86478d"
+        "44b4e228aa1443d5b09a94beb3cf766e"
       ],
       "last_failure": {
         "at": "2026-11-07T08:32:32.074347-08:00",
@@ -1185,59 +1185,7 @@
         "a340d4dfcf2a4c3a9a17eeca9173bb9a"
       ],
       "catch_up": false
-    },
-    {
-      "id": "7ee3b2cb7ac4",
-      "name": "orion-aero-prod-deploy",
-      "prompt": "One-shot: deploy orion-2026.11.09.1 (AERO) to prod if staging's 02:45Z nightly soak passed; script output delivered verbatim.",
-      "skills": [],
-      "skill": null,
-      "model": null,
-      "provider": null,
-      "base_url": null,
-      "script": "orion-aero-prod-deploy.sh",
-      "no_agent": true,
-      "monitor_script": null,
-      "monitor_url": null,
-      "monitor_state": null,
-      "context_from": null,
-      "schedule": {
-        "kind": "once",
-        "run_at": "2026-11-09T19:30:00-08:00",
-        "display": "once at 2026-11-09 19:30"
-      },
-      "schedule_display": "once at 2026-11-09 19:30",
-      "repeat": {
-        "times": 1,
-        "completed": 1
-      },
-      "enabled": false,
-      "state": "completed",
-      "paused_at": null,
-      "paused_reason": null,
-      "created_at": "2026-11-09T17:15:57.075570-08:00",
-      "next_run_at": null,
-      "last_run_at": "2026-11-09T19:32:21.554462-08:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
-      "last_delivery_unverified": null,
-      "last_failure": null,
-      "failure_streak": 0,
-      "deliver": "slack:C0CB8SJKM8C:1794272321.045409",
-      "origin": {
-        "platform": "slack",
-        "chat_id": "C0CB8SJKM8C",
-        "chat_name": "orion-dev",
-        "thread_id": "1794272321.045409",
-        "user_id": "U0CBKGZFU9E",
-        "scope_id": "T0CAUSENDB6"
-      },
-      "enabled_toolsets": null,
-      "workdir": null,
-      "run_claim": null,
-      "fire_claim": null
     }
   ],
-  "updated_at": "2026-11-16T19:15:47.303157-08:00"
+  "updated_at": "2026-11-16T20:15:47.298307-08:00"
 }
