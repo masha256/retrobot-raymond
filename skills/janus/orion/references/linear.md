@@ -21,7 +21,8 @@ Linear is the project board for Orion. Workspace "Retrograde Capital", team `RET
 - Replies go on the Linear issue only (Mike, 2026-11-17), via `scripts/linear_app.py comment <RET-n> --parent <root>` (app token, auto-refresh). `linear_app.py update` moves state/labels. Use linear_app.py (as Raymond) for ALL board writes now, not the MCP/lmcp path (that writes as Mike).
 - Hermes does not dedupe Linear retries (it doesn't read `Linear-Delivery`); a non-2xx answer makes Linear retry.
 - Smoke-test issue: RET-36. VERIFIED 2026-11-17 04:54Z: Mike's comment -> accept -> Raymond reply in-thread 16 s later -> own reply ignored by the filter; bad signature via Funnel = 401; unmapped Funnel path = 404.
-- The route's `skills: [orion]` inlines the whole ~100 KB orion SKILL.md into every triggered prompt (prompt_len ~102k).
+- Per-issue notes (continuity across triggered turns; webhook sessions are per delivery and can't be reused natively): `workspace/orion/linear/notes/RET-n.md`, appended with `linear_app.py note RET-n < text`; the filter injects the last 5,000 chars as `{issue_notes}`. Also write a note when working an issue from Slack, so the next comment turn knows.
+- The route no longer preloads the orion skill (Mike, 2026-11-17). Its prompt says to `skill_view('orion')` before any action beyond answering. Before that change, `skills: [orion]` inlined the whole ~100 KB orion SKILL.md into every triggered prompt (prompt_len ~102k).
 
 ## Comment-triggered turns (design notes)
 - Design Mike chose: Linear webhook (Comment events) -> Tailscale Funnel `https://uranus.tail4eb3a7.ts.net:8443` -> Hermes webhook listener on localhost, route `linear-orion` with `profile: raymond` (URL `/p/raymond/webhooks/linear-orion`). Mechanics: hermes-agent `references/webhooks.md`.
