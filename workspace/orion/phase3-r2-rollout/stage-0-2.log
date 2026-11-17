@@ -1,0 +1,81 @@
+== step 0 2026-11-17T05:01:47Z
+aero day=2026-11-16 d91=2026-08-17
+cake day=2026-11-16 d91=2026-08-17
+crv day=2026-11-16 d91=2026-08-17
+cvxcrv day=2026-11-16 d91=2026-08-17
+hype day=2026-11-16 d91=2026-08-17
+link day=2026-11-16 d91=2026-08-17
+lit day=2026-11-15 d91=2026-08-16
+pump day=2026-11-16 d91=2026-08-17
+sdcrv day=2026-11-16 d91=2026-08-17
+sky day=2026-11-16 d91=2026-08-17
+uni day=2026-11-16 d91=2026-08-17
+vvv day=2026-11-16 d91=2026-08-17
+ycrv day=2026-11-16 d91=2026-08-17
+== step 1 2026-11-17T05:02:32Z
+deploy rc=0
+== deploy report (stage)
+before: orion-2026.11.12.1
+after:  orion-2026.11.15.1
+migrations applied: 8
+registry changes: none
+next: levels 2026-11-17T06:15:00.000Z
+next nightly: 2026-11-18T02:45:00.000Z
+soak: not gated (stage)
+== step 2 2026-11-17T05:02:56Z
+env: stage
+host: venus
+current: releases/orion-2026.11.15.1
+postgres: accepting connections
+env stage, release orion-2026.11.15.1
+daemon venus-624538-9a462c3d (pid 624538 on venus, release orion-2026.11.15.1): running, idle, beat 2026-11-17T05:02:50.771Z
+registry: aero active, cake active, crv active, cvxcrv active, hype active, link active, lit active, pump active, sdcrv active, sky active, uni active, vvv active, ycrv active
+last jobs:
+  626960 retention - 2026-11-17T03:30:00.000Z done
+  625412 snapshot_push - 2026-11-17T02:45:00.000Z done
+  625335 nightly_report - 2026-11-17T02:45:00.000Z done
+  625334 refresh ycrv 2026-11-17T02:45:00.000Z done
+  625333 refresh vvv 2026-11-17T02:45:00.000Z done
+  625332 refresh uni 2026-11-17T02:45:00.000Z done
+  625331 refresh sky 2026-11-17T02:45:00.000Z done
+  625330 refresh sdcrv 2026-11-17T02:45:00.000Z done
+  625329 refresh pump 2026-11-17T02:45:00.000Z done
+  625328 refresh lit 2026-11-17T02:45:00.000Z done
+next:
+  nightly 2026-11-18T02:45:00.000Z
+  levels 2026-11-17T06:15:00.000Z
+  disclosure_watch 2026-11-17T16:40:00.000Z
+  staging_refresh 2026-11-22T10:30:00.000Z
+  retention 2026-11-18T03:30:00.000Z
+soak: none
+last nightly: 2026-11-17T02:45:00.000Z (release orion-2026.11.12.1) done, no failed sources
+2026-11-17T02:46:43.181Z job 625330 refresh sdcrv done
+2026-11-17T02:46:43.204Z job 625331 refresh sky started (attempt 1 of 2)
+2026-11-17T02:46:46.543Z job 625331 refresh sky: transfer_flow:usds>usds_farm[zero] 2026-11-16: 31 transfers
+2026-11-17T02:46:49.006Z job 625331 refresh sky: transfer_flow:token>pause_proxy[sky_usds_pair] 2026-11-16: 31 transfers
+2026-11-17T02:46:49.446Z job 625331 refresh sky: transfer_flow:token>sky_farm[*] 2026-11-16: 1 transfers
+2026-11-17T02:46:49.871Z job 625331 refresh sky: transfer_flow:token>usds_sky_farm[*] 2026-11-16: 0 transfers
+2026-11-17T02:46:50.547Z job 625331 refresh sky done
+2026-11-17T02:46:50.564Z job 625332 refresh uni started (attempt 1 of 2)
+2026-11-17T02:46:53.961Z job 625332 refresh uni: transfer_flow:token>dead[*] 2026-11-16: 15 transfers
+2026-11-17T02:46:54.238Z job 625332 refresh uni done
+2026-11-17T02:46:54.260Z job 625333 refresh vvv started (attempt 1 of 2)
+2026-11-17T02:47:15.969Z job 625333 refresh vvv: transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe] 2026-11-16: 6651 transfers
+2026-11-17T02:47:16.419Z job 625333 refresh vvv done
+2026-11-17T02:47:16.441Z job 625334 refresh ycrv started (attempt 1 of 2)
+2026-11-17T02:47:17.654Z job 625334 refresh ycrv: transfer_flow:yv_crvusd>distributor[receiver] 2026-11-16: 0 transfers
+2026-11-17T02:47:18.170Z job 625334 refresh ycrv: transfer_flow:yv_crvusd>yearn_treasury[receiver,splitter] 2026-11-16: 0 transfers
+2026-11-17T02:47:20.131Z job 625334 refresh ycrv: transfer_flow:st_ycrv>yearn_treasury[st_ycrv] 2026-11-16: 1 transfers
+2026-11-17T02:47:20.700Z job 625334 refresh ycrv: transfer_flow:crvusd>splitter[fee_burner,voter] 2026-11-16: 0 transfers
+2026-11-17T02:47:21.557Z job 625334 refresh ycrv done
+2026-11-17T02:47:21.580Z job 625335 nightly_report started (attempt 1 of 1)
+2026-11-17T02:47:28.635Z job 625335 nightly_report done
+2026-11-17T02:47:28.651Z job 625412 snapshot_push started (attempt 1 of 1)
+2026-11-17T02:47:33.126Z job 625412 snapshot_push done
+2026-11-17T03:30:13.803Z queued job 626960 retention slot 2026-11-17T03:30:00.000Z
+2026-11-17T03:30:16.036Z job 626960 retention started (attempt 1 of 1)
+2026-11-17T03:30:16.278Z job 626960 retention done
+2026-11-17T05:02:47.436Z drained: claiming nothing until orion daemon undrain
+2026-11-17T05:02:48.587Z stop requested
+2026-11-17T05:02:48.625Z daemon stopped
+2026-11-17T05:02:50.958Z daemon started: venus-624538-9a462c3d env stage release orion-2026.11.15.1 database orion_stage schema orion
