@@ -191,15 +191,15 @@
       "schedule_display": "15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 1715
+        "completed": 1716
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-06T08:57:25.404654-07:00",
-      "next_run_at": "2026-11-16T18:15:00-08:00",
-      "last_run_at": "2026-11-16T16:15:58.649599-08:00",
+      "next_run_at": "2026-11-16T19:15:00-08:00",
+      "last_run_at": "2026-11-16T17:16:00.584661-08:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -219,17 +219,17 @@
       ],
       "workdir": null,
       "fire_claim": {
-        "at": "2026-11-16T17:15:47.282519-08:00",
-        "by": "uranus:2102690:a2ff291b8603412e92b3b6aa47e7344b"
+        "at": "2026-11-16T18:15:47.301088-08:00",
+        "by": "uranus:2102690:9092dd6403fc48ef915d9a89c164180a"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-11-16T17:15:00-08:00",
-        "dispatched_at": "2026-11-16T17:15:46.276111-08:00",
-        "lateness_seconds": 46.3,
+        "scheduled_at": "2026-11-16T18:15:00-08:00",
+        "dispatched_at": "2026-11-16T18:15:46.243644-08:00",
+        "lateness_seconds": 46.2,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "fed0e6ea54d04c4782b343575e59f773"
+        "3e740bc6a3654e99b14d69f6c57f5275"
       ],
       "last_failure": {
         "at": "2026-11-07T08:32:32.074347-08:00",
@@ -1187,64 +1187,6 @@
       "catch_up": false
     },
     {
-      "id": "7d60bfcec67e",
-      "name": "orion-prod-phase2-first-nightly-check",
-      "prompt": "One-shot, CHECK ONLY (no writes, no deploys, no run-now, no ack/approve; never read /home/hermes/git/orion/orion.db). Orion Phase 2 release 2 (tag orion-2026.11.08.1, main b354680) was deployed to prod (orion-prod@venus) on 2026-11-09 and Mike ran the one-time backfills there (provenance, yCRV by-sender 183 d, token backfill, compare-usd) ~19:00Z. Staging passed its soak on this tag (02:45Z nightly 2026-11-09, no failed sources). Tonight's 00:45 UTC prod nightly is the first prod nightly on the new release.\n\nCheck via `ssh -i ~/.ssh/orion-prod_ed25519 -o IdentitiesOnly=yes -o BatchMode=yes orion-prod@192.168.0.12 status` and `... jobs`, `... logs 300`: the 2026-11-10T00:45Z nightly_report on release orion-2026.11.08.1 is done, sources failed, anomalies raised, alertFlags (Phase 2 check-breach ALERTs name asset, check id, day, gap). Then run `python3 ~/.hermes/profiles/raymond/workspace/orion/phase2-sdd/v2_state.py` (read-only report yield on both envs): expected on prod yCRV v2 revenue present (~$646k/yr on day 2026-11-08; it may move a little for day 2026-11-09), checks now listed with status ok for ycrv (gross_by_sender, splitter) and crv (splitter), price bases 'mixed' on crv/ycrv/vvv and 'legacy' on aero, and prod equal to stage for ycrv/crv revenue on the same day.\n\nReply short, bullets: first line PASS or FAIL for Phase 2 release 2 on prod (the nightly job id, release, status); then failed sources / alerts / anomalies; then the v2 state per asset prod vs stage; then anything unexpected. If PASS end with: 'Phase 2 release 2 complete on prod. Next on the roadmap: Task 10 (G3, provenance NOT NULL, own breaking release) and Task 11 (G4, retire v1 one release later) -- both need Mike's go.'",
-      "skills": [],
-      "skill": null,
-      "model": null,
-      "provider": null,
-      "base_url": null,
-      "script": null,
-      "no_agent": false,
-      "monitor_script": null,
-      "monitor_url": null,
-      "monitor_state": null,
-      "context_from": null,
-      "schedule": {
-        "kind": "once",
-        "run_at": "2026-11-09T17:45:00-08:00",
-        "display": "once at 2026-11-09 17:45"
-      },
-      "schedule_display": "once at 2026-11-09 17:45",
-      "repeat": {
-        "times": 1,
-        "completed": 1
-      },
-      "enabled": false,
-      "state": "completed",
-      "paused_at": null,
-      "paused_reason": null,
-      "created_at": "2026-11-09T12:00:04.058469-08:00",
-      "next_run_at": null,
-      "last_run_at": "2026-11-09T17:47:23.229831-08:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
-      "last_delivery_unverified": null,
-      "last_failure": null,
-      "failure_streak": 0,
-      "deliver": "slack:C0CB8SJKM8C:1793249294.763219",
-      "origin": {
-        "platform": "slack",
-        "chat_id": "C0CB8SJKM8C",
-        "chat_name": "orion-dev",
-        "thread_id": "1793249294.763219",
-        "user_id": "U0CBKGZFU9E",
-        "scope_id": "T0CAUSENDB6"
-      },
-      "enabled_toolsets": [
-        "terminal",
-        "file"
-      ],
-      "workdir": null,
-      "run_claim": null,
-      "fire_claim": null,
-      "canonical_completions": [
-        "e7befd345c7f43de9c330bcb23968306"
-      ]
-    },
-    {
       "id": "7ee3b2cb7ac4",
       "name": "orion-aero-prod-deploy",
       "prompt": "One-shot: deploy orion-2026.11.09.1 (AERO) to prod if staging's 02:45Z nightly soak passed; script output delivered verbatim.",
@@ -1297,5 +1239,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-11-16T17:15:47.283119-08:00"
+  "updated_at": "2026-11-16T18:15:47.301696-08:00"
 }
