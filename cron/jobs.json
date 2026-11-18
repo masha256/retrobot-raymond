@@ -191,15 +191,15 @@
       "schedule_display": "15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 1752
+        "completed": 1753
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-06T08:57:25.404654-07:00",
-      "next_run_at": "2026-11-18T07:15:00-08:00",
-      "last_run_at": "2026-11-18T05:15:57.976899-08:00",
+      "next_run_at": "2026-11-18T08:15:00-08:00",
+      "last_run_at": "2026-11-18T06:15:58.051439-08:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -219,17 +219,17 @@
       ],
       "workdir": null,
       "fire_claim": {
-        "at": "2026-11-18T06:15:42.743074-08:00",
-        "by": "uranus:2706751:4cc6a0c74f11487eb9e1ff79edaedd0b"
+        "at": "2026-11-18T07:15:42.687644-08:00",
+        "by": "uranus:2706751:f245c8e16a85461384db732c044e0902"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-11-18T06:15:00-08:00",
-        "dispatched_at": "2026-11-18T06:15:41.625011-08:00",
+        "scheduled_at": "2026-11-18T07:15:00-08:00",
+        "dispatched_at": "2026-11-18T07:15:41.599225-08:00",
         "lateness_seconds": 41.6,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "bf764aadca6d4fcab8e6961df0c5c6dc"
+        "3763a138424446bc9091151e54661546"
       ],
       "last_failure": {
         "at": "2026-11-17T09:31:58.159656-08:00",
@@ -1143,24 +1143,24 @@
       "schedule_display": "30 6 * * *",
       "repeat": {
         "times": null,
-        "completed": 6
+        "completed": 7
       },
-      "enabled": true,
-      "state": "scheduled",
-      "paused_at": null,
+      "enabled": false,
+      "state": "paused",
+      "paused_at": "2026-11-18T06:31:44.572601-08:00",
       "paused_reason": null,
       "created_at": "2026-11-04T13:22:34.685359-08:00",
-      "next_run_at": "2026-11-18T06:30:00-08:00",
-      "last_run_at": "2026-11-17T06:47:53.729931-08:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again.",
-      "last_delivery_error": "live adapter send failed: Cannot connect to host slack.com:443 ssl:default [Temporary failure in name resolution]; live adapter delivery to slack:C0CB8SJKM8C:1793827233.945569 failed: Cannot connect to host slack.com:443 ssl:default [Temporary failure in name resolution]; delivery error: Adapter send failed: Cannot connect to host slack.com:443 ssl:default [Temporary failure in name resolution] (target slack:C0CB8SJKM8C:1793827233.945569)",
+      "next_run_at": "2026-11-19T06:30:00-08:00",
+      "last_run_at": "2026-11-18T06:31:48.165507-08:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
         "at": "2026-11-17T06:47:53.729931-08:00",
         "detail": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again."
       },
-      "failure_streak": 1,
+      "failure_streak": 0,
       "deliver": "slack:C0CB8SJKM8C:1793827233.945569",
       "origin": {
         "platform": "slack",
@@ -1178,17 +1178,17 @@
       "attach_to_session": true,
       "timezone": "America/Los_Angeles",
       "last_dispatch": {
-        "scheduled_at": "2026-11-17T06:30:00-08:00",
-        "dispatched_at": "2026-11-17T06:30:03.297304-08:00",
-        "lateness_seconds": 3.3,
+        "scheduled_at": "2026-11-18T06:30:00-08:00",
+        "dispatched_at": "2026-11-18T06:30:41.596363-08:00",
+        "lateness_seconds": 41.6,
         "kind": "on_time"
       },
       "fire_claim": null,
       "canonical_completions": [
-        "52b0f4c13be544f4bb37c781bac5a6dd"
+        "eb05ab11b5ec49228b96a5962af55b58"
       ],
       "catch_up": false
     }
   ],
-  "updated_at": "2026-11-18T06:15:42.743659-08:00"
+  "updated_at": "2026-11-18T07:15:42.688239-08:00"
 }
