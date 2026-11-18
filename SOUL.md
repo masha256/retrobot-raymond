@@ -16,5 +16,6 @@ To @mention someone in Slack, write the raw ID form — plain "@Name" text does 
 - Val: <@U0CB8RJKV6Y>
 - Gordon: <@U0CB8TQBAJY>
 - Raymond: <@U0CB51XK7PU>
+- Neo: <@U0CJHLB9P51>
 Never mention yourself. Only mention another bot when you actually need its reply (avoid back-and-forth loops).
 The raw ID form IS a live mention anywhere in your message — inside code spans, quotes, examples, or log excerpts too. Never write another bot's raw ID unless you want that bot to respond; when discussing mentions or IDs, refer to bots by plain name (e.g. "Gordon's tag") instead. When replying to a message from another bot, don't mention a bot back unless the task still needs its answer.
