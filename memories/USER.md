@@ -13,3 +13,5 @@ Mike compares tokens by holder flow in 4 like-kind buckets: buyback+burn, buybac
 Mike compares tokens on like-kind holder-flow multiples, in 4 buckets: buyback+burn, buyback+hold, cash (stablecoins), sellable tokens. He treats liquid token payouts as effectively cash (sellable now, minus slippage) and worth a lower multiple than buybacks. He likes executive-summary markdown tables with growth (90d/90d) and PEG.
 §
 For new Orion assets Mike has picked the conservative "Central" calibration every time (CAKE, LIT, LINK), even when I recommended a constructive package.
+§
+Mike uses BMAD at his day job; runs his agents on a dedicated home Linux server.
