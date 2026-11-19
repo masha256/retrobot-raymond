@@ -1,0 +1,11 @@
+{
+  "rows": [
+    {
+      "metric_key": "circulating_supply",
+      "status": "confirmed",
+      "active": true,
+      "count": 428
+    }
+  ],
+  "rowCount": 1
+}

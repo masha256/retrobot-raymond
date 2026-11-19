@@ -1,0 +1,187 @@
+{
+  "rows": [
+    {
+      "asset_id": "aero",
+      "metric_key": "staked_supply",
+      "observed_at": "2026-11-19T00:45:09.000Z",
+      "value": 1079168858.1360145,
+      "source_type": "contract_state"
+    },
+    {
+      "asset_id": "aero",
+      "metric_key": "total_supply",
+      "observed_at": "2026-11-19T00:45:09.000Z",
+      "value": 2145505366.238866,
+      "source_type": "contract_state"
+    },
+    {
+      "asset_id": "cake",
+      "metric_key": "staked_supply",
+      "observed_at": "2026-11-19T00:45:16.500Z",
+      "value": 0,
+      "source_type": "constant"
+    },
+    {
+      "asset_id": "cake",
+      "metric_key": "total_supply",
+      "observed_at": "2026-11-19T00:45:16.000Z",
+      "value": 334248326.43174386,
+      "source_type": "contract_state"
+    },
+    {
+      "asset_id": "crv",
+      "metric_key": "staked_supply",
+      "observed_at": "2026-11-19T00:45:11.000Z",
+      "value": 841903399.3602774,
+      "source_type": "contract_state"
+    },
+    {
+      "asset_id": "crv",
+      "metric_key": "total_supply",
+      "observed_at": "2026-11-19T00:45:11.000Z",
+      "value": 2435438745.8223486,
+      "source_type": "contract_state"
+    },
+    {
+      "asset_id": "cvxcrv",
+      "metric_key": "staked_supply",
+      "observed_at": "2026-11-19T00:45:11.000Z",
+      "value": 343198050.69908166,
+      "source_type": "contract_state"
+    },
+    {
+      "asset_id": "cvxcrv",
+      "metric_key": "total_supply",
+      "observed_at": "2026-11-19T00:45:11.000Z",
+      "value": 425636520.7823423,
+      "source_type": "contract_state"
+    },
+    {
+      "asset_id": "hype",
+      "metric_key": "staked_supply",
+      "observed_at": "2026-11-19T00:45:29.990Z",
+      "value": 438446556.5128805,
+      "source_type": "first_party_api"
+    },
+    {
+      "asset_id": "hype",
+      "metric_key": "total_supply",
+      "observed_at": "2026-11-19T00:45:29.990Z",
+      "value": 949640533.0837926,
+      "source_type": "first_party_api"
+    },
+    {
+      "asset_id": "link",
+      "metric_key": "staked_supply",
+      "observed_at": "2026-11-19T00:45:37.853Z",
+      "value": 0,
+      "source_type": "constant"
+    },
+    {
+      "asset_id": "link",
+      "metric_key": "total_supply",
+      "observed_at": "2026-11-19T00:45:35.000Z",
+      "value": 1000000000,
+      "source_type": "contract_state"
+    },
+    {
+      "asset_id": "lit",
+      "metric_key": "staked_supply",
+      "observed_at": "2026-11-19T00:45:40.606Z",
+      "value": 0,
+      "source_type": "constant"
+    },
+    {
+      "asset_id": "lit",
+      "metric_key": "total_supply",
+      "observed_at": "2026-11-19T00:45:35.000Z",
+      "value": 981909280,
+      "source_type": "contract_state"
+    },
+    {
+      "asset_id": "pump",
+      "metric_key": "staked_supply",
+      "observed_at": "2026-11-19T00:46:10.046Z",
+      "value": 0,
+      "source_type": "constant"
+    },
+    {
+      "asset_id": "pump",
+      "metric_key": "total_supply",
+      "observed_at": "2026-11-19T00:46:10.046Z",
+      "value": 821871850182.6385,
+      "source_type": "contract_state"
+    },
+    {
+      "asset_id": "sdcrv",
+      "metric_key": "staked_supply",
+      "observed_at": "2026-11-19T00:46:11.000Z",
+      "value": 106901089.05235597,
+      "source_type": "contract_state"
+    },
+    {
+      "asset_id": "sdcrv",
+      "metric_key": "total_supply",
+      "observed_at": "2026-11-19T00:46:11.000Z",
+      "value": 119049986.62695052,
+      "source_type": "contract_state"
+    },
+    {
+      "asset_id": "sky",
+      "metric_key": "staked_supply",
+      "observed_at": "2026-11-19T00:46:11.000Z",
+      "value": 17433372168.777393,
+      "source_type": "contract_state"
+    },
+    {
+      "asset_id": "sky",
+      "metric_key": "total_supply",
+      "observed_at": "2026-11-19T00:46:11.000Z",
+      "value": 23452431915.605965,
+      "source_type": "contract_state"
+    },
+    {
+      "asset_id": "uni",
+      "metric_key": "staked_supply",
+      "observed_at": "2026-11-19T00:46:23.494Z",
+      "value": 0,
+      "source_type": "constant"
+    },
+    {
+      "asset_id": "uni",
+      "metric_key": "total_supply",
+      "observed_at": "2026-11-19T00:46:11.000Z",
+      "value": 885746418.7861971,
+      "source_type": "contract_state"
+    },
+    {
+      "asset_id": "vvv",
+      "metric_key": "staked_supply",
+      "observed_at": "2026-11-19T00:46:24.000Z",
+      "value": 33288380.248842243,
+      "source_type": "contract_state"
+    },
+    {
+      "asset_id": "vvv",
+      "metric_key": "total_supply",
+      "observed_at": "2026-11-19T00:46:24.000Z",
+      "value": 81264420.4883219,
+      "source_type": "contract_state"
+    },
+    {
+      "asset_id": "ycrv",
+      "metric_key": "staked_supply",
+      "observed_at": "2026-11-19T00:46:35.000Z",
+      "value": 63094265.80529063,
+      "source_type": "contract_state"
+    },
+    {
+      "asset_id": "ycrv",
+      "metric_key": "total_supply",
+      "observed_at": "2026-11-19T00:46:35.000Z",
+      "value": 71963003.42840527,
+      "source_type": "contract_state"
+    }
+  ],
+  "rowCount": 26
+}

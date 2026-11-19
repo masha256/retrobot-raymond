@@ -1,0 +1,96 @@
+{
+  "rows": [
+    {
+      "asset_id": "aero",
+      "observed_at": "2026-11-19T00:45:09.000Z",
+      "value": 777221014.6610019,
+      "source_type": "contract_state",
+      "loc": "{\"params\": {\"terms\": [{\"contract\": \"token\", \"function\": \"totalSupply\"}, {\"sign\": -1, \"contract\": \"ve\", \"function\": \"supply\"}, {\"args\": [\"aero_migration\"], \"sign\": -1, \"contract\": \"token\", \"function\": \"balanceOf\"}, {\"args\": [\"velo_migration\"], \"sign\": -1, \"contract\": \"token\", \"function\": \"balanceOf\"}]}, \"adapter\": \"chain.view_sum\"}"
+    },
+    {
+      "asset_id": "cake",
+      "observed_at": "2026-11-19T00:45:16.500Z",
+      "value": 332221877.69551927,
+      "source_type": "market_data",
+      "loc": "{\"id\": \"pancakeswap-token\", \"field\": \"circulating_supply\", \"endpoint\": \"/coins/markets\", \"provider\": \"coingecko\"}"
+    },
+    {
+      "asset_id": "crv",
+      "observed_at": "2026-11-19T00:45:21.088Z",
+      "value": 1587843720,
+      "source_type": "market_data",
+      "loc": "{\"id\": \"curve-dao-token\", \"field\": \"circulating_supply\", \"endpoint\": \"/coins/markets\", \"provider\": \"coingecko\"}"
+    },
+    {
+      "asset_id": "cvxcrv",
+      "observed_at": "2026-11-19T00:45:11.000Z",
+      "value": 425636520.7823423,
+      "source_type": "contract_state",
+      "loc": "{\"args\": [], \"call\": \"totalSupply()\", \"contracts\": [\"0x62B9c7356A2Dc64a1969e19C23e4f579F9810Aa7\"], \"subtract_balances\": {}}"
+    },
+    {
+      "asset_id": "hype",
+      "observed_at": "2026-11-19T00:45:29.990Z",
+      "value": 237707638.52448022,
+      "source_type": "market_data",
+      "loc": "{\"id\": \"hyperliquid\", \"field\": \"circulating_supply\", \"endpoint\": \"/coins/markets\", \"provider\": \"coingecko\"}"
+    },
+    {
+      "asset_id": "link",
+      "observed_at": "2026-11-19T00:45:37.853Z",
+      "value": 766849970.424884,
+      "source_type": "market_data",
+      "loc": "{\"id\": \"chainlink\", \"field\": \"circulating_supply\", \"endpoint\": \"/coins/markets\", \"provider\": \"coingecko\"}"
+    },
+    {
+      "asset_id": "lit",
+      "observed_at": "2026-11-19T00:45:40.606Z",
+      "value": 250000000,
+      "source_type": "market_data",
+      "loc": "{\"id\": \"lighter\", \"field\": \"circulating_supply\", \"endpoint\": \"/coins/markets\", \"provider\": \"coingecko\"}"
+    },
+    {
+      "asset_id": "pump",
+      "observed_at": "2026-11-19T00:46:10.046Z",
+      "value": 457649429222.88275,
+      "source_type": "market_data",
+      "loc": "{\"id\": \"pump-fun\", \"field\": \"circulating_supply\", \"endpoint\": \"/coins/markets\", \"provider\": \"coingecko\"}"
+    },
+    {
+      "asset_id": "sdcrv",
+      "observed_at": "2026-11-19T00:46:11.000Z",
+      "value": 119049986.62695052,
+      "source_type": "contract_state",
+      "loc": "{\"args\": [], \"call\": \"totalSupply()\", \"contracts\": [\"0xD1b5651E55D4CeeD36251c61c50C889B36F6abB5\"], \"subtract_balances\": {}}"
+    },
+    {
+      "asset_id": "sky",
+      "observed_at": "2026-11-19T00:46:20.216Z",
+      "value": 23414153679.901505,
+      "source_type": "market_data",
+      "loc": "{\"id\": \"sky\", \"field\": \"circulating_supply\", \"endpoint\": \"/coins/markets\", \"provider\": \"coingecko\"}"
+    },
+    {
+      "asset_id": "uni",
+      "observed_at": "2026-11-19T00:46:23.494Z",
+      "value": 607485895.875979,
+      "source_type": "market_data",
+      "loc": "{\"id\": \"uniswap\", \"field\": \"circulating_supply\", \"endpoint\": \"/coins/markets\", \"provider\": \"coingecko\"}"
+    },
+    {
+      "asset_id": "vvv",
+      "observed_at": "2026-11-19T00:46:24.773Z",
+      "value": 49028840.79713227,
+      "source_type": "market_data",
+      "loc": "{\"id\": \"venice-token\", \"field\": \"circulating_supply\", \"endpoint\": \"/coins/markets\", \"provider\": \"coingecko\"}"
+    },
+    {
+      "asset_id": "ycrv",
+      "observed_at": "2026-11-19T00:46:35.000Z",
+      "value": 71963003.42840527,
+      "source_type": "contract_state",
+      "loc": "{\"args\": [], \"call\": \"totalSupply()\", \"contracts\": [\"0xFCc5c47bE19d06BF83eB04298b026F81069ff65b\"], \"subtract_balances\": {}}"
+    }
+  ],
+  "rowCount": 13
+}

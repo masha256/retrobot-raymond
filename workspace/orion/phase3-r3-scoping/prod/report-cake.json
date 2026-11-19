@@ -1,0 +1,384 @@
+{
+  "asset": "cake",
+  "day": "2026-11-18",
+  "windowDays": 91,
+  "price": 1.58062167,
+  "marketCap": 525117099.1336274,
+  "fdv": 528320147.9192481,
+  "incomeStatement": {
+    "schema": 2,
+    "day": "2026-11-18",
+    "windowDays": 91,
+    "category": "dex",
+    "scope": "protocol_share_only",
+    "revenue": {
+      "annualized": 76268245.39850675,
+      "growth": {
+        "current": 19014822.825381134,
+        "prior": 12180338.667338049,
+        "change": 0.5611078923749437,
+        "annualized": 4.968391647527993
+      },
+      "growthExNew": null,
+      "excludedFromExNew": [],
+      "provisional": false,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "burn_rev",
+          "label": "converters' output burned",
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "hourly",
+          "annualized": 55422570.59040118,
+          "windowSum": 13817681.982812349,
+          "settlement": "daily",
+          "started": null,
+          "daysMeasured": 91,
+          "provisionalDays": 0,
+          "coverage": null,
+          "isNew": false,
+          "growth": {
+            "current": 13817681.982812349,
+            "prior": 8889818.239636429,
+            "change": 0.5543267151632403,
+            "annualized": 4.865082248523674
+          }
+        },
+        {
+          "id": "treasury_rev",
+          "label": "converters' treasury share",
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "hourly",
+          "annualized": 20845674.808105566,
+          "windowSum": 5197140.842568785,
+          "settlement": "daily",
+          "started": null,
+          "daysMeasured": 91,
+          "provisionalDays": 0,
+          "coverage": null,
+          "isNew": false,
+          "growth": {
+            "current": 5197140.842568785,
+            "prior": 3290520.427701621,
+            "change": 0.5794282262514048,
+            "annualized": 5.254331520107414
+          }
+        }
+      ]
+    },
+    "costOfRevenue": {
+      "annualized": null,
+      "measuredAnnualized": 0,
+      "notMeasured": [
+        "lp_fees"
+      ],
+      "lines": [
+        {
+          "id": "lp_fees",
+          "label": null,
+          "of": null,
+          "share": 1,
+          "method": "not_measured",
+          "sourceTypes": [],
+          "priceBasis": null,
+          "annualized": null,
+          "growth": {
+            "current": null,
+            "prior": null,
+            "change": null,
+            "annualized": null,
+            "note": "not measured"
+          },
+          "notMeasured": "swap fees to LPs: v2 split and v3 tiers not read yet (Phase 3)",
+          "to": "lps"
+        }
+      ]
+    },
+    "grossProfit": {
+      "annualized": null,
+      "growth": {
+        "current": null,
+        "prior": null,
+        "change": null,
+        "annualized": null,
+        "note": "cost of revenue not measured"
+      }
+    },
+    "holders": {
+      "annualized": 55422570.59040118,
+      "growth": {
+        "current": 13817681.982812349,
+        "prior": 8889818.239636429,
+        "change": 0.5543267151632403,
+        "annualized": 4.865082248523674
+      },
+      "remainder": false,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "burn",
+          "label": null,
+          "of": "burn_rev",
+          "share": 1,
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "hourly",
+          "annualized": 55422570.59040118,
+          "growth": {
+            "current": 13817681.982812349,
+            "prior": 8889818.239636429,
+            "change": 0.5543267151632403,
+            "annualized": 4.865082248523674
+          },
+          "note": "fee-funded CAKE burned (weekly)",
+          "bucket": "burn",
+          "haircut": 0,
+          "recipientBase": "all",
+          "valuedPer": null,
+          "captureRule": "programmatic",
+          "paidMetric": null,
+          "gross": 55422570.59040118,
+          "net": 55422570.59040118,
+          "yield": 0.10490338255824445
+        }
+      ],
+      "byBucket": {
+        "burn": {
+          "annualized": 55422570.59040118
+        },
+        "hold": null,
+        "cash": null
+      }
+    },
+    "protocol": {
+      "annualized": 20845674.808105566,
+      "growth": {
+        "current": 5197140.842568785,
+        "prior": 3290520.427701621,
+        "change": 0.5794282262514048,
+        "annualized": 5.254331520107414
+      },
+      "remainder": false,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "treasury",
+          "label": null,
+          "of": "treasury_rev",
+          "share": 1,
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "hourly",
+          "annualized": 20845674.808105566,
+          "growth": {
+            "current": 5197140.842568785,
+            "prior": 3290520.427701621,
+            "change": 0.5794282262514048,
+            "annualized": 5.254331520107414
+          }
+        }
+      ]
+    },
+    "operatingCosts": {
+      "annualized": 0,
+      "growth": {
+        "current": 0,
+        "prior": 0,
+        "change": null,
+        "annualized": null,
+        "note": "no lines"
+      },
+      "remainder": false,
+      "notMeasured": [],
+      "lines": []
+    },
+    "unreconciled": {
+      "annualized": 0,
+      "pct": 0,
+      "basis": "revenue"
+    },
+    "belowLine": {
+      "toHolders": 0,
+      "toProtocol": 0,
+      "notMeasured": [],
+      "lines": []
+    },
+    "holderFlow": {
+      "gross": 55422570.59040118,
+      "net": 55422570.59040118,
+      "netOfDilution": 42878087.72560281,
+      "growth": {
+        "current": 13817681.982812349,
+        "prior": 8889818.239636429,
+        "change": 0.5543267151632403,
+        "annualized": 4.865082248523674
+      },
+      "byBucket": {
+        "burn": {
+          "gross": 55422570.59040118,
+          "net": 55422570.59040118,
+          "yield": 0.10490338255824445,
+          "fromRevenue": 55422570.59040118,
+          "fromBelowLine": 0
+        },
+        "hold": null,
+        "cash": null
+      },
+      "fromRevenue": 55422570.59040118,
+      "fromBelowLine": 0,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "burn",
+          "section": "holders",
+          "fromBelowLine": false,
+          "bucket": "burn",
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "hourly",
+          "metric": "flow_usd.burn",
+          "haircut": 0,
+          "recipientBase": "all",
+          "gross": 55422570.59040118,
+          "net": 55422570.59040118,
+          "yield": 0.10490338255824445,
+          "growth": {
+            "current": 13817681.982812349,
+            "prior": 8889818.239636429,
+            "change": 0.5543267151632403,
+            "annualized": 4.865082248523674
+          }
+        }
+      ]
+    },
+    "volume": {
+      "metrics": [],
+      "annualized": null,
+      "growth": {
+        "current": null,
+        "prior": null,
+        "change": null,
+        "annualized": null,
+        "note": "not measured"
+      },
+      "notMeasured": "gross swap fees: DefiLlama removed (Phase 3 R1); on-chain v2/v3 gross not read yet (Phase 3b)"
+    },
+    "dilution": {
+      "pct": 0.023744093262776246,
+      "tokensPerYear": 7936423.435722205,
+      "emissionsPerYear": 7936423.435722205,
+      "releases": [],
+      "supply": {
+        "burnedPerYear": 25721073.50440752,
+        "addedPerYear": 7936423.435722205,
+        "netPerYear": -17784650.068685316,
+        "netPct": -0.053207895634197235
+      }
+    },
+    "ratios": {
+      "takeRate": null,
+      "payoutRatio": 0.726679502076054,
+      "payoutRatioBasis": "revenue"
+    },
+    "multiples": {
+      "mcapToRevenue": 6.885134126134082,
+      "mcapToGrossProfit": null,
+      "mcapToHolderFlow": {
+        "burn": 9.474787862412398,
+        "hold": null,
+        "cash": null,
+        "total": 9.474787862412398
+      }
+    },
+    "yields": {
+      "cash": 0,
+      "buyback": 0.10490338255824445,
+      "shareholder": 0.10490338255824445,
+      "dilution": 0.023744093262776246,
+      "netShareholder": 0.0811592892954682,
+      "multiple": 9.532581081880558,
+      "pegTrailing": 0.019593874460751927
+    },
+    "perToken": {
+      "revenue": 0.22957020749971935,
+      "grossProfit": null,
+      "holderFlow": {
+        "total": 0.16682396407739247,
+        "netOfDilution": 0.12906461194858607,
+        "byBucket": {
+          "burn": 0.16682396407739247,
+          "hold": null,
+          "cash": null
+        }
+      },
+      "dilution": 0.03775935212880641,
+      "circulatingSupply": 332221877.69551927,
+      "totalSupply": 334248326.43174386,
+      "supplyAsOf": "2026-11-19T23:59:59.999Z",
+      "perTokenFdv": {
+        "revenue": 0.2281783912359583,
+        "grossProfit": null,
+        "holderFlow": {
+          "total": 0.16581255972786121,
+          "netOfDilution": 0.12828213138221609,
+          "byBucket": {
+            "burn": 0.16581255972786121,
+            "hold": null,
+            "cash": null
+          }
+        },
+        "dilution": 0.037530428345645135
+      }
+    },
+    "priceBasis": {
+      "price": 1.58062167,
+      "metric": "price_usd",
+      "sourceType": "contract_state",
+      "source": "contract_state:price.token",
+      "day": "2026-11-18",
+      "asOf": "2026-11-19T23:59:59.999Z",
+      "flows": "each flow day's USD from its tokens x the chain/first-party hourly prices where every hour with an amount is priced (hourly), or its day amount x the mean of the day's 24 chain hours (daily_mean), else the stored value (per line: priceBasis)"
+    },
+    "checks": [
+      {
+        "id": "price_chainlink",
+        "type": "price",
+        "status": "ok",
+        "lhs": 1.58062167,
+        "rhs": 1.5759485657025831,
+        "gapPct": 0.295649767816789,
+        "tolerancePct": 2,
+        "evaluatedAt": "2026-11-19T00:45:16.500Z"
+      }
+    ],
+    "provenance": {
+      "methods": {
+        "measured": 1.0000000000000002,
+        "derived": 0,
+        "disclosed": 0
+      },
+      "thirdParty": [],
+      "sources": [
+        "log_scan:eip155:56"
+      ],
+      "basis": "observations"
+    },
+    "flags": [
+      "cost of revenue not measured: lp_fees",
+      "payout ratio on revenue: cost of revenue not measured"
+    ]
+  },
+  "notes": []
+}

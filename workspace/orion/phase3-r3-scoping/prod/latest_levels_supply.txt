@@ -1,0 +1,243 @@
+{
+  "rows": [
+    {
+      "asset_id": "aero",
+      "metric_key": "price_usd",
+      "value": 0.4338344595199242,
+      "observed_at": "2026-11-19T14:15:13.000Z",
+      "source": "onchain"
+    },
+    {
+      "asset_id": "aero",
+      "metric_key": "staked_supply",
+      "value": 1079067866.0637164,
+      "observed_at": "2026-11-19T14:15:13.000Z",
+      "source": "onchain"
+    },
+    {
+      "asset_id": "aero",
+      "metric_key": "total_supply",
+      "value": 2145949771.512935,
+      "observed_at": "2026-11-19T14:15:13.000Z",
+      "source": "onchain"
+    },
+    {
+      "asset_id": "cake",
+      "metric_key": "price_usd",
+      "value": 1.61586779,
+      "observed_at": "2026-11-19T14:15:15.000Z",
+      "source": "onchain"
+    },
+    {
+      "asset_id": "cake",
+      "metric_key": "total_supply",
+      "value": 334248327.2326288,
+      "observed_at": "2026-11-19T14:15:15.000Z",
+      "source": "onchain"
+    },
+    {
+      "asset_id": "crv",
+      "metric_key": "price_usd",
+      "value": 0.19802859759282143,
+      "observed_at": "2026-11-19T14:15:11.000Z",
+      "source": "onchain"
+    },
+    {
+      "asset_id": "crv",
+      "metric_key": "staked_supply",
+      "value": 841814592.3205726,
+      "observed_at": "2026-11-19T14:15:11.000Z",
+      "source": "onchain"
+    },
+    {
+      "asset_id": "crv",
+      "metric_key": "total_supply",
+      "value": 2435512587.6230397,
+      "observed_at": "2026-11-19T14:15:11.000Z",
+      "source": "onchain"
+    },
+    {
+      "asset_id": "cvxcrv",
+      "metric_key": "price_usd",
+      "value": 0.08122269400094512,
+      "observed_at": "2026-11-19T14:15:11.000Z",
+      "source": "onchain"
+    },
+    {
+      "asset_id": "cvxcrv",
+      "metric_key": "staked_supply",
+      "value": 343182771.628399,
+      "observed_at": "2026-11-19T14:15:11.000Z",
+      "source": "onchain"
+    },
+    {
+      "asset_id": "cvxcrv",
+      "metric_key": "total_supply",
+      "value": 425637221.8580073,
+      "observed_at": "2026-11-19T14:15:11.000Z",
+      "source": "onchain"
+    },
+    {
+      "asset_id": "hype",
+      "metric_key": "price_usd",
+      "value": 68.616341625,
+      "observed_at": "2026-11-19T14:15:10.221Z",
+      "source": "api"
+    },
+    {
+      "asset_id": "hype",
+      "metric_key": "staked_supply",
+      "value": 438380365.55802286,
+      "observed_at": "2026-11-19T14:15:10.221Z",
+      "source": "api"
+    },
+    {
+      "asset_id": "hype",
+      "metric_key": "total_supply",
+      "value": 949628181.8712018,
+      "observed_at": "2026-11-19T14:15:10.221Z",
+      "source": "api"
+    },
+    {
+      "asset_id": "link",
+      "metric_key": "price_usd",
+      "value": 9.23652112,
+      "observed_at": "2026-11-19T14:15:11.000Z",
+      "source": "onchain"
+    },
+    {
+      "asset_id": "link",
+      "metric_key": "total_supply",
+      "value": 1000000000,
+      "observed_at": "2026-11-19T14:15:11.000Z",
+      "source": "onchain"
+    },
+    {
+      "asset_id": "lit",
+      "metric_key": "price_usd",
+      "value": 2.9687076375,
+      "observed_at": "2026-11-19T14:15:10.221Z",
+      "source": "api"
+    },
+    {
+      "asset_id": "lit",
+      "metric_key": "total_supply",
+      "value": 981909280,
+      "observed_at": "2026-11-19T14:15:11.000Z",
+      "source": "onchain"
+    },
+    {
+      "asset_id": "pump",
+      "metric_key": "price_usd",
+      "value": 0.0027555647064105176,
+      "observed_at": "2026-11-19T14:15:10.221Z",
+      "source": "onchain"
+    },
+    {
+      "asset_id": "pump",
+      "metric_key": "total_supply",
+      "value": 821776382479.8925,
+      "observed_at": "2026-11-19T14:15:10.221Z",
+      "source": "onchain"
+    },
+    {
+      "asset_id": "sdcrv",
+      "metric_key": "price_usd",
+      "value": 0.10683242474070848,
+      "observed_at": "2026-11-19T14:15:11.000Z",
+      "source": "onchain"
+    },
+    {
+      "asset_id": "sdcrv",
+      "metric_key": "staked_supply",
+      "value": 106888662.31624167,
+      "observed_at": "2026-11-19T14:15:11.000Z",
+      "source": "onchain"
+    },
+    {
+      "asset_id": "sdcrv",
+      "metric_key": "total_supply",
+      "value": 119049986.62695052,
+      "observed_at": "2026-11-19T14:15:11.000Z",
+      "source": "onchain"
+    },
+    {
+      "asset_id": "sky",
+      "metric_key": "price_usd",
+      "value": 0.04420589302686041,
+      "observed_at": "2026-11-19T14:15:11.000Z",
+      "source": "onchain"
+    },
+    {
+      "asset_id": "sky",
+      "metric_key": "staked_supply",
+      "value": 17415667074.31494,
+      "observed_at": "2026-11-19T14:15:11.000Z",
+      "source": "onchain"
+    },
+    {
+      "asset_id": "sky",
+      "metric_key": "total_supply",
+      "value": 23452431915.605965,
+      "observed_at": "2026-11-19T14:15:11.000Z",
+      "source": "onchain"
+    },
+    {
+      "asset_id": "uni",
+      "metric_key": "price_usd",
+      "value": 5.14455447,
+      "observed_at": "2026-11-19T14:15:11.000Z",
+      "source": "onchain"
+    },
+    {
+      "asset_id": "uni",
+      "metric_key": "total_supply",
+      "value": 885714418.7861971,
+      "observed_at": "2026-11-19T14:15:11.000Z",
+      "source": "onchain"
+    },
+    {
+      "asset_id": "vvv",
+      "metric_key": "price_usd",
+      "value": 23.087643092346116,
+      "observed_at": "2026-11-19T14:15:24.000Z",
+      "source": "onchain"
+    },
+    {
+      "asset_id": "vvv",
+      "metric_key": "staked_supply",
+      "value": 33286420.753893945,
+      "observed_at": "2026-11-19T14:15:24.000Z",
+      "source": "onchain"
+    },
+    {
+      "asset_id": "vvv",
+      "metric_key": "total_supply",
+      "value": 81266970.10012648,
+      "observed_at": "2026-11-19T14:15:24.000Z",
+      "source": "onchain"
+    },
+    {
+      "asset_id": "ycrv",
+      "metric_key": "price_usd",
+      "value": 0.10744901470965743,
+      "observed_at": "2026-11-19T14:15:23.000Z",
+      "source": "onchain"
+    },
+    {
+      "asset_id": "ycrv",
+      "metric_key": "staked_supply",
+      "value": 63107059.599302456,
+      "observed_at": "2026-11-19T14:15:23.000Z",
+      "source": "onchain"
+    },
+    {
+      "asset_id": "ycrv",
+      "metric_key": "total_supply",
+      "value": 71963003.42840527,
+      "observed_at": "2026-11-19T14:15:23.000Z",
+      "source": "onchain"
+    }
+  ],
+  "rowCount": 34
+}

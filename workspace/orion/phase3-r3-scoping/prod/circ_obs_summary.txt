@@ -1,0 +1,140 @@
+{
+  "rows": [
+    {
+      "asset_id": "aero",
+      "source_type": "contract_state",
+      "status": "confirmed",
+      "active": true,
+      "n": 10,
+      "first": "2026-11-10T03:31:28.000Z",
+      "last": "2026-11-19T00:45:09.000Z"
+    },
+    {
+      "asset_id": "aero",
+      "source_type": "market_data",
+      "status": "confirmed",
+      "active": true,
+      "n": 45,
+      "first": "2026-09-24T01:38:28.381Z",
+      "last": "2026-11-10T00:45:09.125Z"
+    },
+    {
+      "asset_id": "cake",
+      "source_type": "market_data",
+      "status": "confirmed",
+      "active": true,
+      "n": 40,
+      "first": "2026-10-12T18:52:13.550Z",
+      "last": "2026-11-19T00:45:16.500Z"
+    },
+    {
+      "asset_id": "crv",
+      "source_type": "market_data",
+      "status": "confirmed",
+      "active": true,
+      "n": 43,
+      "first": "2026-10-08T11:09:41.267Z",
+      "last": "2026-11-19T00:45:21.088Z"
+    },
+    {
+      "asset_id": "cvxcrv",
+      "source_type": "contract_state",
+      "status": "confirmed",
+      "active": true,
+      "n": 39,
+      "first": "2026-10-12T13:24:35.000Z",
+      "last": "2026-11-19T00:45:11.000Z"
+    },
+    {
+      "asset_id": "hype",
+      "source_type": "market_data",
+      "status": "confirmed",
+      "active": true,
+      "n": 55,
+      "first": "2026-10-02T11:27:34.147Z",
+      "last": "2026-11-19T00:45:29.990Z"
+    },
+    {
+      "asset_id": "link",
+      "source_type": "market_data",
+      "status": "confirmed",
+      "active": true,
+      "n": 37,
+      "first": "2026-10-16T15:33:46.987Z",
+      "last": "2026-11-19T00:45:37.853Z"
+    },
+    {
+      "asset_id": "lit",
+      "source_type": "market_data",
+      "status": "confirmed",
+      "active": true,
+      "n": 38,
+      "first": "2026-10-16T13:53:08.539Z",
+      "last": "2026-11-19T00:45:40.606Z"
+    },
+    {
+      "asset_id": "pump",
+      "source_type": "market_data",
+      "status": "confirmed",
+      "active": true,
+      "n": 37,
+      "first": "2026-10-16T20:13:25.734Z",
+      "last": "2026-11-19T00:46:10.046Z"
+    },
+    {
+      "asset_id": "sdcrv",
+      "source_type": "contract_state",
+      "status": "confirmed",
+      "active": true,
+      "n": 39,
+      "first": "2026-10-12T13:24:47.000Z",
+      "last": "2026-11-19T00:46:11.000Z"
+    },
+    {
+      "asset_id": "sky",
+      "source_type": "market_data",
+      "status": "confirmed",
+      "active": true,
+      "n": 36,
+      "first": "2026-10-16T18:05:08.852Z",
+      "last": "2026-11-19T00:46:20.216Z"
+    },
+    {
+      "asset_id": "uni",
+      "source_type": "market_data",
+      "status": "confirmed",
+      "active": true,
+      "n": 40,
+      "first": "2026-10-11T09:55:45.711Z",
+      "last": "2026-11-19T00:46:23.494Z"
+    },
+    {
+      "asset_id": "vvv",
+      "source_type": "disclosure",
+      "status": "confirmed",
+      "active": true,
+      "n": 1,
+      "first": "2026-09-18T00:00:00.000Z",
+      "last": "2026-09-18T00:00:00.000Z"
+    },
+    {
+      "asset_id": "vvv",
+      "source_type": "market_data",
+      "status": "confirmed",
+      "active": true,
+      "n": 57,
+      "first": "2026-09-20T14:46:17.571Z",
+      "last": "2026-11-19T00:46:24.773Z"
+    },
+    {
+      "asset_id": "ycrv",
+      "source_type": "contract_state",
+      "status": "confirmed",
+      "active": true,
+      "n": 39,
+      "first": "2026-10-12T13:24:47.000Z",
+      "last": "2026-11-19T00:46:35.000Z"
+    }
+  ],
+  "rowCount": 15
+}

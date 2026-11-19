@@ -1,0 +1,136 @@
+{
+ "fetched_at": "2026-11-19T14:30:26.522796Z",
+ "label": "dev-only reference",
+ "rows": [
+  {
+   "id": "hyperliquid",
+   "symbol": "hype",
+   "current_price": 68.42,
+   "market_cap": 16264692808,
+   "circulating_supply": 237704287.46624994,
+   "total_supply": 949835746.0062499,
+   "max_supply": 1000000000.0,
+   "last_updated": "2026-11-19T14:29:56.000Z"
+  },
+  {
+   "id": "chainlink",
+   "symbol": "link",
+   "current_price": 9.22,
+   "market_cap": 7072069475,
+   "circulating_supply": 766849970.424884,
+   "total_supply": 1000000000.0,
+   "max_supply": 1000000000.0,
+   "last_updated": "2026-11-19T14:29:56.000Z"
+  },
+  {
+   "id": "uniswap",
+   "symbol": "uni",
+   "current_price": 5.12,
+   "market_cap": 3110416345,
+   "circulating_supply": 607457895.875979,
+   "total_supply": 885718418.7861971,
+   "max_supply": 1000000000.0,
+   "last_updated": "2026-11-19T14:29:56.000Z"
+  },
+  {
+   "id": "pump-fun",
+   "symbol": "pump",
+   "current_price": 0.00274799,
+   "market_cap": 1257278552,
+   "circulating_supply": 457525853406.03705,
+   "total_supply": 821787675893.4749,
+   "max_supply": 1000000000000.0,
+   "last_updated": "2026-11-19T14:29:56.000Z"
+  },
+  {
+   "id": "venice-token",
+   "symbol": "vvv",
+   "current_price": 23.29,
+   "market_cap": 1141711605,
+   "circulating_supply": 49031992.40085296,
+   "total_supply": 81266641.29145512,
+   "max_supply": null,
+   "last_updated": "2026-11-19T14:29:56.000Z"
+  },
+  {
+   "id": "sky",
+   "symbol": "sky",
+   "current_price": 0.0434481,
+   "market_cap": 1017246155,
+   "circulating_supply": 23412904591.029385,
+   "total_supply": 23452431915.605965,
+   "max_supply": 23462665147.3,
+   "last_updated": "2026-11-19T14:29:56.000Z"
+  },
+  {
+   "id": "lighter",
+   "symbol": "lit",
+   "current_price": 2.96,
+   "market_cap": 740716244,
+   "circulating_supply": 250000000.0,
+   "total_supply": 981909280.0,
+   "max_supply": 1000000000.0,
+   "last_updated": "2026-11-19T14:29:56.000Z"
+  },
+  {
+   "id": "pancakeswap-token",
+   "symbol": "cake",
+   "current_price": 1.61,
+   "market_cap": 536102148,
+   "circulating_supply": 332221882.69551927,
+   "total_supply": 343746987.80472744,
+   "max_supply": 400000000.0,
+   "last_updated": "2026-11-19T14:29:56.000Z"
+  },
+  {
+   "id": "aero",
+   "symbol": "aero",
+   "current_price": 0.432213,
+   "market_cap": 331749743,
+   "circulating_supply": 767559977.5719309,
+   "total_supply": 2135578125.0,
+   "max_supply": null,
+   "last_updated": "2026-11-19T14:29:56.000Z"
+  },
+  {
+   "id": "curve-dao-token",
+   "symbol": "crv",
+   "current_price": 0.196351,
+   "market_cap": 311812143,
+   "circulating_supply": 1588037101.0,
+   "total_supply": 2435510280.1610155,
+   "max_supply": 3030303031.0,
+   "last_updated": "2026-11-19T14:29:56.000Z"
+  },
+  {
+   "id": "convex-crv",
+   "symbol": "cvxcrv",
+   "current_price": 0.081149,
+   "market_cap": 0.0,
+   "circulating_supply": 0.0,
+   "total_supply": 425637221.8580073,
+   "max_supply": null,
+   "last_updated": "2026-11-19T14:29:56.000Z"
+  },
+  {
+   "id": "yearn-crv",
+   "symbol": "ycrv",
+   "current_price": 0.108162,
+   "market_cap": 0.0,
+   "circulating_supply": 0.0,
+   "total_supply": 3709596.605376991,
+   "max_supply": null,
+   "last_updated": "2026-11-19T14:29:56.000Z"
+  },
+  {
+   "id": "stake-dao-crv",
+   "symbol": "sdcrv",
+   "current_price": 0.106259,
+   "market_cap": 0.0,
+   "circulating_supply": 0.0,
+   "total_supply": 22975526.0,
+   "max_supply": null,
+   "last_updated": "2026-11-19T14:29:56.000Z"
+  }
+ ]
+}

@@ -4,3 +4,6 @@
 
 ## 2026-11-19 13:47Z
 Duplicate webhook delivery for comment 5525530f (already acked 13:46Z, reply 13a24fe0). Did not re-post. Issue stays Done; nothing pending.
+
+## 2026-11-19 14:46Z
+Second duplicate webhook delivery for comment 5525530f (acked 13:46Z, reply 13a24fe0). Did not re-post. Issue stays Done; nothing pending.

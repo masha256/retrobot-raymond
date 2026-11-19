@@ -1,0 +1,557 @@
+{
+  "asset": "cvxcrv",
+  "day": "2026-11-18",
+  "windowDays": 91,
+  "price": 0.08128158089364372,
+  "marketCap": 34596409.29525902,
+  "fdv": 34596409.29525902,
+  "incomeStatement": {
+    "schema": 2,
+    "day": "2026-11-18",
+    "windowDays": 91,
+    "category": "liquid_locker",
+    "scope": "complete",
+    "revenue": {
+      "annualized": 6785973.890071019,
+      "growth": {
+        "current": 1691845.5451957881,
+        "prior": 1442453.752693529,
+        "change": 0.17289413406604104,
+        "annualized": 0.8958166929443321
+      },
+      "growthExNew": null,
+      "excludedFromExNew": [],
+      "provisional": false,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "vecrv_fees_rev",
+          "label": "veCRV crvUSD fees (wrapper receipt)",
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "hourly",
+          "annualized": 3423737.574176271,
+          "windowSum": 853589.3678083306,
+          "settlement": "daily",
+          "started": null,
+          "daysMeasured": 91,
+          "provisionalDays": 0,
+          "coverage": null,
+          "isNew": false,
+          "growth": {
+            "current": 853589.3678083306,
+            "prior": 769212.787682758,
+            "change": 0.10969211832756431,
+            "annualized": 0.518122218830255
+          }
+        },
+        {
+          "id": "platform_cvxcrv",
+          "label": "CRV platform fee: lock incentive (10 percent)",
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "hourly",
+          "annualized": 1977786.0681733806,
+          "windowSum": 493091.8690514456,
+          "settlement": "daily",
+          "started": null,
+          "daysMeasured": 91,
+          "provisionalDays": 0,
+          "coverage": null,
+          "isNew": false,
+          "growth": {
+            "current": 493091.8690514456,
+            "prior": 396024.09706515935,
+            "change": 0.24510572135794884,
+            "annualized": 1.4091904738726826
+          }
+        },
+        {
+          "id": "platform_cvx",
+          "label": "CRV platform fee: CVX stakers (4.5 percent)",
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "hourly",
+          "annualized": 890003.7306780211,
+          "windowSum": 221891.34107315046,
+          "settlement": "daily",
+          "started": null,
+          "daysMeasured": 91,
+          "provisionalDays": 0,
+          "coverage": null,
+          "isNew": false,
+          "growth": {
+            "current": 221891.34107315046,
+            "prior": 178210.8436793218,
+            "change": 0.24510572135794773,
+            "annualized": 1.4091904738726737
+          }
+        },
+        {
+          "id": "platform_treasury",
+          "label": "CRV platform fee: treasury (2 percent)",
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "hourly",
+          "annualized": 395557.213634676,
+          "windowSum": 98618.3738102891,
+          "settlement": "daily",
+          "started": null,
+          "daysMeasured": 91,
+          "provisionalDays": 0,
+          "coverage": null,
+          "isNew": false,
+          "growth": {
+            "current": 98618.3738102891,
+            "prior": 79204.81941303195,
+            "change": 0.24510572135794728,
+            "annualized": 1.4091904738726706
+          }
+        },
+        {
+          "id": "callers_fee",
+          "label": "CRV platform fee: callers (0.5 percent)",
+          "method": "derived",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "hourly",
+          "annualized": 98889.30340866905,
+          "windowSum": 24654.593452572284,
+          "settlement": "daily",
+          "started": null,
+          "daysMeasured": 91,
+          "provisionalDays": 0,
+          "coverage": null,
+          "isNew": false,
+          "growth": {
+            "current": 24654.593452572284,
+            "prior": 19801.20485325797,
+            "change": 0.24510572135794906,
+            "annualized": 1.4091904738726844
+          }
+        }
+      ]
+    },
+    "costOfRevenue": {
+      "annualized": 0,
+      "measuredAnnualized": 0,
+      "notMeasured": [],
+      "lines": []
+    },
+    "grossProfit": {
+      "annualized": 6785973.890071019,
+      "growth": {
+        "current": 1691845.5451957881,
+        "prior": 1442453.752693529,
+        "change": 0.17289413406604104,
+        "annualized": 0.8958166929443321
+      }
+    },
+    "holders": {
+      "annualized": 5401523.642349651,
+      "growth": {
+        "current": 1346681.236859776,
+        "prior": 1165236.8847479173,
+        "change": 0.15571456283853546,
+        "annualized": 0.7868702108836929
+      },
+      "remainder": false,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "vecrv_fees",
+          "label": null,
+          "of": "vecrv_fees_rev",
+          "share": 1,
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "hourly",
+          "annualized": 3423737.574176271,
+          "growth": {
+            "current": 853589.3678083306,
+            "prior": 769212.787682758,
+            "change": 0.10969211832756431,
+            "annualized": 0.518122218830255
+          },
+          "note": "wrapper stakers",
+          "bucket": "cash",
+          "haircut": 0,
+          "recipientBase": "staked",
+          "valuedPer": "recipients",
+          "captureRule": "programmatic",
+          "paidMetric": null,
+          "gross": 3423737.574176271,
+          "net": 3423737.574176271,
+          "yield": 0.12273361177768208
+        },
+        {
+          "id": "crv",
+          "label": null,
+          "of": "platform_cvxcrv",
+          "share": 1,
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "hourly",
+          "annualized": 1977786.0681733806,
+          "growth": {
+            "current": 493091.8690514456,
+            "prior": 396024.09706515935,
+            "change": 0.24510572135794884,
+            "annualized": 1.4091904738726826
+          },
+          "bucket": "cash",
+          "haircut": 0.01,
+          "recipientBase": "staked",
+          "valuedPer": "recipients",
+          "captureRule": "programmatic",
+          "paidMetric": "flow_usd.crv",
+          "gross": 1962159.026587608,
+          "net": 1942537.436321732,
+          "yield": 0.06963577973130324
+        }
+      ],
+      "byBucket": {
+        "burn": null,
+        "hold": null,
+        "cash": {
+          "annualized": 5401523.642349651
+        }
+      }
+    },
+    "protocol": {
+      "annualized": 1285560.944312697,
+      "growth": {
+        "current": 320509.71488343953,
+        "prior": 257415.66309235376,
+        "change": 0.2451057213579475,
+        "annualized": 1.4091904738726724
+      },
+      "remainder": false,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "cvx_stakers",
+          "label": null,
+          "of": "platform_cvx",
+          "share": 1,
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "hourly",
+          "annualized": 890003.7306780211,
+          "growth": {
+            "current": 221891.34107315046,
+            "prior": 178210.8436793218,
+            "change": 0.24510572135794773,
+            "annualized": 1.4091904738726737
+          }
+        },
+        {
+          "id": "treasury",
+          "label": null,
+          "of": "platform_treasury",
+          "share": 1,
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "hourly",
+          "annualized": 395557.213634676,
+          "growth": {
+            "current": 98618.3738102891,
+            "prior": 79204.81941303195,
+            "change": 0.24510572135794728,
+            "annualized": 1.4091904738726706
+          }
+        }
+      ]
+    },
+    "operatingCosts": {
+      "annualized": 98889.30340866905,
+      "growth": {
+        "current": 24654.593452572284,
+        "prior": 19801.20485325797,
+        "change": 0.24510572135794906,
+        "annualized": 1.4091904738726844
+      },
+      "remainder": false,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "callers",
+          "label": null,
+          "of": "callers_fee",
+          "share": 1,
+          "method": "derived",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "hourly",
+          "annualized": 98889.30340866905,
+          "growth": {
+            "current": 24654.593452572284,
+            "prior": 19801.20485325797,
+            "change": 0.24510572135794906,
+            "annualized": 1.4091904738726844
+          },
+          "note": "50 of the lock's 1000 bps"
+        }
+      ]
+    },
+    "unreconciled": {
+      "annualized": 0,
+      "pct": 0,
+      "basis": "grossProfit"
+    },
+    "belowLine": {
+      "toHolders": 198875.99116501716,
+      "toProtocol": 0,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "cvx_rewards",
+          "label": null,
+          "to": "holders",
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "hourly",
+          "annualized": 198875.99116501716,
+          "growth": {
+            "current": 49582.78135894948,
+            "prior": 254966.8125727287,
+            "change": -0.8055324108316799,
+            "annualized": -0.9985953308143046
+          },
+          "bucket": "cash",
+          "haircut": 0.005,
+          "recipientBase": "staked",
+          "captureRule": "discretionary",
+          "note": "treasury CVX program; ran dry 2026-08"
+        }
+      ]
+    },
+    "holderFlow": {
+      "gross": 5584772.591928896,
+      "net": 5564156.621707195,
+      "netOfDilution": 5564156.621707195,
+      "growth": {
+        "current": 1387228.089247547,
+        "prior": 1415597.58153729,
+        "change": -0.020040647610413798,
+        "annualized": -0.07798999576106624
+      },
+      "byBucket": {
+        "burn": null,
+        "hold": null,
+        "cash": {
+          "gross": 5584772.591928896,
+          "net": 5564156.621707195,
+          "yield": 0.19946302071446972,
+          "fromRevenue": 5385896.600763879,
+          "fromBelowLine": 198875.99116501716
+        }
+      },
+      "fromRevenue": 5385896.600763879,
+      "fromBelowLine": 198875.99116501716,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "vecrv_fees",
+          "section": "holders",
+          "fromBelowLine": false,
+          "bucket": "cash",
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "hourly",
+          "metric": "flow_usd.fees",
+          "haircut": 0,
+          "recipientBase": "staked",
+          "gross": 3423737.574176271,
+          "net": 3423737.574176271,
+          "yield": 0.12273361177768208,
+          "growth": {
+            "current": 853589.3678083306,
+            "prior": 769212.787682758,
+            "change": 0.10969211832756431,
+            "annualized": 0.518122218830255
+          }
+        },
+        {
+          "id": "crv",
+          "section": "holders",
+          "fromBelowLine": false,
+          "bucket": "cash",
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "hourly",
+          "metric": "flow_usd.crv",
+          "haircut": 0.01,
+          "recipientBase": "staked",
+          "gross": 1962159.026587608,
+          "net": 1942537.436321732,
+          "yield": 0.06963577973130324,
+          "growth": {
+            "current": 489195.81210814335,
+            "prior": 396659.40943905764,
+            "change": 0.23328931689770727,
+            "annualized": 1.3187855861884783
+          }
+        },
+        {
+          "id": "cvx_rewards",
+          "section": "below_line",
+          "fromBelowLine": true,
+          "bucket": "cash",
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "hourly",
+          "metric": "flow_usd.cvx",
+          "haircut": 0.005,
+          "recipientBase": "staked",
+          "gross": 198875.99116501716,
+          "net": 197881.61120919208,
+          "yield": 0.007093629205484428,
+          "growth": {
+            "current": 49582.78135894948,
+            "prior": 254966.8125727287,
+            "change": -0.8055324108316799,
+            "annualized": -0.9985953308143046
+          }
+        }
+      ]
+    },
+    "volume": {
+      "metrics": [
+        "flow_usd.convex_gross_crv"
+      ],
+      "annualized": 19777860.681733802,
+      "growth": {
+        "current": 4930918.690514455,
+        "prior": 3960240.9706515945,
+        "change": 0.24510572135794817,
+        "annualized": 1.4091904738726773
+      }
+    },
+    "dilution": {
+      "pct": 0,
+      "tokensPerYear": 0,
+      "emissionsPerYear": 0,
+      "releases": [],
+      "supply": null
+    },
+    "ratios": {
+      "takeRate": 1,
+      "payoutRatio": 0.7959835581231689,
+      "payoutRatioBasis": "grossProfit"
+    },
+    "multiples": {
+      "mcapToRevenue": 5.0982231667409135,
+      "mcapToGrossProfit": 5.0982231667409135,
+      "mcapToHolderFlow": {
+        "burn": null,
+        "hold": null,
+        "cash": 6.217727437845584,
+        "total": 6.217727437845584
+      }
+    },
+    "yields": {
+      "cash": 0.19946302071446972,
+      "buyback": 0,
+      "shareholder": 0.19946302071446972,
+      "dilution": 0,
+      "netShareholder": 0.19946302071446972,
+      "multiple": 5.013460622515563,
+      "pegTrailing": null
+    },
+    "perToken": {
+      "revenue": 0.01594311944284772,
+      "grossProfit": 0.01594311944284772,
+      "holderFlow": {
+        "total": 0.013072554515481855,
+        "netOfDilution": 0.013072554515481855,
+        "byBucket": {
+          "burn": null,
+          "hold": null,
+          "cash": 0.013072554515481855
+        }
+      },
+      "dilution": 0,
+      "circulatingSupply": 425636520.7823423,
+      "totalSupply": 425636520.7823423,
+      "supplyAsOf": "2026-11-19T23:59:59.999Z",
+      "perTokenFdv": {
+        "revenue": 0.01594311944284772,
+        "grossProfit": 0.01594311944284772,
+        "holderFlow": {
+          "total": 0.013072554515481855,
+          "netOfDilution": 0.013072554515481855,
+          "byBucket": {
+            "burn": null,
+            "hold": null,
+            "cash": 0.013072554515481855
+          }
+        },
+        "dilution": 0
+      }
+    },
+    "priceBasis": {
+      "price": 0.08128158089364372,
+      "metric": "price_usd",
+      "sourceType": "contract_state",
+      "source": "contract_state:price.token",
+      "day": "2026-11-18",
+      "asOf": "2026-11-19T23:59:59.999Z",
+      "flows": "each flow day's USD from its tokens x the chain/first-party hourly prices where every hour with an amount is priced (hourly), or its day amount x the mean of the day's 24 chain hours (daily_mean), else the stored value (per line: priceBasis)"
+    },
+    "checks": [
+      {
+        "id": "crv_paid",
+        "type": "two_path",
+        "status": "ok",
+        "lhs": 493091.8690514456,
+        "rhs": 489195.81210814335,
+        "gapPct": 0.7901280040973032,
+        "tolerancePct": 5,
+        "evaluatedAt": "2026-11-19T00:45:25.116Z"
+      }
+    ],
+    "provenance": {
+      "methods": {
+        "measured": 0.9854273970087976,
+        "derived": 0.014572602991202213,
+        "disclosed": 0
+      },
+      "thirdParty": [],
+      "sources": [
+        "log_scan:eip155:1"
+      ],
+      "basis": "observations"
+    },
+    "flags": []
+  },
+  "notes": [
+    "yields are per token of each flow's recipients (staked or locked supply), i.e. to a holder in every flow's base"
+  ]
+}

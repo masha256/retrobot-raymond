@@ -1,0 +1,245 @@
+{
+  "rows": [
+    {
+      "asset_id": "aero",
+      "metric_key": "circulating_supply",
+      "value": 777906035.4839658,
+      "observed_at": "2026-11-19T14:15:13.000Z",
+      "source": "onchain",
+      "block_number": 59536690,
+      "job_id": 615307,
+      "source_type": "contract_state",
+      "locator": {
+        "params": {
+          "terms": [
+            {
+              "contract": "token",
+              "function": "totalSupply"
+            },
+            {
+              "sign": -1,
+              "contract": "ve",
+              "function": "supply"
+            },
+            {
+              "args": [
+                "aero_migration"
+              ],
+              "sign": -1,
+              "contract": "token",
+              "function": "balanceOf"
+            },
+            {
+              "args": [
+                "velo_migration"
+              ],
+              "sign": -1,
+              "contract": "token",
+              "function": "balanceOf"
+            }
+          ]
+        },
+        "adapter": "chain.view_sum"
+      }
+    },
+    {
+      "asset_id": "cake",
+      "metric_key": "circulating_supply",
+      "value": 332221882.69551927,
+      "observed_at": "2026-11-19T14:15:10.221Z",
+      "source": "api",
+      "block_number": null,
+      "job_id": 615307,
+      "source_type": "market_data",
+      "locator": {
+        "id": "pancakeswap-token",
+        "field": "circulating_supply",
+        "endpoint": "/coins/markets",
+        "provider": "coingecko"
+      }
+    },
+    {
+      "asset_id": "crv",
+      "metric_key": "circulating_supply",
+      "value": 1588037101,
+      "observed_at": "2026-11-19T14:15:10.221Z",
+      "source": "api",
+      "block_number": null,
+      "job_id": 615307,
+      "source_type": "market_data",
+      "locator": {
+        "id": "curve-dao-token",
+        "field": "circulating_supply",
+        "endpoint": "/coins/markets",
+        "provider": "coingecko"
+      }
+    },
+    {
+      "asset_id": "cvxcrv",
+      "metric_key": "circulating_supply",
+      "value": 425637221.8580073,
+      "observed_at": "2026-11-19T14:15:11.000Z",
+      "source": "onchain",
+      "block_number": 26449660,
+      "job_id": 615307,
+      "source_type": "contract_state",
+      "locator": {
+        "args": [],
+        "call": "totalSupply()",
+        "contracts": [
+          "0x62B9c7356A2Dc64a1969e19C23e4f579F9810Aa7"
+        ],
+        "subtract_balances": {}
+      }
+    },
+    {
+      "asset_id": "hype",
+      "metric_key": "circulating_supply",
+      "value": 237704287.46624994,
+      "observed_at": "2026-11-19T14:15:10.221Z",
+      "source": "api",
+      "block_number": null,
+      "job_id": 615307,
+      "source_type": "market_data",
+      "locator": {
+        "id": "hyperliquid",
+        "field": "circulating_supply",
+        "endpoint": "/coins/markets",
+        "provider": "coingecko"
+      }
+    },
+    {
+      "asset_id": "link",
+      "metric_key": "circulating_supply",
+      "value": 766849970.424884,
+      "observed_at": "2026-11-19T14:15:10.221Z",
+      "source": "api",
+      "block_number": null,
+      "job_id": 615307,
+      "source_type": "market_data",
+      "locator": {
+        "id": "chainlink",
+        "field": "circulating_supply",
+        "endpoint": "/coins/markets",
+        "provider": "coingecko"
+      }
+    },
+    {
+      "asset_id": "lit",
+      "metric_key": "circulating_supply",
+      "value": 250000000,
+      "observed_at": "2026-11-19T14:15:10.221Z",
+      "source": "api",
+      "block_number": null,
+      "job_id": 615307,
+      "source_type": "market_data",
+      "locator": {
+        "id": "lighter",
+        "field": "circulating_supply",
+        "endpoint": "/coins/markets",
+        "provider": "coingecko"
+      }
+    },
+    {
+      "asset_id": "pump",
+      "metric_key": "circulating_supply",
+      "value": 457525853406.03705,
+      "observed_at": "2026-11-19T14:15:10.221Z",
+      "source": "api",
+      "block_number": null,
+      "job_id": 615307,
+      "source_type": "market_data",
+      "locator": {
+        "id": "pump-fun",
+        "field": "circulating_supply",
+        "endpoint": "/coins/markets",
+        "provider": "coingecko"
+      }
+    },
+    {
+      "asset_id": "sdcrv",
+      "metric_key": "circulating_supply",
+      "value": 119049986.62695052,
+      "observed_at": "2026-11-19T14:15:11.000Z",
+      "source": "onchain",
+      "block_number": 26449660,
+      "job_id": 615307,
+      "source_type": "contract_state",
+      "locator": {
+        "args": [],
+        "call": "totalSupply()",
+        "contracts": [
+          "0xD1b5651E55D4CeeD36251c61c50C889B36F6abB5"
+        ],
+        "subtract_balances": {}
+      }
+    },
+    {
+      "asset_id": "sky",
+      "metric_key": "circulating_supply",
+      "value": 23412904591.029385,
+      "observed_at": "2026-11-19T14:15:10.221Z",
+      "source": "api",
+      "block_number": null,
+      "job_id": 615307,
+      "source_type": "market_data",
+      "locator": {
+        "id": "sky",
+        "field": "circulating_supply",
+        "endpoint": "/coins/markets",
+        "provider": "coingecko"
+      }
+    },
+    {
+      "asset_id": "uni",
+      "metric_key": "circulating_supply",
+      "value": 607457895.875979,
+      "observed_at": "2026-11-19T14:15:10.221Z",
+      "source": "api",
+      "block_number": null,
+      "job_id": 615307,
+      "source_type": "market_data",
+      "locator": {
+        "id": "uniswap",
+        "field": "circulating_supply",
+        "endpoint": "/coins/markets",
+        "provider": "coingecko"
+      }
+    },
+    {
+      "asset_id": "vvv",
+      "metric_key": "circulating_supply",
+      "value": 49031992.40085296,
+      "observed_at": "2026-11-19T14:15:10.221Z",
+      "source": "api",
+      "block_number": null,
+      "job_id": 615307,
+      "source_type": "market_data",
+      "locator": {
+        "id": "venice-token",
+        "field": "circulating_supply",
+        "endpoint": "/coins/markets",
+        "provider": "coingecko"
+      }
+    },
+    {
+      "asset_id": "ycrv",
+      "metric_key": "circulating_supply",
+      "value": 71963003.42840527,
+      "observed_at": "2026-11-19T14:15:23.000Z",
+      "source": "onchain",
+      "block_number": 26449661,
+      "job_id": 615307,
+      "source_type": "contract_state",
+      "locator": {
+        "args": [],
+        "call": "totalSupply()",
+        "contracts": [
+          "0xFCc5c47bE19d06BF83eB04298b026F81069ff65b"
+        ],
+        "subtract_balances": {}
+      }
+    }
+  ],
+  "rowCount": 13
+}

@@ -5,3 +5,7 @@
 ## 2026-11-19 13:47Z
 ## 2026-11-19 13:50Z
 Mike posted the close-out summary (c3a021c6). Checked it against progress.md: it matches, and the R43 allowlist file exists. I replied with a confirmation and made no board changes (Done, no labels). Prod R2 shipped 11-19 00:48Z. Follow-ups are open on me: remove the rel-r2-prod worktree, commit the allowlist to the repo, add a stage sql-ro verb, and fix the step-5 runbook expectation.
+
+## 2026-11-19 14:51Z
+## 2026-11-19T14:51Z
+Duplicate webhook delivery for comment c3a021c6, which I had already answered at 13:47Z (reply 1cd5267b). I posted no new comment and made no board changes, so the issue stays Done with no labels. Follow-ups are still on me: remove the rel-r2-prod worktree, commit the R43 allowlist, add a stage sql-ro verb, and fix the runbook step-5 expectation.
