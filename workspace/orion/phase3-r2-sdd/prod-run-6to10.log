@@ -1,0 +1,107 @@
+== 6 reprice --yes 00:41:56
+aero ok None
+cake ok /home/orion-prod/home/repriced/cake-20261119T004159Z.json
+crv ok /home/orion-prod/home/repriced/crv-20261119T004203Z.json
+cvxcrv ok /home/orion-prod/home/repriced/cvxcrv-20261119T004208Z.json
+hype ok None
+link ok /home/orion-prod/home/repriced/link-20261119T004216Z.json
+lit ok None
+pump ok /home/orion-prod/home/repriced/pump-20261119T004221Z.json
+sdcrv ok /home/orion-prod/home/repriced/sdcrv-20261119T004223Z.json
+sky ok /home/orion-prod/home/repriced/sky-20261119T004230Z.json
+uni ok /home/orion-prod/home/repriced/uni-20261119T004234Z.json
+vvv ok /home/orion-prod/home/repriced/vvv-20261119T004237Z.json
+ycrv ok /home/orion-prod/home/repriced/ycrv-20261119T004241Z.json
+second dry: 0 repriced 13/13
+ycrv after reprice unpriced: 0
+compare-usd after reprice: 0 unpriced 13/13
+== 7 R39 pre-check 00:43:25
+aero:price_usd=0/45 cake:price_usd=0/39 crv:price_usd=0/42 cvxcrv:price_usd=0/41 hype:price_usd=0/54 link:price_usd=0/36 lit:price_usd=0/37 pump:price_usd=0/36 sdcrv:price_usd=0/41 sky:price_usd=0/35 uni:price_usd=0/39 vvv:diem_price_usd=0/56 vvv:price_usd=0/56 ycrv:price_usd=0/41
+aero price_usd rows=45 rebuild=20 refused=0 beforeValidFrom=25 ok
+cake price_usd rows=39 rebuild=39 refused=0 beforeValidFrom=0 ok
+crv price_usd rows=42 rebuild=42 refused=0 beforeValidFrom=0 ok
+cvxcrv price_usd rows=41 rebuild=41 refused=0 beforeValidFrom=0 ok
+hype price_usd rows=54 rebuild=54 refused=0 beforeValidFrom=0 ok
+link price_usd rows=36 rebuild=36 refused=0 beforeValidFrom=0 ok
+lit price_usd rows=37 rebuild=37 refused=0 beforeValidFrom=0 ok
+pump price_usd rows=36 rebuild=36 refused=0 beforeValidFrom=0 ok
+sdcrv price_usd rows=41 rebuild=41 refused=0 beforeValidFrom=0 ok
+sky price_usd rows=35 rebuild=35 refused=0 beforeValidFrom=0 ok
+uni price_usd rows=39 rebuild=39 refused=0 beforeValidFrom=0 ok
+vvv diem_price_usd rows=56 rebuild=56 refused=0 beforeValidFrom=0 price_usd rows=56 rebuild=56 refused=0 beforeValidFrom=0 ok
+ycrv price_usd rows=41 rebuild=41 refused=0 beforeValidFrom=0 ok
+-- 7 --yes
+aero ok
+cake ok
+crv ok
+cvxcrv ok
+hype ok
+link ok
+lit ok
+pump ok
+sdcrv ok
+sky ok
+uni ok
+vvv ok
+ycrv ok
+== 8a 00:44:08
+rows 92639 refs 12 deletedTokens ['coingecko:crvusd', 'coingecko:yearn-crv'] keptTokens []
+8a yes==dry /home/orion-prod/home/purged/prices-coingecko-20261119T004411Z.json 1844f5688909cc43266dc4a162a5c23b446206b10ee2d302f8303b78ba08424e
+== 8b 00:44:12
+aero price_usd observations=45 withoutReplacement=25 ok
+cake price_usd observations=39 withoutReplacement=0 ok
+crv price_usd observations=42 withoutReplacement=0 ok
+cvxcrv price_usd observations=41 withoutReplacement=0 ok
+hype price_usd observations=54 withoutReplacement=0 ok
+link price_usd observations=36 withoutReplacement=0 ok
+lit price_usd observations=37 withoutReplacement=0 ok
+pump price_usd observations=36 withoutReplacement=0 ok
+sdcrv price_usd observations=41 withoutReplacement=0 ok
+sky price_usd observations=35 withoutReplacement=0 ok
+uni price_usd observations=39 withoutReplacement=0 ok
+vvv price_usd observations=56 withoutReplacement=0 diem_price_usd observations=56 withoutReplacement=0 ok
+ycrv price_usd observations=41 withoutReplacement=0 ok
+aero ok /home/orion-prod/home/purged/aero-price_usd-20261119T004431Z.json
+cake ok /home/orion-prod/home/purged/cake-price_usd-20261119T004433Z.json
+crv ok /home/orion-prod/home/purged/crv-price_usd-20261119T004434Z.json
+cvxcrv ok /home/orion-prod/home/purged/cvxcrv-price_usd-20261119T004436Z.json
+hype ok /home/orion-prod/home/purged/hype-price_usd-20261119T004438Z.json
+link ok /home/orion-prod/home/purged/link-price_usd-20261119T004439Z.json
+lit ok /home/orion-prod/home/purged/lit-price_usd-20261119T004441Z.json
+pump ok /home/orion-prod/home/purged/pump-price_usd-20261119T004443Z.json
+sdcrv ok /home/orion-prod/home/purged/sdcrv-price_usd-20261119T004444Z.json
+sky ok /home/orion-prod/home/purged/sky-price_usd-20261119T004446Z.json
+uni ok /home/orion-prod/home/purged/uni-price_usd-20261119T004447Z.json
+vvv ok /home/orion-prod/home/purged/vvv-price_usd+1-20261119T004449Z.json
+ycrv ok /home/orion-prod/home/purged/ycrv-price_usd-20261119T004451Z.json
+== 9 00:44:52
+after 26
+== 10 00:45:35
+aero exit 0 OK aero: 1 differing path(s), 1 allowed, 0 not allowed
+aero-91 exit 0 OK aero: 1 differing path(s), 1 allowed, 0 not allowed
+cake exit 0 OK cake: 92 differing path(s), 92 allowed, 0 not allowed
+cake-91 exit 0 OK cake: 65 differing path(s), 65 allowed, 0 not allowed
+crv exit 0 OK crv: 92 differing path(s), 92 allowed, 0 not allowed
+crv-91 exit 0 OK crv: 43 differing path(s), 43 allowed, 0 not allowed
+cvxcrv exit 0 OK cvxcrv: 175 differing path(s), 175 allowed, 0 not allowed
+cvxcrv-91 exit 0 OK cvxcrv: 116 differing path(s), 116 allowed, 0 not allowed
+hype exit 0 OK hype: 25 differing path(s), 25 allowed, 0 not allowed
+hype-91 exit 0 OK hype: 3 differing path(s), 3 allowed, 0 not allowed
+link exit 0 OK link: 72 differing path(s), 72 allowed, 0 not allowed
+link-91 exit 0 OK link: 46 differing path(s), 46 allowed, 0 not allowed
+lit exit 0 OK lit: 24 differing path(s), 24 allowed, 0 not allowed
+lit-91 exit 0 OK lit: 3 differing path(s), 3 allowed, 0 not allowed
+pump exit 0 OK pump: 64 differing path(s), 64 allowed, 0 not allowed
+pump-91 exit 0 OK pump: 3 differing path(s), 3 allowed, 0 not allowed
+sdcrv exit 0 OK sdcrv: 201 differing path(s), 201 allowed, 0 not allowed
+sdcrv-91 exit 0 OK sdcrv: 134 differing path(s), 134 allowed, 0 not allowed
+sky exit 0 OK sky: 96 differing path(s), 96 allowed, 0 not allowed
+sky-91 exit 0 OK sky: 60 differing path(s), 60 allowed, 0 not allowed
+uni exit 0 OK uni: 72 differing path(s), 72 allowed, 0 not allowed
+uni-91 exit 0 OK uni: 28 differing path(s), 28 allowed, 0 not allowed
+vvv exit 0 OK vvv: 62 differing path(s), 62 allowed, 0 not allowed
+vvv-91 exit 0 OK vvv: 26 differing path(s), 26 allowed, 0 not allowed
+ycrv exit 0 OK ycrv: 133 differing path(s), 133 allowed, 0 not allowed
+ycrv-91 exit 0 OK ycrv: 78 differing path(s), 78 allowed, 0 not allowed
+GATE fails=0
+ALL DONE 00:45:37
