@@ -1,0 +1,8 @@
+# Task 4 review findings to fix (controller, binding) — one commit: `fix(ingest): watched monitor-only sources raise failure streaks; R3 review fixes`
+
+1. I1 (Important): a source whose only metrics are monitor-only is exempt from the failure streak (src/ingest/run.ts ~696-701), so LINK's `chainlink_circulating` (http_json supply.chain.link) can fail forever with no alert while `circulating_gap_chainlink` silently skips. Fix: a source is NOT exempt when any metric it writes has a `watch`, or is an input (a/b) of a `level_gap_pct` metric that has a `watch`. Test: one side failing three runs in a row raises `source_failure_streak` (advisory severity as for any streak; check what severity the existing streak uses and keep it); a plain unwatched monitor-only source stays exempt (existing test unchanged).
+2. M1: PUMP's six owner balances are read twice per run (supply_less_owners + owners_balance). Fix with the per-run cache the solana adapters can share (ownerBalance results keyed by owner+mint inside one run), not by changing either adapter's output. Test: one run makes each owner request once.
+3. M3: gap watches run at the nightly only: correct the YAML comments and any doc text that says "every run" (crv.yaml, link.yaml, sources-register text if any).
+4. M4: refuse a `constant` (or `derived`) source as a level_gap_pct side; test.
+Not fixed (ledgered): M2 name `reserved_balance` accepted (ruling R11); M5, M6 deferred.
+Known environmental failure: tests/db/daemonSchema.test.ts fails while the controller's scratch schema r3probe_1795204385 exists in orion_test — ignore that one test (name it in your report), nothing else.

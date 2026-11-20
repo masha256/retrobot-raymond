@@ -43,3 +43,33 @@ Controller live check (scratch home, branch src, schema r3probe_1795204385, dry-
 Controller: cleanup of the probe home/schema timed out on the approval prompt (not run; not retried; waits for Mike).
 Task 4: review dispatched (review-5a68aff..596245b.diff) in parallel with Task 5 implementer (BASE 596245b).
 Task 5: dispatched (BASE 596245b)
+Task 4: review — spec OK, quality Approved with 1 Important (I1: watched monitor-only source exempt from failure streak -> LINK check silent) + M1-M6; task-4-findings.md items 1-4.
+Ruling R11: PUMP watch metric name `reserved_balance` accepted (R4 said pump_reserved_balance) — cost if wrong: none.
+Task 4: minor (deferred): ownersBalance resolves owners before validating (load-time check covers it)
+Task 4: minor (deferred): schema.ts imports from the ingest layer (precedent in load.ts)
+Task 5: committed 176c45a; reported 2021/2022 (156 files; the 1 = daemonSchema, caused by controller's leftover probe schema r3probe_1795204385), typecheck clean, py 67. Controller verify: only AERO pin moved (80c32373 old), focused supplyLevels/purge/cli/aero 39/39, py OK.
+Ruling R12: rebuild target rule = row not from the current source when (source_type, locator.adapter, locator.call) differ; a params change inside the same adapter is not a target (AERO rows from 11-10 unchanged) — accepted — cost if wrong: a future same-adapter terms change leaves mixed history; a later release can add a params hash.
+Ruling R13: a balanceOf term whose ARG contract did not exist yet reads 0 at an old block (correct: it held nothing); only a call ON a codeless contract is refused — accepted.
+Task 4: fix wave dispatched (task-4-findings.md 1-4) in parallel with Task 5 review (review-596245b..176c45a.diff).
+Task 5: review clean (spec OK, quality Approved; 5 named risks pass; real classification over 13 assets: 11 EVM rebuildable, HYPE/PUMP never, AERO split 2026-11-10).
+Task 5: minor (deferred): rebuild writes midnight day_blocks without flow.ts's 3600 s age check (rebuild rows are past days; boundaries never young)
+Task 5: minor (deferred): no tests for the rebuild conflict path, a partly committed --yes finished by rerun, a LIT locked_schedule rebuild at an old block, PUMP notRebuildable
+Task 5: minor (deferred): RPC call counter counts 7 named methods only
+Task 5: minor (deferred): planRebuild has an unused opts param
+Task 5: minor (deferred): CLI NOT REBUILDABLE line says purge deletes it (true only for market_data rows)
+Task 5: complete (commit 176c45a, review clean)
+Task 4: fix wave committed 0b4132e (I1, M1 test-only: withRunCache already dedupes POSTs, M3 comments, M4); reported 2024/2025 (the 1 = daemonSchema env), typecheck clean. Controller verify: focused run/derived/pump/link 63/63.
+Ruling R14 (narrows the I1 fix): un-exempt from the failure streak ONLY the sides (a/b) of a watched level_gap_pct; a plain watched monitor-only metric stays exempt as before. Why: 0b4132e also un-exempts LIT's four watched monitor-only sources (app_fee_share, rh account value, rh fees, staking apr) and PUMP's reserved_balance, an alerting change on assets/metrics R3 doesn't own (LIT); PUMP's owners are already covered by supply_less_owners' streak on the same RPC. The general "a watched read that fails is silent" gap goes to the followups note for Mike. — cost if wrong: LIT's watched sources stay as silent as today.
+Task 6: dispatched (BASE 0b4132e) with R14 as its first commit; fix-wave re-review of 176c45a..R14 after.
+Task 6: committed dc051b0 (R14, TDD) + 14f521a (deploy.md R3 block, r3-s0..s4.sh + --fake tests, followups, spec Status); reported 2024/2025 (daemonSchema env), typecheck clean, py 63 + 67 OK.
+Controller (prod sql-ro 2026-11-20 20:50Z): VVV circulating row id 3 (2026-09-18, 48,350,000, disclosure, confirmed, active, pre-v2 seed without citation_url) — the R12 rule would make it a rebuild target.
+Ruling R15 (amends R12): rebuild targets = active circulating rows with source_type market_data, or contract_state rows on the old erc20_supply locator (wrappers); disclosure / manual rows are never targets: listed as `kept` (id, observedAt, reason) and untouched; s0/s2 expect VVV kept 1. Why: Mike's N3 keeps the disclosure row; no CoinGecko data in it. — cost if wrong: one pre-v2 disclosed point inside VVV's on-chain series.
+Ruling R16: Task 6 concerns 2-5 accepted as written (Task 7 creates r3-signed-circulating.json; stage levels every 6 h so s1 polls up to 6.5 h, deploy just before a :15 slot; staging_refresh hold until prod's s3; step-3 log check strict).
+Task 5 M2 tests to add now (fix wave): conflict path, partly committed --yes finished by rerun, LIT locked_schedule rebuild at an old block, PUMP notRebuildable.
+Fix wave (R15 + Task 5 M2 tests) dispatched (BASE 14f521a).
+R15 fix wave committed ca3be1d; reported 2030/2031 (daemonSchema env), typecheck clean, py 65 + 67. Mutation checks confirm the M2 tests bite.
+Ruling R17: implementer concerns accepted — contract_state targets keep R12's (adapter, call) comparison (only the wrappers on shipped data; scripts STOP on any other); non-target rungs kept, not notRebuildable; spec Status "R1-R14" updated by the controller at the closing commit.
+Review dispatched over 176c45a..ca3be1d (Task 4 fix 0b4132e, R14 dc051b0, Task 6 14f521a, R15 ca3be1d).
+Range review 176c45a..ca3be1d: quality Approved; spec gap Important (followups lacks R16/R17; spec Status says R1-R14) + M1-M6.
+Ruling R18: closing fix wave = Important + M1 (s1 step-4 race: wait for a levels job that STARTED after the switch to finish; ignore running ones; read latest_levels only after it) + M2 (fixtures for the three artifact STOPs: wrapper old-locator count, leftovers after --yes, step-4 pre-check) + M3 (deploy.md: s1 needs the signed file, s4 the allowlist) + M4 (s2/s3 `--resume`: after a STOP mid --yes, rebuilt/purged-so-far + remaining == step 1's counts, documented) + M5 (followups: Task 5 M2 tests done in ca3be1d). M6 accepted as R16. — cost if wrong: none.
+Closing fix wave dispatched (BASE ca3be1d).

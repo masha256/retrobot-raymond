@@ -23,11 +23,16 @@ Depth for scoping or changing an asset's `circulating_supply` source. Market cap
 ## Standing rules for the definition
 - Excluded = cannot be sold today: unvested team/investor (balances or a cited schedule), issuer treasury/reserve
   wallets, migration reserves, pending-burn balances, retired-contract balances.
-- Staking rule (recommended to Mike for R3): irrevocable long locks (veCRV, veAERO) are not circulating; staking with
-  an exit (cooldown or fee-free withdraw: LINK v0.2, lsSKY, VVV, LIT, HYPE) is circulating.
+- Staking rule (Mike approved for R3): irrevocable long locks (veCRV, veAERO) are not circulating; staking with an
+  exit (cooldown or fee-free withdraw: LINK v0.2, lsSKY, VVV, LIT, HYPE) is circulating.
 - Issuer-controlled dormant vaults funded from the issuer's custodian at genesis count as treasury even without a
   label; say the evidence is on-chain provenance, not a citation.
-- New first-party checks go in as `watch` lines, never level `cross_checks` (a mismatch opens a paid triage anomaly).
+- New first-party checks go in as `watch` lines, never level `cross_checks` (a mismatch opens an anomaly): a
+  monitor-only level of the first-party figure plus a derived `level_gap_pct` {a, b} with `watch: { outside: [lo, hi] }`.
+  Centre the band on the measured steady gap, not 0 (CRV runs -0.36% vs Curve's figure because Orion also excludes the
+  treasury). The gap's inputs must leave the monitor-only failure-streak exemption, or a first-party API that dies just
+  makes the gap skip silently; plain watched monitor-only metrics on other assets keep the exemption (widening it
+  changes their alerting, a decision for Mike).
 
 ## Method pitfalls
 - Hyperliquid wallets: add `delegatorSummary` (delegated + undelegated + pending withdrawal) to the spot balance;
@@ -37,6 +42,9 @@ Depth for scoping or changing an asset's `circulating_supply` source. Market cap
   not token accounts; history starts on the release day.
 - A `view_sum` term whose contract did not exist at an old block (grant escrows, a post-migration token) makes an
   archive rebuild of that day impossible: list it, never sum the remaining terms.
+- Rebuild targets are an explicit allowlist (CoinGecko `market_data` rows, plus rows on a known old locator such as the
+  wrappers' `erc20_supply`), never "any row not from the current source": that rule also supersedes cited `disclosure`
+  / manual rows (VVV keeps one). List those as `kept`, and have the release block's step 1 record them per asset.
 - History: a report reads the newest level at or before its day, so purging stored rows without a rebuild nulls past
   market caps. EVM view_sum rows can be rebuilt at archive blocks (~1 multicall per row); first-party APIs and Solana
   cannot.
