@@ -45,6 +45,9 @@ Depth for scoping or changing an asset's `circulating_supply` source. Market cap
 - Rebuild targets are an explicit allowlist (CoinGecko `market_data` rows, plus rows on a known old locator such as the
   wrappers' `erc20_supply`), never "any row not from the current source": that rule also supersedes cited `disclosure`
   / manual rows (VVV keeps one). List those as `kept`, and have the release block's step 1 record them per asset.
+- A `rebuild_from` cutoff compares `observed_at` with 00:00Z of that day: a stored row stamped later that same day (the
+  00:45Z nightly) is rebuilt, not skipped. List every stored row near the cutoff by timestamp before writing counts
+  into a plan (AERO: 44 not rebuildable + 1 rebuilt, not 45).
 - History: a report reads the newest level at or before its day, so purging stored rows without a rebuild nulls past
   market caps. EVM view_sum rows can be rebuilt at archive blocks (~1 multicall per row); first-party APIs and Solana
   cannot.
