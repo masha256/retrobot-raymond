@@ -31,6 +31,25 @@ Use when Mike asks to record a new series (growth, revenue, yield), to cut a thi
   - A re-price must recompute derived rows over EVERY day it prices, including unchanged or 0→0 days and days an interrupted earlier run already wrote. Counting only the days whose value changes in this run leaves derived rates stale for good after a partial `--yes`.
 - VVV revenue is disclosure-based; its only daily series is DefiLlama. Keep it as a labelled proxy next to the disclosures, not as the official figure.
 
+## Circulating supply (owned definitions, no CoinGecko)
+The market-cap basis only: it feeds `marketCap`, `multiples.mcapTo*` and `perToken.*`, never a `yields.*` field (those divide by total/staked/locked supply), growth or flows. Say so whenever a brief claims a supply change moves "yields on market cap".
+
+Scoping procedure (one release for all assets):
+1. Pull prod read-only first into `workspace/orion/<topic>-scoping/prod/` with one script: `sql-ro` row counts by asset/source_type/status, the newest row with its locator, `latest_levels` rows, every `report yield <a>` (over orion-remote it already prints JSON; `--json` exits 64), and one keyless CoinGecko `/coins/markets` call (dev-only reference). Make the script refuse 05:00-06:30 PT.
+2. Write one shared `BRIEF.md` (rules, deliverable sections: today's numbers, method terms, exclusion list with citations, reconciliation with CoinGecko, first-party check, archive history sample, options with $ effect) and dispatch subagents by chain group, each told "read BRIEF.md first" plus its assets' addresses and the candidate exclusions.
+3. Re-measure every load-bearing figure yourself in one probe before presenting, and resolve any id a findings file elides (`…`) from its source (Chainlink's `supply.chain.link/supply` carries its own wallet list in `balances[]`; PUMP vault owners via `getTokenLargestAccounts` + `getAccountInfo` owner).
+
+Definition rules (approved for every asset):
+- Circulating = total less issuer-controlled balances: treasuries/reserves, issuer-funded vaults that never moved, unvested team/investor tokens (balances, or a cited schedule term when they sit in hundreds of recipient wallets), pending-burn balances, a wrapper's own protocol-treasury holdings (vault shares x `pricePerShare`).
+- Irrevocable long locks (veCRV, veAERO) are out; staking with an exit (cooldown, fee-free withdraw) is in. Price both options for Mike when a stake is large (lsSKY ~74%).
+- A protocol's own published figure (Curve `circulating_supply()` contract, Chainlink API, Venice `vvv_stats`, Hyperliquid `spotMetaAndAssetCtxs` `circulatingSupply`) is the check, as a WATCH line on a gap metric, never a level cross-check (that opens an anomaly and a paid triage run).
+
+Traps:
+- CoinGecko's figure is often static (LINK and LIT never moved across 35+ stored days) or the issuer's own number republished (CRV = Curve's contract, LINK = Chainlink's API to the wei); matching CoinGecko proves nothing, as with CAKE's pending-burn spikes, which CoinGecko counted too.
+- Hyperliquid wallets hold almost everything staked: add `delegatorSummary` (`delegated` + `undelegated` + `totalPendingWithdrawal`) to the spot balance, or a foundation wallet reads ~0.
+- Solana: subtract OWNERS (all their token accounts), not token accounts; no archive balance reads, so history starts on the release day.
+- Past report days read the newest circulating row at or before them: purging stored rows without a rebuild nulls market cap on every past day. EVM view_sum terms are plain views, so rebuild each stored row at the block of its `observed_at`, then purge; a term whose contract did not exist yet at that block must refuse the row, not drop the term.
+
 ## DefiLlama usage audit
 When Mike asks where Orion relies on DefiLlama: `grep -nE 'llama' assets/*.yaml` and map each hit to its metric (`awk` back to the nearest `^  <metric>:` line). Split into primary inputs (feeds tables/valuation), labels/context only, and cross-checks (`coins.llama.fi` price checks, one request per asset per run). `llama.box` is Curve's community site, not DefiLlama. Flag duplicates (HYPE pulls the same number as both `af_buyback` and `revenue_proxy`) and note that scratch backfills re-pull full histories, so they are the main load, not nightly runs.
 

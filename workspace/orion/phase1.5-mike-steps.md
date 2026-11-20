@@ -108,3 +108,5 @@ Until then: no WAL archive, no PITR, no dumps on venus. Fine while venus holds n
 - Tailscale installed on venus (manual). ufw: 22/tcp `in on tailscale0` (manual) + from 192.168.0.0/24.
 - FROM NOW ON every orion-host.sh command uses `--ssh-from 192.168.0.0/24 --ssh-from 100.64.0.0/10` instead of
   the old per-IP --ssh-from flags (supersedes the commands above).
+
+- DONE (Mike, 2026-11-19): orion-host.sh re-run from /home/hermes/orion-provision-06955e0 (flags: --hostname venus --pg-datadir /home/postgres/18/main --ssh-from 192.168.0.0/24 --ssh-from 100.64.0.0/10 --with-watcher --enable-backups). SELF-CHECK 61/0. Stage sql-ro verified (current_user orion_stage_ro). Next re-run: R3 release snapshot (data rebuild-supply-levels).

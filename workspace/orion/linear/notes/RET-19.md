@@ -7,3 +7,12 @@
 
 ## 2026-11-19 19:14Z
 2026-11-19 19:15Z: Mike asked 'Can you see this comment?' (Linear comment-route test). Replied yes plus a status recap: plan at 219db0f, waiting on N1-N5 and the execution method. Blocked label kept. Still waiting on Mike.
+
+## 2026-11-20 18:42Z
+2026-11-19: branch feat/phase3-r3-supply on GitHub main 06955e0 (+2 plan commits, tip cfea23e pushed). Plan revised per Mike's coordination note: Status base line, release block per deploy.md section 7 (scripts s0-s4), N4 with R43 lesson, N6 orion-host.sh re-run (stage sql-ro + rebuild verb). Uranus checkout left as is (RET-10, Mike-authorized). Still blocked on Mike: N1-N6 + execution method.
+
+## 2026-11-20 18:48Z
+2026-11-19: Mike re-ran orion-host.sh from 06955e0, SELF-CHECK 61/0; stage sql-ro verified (orion_stage_ro). Plan N6 updated (b's tip pushed).
+
+## 2026-11-20 18:50Z
+2026-11-20 18:52Z: Mike 'all recommendations' (N1-N6, subagent-driven). Recorded in plan Status (pushed). Next: SDD setup + baseline, then Task 1.
