@@ -1,0 +1,35 @@
+{
+  "assetId": "cake",
+  "dryRun": true,
+  "fetchRunId": null,
+  "outcome": "ok",
+  "startedAt": "2026-11-20T19:53:15.256Z",
+  "endedAt": "2026-11-20T19:53:15.771Z",
+  "sources": [
+    {
+      "sourceId": "adapter:chain.view_sum",
+      "status": "ok",
+      "error": null,
+      "metricsWritten": [
+        "circulating_supply"
+      ],
+      "crossChecks": [],
+      "unlistedTransfers": [],
+      "conflicts": [],
+      "retiredObservationIds": [],
+      "notes": []
+    }
+  ],
+  "written": [
+    {
+      "metricKey": "circulating_supply",
+      "value": 315738117.6069697,
+      "observedAt": "2026-11-20T19:53:15.000Z",
+      "periodDays": null,
+      "source": "onchain",
+      "observationId": null
+    }
+  ],
+  "anomalies": [],
+  "watch": []
+}

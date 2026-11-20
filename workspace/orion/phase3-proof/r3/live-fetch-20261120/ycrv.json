@@ -1,0 +1,35 @@
+{
+  "assetId": "ycrv",
+  "dryRun": true,
+  "fetchRunId": null,
+  "outcome": "ok",
+  "startedAt": "2026-11-20T19:53:42.461Z",
+  "endedAt": "2026-11-20T19:53:42.849Z",
+  "sources": [
+    {
+      "sourceId": "adapter:chain.view_sum",
+      "status": "ok",
+      "error": null,
+      "metricsWritten": [
+        "circulating_supply"
+      ],
+      "crossChecks": [],
+      "unlistedTransfers": [],
+      "conflicts": [],
+      "retiredObservationIds": [],
+      "notes": []
+    }
+  ],
+  "written": [
+    {
+      "metricKey": "circulating_supply",
+      "value": 69547528.01071021,
+      "observedAt": "2026-11-20T19:53:35.000Z",
+      "periodDays": null,
+      "source": "onchain",
+      "observationId": null
+    }
+  ],
+  "anomalies": [],
+  "watch": []
+}

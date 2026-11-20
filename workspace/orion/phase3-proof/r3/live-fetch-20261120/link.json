@@ -1,0 +1,77 @@
+{
+  "assetId": "link",
+  "dryRun": true,
+  "fetchRunId": null,
+  "outcome": "ok",
+  "startedAt": "2026-11-20T19:53:27.261Z",
+  "endedAt": "2026-11-20T19:53:28.289Z",
+  "sources": [
+    {
+      "sourceId": "adapter:chain.view_sum",
+      "status": "ok",
+      "error": null,
+      "metricsWritten": [
+        "circulating_supply"
+      ],
+      "crossChecks": [],
+      "unlistedTransfers": [],
+      "conflicts": [],
+      "retiredObservationIds": [],
+      "notes": []
+    },
+    {
+      "sourceId": "http_json:https://supply.chain.link/supply",
+      "status": "ok",
+      "error": null,
+      "metricsWritten": [
+        "chainlink_circulating"
+      ],
+      "crossChecks": [],
+      "unlistedTransfers": [],
+      "conflicts": [],
+      "retiredObservationIds": [],
+      "notes": []
+    },
+    {
+      "sourceId": "derived:level_gap_pct",
+      "status": "ok",
+      "error": null,
+      "metricsWritten": [
+        "circulating_gap_chainlink"
+      ],
+      "crossChecks": [],
+      "unlistedTransfers": [],
+      "conflicts": [],
+      "retiredObservationIds": [],
+      "notes": []
+    }
+  ],
+  "written": [
+    {
+      "metricKey": "circulating_supply",
+      "value": 766849970.424884,
+      "observedAt": "2026-11-20T19:53:23.000Z",
+      "periodDays": null,
+      "source": "onchain",
+      "observationId": null
+    },
+    {
+      "metricKey": "chainlink_circulating",
+      "value": 766849970.424884,
+      "observedAt": "2026-11-20T19:53:27.261Z",
+      "periodDays": null,
+      "source": "api",
+      "observationId": null
+    },
+    {
+      "metricKey": "circulating_gap_chainlink",
+      "value": 0,
+      "observedAt": "2026-11-20T19:53:27.261Z",
+      "periodDays": null,
+      "source": "api",
+      "observationId": null
+    }
+  ],
+  "anomalies": [],
+  "watch": []
+}

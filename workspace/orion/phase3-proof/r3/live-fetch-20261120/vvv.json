@@ -1,0 +1,57 @@
+{
+  "assetId": "vvv",
+  "dryRun": true,
+  "fetchRunId": null,
+  "outcome": "ok",
+  "startedAt": "2026-11-20T19:53:40.125Z",
+  "endedAt": "2026-11-20T19:53:41.074Z",
+  "sources": [
+    {
+      "sourceId": "adapter:chain.view_sum",
+      "status": "ok",
+      "error": null,
+      "metricsWritten": [
+        "circulating_supply"
+      ],
+      "crossChecks": [],
+      "unlistedTransfers": [],
+      "conflicts": [],
+      "retiredObservationIds": [],
+      "notes": []
+    },
+    {
+      "sourceId": "http_json:https://outerface.venice.ai/api/app/vvv/vvv_stats",
+      "status": "ok",
+      "error": null,
+      "metricsWritten": [],
+      "crossChecks": [
+        {
+          "metricKey": "circulating_supply",
+          "sourceId": "http_json:https://outerface.venice.ai/api/app/vvv/vvv_stats",
+          "label": "level",
+          "primary": 49373183.24052049,
+          "check": 49373183.240520395,
+          "diffPct": 1.961744035991565e-13,
+          "tolerancePct": 2,
+          "ok": true
+        }
+      ],
+      "unlistedTransfers": [],
+      "conflicts": [],
+      "retiredObservationIds": [],
+      "notes": []
+    }
+  ],
+  "written": [
+    {
+      "metricKey": "circulating_supply",
+      "value": 49373183.24052049,
+      "observedAt": "2026-11-20T19:53:40.000Z",
+      "periodDays": null,
+      "source": "onchain",
+      "observationId": null
+    }
+  ],
+  "anomalies": [],
+  "watch": []
+}

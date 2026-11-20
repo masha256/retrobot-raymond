@@ -30,3 +30,16 @@ Ruling R9: implementer extras accepted: locked_schedule refused with scale/plus_
 Ruling R10: CRV gap watch band [-1.5, 0.5] (steady gap -0.36%, the treasury); LINK [-0.5, 0.5]; PUMP reserved owners via a minimal `solana.owners_balance` sum adapter + change_pct 1 (R4).
 Tasks 1-3: review dispatched (review-84cc9d2..5a68aff.diff) in parallel with Task 4 implementer (BASE 5a68aff).
 Task 4: dispatched (BASE 5a68aff)
+Tasks 1-3: review clean (spec OK, quality Approved; 5 named risks pass; 135/135 focused).
+Task 1-3: minor (deferred): solana.ts pump.fun host regex duplicated from the transport, plain Error not OrionError forbidden_price_host
+Task 1-3: minor (deferred): isName defined three times (evm, hype, solana)
+Task 1-3: minor (deferred): hype detail prints tiny spot balances in JS exponent form
+Task 1-3: minor (deferred): solana supply and owner balances read at different slots (detail records each)
+Task 1-3: minor (deferred): locked_schedule citation URL not in the sources register
+Task 1-3: minor (deferred): view_sum with locked_schedule accepts exactly 0 (hype/solana refuse 0)
+Task 1-3: complete (commits 84cc9d2..5a68aff, review clean)
+Task 4: committed 94c6d04 + 596245b; reported 2005 / 2007 (154 files), typecheck clean, py 65. Controller verify: 12 old pins gone (cvxcrv 09a7ff1a, sdcrv 5df3f844 incl.), aero.yaml untouched, focused assets/config/levels/derived 344/344.
+Controller live check (scratch home, branch src, schema r3probe_1795204385, dry-run fetch, 2026-11-20 19:53Z): all 13 ok, 0 anomalies, 0 watch; vs scoping cake +0.003% crv +0.011% cvxcrv -0.001% hype -0.029% link 0.000% lit +0.001% pump -0.068% sdcrv +0.001% sky -0.074% uni -0.012% vvv +0.148% ycrv -0.004% aero +0.403% (unchanged method, drift). CRV gap -0.3609%, LINK gap 0, PUMP reserved 418.26B. Results: workspace/orion/phase3-proof/r3/live-fetch-20261120/.
+Controller: cleanup of the probe home/schema timed out on the approval prompt (not run; not retried; waits for Mike).
+Task 4: review dispatched (review-5a68aff..596245b.diff) in parallel with Task 5 implementer (BASE 596245b).
+Task 5: dispatched (BASE 596245b)

@@ -1,0 +1,56 @@
+{
+  "assetId": "pump",
+  "dryRun": true,
+  "fetchRunId": null,
+  "outcome": "ok",
+  "startedAt": "2026-11-20T19:53:31.465Z",
+  "endedAt": "2026-11-20T19:53:33.367Z",
+  "sources": [
+    {
+      "sourceId": "adapter:solana.supply_less_owners",
+      "status": "ok",
+      "error": null,
+      "metricsWritten": [
+        "circulating_supply"
+      ],
+      "crossChecks": [],
+      "unlistedTransfers": [],
+      "conflicts": [],
+      "retiredObservationIds": [],
+      "notes": []
+    },
+    {
+      "sourceId": "adapter:solana.owners_balance",
+      "status": "ok",
+      "error": null,
+      "metricsWritten": [
+        "reserved_balance"
+      ],
+      "crossChecks": [],
+      "unlistedTransfers": [],
+      "conflicts": [],
+      "retiredObservationIds": [],
+      "notes": []
+    }
+  ],
+  "written": [
+    {
+      "metricKey": "circulating_supply",
+      "value": 403234284079.8702,
+      "observedAt": "2026-11-20T19:53:31.465Z",
+      "periodDays": null,
+      "source": "onchain",
+      "observationId": null
+    },
+    {
+      "metricKey": "reserved_balance",
+      "value": 418261858232.128,
+      "observedAt": "2026-11-20T19:53:31.465Z",
+      "periodDays": null,
+      "source": "onchain",
+      "observationId": null
+    }
+  ],
+  "anomalies": [],
+  "watch": []
+}

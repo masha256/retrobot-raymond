@@ -1,0 +1,35 @@
+{
+  "assetId": "hype",
+  "dryRun": true,
+  "fetchRunId": null,
+  "outcome": "ok",
+  "startedAt": "2026-11-20T19:53:20.959Z",
+  "endedAt": "2026-11-20T19:53:25.873Z",
+  "sources": [
+    {
+      "sourceId": "adapter:hype.circulating_supply",
+      "status": "ok",
+      "error": null,
+      "metricsWritten": [
+        "circulating_supply"
+      ],
+      "crossChecks": [],
+      "unlistedTransfers": [],
+      "conflicts": [],
+      "retiredObservationIds": [],
+      "notes": []
+    }
+  ],
+  "written": [
+    {
+      "metricKey": "circulating_supply",
+      "value": 237871358.1683603,
+      "observedAt": "2026-11-20T19:53:20.959Z",
+      "periodDays": null,
+      "source": "api",
+      "observationId": null
+    }
+  ],
+  "anomalies": [],
+  "watch": []
+}

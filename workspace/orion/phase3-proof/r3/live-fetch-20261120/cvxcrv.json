@@ -1,0 +1,35 @@
+{
+  "assetId": "cvxcrv",
+  "dryRun": true,
+  "fetchRunId": null,
+  "outcome": "ok",
+  "startedAt": "2026-11-20T19:53:19.140Z",
+  "endedAt": "2026-11-20T19:53:19.563Z",
+  "sources": [
+    {
+      "sourceId": "adapter:chain.view_sum",
+      "status": "ok",
+      "error": null,
+      "metricsWritten": [
+        "circulating_supply"
+      ],
+      "crossChecks": [],
+      "unlistedTransfers": [],
+      "conflicts": [],
+      "retiredObservationIds": [],
+      "notes": []
+    }
+  ],
+  "written": [
+    {
+      "metricKey": "circulating_supply",
+      "value": 420776710.34322983,
+      "observedAt": "2026-11-20T19:53:11.000Z",
+      "periodDays": null,
+      "source": "onchain",
+      "observationId": null
+    }
+  ],
+  "anomalies": [],
+  "watch": []
+}
