@@ -25,3 +25,6 @@
 
 ## 2026-11-21 17:15Z
 Stage deployed orion-2026.11.21.1 17:13Z (s0 ok, s1 deploy+switch ok; awaiting 18:15Z levels). Hold for other threads active: no stage deploys / staging refresh until prod gate.
+
+## 2026-11-21 19:15Z
+Stage R3 complete 19:15Z: s0-s4 ok (s2 resumed after a harness timeout, on Mike's go), gate 26/26. Prod chain scheduled 03:05Z 11-22 under Mike's pre-approval, gated on the 02:45Z stage soak.
