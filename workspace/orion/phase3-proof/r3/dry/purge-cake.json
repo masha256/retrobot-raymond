@@ -1,0 +1,21 @@
+{
+  "asset": "cake",
+  "perMetric": [
+    {
+      "metric": "circulating_supply",
+      "configured": true,
+      "observations": 42,
+      "superseded": 42,
+      "firstDay": "2026-10-12",
+      "lastDay": "2026-11-21",
+      "valueSum": 13785369985.601929,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 0,
+      "withoutReplacement": []
+    }
+  ],
+  "exportFile": null,
+  "exportSha256": null,
+  "applied": false
+}

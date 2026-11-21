@@ -1,0 +1,16 @@
+SET
+aero	contract_state	confirmed	t	13	2026-11-10 00:45:09.125+00	2026-11-21 00:45:04+00
+cake	contract_state	confirmed	t	42	2026-10-12 18:52:13.55+00	2026-11-21 00:45:10.731+00
+crv	contract_state	confirmed	t	45	2026-10-08 11:09:41.267+00	2026-11-21 00:45:15.44+00
+cvxcrv	contract_state	confirmed	f	41	2026-10-12 13:24:35+00	2026-11-21 00:45:11+00
+cvxcrv	contract_state	confirmed	t	41	2026-10-12 13:24:35+00	2026-11-21 00:45:11+00
+link	contract_state	confirmed	t	39	2026-10-16 15:33:46.987+00	2026-11-21 00:45:34.211+00
+lit	contract_state	confirmed	t	40	2026-10-16 13:53:08.539+00	2026-11-21 00:45:37.096+00
+sdcrv	contract_state	confirmed	f	41	2026-10-12 13:24:47+00	2026-11-21 00:45:59+00
+sdcrv	contract_state	confirmed	t	41	2026-10-12 13:24:47+00	2026-11-21 00:45:59+00
+sky	contract_state	confirmed	t	38	2026-10-16 18:05:08.852+00	2026-11-21 00:46:19.606+00
+uni	contract_state	confirmed	t	42	2026-10-11 09:55:45.711+00	2026-11-21 00:46:23.337+00
+vvv	contract_state	confirmed	t	59	2026-09-20 14:46:17.571+00	2026-11-21 00:46:24.485+00
+vvv	disclosure	confirmed	t	1	2026-09-18 00:00:00+00	2026-09-18 00:00:00+00
+ycrv	contract_state	confirmed	f	41	2026-10-12 13:24:47+00	2026-11-21 00:46:35+00
+ycrv	contract_state	confirmed	t	41	2026-10-12 13:24:47+00	2026-11-21 00:46:35+00

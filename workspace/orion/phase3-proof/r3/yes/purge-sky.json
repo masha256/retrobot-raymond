@@ -1,0 +1,21 @@
+{
+  "asset": "sky",
+  "perMetric": [
+    {
+      "metric": "circulating_supply",
+      "configured": true,
+      "observations": 38,
+      "superseded": 38,
+      "firstDay": "2026-10-16",
+      "lastDay": "2026-11-21",
+      "valueSum": 890016843780.1726,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 0,
+      "withoutReplacement": []
+    }
+  ],
+  "exportFile": "/home/hermes/.hermes/profiles/raymond/cache/scratch/r3copy-20261121T025042Z/new/purged/sky-circulating_supply-20261121T031219Z.json",
+  "exportSha256": "e2eff351c36f580e8d443840db25aabbbee65f7e339a257380853d98bb472912",
+  "applied": true
+}

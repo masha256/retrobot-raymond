@@ -1,0 +1,12 @@
+{
+  "asset": "lit",
+  "applied": true,
+  "metric": "circulating_supply",
+  "rows": 40,
+  "rebuilt": 40,
+  "unchanged": 0,
+  "refused": [],
+  "notRebuildable": [],
+  "kept": [],
+  "calls": 259
+}

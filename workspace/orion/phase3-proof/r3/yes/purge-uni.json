@@ -1,0 +1,21 @@
+{
+  "asset": "uni",
+  "perMetric": [
+    {
+      "metric": "circulating_supply",
+      "configured": true,
+      "observations": 42,
+      "superseded": 42,
+      "firstDay": "2026-10-11",
+      "lastDay": "2026-11-21",
+      "valueSum": 25910221324.32485,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 0,
+      "withoutReplacement": []
+    }
+  ],
+  "exportFile": "/home/hermes/.hermes/profiles/raymond/cache/scratch/r3copy-20261121T025042Z/new/purged/uni-circulating_supply-20261121T031220Z.json",
+  "exportSha256": "00f7f231dd27a6fbdff4a02799b0a8c490726dc50ee27522ab3d7830a516753e",
+  "applied": true
+}

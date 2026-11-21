@@ -1,0 +1,21 @@
+{
+  "asset": "lit",
+  "perMetric": [
+    {
+      "metric": "circulating_supply",
+      "configured": true,
+      "observations": 40,
+      "superseded": 40,
+      "firstDay": "2026-10-16",
+      "lastDay": "2026-11-21",
+      "valueSum": 10000000000,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 0,
+      "withoutReplacement": []
+    }
+  ],
+  "exportFile": null,
+  "exportSha256": null,
+  "applied": false
+}

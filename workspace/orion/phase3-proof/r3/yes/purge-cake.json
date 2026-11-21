@@ -1,0 +1,21 @@
+{
+  "asset": "cake",
+  "perMetric": [
+    {
+      "metric": "circulating_supply",
+      "configured": true,
+      "observations": 42,
+      "superseded": 42,
+      "firstDay": "2026-10-12",
+      "lastDay": "2026-11-21",
+      "valueSum": 13785369985.601929,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 0,
+      "withoutReplacement": []
+    }
+  ],
+  "exportFile": "/home/hermes/.hermes/profiles/raymond/cache/scratch/r3copy-20261121T025042Z/new/purged/cake-circulating_supply-20261121T031213Z.json",
+  "exportSha256": "c6c1e60bcd49090b94f7f4ba27bedbb3fe073c473d60e001b78567d3c1c19412",
+  "applied": true
+}

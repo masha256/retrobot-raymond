@@ -1,0 +1,411 @@
+{
+  "asset": "lit",
+  "day": "2026-11-19",
+  "windowDays": 91,
+  "price": 2.7330631348215,
+  "marketCap": 683265783.7053751,
+  "fdv": 2683620054.907122,
+  "incomeStatement": {
+    "schema": 2,
+    "day": "2026-11-19",
+    "windowDays": 91,
+    "category": "perp_dex",
+    "scope": "complete",
+    "revenue": {
+      "annualized": 61398352.26373626,
+      "growth": {
+        "current": 15307534.4,
+        "prior": 6996787.39,
+        "change": 1.1877947044493515,
+        "annualized": 22.108012992745525
+      },
+      "growthExNew": {
+        "current": 9769566.59,
+        "prior": 6826054.989999999,
+        "change": 0.4312170945461429,
+        "annualized": 3.2124339950189356
+      },
+      "excludedFromExNew": [
+        "robinhood"
+      ],
+      "provisional": false,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "core",
+          "label": "Lighter Core fees (Lighter API)",
+          "method": "measured",
+          "sourceTypes": [
+            "first_party_api"
+          ],
+          "priceBasis": "usd_native",
+          "annualized": 39185624.234615386,
+          "windowSum": 9769566.59,
+          "settlement": "daily",
+          "started": null,
+          "daysMeasured": 91,
+          "provisionalDays": 0,
+          "coverage": null,
+          "isNew": false,
+          "growth": {
+            "current": 9769566.59,
+            "prior": 6826054.989999999,
+            "change": 0.4312170945461429,
+            "annualized": 3.2124339950189356
+          }
+        },
+        {
+          "id": "robinhood",
+          "label": "Robinhood-instance fees (Lighter API)",
+          "method": "measured",
+          "sourceTypes": [
+            "first_party_api"
+          ],
+          "priceBasis": "usd_native",
+          "annualized": 22212728.02912088,
+          "windowSum": 5537967.8100000005,
+          "settlement": "daily",
+          "started": "2026-06-26",
+          "daysMeasured": 91,
+          "provisionalDays": 0,
+          "coverage": null,
+          "isNew": true,
+          "growth": {
+            "current": 5537967.8100000005,
+            "prior": 170732.4000000001,
+            "change": 31.436537001764144,
+            "annualized": 1150117.7973036135
+          }
+        }
+      ]
+    },
+    "costOfRevenue": {
+      "annualized": 11106364.01456044,
+      "measuredAnnualized": 11106364.01456044,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "robinhood_partner",
+          "label": null,
+          "of": "robinhood",
+          "share": 0.5,
+          "method": "derived",
+          "sourceTypes": [
+            "first_party_api"
+          ],
+          "priceBasis": "usd_native",
+          "annualized": 11106364.01456044,
+          "growth": {
+            "current": 2768983.9050000003,
+            "prior": 85366.20000000006,
+            "change": 31.436537001764144,
+            "annualized": 1150117.7973036135
+          },
+          "note": "Robinhood's 50 percent (Q3 2026 call; Lighter's app constant)",
+          "to": "partners"
+        }
+      ]
+    },
+    "grossProfit": {
+      "annualized": 50291988.249175824,
+      "growth": {
+        "current": 12538550.495000001,
+        "prior": 6911421.1899999995,
+        "change": 0.8141783216947891,
+        "annualized": 9.90341467703221
+      }
+    },
+    "holders": {
+      "annualized": 43126616.29456781,
+      "growth": {
+        "current": 10752115.295358002,
+        "prior": 6671252.312539997,
+        "change": 0.6117086855112916,
+        "annualized": 5.783035023034045
+      },
+      "remainder": false,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "buyback",
+          "label": null,
+          "of": null,
+          "share": 1,
+          "method": "measured",
+          "sourceTypes": [
+            "first_party_api"
+          ],
+          "priceBasis": "usd_native",
+          "annualized": 43126616.29456781,
+          "growth": {
+            "current": 10752115.295358002,
+            "prior": 6671252.312539997,
+            "change": 0.6117086855112916,
+            "annualized": 5.783035023034045
+          },
+          "note": "treasury buys LIT daily; an equal count is burned quarterly",
+          "bucket": "burn",
+          "haircut": 0,
+          "recipientBase": "all",
+          "valuedPer": null,
+          "captureRule": "discretionary",
+          "paidMetric": null,
+          "gross": 43126616.29456781,
+          "net": 43126616.29456781,
+          "yield": 0.016070313759844215
+        }
+      ],
+      "byBucket": {
+        "burn": {
+          "annualized": 43126616.29456781
+        },
+        "hold": null,
+        "cash": null
+      }
+    },
+    "protocol": {
+      "annualized": 7165371.954608013,
+      "growth": {
+        "current": 1786435.199641998,
+        "prior": 240168.87746000302,
+        "change": 6.438246031438879,
+        "annualized": 3128.383268249024
+      },
+      "remainder": true,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "remainder",
+          "label": null,
+          "of": null,
+          "share": 1,
+          "method": "derived",
+          "sourceTypes": [],
+          "priceBasis": "usd_native",
+          "annualized": 7165371.954608013,
+          "growth": {
+            "current": 1786435.199641998,
+            "prior": 240168.87746000302,
+            "change": 6.438246031438879,
+            "annualized": 3128.383268249024
+          },
+          "note": "revenue less the rest"
+        }
+      ]
+    },
+    "operatingCosts": {
+      "annualized": 0,
+      "growth": {
+        "current": 0,
+        "prior": 0,
+        "change": null,
+        "annualized": null,
+        "note": "no lines"
+      },
+      "remainder": false,
+      "notMeasured": [],
+      "lines": []
+    },
+    "unreconciled": {
+      "annualized": 0,
+      "pct": 0,
+      "basis": "grossProfit"
+    },
+    "belowLine": {
+      "toHolders": 0,
+      "toProtocol": 0,
+      "notMeasured": [],
+      "lines": []
+    },
+    "holderFlow": {
+      "gross": 43126616.29456781,
+      "net": 43126616.29456781,
+      "netOfDilution": -336465485.7639739,
+      "growth": {
+        "current": 10752115.295358002,
+        "prior": 6671252.312539997,
+        "change": 0.6117086855112916,
+        "annualized": 5.783035023034045
+      },
+      "byBucket": {
+        "burn": {
+          "gross": 43126616.29456781,
+          "net": 43126616.29456781,
+          "yield": 0.016070313759844215,
+          "fromRevenue": 43126616.29456781,
+          "fromBelowLine": 0
+        },
+        "hold": null,
+        "cash": null
+      },
+      "fromRevenue": 43126616.29456781,
+      "fromBelowLine": 0,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "buyback",
+          "section": "holders",
+          "fromBelowLine": false,
+          "bucket": "burn",
+          "method": "measured",
+          "sourceTypes": [
+            "first_party_api"
+          ],
+          "priceBasis": "usd_native",
+          "metric": "flow_usd.buyback",
+          "haircut": 0,
+          "recipientBase": "all",
+          "gross": 43126616.29456781,
+          "net": 43126616.29456781,
+          "yield": 0.016070313759844215,
+          "growth": {
+            "current": 10752115.295358002,
+            "prior": 6671252.312539997,
+            "change": 0.6117086855112916,
+            "annualized": 5.783035023034045
+          }
+        }
+      ]
+    },
+    "volume": {
+      "metrics": [
+        "flow_usd.fees_core",
+        "flow_usd.fees_rh"
+      ],
+      "annualized": 61398352.26373626,
+      "growth": {
+        "current": 15307534.4,
+        "prior": 6996787.389999997,
+        "change": 1.1877947044493524,
+        "annualized": 22.108012992745564
+      }
+    },
+    "dilution": {
+      "pct": 0.14144778109123166,
+      "tokensPerYear": 138888888.8888889,
+      "emissionsPerYear": 0,
+      "releases": [
+        {
+          "id": "unlocks",
+          "tokensPerYear": 138888888.8888889,
+          "yield": 0.14144778109123166
+        }
+      ],
+      "supply": {
+        "burnedPerYear": 12483580.550549451,
+        "addedPerYear": 138888888.8888889,
+        "netPerYear": 126405308.33833945,
+        "netPct": 0.12873420275479977
+      }
+    },
+    "ratios": {
+      "takeRate": 0.8191097382083949,
+      "payoutRatio": 0.8575245838540607,
+      "payoutRatioBasis": "grossProfit"
+    },
+    "multiples": {
+      "mcapToRevenue": 11.128405869434589,
+      "mcapToGrossProfit": 13.585976762741575,
+      "mcapToHolderFlow": {
+        "burn": 15.84325046598749,
+        "hold": null,
+        "cash": null,
+        "total": 15.84325046598749
+      }
+    },
+    "yields": {
+      "cash": 0,
+      "buyback": 0.016070313759844215,
+      "shareholder": 0.016070313759844215,
+      "dilution": 0.14144778109123166,
+      "netShareholder": -0.12537746733138744,
+      "multiple": 62.226538631669754,
+      "pegTrailing": 0.10760187061606773,
+      "dilutionLines": [
+        {
+          "id": "unlocks",
+          "tokensPerYear": 138888888.8888889,
+          "yield": 0.14144778109123166
+        }
+      ]
+    },
+    "perToken": {
+      "revenue": 0.24559340905494506,
+      "grossProfit": 0.2011679529967033,
+      "holderFlow": {
+        "total": 0.17250646517827123,
+        "netOfDilution": -1.3458619430558956,
+        "byBucket": {
+          "burn": 0.17250646517827123,
+          "hold": null,
+          "cash": null
+        }
+      },
+      "dilution": 1.5183684082341669,
+      "circulatingSupply": 250000000,
+      "totalSupply": 981909280,
+      "supplyAsOf": "2026-11-20T23:59:59.999Z",
+      "perTokenFdv": {
+        "revenue": 0.06252955697061573,
+        "grossProfit": 0.05121856904048796,
+        "holderFlow": {
+          "total": 0.04392118210204492,
+          "netOfDilution": -0.342664533900702,
+          "byBucket": {
+            "burn": 0.04392118210204492,
+            "hold": null,
+            "cash": null
+          }
+        },
+        "dilution": 0.38658571600274694
+      }
+    },
+    "priceBasis": {
+      "price": 2.7330631348215,
+      "metric": "price_usd",
+      "sourceType": "first_party_api",
+      "source": "first_party_api:price.token",
+      "day": "2026-11-19",
+      "asOf": "2026-11-20T23:59:59.999Z",
+      "flows": "each flow day's USD from its tokens x the chain/first-party hourly prices where every hour with an amount is priced (hourly), or its day amount x the mean of the day's 24 chain hours (daily_mean), else the stored value (per line: priceBasis)"
+    },
+    "checks": [
+      {
+        "id": "fees_core_revision",
+        "type": "revision",
+        "status": "ok",
+        "lhs": 147324.78999999998,
+        "rhs": 147324.78999999998,
+        "gapPct": 0,
+        "tolerancePct": 0.01,
+        "evaluatedAt": "2026-11-21T00:45:37.096Z"
+      },
+      {
+        "id": "robinhood_partner_share",
+        "type": "parameter",
+        "status": "ok",
+        "lhs": 0.5,
+        "rhs": 0.5,
+        "gapPct": 0,
+        "tolerancePct": 0,
+        "evaluatedAt": "2026-11-21T00:45:37.096Z"
+      }
+    ],
+    "provenance": {
+      "methods": {
+        "measured": 1,
+        "derived": 0,
+        "disclosed": 0
+      },
+      "thirdParty": [],
+      "sources": [
+        "first_party_api:lit.app_fee_share",
+        "first_party_api:lit.exchange_fees_daily",
+        "first_party_api:lit.treasury_buys_daily"
+      ],
+      "basis": "observations"
+    },
+    "flags": []
+  },
+  "notes": []
+}

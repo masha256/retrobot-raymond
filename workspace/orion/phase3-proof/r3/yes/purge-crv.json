@@ -1,0 +1,21 @@
+{
+  "asset": "crv",
+  "perMetric": [
+    {
+      "metric": "circulating_supply",
+      "configured": true,
+      "observations": 45,
+      "superseded": 45,
+      "firstDay": "2026-10-08",
+      "lastDay": "2026-11-21",
+      "valueSum": 71172030865,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 0,
+      "withoutReplacement": []
+    }
+  ],
+  "exportFile": "/home/hermes/.hermes/profiles/raymond/cache/scratch/r3copy-20261121T025042Z/new/purged/crv-circulating_supply-20261121T031214Z.json",
+  "exportSha256": "f9a76694f50909ba9116c62eca27c3b4c3ac23642730c4218c6a2590a5a24455",
+  "applied": true
+}

@@ -1,0 +1,12 @@
+{
+  "asset": "crv",
+  "applied": true,
+  "metric": "circulating_supply",
+  "rows": 45,
+  "rebuilt": 45,
+  "unchanged": 0,
+  "refused": [],
+  "notRebuildable": [],
+  "kept": [],
+  "calls": 309
+}

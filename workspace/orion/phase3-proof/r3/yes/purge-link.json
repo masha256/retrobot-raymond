@@ -1,0 +1,21 @@
+{
+  "asset": "link",
+  "perMetric": [
+    {
+      "metric": "circulating_supply",
+      "configured": true,
+      "observations": 39,
+      "superseded": 39,
+      "firstDay": "2026-10-16",
+      "lastDay": "2026-11-21",
+      "valueSum": 29907148846.570496,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 0,
+      "withoutReplacement": []
+    }
+  ],
+  "exportFile": "/home/hermes/.hermes/profiles/raymond/cache/scratch/r3copy-20261121T025042Z/new/purged/link-circulating_supply-20261121T031216Z.json",
+  "exportSha256": "48eecbf1da84a6ec67b228206cc0ae8bddf59a66a8d8f52821597c1776ec26ee",
+  "applied": true
+}

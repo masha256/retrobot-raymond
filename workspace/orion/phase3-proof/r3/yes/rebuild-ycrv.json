@@ -1,0 +1,12 @@
+{
+  "asset": "ycrv",
+  "applied": true,
+  "metric": "circulating_supply",
+  "rows": 41,
+  "rebuilt": 41,
+  "unchanged": 0,
+  "refused": [],
+  "notRebuildable": [],
+  "kept": [],
+  "calls": 387
+}

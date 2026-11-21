@@ -1,0 +1,21 @@
+{
+  "asset": "vvv",
+  "perMetric": [
+    {
+      "metric": "circulating_supply",
+      "configured": true,
+      "observations": 59,
+      "superseded": 59,
+      "firstDay": "2026-09-20",
+      "lastDay": "2026-11-21",
+      "valueSum": 2867819872.8879747,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 0,
+      "withoutReplacement": []
+    }
+  ],
+  "exportFile": "/home/hermes/.hermes/profiles/raymond/cache/scratch/r3copy-20261121T025042Z/new/purged/vvv-circulating_supply-20261121T031221Z.json",
+  "exportSha256": "230226e9cf01318b0adc21170e08940219ff5338e87494adb6e0752e7971d58a",
+  "applied": true
+}

@@ -1,0 +1,35 @@
+== prod copy 02:50:42
+== reports old + new (before rebuild) D=2026-11-19 D91=2026-08-20 03:03:19
+== rebuild dry 03:04:06
+aero dry exit 0 2s
+cake dry exit 0 27s
+crv dry exit 0 17s
+cvxcrv dry exit 0 21s
+hype dry exit 0 1s
+link dry exit 0 16s
+lit dry exit 0 16s
+pump dry exit 0 0s
+sdcrv dry exit 0 21s
+sky dry exit 0 15s
+uni dry exit 0 16s
+vvv dry exit 0 62s
+ycrv dry exit 0 21s
+== rebuild --yes 03:08:01
+aero yes exit 0 2s
+cake yes exit 0 27s
+crv yes exit 0 17s
+cvxcrv yes exit 0 24s
+hype yes exit 0 1s
+link yes exit 0 18s
+lit yes exit 0 16s
+pump yes exit 0 0s
+sdcrv yes exit 0 21s
+sky yes exit 0 14s
+uni yes exit 0 16s
+vvv yes exit 0 58s
+ycrv yes exit 0 21s
+== purge dry + --yes 03:12:05
+market_data rows after: SET
+0
+STOP: market_data rows remain: SET
+0

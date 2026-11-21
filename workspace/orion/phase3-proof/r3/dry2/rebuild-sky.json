@@ -1,0 +1,12 @@
+{
+  "asset": "sky",
+  "applied": false,
+  "metric": "circulating_supply",
+  "rows": 0,
+  "rebuilt": 0,
+  "unchanged": 38,
+  "refused": [],
+  "notRebuildable": [],
+  "kept": [],
+  "calls": 0
+}
