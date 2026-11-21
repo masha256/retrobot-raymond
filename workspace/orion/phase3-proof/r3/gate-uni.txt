@@ -1,0 +1,11 @@
+ALLOWED     changed incomeStatement.multiples.mcapToHolderFlow.burn: 21.239740482193458 -> 21.239600620515148  [uni[0] ratio 0.999993 in [0.961924, 1.01]]
+ALLOWED     changed incomeStatement.multiples.mcapToHolderFlow.total: 21.239740482193458 -> 21.239600620515148  [uni[1] ratio 0.999993 in [0.961924, 1.01]]
+ALLOWED     changed incomeStatement.multiples.mcapToRevenue: 21.239740482193458 -> 21.239600620515148  [uni[2] ratio 0.999993 in [0.961924, 1.01]]
+ALLOWED     changed incomeStatement.perToken.circulatingSupply: 607449895.875979 -> 607445895.8759791  [uni[3] ratio 0.999993 in [0.961924, 1.01]]
+ALLOWED     changed incomeStatement.perToken.dilution: 0.16176036191149779 -> 0.16176142709516603  [uni[4] ratio 1.00001 in [0.990099, 1.03958]]
+ALLOWED     changed incomeStatement.perToken.holderFlow.byBucket.burn: 0.23131477308392334 -> 0.23131629627981384  [uni[5] ratio 1.00001 in [0.990099, 1.03958]]
+ALLOWED     changed incomeStatement.perToken.holderFlow.netOfDilution: 0.06955441117242554 -> 0.06955486918464782  [uni[6] ratio 1.00001 in [0.990099, 1.03958]]
+ALLOWED     changed incomeStatement.perToken.holderFlow.total: 0.23131477308392334 -> 0.23131629627981384  [uni[7] ratio 1.00001 in [0.990099, 1.03958]]
+ALLOWED     changed incomeStatement.perToken.revenue: 0.23131477308392334 -> 0.23131629627981384  [uni[8] ratio 1.00001 in [0.990099, 1.03958]]
+ALLOWED     changed marketCap: 2984441278.2693386 -> 2984421626.006339  [uni[9] ratio 0.999993 in [0.961924, 1.01]]
+OK uni: 10 differing path(s), 10 allowed, 0 not allowed

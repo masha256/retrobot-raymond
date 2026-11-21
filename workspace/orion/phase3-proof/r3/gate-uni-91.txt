@@ -1,0 +1,11 @@
+WARN unmatched allowlist entry uni[0] 'incomeStatement.multiples.mcapToHolderFlow.burn': matched no differing path (R3 class S: UNI circulating new/old 0.9719..1.0000 over every stored day on the prod copy, +/-0.01)
+WARN unmatched allowlist entry uni[1] 'incomeStatement.multiples.mcapToHolderFlow.total': matched no differing path (R3 class S: UNI circulating new/old 0.9719..1.0000 over every stored day on the prod copy, +/-0.01)
+WARN unmatched allowlist entry uni[2] 'incomeStatement.multiples.mcapToRevenue': matched no differing path (R3 class S: UNI circulating new/old 0.9719..1.0000 over every stored day on the prod copy, +/-0.01)
+WARN unmatched allowlist entry uni[3] 'incomeStatement.perToken.circulatingSupply': matched no differing path (R3 class S: UNI circulating new/old 0.9719..1.0000 over every stored day on the prod copy, +/-0.01)
+WARN unmatched allowlist entry uni[4] 'incomeStatement.perToken.dilution': matched no differing path (R3 class S: UNI circulating new/old 0.9719..1.0000 over every stored day on the prod copy, +/-0.01 (inverted: per circulating token))
+WARN unmatched allowlist entry uni[5] 'incomeStatement.perToken.holderFlow.byBucket.burn': matched no differing path (R3 class S: UNI circulating new/old 0.9719..1.0000 over every stored day on the prod copy, +/-0.01 (inverted: per circulating token))
+WARN unmatched allowlist entry uni[6] 'incomeStatement.perToken.holderFlow.netOfDilution': matched no differing path (R3 class S: UNI circulating new/old 0.9719..1.0000 over every stored day on the prod copy, +/-0.01 (inverted: per circulating token))
+WARN unmatched allowlist entry uni[7] 'incomeStatement.perToken.holderFlow.total': matched no differing path (R3 class S: UNI circulating new/old 0.9719..1.0000 over every stored day on the prod copy, +/-0.01 (inverted: per circulating token))
+WARN unmatched allowlist entry uni[8] 'incomeStatement.perToken.revenue': matched no differing path (R3 class S: UNI circulating new/old 0.9719..1.0000 over every stored day on the prod copy, +/-0.01 (inverted: per circulating token))
+WARN unmatched allowlist entry uni[9] 'marketCap': matched no differing path (R3 class S: UNI circulating new/old 0.9719..1.0000 over every stored day on the prod copy, +/-0.01)
+OK uni: 0 differing path(s), 0 allowed, 0 not allowed

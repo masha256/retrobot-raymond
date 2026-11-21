@@ -1,0 +1,11 @@
+WARN unmatched allowlist entry link[0] 'incomeStatement.multiples.mcapToHolderFlow.hold': matched no differing path (R3 class S: LINK circulating new/old 1.0000..1.0000 over every stored day on the prod copy, +/-0.01)
+WARN unmatched allowlist entry link[1] 'incomeStatement.multiples.mcapToHolderFlow.total': matched no differing path (R3 class S: LINK circulating new/old 1.0000..1.0000 over every stored day on the prod copy, +/-0.01)
+WARN unmatched allowlist entry link[2] 'incomeStatement.multiples.mcapToRevenue': matched no differing path (R3 class S: LINK circulating new/old 1.0000..1.0000 over every stored day on the prod copy, +/-0.01)
+WARN unmatched allowlist entry link[3] 'incomeStatement.perToken.circulatingSupply': matched no differing path (R3 class S: LINK circulating new/old 1.0000..1.0000 over every stored day on the prod copy, +/-0.01)
+WARN unmatched allowlist entry link[4] 'incomeStatement.perToken.dilution': matched no differing path (R3 class S: LINK circulating new/old 1.0000..1.0000 over every stored day on the prod copy, +/-0.01 (inverted: per circulating token))
+WARN unmatched allowlist entry link[5] 'incomeStatement.perToken.holderFlow.byBucket.hold': matched no differing path (R3 class S: LINK circulating new/old 1.0000..1.0000 over every stored day on the prod copy, +/-0.01 (inverted: per circulating token))
+WARN unmatched allowlist entry link[6] 'incomeStatement.perToken.holderFlow.netOfDilution': matched no differing path (R3 class S: LINK circulating new/old 1.0000..1.0000 over every stored day on the prod copy, +/-0.01 (inverted: per circulating token))
+WARN unmatched allowlist entry link[7] 'incomeStatement.perToken.holderFlow.total': matched no differing path (R3 class S: LINK circulating new/old 1.0000..1.0000 over every stored day on the prod copy, +/-0.01 (inverted: per circulating token))
+WARN unmatched allowlist entry link[8] 'incomeStatement.perToken.revenue': matched no differing path (R3 class S: LINK circulating new/old 1.0000..1.0000 over every stored day on the prod copy, +/-0.01 (inverted: per circulating token))
+WARN unmatched allowlist entry link[9] 'marketCap': matched no differing path (R3 class S: LINK circulating new/old 1.0000..1.0000 over every stored day on the prod copy, +/-0.01)
+OK link: 0 differing path(s), 0 allowed, 0 not allowed

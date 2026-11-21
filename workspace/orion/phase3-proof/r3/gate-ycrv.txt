@@ -1,0 +1,13 @@
+ALLOWED     changed incomeStatement.multiples.mcapToGrossProfit: 10.738633061116234 -> 10.378804414214269  [ycrv[0] ratio 0.966492 in [0.95643, 0.978301]]
+ALLOWED     changed incomeStatement.multiples.mcapToHolderFlow.cash: 4.222887384863253 -> 4.081387452323722  [ycrv[1] ratio 0.966492 in [0.95643, 0.978301]]
+ALLOWED     changed incomeStatement.multiples.mcapToHolderFlow.total: 4.222887384863253 -> 4.081387452323722  [ycrv[2] ratio 0.966492 in [0.95643, 0.978301]]
+ALLOWED     changed incomeStatement.multiples.mcapToRevenue: 10.738633061116234 -> 10.378804414214269  [ycrv[3] ratio 0.966492 in [0.95643, 0.978301]]
+ALLOWED     changed incomeStatement.perToken.circulatingSupply: 71963003.42840527 -> 69551676.95852093  [ycrv[4] ratio 0.966492 in [0.95643, 0.978301]]
+ALLOWED     changed incomeStatement.perToken.grossProfit: 0.009546028819756818 -> 0.009876985498042033  [ycrv[6] ratio 1.03467 in [1.02218, 1.04556]]
+ALLOWED     changed incomeStatement.perToken.holderFlow.byBucket.cash: 0.024275167993741922 -> 0.025116777537953314  [ycrv[7] ratio 1.03467 in [1.02218, 1.04556]]
+ALLOWED     changed incomeStatement.perToken.holderFlow.netOfDilution: 0.024275167993741922 -> 0.025116777537953314  [ycrv[8] ratio 1.03467 in [1.02218, 1.04556]]
+ALLOWED     changed incomeStatement.perToken.holderFlow.total: 0.024275167993741922 -> 0.025116777537953314  [ycrv[9] ratio 1.03467 in [1.02218, 1.04556]]
+ALLOWED     changed incomeStatement.perToken.revenue: 0.009546028819756818 -> 0.009876985498042033  [ycrv[10] ratio 1.03467 in [1.02218, 1.04556]]
+ALLOWED     changed marketCap: 7377021.082731939 -> 7129832.869925011  [ycrv[11] ratio 0.966492 in [0.95643, 0.978301]]
+WARN unmatched allowlist entry ycrv[5] 'incomeStatement.perToken.dilution': matched no differing path (R3 class S: YCRV circulating new/old 0.9664..0.9683 over every stored day on the prod copy, +/-0.01 (inverted: per circulating token))
+OK ycrv: 11 differing path(s), 11 allowed, 0 not allowed

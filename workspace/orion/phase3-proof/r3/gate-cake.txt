@@ -1,0 +1,11 @@
+ALLOWED     changed incomeStatement.multiples.mcapToHolderFlow.burn: 9.409456802599387 -> 8.942486646185138  [cake[0] ratio 0.950372 in [0.828377, 1.00557]]
+ALLOWED     changed incomeStatement.multiples.mcapToHolderFlow.total: 9.409456802599387 -> 8.942486646185138  [cake[1] ratio 0.950372 in [0.828377, 1.00557]]
+ALLOWED     changed incomeStatement.multiples.mcapToRevenue: 6.837659384119061 -> 6.498321743371578  [cake[2] ratio 0.950372 in [0.828377, 1.00557]]
+ALLOWED     changed incomeStatement.perToken.circulatingSupply: 332221882.69551927 -> 315734458.63043344  [cake[3] ratio 0.950372 in [0.828377, 1.00557]]
+ALLOWED     changed incomeStatement.perToken.dilution: 0.037497824569617914 -> 0.039455933728432084  [cake[4] ratio 1.05222 in [0.994457, 1.20718]]
+ALLOWED     changed incomeStatement.perToken.holderFlow.byBucket.burn: 0.16682396156666135 -> 0.17553538765077648  [cake[5] ratio 1.05222 in [0.994457, 1.20718]]
+ALLOWED     changed incomeStatement.perToken.holderFlow.netOfDilution: 0.12932613699704343 -> 0.13607945392234438  [cake[6] ratio 1.05222 in [0.994457, 1.20718]]
+ALLOWED     changed incomeStatement.perToken.holderFlow.total: 0.16682396156666135 -> 0.17553538765077648  [cake[7] ratio 1.05222 in [0.994457, 1.20718]]
+ALLOWED     changed incomeStatement.perToken.revenue: 0.22957020404464581 -> 0.24155819332909295  [cake[8] ratio 1.05222 in [0.994457, 1.20718]]
+ALLOWED     changed marketCap: 521496283.8593951 -> 495615597.4019157  [cake[9] ratio 0.950372 in [0.828377, 1.00557]]
+OK cake: 10 differing path(s), 10 allowed, 0 not allowed

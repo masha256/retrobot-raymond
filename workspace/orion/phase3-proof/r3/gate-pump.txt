@@ -1,0 +1,17 @@
+ALLOWED     changed incomeStatement.multiples.mcapToHolderFlow.burn: 3.954594122821771 -> null  [pump[1] value pinned]
+ALLOWED     changed incomeStatement.multiples.mcapToHolderFlow.total: 3.954594122821771 -> null  [pump[4] value pinned]
+ALLOWED     changed incomeStatement.multiples.mcapToRevenue: 1.8126417075613657 -> null  [pump[5] value pinned]
+ALLOWED     changed incomeStatement.perToken.circulatingSupply: 457416054230.3149 -> null  [pump[6] value pinned]
+ALLOWED     changed incomeStatement.perToken.dilution: 0.00047364212685949944 -> null  [pump[7] value pinned]
+ALLOWED     changed incomeStatement.perToken.holderFlow.byBucket.burn: 0.0006640577670657699 -> null  [pump[9] value pinned]
+ALLOWED     changed incomeStatement.perToken.holderFlow.netOfDilution: 0.0001904156402062704 -> null  [pump[12] value pinned]
+ALLOWED     changed incomeStatement.perToken.holderFlow.total: 0.0006640577670657699 -> null  [pump[13] value pinned]
+ALLOWED     changed incomeStatement.perToken.revenue: 0.0014487578719489097 -> null  [pump[14] value pinned]
+ALLOWED     changed marketCap: 1201210668.1368806 -> null  [pump[15] value pinned]
+WARN unmatched allowlist entry pump[0] 'incomeStatement.multiples.mcapToGrossProfit': matched no differing path (R21: no circulating row at or before D after the purge (history starts on the release day))
+WARN unmatched allowlist entry pump[2] 'incomeStatement.multiples.mcapToHolderFlow.cash': matched no differing path (R21: no circulating row at or before D after the purge (history starts on the release day))
+WARN unmatched allowlist entry pump[3] 'incomeStatement.multiples.mcapToHolderFlow.hold': matched no differing path (R21: no circulating row at or before D after the purge (history starts on the release day))
+WARN unmatched allowlist entry pump[8] 'incomeStatement.perToken.grossProfit': matched no differing path (R21: no circulating row at or before D after the purge (history starts on the release day))
+WARN unmatched allowlist entry pump[10] 'incomeStatement.perToken.holderFlow.byBucket.cash': matched no differing path (R21: no circulating row at or before D after the purge (history starts on the release day))
+WARN unmatched allowlist entry pump[11] 'incomeStatement.perToken.holderFlow.byBucket.hold': matched no differing path (R21: no circulating row at or before D after the purge (history starts on the release day))
+OK pump: 10 differing path(s), 10 allowed, 0 not allowed

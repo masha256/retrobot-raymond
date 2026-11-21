@@ -19,3 +19,9 @@
 
 ## 2026-11-20 21:51Z
 2026-11-20 21:52Z: R3 code-final 67e28f5 (pushed). Tasks 1-6 + Task 7 step 1 built and reviewed (final review: ready with fixes, applied R20-R22). Next: Task 7 proof on prod copy after 02:45Z; sign-off table to Mike. Pending Mike: 'clean up probe' (dev schema r3probe_1795204385 breaks daemonSchema test).
+
+## 2026-11-21 17:05Z
+2026-11-21: Mike signed the Task 7 proof ('all proofs approved, proceed'). Gate allowlist + signed values 2635cae; gate 0/26 fails on the proof pairs. main fast-forwarded 06955e0 -> 2635cae and tagged orion-2026.11.21.1 (pushed). Release build running. Next: Mike orion-host re-run from main@2635cae (has data rebuild-supply-levels), then stage s0-s4 + one nightly soak, then prod.
+
+## 2026-11-21 17:15Z
+Stage deployed orion-2026.11.21.1 17:13Z (s0 ok, s1 deploy+switch ok; awaiting 18:15Z levels). Hold for other threads active: no stage deploys / staging refresh until prod gate.

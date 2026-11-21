@@ -1,0 +1,11 @@
+ALLOWED     changed incomeStatement.multiples.mcapToHolderFlow.cash: 23.960296477177554 -> 23.874140320345347  [crv[0] ratio 0.996404 in [0.986358, 1.00647]]
+ALLOWED     changed incomeStatement.multiples.mcapToHolderFlow.total: 23.960296477177554 -> 23.874140320345347  [crv[1] ratio 0.996404 in [0.986358, 1.00647]]
+ALLOWED     changed incomeStatement.multiples.mcapToRevenue: 45.771220403695246 -> 45.60663677897848  [crv[2] ratio 0.996404 in [0.986358, 1.00647]]
+ALLOWED     changed incomeStatement.perToken.circulatingSupply: 1588105101 -> 1582394611.0535126  [crv[3] ratio 0.996404 in [0.986358, 1.00647]]
+ALLOWED     changed incomeStatement.perToken.dilution: 0.01169199386383749 -> 0.011734187519546028  [crv[4] ratio 1.00361 in [0.99357, 1.01383]]
+ALLOWED     changed incomeStatement.perToken.holderFlow.byBucket.cash: 0.00797590081055362 -> 0.008004683960518042  [crv[5] ratio 1.00361 in [0.99357, 1.01383]]
+ALLOWED     changed incomeStatement.perToken.holderFlow.netOfDilution: -0.003716093053283871 -> -0.0037295035590279857  [crv[6] ratio 1.00361 in [0.99357, 1.01383]]
+ALLOWED     changed incomeStatement.perToken.holderFlow.total: 0.00797590081055362 -> 0.008004683960518042  [crv[7] ratio 1.00361 in [0.99357, 1.01383]]
+ALLOWED     changed incomeStatement.perToken.revenue: 0.004175220726209804 -> 0.004190288115731255  [crv[8] ratio 1.00361 in [0.99357, 1.01383]]
+ALLOWED     changed marketCap: 303494742.89350927 -> 302403440.00869775  [crv[9] ratio 0.996404 in [0.986358, 1.00647]]
+OK crv: 10 differing path(s), 10 allowed, 0 not allowed
