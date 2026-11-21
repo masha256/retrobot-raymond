@@ -1,0 +1,35 @@
+R3 proof: D = 2026-11-19, D-91 = 2026-08-20
+
+Rebuild / purge counts (copy):
+  aero    targets 45 rebuilt 1/1 notRebuildable 44 kept 0 refused 0 unchanged 12 calls 8+8 2nd-dry rebuilt 0 | purged 45 withoutReplacement 44
+  cake    targets 42 rebuilt 42/42 notRebuildable 0 kept 0 refused 0 unchanged 0 calls 477+478 2nd-dry rebuilt 0 | purged 42 withoutReplacement 0
+  crv     targets 45 rebuilt 45/45 notRebuildable 0 kept 0 refused 0 unchanged 0 calls 309+309 2nd-dry rebuilt 0 | purged 45 withoutReplacement 0
+  cvxcrv  targets 41 rebuilt 41/41 notRebuildable 0 kept 0 refused 0 unchanged 0 calls 387+387 2nd-dry rebuilt 0
+  hype    targets 57 rebuilt 0/0 notRebuildable 57 kept 0 refused 0 unchanged 0 calls 0+0 2nd-dry rebuilt 0 | purged 57 withoutReplacement 57
+  link    targets 39 rebuilt 39/39 notRebuildable 0 kept 0 refused 0 unchanged 0 calls 272+272 2nd-dry rebuilt 0 | purged 39 withoutReplacement 0
+  lit     targets 40 rebuilt 40/40 notRebuildable 0 kept 0 refused 0 unchanged 0 calls 259+259 2nd-dry rebuilt 0 | purged 40 withoutReplacement 0
+  pump    targets 39 rebuilt 0/0 notRebuildable 39 kept 0 refused 0 unchanged 0 calls 0+0 2nd-dry rebuilt 0 | purged 39 withoutReplacement 39
+  sdcrv   targets 41 rebuilt 41/41 notRebuildable 0 kept 0 refused 0 unchanged 0 calls 382+382 2nd-dry rebuilt 0
+  sky     targets 38 rebuilt 38/38 notRebuildable 0 kept 0 refused 0 unchanged 0 calls 253+253 2nd-dry rebuilt 0 | purged 38 withoutReplacement 0
+  uni     targets 42 rebuilt 42/42 notRebuildable 0 kept 0 refused 0 unchanged 0 calls 279+279 2nd-dry rebuilt 0 | purged 42 withoutReplacement 0
+  vvv     targets 59 rebuilt 59/59 notRebuildable 0 kept 1 refused 0 unchanged 0 calls 1152+1152 2nd-dry rebuilt 0 | purged 59 withoutReplacement 0
+  ycrv    targets 41 rebuilt 41/41 notRebuildable 0 kept 0 refused 0 unchanged 0 calls 387+387 2nd-dry rebuilt 0
+
+At D (old -> new):
+  aero    circ 790,020,020 -> 790,020,020 (+0.00%) mcap 327,490,257 -> 327,490,257 mcap/rev 3.609 -> 3.609 mcap/HF 3.682 -> 3.682 HF/mcap 27.16% -> 27.16%
+  cake    circ 332,221,883 -> 315,734,459 (-4.96%) mcap 521,496,284 -> 495,615,597 mcap/rev 6.838 -> 6.498 mcap/HF 9.409 -> 8.942 HF/mcap 10.63% -> 11.18%
+  crv     circ 1,588,105,101 -> 1,582,394,611 (-0.36%) mcap 303,494,743 -> 302,403,440 mcap/rev 45.77 -> 45.61 mcap/HF 23.96 -> 23.87 HF/mcap 4.17% -> 4.19%
+  cvxcrv  circ 425,638,166 -> 420,776,131 (-1.14%) mcap 33,501,154 -> 33,118,472 mcap/rev 4.928 -> 4.871 mcap/HF 6.024 -> 5.955 HF/mcap 16.60% -> 16.79%
+  hype    circ 237,704,287 -> null (n/a) mcap 15,807,593,446 -> null mcap/rev 14.42 -> null mcap/HF 14.42 -> null HF/mcap 6.93% -> null
+  link    circ 766,849,970 -> 766,849,970 (+0.00%) mcap 6,898,864,818 -> 6,898,864,818 mcap/rev 121.8 -> 121.8 mcap/HF 128.2 -> 128.2 HF/mcap 0.78% -> 0.78%
+  lit     circ 250,000,000 -> 245,112,910 (-1.95%) mcap 683,265,784 -> 669,909,059 mcap/rev 11.13 -> 10.91 mcap/HF 15.84 -> 15.53 HF/mcap 6.31% -> 6.44%
+  pump    circ 457,416,054,230 -> null (n/a) mcap 1,201,210,668 -> null mcap/rev 1.813 -> null mcap/HF 3.955 -> null HF/mcap 25.29% -> null
+  sdcrv   circ 119,049,987 -> 117,441,415 (-1.35%) mcap 12,373,083 -> 12,205,901 mcap/rev 6.003 -> 5.922 mcap/HF 4.533 -> 4.471 HF/mcap 22.06% -> 22.36%
+  sky     circ 23,409,519,933 -> 23,369,069,608 (-0.17%) mcap 1,094,894,156 -> 1,093,002,241 mcap/rev 17.14 -> 17.11 mcap/HF 17.14 -> 17.11 HF/mcap 5.83% -> 5.84%
+  uni     circ 607,449,896 -> 607,445,896 (-0.00%) mcap 2,984,441,278 -> 2,984,421,626 mcap/rev 21.24 -> 21.24 mcap/HF 21.24 -> 21.24 HF/mcap 4.71% -> 4.71%
+  vvv     circ 49,038,326 -> 49,301,504 (+0.54%) mcap 1,067,285,394 -> 1,073,013,295 mcap/rev 7.115 -> 7.153 mcap/HF 89.73 -> 90.21 HF/mcap 1.11% -> 1.11%
+  ycrv    circ 71,963,003 -> 69,551,677 (-3.35%) mcap 7,377,021 -> 7,129,833 mcap/rev 10.74 -> 10.38 mcap/HF 4.223 -> 4.081 HF/mcap 23.68% -> 24.50%
+
+Differing paths outside classes S/L (must be none):
+
+unexpected: 0

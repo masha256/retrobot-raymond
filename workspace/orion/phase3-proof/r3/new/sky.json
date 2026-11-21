@@ -1,0 +1,405 @@
+{
+  "asset": "sky",
+  "day": "2026-11-19",
+  "windowDays": 91,
+  "price": 0.04677132034659022,
+  "marketCap": 1093002240.8237522,
+  "fdv": 1096901206.031403,
+  "incomeStatement": {
+    "schema": 2,
+    "day": "2026-11-19",
+    "windowDays": 91,
+    "category": "cdp_stablecoin",
+    "scope": "protocol_share_only",
+    "revenue": {
+      "annualized": 63864607.15598406,
+      "growth": {
+        "current": 15922408.907382328,
+        "prior": 3705580.9734338503,
+        "change": 3.2968724800601272,
+        "annualized": 345.39178198924486
+      },
+      "growthExNew": null,
+      "excludedFromExNew": [],
+      "provisional": false,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "surplus_usds",
+          "label": "surplus paid to stakers in USDS (Splitter)",
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "hourly",
+          "annualized": 28594131.45256383,
+          "windowSum": 7128947.841598106,
+          "settlement": "daily",
+          "started": null,
+          "daysMeasured": 91,
+          "provisionalDays": 0,
+          "coverage": null,
+          "isNew": false,
+          "growth": {
+            "current": 7128947.841598106,
+            "prior": 197079.77284200003,
+            "change": 35.172904701455195,
+            "annualized": 1780977.3044327486
+          }
+        },
+        {
+          "id": "surplus_buyback",
+          "label": "surplus spent buying SKY (flapper), paid on to stakers",
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "hourly",
+          "annualized": 35270475.70342024,
+          "windowSum": 8793461.065784223,
+          "settlement": "daily",
+          "started": null,
+          "daysMeasured": 91,
+          "provisionalDays": 0,
+          "coverage": null,
+          "isNew": false,
+          "growth": {
+            "current": 8793461.065784223,
+            "prior": 3508501.20059185,
+            "change": 1.5063297867194265,
+            "annualized": 38.86005536062897
+          }
+        }
+      ]
+    },
+    "costOfRevenue": {
+      "annualized": null,
+      "measuredAnnualized": 0,
+      "notMeasured": [
+        "savers"
+      ],
+      "lines": [
+        {
+          "id": "savers",
+          "label": null,
+          "of": null,
+          "share": 1,
+          "method": "not_measured",
+          "sourceTypes": [],
+          "priceBasis": null,
+          "annualized": null,
+          "growth": {
+            "current": null,
+            "prior": null,
+            "change": null,
+            "annualized": null,
+            "note": "not measured"
+          },
+          "notMeasured": "savings rate paid to sUSDS holders: not read yet (Phase 3)",
+          "to": "savers"
+        }
+      ]
+    },
+    "grossProfit": {
+      "annualized": null,
+      "growth": {
+        "current": null,
+        "prior": null,
+        "change": null,
+        "annualized": null,
+        "note": "cost of revenue not measured"
+      }
+    },
+    "holders": {
+      "annualized": 63864607.15598406,
+      "growth": {
+        "current": 15922408.907382328,
+        "prior": 3705580.9734338503,
+        "change": 3.2968724800601272,
+        "annualized": 345.39178198924486
+      },
+      "remainder": false,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "stakers",
+          "label": null,
+          "of": "surplus_usds",
+          "share": 1,
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "hourly",
+          "annualized": 28594131.45256383,
+          "growth": {
+            "current": 7128947.841598106,
+            "prior": 197079.77284200003,
+            "change": 35.172904701455195,
+            "annualized": 1780977.3044327486
+          },
+          "note": "USDS to staked SKY",
+          "bucket": "cash",
+          "haircut": 0,
+          "recipientBase": "staked",
+          "valuedPer": null,
+          "captureRule": "programmatic",
+          "paidMetric": null,
+          "gross": 28594131.45256383,
+          "net": 28594131.45256383,
+          "yield": 0.035191374279482705
+        },
+        {
+          "id": "buyback",
+          "label": null,
+          "of": "surplus_buyback",
+          "share": 1,
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "hourly",
+          "annualized": 35270475.70342024,
+          "growth": {
+            "current": 8793461.065784223,
+            "prior": 3508501.20059185,
+            "change": 1.5063297867194265,
+            "annualized": 38.86005536062897
+          },
+          "note": "SKY bought, paid on to staked SKY",
+          "bucket": "cash",
+          "haircut": 0,
+          "recipientBase": "staked",
+          "valuedPer": null,
+          "captureRule": "programmatic",
+          "paidMetric": null,
+          "gross": 35270475.70342024,
+          "net": 35270475.70342024,
+          "yield": 0.043408085800877565
+        }
+      ],
+      "byBucket": {
+        "burn": null,
+        "hold": null,
+        "cash": {
+          "annualized": 63864607.15598406
+        }
+      }
+    },
+    "protocol": {
+      "annualized": 0,
+      "growth": {
+        "current": 0,
+        "prior": 0,
+        "change": null,
+        "annualized": null,
+        "note": "no lines"
+      },
+      "remainder": false,
+      "notMeasured": [],
+      "lines": []
+    },
+    "operatingCosts": {
+      "annualized": 0,
+      "growth": {
+        "current": 0,
+        "prior": 0,
+        "change": null,
+        "annualized": null,
+        "note": "no lines"
+      },
+      "remainder": false,
+      "notMeasured": [],
+      "lines": []
+    },
+    "unreconciled": {
+      "annualized": 0,
+      "pct": 0,
+      "basis": "revenue"
+    },
+    "belowLine": {
+      "toHolders": 0,
+      "toProtocol": 0,
+      "notMeasured": [],
+      "lines": []
+    },
+    "holderFlow": {
+      "gross": 63864607.15598407,
+      "net": 63864607.15598407,
+      "netOfDilution": 40010822.89586347,
+      "growth": {
+        "current": 15922408.907382328,
+        "prior": 3705580.9734338503,
+        "change": 3.2968724800601272,
+        "annualized": 345.39178198924486
+      },
+      "byBucket": {
+        "burn": null,
+        "hold": null,
+        "cash": {
+          "gross": 63864607.15598407,
+          "net": 63864607.15598407,
+          "yield": 0.07859946008036027,
+          "fromRevenue": 63864607.15598407,
+          "fromBelowLine": 0
+        }
+      },
+      "fromRevenue": 63864607.15598407,
+      "fromBelowLine": 0,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "stakers",
+          "section": "holders",
+          "fromBelowLine": false,
+          "bucket": "cash",
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "hourly",
+          "metric": "flow_usd.stakers",
+          "haircut": 0,
+          "recipientBase": "staked",
+          "gross": 28594131.45256383,
+          "net": 28594131.45256383,
+          "yield": 0.035191374279482705,
+          "growth": {
+            "current": 7128947.841598106,
+            "prior": 197079.77284200003,
+            "change": 35.172904701455195,
+            "annualized": 1780977.3044327486
+          }
+        },
+        {
+          "id": "buyback",
+          "section": "holders",
+          "fromBelowLine": false,
+          "bucket": "cash",
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "hourly",
+          "metric": "flow_usd.buyback",
+          "haircut": 0,
+          "recipientBase": "staked",
+          "gross": 35270475.70342024,
+          "net": 35270475.70342024,
+          "yield": 0.043408085800877565,
+          "growth": {
+            "current": 8793461.065784223,
+            "prior": 3508501.20059185,
+            "change": 1.5063297867194265,
+            "annualized": 38.86005536062897
+          }
+        }
+      ]
+    },
+    "volume": null,
+    "dilution": {
+      "pct": 0.021746520223479164,
+      "tokensPerYear": 510008784.9424933,
+      "emissionsPerYear": 0,
+      "releases": [
+        {
+          "id": "treasury_net",
+          "tokensPerYear": 510008784.9424933,
+          "yield": 0.021746520223479164
+        }
+      ],
+      "supply": null
+    },
+    "ratios": {
+      "takeRate": null,
+      "payoutRatio": 1,
+      "payoutRatioBasis": "revenue"
+    },
+    "multiples": {
+      "mcapToRevenue": 17.114365679165363,
+      "mcapToGrossProfit": null,
+      "mcapToHolderFlow": {
+        "burn": null,
+        "hold": null,
+        "cash": 17.11436567916536,
+        "total": 17.11436567916536
+      }
+    },
+    "yields": {
+      "cash": 0.07859946008036027,
+      "buyback": 0,
+      "shareholder": 0.07859946008036027,
+      "dilution": 0.021746520223479164,
+      "netShareholder": 0.056852939856881106,
+      "multiple": 12.722733705519067,
+      "pegTrailing": 0.00036835658428940963,
+      "dilutionLines": [
+        {
+          "id": "treasury_net",
+          "tokensPerYear": 510008784.9424933,
+          "yield": 0.021746520223479164
+        }
+      ]
+    },
+    "perToken": {
+      "revenue": 0.0027328690541846114,
+      "grossProfit": null,
+      "holderFlow": {
+        "total": 0.002732869054184612,
+        "netOfDilution": 0.001712127336155092,
+        "byBucket": {
+          "burn": null,
+          "hold": null,
+          "cash": 0.002732869054184612
+        }
+      },
+      "dilution": 0.0010207417180295199,
+      "circulatingSupply": 23369069607.705345,
+      "totalSupply": 23452431915.605965,
+      "supplyAsOf": "2026-11-20T23:59:59.999Z",
+      "perTokenFdv": {
+        "revenue": 0.0027231549967100255,
+        "grossProfit": null,
+        "holderFlow": {
+          "total": 0.002723154996710026,
+          "netOfDilution": 0.0017060415329140791,
+          "byBucket": {
+            "burn": null,
+            "hold": null,
+            "cash": 0.002723154996710026
+          }
+        },
+        "dilution": 0.0010171134637959468
+      }
+    },
+    "priceBasis": {
+      "price": 0.04677132034659022,
+      "metric": "price_usd",
+      "sourceType": "contract_state",
+      "source": "contract_state:price.token",
+      "day": "2026-11-19",
+      "asOf": "2026-11-20T23:59:59.999Z",
+      "flows": "each flow day's USD from its tokens x the chain/first-party hourly prices where every hour with an amount is priced (hourly), or its day amount x the mean of the day's 24 chain hours (daily_mean), else the stored value (per line: priceBasis)"
+    },
+    "checks": [],
+    "provenance": {
+      "methods": {
+        "measured": 1.0000000000000002,
+        "derived": 0,
+        "disclosed": 0
+      },
+      "thirdParty": [],
+      "sources": [
+        "log_scan:eip155:1"
+      ],
+      "basis": "observations"
+    },
+    "flags": [
+      "cost of revenue not measured: savers",
+      "payout ratio on revenue: cost of revenue not measured"
+    ]
+  },
+  "notes": [
+    "yields are per token of each flow's recipients (staked or locked supply), i.e. to a holder in every flow's base"
+  ]
+}

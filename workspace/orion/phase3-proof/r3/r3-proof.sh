@@ -35,7 +35,7 @@ for a in $A; do
   n report yield $a --day $D91 --json > $OUT/newpre/$a-91.json || stop "newpre $a-91"
 done
 S=$(grep '^ORION_DB_SCHEMA=' $P/new/.env | cut -d= -f2)
-Q() { psql 'postgresql://orion_dev@/orion_dev?host=/var/run/postgresql' -AtF $'\t' -c "set search_path=$S; $1"; }
+Q() { psql 'postgresql://orion_dev@/orion_dev?host=/var/run/postgresql' -qAtF $'\t' -c "set search_path=$S; $1"; }
 CQ="select asset_id, source_type, status, (superseded_by is null) active, count(*), min(observed_at), max(observed_at) from observations where metric_key = 'circulating_supply' group by 1,2,3,4 order by 1,2,3,4"
 Q "$CQ" > $OUT/counts-before.tsv || stop "counts before"
 echo "== rebuild dry $(date -u +%T)"
