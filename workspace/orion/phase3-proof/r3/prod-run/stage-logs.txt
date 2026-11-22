@@ -1,0 +1,2000 @@
+2026-11-06T02:45:01.635Z queued job 55369 refresh uni slot 2026-11-06T02:45:00.000Z
+2026-11-06T02:45:01.639Z queued job 55370 refresh vvv slot 2026-11-06T02:45:00.000Z
+2026-11-06T02:45:01.644Z queued job 55371 refresh ycrv slot 2026-11-06T02:45:00.000Z
+2026-11-06T02:45:01.648Z queued job 55372 nightly_report slot 2026-11-06T02:45:00.000Z
+2026-11-06T02:45:04.396Z job 55359 refresh aero started (attempt 1 of 2)
+2026-11-06T02:45:11.039Z job 55359 refresh aero done
+2026-11-06T02:45:11.056Z job 55360 refresh cake started (attempt 1 of 2)
+2026-11-06T02:45:16.540Z job 55360 refresh cake: transfer_flow:token>burner[converter_a,converter_b,converter_c,converter_owner,product_a,product_b,product_c] 2026-11-05: 0 transfers
+2026-11-06T02:45:17.160Z job 55360 refresh cake: transfer_flow:token>treasury[converter_a,converter_b,converter_c,product_a,product_b,product_c,product_d] 2026-11-05: 0 transfers
+2026-11-06T02:45:17.346Z job 55360 refresh cake done
+2026-11-06T02:45:17.369Z job 55361 refresh crv started (attempt 1 of 2)
+2026-11-06T02:45:21.272Z job 55361 refresh crv: transfer_flow:crvusd>fee_distributor[fee_allocator] 2026-11-05: 0 transfers
+2026-11-06T02:45:21.848Z job 55361 refresh crv: transfer_flow:crvusd>curve_treasury[fee_allocator] 2026-11-05: 0 transfers
+2026-11-06T02:45:22.557Z job 55361 refresh crv: transfer_flow:crvusd>fee_allocator[hooker] 2026-11-05: 0 transfers
+2026-11-06T02:45:22.726Z job 55361 refresh crv done
+2026-11-06T02:45:22.743Z job 55362 refresh cvxcrv started (attempt 1 of 2)
+2026-11-06T02:45:24.649Z job 55362 refresh cvxcrv: transfer_flow:crvusd>wrapper[crvusd_pool] 2026-11-05: 230 transfers
+2026-11-06T02:45:26.264Z job 55362 refresh cvxcrv: transfer_flow:crv>wrapper[base_reward_pool] 2026-11-05: 230 transfers
+2026-11-06T02:45:28.883Z job 55362 refresh cvxcrv: transfer_flow:cvx>wrapper[cvx_distribution,cvx_mint] 2026-11-05: 230 transfers
+2026-11-06T02:45:29.771Z job 55362 refresh cvxcrv: transfer_flow:crv>booster[voter_proxy] 2026-11-05: 191 transfers
+2026-11-06T02:45:30.491Z job 55362 refresh cvxcrv: transfer_flow:crv>base_reward_pool[booster] 2026-11-05: 191 transfers
+2026-11-06T02:45:31.332Z job 55362 refresh cvxcrv: transfer_flow:crv>cvx_reward_pool[booster] 2026-11-05: 191 transfers
+2026-11-06T02:45:31.916Z job 55362 refresh cvxcrv: transfer_flow:crv>convex_treasury[booster] 2026-11-05: 191 transfers
+2026-11-06T02:45:32.142Z job 55362 refresh cvxcrv done
+2026-11-06T02:45:32.160Z job 55363 refresh hype started (attempt 1 of 2)
+2026-11-06T02:45:43.945Z job 55363 refresh hype done
+2026-11-06T02:45:43.966Z job 55364 refresh link started (attempt 1 of 2)
+2026-11-06T02:45:47.547Z job 55364 refresh link: transfer_flow:token>reserve[fee_converter] 2026-11-05: 1 transfers
+2026-11-06T02:45:48.395Z job 55364 refresh link: transfer_flow:token>release_hub[*] 2026-11-05: 0 transfers
+2026-11-06T02:45:49.116Z job 55364 refresh link: transfer_flow:token>release_rewards[*] 2026-11-05: 0 transfers
+2026-11-06T02:45:49.381Z job 55364 refresh link done
+2026-11-06T02:45:49.406Z job 55365 refresh lit started (attempt 1 of 2)
+2026-11-06T02:46:14.988Z job 55365 refresh lit: transfer_flow:token>dead[burn_safe] 2026-11-05: 0 transfers
+2026-11-06T02:46:15.569Z job 55365 refresh lit: transfer_flow:token>prime_passthrough[buyback_wallet] 2026-11-05: 0 transfers
+2026-11-06T02:46:15.845Z job 55365 refresh lit done
+2026-11-06T02:46:15.863Z job 55366 refresh pump started (attempt 1 of 2)
+2026-11-06T02:46:20.570Z job 55366 refresh pump done
+2026-11-06T02:46:20.592Z job 55367 refresh sdcrv started (attempt 1 of 2)
+2026-11-06T02:46:21.934Z job 55367 refresh sdcrv: transfer_flow:crvusd>gauge[accumulator] 2026-11-05: 0 transfers
+2026-11-06T02:46:22.581Z job 55367 refresh sdcrv: transfer_flow:crv>gauge[accumulator] 2026-11-05: 0 transfers
+2026-11-06T02:46:24.282Z job 55367 refresh sdcrv: transfer_flow:token>merkle_stash[botmarket] 2026-11-05: 0 transfers
+2026-11-06T02:46:26.176Z job 55367 refresh sdcrv: transfer_flow:crv>sd_accountant[locker] 2026-11-05: 51 transfers
+2026-11-06T02:46:26.978Z job 55367 refresh sdcrv: transfer_flow:crv>sd_fee_receiver[sd_accountant,sd_staking_v2_fee] 2026-11-05: 0 transfers
+2026-11-06T02:46:27.725Z job 55367 refresh sdcrv: transfer_flow:crv>sd_vesdt_recipient[sd_fee_receiver] 2026-11-05: 0 transfers
+2026-11-06T02:46:28.336Z job 55367 refresh sdcrv: transfer_flow:crv>sd_treasury[sd_fee_receiver] 2026-11-05: 0 transfers
+2026-11-06T02:46:28.973Z job 55367 refresh sdcrv: transfer_flow:crv>sd_boost_delegation[accumulator] 2026-11-05: 0 transfers
+2026-11-06T02:46:29.488Z job 55367 refresh sdcrv: transfer_flow:crvusd>sd_liquidity_fee[accumulator] 2026-11-05: 0 transfers
+2026-11-06T02:46:30.098Z job 55367 refresh sdcrv: transfer_flow:crvusd>sd_treasury[accumulator] 2026-11-05: 0 transfers
+2026-11-06T02:46:30.381Z job 55367 refresh sdcrv done
+2026-11-06T02:46:30.397Z job 55368 refresh sky started (attempt 1 of 2)
+2026-11-06T02:46:33.738Z job 55368 refresh sky: transfer_flow:usds>usds_farm[zero] 2026-11-05: 30 transfers
+2026-11-06T02:46:36.349Z job 55368 refresh sky: transfer_flow:token>pause_proxy[sky_usds_pair] 2026-11-05: 30 transfers
+2026-11-06T02:46:36.839Z job 55368 refresh sky: transfer_flow:token>sky_farm[*] 2026-11-05: 0 transfers
+2026-11-06T02:46:37.415Z job 55368 refresh sky: transfer_flow:token>usds_sky_farm[*] 2026-11-05: 0 transfers
+2026-11-06T02:46:37.729Z job 55368 refresh sky done
+2026-11-06T02:46:37.749Z job 55369 refresh uni started (attempt 1 of 2)
+2026-11-06T02:46:41.286Z job 55369 refresh uni: transfer_flow:token>dead[*] 2026-11-05: 14 transfers
+2026-11-06T02:46:41.409Z job 55369 refresh uni done
+2026-11-06T02:46:41.426Z job 55370 refresh vvv started (attempt 1 of 2)
+2026-11-06T02:46:48.310Z job 55370 refresh vvv done
+2026-11-06T02:46:48.327Z job 55371 refresh ycrv started (attempt 1 of 2)
+2026-11-06T02:46:49.685Z job 55371 refresh ycrv: transfer_flow:yv_crvusd>distributor[receiver] 2026-11-05: 0 transfers
+2026-11-06T02:46:50.276Z job 55371 refresh ycrv: transfer_flow:yv_crvusd>yearn_treasury[receiver,splitter] 2026-11-05: 0 transfers, 1 unlisted
+2026-11-06T02:46:51.770Z job 55371 refresh ycrv: transfer_flow:st_ycrv>yearn_treasury[st_ycrv] 2026-11-05: 1 transfers
+2026-11-06T02:46:52.289Z job 55371 refresh ycrv: transfer_flow:crvusd>splitter[fee_burner,voter] 2026-11-05: 0 transfers
+2026-11-06T02:46:52.455Z job 55371 refresh ycrv done
+2026-11-06T02:46:52.484Z job 55372 nightly_report started (attempt 1 of 1)
+2026-11-06T02:46:55.042Z job 55372 nightly_report done
+2026-11-06T02:46:55.064Z job 55431 snapshot_push started (attempt 1 of 1)
+2026-11-06T02:46:58.985Z job 55431 snapshot_push done
+2026-11-06T03:30:03.625Z queued job 56997 retention slot 2026-11-06T03:30:00.000Z
+2026-11-06T03:30:06.934Z job 56997 retention started (attempt 1 of 1)
+2026-11-06T03:30:07.124Z job 56997 retention done
+2026-11-06T06:15:10.209Z queued job 62934 levels slot 2026-11-06T06:15:00.000Z
+2026-11-06T06:15:13.118Z job 62934 levels started (attempt 1 of 1)
+2026-11-06T06:15:23.629Z job 62934 levels done
+2026-11-06T06:15:23.645Z job 62938 snapshot_push started (attempt 1 of 1)
+2026-11-06T06:15:27.593Z job 62938 snapshot_push done
+2026-11-06T12:15:24.017Z queued job 75895 levels slot 2026-11-06T12:15:00.000Z
+2026-11-06T12:15:26.488Z job 75895 levels started (attempt 1 of 1)
+2026-11-06T12:15:39.198Z job 75895 levels done
+2026-11-06T12:15:39.214Z job 75899 snapshot_push started (attempt 1 of 1)
+2026-11-06T12:15:43.148Z job 75899 snapshot_push done
+2026-11-06T16:40:04.295Z queued job 85419 disclosure_watch slot 2026-11-06T16:40:00.000Z
+2026-11-06T16:40:05.311Z job 85419 disclosure_watch started (attempt 1 of 1)
+2026-11-06T16:40:05.313Z job 85419 disclosure_watch: disclosure_watch: dry scan with python3
+2026-11-06T16:40:05.456Z job 85419 disclosure_watch done
+2026-11-06T18:15:08.290Z queued job 88838 levels slot 2026-11-06T18:15:00.000Z
+2026-11-06T18:15:10.916Z job 88838 levels started (attempt 1 of 1)
+2026-11-06T18:15:24.769Z job 88838 levels done
+2026-11-06T18:15:24.787Z job 88842 snapshot_push started (attempt 1 of 1)
+2026-11-06T18:15:28.868Z job 88842 snapshot_push done
+2026-11-07T00:15:22.665Z queued job 101799 levels slot 2026-11-07T00:15:00.000Z
+2026-11-07T00:15:26.975Z job 101799 levels started (attempt 1 of 1)
+2026-11-07T00:15:39.209Z job 101799 levels done
+2026-11-07T00:15:39.229Z job 101803 snapshot_push started (attempt 1 of 1)
+2026-11-07T00:15:44.042Z job 101803 snapshot_push done
+2026-11-07T00:58:51.970Z drained: claiming nothing until orion daemon undrain
+2026-11-07T00:58:53.019Z stop requested
+2026-11-07T00:58:53.033Z daemon stopped
+2026-11-07T00:58:55.055Z daemon started: venus-80541-28e1712d env stage release orion-2026.11.07.1 database orion_stage schema orion
+2026-11-07T00:59:15.117Z job 103370 refresh vvv started (attempt 1 of 2)
+2026-11-07T00:59:39.608Z job 103370 refresh vvv: transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe] 2026-11-05: 6233 transfers
+2026-11-07T00:59:56.572Z job 103370 refresh vvv: transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe] 2026-11-06: 6162 transfers
+2026-11-07T00:59:56.871Z job 103370 refresh vvv done
+2026-11-07T02:45:29.112Z queued job 107187 refresh aero slot 2026-11-07T02:45:00.000Z
+2026-11-07T02:45:29.119Z queued job 107188 refresh cake slot 2026-11-07T02:45:00.000Z
+2026-11-07T02:45:29.134Z queued job 107189 refresh crv slot 2026-11-07T02:45:00.000Z
+2026-11-07T02:45:29.139Z queued job 107190 refresh cvxcrv slot 2026-11-07T02:45:00.000Z
+2026-11-07T02:45:29.144Z queued job 107191 refresh hype slot 2026-11-07T02:45:00.000Z
+2026-11-07T02:45:29.149Z queued job 107192 refresh link slot 2026-11-07T02:45:00.000Z
+2026-11-07T02:45:29.154Z queued job 107193 refresh lit slot 2026-11-07T02:45:00.000Z
+2026-11-07T02:45:29.159Z queued job 107194 refresh pump slot 2026-11-07T02:45:00.000Z
+2026-11-07T02:45:29.163Z queued job 107195 refresh sdcrv slot 2026-11-07T02:45:00.000Z
+2026-11-07T02:45:29.168Z queued job 107196 refresh sky slot 2026-11-07T02:45:00.000Z
+2026-11-07T02:45:29.172Z queued job 107197 refresh uni slot 2026-11-07T02:45:00.000Z
+2026-11-07T02:45:29.178Z queued job 107198 refresh vvv slot 2026-11-07T02:45:00.000Z
+2026-11-07T02:45:29.186Z queued job 107199 refresh ycrv slot 2026-11-07T02:45:00.000Z
+2026-11-07T02:45:29.193Z queued job 107200 nightly_report slot 2026-11-07T02:45:00.000Z
+2026-11-07T02:45:33.937Z job 107187 refresh aero started (attempt 1 of 2)
+2026-11-07T02:45:35.913Z job 107187 refresh aero done
+2026-11-07T02:45:35.930Z job 107188 refresh cake started (attempt 1 of 2)
+2026-11-07T02:45:40.096Z job 107188 refresh cake: transfer_flow:token>burner[converter_a,converter_b,converter_c,converter_owner,product_a,product_b,product_c] 2026-11-06: 0 transfers
+2026-11-07T02:45:40.918Z job 107188 refresh cake: transfer_flow:token>treasury[converter_a,converter_b,converter_c,product_a,product_b,product_c,product_d] 2026-11-06: 0 transfers
+2026-11-07T02:45:41.118Z job 107188 refresh cake done
+2026-11-07T02:45:41.141Z job 107189 refresh crv started (attempt 1 of 2)
+2026-11-07T02:45:44.930Z job 107189 refresh crv: transfer_flow:crvusd>fee_distributor[fee_allocator] 2026-11-06: 0 transfers
+2026-11-07T02:45:45.526Z job 107189 refresh crv: transfer_flow:crvusd>curve_treasury[fee_allocator] 2026-11-06: 0 transfers
+2026-11-07T02:45:46.095Z job 107189 refresh crv: transfer_flow:crvusd>fee_allocator[hooker] 2026-11-06: 0 transfers
+2026-11-07T02:45:46.270Z job 107189 refresh crv done
+2026-11-07T02:45:46.287Z job 107190 refresh cvxcrv started (attempt 1 of 2)
+2026-11-07T02:45:48.108Z job 107190 refresh cvxcrv: transfer_flow:crvusd>wrapper[crvusd_pool] 2026-11-06: 214 transfers
+2026-11-07T02:45:49.833Z job 107190 refresh cvxcrv: transfer_flow:crv>wrapper[base_reward_pool] 2026-11-06: 214 transfers
+2026-11-07T02:45:52.320Z job 107190 refresh cvxcrv: transfer_flow:cvx>wrapper[cvx_distribution,cvx_mint] 2026-11-06: 214 transfers
+2026-11-07T02:45:53.199Z job 107190 refresh cvxcrv: transfer_flow:crv>booster[voter_proxy] 2026-11-06: 212 transfers
+2026-11-07T02:45:53.940Z job 107190 refresh cvxcrv: transfer_flow:crv>base_reward_pool[booster] 2026-11-06: 212 transfers
+2026-11-07T02:45:54.710Z job 107190 refresh cvxcrv: transfer_flow:crv>cvx_reward_pool[booster] 2026-11-06: 212 transfers
+2026-11-07T02:45:55.294Z job 107190 refresh cvxcrv: transfer_flow:crv>convex_treasury[booster] 2026-11-06: 212 transfers
+2026-11-07T02:45:55.468Z job 107190 refresh cvxcrv done
+2026-11-07T02:45:55.486Z job 107191 refresh hype started (attempt 1 of 2)
+2026-11-07T02:46:04.795Z job 107191 refresh hype done
+2026-11-07T02:46:04.811Z job 107192 refresh link started (attempt 1 of 2)
+2026-11-07T02:46:08.578Z job 107192 refresh link: transfer_flow:token>reserve[fee_converter] 2026-11-06: 0 transfers
+2026-11-07T02:46:09.380Z job 107192 refresh link: transfer_flow:token>release_hub[*] 2026-11-06: 0 transfers
+2026-11-07T02:46:10.082Z job 107192 refresh link: transfer_flow:token>release_rewards[*] 2026-11-06: 0 transfers
+2026-11-07T02:46:10.370Z job 107192 refresh link done
+2026-11-07T02:46:10.397Z job 107193 refresh lit started (attempt 1 of 2)
+2026-11-07T02:46:34.919Z job 107193 refresh lit: transfer_flow:token>dead[burn_safe] 2026-11-06: 0 transfers
+2026-11-07T02:46:35.575Z job 107193 refresh lit: transfer_flow:token>prime_passthrough[buyback_wallet] 2026-11-06: 0 transfers
+2026-11-07T02:46:35.843Z job 107193 refresh lit done
+2026-11-07T02:46:35.867Z job 107194 refresh pump started (attempt 1 of 2)
+2026-11-07T02:46:40.589Z job 107194 refresh pump done
+2026-11-07T02:46:40.611Z job 107195 refresh sdcrv started (attempt 1 of 2)
+2026-11-07T02:46:41.865Z job 107195 refresh sdcrv: transfer_flow:crvusd>gauge[accumulator] 2026-11-06: 1 transfers
+2026-11-07T02:46:42.407Z job 107195 refresh sdcrv: transfer_flow:crv>gauge[accumulator] 2026-11-06: 1 transfers
+2026-11-07T02:46:44.000Z job 107195 refresh sdcrv: transfer_flow:token>merkle_stash[botmarket] 2026-11-06: 0 transfers
+2026-11-07T02:46:46.491Z job 107195 refresh sdcrv: transfer_flow:crv>sd_accountant[locker] 2026-11-06: 64 transfers
+2026-11-07T02:46:47.124Z job 107195 refresh sdcrv: transfer_flow:crv>sd_fee_receiver[sd_accountant,sd_staking_v2_fee] 2026-11-06: 2 transfers
+2026-11-07T02:46:47.883Z job 107195 refresh sdcrv: transfer_flow:crv>sd_vesdt_recipient[sd_fee_receiver] 2026-11-06: 1 transfers
+2026-11-07T02:46:48.466Z job 107195 refresh sdcrv: transfer_flow:crv>sd_treasury[sd_fee_receiver] 2026-11-06: 1 transfers
+2026-11-07T02:46:49.003Z job 107195 refresh sdcrv: transfer_flow:crv>sd_boost_delegation[accumulator] 2026-11-06: 1 transfers
+2026-11-07T02:46:49.591Z job 107195 refresh sdcrv: transfer_flow:crvusd>sd_liquidity_fee[accumulator] 2026-11-06: 1 transfers
+2026-11-07T02:46:50.378Z job 107195 refresh sdcrv: transfer_flow:crvusd>sd_treasury[accumulator] 2026-11-06: 1 transfers
+2026-11-07T02:46:50.645Z job 107195 refresh sdcrv done
+2026-11-07T02:46:50.667Z job 107196 refresh sky started (attempt 1 of 2)
+2026-11-07T02:46:54.163Z job 107196 refresh sky: transfer_flow:usds>usds_farm[zero] 2026-11-06: 31 transfers
+2026-11-07T02:46:56.693Z job 107196 refresh sky: transfer_flow:token>pause_proxy[sky_usds_pair] 2026-11-06: 31 transfers
+2026-11-07T02:46:57.312Z job 107196 refresh sky: transfer_flow:token>sky_farm[*] 2026-11-06: 0 transfers
+2026-11-07T02:46:57.832Z job 107196 refresh sky: transfer_flow:token>usds_sky_farm[*] 2026-11-06: 0 transfers
+2026-11-07T02:46:58.135Z job 107196 refresh sky done
+2026-11-07T02:46:58.152Z job 107197 refresh uni started (attempt 1 of 2)
+2026-11-07T02:47:01.554Z job 107197 refresh uni: transfer_flow:token>dead[*] 2026-11-06: 16 transfers
+2026-11-07T02:47:01.661Z job 107197 refresh uni done
+2026-11-07T02:47:01.690Z job 107198 refresh vvv started (attempt 1 of 2)
+2026-11-07T02:47:05.800Z job 107198 refresh vvv done
+2026-11-07T02:47:05.823Z job 107199 refresh ycrv started (attempt 1 of 2)
+2026-11-07T02:47:07.055Z job 107199 refresh ycrv: transfer_flow:yv_crvusd>distributor[receiver] 2026-11-06: 0 transfers
+2026-11-07T02:47:07.617Z job 107199 refresh ycrv: transfer_flow:yv_crvusd>yearn_treasury[receiver,splitter] 2026-11-06: 0 transfers
+2026-11-07T02:47:09.238Z job 107199 refresh ycrv: transfer_flow:st_ycrv>yearn_treasury[st_ycrv] 2026-11-06: 1 transfers
+2026-11-07T02:47:09.739Z job 107199 refresh ycrv: transfer_flow:crvusd>splitter[fee_burner,voter] 2026-11-06: 0 transfers
+2026-11-07T02:47:09.895Z job 107199 refresh ycrv done
+2026-11-07T02:47:09.919Z job 107200 nightly_report started (attempt 1 of 1)
+2026-11-07T02:47:12.236Z job 107200 nightly_report done
+2026-11-07T02:47:12.256Z job 107259 snapshot_push started (attempt 1 of 1)
+2026-11-07T02:47:16.846Z job 107259 snapshot_push done
+2026-11-07T03:30:01.023Z queued job 108807 retention slot 2026-11-07T03:30:00.000Z
+2026-11-07T03:30:04.838Z job 108807 retention started (attempt 1 of 1)
+2026-11-07T03:30:05.013Z job 108807 retention done
+2026-11-07T06:15:07.368Z queued job 114744 levels slot 2026-11-07T06:15:00.000Z
+2026-11-07T06:15:11.080Z job 114744 levels started (attempt 1 of 1)
+2026-11-07T06:15:22.277Z job 114744 levels done
+2026-11-07T06:15:22.297Z job 114748 snapshot_push started (attempt 1 of 1)
+2026-11-07T06:15:26.322Z job 114748 snapshot_push done
+2026-11-07T12:15:22.836Z queued job 127705 levels slot 2026-11-07T12:15:00.000Z
+2026-11-07T12:15:25.523Z job 127705 levels started (attempt 1 of 1)
+2026-11-07T12:35:54.661Z job 127705 levels done
+2026-11-07T12:35:54.692Z job 128447 snapshot_push started (attempt 1 of 1)
+2026-11-07T12:36:14.775Z job 128447 snapshot_push failed: git ls-remote failed (128):  | Please make sure you have the correct access rights | and the repository exists.
+2026-11-07T12:36:54.843Z job 128448 snapshot_push started (attempt 1 of 1)
+2026-11-07T12:37:14.927Z job 128448 snapshot_push failed: git ls-remote failed (128):  | Please make sure you have the correct access rights | and the repository exists.
+2026-11-07T12:41:55.245Z job 128485 snapshot_push started (attempt 1 of 1)
+2026-11-07T12:42:15.322Z job 128485 snapshot_push failed: git ls-remote failed (128):  | Please make sure you have the correct access rights | and the repository exists.
+2026-11-07T12:56:56.266Z job 128666 snapshot_push started (attempt 1 of 1)
+2026-11-07T12:57:16.346Z job 128666 snapshot_push failed: git ls-remote failed (128):  | Please make sure you have the correct access rights | and the repository exists.
+2026-11-07T13:57:00.323Z job 129207 snapshot_push started (attempt 1 of 1)
+2026-11-07T13:57:20.412Z job 129207 snapshot_push failed: git ls-remote failed (128):  | Please make sure you have the correct access rights | and the repository exists.
+2026-11-07T14:57:03.885Z job 131368 snapshot_push started (attempt 1 of 1)
+2026-11-07T14:57:23.971Z job 131368 snapshot_push failed: git ls-remote failed (128):  | Please make sure you have the correct access rights | and the repository exists.
+2026-11-07T15:57:07.658Z job 133529 snapshot_push started (attempt 1 of 1)
+2026-11-07T15:57:27.732Z job 133529 snapshot_push: ORION ALERT stage snapshot publish failing since 2026-11-07T12:35:54.641Z: git ls-remote failed (128):  | Please make sure you have the correct access rights | and the repository exists.
+2026-11-07T15:57:37.735Z slack post failed (try 1 of 4): The operation was aborted due to timeout
+2026-11-07T15:58:17.736Z slack post failed (try 2 of 4): The operation was aborted due to timeout
+2026-11-07T15:59:27.737Z slack post failed (try 3 of 4): The operation was aborted due to timeout
+2026-11-07T16:01:37.749Z slack post failed (try 4 of 4): The operation was aborted due to timeout
+2026-11-07T16:01:37.758Z job 133529 snapshot_push failed: git ls-remote failed (128):  | Please make sure you have the correct access rights | and the repository exists.
+2026-11-07T16:40:04.597Z queued job 137236 disclosure_watch slot 2026-11-07T16:40:00.000Z
+2026-11-07T16:40:04.855Z job 137236 disclosure_watch started (attempt 1 of 1)
+2026-11-07T16:40:04.856Z job 137236 disclosure_watch: disclosure_watch: dry scan with python3
+2026-11-07T16:40:04.997Z job 137236 disclosure_watch done
+2026-11-07T16:57:10.957Z job 135690 snapshot_push started (attempt 1 of 1)
+2026-11-07T16:57:15.978Z job 135690 snapshot_push done
+2026-11-07T18:15:08.724Z queued job 140655 levels slot 2026-11-07T18:15:00.000Z
+2026-11-07T18:15:10.305Z job 140655 levels started (attempt 1 of 1)
+2026-11-07T18:15:21.664Z job 140655 levels done
+2026-11-07T18:15:21.686Z job 140659 snapshot_push started (attempt 1 of 1)
+2026-11-07T18:15:25.818Z job 140659 snapshot_push done
+2026-11-08T00:15:22.727Z queued job 153616 levels slot 2026-11-08T00:15:00.000Z
+2026-11-08T00:15:24.345Z job 153616 levels started (attempt 1 of 1)
+2026-11-08T00:15:35.864Z job 153616 levels done
+2026-11-08T00:15:35.888Z job 153620 snapshot_push started (attempt 1 of 1)
+2026-11-08T00:15:40.088Z job 153620 snapshot_push done
+2026-11-08T02:45:28.545Z queued job 159003 refresh aero slot 2026-11-08T02:45:00.000Z
+2026-11-08T02:45:28.549Z queued job 159004 refresh cake slot 2026-11-08T02:45:00.000Z
+2026-11-08T02:45:28.561Z queued job 159005 refresh crv slot 2026-11-08T02:45:00.000Z
+2026-11-08T02:45:28.568Z queued job 159006 refresh cvxcrv slot 2026-11-08T02:45:00.000Z
+2026-11-08T02:45:28.576Z queued job 159007 refresh hype slot 2026-11-08T02:45:00.000Z
+2026-11-08T02:45:28.583Z queued job 159008 refresh link slot 2026-11-08T02:45:00.000Z
+2026-11-08T02:45:28.589Z queued job 159009 refresh lit slot 2026-11-08T02:45:00.000Z
+2026-11-08T02:45:28.596Z queued job 159010 refresh pump slot 2026-11-08T02:45:00.000Z
+2026-11-08T02:45:28.603Z queued job 159011 refresh sdcrv slot 2026-11-08T02:45:00.000Z
+2026-11-08T02:45:28.609Z queued job 159012 refresh sky slot 2026-11-08T02:45:00.000Z
+2026-11-08T02:45:28.614Z queued job 159013 refresh uni slot 2026-11-08T02:45:00.000Z
+2026-11-08T02:45:28.618Z queued job 159014 refresh vvv slot 2026-11-08T02:45:00.000Z
+2026-11-08T02:45:28.623Z queued job 159015 refresh ycrv slot 2026-11-08T02:45:00.000Z
+2026-11-08T02:45:28.627Z queued job 159016 nightly_report slot 2026-11-08T02:45:00.000Z
+2026-11-08T02:45:30.008Z job 159003 refresh aero started (attempt 1 of 2)
+2026-11-08T02:45:32.695Z job 159003 refresh aero done
+2026-11-08T02:45:32.719Z job 159004 refresh cake started (attempt 1 of 2)
+2026-11-08T02:45:36.947Z job 159004 refresh cake: transfer_flow:token>burner[converter_a,converter_b,converter_c,converter_owner,product_a,product_b,product_c] 2026-11-07: 0 transfers
+2026-11-08T02:45:37.641Z job 159004 refresh cake: transfer_flow:token>treasury[converter_a,converter_b,converter_c,product_a,product_b,product_c,product_d] 2026-11-07: 0 transfers
+2026-11-08T02:45:37.826Z job 159004 refresh cake done
+2026-11-08T02:45:37.843Z job 159005 refresh crv started (attempt 1 of 2)
+2026-11-08T02:45:41.862Z job 159005 refresh crv: transfer_flow:crvusd>fee_distributor[fee_allocator] 2026-11-07: 0 transfers
+2026-11-08T02:45:42.511Z job 159005 refresh crv: transfer_flow:crvusd>curve_treasury[fee_allocator] 2026-11-07: 0 transfers
+2026-11-08T02:45:43.326Z job 159005 refresh crv: transfer_flow:crvusd>fee_allocator[hooker] 2026-11-07: 0 transfers
+2026-11-08T02:45:43.482Z job 159005 refresh crv done
+2026-11-08T02:45:43.507Z job 159006 refresh cvxcrv started (attempt 1 of 2)
+2026-11-08T02:45:45.222Z job 159006 refresh cvxcrv: transfer_flow:crvusd>wrapper[crvusd_pool] 2026-11-07: 363 transfers
+2026-11-08T02:45:47.280Z job 159006 refresh cvxcrv: transfer_flow:crv>wrapper[base_reward_pool] 2026-11-07: 363 transfers
+2026-11-08T02:45:49.882Z job 159006 refresh cvxcrv: transfer_flow:cvx>wrapper[cvx_distribution,cvx_mint] 2026-11-07: 363 transfers
+2026-11-08T02:45:50.963Z job 159006 refresh cvxcrv: transfer_flow:crv>booster[voter_proxy] 2026-11-07: 367 transfers
+2026-11-08T02:45:51.782Z job 159006 refresh cvxcrv: transfer_flow:crv>base_reward_pool[booster] 2026-11-07: 367 transfers
+2026-11-08T02:45:52.702Z job 159006 refresh cvxcrv: transfer_flow:crv>cvx_reward_pool[booster] 2026-11-07: 367 transfers
+2026-11-08T02:45:53.463Z job 159006 refresh cvxcrv: transfer_flow:crv>convex_treasury[booster] 2026-11-07: 367 transfers
+2026-11-08T02:45:53.667Z job 159006 refresh cvxcrv done
+2026-11-08T02:45:53.691Z job 159007 refresh hype started (attempt 1 of 2)
+2026-11-08T02:46:04.192Z job 159007 refresh hype done
+2026-11-08T02:46:04.215Z job 159008 refresh link started (attempt 1 of 2)
+2026-11-08T02:46:08.109Z job 159008 refresh link: transfer_flow:token>reserve[fee_converter] 2026-11-07: 0 transfers
+2026-11-08T02:46:09.078Z job 159008 refresh link: transfer_flow:token>release_hub[*] 2026-11-07: 0 transfers
+2026-11-08T02:46:09.841Z job 159008 refresh link: transfer_flow:token>release_rewards[*] 2026-11-07: 0 transfers
+2026-11-08T02:46:10.109Z job 159008 refresh link done
+2026-11-08T02:46:10.125Z job 159009 refresh lit started (attempt 1 of 2)
+2026-11-08T02:46:36.246Z job 159009 refresh lit: transfer_flow:token>dead[burn_safe] 2026-11-07: 0 transfers
+2026-11-08T02:46:36.896Z job 159009 refresh lit: transfer_flow:token>prime_passthrough[buyback_wallet] 2026-11-07: 0 transfers
+2026-11-08T02:46:37.154Z job 159009 refresh lit done
+2026-11-08T02:46:37.172Z job 159010 refresh pump started (attempt 1 of 2)
+2026-11-08T02:46:40.833Z job 159010 refresh pump done
+2026-11-08T02:46:40.856Z job 159011 refresh sdcrv started (attempt 1 of 2)
+2026-11-08T02:46:42.807Z job 159011 refresh sdcrv: transfer_flow:crvusd>gauge[accumulator] 2026-11-07: 0 transfers
+2026-11-08T02:46:43.594Z job 159011 refresh sdcrv: transfer_flow:crv>gauge[accumulator] 2026-11-07: 0 transfers
+2026-11-08T02:46:44.582Z job 159011 refresh sdcrv: transfer_flow:token>merkle_stash[botmarket] 2026-11-07: 0 transfers
+2026-11-08T02:46:47.683Z job 159011 refresh sdcrv: transfer_flow:crv>sd_accountant[locker] 2026-11-07: 106 transfers
+2026-11-08T02:46:48.591Z job 159011 refresh sdcrv: transfer_flow:crv>sd_fee_receiver[sd_accountant,sd_staking_v2_fee] 2026-11-07: 0 transfers
+2026-11-08T02:46:49.508Z job 159011 refresh sdcrv: transfer_flow:crv>sd_vesdt_recipient[sd_fee_receiver] 2026-11-07: 0 transfers
+2026-11-08T02:46:50.320Z job 159011 refresh sdcrv: transfer_flow:crv>sd_treasury[sd_fee_receiver] 2026-11-07: 0 transfers
+2026-11-08T02:46:51.122Z job 159011 refresh sdcrv: transfer_flow:crv>sd_boost_delegation[accumulator] 2026-11-07: 0 transfers
+2026-11-08T02:46:51.771Z job 159011 refresh sdcrv: transfer_flow:crvusd>sd_liquidity_fee[accumulator] 2026-11-07: 0 transfers
+2026-11-08T02:46:52.565Z job 159011 refresh sdcrv: transfer_flow:crvusd>sd_treasury[accumulator] 2026-11-07: 0 transfers
+2026-11-08T02:46:52.855Z job 159011 refresh sdcrv done
+2026-11-08T02:46:52.875Z job 159012 refresh sky started (attempt 1 of 2)
+2026-11-08T02:46:56.407Z job 159012 refresh sky: transfer_flow:usds>usds_farm[zero] 2026-11-07: 31 transfers
+2026-11-08T02:46:58.762Z job 159012 refresh sky: transfer_flow:token>pause_proxy[sky_usds_pair] 2026-11-07: 31 transfers
+2026-11-08T02:46:59.391Z job 159012 refresh sky: transfer_flow:token>sky_farm[*] 2026-11-07: 0 transfers
+2026-11-08T02:47:00.057Z job 159012 refresh sky: transfer_flow:token>usds_sky_farm[*] 2026-11-07: 0 transfers
+2026-11-08T02:47:00.346Z job 159012 refresh sky done
+2026-11-08T02:47:00.368Z job 159013 refresh uni started (attempt 1 of 2)
+2026-11-08T02:47:03.827Z job 159013 refresh uni: transfer_flow:token>dead[*] 2026-11-07: 5 transfers
+2026-11-08T02:47:03.939Z job 159013 refresh uni done
+2026-11-08T02:47:03.955Z job 159014 refresh vvv started (attempt 1 of 2)
+2026-11-08T02:47:23.866Z job 159014 refresh vvv: transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe] 2026-11-07: 5938 transfers
+2026-11-08T02:47:24.107Z job 159014 refresh vvv done
+2026-11-08T02:47:24.125Z job 159015 refresh ycrv started (attempt 1 of 2)
+2026-11-08T02:47:25.584Z job 159015 refresh ycrv: transfer_flow:yv_crvusd>distributor[receiver] 2026-11-07: 2 transfers
+2026-11-08T02:47:26.298Z job 159015 refresh ycrv: transfer_flow:yv_crvusd>yearn_treasury[receiver,splitter] 2026-11-07: 7 transfers
+2026-11-08T02:47:27.557Z job 159015 refresh ycrv: transfer_flow:st_ycrv>yearn_treasury[st_ycrv] 2026-11-07: 1 transfers
+2026-11-08T02:47:28.185Z job 159015 refresh ycrv: transfer_flow:crvusd>splitter[fee_burner,voter] 2026-11-07: 3 transfers
+2026-11-08T02:47:28.352Z job 159015 refresh ycrv done
+2026-11-08T02:47:28.374Z job 159016 nightly_report started (attempt 1 of 1)
+2026-11-08T02:47:30.704Z job 159016 nightly_report done
+2026-11-08T02:47:30.726Z job 159093 snapshot_push started (attempt 1 of 1)
+2026-11-08T02:47:34.899Z job 159093 snapshot_push done
+2026-11-08T03:30:00.591Z queued job 160623 retention slot 2026-11-08T03:30:00.000Z
+2026-11-08T03:30:02.612Z job 160623 retention started (attempt 1 of 1)
+2026-11-08T03:30:02.829Z job 160623 retention done
+2026-11-08T06:15:07.209Z queued job 166560 levels slot 2026-11-08T06:15:00.000Z
+2026-11-08T06:15:08.779Z job 166560 levels started (attempt 1 of 1)
+2026-11-08T06:15:22.685Z job 166560 levels done
+2026-11-08T06:15:22.702Z job 166564 snapshot_push started (attempt 1 of 1)
+2026-11-08T06:15:28.191Z job 166564 snapshot_push done
+2026-11-08T10:30:17.310Z queued job 175743 staging_refresh slot 2026-11-08T10:30:00.000Z
+2026-11-08T10:30:19.694Z job 175743 staging_refresh started (attempt 1 of 1)
+2026-11-08T10:30:19.729Z job 175743 staging_refresh: restoring /home/orion-refresh/latest.dump (2026-11-08T08:30:05.143Z): 10 tables, 46 env-local entries kept out, 4 outside orion
+2026-11-08T10:30:20.569Z job 175743 staging_refresh done
+2026-11-08T12:15:21.402Z queued job 179521 levels slot 2026-11-08T12:15:00.000Z
+2026-11-08T12:15:21.777Z job 179521 levels started (attempt 1 of 1)
+2026-11-08T12:15:34.788Z job 179521 levels done
+2026-11-08T12:15:34.805Z job 179525 snapshot_push started (attempt 1 of 1)
+2026-11-08T12:15:38.950Z job 179525 snapshot_push done
+2026-11-08T16:04:13.276Z drained: claiming nothing until orion daemon undrain
+2026-11-08T16:04:15.169Z stop requested
+2026-11-08T16:04:15.182Z daemon stopped
+2026-11-08T16:04:17.427Z daemon started: venus-150318-722053ae env stage release orion-2026.11.08.1 database orion_stage schema orion
+2026-11-08T16:40:18.946Z queued job 189063 disclosure_watch slot 2026-11-08T16:40:00.000Z
+2026-11-08T16:40:19.667Z job 189063 disclosure_watch started (attempt 1 of 1)
+2026-11-08T16:40:19.670Z job 189063 disclosure_watch: disclosure_watch: dry scan with python3
+2026-11-08T16:40:19.816Z job 189063 disclosure_watch done
+2026-11-08T18:15:22.721Z queued job 192482 levels slot 2026-11-08T18:15:00.000Z
+2026-11-08T18:15:25.606Z job 192482 levels started (attempt 1 of 1)
+2026-11-08T18:15:36.194Z job 192482 levels done
+2026-11-08T18:15:36.212Z job 192486 snapshot_push started (attempt 1 of 1)
+2026-11-08T18:15:40.291Z job 192486 snapshot_push done
+2026-11-09T00:15:06.791Z queued job 205425 levels slot 2026-11-09T00:15:00.000Z
+2026-11-09T00:15:09.376Z job 205425 levels started (attempt 1 of 1)
+2026-11-09T00:15:24.515Z job 205425 levels done
+2026-11-09T00:15:24.538Z job 205429 snapshot_push started (attempt 1 of 1)
+2026-11-09T00:15:28.854Z job 205429 snapshot_push done
+2026-11-09T02:45:12.659Z queued job 210812 refresh aero slot 2026-11-09T02:45:00.000Z
+2026-11-09T02:45:12.664Z queued job 210813 refresh cake slot 2026-11-09T02:45:00.000Z
+2026-11-09T02:45:12.672Z queued job 210814 refresh crv slot 2026-11-09T02:45:00.000Z
+2026-11-09T02:45:12.676Z queued job 210815 refresh cvxcrv slot 2026-11-09T02:45:00.000Z
+2026-11-09T02:45:12.681Z queued job 210816 refresh hype slot 2026-11-09T02:45:00.000Z
+2026-11-09T02:45:12.685Z queued job 210817 refresh link slot 2026-11-09T02:45:00.000Z
+2026-11-09T02:45:12.690Z queued job 210818 refresh lit slot 2026-11-09T02:45:00.000Z
+2026-11-09T02:45:12.695Z queued job 210819 refresh pump slot 2026-11-09T02:45:00.000Z
+2026-11-09T02:45:12.702Z queued job 210820 refresh sdcrv slot 2026-11-09T02:45:00.000Z
+2026-11-09T02:45:12.709Z queued job 210821 refresh sky slot 2026-11-09T02:45:00.000Z
+2026-11-09T02:45:12.716Z queued job 210822 refresh uni slot 2026-11-09T02:45:00.000Z
+2026-11-09T02:45:12.723Z queued job 210823 refresh vvv slot 2026-11-09T02:45:00.000Z
+2026-11-09T02:45:12.729Z queued job 210824 refresh ycrv slot 2026-11-09T02:45:00.000Z
+2026-11-09T02:45:12.736Z queued job 210825 nightly_report slot 2026-11-09T02:45:00.000Z
+2026-11-09T02:45:13.918Z job 210812 refresh aero started (attempt 1 of 2)
+2026-11-09T02:45:15.306Z job 210812 refresh aero done
+2026-11-09T02:45:15.322Z job 210813 refresh cake started (attempt 1 of 2)
+2026-11-09T02:45:20.358Z job 210813 refresh cake: transfer_flow:token>burner[converter_a,converter_b,converter_c,converter_owner,product_a,product_b,product_c] 2026-11-08: 0 transfers
+2026-11-09T02:45:21.227Z job 210813 refresh cake: transfer_flow:token>treasury[converter_a,converter_b,converter_c,product_a,product_b,product_c,product_d] 2026-11-08: 0 transfers
+2026-11-09T02:45:21.799Z job 210813 refresh cake done
+2026-11-09T02:45:21.820Z job 210814 refresh crv started (attempt 1 of 2)
+2026-11-09T02:45:25.871Z job 210814 refresh crv: transfer_flow:crvusd>fee_distributor[fee_allocator] 2026-11-08: 0 transfers
+2026-11-09T02:45:26.625Z job 210814 refresh crv: transfer_flow:crvusd>curve_treasury[fee_allocator] 2026-11-08: 0 transfers
+2026-11-09T02:45:27.355Z job 210814 refresh crv: transfer_flow:crvusd>fee_allocator[hooker] 2026-11-08: 0 transfers
+2026-11-09T02:45:27.900Z job 210814 refresh crv done
+2026-11-09T02:45:27.917Z job 210815 refresh cvxcrv started (attempt 1 of 2)
+2026-11-09T02:45:29.714Z job 210815 refresh cvxcrv: transfer_flow:crvusd>wrapper[crvusd_pool] 2026-11-08: 322 transfers
+2026-11-09T02:45:31.840Z job 210815 refresh cvxcrv: transfer_flow:crv>wrapper[base_reward_pool] 2026-11-08: 322 transfers
+2026-11-09T02:45:34.200Z job 210815 refresh cvxcrv: transfer_flow:cvx>wrapper[cvx_distribution,cvx_mint] 2026-11-08: 322 transfers
+2026-11-09T02:45:35.361Z job 210815 refresh cvxcrv: transfer_flow:crv>booster[voter_proxy] 2026-11-08: 327 transfers
+2026-11-09T02:45:36.324Z job 210815 refresh cvxcrv: transfer_flow:crv>base_reward_pool[booster] 2026-11-08: 327 transfers
+2026-11-09T02:45:37.242Z job 210815 refresh cvxcrv: transfer_flow:crv>cvx_reward_pool[booster] 2026-11-08: 327 transfers
+2026-11-09T02:45:38.229Z job 210815 refresh cvxcrv: transfer_flow:crv>convex_treasury[booster] 2026-11-08: 327 transfers
+2026-11-09T02:45:39.280Z job 210815 refresh cvxcrv done
+2026-11-09T02:45:39.297Z job 210816 refresh hype started (attempt 1 of 2)
+2026-11-09T02:45:49.781Z job 210816 refresh hype done
+2026-11-09T02:45:49.805Z job 210817 refresh link started (attempt 1 of 2)
+2026-11-09T02:45:53.641Z job 210817 refresh link: transfer_flow:token>reserve[fee_converter] 2026-11-08: 0 transfers
+2026-11-09T02:45:54.815Z job 210817 refresh link: transfer_flow:token>release_hub[*] 2026-11-08: 0 transfers
+2026-11-09T02:45:55.741Z job 210817 refresh link: transfer_flow:token>release_rewards[*] 2026-11-08: 0 transfers
+2026-11-09T02:45:56.247Z job 210817 refresh link done
+2026-11-09T02:45:56.271Z job 210818 refresh lit started (attempt 1 of 2)
+2026-11-09T02:46:21.977Z job 210818 refresh lit: transfer_flow:token>dead[burn_safe] 2026-11-08: 0 transfers
+2026-11-09T02:46:22.703Z job 210818 refresh lit: transfer_flow:token>prime_passthrough[buyback_wallet] 2026-11-08: 0 transfers
+2026-11-09T02:46:23.119Z job 210818 refresh lit done
+2026-11-09T02:46:23.144Z job 210819 refresh pump started (attempt 1 of 2)
+2026-11-09T02:46:28.064Z job 210819 refresh pump done
+2026-11-09T02:46:28.089Z job 210820 refresh sdcrv started (attempt 1 of 2)
+2026-11-09T02:46:28.140Z job 210820 refresh sdcrv: asset sdcrv is locked by orion data backfill-tokens pid 160390 since 2026-11-09T02:28:56.642Z
+2026-11-09T02:46:28.251Z job 210820 refresh sdcrv failed (attempt 1 of 2), retry at 2026-11-09T03:16:28.245Z: run_in_progress: locked by orion data backfill-tokens pid 160390 since 2026-11-09T02:28:56.642Z
+2026-11-09T02:46:28.274Z job 210821 refresh sky started (attempt 1 of 2)
+2026-11-09T02:46:32.049Z job 210821 refresh sky: transfer_flow:usds>usds_farm[zero] 2026-11-08: 30 transfers
+2026-11-09T02:46:34.514Z job 210821 refresh sky: transfer_flow:token>pause_proxy[sky_usds_pair] 2026-11-08: 30 transfers
+2026-11-09T02:46:35.200Z job 210821 refresh sky: transfer_flow:token>sky_farm[*] 2026-11-08: 0 transfers
+2026-11-09T02:46:35.861Z job 210821 refresh sky: transfer_flow:token>usds_sky_farm[*] 2026-11-08: 0 transfers
+2026-11-09T02:46:36.266Z job 210821 refresh sky done
+2026-11-09T02:46:36.290Z job 210822 refresh uni started (attempt 1 of 2)
+2026-11-09T02:46:39.920Z job 210822 refresh uni: transfer_flow:token>dead[*] 2026-11-08: 7 transfers
+2026-11-09T02:46:40.108Z job 210822 refresh uni done
+2026-11-09T02:46:40.132Z job 210823 refresh vvv started (attempt 1 of 2)
+2026-11-09T02:46:59.828Z job 210823 refresh vvv: transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe] 2026-11-08: 5816 transfers
+2026-11-09T02:47:00.176Z job 210823 refresh vvv done
+2026-11-09T02:47:00.198Z job 210824 refresh ycrv started (attempt 1 of 2)
+2026-11-09T02:47:01.813Z job 210824 refresh ycrv: transfer_flow:yv_crvusd>distributor[receiver] 2026-11-08: 0 transfers
+2026-11-09T02:47:02.568Z job 210824 refresh ycrv: transfer_flow:yv_crvusd>yearn_treasury[receiver,splitter] 2026-11-08: 0 transfers
+2026-11-09T02:47:04.108Z job 210824 refresh ycrv: transfer_flow:st_ycrv>yearn_treasury[st_ycrv] 2026-11-08: 0 transfers
+2026-11-09T02:47:04.892Z job 210824 refresh ycrv: transfer_flow:crvusd>splitter[fee_burner,voter] 2026-11-08: 0 transfers
+2026-11-09T02:47:05.413Z job 210824 refresh ycrv done
+2026-11-09T02:47:05.429Z job 210825 nightly_report started (attempt 1 of 1)
+2026-11-09T02:47:05.433Z job 210825 nightly_report: waiting for 1 refresh(es): sdcrv
+2026-11-09T02:47:05.439Z job 210825 nightly_report deferred until 2026-11-09T02:52:05.433Z
+2026-11-09T02:52:05.803Z job 210825 nightly_report started (attempt 1 of 1)
+2026-11-09T02:52:05.807Z job 210825 nightly_report: waiting for 1 refresh(es): sdcrv
+2026-11-09T02:52:05.815Z job 210825 nightly_report deferred until 2026-11-09T02:57:05.807Z
+2026-11-09T02:57:06.181Z job 210825 nightly_report started (attempt 1 of 1)
+2026-11-09T02:57:06.184Z job 210825 nightly_report: waiting for 1 refresh(es): sdcrv
+2026-11-09T02:57:06.192Z job 210825 nightly_report deferred until 2026-11-09T03:02:06.184Z
+2026-11-09T03:02:06.553Z job 210825 nightly_report started (attempt 1 of 1)
+2026-11-09T03:02:06.556Z job 210825 nightly_report: waiting for 1 refresh(es): sdcrv
+2026-11-09T03:02:06.571Z job 210825 nightly_report deferred until 2026-11-09T03:07:06.556Z
+2026-11-09T03:07:06.938Z job 210825 nightly_report started (attempt 1 of 1)
+2026-11-09T03:07:06.941Z job 210825 nightly_report: waiting for 1 refresh(es): sdcrv
+2026-11-09T03:07:06.950Z job 210825 nightly_report deferred until 2026-11-09T03:12:06.941Z
+2026-11-09T03:12:07.329Z job 210825 nightly_report started (attempt 1 of 1)
+2026-11-09T03:12:07.332Z job 210825 nightly_report: waiting for 1 refresh(es): sdcrv
+2026-11-09T03:12:07.340Z job 210825 nightly_report deferred until 2026-11-09T03:17:07.332Z
+2026-11-09T03:16:32.678Z job 210820 refresh sdcrv started (attempt 2 of 2)
+2026-11-09T03:16:34.467Z job 210820 refresh sdcrv: transfer_flow:crvusd>gauge[accumulator] 2026-11-08: 0 transfers
+2026-11-09T03:16:35.393Z job 210820 refresh sdcrv: transfer_flow:crv>gauge[accumulator] 2026-11-08: 0 transfers
+2026-11-09T03:16:36.444Z job 210820 refresh sdcrv: transfer_flow:token>merkle_stash[botmarket] 2026-11-08: 0 transfers
+2026-11-09T03:16:38.770Z job 210820 refresh sdcrv: transfer_flow:crv>sd_accountant[locker] 2026-11-08: 73 transfers
+2026-11-09T03:16:39.784Z job 210820 refresh sdcrv: transfer_flow:crv>sd_fee_receiver[sd_accountant,sd_staking_v2_fee] 2026-11-08: 0 transfers
+2026-11-09T03:16:40.677Z job 210820 refresh sdcrv: transfer_flow:crv>sd_vesdt_recipient[sd_fee_receiver] 2026-11-08: 0 transfers
+2026-11-09T03:16:41.512Z job 210820 refresh sdcrv: transfer_flow:crv>sd_treasury[sd_fee_receiver] 2026-11-08: 0 transfers
+2026-11-09T03:16:42.656Z job 210820 refresh sdcrv: transfer_flow:crv>sd_boost_delegation[accumulator] 2026-11-08: 0 transfers
+2026-11-09T03:16:43.458Z job 210820 refresh sdcrv: transfer_flow:crvusd>sd_liquidity_fee[accumulator] 2026-11-08: 0 transfers
+2026-11-09T03:16:44.241Z job 210820 refresh sdcrv: transfer_flow:crvusd>sd_treasury[accumulator] 2026-11-08: 0 transfers
+2026-11-09T03:16:45.701Z job 210820 refresh sdcrv done
+2026-11-09T03:17:10.745Z job 210825 nightly_report started (attempt 1 of 1)
+2026-11-09T03:17:17.684Z job 210825 nightly_report done
+2026-11-09T03:17:17.701Z job 211982 snapshot_push started (attempt 1 of 1)
+2026-11-09T03:17:21.919Z job 211982 snapshot_push done
+2026-11-09T03:30:14.584Z queued job 212450 retention slot 2026-11-09T03:30:00.000Z
+2026-11-09T03:30:17.781Z job 212450 retention started (attempt 1 of 1)
+2026-11-09T03:30:18.043Z job 212450 retention done
+2026-11-09T06:15:20.979Z queued job 218387 levels slot 2026-11-09T06:15:00.000Z
+2026-11-09T06:15:24.143Z job 218387 levels started (attempt 1 of 1)
+2026-11-09T06:15:34.051Z job 218387 levels done
+2026-11-09T06:15:34.068Z job 218391 snapshot_push started (attempt 1 of 1)
+2026-11-09T06:15:38.180Z job 218391 snapshot_push done
+2026-11-09T12:15:04.753Z queued job 231330 levels slot 2026-11-09T12:15:00.000Z
+2026-11-09T12:15:05.142Z job 231330 levels started (attempt 1 of 1)
+2026-11-09T12:15:20.615Z job 231330 levels done
+2026-11-09T12:15:20.638Z job 231334 snapshot_push started (attempt 1 of 1)
+2026-11-09T12:15:24.862Z job 231334 snapshot_push done
+2026-11-09T16:40:15.390Z queued job 240872 disclosure_watch slot 2026-11-09T16:40:00.000Z
+2026-11-09T16:40:17.005Z job 240872 disclosure_watch started (attempt 1 of 1)
+2026-11-09T16:40:17.007Z job 240872 disclosure_watch: disclosure_watch: dry scan with python3
+2026-11-09T16:40:17.885Z job 240872 disclosure_watch done
+2026-11-09T18:15:19.054Z queued job 244291 levels slot 2026-11-09T18:15:00.000Z
+2026-11-09T18:15:19.173Z job 244291 levels started (attempt 1 of 1)
+2026-11-09T18:15:31.649Z job 244291 levels done
+2026-11-09T18:15:31.672Z job 244295 snapshot_push started (attempt 1 of 1)
+2026-11-09T18:15:36.199Z job 244295 snapshot_push done
+2026-11-09T22:07:01.545Z drained: claiming nothing until orion daemon undrain
+2026-11-09T22:07:03.890Z stop requested
+2026-11-09T22:07:03.905Z daemon stopped
+2026-11-09T22:07:06.038Z daemon started: venus-246401-95aab34f env stage release orion-2026.11.09.1 database orion_stage schema orion
+2026-11-09T22:07:26.089Z job 252648 refresh aero started (attempt 1 of 2)
+2026-11-09T22:07:33.657Z job 252648 refresh aero done
+2026-11-10T00:15:11.121Z queued job 257253 levels slot 2026-11-10T00:15:00.000Z
+2026-11-10T00:15:12.038Z job 257253 levels started (attempt 1 of 1)
+2026-11-10T00:15:26.289Z job 257253 levels done
+2026-11-10T00:15:26.309Z job 257257 snapshot_push started (attempt 1 of 1)
+2026-11-10T00:15:31.373Z job 257257 snapshot_push done
+2026-11-10T02:45:17.650Z queued job 262640 refresh aero slot 2026-11-10T02:45:00.000Z
+2026-11-10T02:45:17.656Z queued job 262641 refresh cake slot 2026-11-10T02:45:00.000Z
+2026-11-10T02:45:17.665Z queued job 262642 refresh crv slot 2026-11-10T02:45:00.000Z
+2026-11-10T02:45:17.673Z queued job 262643 refresh cvxcrv slot 2026-11-10T02:45:00.000Z
+2026-11-10T02:45:17.680Z queued job 262644 refresh hype slot 2026-11-10T02:45:00.000Z
+2026-11-10T02:45:17.687Z queued job 262645 refresh link slot 2026-11-10T02:45:00.000Z
+2026-11-10T02:45:17.694Z queued job 262646 refresh lit slot 2026-11-10T02:45:00.000Z
+2026-11-10T02:45:17.700Z queued job 262647 refresh pump slot 2026-11-10T02:45:00.000Z
+2026-11-10T02:45:17.707Z queued job 262648 refresh sdcrv slot 2026-11-10T02:45:00.000Z
+2026-11-10T02:45:17.713Z queued job 262649 refresh sky slot 2026-11-10T02:45:00.000Z
+2026-11-10T02:45:17.718Z queued job 262650 refresh uni slot 2026-11-10T02:45:00.000Z
+2026-11-10T02:45:17.723Z queued job 262651 refresh vvv slot 2026-11-10T02:45:00.000Z
+2026-11-10T02:45:17.727Z queued job 262652 refresh ycrv slot 2026-11-10T02:45:00.000Z
+2026-11-10T02:45:17.732Z queued job 262653 nightly_report slot 2026-11-10T02:45:00.000Z
+2026-11-10T02:45:21.252Z job 262640 refresh aero started (attempt 1 of 2)
+2026-11-10T02:45:28.707Z job 262640 refresh aero done
+2026-11-10T02:45:28.724Z job 262641 refresh cake started (attempt 1 of 2)
+2026-11-10T02:45:33.295Z job 262641 refresh cake: transfer_flow:token>burner[converter_a,converter_b,converter_c,converter_owner,product_a,product_b,product_c] 2026-11-09: 0 transfers
+2026-11-10T02:45:34.263Z job 262641 refresh cake: transfer_flow:token>treasury[converter_a,converter_b,converter_c,product_a,product_b,product_c,product_d] 2026-11-09: 0 transfers
+2026-11-10T02:45:34.828Z job 262641 refresh cake done
+2026-11-10T02:45:34.849Z job 262642 refresh crv started (attempt 1 of 2)
+2026-11-10T02:45:38.675Z job 262642 refresh crv: transfer_flow:crvusd>fee_distributor[fee_allocator] 2026-11-09: 0 transfers
+2026-11-10T02:45:39.407Z job 262642 refresh crv: transfer_flow:crvusd>curve_treasury[fee_allocator] 2026-11-09: 0 transfers
+2026-11-10T02:45:40.229Z job 262642 refresh crv: transfer_flow:crvusd>fee_allocator[hooker] 2026-11-09: 0 transfers
+2026-11-10T02:45:40.838Z job 262642 refresh crv done
+2026-11-10T02:45:40.860Z job 262643 refresh cvxcrv started (attempt 1 of 2)
+2026-11-10T02:45:43.123Z job 262643 refresh cvxcrv: transfer_flow:crvusd>wrapper[crvusd_pool] 2026-11-09: 232 transfers
+2026-11-10T02:45:44.516Z job 262643 refresh cvxcrv: transfer_flow:crv>wrapper[base_reward_pool] 2026-11-09: 232 transfers
+2026-11-10T02:45:46.981Z job 262643 refresh cvxcrv: transfer_flow:cvx>wrapper[cvx_distribution,cvx_mint] 2026-11-09: 232 transfers
+2026-11-10T02:45:47.914Z job 262643 refresh cvxcrv: transfer_flow:crv>booster[voter_proxy] 2026-11-09: 210 transfers
+2026-11-10T02:45:48.705Z job 262643 refresh cvxcrv: transfer_flow:crv>base_reward_pool[booster] 2026-11-09: 208 transfers
+2026-11-10T02:45:49.554Z job 262643 refresh cvxcrv: transfer_flow:crv>cvx_reward_pool[booster] 2026-11-09: 208 transfers
+2026-11-10T02:45:50.275Z job 262643 refresh cvxcrv: transfer_flow:crv>convex_treasury[booster] 2026-11-09: 208 transfers
+2026-11-10T02:45:51.388Z job 262643 refresh cvxcrv done
+2026-11-10T02:45:51.404Z job 262644 refresh hype started (attempt 1 of 2)
+2026-11-10T02:46:01.456Z job 262644 refresh hype done
+2026-11-10T02:46:01.473Z job 262645 refresh link started (attempt 1 of 2)
+2026-11-10T02:46:05.217Z job 262645 refresh link: transfer_flow:token>reserve[fee_converter] 2026-11-09: 0 transfers
+2026-11-10T02:46:05.948Z job 262645 refresh link: transfer_flow:token>release_hub[*] 2026-11-09: 0 transfers
+2026-11-10T02:46:06.631Z job 262645 refresh link: transfer_flow:token>release_rewards[*] 2026-11-09: 0 transfers
+2026-11-10T02:46:07.161Z job 262645 refresh link done
+2026-11-10T02:46:07.185Z job 262646 refresh lit started (attempt 1 of 2)
+2026-11-10T02:46:32.945Z job 262646 refresh lit: transfer_flow:token>dead[burn_safe] 2026-11-09: 0 transfers
+2026-11-10T02:46:33.517Z job 262646 refresh lit: transfer_flow:token>prime_passthrough[buyback_wallet] 2026-11-09: 0 transfers
+2026-11-10T02:46:33.902Z job 262646 refresh lit done
+2026-11-10T02:46:33.926Z job 262647 refresh pump started (attempt 1 of 2)
+2026-11-10T02:46:37.620Z job 262647 refresh pump done
+2026-11-10T02:46:37.638Z job 262648 refresh sdcrv started (attempt 1 of 2)
+2026-11-10T02:46:39.314Z job 262648 refresh sdcrv: transfer_flow:crvusd>gauge[accumulator] 2026-11-09: 0 transfers
+2026-11-10T02:46:40.135Z job 262648 refresh sdcrv: transfer_flow:crv>gauge[accumulator] 2026-11-09: 0 transfers
+2026-11-10T02:46:41.326Z job 262648 refresh sdcrv: transfer_flow:token>merkle_stash[botmarket] 2026-11-09: 0 transfers
+2026-11-10T02:46:43.977Z job 262648 refresh sdcrv: transfer_flow:crv>sd_accountant[locker] 2026-11-09: 69 transfers
+2026-11-10T02:46:44.750Z job 262648 refresh sdcrv: transfer_flow:crv>sd_fee_receiver[sd_accountant,sd_staking_v2_fee] 2026-11-09: 0 transfers
+2026-11-10T02:46:45.569Z job 262648 refresh sdcrv: transfer_flow:crv>sd_vesdt_recipient[sd_fee_receiver] 2026-11-09: 0 transfers
+2026-11-10T02:46:46.227Z job 262648 refresh sdcrv: transfer_flow:crv>sd_treasury[sd_fee_receiver] 2026-11-09: 0 transfers, 1 unlisted
+2026-11-10T02:46:46.941Z job 262648 refresh sdcrv: transfer_flow:crv>sd_boost_delegation[accumulator] 2026-11-09: 0 transfers
+2026-11-10T02:46:47.601Z job 262648 refresh sdcrv: transfer_flow:crvusd>sd_liquidity_fee[accumulator] 2026-11-09: 0 transfers
+2026-11-10T02:46:48.313Z job 262648 refresh sdcrv: transfer_flow:crvusd>sd_treasury[accumulator] 2026-11-09: 0 transfers
+2026-11-10T02:46:49.779Z job 262648 refresh sdcrv done
+2026-11-10T02:46:49.806Z job 262649 refresh sky started (attempt 1 of 2)
+2026-11-10T02:46:53.151Z job 262649 refresh sky: transfer_flow:usds>usds_farm[zero] 2026-11-09: 31 transfers
+2026-11-10T02:46:55.794Z job 262649 refresh sky: transfer_flow:token>pause_proxy[sky_usds_pair] 2026-11-09: 31 transfers
+2026-11-10T02:46:56.320Z job 262649 refresh sky: transfer_flow:token>sky_farm[*] 2026-11-09: 1 transfers
+2026-11-10T02:46:56.831Z job 262649 refresh sky: transfer_flow:token>usds_sky_farm[*] 2026-11-09: 0 transfers
+2026-11-10T02:46:57.492Z job 262649 refresh sky done
+2026-11-10T02:46:57.516Z job 262650 refresh uni started (attempt 1 of 2)
+2026-11-10T02:47:01.282Z job 262650 refresh uni: transfer_flow:token>dead[*] 2026-11-09: 8 transfers
+2026-11-10T02:47:01.570Z job 262650 refresh uni done
+2026-11-10T02:47:01.595Z job 262651 refresh vvv started (attempt 1 of 2)
+2026-11-10T02:47:21.769Z job 262651 refresh vvv: transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe] 2026-11-09: 6296 transfers
+2026-11-10T02:47:22.273Z job 262651 refresh vvv done
+2026-11-10T02:47:22.297Z job 262652 refresh ycrv started (attempt 1 of 2)
+2026-11-10T02:47:23.822Z job 262652 refresh ycrv: transfer_flow:yv_crvusd>distributor[receiver] 2026-11-09: 0 transfers
+2026-11-10T02:47:24.564Z job 262652 refresh ycrv: transfer_flow:yv_crvusd>yearn_treasury[receiver,splitter] 2026-11-09: 0 transfers
+2026-11-10T02:47:25.816Z job 262652 refresh ycrv: transfer_flow:st_ycrv>yearn_treasury[st_ycrv] 2026-11-09: 2 transfers
+2026-11-10T02:47:26.483Z job 262652 refresh ycrv: transfer_flow:crvusd>splitter[fee_burner,voter] 2026-11-09: 0 transfers
+2026-11-10T02:47:27.347Z job 262652 refresh ycrv done
+2026-11-10T02:47:27.371Z job 262653 nightly_report started (attempt 1 of 1)
+2026-11-10T02:47:34.347Z job 262653 nightly_report done
+2026-11-10T02:47:34.377Z job 262730 snapshot_push started (attempt 1 of 1)
+2026-11-10T02:47:38.550Z job 262730 snapshot_push done
+2026-11-10T03:30:19.718Z queued job 264278 retention slot 2026-11-10T03:30:00.000Z
+2026-11-10T03:30:21.441Z job 264278 retention started (attempt 1 of 1)
+2026-11-10T03:30:21.672Z job 264278 retention done
+2026-11-10T03:31:36.762Z drained: claiming nothing until orion daemon undrain
+2026-11-10T03:31:39.115Z stop requested
+2026-11-10T03:31:39.121Z daemon stopped
+2026-11-10T03:31:41.212Z daemon started: venus-255646-9e36d147 env stage release orion-2026.11.10.1 database orion_stage schema orion
+2026-11-10T03:31:51.265Z job 264333 refresh cake started (attempt 1 of 2)
+2026-11-10T03:31:53.324Z job 264333 refresh cake done
+2026-11-10T06:15:17.238Z queued job 270216 levels slot 2026-11-10T06:15:00.000Z
+2026-11-10T06:15:18.766Z job 270216 levels started (attempt 1 of 1)
+2026-11-10T06:15:37.831Z job 270216 levels done
+2026-11-10T06:15:37.848Z job 270220 snapshot_push started (attempt 1 of 1)
+2026-11-10T06:15:42.638Z job 270220 snapshot_push done
+2026-11-10T12:15:02.695Z queued job 283159 levels slot 2026-11-10T12:15:00.000Z
+2026-11-10T12:15:06.265Z job 283159 levels started (attempt 1 of 1)
+2026-11-10T12:15:22.232Z job 283159 levels done
+2026-11-10T12:15:22.257Z job 283163 snapshot_push started (attempt 1 of 1)
+2026-11-10T12:15:26.577Z job 283163 snapshot_push done
+2026-11-10T16:40:12.439Z queued job 292701 disclosure_watch slot 2026-11-10T16:40:00.000Z
+2026-11-10T16:40:14.116Z job 292701 disclosure_watch started (attempt 1 of 1)
+2026-11-10T16:40:14.118Z job 292701 disclosure_watch: disclosure_watch: dry scan with python3
+2026-11-10T16:40:14.261Z job 292701 disclosure_watch done
+2026-11-10T18:15:16.374Z queued job 296120 levels slot 2026-11-10T18:15:00.000Z
+2026-11-10T18:15:20.021Z job 296120 levels started (attempt 1 of 1)
+2026-11-10T18:15:33.064Z job 296120 levels done
+2026-11-10T18:15:33.083Z job 296124 snapshot_push started (attempt 1 of 1)
+2026-11-10T18:15:38.382Z job 296124 snapshot_push done
+2026-11-11T00:15:00.245Z queued job 309063 levels slot 2026-11-11T00:15:00.000Z
+2026-11-11T00:15:00.558Z job 309063 levels started (attempt 1 of 1)
+2026-11-11T00:15:17.680Z job 309063 levels done
+2026-11-11T00:15:17.703Z job 309067 snapshot_push started (attempt 1 of 1)
+2026-11-11T00:15:21.894Z job 309067 snapshot_push done
+2026-11-11T02:45:06.161Z queued job 314450 refresh aero slot 2026-11-11T02:45:00.000Z
+2026-11-11T02:45:06.169Z queued job 314451 refresh cake slot 2026-11-11T02:45:00.000Z
+2026-11-11T02:45:06.181Z queued job 314452 refresh crv slot 2026-11-11T02:45:00.000Z
+2026-11-11T02:45:06.188Z queued job 314453 refresh cvxcrv slot 2026-11-11T02:45:00.000Z
+2026-11-11T02:45:06.195Z queued job 314454 refresh hype slot 2026-11-11T02:45:00.000Z
+2026-11-11T02:45:06.201Z queued job 314455 refresh link slot 2026-11-11T02:45:00.000Z
+2026-11-11T02:45:06.207Z queued job 314456 refresh lit slot 2026-11-11T02:45:00.000Z
+2026-11-11T02:45:06.212Z queued job 314457 refresh pump slot 2026-11-11T02:45:00.000Z
+2026-11-11T02:45:06.216Z queued job 314458 refresh sdcrv slot 2026-11-11T02:45:00.000Z
+2026-11-11T02:45:06.221Z queued job 314459 refresh sky slot 2026-11-11T02:45:00.000Z
+2026-11-11T02:45:06.225Z queued job 314460 refresh uni slot 2026-11-11T02:45:00.000Z
+2026-11-11T02:45:06.230Z queued job 314461 refresh vvv slot 2026-11-11T02:45:00.000Z
+2026-11-11T02:45:06.235Z queued job 314462 refresh ycrv slot 2026-11-11T02:45:00.000Z
+2026-11-11T02:45:06.239Z queued job 314463 nightly_report slot 2026-11-11T02:45:00.000Z
+2026-11-11T02:45:06.988Z job 314450 refresh aero started (attempt 1 of 2)
+2026-11-11T02:45:13.197Z job 314450 refresh aero done
+2026-11-11T02:45:13.214Z job 314451 refresh cake started (attempt 1 of 2)
+2026-11-11T02:45:17.385Z job 314451 refresh cake: transfer_flow:token>burner[converter_a,converter_b,converter_c,converter_owner,product_a,product_b,product_c] 2026-11-10: 0 transfers
+2026-11-11T02:45:18.708Z job 314451 refresh cake: transfer_flow:token>treasury[converter_a,converter_b,converter_c,product_a,product_b,product_c,product_d] 2026-11-10: 0 transfers
+2026-11-11T02:45:19.279Z job 314451 refresh cake done
+2026-11-11T02:45:19.298Z job 314452 refresh crv started (attempt 1 of 2)
+2026-11-11T02:45:23.354Z job 314452 refresh crv: transfer_flow:crvusd>fee_distributor[fee_allocator] 2026-11-10: 0 transfers
+2026-11-11T02:45:24.140Z job 314452 refresh crv: transfer_flow:crvusd>curve_treasury[fee_allocator] 2026-11-10: 0 transfers
+2026-11-11T02:45:25.136Z job 314452 refresh crv: transfer_flow:crvusd>fee_allocator[hooker] 2026-11-10: 0 transfers
+2026-11-11T02:45:25.738Z job 314452 refresh crv done
+2026-11-11T02:45:25.761Z job 314453 refresh cvxcrv started (attempt 1 of 2)
+2026-11-11T02:45:27.627Z job 314453 refresh cvxcrv: transfer_flow:crvusd>wrapper[crvusd_pool] 2026-11-10: 268 transfers
+2026-11-11T02:45:29.496Z job 314453 refresh cvxcrv: transfer_flow:crv>wrapper[base_reward_pool] 2026-11-10: 268 transfers
+2026-11-11T02:45:32.027Z job 314453 refresh cvxcrv: transfer_flow:cvx>wrapper[cvx_distribution,cvx_mint] 2026-11-10: 268 transfers
+2026-11-11T02:45:33.058Z job 314453 refresh cvxcrv: transfer_flow:crv>booster[voter_proxy] 2026-11-10: 230 transfers
+2026-11-11T02:45:33.920Z job 314453 refresh cvxcrv: transfer_flow:crv>base_reward_pool[booster] 2026-11-10: 229 transfers
+2026-11-11T02:45:34.900Z job 314453 refresh cvxcrv: transfer_flow:crv>cvx_reward_pool[booster] 2026-11-10: 229 transfers
+2026-11-11T02:45:35.720Z job 314453 refresh cvxcrv: transfer_flow:crv>convex_treasury[booster] 2026-11-10: 229 transfers
+2026-11-11T02:45:36.829Z job 314453 refresh cvxcrv done
+2026-11-11T02:45:36.848Z job 314454 refresh hype started (attempt 1 of 2)
+2026-11-11T02:45:46.995Z job 314454 refresh hype done
+2026-11-11T02:45:47.010Z job 314455 refresh link started (attempt 1 of 2)
+2026-11-11T02:45:50.840Z job 314455 refresh link: transfer_flow:token>reserve[fee_converter] 2026-11-10: 0 transfers
+2026-11-11T02:45:51.624Z job 314455 refresh link: transfer_flow:token>release_hub[*] 2026-11-10: 0 transfers
+2026-11-11T02:45:52.374Z job 314455 refresh link: transfer_flow:token>release_rewards[*] 2026-11-10: 0 transfers
+2026-11-11T02:45:52.901Z job 314455 refresh link done
+2026-11-11T02:45:52.917Z job 314456 refresh lit started (attempt 1 of 2)
+2026-11-11T02:46:16.802Z job 314456 refresh lit: transfer_flow:token>dead[burn_safe] 2026-11-10: 0 transfers
+2026-11-11T02:46:17.467Z job 314456 refresh lit: transfer_flow:token>prime_passthrough[buyback_wallet] 2026-11-10: 0 transfers
+2026-11-11T02:46:17.882Z job 314456 refresh lit done
+2026-11-11T02:46:17.907Z job 314457 refresh pump started (attempt 1 of 2)
+2026-11-11T02:46:21.793Z job 314457 refresh pump done
+2026-11-11T02:46:21.809Z job 314458 refresh sdcrv started (attempt 1 of 2)
+2026-11-11T02:46:23.425Z job 314458 refresh sdcrv: transfer_flow:crvusd>gauge[accumulator] 2026-11-10: 0 transfers
+2026-11-11T02:46:24.149Z job 314458 refresh sdcrv: transfer_flow:crv>gauge[accumulator] 2026-11-10: 0 transfers
+2026-11-11T02:46:25.395Z job 314458 refresh sdcrv: transfer_flow:token>merkle_stash[botmarket] 2026-11-10: 1 transfers
+2026-11-11T02:46:27.758Z job 314458 refresh sdcrv: transfer_flow:crv>sd_accountant[locker] 2026-11-10: 69 transfers
+2026-11-11T02:46:28.640Z job 314458 refresh sdcrv: transfer_flow:crv>sd_fee_receiver[sd_accountant,sd_staking_v2_fee] 2026-11-10: 0 transfers
+2026-11-11T02:46:29.704Z job 314458 refresh sdcrv: transfer_flow:crv>sd_vesdt_recipient[sd_fee_receiver] 2026-11-10: 0 transfers
+2026-11-11T02:46:30.503Z job 314458 refresh sdcrv: transfer_flow:crv>sd_treasury[sd_fee_receiver] 2026-11-10: 0 transfers
+2026-11-11T02:46:31.456Z job 314458 refresh sdcrv: transfer_flow:crv>sd_boost_delegation[accumulator] 2026-11-10: 0 transfers
+2026-11-11T02:46:32.185Z job 314458 refresh sdcrv: transfer_flow:crvusd>sd_liquidity_fee[accumulator] 2026-11-10: 0 transfers
+2026-11-11T02:46:32.921Z job 314458 refresh sdcrv: transfer_flow:crvusd>sd_treasury[accumulator] 2026-11-10: 0 transfers
+2026-11-11T02:46:34.392Z job 314458 refresh sdcrv done
+2026-11-11T02:46:34.410Z job 314459 refresh sky started (attempt 1 of 2)
+2026-11-11T02:46:37.816Z job 314459 refresh sky: transfer_flow:usds>usds_farm[zero] 2026-11-10: 31 transfers
+2026-11-11T02:46:40.387Z job 314459 refresh sky: transfer_flow:token>pause_proxy[sky_usds_pair] 2026-11-10: 31 transfers
+2026-11-11T02:46:40.988Z job 314459 refresh sky: transfer_flow:token>sky_farm[*] 2026-11-10: 0 transfers
+2026-11-11T02:46:41.622Z job 314459 refresh sky: transfer_flow:token>usds_sky_farm[*] 2026-11-10: 0 transfers
+2026-11-11T02:46:42.298Z job 314459 refresh sky done
+2026-11-11T02:46:42.318Z job 314460 refresh uni started (attempt 1 of 2)
+2026-11-11T02:46:45.800Z job 314460 refresh uni: transfer_flow:token>dead[*] 2026-11-10: 20 transfers
+2026-11-11T02:46:46.095Z job 314460 refresh uni done
+2026-11-11T02:46:46.111Z job 314461 refresh vvv started (attempt 1 of 2)
+2026-11-11T02:47:18.867Z job 314461 refresh vvv: transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe] 2026-11-10: 6132 transfers
+2026-11-11T02:47:19.378Z job 314461 refresh vvv done
+2026-11-11T02:47:19.401Z job 314462 refresh ycrv started (attempt 1 of 2)
+2026-11-11T02:47:20.907Z job 314462 refresh ycrv: transfer_flow:yv_crvusd>distributor[receiver] 2026-11-10: 0 transfers
+2026-11-11T02:47:21.634Z job 314462 refresh ycrv: transfer_flow:yv_crvusd>yearn_treasury[receiver,splitter] 2026-11-10: 0 transfers
+2026-11-11T02:47:22.984Z job 314462 refresh ycrv: transfer_flow:st_ycrv>yearn_treasury[st_ycrv] 2026-11-10: 1 transfers
+2026-11-11T02:47:23.731Z job 314462 refresh ycrv: transfer_flow:crvusd>splitter[fee_burner,voter] 2026-11-10: 0 transfers
+2026-11-11T02:47:24.605Z job 314462 refresh ycrv done
+2026-11-11T02:47:24.624Z job 314463 nightly_report started (attempt 1 of 1)
+2026-11-11T02:47:32.016Z job 314463 nightly_report done
+2026-11-11T02:47:32.033Z job 314540 snapshot_push started (attempt 1 of 1)
+2026-11-11T02:47:36.000Z job 314540 snapshot_push done
+2026-11-11T03:30:08.100Z queued job 316088 retention slot 2026-11-11T03:30:00.000Z
+2026-11-11T03:30:08.886Z job 316088 retention started (attempt 1 of 1)
+2026-11-11T03:30:09.133Z job 316088 retention done
+2026-11-11T06:15:14.794Z queued job 322025 levels slot 2026-11-11T06:15:00.000Z
+2026-11-11T06:15:14.989Z job 322025 levels started (attempt 1 of 1)
+2026-11-11T06:15:29.283Z job 322025 levels done
+2026-11-11T06:15:29.300Z job 322029 snapshot_push started (attempt 1 of 1)
+2026-11-11T06:15:33.324Z job 322029 snapshot_push done
+2026-11-11T12:15:28.593Z queued job 334986 levels slot 2026-11-11T12:15:00.000Z
+2026-11-11T12:15:32.183Z job 334986 levels started (attempt 1 of 1)
+2026-11-11T12:15:54.396Z job 334986 levels done
+2026-11-11T12:15:54.413Z job 334990 snapshot_push started (attempt 1 of 1)
+2026-11-11T12:15:58.577Z job 334990 snapshot_push done
+2026-11-11T16:25:33.880Z drained: claiming nothing until orion daemon undrain
+2026-11-11T16:25:35.993Z stop requested
+2026-11-11T16:25:36.005Z daemon stopped
+2026-11-11T16:25:38.111Z daemon started: venus-424784-f4682098 env stage release orion-2026.11.11.1 database orion_stage schema orion
+2026-11-11T16:40:08.709Z queued job 344510 disclosure_watch slot 2026-11-11T16:40:00.000Z
+2026-11-11T16:40:09.007Z job 344510 disclosure_watch started (attempt 1 of 1)
+2026-11-11T16:40:09.009Z job 344510 disclosure_watch: disclosure_watch: dry scan with python3
+2026-11-11T16:40:09.152Z job 344510 disclosure_watch done
+2026-11-11T18:15:12.515Z queued job 347929 levels slot 2026-11-11T18:15:00.000Z
+2026-11-11T18:15:14.904Z job 347929 levels started (attempt 1 of 1)
+2026-11-11T18:15:26.806Z job 347929 levels done
+2026-11-11T18:15:26.824Z job 347933 snapshot_push started (attempt 1 of 1)
+2026-11-11T18:15:35.909Z job 347933 snapshot_push done
+2026-11-12T00:15:26.336Z queued job 360890 levels slot 2026-11-12T00:15:00.000Z
+2026-11-12T00:15:30.047Z job 360890 levels started (attempt 1 of 1)
+2026-11-12T00:15:46.499Z job 360890 levels done
+2026-11-12T00:15:46.522Z job 360894 snapshot_push started (attempt 1 of 1)
+2026-11-12T00:15:50.974Z job 360894 snapshot_push done
+2026-11-12T02:45:01.975Z queued job 366259 refresh aero slot 2026-11-12T02:45:00.000Z
+2026-11-12T02:45:01.982Z queued job 366260 refresh cake slot 2026-11-12T02:45:00.000Z
+2026-11-12T02:45:01.996Z queued job 366261 refresh crv slot 2026-11-12T02:45:00.000Z
+2026-11-12T02:45:02.001Z queued job 366262 refresh cvxcrv slot 2026-11-12T02:45:00.000Z
+2026-11-12T02:45:02.006Z queued job 366263 refresh hype slot 2026-11-12T02:45:00.000Z
+2026-11-12T02:45:02.010Z queued job 366264 refresh link slot 2026-11-12T02:45:00.000Z
+2026-11-12T02:45:02.015Z queued job 366265 refresh lit slot 2026-11-12T02:45:00.000Z
+2026-11-12T02:45:02.024Z queued job 366266 refresh pump slot 2026-11-12T02:45:00.000Z
+2026-11-12T02:45:02.032Z queued job 366267 refresh sdcrv slot 2026-11-12T02:45:00.000Z
+2026-11-12T02:45:02.038Z queued job 366268 refresh sky slot 2026-11-12T02:45:00.000Z
+2026-11-12T02:45:02.044Z queued job 366269 refresh uni slot 2026-11-12T02:45:00.000Z
+2026-11-12T02:45:02.053Z queued job 366270 refresh vvv slot 2026-11-12T02:45:00.000Z
+2026-11-12T02:45:02.067Z queued job 366271 refresh ycrv slot 2026-11-12T02:45:00.000Z
+2026-11-12T02:45:02.074Z queued job 366272 nightly_report slot 2026-11-12T02:45:00.000Z
+2026-11-12T02:45:06.087Z job 366259 refresh aero started (attempt 1 of 2)
+2026-11-12T02:45:12.340Z job 366259 refresh aero done
+2026-11-12T02:45:12.359Z job 366260 refresh cake started (attempt 1 of 2)
+2026-11-12T02:45:16.780Z job 366260 refresh cake: transfer_flow:token>burner[converter_a,converter_b,converter_c,converter_owner,product_a,product_b,product_c] 2026-11-11: 0 transfers
+2026-11-12T02:45:17.649Z job 366260 refresh cake: transfer_flow:token>treasury[converter_a,converter_b,converter_c,product_a,product_b,product_c,product_d] 2026-11-11: 0 transfers
+2026-11-12T02:45:18.226Z job 366260 refresh cake done
+2026-11-12T02:45:18.244Z job 366261 refresh crv started (attempt 1 of 2)
+2026-11-12T02:45:22.016Z job 366261 refresh crv: transfer_flow:crvusd>fee_distributor[fee_allocator] 2026-11-11: 40 transfers
+2026-11-12T02:45:22.618Z job 366261 refresh crv: transfer_flow:crvusd>curve_treasury[fee_allocator] 2026-11-11: 40 transfers
+2026-11-12T02:45:23.356Z job 366261 refresh crv: transfer_flow:crvusd>fee_allocator[hooker] 2026-11-11: 40 transfers
+2026-11-12T02:45:23.946Z job 366261 refresh crv done
+2026-11-12T02:45:23.970Z job 366262 refresh cvxcrv started (attempt 1 of 2)
+2026-11-12T02:45:26.314Z job 366262 refresh cvxcrv: transfer_flow:crvusd>wrapper[crvusd_pool] 2026-11-11: 302 transfers
+2026-11-12T02:45:27.636Z job 366262 refresh cvxcrv: transfer_flow:crv>wrapper[base_reward_pool] 2026-11-11: 300 transfers
+2026-11-12T02:45:30.126Z job 366262 refresh cvxcrv: transfer_flow:cvx>wrapper[cvx_distribution,cvx_mint] 2026-11-11: 302 transfers
+2026-11-12T02:45:31.056Z job 366262 refresh cvxcrv: transfer_flow:crv>booster[voter_proxy] 2026-11-11: 247 transfers
+2026-11-12T02:45:31.812Z job 366262 refresh cvxcrv: transfer_flow:crv>base_reward_pool[booster] 2026-11-11: 246 transfers
+2026-11-12T02:45:32.661Z job 366262 refresh cvxcrv: transfer_flow:crv>cvx_reward_pool[booster] 2026-11-11: 246 transfers
+2026-11-12T02:45:33.347Z job 366262 refresh cvxcrv: transfer_flow:crv>convex_treasury[booster] 2026-11-11: 246 transfers
+2026-11-12T02:45:34.452Z job 366262 refresh cvxcrv done
+2026-11-12T02:45:34.475Z job 366263 refresh hype started (attempt 1 of 2)
+2026-11-12T02:45:44.063Z job 366263 refresh hype done
+2026-11-12T02:45:44.087Z job 366264 refresh link started (attempt 1 of 2)
+2026-11-12T02:45:47.793Z job 366264 refresh link: transfer_flow:token>reserve[fee_converter] 2026-11-11: 0 transfers
+2026-11-12T02:45:48.534Z job 366264 refresh link: transfer_flow:token>release_hub[*] 2026-11-11: 0 transfers
+2026-11-12T02:45:49.159Z job 366264 refresh link: transfer_flow:token>release_rewards[*] 2026-11-11: 0 transfers
+2026-11-12T02:45:49.668Z job 366264 refresh link done
+2026-11-12T02:45:49.685Z job 366265 refresh lit started (attempt 1 of 2)
+2026-11-12T02:46:14.383Z job 366265 refresh lit: transfer_flow:token>dead[burn_safe] 2026-11-11: 0 transfers
+2026-11-12T02:46:15.067Z job 366265 refresh lit: transfer_flow:token>prime_passthrough[buyback_wallet] 2026-11-11: 0 transfers
+2026-11-12T02:46:15.472Z job 366265 refresh lit done
+2026-11-12T02:46:15.492Z job 366266 refresh pump started (attempt 1 of 2)
+2026-11-12T02:46:19.196Z job 366266 refresh pump done
+2026-11-12T02:46:19.212Z job 366267 refresh sdcrv started (attempt 1 of 2)
+2026-11-12T02:46:20.672Z job 366267 refresh sdcrv: transfer_flow:crvusd>gauge[accumulator] 2026-11-11: 0 transfers
+2026-11-12T02:46:21.588Z job 366267 refresh sdcrv: transfer_flow:crv>gauge[accumulator] 2026-11-11: 0 transfers
+2026-11-12T02:46:22.697Z job 366267 refresh sdcrv: transfer_flow:token>merkle_stash[botmarket] 2026-11-11: 0 transfers
+2026-11-12T02:46:24.675Z job 366267 refresh sdcrv: transfer_flow:crv>sd_accountant[locker] 2026-11-11: 56 transfers
+2026-11-12T02:46:25.459Z job 366267 refresh sdcrv: transfer_flow:crv>sd_fee_receiver[sd_accountant,sd_staking_v2_fee] 2026-11-11: 0 transfers
+2026-11-12T02:46:26.516Z job 366267 refresh sdcrv: transfer_flow:crv>sd_vesdt_recipient[sd_fee_receiver] 2026-11-11: 0 transfers
+2026-11-12T02:46:27.139Z job 366267 refresh sdcrv: transfer_flow:crv>sd_treasury[sd_fee_receiver] 2026-11-11: 0 transfers
+2026-11-12T02:46:28.053Z job 366267 refresh sdcrv: transfer_flow:crv>sd_boost_delegation[accumulator] 2026-11-11: 0 transfers
+2026-11-12T02:46:28.643Z job 366267 refresh sdcrv: transfer_flow:crvusd>sd_liquidity_fee[accumulator] 2026-11-11: 0 transfers
+2026-11-12T02:46:29.266Z job 366267 refresh sdcrv: transfer_flow:crvusd>sd_treasury[accumulator] 2026-11-11: 0 transfers
+2026-11-12T02:46:30.716Z job 366267 refresh sdcrv done
+2026-11-12T02:46:30.732Z job 366268 refresh sky started (attempt 1 of 2)
+2026-11-12T02:46:34.228Z job 366268 refresh sky: transfer_flow:usds>usds_farm[zero] 2026-11-11: 30 transfers
+2026-11-12T02:46:36.608Z job 366268 refresh sky: transfer_flow:token>pause_proxy[sky_usds_pair] 2026-11-11: 30 transfers
+2026-11-12T02:46:37.120Z job 366268 refresh sky: transfer_flow:token>sky_farm[*] 2026-11-11: 0 transfers
+2026-11-12T02:46:37.611Z job 366268 refresh sky: transfer_flow:token>usds_sky_farm[*] 2026-11-11: 0 transfers
+2026-11-12T02:46:38.264Z job 366268 refresh sky done
+2026-11-12T02:46:38.287Z job 366269 refresh uni started (attempt 1 of 2)
+2026-11-12T02:46:41.746Z job 366269 refresh uni: transfer_flow:token>dead[*] 2026-11-11: 17 transfers
+2026-11-12T02:46:42.015Z job 366269 refresh uni done
+2026-11-12T02:46:42.039Z job 366270 refresh vvv started (attempt 1 of 2)
+2026-11-12T02:47:03.441Z job 366270 refresh vvv: transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe] 2026-11-11: 6197 transfers
+2026-11-12T02:47:03.931Z job 366270 refresh vvv done
+2026-11-12T02:47:03.956Z job 366271 refresh ycrv started (attempt 1 of 2)
+2026-11-12T02:47:05.760Z job 366271 refresh ycrv: transfer_flow:yv_crvusd>distributor[receiver] 2026-11-11: 0 transfers
+2026-11-12T02:47:06.301Z job 366271 refresh ycrv: transfer_flow:yv_crvusd>yearn_treasury[receiver,splitter] 2026-11-11: 0 transfers
+2026-11-12T02:47:07.450Z job 366271 refresh ycrv: transfer_flow:st_ycrv>yearn_treasury[st_ycrv] 2026-11-11: 1 transfers
+2026-11-12T02:47:08.038Z job 366271 refresh ycrv: transfer_flow:crvusd>splitter[fee_burner,voter] 2026-11-11: 0 transfers
+2026-11-12T02:47:08.896Z job 366271 refresh ycrv done
+2026-11-12T02:47:08.913Z job 366272 nightly_report started (attempt 1 of 1)
+2026-11-12T02:47:15.832Z job 366272 nightly_report done
+2026-11-12T02:47:15.851Z job 366349 snapshot_push started (attempt 1 of 1)
+2026-11-12T02:47:19.954Z job 366349 snapshot_push done
+2026-11-12T03:30:03.920Z queued job 367897 retention slot 2026-11-12T03:30:00.000Z
+2026-11-12T03:30:07.939Z job 367897 retention started (attempt 1 of 1)
+2026-11-12T03:30:08.164Z job 367897 retention done
+2026-11-12T06:15:10.358Z queued job 373834 levels slot 2026-11-12T06:15:00.000Z
+2026-11-12T06:15:14.356Z job 373834 levels started (attempt 1 of 1)
+2026-11-12T06:15:31.900Z job 373834 levels done
+2026-11-12T06:15:31.917Z job 373838 snapshot_push started (attempt 1 of 1)
+2026-11-12T06:15:36.023Z job 373838 snapshot_push done
+2026-11-12T12:15:24.833Z queued job 386795 levels slot 2026-11-12T12:15:00.000Z
+2026-11-12T12:15:28.268Z job 386795 levels started (attempt 1 of 1)
+2026-11-12T12:15:40.268Z job 386795 levels done
+2026-11-12T12:15:40.288Z job 386799 snapshot_push started (attempt 1 of 1)
+2026-11-12T12:15:44.215Z job 386799 snapshot_push done
+2026-11-12T16:40:04.676Z queued job 396319 disclosure_watch slot 2026-11-12T16:40:00.000Z
+2026-11-12T16:40:06.285Z job 396319 disclosure_watch started (attempt 1 of 1)
+2026-11-12T16:40:09.894Z job 396319 disclosure_watch: disclosure_watch: yt-dlp upgraded
+2026-11-12T16:40:09.894Z job 396319 disclosure_watch: disclosure_watch: dry scan with /home/orion-stage/watcher-venv/bin/python
+2026-11-12T16:40:10.037Z job 396319 disclosure_watch done
+2026-11-12T18:15:08.939Z queued job 399738 levels slot 2026-11-12T18:15:00.000Z
+2026-11-12T18:15:10.813Z job 399738 levels started (attempt 1 of 1)
+2026-11-12T18:15:26.005Z job 399738 levels done
+2026-11-12T18:15:26.024Z job 399742 snapshot_push started (attempt 1 of 1)
+2026-11-12T18:15:30.017Z job 399742 snapshot_push done
+2026-11-12T23:30:05.642Z drained: claiming nothing until orion daemon undrain
+2026-11-12T23:30:07.588Z stop requested
+2026-11-12T23:30:07.602Z daemon stopped
+2026-11-12T23:30:09.702Z daemon started: venus-491600-283bfa03 env stage release orion-2026.11.12.1 database orion_stage schema orion
+2026-11-13T00:15:11.426Z queued job 412699 levels slot 2026-11-13T00:15:00.000Z
+2026-11-13T00:15:12.509Z job 412699 levels started (attempt 1 of 1)
+2026-11-13T00:15:23.275Z job 412699 levels done
+2026-11-13T00:15:23.293Z job 412703 snapshot_push started (attempt 1 of 1)
+2026-11-13T00:15:27.566Z job 412703 snapshot_push done
+2026-11-13T02:45:17.558Z queued job 418086 refresh aero slot 2026-11-13T02:45:00.000Z
+2026-11-13T02:45:17.565Z queued job 418087 refresh cake slot 2026-11-13T02:45:00.000Z
+2026-11-13T02:45:17.579Z queued job 418088 refresh crv slot 2026-11-13T02:45:00.000Z
+2026-11-13T02:45:17.587Z queued job 418089 refresh cvxcrv slot 2026-11-13T02:45:00.000Z
+2026-11-13T02:45:17.597Z queued job 418090 refresh hype slot 2026-11-13T02:45:00.000Z
+2026-11-13T02:45:17.603Z queued job 418091 refresh link slot 2026-11-13T02:45:00.000Z
+2026-11-13T02:45:17.609Z queued job 418092 refresh lit slot 2026-11-13T02:45:00.000Z
+2026-11-13T02:45:17.616Z queued job 418093 refresh pump slot 2026-11-13T02:45:00.000Z
+2026-11-13T02:45:17.621Z queued job 418094 refresh sdcrv slot 2026-11-13T02:45:00.000Z
+2026-11-13T02:45:17.625Z queued job 418095 refresh sky slot 2026-11-13T02:45:00.000Z
+2026-11-13T02:45:17.630Z queued job 418096 refresh uni slot 2026-11-13T02:45:00.000Z
+2026-11-13T02:45:17.634Z queued job 418097 refresh vvv slot 2026-11-13T02:45:00.000Z
+2026-11-13T02:45:17.639Z queued job 418098 refresh ycrv slot 2026-11-13T02:45:00.000Z
+2026-11-13T02:45:17.646Z queued job 418099 nightly_report slot 2026-11-13T02:45:00.000Z
+2026-11-13T02:45:17.809Z job 418086 refresh aero started (attempt 1 of 2)
+2026-11-13T02:45:25.968Z job 418086 refresh aero done
+2026-11-13T02:45:25.993Z job 418087 refresh cake started (attempt 1 of 2)
+2026-11-13T02:45:30.493Z job 418087 refresh cake: transfer_flow:token>burner[converter_a,converter_b,converter_c,converter_owner,product_a,product_b,product_c] 2026-11-12: 0 transfers
+2026-11-13T02:45:31.489Z job 418087 refresh cake: transfer_flow:token>treasury[converter_a,converter_b,converter_c,product_a,product_b,product_c,product_d] 2026-11-12: 0 transfers
+2026-11-13T02:45:32.018Z job 418087 refresh cake done
+2026-11-13T02:45:32.040Z job 418088 refresh crv started (attempt 1 of 2)
+2026-11-13T02:45:36.229Z job 418088 refresh crv: transfer_flow:crvusd>fee_distributor[fee_allocator] 2026-11-12: 0 transfers
+2026-11-13T02:45:37.026Z job 418088 refresh crv: transfer_flow:crvusd>curve_treasury[fee_allocator] 2026-11-12: 0 transfers
+2026-11-13T02:45:37.897Z job 418088 refresh crv: transfer_flow:crvusd>fee_allocator[hooker] 2026-11-12: 0 transfers
+2026-11-13T02:45:38.468Z job 418088 refresh crv done
+2026-11-13T02:45:38.486Z job 418089 refresh cvxcrv started (attempt 1 of 2)
+2026-11-13T02:45:41.035Z job 418089 refresh cvxcrv: transfer_flow:crvusd>wrapper[crvusd_pool] 2026-11-12: 252 transfers
+2026-11-13T02:45:42.721Z job 418089 refresh cvxcrv: transfer_flow:crv>wrapper[base_reward_pool] 2026-11-12: 280 transfers
+2026-11-13T02:45:45.577Z job 418089 refresh cvxcrv: transfer_flow:cvx>wrapper[cvx_distribution,cvx_mint] 2026-11-12: 280 transfers
+2026-11-13T02:45:46.462Z job 418089 refresh cvxcrv: transfer_flow:crv>booster[voter_proxy] 2026-11-12: 193 transfers
+2026-11-13T02:45:47.333Z job 418089 refresh cvxcrv: transfer_flow:crv>base_reward_pool[booster] 2026-11-12: 193 transfers
+2026-11-13T02:45:48.227Z job 418089 refresh cvxcrv: transfer_flow:crv>cvx_reward_pool[booster] 2026-11-12: 193 transfers
+2026-11-13T02:45:48.992Z job 418089 refresh cvxcrv: transfer_flow:crv>convex_treasury[booster] 2026-11-12: 193 transfers
+2026-11-13T02:45:50.093Z job 418089 refresh cvxcrv done
+2026-11-13T02:45:50.112Z job 418090 refresh hype started (attempt 1 of 2)
+2026-11-13T02:45:59.463Z job 418090 refresh hype done
+2026-11-13T02:45:59.486Z job 418091 refresh link started (attempt 1 of 2)
+2026-11-13T02:46:03.445Z job 418091 refresh link: transfer_flow:token>reserve[fee_converter] 2026-11-12: 1 transfers
+2026-11-13T02:46:04.237Z job 418091 refresh link: transfer_flow:token>release_hub[*] 2026-11-12: 0 transfers
+2026-11-13T02:46:04.963Z job 418091 refresh link: transfer_flow:token>release_rewards[*] 2026-11-12: 0 transfers
+2026-11-13T02:46:05.490Z job 418091 refresh link done
+2026-11-13T02:46:05.514Z job 418092 refresh lit started (attempt 1 of 2)
+2026-11-13T02:46:27.880Z job 418092 refresh lit: transfer_flow:token>dead[burn_safe] 2026-11-12: 0 transfers
+2026-11-13T02:46:28.684Z job 418092 refresh lit: transfer_flow:token>prime_passthrough[buyback_wallet] 2026-11-12: 0 transfers
+2026-11-13T02:46:29.093Z job 418092 refresh lit done
+2026-11-13T02:46:29.114Z job 418093 refresh pump started (attempt 1 of 2)
+2026-11-13T02:46:32.814Z job 418093 refresh pump done
+2026-11-13T02:46:32.830Z job 418094 refresh sdcrv started (attempt 1 of 2)
+2026-11-13T02:46:34.232Z job 418094 refresh sdcrv: transfer_flow:crvusd>gauge[accumulator] 2026-11-12: 0 transfers
+2026-11-13T02:46:35.032Z job 418094 refresh sdcrv: transfer_flow:crv>gauge[accumulator] 2026-11-12: 0 transfers
+2026-11-13T02:46:36.772Z job 418094 refresh sdcrv: transfer_flow:token>merkle_stash[botmarket] 2026-11-12: 0 transfers
+2026-11-13T02:46:39.354Z job 418094 refresh sdcrv: transfer_flow:crv>sd_accountant[locker] 2026-11-12: 65 transfers
+2026-11-13T02:46:40.173Z job 418094 refresh sdcrv: transfer_flow:crv>sd_fee_receiver[sd_accountant,sd_staking_v2_fee] 2026-11-12: 0 transfers
+2026-11-13T02:46:41.066Z job 418094 refresh sdcrv: transfer_flow:crv>sd_vesdt_recipient[sd_fee_receiver] 2026-11-12: 0 transfers
+2026-11-13T02:46:41.827Z job 418094 refresh sdcrv: transfer_flow:crv>sd_treasury[sd_fee_receiver] 2026-11-12: 0 transfers
+2026-11-13T02:46:42.723Z job 418094 refresh sdcrv: transfer_flow:crv>sd_boost_delegation[accumulator] 2026-11-12: 0 transfers
+2026-11-13T02:46:43.458Z job 418094 refresh sdcrv: transfer_flow:crvusd>sd_liquidity_fee[accumulator] 2026-11-12: 0 transfers
+2026-11-13T02:46:44.247Z job 418094 refresh sdcrv: transfer_flow:crvusd>sd_treasury[accumulator] 2026-11-12: 0 transfers
+2026-11-13T02:46:45.660Z job 418094 refresh sdcrv done
+2026-11-13T02:46:45.677Z job 418095 refresh sky started (attempt 1 of 2)
+2026-11-13T02:46:49.280Z job 418095 refresh sky: transfer_flow:usds>usds_farm[zero] 2026-11-12: 31 transfers
+2026-11-13T02:46:51.688Z job 418095 refresh sky: transfer_flow:token>pause_proxy[sky_usds_pair] 2026-11-12: 31 transfers
+2026-11-13T02:46:52.284Z job 418095 refresh sky: transfer_flow:token>sky_farm[*] 2026-11-12: 0 transfers
+2026-11-13T02:46:52.913Z job 418095 refresh sky: transfer_flow:token>usds_sky_farm[*] 2026-11-12: 0 transfers
+2026-11-13T02:46:53.530Z job 418095 refresh sky done
+2026-11-13T02:46:53.551Z job 418096 refresh uni started (attempt 1 of 2)
+2026-11-13T02:46:57.086Z job 418096 refresh uni: transfer_flow:token>dead[*] 2026-11-12: 19 transfers
+2026-11-13T02:46:57.360Z job 418096 refresh uni done
+2026-11-13T02:46:57.377Z job 418097 refresh vvv started (attempt 1 of 2)
+2026-11-13T02:47:18.013Z job 418097 refresh vvv: transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe] 2026-11-12: 6036 transfers, 1 unlisted
+2026-11-13T02:47:18.482Z job 418097 refresh vvv done
+2026-11-13T02:47:18.506Z job 418098 refresh ycrv started (attempt 1 of 2)
+2026-11-13T02:47:19.795Z job 418098 refresh ycrv: transfer_flow:yv_crvusd>distributor[receiver] 2026-11-12: 0 transfers
+2026-11-13T02:47:20.496Z job 418098 refresh ycrv: transfer_flow:yv_crvusd>yearn_treasury[receiver,splitter] 2026-11-12: 0 transfers, 1 unlisted
+2026-11-13T02:47:22.047Z job 418098 refresh ycrv: transfer_flow:st_ycrv>yearn_treasury[st_ycrv] 2026-11-12: 1 transfers
+2026-11-13T02:47:22.798Z job 418098 refresh ycrv: transfer_flow:crvusd>splitter[fee_burner,voter] 2026-11-12: 0 transfers
+2026-11-13T02:47:23.647Z job 418098 refresh ycrv done
+2026-11-13T02:47:23.667Z job 418099 nightly_report started (attempt 1 of 1)
+2026-11-13T02:47:30.941Z job 418099 nightly_report done
+2026-11-13T02:47:30.958Z job 418176 snapshot_push started (attempt 1 of 1)
+2026-11-13T02:47:36.538Z job 418176 snapshot_push done
+2026-11-13T03:30:19.485Z queued job 419724 retention slot 2026-11-13T03:30:00.000Z
+2026-11-13T03:30:19.634Z job 419724 retention started (attempt 1 of 1)
+2026-11-13T03:30:19.876Z job 419724 retention done
+2026-11-13T06:08:50.423Z worker failed: the database system is shutting down
+2026-11-13T06:15:26.566Z queued job 425661 levels slot 2026-11-13T06:15:00.000Z
+2026-11-13T06:15:30.889Z singleton lock lost: the run lock on orion:daemon (orion daemon venus-491600-283bfa03) is gone: its connection ended; stopping
+2026-11-13T06:15:30.894Z stop requested: finishing job 425661
+2026-11-13T06:15:30.896Z worker failed: the daemon's singleton lock is gone (the run lock on orion:daemon (orion daemon venus-491600-283bfa03) is gone: its connection ended); exiting so that a restart takes it again
+2026-11-13T06:15:30.901Z daemon stopped
+2026-11-13T06:16:02.227Z daemon started: venus-500370-deddeeb2 env stage release orion-2026.11.12.1 database orion_stage schema orion
+2026-11-13T06:16:02.227Z ORION RESTARTED stage after unclean exit, job 425661 failed (lease_expired)
+2026-11-13T12:15:16.162Z queued job 438603 levels slot 2026-11-13T12:15:00.000Z
+2026-11-13T12:15:21.067Z job 438603 levels started (attempt 1 of 1)
+2026-11-13T12:15:31.375Z job 438603 levels done
+2026-11-13T12:15:31.397Z job 438607 snapshot_push started (attempt 1 of 1)
+2026-11-13T12:15:35.340Z job 438607 snapshot_push done
+2026-11-13T14:22:13.893Z job 443162 backfill hype started (attempt 1 of 1)
+2026-11-13T14:22:13.932Z job 443162 backfill hype: backfill hype flow_usd.af_buys_direct 3 days
+2026-11-13T14:22:21.130Z job 443162 backfill hype done
+2026-11-13T16:40:26.522Z queued job 448146 disclosure_watch slot 2026-11-13T16:40:00.000Z
+2026-11-13T16:40:30.421Z job 448146 disclosure_watch started (attempt 1 of 1)
+2026-11-13T16:40:30.424Z job 448146 disclosure_watch: disclosure_watch: dry scan with /home/orion-stage/watcher-venv/bin/python
+2026-11-13T16:40:30.565Z job 448146 disclosure_watch done
+2026-11-13T18:15:00.214Z queued job 451547 levels slot 2026-11-13T18:15:00.000Z
+2026-11-13T18:15:01.823Z job 451547 levels started (attempt 1 of 1)
+2026-11-13T18:15:17.038Z job 451547 levels done
+2026-11-13T18:15:17.058Z job 451551 snapshot_push started (attempt 1 of 1)
+2026-11-13T18:15:21.361Z job 451551 snapshot_push done
+2026-11-14T00:15:14.276Z queued job 464508 levels slot 2026-11-14T00:15:00.000Z
+2026-11-14T00:15:19.169Z job 464508 levels started (attempt 1 of 1)
+2026-11-14T00:15:30.394Z job 464508 levels done
+2026-11-14T00:15:30.418Z job 464512 snapshot_push started (attempt 1 of 1)
+2026-11-14T00:15:34.714Z job 464512 snapshot_push done
+2026-11-14T02:45:20.371Z queued job 469895 refresh aero slot 2026-11-14T02:45:00.000Z
+2026-11-14T02:45:20.378Z queued job 469896 refresh cake slot 2026-11-14T02:45:00.000Z
+2026-11-14T02:45:20.391Z queued job 469897 refresh crv slot 2026-11-14T02:45:00.000Z
+2026-11-14T02:45:20.396Z queued job 469898 refresh cvxcrv slot 2026-11-14T02:45:00.000Z
+2026-11-14T02:45:20.401Z queued job 469899 refresh hype slot 2026-11-14T02:45:00.000Z
+2026-11-14T02:45:20.405Z queued job 469900 refresh link slot 2026-11-14T02:45:00.000Z
+2026-11-14T02:45:20.410Z queued job 469901 refresh lit slot 2026-11-14T02:45:00.000Z
+2026-11-14T02:45:20.414Z queued job 469902 refresh pump slot 2026-11-14T02:45:00.000Z
+2026-11-14T02:45:20.419Z queued job 469903 refresh sdcrv slot 2026-11-14T02:45:00.000Z
+2026-11-14T02:45:20.423Z queued job 469904 refresh sky slot 2026-11-14T02:45:00.000Z
+2026-11-14T02:45:20.429Z queued job 469905 refresh uni slot 2026-11-14T02:45:00.000Z
+2026-11-14T02:45:20.436Z queued job 469906 refresh vvv slot 2026-11-14T02:45:00.000Z
+2026-11-14T02:45:20.444Z queued job 469907 refresh ycrv slot 2026-11-14T02:45:00.000Z
+2026-11-14T02:45:20.451Z queued job 469908 nightly_report slot 2026-11-14T02:45:00.000Z
+2026-11-14T02:45:24.179Z job 469895 refresh aero started (attempt 1 of 2)
+2026-11-14T02:45:31.645Z job 469895 refresh aero done
+2026-11-14T02:45:31.668Z job 469896 refresh cake started (attempt 1 of 2)
+2026-11-14T02:45:36.490Z job 469896 refresh cake: transfer_flow:token>burner[converter_a,converter_b,converter_c,converter_owner,product_a,product_b,product_c] 2026-11-13: 0 transfers
+2026-11-14T02:45:37.404Z job 469896 refresh cake: transfer_flow:token>treasury[converter_a,converter_b,converter_c,product_a,product_b,product_c,product_d] 2026-11-13: 0 transfers
+2026-11-14T02:45:37.925Z job 469896 refresh cake done
+2026-11-14T02:45:37.942Z job 469897 refresh crv started (attempt 1 of 2)
+2026-11-14T02:45:41.679Z job 469897 refresh crv: transfer_flow:crvusd>fee_distributor[fee_allocator] 2026-11-13: 0 transfers
+2026-11-14T02:45:42.265Z job 469897 refresh crv: transfer_flow:crvusd>curve_treasury[fee_allocator] 2026-11-13: 0 transfers
+2026-11-14T02:45:42.983Z job 469897 refresh crv: transfer_flow:crvusd>fee_allocator[hooker] 2026-11-13: 0 transfers
+2026-11-14T02:45:43.596Z job 469897 refresh crv done
+2026-11-14T02:45:43.621Z job 469898 refresh cvxcrv started (attempt 1 of 2)
+2026-11-14T02:45:44.893Z job 469898 refresh cvxcrv: transfer_flow:crvusd>wrapper[crvusd_pool] 2026-11-13: 225 transfers
+2026-11-14T02:45:47.464Z job 469898 refresh cvxcrv: transfer_flow:crv>wrapper[base_reward_pool] 2026-11-13: 225 transfers
+2026-11-14T02:45:49.725Z job 469898 refresh cvxcrv: transfer_flow:cvx>wrapper[cvx_distribution,cvx_mint] 2026-11-13: 225 transfers
+2026-11-14T02:45:50.605Z job 469898 refresh cvxcrv: transfer_flow:crv>booster[voter_proxy] 2026-11-13: 154 transfers
+2026-11-14T02:45:51.365Z job 469898 refresh cvxcrv: transfer_flow:crv>base_reward_pool[booster] 2026-11-13: 154 transfers
+2026-11-14T02:45:52.254Z job 469898 refresh cvxcrv: transfer_flow:crv>cvx_reward_pool[booster] 2026-11-13: 154 transfers
+2026-11-14T02:45:52.860Z job 469898 refresh cvxcrv: transfer_flow:crv>convex_treasury[booster] 2026-11-13: 154 transfers
+2026-11-14T02:45:53.969Z job 469898 refresh cvxcrv done
+2026-11-14T02:45:53.991Z job 469899 refresh hype started (attempt 1 of 2)
+2026-11-14T02:46:03.570Z job 469899 refresh hype done
+2026-11-14T02:46:03.595Z job 469900 refresh link started (attempt 1 of 2)
+2026-11-14T02:46:07.573Z job 469900 refresh link: transfer_flow:token>reserve[fee_converter] 2026-11-13: 0 transfers
+2026-11-14T02:46:08.241Z job 469900 refresh link: transfer_flow:token>release_hub[*] 2026-11-13: 0 transfers
+2026-11-14T02:46:08.840Z job 469900 refresh link: transfer_flow:token>release_rewards[*] 2026-11-13: 0 transfers
+2026-11-14T02:46:09.371Z job 469900 refresh link done
+2026-11-14T02:46:09.394Z job 469901 refresh lit started (attempt 1 of 2)
+2026-11-14T02:46:31.972Z job 469901 refresh lit: transfer_flow:token>dead[burn_safe] 2026-11-13: 0 transfers
+2026-11-14T02:46:32.497Z job 469901 refresh lit: transfer_flow:token>prime_passthrough[buyback_wallet] 2026-11-13: 0 transfers
+2026-11-14T02:46:32.891Z job 469901 refresh lit done
+2026-11-14T02:46:32.909Z job 469902 refresh pump started (attempt 1 of 2)
+2026-11-14T02:46:36.474Z job 469902 refresh pump done
+2026-11-14T02:46:36.499Z job 469903 refresh sdcrv started (attempt 1 of 2)
+2026-11-14T02:46:38.444Z job 469903 refresh sdcrv: transfer_flow:crvusd>gauge[accumulator] 2026-11-13: 1 transfers
+2026-11-14T02:46:39.174Z job 469903 refresh sdcrv: transfer_flow:crv>gauge[accumulator] 2026-11-13: 1 transfers
+2026-11-14T02:46:40.754Z job 469903 refresh sdcrv: transfer_flow:token>merkle_stash[botmarket] 2026-11-13: 0 transfers
+2026-11-14T02:46:43.014Z job 469903 refresh sdcrv: transfer_flow:crv>sd_accountant[locker] 2026-11-13: 51 transfers
+2026-11-14T02:46:43.839Z job 469903 refresh sdcrv: transfer_flow:crv>sd_fee_receiver[sd_accountant,sd_staking_v2_fee] 2026-11-13: 2 transfers
+2026-11-14T02:46:44.743Z job 469903 refresh sdcrv: transfer_flow:crv>sd_vesdt_recipient[sd_fee_receiver] 2026-11-13: 1 transfers
+2026-11-14T02:46:45.461Z job 469903 refresh sdcrv: transfer_flow:crv>sd_treasury[sd_fee_receiver] 2026-11-13: 1 transfers
+2026-11-14T02:46:46.181Z job 469903 refresh sdcrv: transfer_flow:crv>sd_boost_delegation[accumulator] 2026-11-13: 1 transfers
+2026-11-14T02:46:46.774Z job 469903 refresh sdcrv: transfer_flow:crvusd>sd_liquidity_fee[accumulator] 2026-11-13: 1 transfers
+2026-11-14T02:46:47.471Z job 469903 refresh sdcrv: transfer_flow:crvusd>sd_treasury[accumulator] 2026-11-13: 1 transfers
+2026-11-14T02:46:48.942Z job 469903 refresh sdcrv done
+2026-11-14T02:46:48.971Z job 469904 refresh sky started (attempt 1 of 2)
+2026-11-14T02:46:52.437Z job 469904 refresh sky: transfer_flow:usds>usds_farm[zero] 2026-11-13: 31 transfers
+2026-11-14T02:46:54.845Z job 469904 refresh sky: transfer_flow:token>pause_proxy[sky_usds_pair] 2026-11-13: 31 transfers
+2026-11-14T02:46:55.361Z job 469904 refresh sky: transfer_flow:token>sky_farm[*] 2026-11-13: 0 transfers
+2026-11-14T02:46:55.827Z job 469904 refresh sky: transfer_flow:token>usds_sky_farm[*] 2026-11-13: 0 transfers
+2026-11-14T02:46:56.519Z job 469904 refresh sky done
+2026-11-14T02:46:56.536Z job 469905 refresh uni started (attempt 1 of 2)
+2026-11-14T02:46:59.948Z job 469905 refresh uni: transfer_flow:token>dead[*] 2026-11-13: 9 transfers
+2026-11-14T02:47:00.215Z job 469905 refresh uni done
+2026-11-14T02:47:00.237Z job 469906 refresh vvv started (attempt 1 of 2)
+2026-11-14T02:47:20.225Z job 469906 refresh vvv: transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe] 2026-11-13: 6452 transfers
+2026-11-14T02:47:20.674Z job 469906 refresh vvv done
+2026-11-14T02:47:20.692Z job 469907 refresh ycrv started (attempt 1 of 2)
+2026-11-14T02:47:21.769Z job 469907 refresh ycrv: transfer_flow:yv_crvusd>distributor[receiver] 2026-11-13: 0 transfers
+2026-11-14T02:47:22.371Z job 469907 refresh ycrv: transfer_flow:yv_crvusd>yearn_treasury[receiver,splitter] 2026-11-13: 0 transfers
+2026-11-14T02:47:24.194Z job 469907 refresh ycrv: transfer_flow:st_ycrv>yearn_treasury[st_ycrv] 2026-11-13: 1 transfers
+2026-11-14T02:47:24.871Z job 469907 refresh ycrv: transfer_flow:crvusd>splitter[fee_burner,voter] 2026-11-13: 0 transfers
+2026-11-14T02:47:25.727Z job 469907 refresh ycrv done
+2026-11-14T02:47:25.743Z job 469908 nightly_report started (attempt 1 of 1)
+2026-11-14T02:47:32.493Z job 469908 nightly_report done
+2026-11-14T02:47:32.516Z job 469985 snapshot_push started (attempt 1 of 1)
+2026-11-14T02:47:36.876Z job 469985 snapshot_push done
+2026-11-14T03:30:22.497Z queued job 471533 retention slot 2026-11-14T03:30:00.000Z
+2026-11-14T03:30:24.624Z job 471533 retention started (attempt 1 of 1)
+2026-11-14T03:30:24.857Z job 471533 retention done
+2026-11-14T06:15:29.264Z queued job 477470 levels slot 2026-11-14T06:15:00.000Z
+2026-11-14T06:15:30.925Z job 477470 levels started (attempt 1 of 1)
+2026-11-14T06:15:42.292Z job 477470 levels done
+2026-11-14T06:15:42.313Z job 477474 snapshot_push started (attempt 1 of 1)
+2026-11-14T06:15:46.641Z job 477474 snapshot_push done
+2026-11-14T12:15:13.095Z queued job 490413 levels slot 2026-11-14T12:15:00.000Z
+2026-11-14T12:15:15.371Z job 490413 levels started (attempt 1 of 1)
+2026-11-14T12:15:25.217Z job 490413 levels done
+2026-11-14T12:15:25.234Z job 490417 snapshot_push started (attempt 1 of 1)
+2026-11-14T12:15:29.461Z job 490417 snapshot_push done
+2026-11-14T16:40:23.754Z queued job 499955 disclosure_watch slot 2026-11-14T16:40:00.000Z
+2026-11-14T16:40:26.979Z job 499955 disclosure_watch started (attempt 1 of 1)
+2026-11-14T16:40:26.980Z job 499955 disclosure_watch: disclosure_watch: dry scan with /home/orion-stage/watcher-venv/bin/python
+2026-11-14T16:40:27.118Z job 499955 disclosure_watch done
+2026-11-14T18:15:27.545Z queued job 503374 levels slot 2026-11-14T18:15:00.000Z
+2026-11-14T18:15:27.774Z job 503374 levels started (attempt 1 of 1)
+2026-11-14T18:15:38.649Z job 503374 levels done
+2026-11-14T18:15:38.672Z job 503378 snapshot_push started (attempt 1 of 1)
+2026-11-14T18:15:42.577Z job 503378 snapshot_push done
+2026-11-15T00:15:11.850Z queued job 516317 levels slot 2026-11-15T00:15:00.000Z
+2026-11-15T00:15:14.312Z job 516317 levels started (attempt 1 of 1)
+2026-11-15T00:15:25.834Z job 516317 levels done
+2026-11-15T00:15:25.855Z job 516321 snapshot_push started (attempt 1 of 1)
+2026-11-15T00:15:29.931Z job 516321 snapshot_push done
+2026-11-15T02:45:17.627Z queued job 521704 refresh aero slot 2026-11-15T02:45:00.000Z
+2026-11-15T02:45:17.632Z queued job 521705 refresh cake slot 2026-11-15T02:45:00.000Z
+2026-11-15T02:45:17.646Z queued job 521706 refresh crv slot 2026-11-15T02:45:00.000Z
+2026-11-15T02:45:17.658Z queued job 521707 refresh cvxcrv slot 2026-11-15T02:45:00.000Z
+2026-11-15T02:45:17.664Z queued job 521708 refresh hype slot 2026-11-15T02:45:00.000Z
+2026-11-15T02:45:17.671Z queued job 521709 refresh link slot 2026-11-15T02:45:00.000Z
+2026-11-15T02:45:17.677Z queued job 521710 refresh lit slot 2026-11-15T02:45:00.000Z
+2026-11-15T02:45:17.684Z queued job 521711 refresh pump slot 2026-11-15T02:45:00.000Z
+2026-11-15T02:45:17.689Z queued job 521712 refresh sdcrv slot 2026-11-15T02:45:00.000Z
+2026-11-15T02:45:17.693Z queued job 521713 refresh sky slot 2026-11-15T02:45:00.000Z
+2026-11-15T02:45:17.698Z queued job 521714 refresh uni slot 2026-11-15T02:45:00.000Z
+2026-11-15T02:45:17.702Z queued job 521715 refresh vvv slot 2026-11-15T02:45:00.000Z
+2026-11-15T02:45:17.707Z queued job 521716 refresh ycrv slot 2026-11-15T02:45:00.000Z
+2026-11-15T02:45:17.711Z queued job 521717 nightly_report slot 2026-11-15T02:45:00.000Z
+2026-11-15T02:45:20.090Z job 521704 refresh aero started (attempt 1 of 2)
+2026-11-15T02:45:25.718Z job 521704 refresh aero done
+2026-11-15T02:45:25.741Z job 521705 refresh cake started (attempt 1 of 2)
+2026-11-15T02:45:29.841Z job 521705 refresh cake: transfer_flow:token>burner[converter_a,converter_b,converter_c,converter_owner,product_a,product_b,product_c] 2026-11-14: 0 transfers
+2026-11-15T02:45:30.722Z job 521705 refresh cake: transfer_flow:token>treasury[converter_a,converter_b,converter_c,product_a,product_b,product_c,product_d] 2026-11-14: 0 transfers
+2026-11-15T02:45:31.264Z job 521705 refresh cake done
+2026-11-15T02:45:31.287Z job 521706 refresh crv started (attempt 1 of 2)
+2026-11-15T02:45:35.248Z job 521706 refresh crv: transfer_flow:crvusd>fee_distributor[fee_allocator] 2026-11-14: 0 transfers
+2026-11-15T02:45:35.873Z job 521706 refresh crv: transfer_flow:crvusd>curve_treasury[fee_allocator] 2026-11-14: 0 transfers
+2026-11-15T02:45:36.629Z job 521706 refresh crv: transfer_flow:crvusd>fee_allocator[hooker] 2026-11-14: 0 transfers
+2026-11-15T02:45:37.246Z job 521706 refresh crv done
+2026-11-15T02:45:37.262Z job 521707 refresh cvxcrv started (attempt 1 of 2)
+2026-11-15T02:45:38.595Z job 521707 refresh cvxcrv: transfer_flow:crvusd>wrapper[crvusd_pool] 2026-11-14: 153 transfers
+2026-11-15T02:45:40.752Z job 521707 refresh cvxcrv: transfer_flow:crv>wrapper[base_reward_pool] 2026-11-14: 153 transfers
+2026-11-15T02:45:43.261Z job 521707 refresh cvxcrv: transfer_flow:cvx>wrapper[cvx_distribution,cvx_mint] 2026-11-14: 153 transfers
+2026-11-15T02:45:44.060Z job 521707 refresh cvxcrv: transfer_flow:crv>booster[voter_proxy] 2026-11-14: 123 transfers
+2026-11-15T02:45:44.710Z job 521707 refresh cvxcrv: transfer_flow:crv>base_reward_pool[booster] 2026-11-14: 123 transfers
+2026-11-15T02:45:45.470Z job 521707 refresh cvxcrv: transfer_flow:crv>cvx_reward_pool[booster] 2026-11-14: 123 transfers
+2026-11-15T02:45:46.023Z job 521707 refresh cvxcrv: transfer_flow:crv>convex_treasury[booster] 2026-11-14: 123 transfers
+2026-11-15T02:45:47.130Z job 521707 refresh cvxcrv done
+2026-11-15T02:45:47.147Z job 521708 refresh hype started (attempt 1 of 2)
+2026-11-15T02:45:57.636Z job 521708 refresh hype done
+2026-11-15T02:45:57.660Z job 521709 refresh link started (attempt 1 of 2)
+2026-11-15T02:46:01.366Z job 521709 refresh link: transfer_flow:token>reserve[fee_converter] 2026-11-14: 0 transfers
+2026-11-15T02:46:02.340Z job 521709 refresh link: transfer_flow:token>release_hub[*] 2026-11-14: 0 transfers
+2026-11-15T02:46:03.114Z job 521709 refresh link: transfer_flow:token>release_rewards[*] 2026-11-14: 0 transfers
+2026-11-15T02:46:03.595Z job 521709 refresh link done
+2026-11-15T02:46:03.618Z job 521710 refresh lit started (attempt 1 of 2)
+2026-11-15T02:46:28.993Z job 521710 refresh lit: transfer_flow:token>dead[burn_safe] 2026-11-14: 0 transfers
+2026-11-15T02:46:29.486Z job 521710 refresh lit: transfer_flow:token>prime_passthrough[buyback_wallet] 2026-11-14: 0 transfers
+2026-11-15T02:46:29.896Z job 521710 refresh lit done
+2026-11-15T02:46:29.915Z job 521711 refresh pump started (attempt 1 of 2)
+2026-11-15T02:46:33.426Z job 521711 refresh pump done
+2026-11-15T02:46:33.445Z job 521712 refresh sdcrv started (attempt 1 of 2)
+2026-11-15T02:46:34.610Z job 521712 refresh sdcrv: transfer_flow:crvusd>gauge[accumulator] 2026-11-14: 0 transfers
+2026-11-15T02:46:35.315Z job 521712 refresh sdcrv: transfer_flow:crv>gauge[accumulator] 2026-11-14: 0 transfers
+2026-11-15T02:46:36.862Z job 521712 refresh sdcrv: transfer_flow:token>merkle_stash[botmarket] 2026-11-14: 0 transfers
+2026-11-15T02:46:38.557Z job 521712 refresh sdcrv: transfer_flow:crv>sd_accountant[locker] 2026-11-14: 35 transfers
+2026-11-15T02:46:39.245Z job 521712 refresh sdcrv: transfer_flow:crv>sd_fee_receiver[sd_accountant,sd_staking_v2_fee] 2026-11-14: 0 transfers
+2026-11-15T02:46:39.989Z job 521712 refresh sdcrv: transfer_flow:crv>sd_vesdt_recipient[sd_fee_receiver] 2026-11-14: 0 transfers
+2026-11-15T02:46:40.646Z job 521712 refresh sdcrv: transfer_flow:crv>sd_treasury[sd_fee_receiver] 2026-11-14: 0 transfers
+2026-11-15T02:46:41.278Z job 521712 refresh sdcrv: transfer_flow:crv>sd_boost_delegation[accumulator] 2026-11-14: 0 transfers
+2026-11-15T02:46:41.872Z job 521712 refresh sdcrv: transfer_flow:crvusd>sd_liquidity_fee[accumulator] 2026-11-14: 0 transfers
+2026-11-15T02:46:42.517Z job 521712 refresh sdcrv: transfer_flow:crvusd>sd_treasury[accumulator] 2026-11-14: 0 transfers
+2026-11-15T02:46:43.938Z job 521712 refresh sdcrv done
+2026-11-15T02:46:43.961Z job 521713 refresh sky started (attempt 1 of 2)
+2026-11-15T02:46:47.369Z job 521713 refresh sky: transfer_flow:usds>usds_farm[zero] 2026-11-14: 30 transfers
+2026-11-15T02:46:49.821Z job 521713 refresh sky: transfer_flow:token>pause_proxy[sky_usds_pair] 2026-11-14: 30 transfers
+2026-11-15T02:46:50.262Z job 521713 refresh sky: transfer_flow:token>sky_farm[*] 2026-11-14: 0 transfers
+2026-11-15T02:46:50.724Z job 521713 refresh sky: transfer_flow:token>usds_sky_farm[*] 2026-11-14: 0 transfers
+2026-11-15T02:46:51.377Z job 521713 refresh sky done
+2026-11-15T02:46:51.392Z job 521714 refresh uni started (attempt 1 of 2)
+2026-11-15T02:46:54.827Z job 521714 refresh uni: transfer_flow:token>dead[*] 2026-11-14: 16 transfers
+2026-11-15T02:46:55.101Z job 521714 refresh uni done
+2026-11-15T02:46:55.117Z job 521715 refresh vvv started (attempt 1 of 2)
+2026-11-15T02:47:13.511Z job 521715 refresh vvv: transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe] 2026-11-14: 6220 transfers
+2026-11-15T02:47:13.967Z job 521715 refresh vvv done
+2026-11-15T02:47:13.992Z job 521716 refresh ycrv started (attempt 1 of 2)
+2026-11-15T02:47:15.070Z job 521716 refresh ycrv: transfer_flow:yv_crvusd>distributor[receiver] 2026-11-14: 2 transfers
+2026-11-15T02:47:15.731Z job 521716 refresh ycrv: transfer_flow:yv_crvusd>yearn_treasury[receiver,splitter] 2026-11-14: 7 transfers
+2026-11-15T02:47:17.335Z job 521716 refresh ycrv: transfer_flow:st_ycrv>yearn_treasury[st_ycrv] 2026-11-14: 0 transfers
+2026-11-15T02:47:17.983Z job 521716 refresh ycrv: transfer_flow:crvusd>splitter[fee_burner,voter] 2026-11-14: 3 transfers
+2026-11-15T02:47:18.847Z job 521716 refresh ycrv done
+2026-11-15T02:47:18.870Z job 521717 nightly_report started (attempt 1 of 1)
+2026-11-15T02:47:25.778Z job 521717 nightly_report done
+2026-11-15T02:47:25.794Z job 521794 snapshot_push started (attempt 1 of 1)
+2026-11-15T02:47:29.897Z job 521794 snapshot_push done
+2026-11-15T03:30:19.559Z queued job 523342 retention slot 2026-11-15T03:30:00.000Z
+2026-11-15T03:30:22.822Z job 523342 retention started (attempt 1 of 1)
+2026-11-15T03:30:23.068Z job 523342 retention done
+2026-11-15T06:15:25.958Z queued job 529279 levels slot 2026-11-15T06:15:00.000Z
+2026-11-15T06:15:29.175Z job 529279 levels started (attempt 1 of 1)
+2026-11-15T06:15:41.737Z job 529279 levels done
+2026-11-15T06:15:41.761Z job 529283 snapshot_push started (attempt 1 of 1)
+2026-11-15T06:15:51.226Z job 529283 snapshot_push done
+2026-11-15T10:30:06.298Z queued job 538444 staging_refresh slot 2026-11-15T10:30:00.000Z
+2026-11-15T10:30:08.208Z job 538444 staging_refresh started (attempt 1 of 1)
+2026-11-15T10:30:08.238Z job 538444 staging_refresh: restoring /home/orion-refresh/latest.dump (2026-11-15T08:30:05.496Z): 13 tables, 46 env-local entries kept out, 4 outside orion
+2026-11-15T10:30:09.635Z job 538444 staging_refresh done
+2026-11-15T12:15:10.216Z queued job 542222 levels slot 2026-11-15T12:15:00.000Z
+2026-11-15T12:15:11.294Z job 542222 levels started (attempt 1 of 1)
+2026-11-15T12:15:22.055Z job 542222 levels done
+2026-11-15T12:15:22.071Z job 542226 snapshot_push started (attempt 1 of 1)
+2026-11-15T12:15:26.400Z job 542226 snapshot_push done
+2026-11-15T16:40:20.752Z queued job 551764 disclosure_watch slot 2026-11-15T16:40:00.000Z
+2026-11-15T16:40:22.302Z job 551764 disclosure_watch started (attempt 1 of 1)
+2026-11-15T16:40:22.303Z job 551764 disclosure_watch: disclosure_watch: dry scan with /home/orion-stage/watcher-venv/bin/python
+2026-11-15T16:40:22.447Z job 551764 disclosure_watch done
+2026-11-15T18:15:24.569Z queued job 555183 levels slot 2026-11-15T18:15:00.000Z
+2026-11-15T18:15:28.416Z job 555183 levels started (attempt 1 of 1)
+2026-11-15T18:15:38.942Z job 555183 levels done
+2026-11-15T18:15:38.969Z job 555187 snapshot_push started (attempt 1 of 1)
+2026-11-15T18:15:42.922Z job 555187 snapshot_push done
+2026-11-16T00:15:08.642Z queued job 568126 levels slot 2026-11-16T00:15:00.000Z
+2026-11-16T00:15:11.325Z job 568126 levels started (attempt 1 of 1)
+2026-11-16T00:15:24.692Z job 568126 levels done
+2026-11-16T00:15:24.711Z job 568130 snapshot_push started (attempt 1 of 1)
+2026-11-16T00:15:29.131Z job 568130 snapshot_push done
+2026-11-16T02:45:14.741Z queued job 573513 refresh aero slot 2026-11-16T02:45:00.000Z
+2026-11-16T02:45:14.747Z queued job 573514 refresh cake slot 2026-11-16T02:45:00.000Z
+2026-11-16T02:45:14.762Z queued job 573515 refresh crv slot 2026-11-16T02:45:00.000Z
+2026-11-16T02:45:14.770Z queued job 573516 refresh cvxcrv slot 2026-11-16T02:45:00.000Z
+2026-11-16T02:45:14.776Z queued job 573517 refresh hype slot 2026-11-16T02:45:00.000Z
+2026-11-16T02:45:14.783Z queued job 573518 refresh link slot 2026-11-16T02:45:00.000Z
+2026-11-16T02:45:14.790Z queued job 573519 refresh lit slot 2026-11-16T02:45:00.000Z
+2026-11-16T02:45:14.796Z queued job 573520 refresh pump slot 2026-11-16T02:45:00.000Z
+2026-11-16T02:45:14.801Z queued job 573521 refresh sdcrv slot 2026-11-16T02:45:00.000Z
+2026-11-16T02:45:14.806Z queued job 573522 refresh sky slot 2026-11-16T02:45:00.000Z
+2026-11-16T02:45:14.810Z queued job 573523 refresh uni slot 2026-11-16T02:45:00.000Z
+2026-11-16T02:45:14.815Z queued job 573524 refresh vvv slot 2026-11-16T02:45:00.000Z
+2026-11-16T02:45:14.819Z queued job 573525 refresh ycrv slot 2026-11-16T02:45:00.000Z
+2026-11-16T02:45:14.824Z queued job 573526 nightly_report slot 2026-11-16T02:45:00.000Z
+2026-11-16T02:45:18.762Z job 573513 refresh aero started (attempt 1 of 2)
+2026-11-16T02:45:26.390Z job 573513 refresh aero done
+2026-11-16T02:45:26.407Z job 573514 refresh cake started (attempt 1 of 2)
+2026-11-16T02:45:30.661Z job 573514 refresh cake: transfer_flow:token>burner[converter_a,converter_b,converter_c,converter_owner,product_a,product_b,product_c] 2026-11-15: 0 transfers
+2026-11-16T02:45:31.464Z job 573514 refresh cake: transfer_flow:token>treasury[converter_a,converter_b,converter_c,product_a,product_b,product_c,product_d] 2026-11-15: 0 transfers
+2026-11-16T02:45:32.013Z job 573514 refresh cake done
+2026-11-16T02:45:32.033Z job 573515 refresh crv started (attempt 1 of 2)
+2026-11-16T02:45:35.959Z job 573515 refresh crv: transfer_flow:crvusd>fee_distributor[fee_allocator] 2026-11-15: 0 transfers
+2026-11-16T02:45:36.499Z job 573515 refresh crv: transfer_flow:crvusd>curve_treasury[fee_allocator] 2026-11-15: 0 transfers
+2026-11-16T02:45:37.122Z job 573515 refresh crv: transfer_flow:crvusd>fee_allocator[hooker] 2026-11-15: 0 transfers
+2026-11-16T02:45:37.737Z job 573515 refresh crv done
+2026-11-16T02:45:37.760Z job 573516 refresh cvxcrv started (attempt 1 of 2)
+2026-11-16T02:45:38.847Z job 573516 refresh cvxcrv: transfer_flow:crvusd>wrapper[crvusd_pool] 2026-11-15: 130 transfers
+2026-11-16T02:45:41.127Z job 573516 refresh cvxcrv: transfer_flow:crv>wrapper[base_reward_pool] 2026-11-15: 130 transfers
+2026-11-16T02:45:43.836Z job 573516 refresh cvxcrv: transfer_flow:cvx>wrapper[cvx_distribution,cvx_mint] 2026-11-15: 130 transfers
+2026-11-16T02:45:44.502Z job 573516 refresh cvxcrv: transfer_flow:crv>booster[voter_proxy] 2026-11-15: 78 transfers
+2026-11-16T02:45:45.076Z job 573516 refresh cvxcrv: transfer_flow:crv>base_reward_pool[booster] 2026-11-15: 78 transfers
+2026-11-16T02:45:45.677Z job 573516 refresh cvxcrv: transfer_flow:crv>cvx_reward_pool[booster] 2026-11-15: 78 transfers
+2026-11-16T02:45:46.282Z job 573516 refresh cvxcrv: transfer_flow:crv>convex_treasury[booster] 2026-11-15: 78 transfers
+2026-11-16T02:45:47.405Z job 573516 refresh cvxcrv done
+2026-11-16T02:45:47.421Z job 573517 refresh hype started (attempt 1 of 2)
+2026-11-16T02:45:56.615Z job 573517 refresh hype done
+2026-11-16T02:45:56.637Z job 573518 refresh link started (attempt 1 of 2)
+2026-11-16T02:46:00.285Z job 573518 refresh link: transfer_flow:token>reserve[fee_converter] 2026-11-15: 0 transfers
+2026-11-16T02:46:00.958Z job 573518 refresh link: transfer_flow:token>release_hub[*] 2026-11-15: 0 transfers
+2026-11-16T02:46:01.480Z job 573518 refresh link: transfer_flow:token>release_rewards[*] 2026-11-15: 0 transfers
+2026-11-16T02:46:02.010Z job 573518 refresh link done
+2026-11-16T02:46:02.031Z job 573519 refresh lit started (attempt 1 of 2)
+2026-11-16T02:46:29.925Z job 573519 refresh lit: transfer_flow:token>dead[burn_safe] 2026-11-15: 0 transfers
+2026-11-16T02:46:30.326Z job 573519 refresh lit: transfer_flow:token>prime_passthrough[buyback_wallet] 2026-11-15: 0 transfers
+2026-11-16T02:46:30.736Z job 573519 refresh lit done
+2026-11-16T02:46:30.757Z job 573520 refresh pump started (attempt 1 of 2)
+2026-11-16T02:46:34.299Z job 573520 refresh pump done
+2026-11-16T02:46:34.317Z job 573521 refresh sdcrv started (attempt 1 of 2)
+2026-11-16T02:46:35.660Z job 573521 refresh sdcrv: transfer_flow:crvusd>gauge[accumulator] 2026-11-15: 0 transfers
+2026-11-16T02:46:36.211Z job 573521 refresh sdcrv: transfer_flow:crv>gauge[accumulator] 2026-11-15: 0 transfers
+2026-11-16T02:46:37.721Z job 573521 refresh sdcrv: transfer_flow:token>merkle_stash[botmarket] 2026-11-15: 0 transfers
+2026-11-16T02:46:38.859Z job 573521 refresh sdcrv: transfer_flow:crv>sd_accountant[locker] 2026-11-15: 28 transfers
+2026-11-16T02:46:39.519Z job 573521 refresh sdcrv: transfer_flow:crv>sd_fee_receiver[sd_accountant,sd_staking_v2_fee] 2026-11-15: 0 transfers
+2026-11-16T02:46:40.134Z job 573521 refresh sdcrv: transfer_flow:crv>sd_vesdt_recipient[sd_fee_receiver] 2026-11-15: 0 transfers
+2026-11-16T02:46:40.618Z job 573521 refresh sdcrv: transfer_flow:crv>sd_treasury[sd_fee_receiver] 2026-11-15: 0 transfers
+2026-11-16T02:46:41.146Z job 573521 refresh sdcrv: transfer_flow:crv>sd_boost_delegation[accumulator] 2026-11-15: 0 transfers
+2026-11-16T02:46:41.685Z job 573521 refresh sdcrv: transfer_flow:crvusd>sd_liquidity_fee[accumulator] 2026-11-15: 0 transfers
+2026-11-16T02:46:42.163Z job 573521 refresh sdcrv: transfer_flow:crvusd>sd_treasury[accumulator] 2026-11-15: 0 transfers
+2026-11-16T02:46:43.651Z job 573521 refresh sdcrv done
+2026-11-16T02:46:43.667Z job 573522 refresh sky started (attempt 1 of 2)
+2026-11-16T02:46:46.946Z job 573522 refresh sky: transfer_flow:usds>usds_farm[zero] 2026-11-15: 31 transfers
+2026-11-16T02:46:49.391Z job 573522 refresh sky: transfer_flow:token>pause_proxy[sky_usds_pair] 2026-11-15: 31 transfers
+2026-11-16T02:46:49.801Z job 573522 refresh sky: transfer_flow:token>sky_farm[*] 2026-11-15: 0 transfers
+2026-11-16T02:46:50.143Z job 573522 refresh sky: transfer_flow:token>usds_sky_farm[*] 2026-11-15: 0 transfers
+2026-11-16T02:46:50.783Z job 573522 refresh sky done
+2026-11-16T02:46:50.801Z job 573523 refresh uni started (attempt 1 of 2)
+2026-11-16T02:46:54.082Z job 573523 refresh uni: transfer_flow:token>dead[*] 2026-11-15: 11 transfers
+2026-11-16T02:46:54.347Z job 573523 refresh uni done
+2026-11-16T02:46:54.368Z job 573524 refresh vvv started (attempt 1 of 2)
+2026-11-16T02:47:17.536Z job 573524 refresh vvv: transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe] 2026-11-15: 6551 transfers
+2026-11-16T02:47:17.983Z job 573524 refresh vvv done
+2026-11-16T02:47:18.006Z job 573525 refresh ycrv started (attempt 1 of 2)
+2026-11-16T02:47:19.071Z job 573525 refresh ycrv: transfer_flow:yv_crvusd>distributor[receiver] 2026-11-15: 1 transfers
+2026-11-16T02:47:19.630Z job 573525 refresh ycrv: transfer_flow:yv_crvusd>yearn_treasury[receiver,splitter] 2026-11-15: 3 transfers
+2026-11-16T02:47:21.311Z job 573525 refresh ycrv: transfer_flow:st_ycrv>yearn_treasury[st_ycrv] 2026-11-15: 2 transfers
+2026-11-16T02:47:21.787Z job 573525 refresh ycrv: transfer_flow:crvusd>splitter[fee_burner,voter] 2026-11-15: 1 transfers
+2026-11-16T02:47:22.650Z job 573525 refresh ycrv done
+2026-11-16T02:47:22.674Z job 573526 nightly_report started (attempt 1 of 1)
+2026-11-16T02:47:29.571Z job 573526 nightly_report done
+2026-11-16T02:47:29.587Z job 573603 snapshot_push started (attempt 1 of 1)
+2026-11-16T02:47:34.003Z job 573603 snapshot_push done
+2026-11-16T03:30:16.574Z queued job 575151 retention slot 2026-11-16T03:30:00.000Z
+2026-11-16T03:30:16.979Z job 575151 retention started (attempt 1 of 1)
+2026-11-16T03:30:17.232Z job 575151 retention done
+2026-11-16T06:15:23.185Z queued job 581088 levels slot 2026-11-16T06:15:00.000Z
+2026-11-16T06:15:27.770Z job 581088 levels started (attempt 1 of 1)
+2026-11-16T06:15:39.526Z job 581088 levels done
+2026-11-16T06:15:39.548Z job 581092 snapshot_push started (attempt 1 of 1)
+2026-11-16T06:15:43.648Z job 581092 snapshot_push done
+2026-11-16T12:15:07.464Z queued job 594031 levels slot 2026-11-16T12:15:00.000Z
+2026-11-16T12:15:11.389Z job 594031 levels started (attempt 1 of 1)
+2026-11-16T12:15:21.927Z job 594031 levels done
+2026-11-16T12:15:21.950Z job 594035 snapshot_push started (attempt 1 of 1)
+2026-11-16T12:15:26.145Z job 594035 snapshot_push done
+2026-11-16T16:40:17.562Z queued job 603573 disclosure_watch slot 2026-11-16T16:40:00.000Z
+2026-11-16T16:40:17.782Z job 603573 disclosure_watch started (attempt 1 of 1)
+2026-11-16T16:40:17.784Z job 603573 disclosure_watch: disclosure_watch: dry scan with /home/orion-stage/watcher-venv/bin/python
+2026-11-16T16:41:18.672Z job 603573 disclosure_watch done
+2026-11-16T18:15:21.546Z queued job 606992 levels slot 2026-11-16T18:15:00.000Z
+2026-11-16T18:15:24.463Z job 606992 levels started (attempt 1 of 1)
+2026-11-16T18:15:36.262Z job 606992 levels done
+2026-11-16T18:15:36.279Z job 606996 snapshot_push started (attempt 1 of 1)
+2026-11-16T18:15:40.680Z job 606996 snapshot_push done
+2026-11-17T00:15:05.508Z queued job 619935 levels slot 2026-11-17T00:15:00.000Z
+2026-11-17T00:15:09.354Z job 619935 levels started (attempt 1 of 1)
+2026-11-17T00:15:21.448Z job 619935 levels done
+2026-11-17T00:15:21.467Z job 619939 snapshot_push started (attempt 1 of 1)
+2026-11-17T00:15:25.556Z job 619939 snapshot_push done
+2026-11-17T02:45:11.761Z queued job 625322 refresh aero slot 2026-11-17T02:45:00.000Z
+2026-11-17T02:45:11.767Z queued job 625323 refresh cake slot 2026-11-17T02:45:00.000Z
+2026-11-17T02:45:11.783Z queued job 625324 refresh crv slot 2026-11-17T02:45:00.000Z
+2026-11-17T02:45:11.790Z queued job 625325 refresh cvxcrv slot 2026-11-17T02:45:00.000Z
+2026-11-17T02:45:11.797Z queued job 625326 refresh hype slot 2026-11-17T02:45:00.000Z
+2026-11-17T02:45:11.803Z queued job 625327 refresh link slot 2026-11-17T02:45:00.000Z
+2026-11-17T02:45:11.810Z queued job 625328 refresh lit slot 2026-11-17T02:45:00.000Z
+2026-11-17T02:45:11.817Z queued job 625329 refresh pump slot 2026-11-17T02:45:00.000Z
+2026-11-17T02:45:11.821Z queued job 625330 refresh sdcrv slot 2026-11-17T02:45:00.000Z
+2026-11-17T02:45:11.826Z queued job 625331 refresh sky slot 2026-11-17T02:45:00.000Z
+2026-11-17T02:45:11.830Z queued job 625332 refresh uni slot 2026-11-17T02:45:00.000Z
+2026-11-17T02:45:11.835Z queued job 625333 refresh vvv slot 2026-11-17T02:45:00.000Z
+2026-11-17T02:45:11.840Z queued job 625334 refresh ycrv slot 2026-11-17T02:45:00.000Z
+2026-11-17T02:45:11.844Z queued job 625335 nightly_report slot 2026-11-17T02:45:00.000Z
+2026-11-17T02:45:15.323Z job 625322 refresh aero started (attempt 1 of 2)
+2026-11-17T02:45:22.224Z job 625322 refresh aero done
+2026-11-17T02:45:22.247Z job 625323 refresh cake started (attempt 1 of 2)
+2026-11-17T02:45:26.652Z job 625323 refresh cake: transfer_flow:token>burner[converter_a,converter_b,converter_c,converter_owner,product_a,product_b,product_c] 2026-11-16: 3 transfers
+2026-11-17T02:45:28.273Z job 625323 refresh cake: transfer_flow:token>treasury[converter_a,converter_b,converter_c,product_a,product_b,product_c,product_d] 2026-11-16: 3 transfers
+2026-11-17T02:45:28.822Z job 625323 refresh cake done
+2026-11-17T02:45:28.846Z job 625324 refresh crv started (attempt 1 of 2)
+2026-11-17T02:45:32.738Z job 625324 refresh crv: transfer_flow:crvusd>fee_distributor[fee_allocator] 2026-11-16: 0 transfers
+2026-11-17T02:45:33.405Z job 625324 refresh crv: transfer_flow:crvusd>curve_treasury[fee_allocator] 2026-11-16: 0 transfers
+2026-11-17T02:45:34.104Z job 625324 refresh crv: transfer_flow:crvusd>fee_allocator[hooker] 2026-11-16: 0 transfers
+2026-11-17T02:45:34.721Z job 625324 refresh crv done
+2026-11-17T02:45:34.744Z job 625325 refresh cvxcrv started (attempt 1 of 2)
+2026-11-17T02:45:35.891Z job 625325 refresh cvxcrv: transfer_flow:crvusd>wrapper[crvusd_pool] 2026-11-16: 140 transfers
+2026-11-17T02:45:38.308Z job 625325 refresh cvxcrv: transfer_flow:crv>wrapper[base_reward_pool] 2026-11-16: 140 transfers
+2026-11-17T02:45:40.746Z job 625325 refresh cvxcrv: transfer_flow:cvx>wrapper[cvx_distribution,cvx_mint] 2026-11-16: 140 transfers
+2026-11-17T02:45:41.459Z job 625325 refresh cvxcrv: transfer_flow:crv>booster[voter_proxy] 2026-11-16: 90 transfers
+2026-11-17T02:45:42.111Z job 625325 refresh cvxcrv: transfer_flow:crv>base_reward_pool[booster] 2026-11-16: 90 transfers
+2026-11-17T02:45:42.845Z job 625325 refresh cvxcrv: transfer_flow:crv>cvx_reward_pool[booster] 2026-11-16: 90 transfers
+2026-11-17T02:45:43.499Z job 625325 refresh cvxcrv: transfer_flow:crv>convex_treasury[booster] 2026-11-16: 90 transfers
+2026-11-17T02:45:44.617Z job 625325 refresh cvxcrv done
+2026-11-17T02:45:44.636Z job 625326 refresh hype started (attempt 1 of 2)
+2026-11-17T02:45:53.929Z job 625326 refresh hype done
+2026-11-17T02:45:53.951Z job 625327 refresh link started (attempt 1 of 2)
+2026-11-17T02:45:57.492Z job 625327 refresh link: transfer_flow:token>reserve[fee_converter] 2026-11-16: 0 transfers
+2026-11-17T02:45:58.164Z job 625327 refresh link: transfer_flow:token>release_hub[*] 2026-11-16: 0 transfers
+2026-11-17T02:45:58.763Z job 625327 refresh link: transfer_flow:token>release_rewards[*] 2026-11-16: 0 transfers
+2026-11-17T02:45:59.278Z job 625327 refresh link done
+2026-11-17T02:45:59.303Z job 625328 refresh lit started (attempt 1 of 2)
+2026-11-17T02:46:27.308Z job 625328 refresh lit: transfer_flow:token>dead[burn_safe] 2026-11-16: 0 transfers
+2026-11-17T02:46:28.260Z job 625328 refresh lit: transfer_flow:token>prime_passthrough[buyback_wallet] 2026-11-16: 0 transfers
+2026-11-17T02:46:28.647Z job 625328 refresh lit done
+2026-11-17T02:46:28.672Z job 625329 refresh pump started (attempt 1 of 2)
+2026-11-17T02:46:32.179Z job 625329 refresh pump done
+2026-11-17T02:46:32.196Z job 625330 refresh sdcrv started (attempt 1 of 2)
+2026-11-17T02:46:33.374Z job 625330 refresh sdcrv: transfer_flow:crvusd>gauge[accumulator] 2026-11-16: 0 transfers
+2026-11-17T02:46:34.092Z job 625330 refresh sdcrv: transfer_flow:crv>gauge[accumulator] 2026-11-16: 0 transfers
+2026-11-17T02:46:35.377Z job 625330 refresh sdcrv: transfer_flow:token>merkle_stash[botmarket] 2026-11-16: 0 transfers
+2026-11-17T02:46:37.447Z job 625330 refresh sdcrv: transfer_flow:crv>sd_accountant[locker] 2026-11-16: 39 transfers
+2026-11-17T02:46:38.205Z job 625330 refresh sdcrv: transfer_flow:crv>sd_fee_receiver[sd_accountant,sd_staking_v2_fee] 2026-11-16: 0 transfers
+2026-11-17T02:46:39.003Z job 625330 refresh sdcrv: transfer_flow:crv>sd_vesdt_recipient[sd_fee_receiver] 2026-11-16: 0 transfers
+2026-11-17T02:46:39.876Z job 625330 refresh sdcrv: transfer_flow:crv>sd_treasury[sd_fee_receiver] 2026-11-16: 0 transfers
+2026-11-17T02:46:40.546Z job 625330 refresh sdcrv: transfer_flow:crv>sd_boost_delegation[accumulator] 2026-11-16: 0 transfers
+2026-11-17T02:46:41.101Z job 625330 refresh sdcrv: transfer_flow:crvusd>sd_liquidity_fee[accumulator] 2026-11-16: 0 transfers
+2026-11-17T02:46:41.706Z job 625330 refresh sdcrv: transfer_flow:crvusd>sd_treasury[accumulator] 2026-11-16: 0 transfers
+2026-11-17T02:46:43.181Z job 625330 refresh sdcrv done
+2026-11-17T02:46:43.204Z job 625331 refresh sky started (attempt 1 of 2)
+2026-11-17T02:46:46.543Z job 625331 refresh sky: transfer_flow:usds>usds_farm[zero] 2026-11-16: 31 transfers
+2026-11-17T02:46:49.006Z job 625331 refresh sky: transfer_flow:token>pause_proxy[sky_usds_pair] 2026-11-16: 31 transfers
+2026-11-17T02:46:49.446Z job 625331 refresh sky: transfer_flow:token>sky_farm[*] 2026-11-16: 1 transfers
+2026-11-17T02:46:49.871Z job 625331 refresh sky: transfer_flow:token>usds_sky_farm[*] 2026-11-16: 0 transfers
+2026-11-17T02:46:50.547Z job 625331 refresh sky done
+2026-11-17T02:46:50.564Z job 625332 refresh uni started (attempt 1 of 2)
+2026-11-17T02:46:53.961Z job 625332 refresh uni: transfer_flow:token>dead[*] 2026-11-16: 15 transfers
+2026-11-17T02:46:54.238Z job 625332 refresh uni done
+2026-11-17T02:46:54.260Z job 625333 refresh vvv started (attempt 1 of 2)
+2026-11-17T02:47:15.969Z job 625333 refresh vvv: transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe] 2026-11-16: 6651 transfers
+2026-11-17T02:47:16.419Z job 625333 refresh vvv done
+2026-11-17T02:47:16.441Z job 625334 refresh ycrv started (attempt 1 of 2)
+2026-11-17T02:47:17.654Z job 625334 refresh ycrv: transfer_flow:yv_crvusd>distributor[receiver] 2026-11-16: 0 transfers
+2026-11-17T02:47:18.170Z job 625334 refresh ycrv: transfer_flow:yv_crvusd>yearn_treasury[receiver,splitter] 2026-11-16: 0 transfers
+2026-11-17T02:47:20.131Z job 625334 refresh ycrv: transfer_flow:st_ycrv>yearn_treasury[st_ycrv] 2026-11-16: 1 transfers
+2026-11-17T02:47:20.700Z job 625334 refresh ycrv: transfer_flow:crvusd>splitter[fee_burner,voter] 2026-11-16: 0 transfers
+2026-11-17T02:47:21.557Z job 625334 refresh ycrv done
+2026-11-17T02:47:21.580Z job 625335 nightly_report started (attempt 1 of 1)
+2026-11-17T02:47:28.635Z job 625335 nightly_report done
+2026-11-17T02:47:28.651Z job 625412 snapshot_push started (attempt 1 of 1)
+2026-11-17T02:47:33.126Z job 625412 snapshot_push done
+2026-11-17T03:30:13.803Z queued job 626960 retention slot 2026-11-17T03:30:00.000Z
+2026-11-17T03:30:16.036Z job 626960 retention started (attempt 1 of 1)
+2026-11-17T03:30:16.278Z job 626960 retention done
+2026-11-17T05:02:47.436Z drained: claiming nothing until orion daemon undrain
+2026-11-17T05:02:48.587Z stop requested
+2026-11-17T05:02:48.625Z daemon stopped
+2026-11-17T05:02:50.958Z daemon started: venus-624538-9a462c3d env stage release orion-2026.11.15.1 database orion_stage schema orion
+2026-11-17T05:03:06.001Z job 630309 backfill started (attempt 1 of 3)
+2026-11-17T05:03:06.026Z job 630309 backfill: backfill prices 2025-10-13..2026-11-17 every ref
+2026-11-17T05:13:07.132Z job 630309 backfill: backfill prices: budget used after 2797 rows, reached 2026-11-11T00:00:00.000Z; deferred
+2026-11-17T05:13:07.143Z job 630309 backfill deferred until 2026-11-17T05:13:07.133Z
+2026-11-17T05:13:07.161Z job 630309 backfill started (attempt 1 of 3)
+2026-11-17T05:13:07.205Z job 630309 backfill: backfill prices 2025-10-13..2026-11-17 every ref
+2026-11-17T05:23:09.554Z job 630309 backfill: backfill prices: budget used after 2520 rows, reached 2026-11-05T00:00:00.000Z; deferred
+2026-11-17T05:23:09.560Z job 630309 backfill deferred until 2026-11-17T05:23:09.555Z
+2026-11-17T05:23:09.578Z job 630309 backfill started (attempt 1 of 3)
+2026-11-17T05:23:09.613Z job 630309 backfill: backfill prices 2025-10-13..2026-11-17 every ref
+2026-11-17T05:33:16.255Z job 630309 backfill: backfill prices: budget used after 2376 rows, reached 2026-10-30T00:00:00.000Z; deferred
+2026-11-17T05:33:16.266Z job 630309 backfill deferred until 2026-11-17T05:33:16.257Z
+2026-11-17T05:33:16.284Z job 630309 backfill started (attempt 1 of 3)
+2026-11-17T05:33:16.318Z job 630309 backfill: backfill prices 2025-10-13..2026-11-17 every ref
+2026-11-17T05:43:21.633Z job 630309 backfill: backfill prices: budget used after 2424 rows, reached 2026-10-24T00:00:00.000Z; deferred
+2026-11-17T05:43:21.643Z job 630309 backfill deferred until 2026-11-17T05:43:21.634Z
+2026-11-17T05:43:21.661Z job 630309 backfill started (attempt 1 of 3)
+2026-11-17T05:43:21.696Z job 630309 backfill: backfill prices 2025-10-13..2026-11-17 every ref
+2026-11-17T05:53:34.838Z job 630309 backfill: backfill prices: budget used after 2112 rows, reached 2026-10-18T00:00:00.000Z; deferred
+2026-11-17T05:53:34.852Z job 630309 backfill deferred until 2026-11-17T05:53:34.839Z
+2026-11-17T05:53:34.878Z job 630309 backfill started (attempt 1 of 3)
+2026-11-17T05:53:34.913Z job 630309 backfill: backfill prices 2025-10-13..2026-11-17 every ref
+2026-11-17T06:03:38.561Z job 630309 backfill: backfill prices: budget used after 2904 rows, reached 2026-10-11T00:00:00.000Z; deferred
+2026-11-17T06:03:38.577Z job 630309 backfill deferred until 2026-11-17T06:03:38.562Z
+2026-11-17T06:03:38.601Z job 630309 backfill started (attempt 1 of 3)
+2026-11-17T06:03:38.634Z job 630309 backfill: backfill prices 2025-10-13..2026-11-17 every ref
+2026-11-17T06:13:43.067Z job 630309 backfill: backfill prices: budget used after 10193 rows, reached 2026-09-10T00:00:00.000Z; deferred
+2026-11-17T06:13:43.081Z job 630309 backfill deferred until 2026-11-17T06:13:43.069Z
+2026-11-17T06:13:43.106Z job 630309 backfill started (attempt 1 of 3)
+2026-11-17T06:13:43.143Z job 630309 backfill: backfill prices 2025-10-13..2026-11-17 every ref
+2026-11-17T06:15:24.050Z queued job 632916 levels slot 2026-11-17T06:15:00.000Z
+2026-11-17T06:23:46.041Z job 630309 backfill: backfill prices: budget used after 9360 rows, reached 2026-08-11T00:00:00.000Z; deferred
+2026-11-17T06:23:46.057Z job 630309 backfill deferred until 2026-11-17T06:23:46.043Z
+2026-11-17T06:23:46.078Z job 632916 levels started (attempt 1 of 1)
+2026-11-17T06:23:58.005Z job 632916 levels done
+2026-11-17T06:23:58.031Z job 633226 snapshot_push started (attempt 1 of 1)
+2026-11-17T06:24:02.164Z job 633226 snapshot_push done
+2026-11-17T06:24:02.182Z job 630309 backfill started (attempt 1 of 3)
+2026-11-17T06:24:02.204Z job 630309 backfill: backfill prices 2025-10-13..2026-11-17 every ref
+2026-11-17T06:34:05.098Z job 630309 backfill: backfill prices: budget used after 9984 rows, reached 2026-07-10T00:00:00.000Z; deferred
+2026-11-17T06:34:05.115Z job 630309 backfill deferred until 2026-11-17T06:34:05.099Z
+2026-11-17T06:34:05.139Z job 630309 backfill started (attempt 1 of 3)
+2026-11-17T06:34:05.164Z job 630309 backfill: backfill prices 2025-10-13..2026-11-17 every ref
+2026-11-17T06:44:10.236Z job 630309 backfill: backfill prices: budget used after 9672 rows, reached 2026-06-09T00:00:00.000Z; deferred
+2026-11-17T06:44:10.255Z job 630309 backfill deferred until 2026-11-17T06:44:10.237Z
+2026-11-17T06:44:10.279Z job 630309 backfill started (attempt 1 of 3)
+2026-11-17T06:44:10.304Z job 630309 backfill: backfill prices 2025-10-13..2026-11-17 every ref
+2026-11-17T06:54:16.183Z job 630309 backfill: backfill prices: budget used after 9672 rows, reached 2026-05-09T00:00:00.000Z; deferred
+2026-11-17T06:54:16.193Z job 630309 backfill deferred until 2026-11-17T06:54:16.184Z
+2026-11-17T06:54:16.211Z job 630309 backfill started (attempt 1 of 3)
+2026-11-17T06:54:16.235Z job 630309 backfill: backfill prices 2025-10-13..2026-11-17 every ref
+2026-11-17T07:04:21.883Z job 630309 backfill: backfill prices: budget used after 9960 rows, reached 2026-04-07T00:00:00.000Z; deferred
+2026-11-17T07:04:21.895Z job 630309 backfill deferred until 2026-11-17T07:04:21.884Z
+2026-11-17T07:04:21.911Z job 630309 backfill started (attempt 1 of 3)
+2026-11-17T07:04:21.934Z job 630309 backfill: backfill prices 2025-10-13..2026-11-17 every ref
+2026-11-17T07:14:30.925Z job 630309 backfill: backfill prices: budget used after 10025 rows, reached 2026-03-06T00:00:00.000Z; deferred
+2026-11-17T07:14:30.936Z job 630309 backfill deferred until 2026-11-17T07:14:30.926Z
+2026-11-17T07:14:30.961Z job 630309 backfill started (attempt 1 of 3)
+2026-11-17T07:14:30.985Z job 630309 backfill: backfill prices 2025-10-13..2026-11-17 every ref
+2026-11-17T07:24:34.257Z job 630309 backfill: backfill prices: budget used after 10344 rows, reached 2026-02-01T00:00:00.000Z; deferred
+2026-11-17T07:24:34.268Z job 630309 backfill deferred until 2026-11-17T07:24:34.259Z
+2026-11-17T07:24:34.285Z job 630309 backfill started (attempt 1 of 3)
+2026-11-17T07:24:34.309Z job 630309 backfill: backfill prices 2025-10-13..2026-11-17 every ref
+2026-11-17T07:34:35.597Z job 630309 backfill: backfill prices: budget used after 10872 rows, reached 2025-12-28T00:00:00.000Z; deferred
+2026-11-17T07:34:35.611Z job 630309 backfill deferred until 2026-11-17T07:34:35.599Z
+2026-11-17T07:34:35.628Z job 630309 backfill started (attempt 1 of 3)
+2026-11-17T07:34:35.652Z job 630309 backfill: backfill prices 2025-10-13..2026-11-17 every ref
+2026-11-17T07:44:39.439Z job 630309 backfill: backfill prices: budget used after 11232 rows, reached 2025-11-22T00:00:00.000Z; deferred
+2026-11-17T07:44:39.455Z job 630309 backfill deferred until 2026-11-17T07:44:39.441Z
+2026-11-17T07:44:39.480Z job 630309 backfill started (attempt 1 of 3)
+2026-11-17T07:44:39.504Z job 630309 backfill: backfill prices 2025-10-13..2026-11-17 every ref
+2026-11-17T07:54:51.279Z job 630309 backfill: backfill prices: budget used after 10608 rows, reached 2025-10-19T00:00:00.000Z; deferred
+2026-11-17T07:54:51.295Z job 630309 backfill deferred until 2026-11-17T07:54:51.280Z
+2026-11-17T07:54:51.316Z job 630309 backfill started (attempt 1 of 3)
+2026-11-17T07:54:51.340Z job 630309 backfill: backfill prices 2025-10-13..2026-11-17 every ref
+2026-11-17T07:56:31.494Z job 630309 backfill done
+2026-11-17T12:15:10.180Z queued job 645859 levels slot 2026-11-17T12:15:00.000Z
+2026-11-17T12:15:13.932Z job 645859 levels started (attempt 1 of 1)
+2026-11-17T12:35:35.330Z slack post failed (try 1 of 4): The operation was aborted due to timeout
+2026-11-17T12:36:15.339Z slack post failed (try 2 of 4): The operation was aborted due to timeout
+2026-11-17T12:37:25.342Z slack post failed (try 3 of 4): The operation was aborted due to timeout
+2026-11-17T12:39:35.344Z slack post failed (try 4 of 4): The operation was aborted due to timeout
+2026-11-17T12:39:35.383Z job 645859 levels done
+2026-11-17T12:39:35.402Z job 646727 snapshot_push started (attempt 1 of 1)
+2026-11-17T12:39:45.503Z job 646727 snapshot_push failed: git ls-remote failed (128):  | Please make sure you have the correct access rights | and the repository exists.
+2026-11-17T12:40:35.578Z job 646746 snapshot_push started (attempt 1 of 1)
+2026-11-17T12:40:45.654Z job 646746 snapshot_push failed: git ls-remote failed (128):  | Please make sure you have the correct access rights | and the repository exists.
+2026-11-17T12:45:36.028Z job 646783 snapshot_push started (attempt 1 of 1)
+2026-11-17T12:45:46.104Z job 646783 snapshot_push failed: git ls-remote failed (128):  | Please make sure you have the correct access rights | and the repository exists.
+2026-11-17T13:00:37.177Z job 646964 snapshot_push started (attempt 1 of 1)
+2026-11-17T13:00:47.257Z job 646964 snapshot_push failed: git ls-remote failed (128):  | Please make sure you have the correct access rights | and the repository exists.
+2026-11-17T14:00:40.953Z job 647505 snapshot_push started (attempt 1 of 1)
+2026-11-17T14:00:51.034Z job 647505 snapshot_push failed: git ls-remote failed (128):  | Please make sure you have the correct access rights | and the repository exists.
+2026-11-17T15:00:45.025Z job 649666 snapshot_push started (attempt 1 of 1)
+2026-11-17T15:00:55.110Z job 649666 snapshot_push failed: git ls-remote failed (128):  | Please make sure you have the correct access rights | and the repository exists.
+2026-11-17T16:00:49.255Z job 651827 snapshot_push started (attempt 1 of 1)
+2026-11-17T16:00:59.326Z job 651827 snapshot_push: ORION ALERT stage snapshot publish failing since 2026-11-17T12:39:35.362Z: git ls-remote failed (128):  | Please make sure you have the correct access rights | and the repository exists.
+2026-11-17T16:01:09.326Z slack post failed (try 1 of 4): The operation was aborted due to timeout
+2026-11-17T16:01:49.335Z slack post failed (try 2 of 4): The operation was aborted due to timeout
+2026-11-17T16:02:59.336Z slack post failed (try 3 of 4): The operation was aborted due to timeout
+2026-11-17T16:05:09.347Z slack post failed (try 4 of 4): The operation was aborted due to timeout
+2026-11-17T16:05:09.357Z job 651827 snapshot_push failed: git ls-remote failed (128):  | Please make sure you have the correct access rights | and the repository exists.
+2026-11-17T16:40:20.950Z queued job 655408 disclosure_watch slot 2026-11-17T16:40:00.000Z
+2026-11-17T16:40:21.755Z job 655408 disclosure_watch started (attempt 1 of 1)
+2026-11-17T16:40:21.757Z job 655408 disclosure_watch: disclosure_watch: dry scan with /home/orion-stage/watcher-venv/bin/python
+2026-11-17T16:40:21.901Z job 655408 disclosure_watch done
+2026-11-17T17:00:53.180Z job 653988 snapshot_push started (attempt 1 of 1)
+2026-11-17T17:01:03.261Z job 653988 snapshot_push: ORION ALERT stage snapshot publish failing since 2026-11-17T12:39:35.362Z: git ls-remote failed (128):  | Please make sure you have the correct access rights | and the repository exists.
+2026-11-17T17:01:13.261Z slack post failed (try 1 of 4): The operation was aborted due to timeout
+2026-11-17T17:01:53.272Z slack post failed (try 2 of 4): The operation was aborted due to timeout
+2026-11-17T17:03:03.274Z slack post failed (try 3 of 4): The operation was aborted due to timeout
+2026-11-17T17:05:13.275Z slack post failed (try 4 of 4): The operation was aborted due to timeout
+2026-11-17T17:05:13.288Z job 653988 snapshot_push failed: git ls-remote failed (128):  | Please make sure you have the correct access rights | and the repository exists.
+2026-11-17T18:00:56.878Z job 656149 snapshot_push started (attempt 1 of 1)
+2026-11-17T18:01:06.957Z job 656149 snapshot_push: ORION ALERT stage snapshot publish failing since 2026-11-17T12:39:35.362Z: git ls-remote failed (128):  | Please make sure you have the correct access rights | and the repository exists.
+2026-11-17T18:01:16.959Z slack post failed (try 1 of 4): The operation was aborted due to timeout
+2026-11-17T18:01:56.972Z slack post failed (try 2 of 4): The operation was aborted due to timeout
+2026-11-17T18:03:06.973Z slack post failed (try 3 of 4): The operation was aborted due to timeout
+2026-11-17T18:05:07.376Z job 656149 snapshot_push failed: git ls-remote failed (128):  | Please make sure you have the correct access rights | and the repository exists.
+2026-11-17T18:15:25.028Z queued job 658829 levels slot 2026-11-17T18:15:00.000Z
+2026-11-17T18:15:28.112Z job 658829 levels started (attempt 1 of 1)
+2026-11-17T18:16:29.149Z job 658829 levels done
+2026-11-17T18:16:29.173Z job 658869 snapshot_push started (attempt 1 of 1)
+2026-11-17T18:16:33.615Z job 658869 snapshot_push done
+2026-11-17T19:01:01.362Z job 658310 snapshot_push started (attempt 1 of 1)
+2026-11-17T19:01:01.382Z job 658310 snapshot_push done
+2026-11-18T00:15:08.873Z queued job 671772 levels slot 2026-11-18T00:15:00.000Z
+2026-11-18T00:15:10.391Z job 671772 levels started (attempt 1 of 1)
+2026-11-18T00:15:47.261Z job 671772 levels done
+2026-11-18T00:15:47.280Z job 671794 snapshot_push started (attempt 1 of 1)
+2026-11-18T00:15:51.441Z job 671794 snapshot_push done
+2026-11-18T02:45:14.781Z queued job 677159 refresh aero slot 2026-11-18T02:45:00.000Z
+2026-11-18T02:45:14.789Z queued job 677160 refresh cake slot 2026-11-18T02:45:00.000Z
+2026-11-18T02:45:14.803Z queued job 677161 refresh crv slot 2026-11-18T02:45:00.000Z
+2026-11-18T02:45:14.810Z queued job 677162 refresh cvxcrv slot 2026-11-18T02:45:00.000Z
+2026-11-18T02:45:14.816Z queued job 677163 refresh hype slot 2026-11-18T02:45:00.000Z
+2026-11-18T02:45:14.823Z queued job 677164 refresh link slot 2026-11-18T02:45:00.000Z
+2026-11-18T02:45:14.828Z queued job 677165 refresh lit slot 2026-11-18T02:45:00.000Z
+2026-11-18T02:45:14.832Z queued job 677166 refresh pump slot 2026-11-18T02:45:00.000Z
+2026-11-18T02:45:14.837Z queued job 677167 refresh sdcrv slot 2026-11-18T02:45:00.000Z
+2026-11-18T02:45:14.842Z queued job 677168 refresh sky slot 2026-11-18T02:45:00.000Z
+2026-11-18T02:45:14.846Z queued job 677169 refresh uni slot 2026-11-18T02:45:00.000Z
+2026-11-18T02:45:14.851Z queued job 677170 refresh vvv slot 2026-11-18T02:45:00.000Z
+2026-11-18T02:45:14.855Z queued job 677171 refresh ycrv slot 2026-11-18T02:45:00.000Z
+2026-11-18T02:45:14.860Z queued job 677172 nightly_report slot 2026-11-18T02:45:00.000Z
+2026-11-18T02:45:16.102Z job 677159 refresh aero started (attempt 1 of 2)
+2026-11-18T02:45:23.371Z job 677159 refresh aero done
+2026-11-18T02:45:23.395Z job 677160 refresh cake started (attempt 1 of 2)
+2026-11-18T02:45:25.621Z job 677160 refresh cake: transfer_flow:token>burner[converter_a,converter_b,converter_c,converter_owner,product_a,product_b,product_c] 2026-11-17: 0 transfers
+2026-11-18T02:45:26.502Z job 677160 refresh cake: transfer_flow:token>treasury[converter_a,converter_b,converter_c,product_a,product_b,product_c,product_d] 2026-11-17: 0 transfers
+2026-11-18T02:45:26.992Z job 677160 refresh cake done
+2026-11-18T02:45:27.010Z job 677161 refresh crv started (attempt 1 of 2)
+2026-11-18T02:45:29.377Z job 677161 refresh crv: transfer_flow:crvusd>fee_distributor[fee_allocator] 2026-11-17: 0 transfers
+2026-11-18T02:45:30.073Z job 677161 refresh crv: transfer_flow:crvusd>curve_treasury[fee_allocator] 2026-11-17: 0 transfers
+2026-11-18T02:45:30.766Z job 677161 refresh crv: transfer_flow:crvusd>fee_allocator[hooker] 2026-11-17: 0 transfers
+2026-11-18T02:45:31.313Z job 677161 refresh crv done
+2026-11-18T02:45:31.329Z job 677162 refresh cvxcrv started (attempt 1 of 2)
+2026-11-18T02:45:32.392Z job 677162 refresh cvxcrv: transfer_flow:crvusd>wrapper[crvusd_pool] 2026-11-17: 131 transfers
+2026-11-18T02:45:33.206Z job 677162 refresh cvxcrv: transfer_flow:crv>wrapper[base_reward_pool] 2026-11-17: 131 transfers
+2026-11-18T02:45:33.935Z job 677162 refresh cvxcrv: transfer_flow:cvx>wrapper[cvx_distribution,cvx_mint] 2026-11-17: 131 transfers
+2026-11-18T02:45:34.839Z job 677162 refresh cvxcrv: transfer_flow:crv>booster[voter_proxy] 2026-11-17: 104 transfers
+2026-11-18T02:45:35.473Z job 677162 refresh cvxcrv: transfer_flow:crv>base_reward_pool[booster] 2026-11-17: 104 transfers
+2026-11-18T02:45:36.222Z job 677162 refresh cvxcrv: transfer_flow:crv>cvx_reward_pool[booster] 2026-11-17: 104 transfers
+2026-11-18T02:45:36.826Z job 677162 refresh cvxcrv: transfer_flow:crv>convex_treasury[booster] 2026-11-17: 104 transfers
+2026-11-18T02:45:37.727Z job 677162 refresh cvxcrv done
+2026-11-18T02:45:37.756Z job 677163 refresh hype started (attempt 1 of 2)
+2026-11-18T02:45:45.008Z job 677163 refresh hype done
+2026-11-18T02:45:45.029Z job 677164 refresh link started (attempt 1 of 2)
+2026-11-18T02:45:46.646Z job 677164 refresh link: transfer_flow:token>reserve[fee_converter] 2026-11-17: 0 transfers
+2026-11-18T02:45:47.382Z job 677164 refresh link: transfer_flow:token>release_hub[*] 2026-11-17: 0 transfers
+2026-11-18T02:45:48.058Z job 677164 refresh link: transfer_flow:token>release_rewards[*] 2026-11-17: 0 transfers
+2026-11-18T02:45:48.547Z job 677164 refresh link done
+2026-11-18T02:45:48.565Z job 677165 refresh lit started (attempt 1 of 2)
+2026-11-18T02:46:18.106Z job 677165 refresh lit: transfer_flow:token>dead[burn_safe] 2026-11-17: 0 transfers
+2026-11-18T02:46:18.691Z job 677165 refresh lit: transfer_flow:token>prime_passthrough[buyback_wallet] 2026-11-17: 0 transfers
+2026-11-18T02:46:19.090Z job 677165 refresh lit done
+2026-11-18T02:46:19.114Z job 677166 refresh pump started (attempt 1 of 2)
+2026-11-18T02:46:20.739Z job 677166 refresh pump done
+2026-11-18T02:46:20.755Z job 677167 refresh sdcrv started (attempt 1 of 2)
+2026-11-18T02:46:21.653Z job 677167 refresh sdcrv: transfer_flow:crvusd>gauge[accumulator] 2026-11-17: 0 transfers
+2026-11-18T02:46:22.298Z job 677167 refresh sdcrv: transfer_flow:crv>gauge[accumulator] 2026-11-17: 0 transfers
+2026-11-18T02:46:22.833Z job 677167 refresh sdcrv: transfer_flow:token>merkle_stash[botmarket] 2026-11-17: 1 transfers
+2026-11-18T02:46:24.415Z job 677167 refresh sdcrv: transfer_flow:crv>sd_accountant[locker] 2026-11-17: 29 transfers
+2026-11-18T02:46:25.122Z job 677167 refresh sdcrv: transfer_flow:crv>sd_fee_receiver[sd_accountant,sd_staking_v2_fee] 2026-11-17: 0 transfers
+2026-11-18T02:46:25.882Z job 677167 refresh sdcrv: transfer_flow:crv>sd_vesdt_recipient[sd_fee_receiver] 2026-11-17: 0 transfers
+2026-11-18T02:46:26.480Z job 677167 refresh sdcrv: transfer_flow:crv>sd_treasury[sd_fee_receiver] 2026-11-17: 0 transfers
+2026-11-18T02:46:27.175Z job 677167 refresh sdcrv: transfer_flow:crv>sd_boost_delegation[accumulator] 2026-11-17: 0 transfers
+2026-11-18T02:46:27.737Z job 677167 refresh sdcrv: transfer_flow:crvusd>sd_liquidity_fee[accumulator] 2026-11-17: 0 transfers
+2026-11-18T02:46:28.338Z job 677167 refresh sdcrv: transfer_flow:crvusd>sd_treasury[accumulator] 2026-11-17: 0 transfers
+2026-11-18T02:46:29.515Z job 677167 refresh sdcrv done
+2026-11-18T02:46:29.538Z job 677168 refresh sky started (attempt 1 of 2)
+2026-11-18T02:46:30.864Z job 677168 refresh sky: transfer_flow:usds>usds_farm[zero] 2026-11-17: 30 transfers
+2026-11-18T02:46:31.569Z job 677168 refresh sky: transfer_flow:token>pause_proxy[sky_usds_pair] 2026-11-17: 30 transfers
+2026-11-18T02:46:32.127Z job 677168 refresh sky: transfer_flow:token>sky_farm[*] 2026-11-17: 0 transfers
+2026-11-18T02:46:32.809Z job 677168 refresh sky: transfer_flow:token>usds_sky_farm[*] 2026-11-17: 0 transfers
+2026-11-18T02:46:33.409Z job 677168 refresh sky done
+2026-11-18T02:46:33.431Z job 677169 refresh uni started (attempt 1 of 2)
+2026-11-18T02:46:34.667Z job 677169 refresh uni: transfer_flow:token>dead[*] 2026-11-17: 11 transfers
+2026-11-18T02:46:34.908Z job 677169 refresh uni done
+2026-11-18T02:46:34.924Z job 677170 refresh vvv started (attempt 1 of 2)
+2026-11-18T02:46:54.709Z job 677170 refresh vvv: transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe] 2026-11-17: 6787 transfers, 3 unlisted
+2026-11-18T02:46:55.131Z job 677170 refresh vvv done
+2026-11-18T02:46:55.155Z job 677171 refresh ycrv started (attempt 1 of 2)
+2026-11-18T02:46:56.141Z job 677171 refresh ycrv: transfer_flow:yv_crvusd>distributor[receiver] 2026-11-17: 0 transfers
+2026-11-18T02:46:56.755Z job 677171 refresh ycrv: transfer_flow:yv_crvusd>yearn_treasury[receiver,splitter] 2026-11-17: 0 transfers
+2026-11-18T02:46:57.430Z job 677171 refresh ycrv: transfer_flow:st_ycrv>yearn_treasury[st_ycrv] 2026-11-17: 1 transfers
+2026-11-18T02:46:58.055Z job 677171 refresh ycrv: transfer_flow:crvusd>splitter[fee_burner,voter] 2026-11-17: 0 transfers
+2026-11-18T02:46:58.757Z job 677171 refresh ycrv done
+2026-11-18T02:46:58.774Z job 677172 nightly_report started (attempt 1 of 1)
+2026-11-18T02:47:05.226Z job 677172 nightly_report done
+2026-11-18T02:47:05.241Z job 677231 snapshot_push started (attempt 1 of 1)
+2026-11-18T02:47:09.683Z job 677231 snapshot_push done
+2026-11-18T03:30:16.686Z queued job 678797 retention slot 2026-11-18T03:30:00.000Z
+2026-11-18T03:30:17.441Z job 678797 retention started (attempt 1 of 1)
+2026-11-18T03:30:17.786Z job 678797 retention done
+2026-11-18T06:15:23.477Z queued job 684734 levels slot 2026-11-18T06:15:00.000Z
+2026-11-18T06:15:23.616Z job 684734 levels started (attempt 1 of 1)
+2026-11-18T06:16:04.655Z job 684734 levels done
+2026-11-18T06:16:04.679Z job 684756 snapshot_push started (attempt 1 of 1)
+2026-11-18T06:16:08.866Z job 684756 snapshot_push done
+2026-11-18T12:15:08.004Z queued job 697677 levels slot 2026-11-18T12:15:00.000Z
+2026-11-18T12:15:12.685Z job 697677 levels started (attempt 1 of 1)
+2026-11-18T12:15:49.837Z job 697677 levels done
+2026-11-18T12:15:49.854Z job 697699 snapshot_push started (attempt 1 of 1)
+2026-11-18T12:15:54.088Z job 697699 snapshot_push done
+2026-11-18T16:40:18.551Z queued job 707219 disclosure_watch slot 2026-11-18T16:40:00.000Z
+2026-11-18T16:40:21.572Z job 707219 disclosure_watch started (attempt 1 of 1)
+2026-11-18T16:40:21.573Z job 707219 disclosure_watch: disclosure_watch: dry scan with /home/orion-stage/watcher-venv/bin/python
+2026-11-18T16:40:21.718Z job 707219 disclosure_watch done
+2026-11-18T18:15:22.127Z queued job 710638 levels slot 2026-11-18T18:15:00.000Z
+2026-11-18T18:15:22.432Z job 710638 levels started (attempt 1 of 1)
+2026-11-18T18:16:00.412Z job 710638 levels done
+2026-11-18T18:16:00.431Z job 710660 snapshot_push started (attempt 1 of 1)
+2026-11-18T18:16:04.703Z job 710660 snapshot_push done
+2026-11-19T00:15:05.955Z queued job 723581 levels slot 2026-11-19T00:15:00.000Z
+2026-11-19T00:15:06.630Z job 723581 levels started (attempt 1 of 1)
+2026-11-19T00:15:45.485Z job 723581 levels done
+2026-11-19T00:15:45.515Z job 723603 snapshot_push started (attempt 1 of 1)
+2026-11-19T00:15:49.740Z job 723603 snapshot_push done
+2026-11-19T02:45:11.759Z queued job 728968 refresh aero slot 2026-11-19T02:45:00.000Z
+2026-11-19T02:45:11.767Z queued job 728969 refresh cake slot 2026-11-19T02:45:00.000Z
+2026-11-19T02:45:11.781Z queued job 728970 refresh crv slot 2026-11-19T02:45:00.000Z
+2026-11-19T02:45:11.787Z queued job 728971 refresh cvxcrv slot 2026-11-19T02:45:00.000Z
+2026-11-19T02:45:11.794Z queued job 728972 refresh hype slot 2026-11-19T02:45:00.000Z
+2026-11-19T02:45:11.798Z queued job 728973 refresh link slot 2026-11-19T02:45:00.000Z
+2026-11-19T02:45:11.803Z queued job 728974 refresh lit slot 2026-11-19T02:45:00.000Z
+2026-11-19T02:45:11.808Z queued job 728975 refresh pump slot 2026-11-19T02:45:00.000Z
+2026-11-19T02:45:11.812Z queued job 728976 refresh sdcrv slot 2026-11-19T02:45:00.000Z
+2026-11-19T02:45:11.817Z queued job 728977 refresh sky slot 2026-11-19T02:45:00.000Z
+2026-11-19T02:45:11.821Z queued job 728978 refresh uni slot 2026-11-19T02:45:00.000Z
+2026-11-19T02:45:11.826Z queued job 728979 refresh vvv slot 2026-11-19T02:45:00.000Z
+2026-11-19T02:45:11.836Z queued job 728980 refresh ycrv slot 2026-11-19T02:45:00.000Z
+2026-11-19T02:45:11.844Z queued job 728981 nightly_report slot 2026-11-19T02:45:00.000Z
+2026-11-19T02:45:14.252Z job 728968 refresh aero started (attempt 1 of 2)
+2026-11-19T02:45:21.109Z job 728968 refresh aero done
+2026-11-19T02:45:21.128Z job 728969 refresh cake started (attempt 1 of 2)
+2026-11-19T02:45:23.518Z job 728969 refresh cake: transfer_flow:token>burner[converter_a,converter_b,converter_c,converter_owner,product_a,product_b,product_c] 2026-11-18: 0 transfers
+2026-11-19T02:45:24.283Z job 728969 refresh cake: transfer_flow:token>treasury[converter_a,converter_b,converter_c,product_a,product_b,product_c,product_d] 2026-11-18: 0 transfers
+2026-11-19T02:45:24.742Z job 728969 refresh cake done
+2026-11-19T02:45:24.770Z job 728970 refresh crv started (attempt 1 of 2)
+2026-11-19T02:45:26.639Z job 728970 refresh crv: transfer_flow:crvusd>fee_distributor[fee_allocator] 2026-11-18: 25 transfers
+2026-11-19T02:45:27.002Z job 728970 refresh crv: transfer_flow:crvusd>curve_treasury[fee_allocator] 2026-11-18: 25 transfers
+2026-11-19T02:45:27.373Z job 728970 refresh crv: transfer_flow:crvusd>fee_allocator[hooker] 2026-11-18: 25 transfers
+2026-11-19T02:45:27.919Z job 728970 refresh crv done
+2026-11-19T02:45:27.935Z job 728971 refresh cvxcrv started (attempt 1 of 2)
+2026-11-19T02:45:28.674Z job 728971 refresh cvxcrv: transfer_flow:crvusd>wrapper[crvusd_pool] 2026-11-18: 143 transfers
+2026-11-19T02:45:29.147Z job 728971 refresh cvxcrv: transfer_flow:crv>wrapper[base_reward_pool] 2026-11-18: 143 transfers
+2026-11-19T02:45:29.564Z job 728971 refresh cvxcrv: transfer_flow:cvx>wrapper[cvx_distribution,cvx_mint] 2026-11-18: 143 transfers
+2026-11-19T02:45:29.973Z job 728971 refresh cvxcrv: transfer_flow:crv>booster[voter_proxy] 2026-11-18: 119 transfers
+2026-11-19T02:45:30.345Z job 728971 refresh cvxcrv: transfer_flow:crv>base_reward_pool[booster] 2026-11-18: 118 transfers
+2026-11-19T02:45:30.736Z job 728971 refresh cvxcrv: transfer_flow:crv>cvx_reward_pool[booster] 2026-11-18: 118 transfers
+2026-11-19T02:45:31.094Z job 728971 refresh cvxcrv: transfer_flow:crv>convex_treasury[booster] 2026-11-18: 118 transfers
+2026-11-19T02:45:32.016Z job 728971 refresh cvxcrv done
+2026-11-19T02:45:32.036Z job 728972 refresh hype started (attempt 1 of 2)
+2026-11-19T02:45:40.308Z job 728972 refresh hype done
+2026-11-19T02:45:40.324Z job 728973 refresh link started (attempt 1 of 2)
+2026-11-19T02:45:41.311Z job 728973 refresh link: transfer_flow:token>reserve[fee_converter] 2026-11-18: 0 transfers
+2026-11-19T02:45:41.706Z job 728973 refresh link: transfer_flow:token>release_hub[*] 2026-11-18: 0 transfers
+2026-11-19T02:45:42.067Z job 728973 refresh link: transfer_flow:token>release_rewards[*] 2026-11-18: 0 transfers
+2026-11-19T02:45:42.544Z job 728973 refresh link done
+2026-11-19T02:45:42.560Z job 728974 refresh lit started (attempt 1 of 2)
+2026-11-19T02:46:11.178Z job 728974 refresh lit: transfer_flow:token>dead[burn_safe] 2026-11-18: 0 transfers
+2026-11-19T02:46:11.520Z job 728974 refresh lit: transfer_flow:token>prime_passthrough[buyback_wallet] 2026-11-18: 0 transfers
+2026-11-19T02:46:11.923Z job 728974 refresh lit done
+2026-11-19T02:46:11.946Z job 728975 refresh pump started (attempt 1 of 2)
+2026-11-19T02:46:14.520Z job 728975 refresh pump done
+2026-11-19T02:46:14.542Z job 728976 refresh sdcrv started (attempt 1 of 2)
+2026-11-19T02:46:15.168Z job 728976 refresh sdcrv: transfer_flow:crvusd>gauge[accumulator] 2026-11-18: 0 transfers
+2026-11-19T02:46:15.538Z job 728976 refresh sdcrv: transfer_flow:crv>gauge[accumulator] 2026-11-18: 0 transfers
+2026-11-19T02:46:15.849Z job 728976 refresh sdcrv: transfer_flow:token>merkle_stash[botmarket] 2026-11-18: 0 transfers
+2026-11-19T02:46:17.208Z job 728976 refresh sdcrv: transfer_flow:crv>sd_accountant[locker] 2026-11-18: 37 transfers
+2026-11-19T02:46:17.597Z job 728976 refresh sdcrv: transfer_flow:crv>sd_fee_receiver[sd_accountant,sd_staking_v2_fee] 2026-11-18: 0 transfers
+2026-11-19T02:46:18.008Z job 728976 refresh sdcrv: transfer_flow:crv>sd_vesdt_recipient[sd_fee_receiver] 2026-11-18: 0 transfers
+2026-11-19T02:46:18.346Z job 728976 refresh sdcrv: transfer_flow:crv>sd_treasury[sd_fee_receiver] 2026-11-18: 0 transfers
+2026-11-19T02:46:18.725Z job 728976 refresh sdcrv: transfer_flow:crv>sd_boost_delegation[accumulator] 2026-11-18: 0 transfers
+2026-11-19T02:46:19.052Z job 728976 refresh sdcrv: transfer_flow:crvusd>sd_liquidity_fee[accumulator] 2026-11-18: 0 transfers
+2026-11-19T02:46:19.377Z job 728976 refresh sdcrv: transfer_flow:crvusd>sd_treasury[accumulator] 2026-11-18: 0 transfers
+2026-11-19T02:46:20.583Z job 728976 refresh sdcrv done
+2026-11-19T02:46:20.599Z job 728977 refresh sky started (attempt 1 of 2)
+2026-11-19T02:46:21.687Z job 728977 refresh sky: transfer_flow:usds>usds_farm[zero] 2026-11-18: 31 transfers
+2026-11-19T02:46:22.089Z job 728977 refresh sky: transfer_flow:token>pause_proxy[sky_usds_pair] 2026-11-18: 31 transfers
+2026-11-19T02:46:22.397Z job 728977 refresh sky: transfer_flow:token>sky_farm[*] 2026-11-18: 0 transfers
+2026-11-19T02:46:22.714Z job 728977 refresh sky: transfer_flow:token>usds_sky_farm[*] 2026-11-18: 0 transfers
+2026-11-19T02:46:23.295Z job 728977 refresh sky done
+2026-11-19T02:46:23.317Z job 728978 refresh uni started (attempt 1 of 2)
+2026-11-19T02:46:24.145Z job 728978 refresh uni: transfer_flow:token>dead[*] 2026-11-18: 16 transfers
+2026-11-19T02:46:24.392Z job 728978 refresh uni done
+2026-11-19T02:46:24.411Z job 728979 refresh vvv started (attempt 1 of 2)
+2026-11-19T02:46:44.320Z job 728979 refresh vvv: transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe] 2026-11-18: 6473 transfers, 12 unlisted
+2026-11-19T02:46:44.809Z job 728979 refresh vvv done
+2026-11-19T02:46:44.834Z job 728980 refresh ycrv started (attempt 1 of 2)
+2026-11-19T02:46:45.551Z job 728980 refresh ycrv: transfer_flow:yv_crvusd>distributor[receiver] 2026-11-18: 0 transfers
+2026-11-19T02:46:45.888Z job 728980 refresh ycrv: transfer_flow:yv_crvusd>yearn_treasury[receiver,splitter] 2026-11-18: 0 transfers
+2026-11-19T02:46:46.259Z job 728980 refresh ycrv: transfer_flow:st_ycrv>yearn_treasury[st_ycrv] 2026-11-18: 1 transfers
+2026-11-19T02:46:46.620Z job 728980 refresh ycrv: transfer_flow:crvusd>splitter[fee_burner,voter] 2026-11-18: 0 transfers
+2026-11-19T02:46:47.337Z job 728980 refresh ycrv done
+2026-11-19T02:46:47.366Z job 728981 nightly_report started (attempt 1 of 1)
+2026-11-19T02:46:54.142Z job 728981 nightly_report done
+2026-11-19T02:46:54.165Z job 729040 snapshot_push started (attempt 1 of 1)
+2026-11-19T02:46:58.500Z job 729040 snapshot_push done
+2026-11-19T03:30:13.758Z queued job 730606 retention slot 2026-11-19T03:30:00.000Z
+2026-11-19T03:30:16.378Z job 730606 retention started (attempt 1 of 1)
+2026-11-19T03:30:16.711Z job 730606 retention done
+2026-11-19T06:15:20.392Z queued job 736543 levels slot 2026-11-19T06:15:00.000Z
+2026-11-19T06:15:22.824Z job 736543 levels started (attempt 1 of 1)
+2026-11-19T06:16:02.758Z job 736543 levels done
+2026-11-19T06:16:02.783Z job 736565 snapshot_push started (attempt 1 of 1)
+2026-11-19T06:16:07.273Z job 736565 snapshot_push done
+2026-11-19T12:15:04.635Z queued job 749486 levels slot 2026-11-19T12:15:00.000Z
+2026-11-19T12:15:05.955Z job 749486 levels started (attempt 1 of 1)
+2026-11-19T12:15:48.639Z job 749486 levels done
+2026-11-19T12:15:48.663Z job 749508 snapshot_push started (attempt 1 of 1)
+2026-11-19T12:15:52.890Z job 749508 snapshot_push done
+2026-11-19T16:40:14.750Z queued job 759028 disclosure_watch slot 2026-11-19T16:40:00.000Z
+2026-11-19T16:40:15.520Z job 759028 disclosure_watch started (attempt 1 of 1)
+2026-11-19T16:40:16.428Z job 759028 disclosure_watch: disclosure_watch: yt-dlp upgraded
+2026-11-19T16:40:16.428Z job 759028 disclosure_watch: disclosure_watch: dry scan with /home/orion-stage/watcher-venv/bin/python
+2026-11-19T16:40:16.561Z job 759028 disclosure_watch done
+2026-11-19T18:15:18.558Z queued job 762447 levels slot 2026-11-19T18:15:00.000Z
+2026-11-19T18:15:22.307Z job 762447 levels started (attempt 1 of 1)
+2026-11-19T18:16:00.200Z job 762447 levels done
+2026-11-19T18:16:00.225Z job 762469 snapshot_push started (attempt 1 of 1)
+2026-11-19T18:16:04.383Z job 762469 snapshot_push done
+2026-11-20T00:15:02.758Z queued job 775390 levels slot 2026-11-20T00:15:00.000Z
+2026-11-20T00:15:06.372Z job 775390 levels started (attempt 1 of 1)
+2026-11-20T00:15:45.685Z job 775390 levels done
+2026-11-20T00:15:45.708Z job 775412 snapshot_push started (attempt 1 of 1)
+2026-11-20T00:15:49.777Z job 775412 snapshot_push done
+2026-11-20T02:45:08.848Z queued job 780777 refresh aero slot 2026-11-20T02:45:00.000Z
+2026-11-20T02:45:08.856Z queued job 780778 refresh cake slot 2026-11-20T02:45:00.000Z
+2026-11-20T02:45:08.871Z queued job 780779 refresh crv slot 2026-11-20T02:45:00.000Z
+2026-11-20T02:45:08.877Z queued job 780780 refresh cvxcrv slot 2026-11-20T02:45:00.000Z
+2026-11-20T02:45:08.884Z queued job 780781 refresh hype slot 2026-11-20T02:45:00.000Z
+2026-11-20T02:45:08.891Z queued job 780782 refresh link slot 2026-11-20T02:45:00.000Z
+2026-11-20T02:45:08.895Z queued job 780783 refresh lit slot 2026-11-20T02:45:00.000Z
+2026-11-20T02:45:08.900Z queued job 780784 refresh pump slot 2026-11-20T02:45:00.000Z
+2026-11-20T02:45:08.905Z queued job 780785 refresh sdcrv slot 2026-11-20T02:45:00.000Z
+2026-11-20T02:45:08.909Z queued job 780786 refresh sky slot 2026-11-20T02:45:00.000Z
+2026-11-20T02:45:08.914Z queued job 780787 refresh uni slot 2026-11-20T02:45:00.000Z
+2026-11-20T02:45:08.918Z queued job 780788 refresh vvv slot 2026-11-20T02:45:00.000Z
+2026-11-20T02:45:08.923Z queued job 780789 refresh ycrv slot 2026-11-20T02:45:00.000Z
+2026-11-20T02:45:08.927Z queued job 780790 nightly_report slot 2026-11-20T02:45:00.000Z
+2026-11-20T02:45:09.626Z job 780777 refresh aero started (attempt 1 of 2)
+2026-11-20T02:45:17.516Z job 780777 refresh aero done
+2026-11-20T02:45:17.539Z job 780778 refresh cake started (attempt 1 of 2)
+2026-11-20T02:45:19.932Z job 780778 refresh cake: transfer_flow:token>burner[converter_a,converter_b,converter_c,converter_owner,product_a,product_b,product_c] 2026-11-19: 0 transfers
+2026-11-20T02:45:20.732Z job 780778 refresh cake: transfer_flow:token>treasury[converter_a,converter_b,converter_c,product_a,product_b,product_c,product_d] 2026-11-19: 0 transfers
+2026-11-20T02:45:21.165Z job 780778 refresh cake done
+2026-11-20T02:45:21.187Z job 780779 refresh crv started (attempt 1 of 2)
+2026-11-20T02:45:23.341Z job 780779 refresh crv: transfer_flow:crvusd>fee_distributor[fee_allocator] 2026-11-19: 0 transfers
+2026-11-20T02:45:23.596Z job 780779 refresh crv: transfer_flow:crvusd>curve_treasury[fee_allocator] 2026-11-19: 0 transfers
+2026-11-20T02:45:23.898Z job 780779 refresh crv: transfer_flow:crvusd>fee_allocator[hooker] 2026-11-19: 0 transfers
+2026-11-20T02:45:24.422Z job 780779 refresh crv done
+2026-11-20T02:45:24.447Z job 780780 refresh cvxcrv started (attempt 1 of 2)
+2026-11-20T02:45:25.093Z job 780780 refresh cvxcrv: transfer_flow:crvusd>wrapper[crvusd_pool] 2026-11-19: 129 transfers
+2026-11-20T02:45:25.475Z job 780780 refresh cvxcrv: transfer_flow:crv>wrapper[base_reward_pool] 2026-11-19: 129 transfers
+2026-11-20T02:45:25.821Z job 780780 refresh cvxcrv: transfer_flow:cvx>wrapper[cvx_distribution,cvx_mint] 2026-11-19: 129 transfers
+2026-11-20T02:45:26.144Z job 780780 refresh cvxcrv: transfer_flow:crv>booster[voter_proxy] 2026-11-19: 95 transfers
+2026-11-20T02:45:26.435Z job 780780 refresh cvxcrv: transfer_flow:crv>base_reward_pool[booster] 2026-11-19: 95 transfers
+2026-11-20T02:45:26.761Z job 780780 refresh cvxcrv: transfer_flow:crv>cvx_reward_pool[booster] 2026-11-19: 95 transfers
+2026-11-20T02:45:27.029Z job 780780 refresh cvxcrv: transfer_flow:crv>convex_treasury[booster] 2026-11-19: 95 transfers
+2026-11-20T02:45:28.002Z job 780780 refresh cvxcrv done
+2026-11-20T02:45:28.019Z job 780781 refresh hype started (attempt 1 of 2)
+2026-11-20T02:45:36.278Z job 780781 refresh hype done
+2026-11-20T02:45:36.296Z job 780782 refresh link started (attempt 1 of 2)
+2026-11-20T02:45:37.292Z job 780782 refresh link: transfer_flow:token>reserve[fee_converter] 2026-11-19: 1 transfers
+2026-11-20T02:45:37.620Z job 780782 refresh link: transfer_flow:token>release_hub[*] 2026-11-19: 0 transfers
+2026-11-20T02:45:37.914Z job 780782 refresh link: transfer_flow:token>release_rewards[*] 2026-11-19: 0 transfers
+2026-11-20T02:45:38.399Z job 780782 refresh link done
+2026-11-20T02:45:38.416Z job 780783 refresh lit started (attempt 1 of 2)
+2026-11-20T02:46:08.923Z job 780783 refresh lit: transfer_flow:token>dead[burn_safe] 2026-11-19: 0 transfers
+2026-11-20T02:46:09.183Z job 780783 refresh lit: transfer_flow:token>prime_passthrough[buyback_wallet] 2026-11-19: 0 transfers
+2026-11-20T02:46:09.599Z job 780783 refresh lit done
+2026-11-20T02:46:09.619Z job 780784 refresh pump started (attempt 1 of 2)
+2026-11-20T02:46:12.273Z job 780784 refresh pump done
+2026-11-20T02:46:12.295Z job 780785 refresh sdcrv started (attempt 1 of 2)
+2026-11-20T02:46:12.842Z job 780785 refresh sdcrv: transfer_flow:crvusd>gauge[accumulator] 2026-11-19: 0 transfers
+2026-11-20T02:46:13.142Z job 780785 refresh sdcrv: transfer_flow:crv>gauge[accumulator] 2026-11-19: 0 transfers
+2026-11-20T02:46:13.391Z job 780785 refresh sdcrv: transfer_flow:token>merkle_stash[botmarket] 2026-11-19: 0 transfers
+2026-11-20T02:46:15.117Z job 780785 refresh sdcrv: transfer_flow:crv>sd_accountant[locker] 2026-11-19: 49 transfers
+2026-11-20T02:46:15.400Z job 780785 refresh sdcrv: transfer_flow:crv>sd_fee_receiver[sd_accountant,sd_staking_v2_fee] 2026-11-19: 0 transfers
+2026-11-20T02:46:15.697Z job 780785 refresh sdcrv: transfer_flow:crv>sd_vesdt_recipient[sd_fee_receiver] 2026-11-19: 0 transfers
+2026-11-20T02:46:15.958Z job 780785 refresh sdcrv: transfer_flow:crv>sd_treasury[sd_fee_receiver] 2026-11-19: 0 transfers
+2026-11-20T02:46:16.254Z job 780785 refresh sdcrv: transfer_flow:crv>sd_boost_delegation[accumulator] 2026-11-19: 0 transfers
+2026-11-20T02:46:16.521Z job 780785 refresh sdcrv: transfer_flow:crvusd>sd_liquidity_fee[accumulator] 2026-11-19: 0 transfers
+2026-11-20T02:46:16.822Z job 780785 refresh sdcrv: transfer_flow:crvusd>sd_treasury[accumulator] 2026-11-19: 0 transfers
+2026-11-20T02:46:18.034Z job 780785 refresh sdcrv done
+2026-11-20T02:46:18.058Z job 780786 refresh sky started (attempt 1 of 2)
+2026-11-20T02:46:19.106Z job 780786 refresh sky: transfer_flow:usds>usds_farm[zero] 2026-11-19: 49 transfers
+2026-11-20T02:46:19.501Z job 780786 refresh sky: transfer_flow:token>pause_proxy[sky_usds_pair] 2026-11-19: 49 transfers
+2026-11-20T02:46:19.794Z job 780786 refresh sky: transfer_flow:token>sky_farm[*] 2026-11-19: 0 transfers
+2026-11-20T02:46:20.068Z job 780786 refresh sky: transfer_flow:token>usds_sky_farm[*] 2026-11-19: 0 transfers
+2026-11-20T02:46:20.646Z job 780786 refresh sky done
+2026-11-20T02:46:20.662Z job 780787 refresh uni started (attempt 1 of 2)
+2026-11-20T02:46:21.343Z job 780787 refresh uni: transfer_flow:token>dead[*] 2026-11-19: 16 transfers
+2026-11-20T02:46:21.585Z job 780787 refresh uni done
+2026-11-20T02:46:21.608Z job 780788 refresh vvv started (attempt 1 of 2)
+2026-11-20T02:46:51.178Z job 780788 refresh vvv: transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe] 2026-11-19: 6398 transfers, 5 unlisted
+2026-11-20T02:46:51.605Z job 780788 refresh vvv done
+2026-11-20T02:46:51.631Z job 780789 refresh ycrv started (attempt 1 of 2)
+2026-11-20T02:46:52.337Z job 780789 refresh ycrv: transfer_flow:yv_crvusd>distributor[receiver] 2026-11-19: 0 transfers
+2026-11-20T02:46:52.593Z job 780789 refresh ycrv: transfer_flow:yv_crvusd>yearn_treasury[receiver,splitter] 2026-11-19: 0 transfers, 1 unlisted
+2026-11-20T02:46:52.893Z job 780789 refresh ycrv: transfer_flow:st_ycrv>yearn_treasury[st_ycrv] 2026-11-19: 1 transfers
+2026-11-20T02:46:53.237Z job 780789 refresh ycrv: transfer_flow:crvusd>splitter[fee_burner,voter] 2026-11-19: 0 transfers
+2026-11-20T02:46:53.959Z job 780789 refresh ycrv done
+2026-11-20T02:46:53.975Z job 780790 nightly_report started (attempt 1 of 1)
+2026-11-20T02:47:00.675Z job 780790 nightly_report done
+2026-11-20T02:47:00.692Z job 780849 snapshot_push started (attempt 1 of 1)
+2026-11-20T02:47:05.046Z job 780849 snapshot_push done
+2026-11-20T03:30:10.884Z queued job 782415 retention slot 2026-11-20T03:30:00.000Z
+2026-11-20T03:30:12.770Z job 782415 retention started (attempt 1 of 1)
+2026-11-20T03:30:13.108Z job 782415 retention done
+2026-11-20T06:15:17.341Z queued job 788352 levels slot 2026-11-20T06:15:00.000Z
+2026-11-20T06:15:19.175Z job 788352 levels started (attempt 1 of 1)
+2026-11-20T06:15:57.228Z job 788352 levels done
+2026-11-20T06:15:57.244Z job 788374 snapshot_push started (attempt 1 of 1)
+2026-11-20T06:16:01.806Z job 788374 snapshot_push done
+2026-11-20T12:15:01.445Z queued job 801295 levels slot 2026-11-20T12:15:00.000Z
+2026-11-20T12:15:05.767Z job 801295 levels started (attempt 1 of 1)
+2026-11-20T12:15:46.551Z job 801295 levels done
+2026-11-20T12:15:46.569Z job 801317 snapshot_push started (attempt 1 of 1)
+2026-11-20T12:15:50.662Z job 801317 snapshot_push done
+2026-11-20T16:40:12.106Z queued job 810837 disclosure_watch slot 2026-11-20T16:40:00.000Z
+2026-11-20T16:40:13.503Z job 810837 disclosure_watch started (attempt 1 of 1)
+2026-11-20T16:40:13.504Z job 810837 disclosure_watch: disclosure_watch: dry scan with /home/orion-stage/watcher-venv/bin/python
+2026-11-20T16:40:13.648Z job 810837 disclosure_watch done
+2026-11-20T18:15:16.198Z queued job 814256 levels slot 2026-11-20T18:15:00.000Z
+2026-11-20T18:15:19.095Z job 814256 levels started (attempt 1 of 1)
+2026-11-20T18:15:57.773Z job 814256 levels done
+2026-11-20T18:15:57.790Z job 814278 snapshot_push started (attempt 1 of 1)
+2026-11-20T18:16:01.961Z job 814278 snapshot_push done
+2026-11-21T00:15:00.327Z queued job 827199 levels slot 2026-11-21T00:15:00.000Z
+2026-11-21T00:15:04.101Z job 827199 levels started (attempt 1 of 1)
+2026-11-21T00:15:42.090Z job 827199 levels done
+2026-11-21T00:15:42.108Z job 827221 snapshot_push started (attempt 1 of 1)
+2026-11-21T00:15:46.472Z job 827221 snapshot_push done
+2026-11-21T02:45:06.368Z queued job 832586 refresh aero slot 2026-11-21T02:45:00.000Z
+2026-11-21T02:45:06.376Z queued job 832587 refresh cake slot 2026-11-21T02:45:00.000Z
+2026-11-21T02:45:06.390Z queued job 832588 refresh crv slot 2026-11-21T02:45:00.000Z
+2026-11-21T02:45:06.397Z queued job 832589 refresh cvxcrv slot 2026-11-21T02:45:00.000Z
+2026-11-21T02:45:06.404Z queued job 832590 refresh hype slot 2026-11-21T02:45:00.000Z
+2026-11-21T02:45:06.408Z queued job 832591 refresh link slot 2026-11-21T02:45:00.000Z
+2026-11-21T02:45:06.413Z queued job 832592 refresh lit slot 2026-11-21T02:45:00.000Z
+2026-11-21T02:45:06.417Z queued job 832593 refresh pump slot 2026-11-21T02:45:00.000Z
+2026-11-21T02:45:06.422Z queued job 832594 refresh sdcrv slot 2026-11-21T02:45:00.000Z
+2026-11-21T02:45:06.427Z queued job 832595 refresh sky slot 2026-11-21T02:45:00.000Z
+2026-11-21T02:45:06.431Z queued job 832596 refresh uni slot 2026-11-21T02:45:00.000Z
+2026-11-21T02:45:06.436Z queued job 832597 refresh vvv slot 2026-11-21T02:45:00.000Z
+2026-11-21T02:45:06.441Z queued job 832598 refresh ycrv slot 2026-11-21T02:45:00.000Z
+2026-11-21T02:45:06.448Z queued job 832599 nightly_report slot 2026-11-21T02:45:00.000Z
+2026-11-21T02:45:06.479Z job 832586 refresh aero started (attempt 1 of 2)
+2026-11-21T02:45:12.179Z job 832586 refresh aero done
+2026-11-21T02:45:12.203Z job 832587 refresh cake started (attempt 1 of 2)
+2026-11-21T02:45:14.508Z job 832587 refresh cake: transfer_flow:token>burner[converter_a,converter_b,converter_c,converter_owner,product_a,product_b,product_c] 2026-11-20: 0 transfers
+2026-11-21T02:45:15.254Z job 832587 refresh cake: transfer_flow:token>treasury[converter_a,converter_b,converter_c,product_a,product_b,product_c,product_d] 2026-11-20: 0 transfers
+2026-11-21T02:45:15.701Z job 832587 refresh cake done
+2026-11-21T02:45:15.725Z job 832588 refresh crv started (attempt 1 of 2)
+2026-11-21T02:45:17.825Z job 832588 refresh crv: transfer_flow:crvusd>fee_distributor[fee_allocator] 2026-11-20: 0 transfers
+2026-11-21T02:45:18.246Z job 832588 refresh crv: transfer_flow:crvusd>curve_treasury[fee_allocator] 2026-11-20: 0 transfers
+2026-11-21T02:45:18.780Z job 832588 refresh crv: transfer_flow:crvusd>fee_allocator[hooker] 2026-11-20: 0 transfers
+2026-11-21T02:45:19.345Z job 832588 refresh crv done
+2026-11-21T02:45:19.361Z job 832589 refresh cvxcrv started (attempt 1 of 2)
+2026-11-21T02:45:20.304Z job 832589 refresh cvxcrv: transfer_flow:crvusd>wrapper[crvusd_pool] 2026-11-20: 91 transfers
+2026-11-21T02:45:20.922Z job 832589 refresh cvxcrv: transfer_flow:crv>wrapper[base_reward_pool] 2026-11-20: 91 transfers
+2026-11-21T02:45:21.522Z job 832589 refresh cvxcrv: transfer_flow:cvx>wrapper[cvx_distribution,cvx_mint] 2026-11-20: 91 transfers
+2026-11-21T02:45:22.103Z job 832589 refresh cvxcrv: transfer_flow:crv>booster[voter_proxy] 2026-11-20: 82 transfers
+2026-11-21T02:45:22.570Z job 832589 refresh cvxcrv: transfer_flow:crv>base_reward_pool[booster] 2026-11-20: 82 transfers
+2026-11-21T02:45:23.095Z job 832589 refresh cvxcrv: transfer_flow:crv>cvx_reward_pool[booster] 2026-11-20: 82 transfers
+2026-11-21T02:45:23.536Z job 832589 refresh cvxcrv: transfer_flow:crv>convex_treasury[booster] 2026-11-20: 82 transfers
+2026-11-21T02:45:24.525Z job 832589 refresh cvxcrv done
+2026-11-21T02:45:24.542Z job 832590 refresh hype started (attempt 1 of 2)
+2026-11-21T02:45:33.833Z job 832590 refresh hype done
+2026-11-21T02:45:33.863Z job 832591 refresh link started (attempt 1 of 2)
+2026-11-21T02:45:35.048Z job 832591 refresh link: transfer_flow:token>reserve[fee_converter] 2026-11-20: 0 transfers
+2026-11-21T02:45:35.607Z job 832591 refresh link: transfer_flow:token>release_hub[*] 2026-11-20: 0 transfers
+2026-11-21T02:45:36.080Z job 832591 refresh link: transfer_flow:token>release_rewards[*] 2026-11-20: 0 transfers
+2026-11-21T02:45:36.541Z job 832591 refresh link done
+2026-11-21T02:45:36.557Z job 832592 refresh lit started (attempt 1 of 2)
+2026-11-21T02:46:09.191Z job 832592 refresh lit: transfer_flow:token>dead[burn_safe] 2026-11-20: 0 transfers
+2026-11-21T02:46:09.597Z job 832592 refresh lit: transfer_flow:token>prime_passthrough[buyback_wallet] 2026-11-20: 0 transfers
+2026-11-21T02:46:09.983Z job 832592 refresh lit done
+2026-11-21T02:46:10.001Z job 832593 refresh pump started (attempt 1 of 2)
+2026-11-21T02:46:12.599Z job 832593 refresh pump done
+2026-11-21T02:46:12.622Z job 832594 refresh sdcrv started (attempt 1 of 2)
+2026-11-21T02:46:13.404Z job 832594 refresh sdcrv: transfer_flow:crvusd>gauge[accumulator] 2026-11-20: 1 transfers
+2026-11-21T02:46:13.946Z job 832594 refresh sdcrv: transfer_flow:crv>gauge[accumulator] 2026-11-20: 1 transfers
+2026-11-21T02:46:14.332Z job 832594 refresh sdcrv: transfer_flow:token>merkle_stash[botmarket] 2026-11-20: 0 transfers
+2026-11-21T02:46:15.827Z job 832594 refresh sdcrv: transfer_flow:crv>sd_accountant[locker] 2026-11-20: 24 transfers
+2026-11-21T02:46:16.317Z job 832594 refresh sdcrv: transfer_flow:crv>sd_fee_receiver[sd_accountant,sd_staking_v2_fee] 2026-11-20: 1 transfers
+2026-11-21T02:46:16.815Z job 832594 refresh sdcrv: transfer_flow:crv>sd_vesdt_recipient[sd_fee_receiver] 2026-11-20: 1 transfers
+2026-11-21T02:46:17.226Z job 832594 refresh sdcrv: transfer_flow:crv>sd_treasury[sd_fee_receiver] 2026-11-20: 1 transfers
+2026-11-21T02:46:17.669Z job 832594 refresh sdcrv: transfer_flow:crv>sd_boost_delegation[accumulator] 2026-11-20: 1 transfers
+2026-11-21T02:46:18.036Z job 832594 refresh sdcrv: transfer_flow:crvusd>sd_liquidity_fee[accumulator] 2026-11-20: 1 transfers
+2026-11-21T02:46:18.654Z job 832594 refresh sdcrv: transfer_flow:crvusd>sd_treasury[accumulator] 2026-11-20: 1 transfers
+2026-11-21T02:46:19.852Z job 832594 refresh sdcrv done
+2026-11-21T02:46:19.872Z job 832595 refresh sky started (attempt 1 of 2)
+2026-11-21T02:46:21.075Z job 832595 refresh sky: transfer_flow:usds>usds_farm[zero] 2026-11-20: 138 transfers
+2026-11-21T02:46:21.659Z job 832595 refresh sky: transfer_flow:token>pause_proxy[sky_usds_pair] 2026-11-20: 138 transfers
+2026-11-21T02:46:22.094Z job 832595 refresh sky: transfer_flow:token>sky_farm[*] 2026-11-20: 0 transfers
+2026-11-21T02:46:22.532Z job 832595 refresh sky: transfer_flow:token>usds_sky_farm[*] 2026-11-20: 0 transfers
+2026-11-21T02:46:23.130Z job 832595 refresh sky done
+2026-11-21T02:46:23.147Z job 832596 refresh uni started (attempt 1 of 2)
+2026-11-21T02:46:24.037Z job 832596 refresh uni: transfer_flow:token>dead[*] 2026-11-20: 27 transfers
+2026-11-21T02:46:24.277Z job 832596 refresh uni done
+2026-11-21T02:46:24.296Z job 832597 refresh vvv started (attempt 1 of 2)
+2026-11-21T02:46:45.976Z job 832597 refresh vvv: transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe] 2026-11-20: 6435 transfers, 3 unlisted
+2026-11-21T02:46:46.414Z job 832597 refresh vvv done
+2026-11-21T02:46:46.430Z job 832598 refresh ycrv started (attempt 1 of 2)
+2026-11-21T02:46:47.233Z job 832598 refresh ycrv: transfer_flow:yv_crvusd>distributor[receiver] 2026-11-20: 0 transfers
+2026-11-21T02:46:47.653Z job 832598 refresh ycrv: transfer_flow:yv_crvusd>yearn_treasury[receiver,splitter] 2026-11-20: 0 transfers
+2026-11-21T02:46:48.116Z job 832598 refresh ycrv: transfer_flow:st_ycrv>yearn_treasury[st_ycrv] 2026-11-20: 1 transfers
+2026-11-21T02:46:48.526Z job 832598 refresh ycrv: transfer_flow:crvusd>splitter[fee_burner,voter] 2026-11-20: 0 transfers
+2026-11-21T02:46:49.249Z job 832598 refresh ycrv done
+2026-11-21T02:46:49.277Z job 832599 nightly_report started (attempt 1 of 1)
+2026-11-21T02:46:55.885Z job 832599 nightly_report done
+2026-11-21T02:46:55.909Z job 832658 snapshot_push started (attempt 1 of 1)
+2026-11-21T02:47:00.215Z job 832658 snapshot_push done
+2026-11-21T03:30:08.029Z queued job 834224 retention slot 2026-11-21T03:30:00.000Z
+2026-11-21T03:30:08.156Z job 834224 retention started (attempt 1 of 1)
+2026-11-21T03:30:08.506Z job 834224 retention done
+2026-11-21T06:15:14.782Z queued job 840161 levels slot 2026-11-21T06:15:00.000Z
+2026-11-21T06:15:19.618Z job 840161 levels started (attempt 1 of 1)
+2026-11-21T06:15:57.306Z job 840161 levels done
+2026-11-21T06:15:57.332Z job 840183 snapshot_push started (attempt 1 of 1)
+2026-11-21T06:16:02.986Z job 840183 snapshot_push done
+2026-11-21T12:15:28.874Z queued job 853122 levels slot 2026-11-21T12:15:00.000Z
+2026-11-21T12:15:32.126Z job 853122 levels started (attempt 1 of 1)
+2026-11-21T12:16:13.370Z job 853122 levels done
+2026-11-21T12:16:13.388Z job 853144 snapshot_push started (attempt 1 of 1)
+2026-11-21T12:16:17.530Z job 853144 snapshot_push done
+2026-11-21T16:40:09.319Z queued job 862646 disclosure_watch slot 2026-11-21T16:40:00.000Z
+2026-11-21T16:40:10.214Z job 862646 disclosure_watch started (attempt 1 of 1)
+2026-11-21T16:40:10.215Z job 862646 disclosure_watch: disclosure_watch: dry scan with /home/orion-stage/watcher-venv/bin/python
+2026-11-21T16:40:10.357Z job 862646 disclosure_watch done
+2026-11-21T17:13:02.203Z drained: claiming nothing until orion daemon undrain
+2026-11-21T17:13:05.059Z stop requested
+2026-11-21T17:13:05.100Z daemon stopped
+2026-11-21T17:13:07.451Z daemon started: venus-805351-508102bc env stage release orion-2026.11.21.1 database orion_stage schema orion
+2026-11-21T18:15:09.936Z queued job 866065 levels slot 2026-11-21T18:15:00.000Z
+2026-11-21T18:15:11.354Z job 866065 levels started (attempt 1 of 1)
+2026-11-21T18:16:01.019Z job 866065 levels done
+2026-11-21T18:16:01.039Z job 866087 snapshot_push started (attempt 1 of 1)
+2026-11-21T18:16:05.319Z job 866087 snapshot_push done
+2026-11-22T00:15:24.569Z queued job 879026 levels slot 2026-11-22T00:15:00.000Z
+2026-11-22T00:15:29.041Z job 879026 levels started (attempt 1 of 1)
+2026-11-22T00:16:15.358Z job 879026 levels done
+2026-11-22T00:16:15.377Z job 879048 snapshot_push started (attempt 1 of 1)
+2026-11-22T00:16:20.325Z job 879048 snapshot_push done
+2026-11-22T02:45:01.068Z queued job 884395 refresh aero slot 2026-11-22T02:45:00.000Z
+2026-11-22T02:45:01.073Z queued job 884396 refresh cake slot 2026-11-22T02:45:00.000Z
+2026-11-22T02:45:01.082Z queued job 884397 refresh crv slot 2026-11-22T02:45:00.000Z
+2026-11-22T02:45:01.086Z queued job 884398 refresh cvxcrv slot 2026-11-22T02:45:00.000Z
+2026-11-22T02:45:01.091Z queued job 884399 refresh hype slot 2026-11-22T02:45:00.000Z
+2026-11-22T02:45:01.096Z queued job 884400 refresh link slot 2026-11-22T02:45:00.000Z
+2026-11-22T02:45:01.102Z queued job 884401 refresh lit slot 2026-11-22T02:45:00.000Z
+2026-11-22T02:45:01.109Z queued job 884402 refresh pump slot 2026-11-22T02:45:00.000Z
+2026-11-22T02:45:01.116Z queued job 884403 refresh sdcrv slot 2026-11-22T02:45:00.000Z
+2026-11-22T02:45:01.123Z queued job 884404 refresh sky slot 2026-11-22T02:45:00.000Z
+2026-11-22T02:45:01.130Z queued job 884405 refresh uni slot 2026-11-22T02:45:00.000Z
+2026-11-22T02:45:01.137Z queued job 884406 refresh vvv slot 2026-11-22T02:45:00.000Z
+2026-11-22T02:45:01.143Z queued job 884407 refresh ycrv slot 2026-11-22T02:45:00.000Z
+2026-11-22T02:45:01.150Z queued job 884408 nightly_report slot 2026-11-22T02:45:00.000Z
+2026-11-22T02:45:05.410Z job 884395 refresh aero started (attempt 1 of 2)
+2026-11-22T02:45:12.280Z job 884395 refresh aero done
+2026-11-22T02:45:12.297Z job 884396 refresh cake started (attempt 1 of 2)
+2026-11-22T02:45:14.413Z job 884396 refresh cake: transfer_flow:token>burner[converter_a,converter_b,converter_c,converter_owner,product_a,product_b,product_c] 2026-11-21: 0 transfers
+2026-11-22T02:45:15.195Z job 884396 refresh cake: transfer_flow:token>treasury[converter_a,converter_b,converter_c,product_a,product_b,product_c,product_d] 2026-11-21: 0 transfers
+2026-11-22T02:45:15.662Z job 884396 refresh cake done
+2026-11-22T02:45:15.686Z job 884397 refresh crv started (attempt 1 of 2)
+2026-11-22T02:45:17.580Z job 884397 refresh crv: transfer_flow:crvusd>fee_distributor[fee_allocator] 2026-11-21: 0 transfers
+2026-11-22T02:45:17.897Z job 884397 refresh crv: transfer_flow:crvusd>curve_treasury[fee_allocator] 2026-11-21: 0 transfers
+2026-11-22T02:45:18.259Z job 884397 refresh crv: transfer_flow:crvusd>fee_allocator[hooker] 2026-11-21: 0 transfers
+2026-11-22T02:45:18.832Z job 884397 refresh crv done
+2026-11-22T02:45:18.848Z job 884398 refresh cvxcrv started (attempt 1 of 2)
+2026-11-22T02:45:19.587Z job 884398 refresh cvxcrv: transfer_flow:crvusd>wrapper[crvusd_pool] 2026-11-21: 56 transfers
+2026-11-22T02:45:20.042Z job 884398 refresh cvxcrv: transfer_flow:crv>wrapper[base_reward_pool] 2026-11-21: 56 transfers
+2026-11-22T02:45:20.466Z job 884398 refresh cvxcrv: transfer_flow:cvx>wrapper[cvx_distribution,cvx_mint] 2026-11-21: 56 transfers
+2026-11-22T02:45:20.898Z job 884398 refresh cvxcrv: transfer_flow:crv>booster[voter_proxy] 2026-11-21: 92 transfers
+2026-11-22T02:45:21.221Z job 884398 refresh cvxcrv: transfer_flow:crv>base_reward_pool[booster] 2026-11-21: 92 transfers
+2026-11-22T02:45:21.602Z job 884398 refresh cvxcrv: transfer_flow:crv>cvx_reward_pool[booster] 2026-11-21: 92 transfers
+2026-11-22T02:45:21.910Z job 884398 refresh cvxcrv: transfer_flow:crv>convex_treasury[booster] 2026-11-21: 92 transfers
+2026-11-22T02:45:22.820Z job 884398 refresh cvxcrv done
+2026-11-22T02:45:22.844Z job 884399 refresh hype started (attempt 1 of 2)
+2026-11-22T02:45:31.690Z job 884399 refresh hype done
+2026-11-22T02:45:31.713Z job 884400 refresh link started (attempt 1 of 2)
+2026-11-22T02:45:33.289Z job 884400 refresh link: transfer_flow:token>reserve[fee_converter] 2026-11-21: 0 transfers
+2026-11-22T02:45:33.699Z job 884400 refresh link: transfer_flow:token>release_hub[*] 2026-11-21: 0 transfers
+2026-11-22T02:45:34.047Z job 884400 refresh link: transfer_flow:token>release_rewards[*] 2026-11-21: 0 transfers
+2026-11-22T02:45:34.547Z job 884400 refresh link done
+2026-11-22T02:45:34.570Z job 884401 refresh lit started (attempt 1 of 2)
+2026-11-22T02:46:06.492Z job 884401 refresh lit: transfer_flow:token>dead[burn_safe] 2026-11-21: 0 transfers
+2026-11-22T02:46:06.804Z job 884401 refresh lit: transfer_flow:token>prime_passthrough[buyback_wallet] 2026-11-21: 0 transfers
+2026-11-22T02:46:07.194Z job 884401 refresh lit done
+2026-11-22T02:46:07.222Z job 884402 refresh pump started (attempt 1 of 2)
+2026-11-22T02:46:11.208Z job 884402 refresh pump done
+2026-11-22T02:46:11.231Z job 884403 refresh sdcrv started (attempt 1 of 2)
+2026-11-22T02:46:11.933Z job 884403 refresh sdcrv: transfer_flow:crvusd>gauge[accumulator] 2026-11-21: 0 transfers
+2026-11-22T02:46:12.304Z job 884403 refresh sdcrv: transfer_flow:crv>gauge[accumulator] 2026-11-21: 0 transfers
+2026-11-22T02:46:12.557Z job 884403 refresh sdcrv: transfer_flow:token>merkle_stash[botmarket] 2026-11-21: 0 transfers
+2026-11-22T02:46:14.170Z job 884403 refresh sdcrv: transfer_flow:crv>sd_accountant[locker] 2026-11-21: 30 transfers
+2026-11-22T02:46:14.531Z job 884403 refresh sdcrv: transfer_flow:crv>sd_fee_receiver[sd_accountant,sd_staking_v2_fee] 2026-11-21: 0 transfers
+2026-11-22T02:46:14.934Z job 884403 refresh sdcrv: transfer_flow:crv>sd_vesdt_recipient[sd_fee_receiver] 2026-11-21: 0 transfers
+2026-11-22T02:46:15.247Z job 884403 refresh sdcrv: transfer_flow:crv>sd_treasury[sd_fee_receiver] 2026-11-21: 0 transfers
+2026-11-22T02:46:15.619Z job 884403 refresh sdcrv: transfer_flow:crv>sd_boost_delegation[accumulator] 2026-11-21: 0 transfers
+2026-11-22T02:46:15.940Z job 884403 refresh sdcrv: transfer_flow:crvusd>sd_liquidity_fee[accumulator] 2026-11-21: 0 transfers
+2026-11-22T02:46:16.267Z job 884403 refresh sdcrv: transfer_flow:crvusd>sd_treasury[accumulator] 2026-11-21: 0 transfers
+2026-11-22T02:46:17.504Z job 884403 refresh sdcrv done
+2026-11-22T02:46:17.520Z job 884404 refresh sky started (attempt 1 of 2)
+2026-11-22T02:46:18.297Z job 884404 refresh sky: transfer_flow:usds>usds_farm[zero] 2026-11-21: 138 transfers
+2026-11-22T02:46:18.705Z job 884404 refresh sky: transfer_flow:token>pause_proxy[sky_usds_pair] 2026-11-21: 138 transfers
+2026-11-22T02:46:19.030Z job 884404 refresh sky: transfer_flow:token>sky_farm[*] 2026-11-21: 0 transfers
+2026-11-22T02:46:19.330Z job 884404 refresh sky: transfer_flow:token>usds_sky_farm[*] 2026-11-21: 0 transfers
+2026-11-22T02:46:19.928Z job 884404 refresh sky done
+2026-11-22T02:46:19.951Z job 884405 refresh uni started (attempt 1 of 2)
+2026-11-22T02:46:20.673Z job 884405 refresh uni: transfer_flow:token>dead[*] 2026-11-21: 27 transfers
+2026-11-22T02:46:20.920Z job 884405 refresh uni done
+2026-11-22T02:46:20.937Z job 884406 refresh vvv started (attempt 1 of 2)
+2026-11-22T02:46:56.978Z job 884406 refresh vvv: transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe] 2026-11-21: 6117 transfers, 1 unlisted
+2026-11-22T02:46:57.410Z job 884406 refresh vvv done
+2026-11-22T02:46:57.433Z job 884407 refresh ycrv started (attempt 1 of 2)
+2026-11-22T02:46:58.344Z job 884407 refresh ycrv: transfer_flow:yv_crvusd>distributor[receiver] 2026-11-21: 2 transfers
+2026-11-22T02:46:58.758Z job 884407 refresh ycrv: transfer_flow:yv_crvusd>yearn_treasury[receiver,splitter] 2026-11-21: 7 transfers
+2026-11-22T02:46:59.090Z job 884407 refresh ycrv: transfer_flow:st_ycrv>yearn_treasury[st_ycrv] 2026-11-21: 2 transfers
+2026-11-22T02:46:59.411Z job 884407 refresh ycrv: transfer_flow:crvusd>splitter[fee_burner,voter] 2026-11-21: 3 transfers
+2026-11-22T02:47:00.146Z job 884407 refresh ycrv done
+2026-11-22T02:47:00.169Z job 884408 nightly_report started (attempt 1 of 1)
+2026-11-22T02:47:07.488Z job 884408 nightly_report done
+2026-11-22T02:47:07.512Z job 884485 snapshot_push started (attempt 1 of 1)
+2026-11-22T02:47:12.330Z job 884485 snapshot_push done

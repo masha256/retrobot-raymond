@@ -191,15 +191,15 @@
       "schedule_display": "15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 1836
+        "completed": 1837
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-06T08:57:25.404654-07:00",
-      "next_run_at": "2026-11-21T19:15:00-08:00",
-      "last_run_at": "2026-11-21T17:15:53.989440-08:00",
+      "next_run_at": "2026-11-21T20:15:00-08:00",
+      "last_run_at": "2026-11-21T18:16:05.316216-08:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -219,17 +219,17 @@
       ],
       "workdir": null,
       "fire_claim": {
-        "at": "2026-11-21T18:15:51.742495-08:00",
-        "by": "uranus:3317940:b364bd1327c040768b4eb13c87cb9a51"
+        "at": "2026-11-21T19:15:24.616919-08:00",
+        "by": "uranus:3319468:fb30efb273a845ff9e4a861419452a87"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-11-21T18:15:00-08:00",
-        "dispatched_at": "2026-11-21T18:15:49.599734-08:00",
-        "lateness_seconds": 49.6,
+        "scheduled_at": "2026-11-21T19:15:00-08:00",
+        "dispatched_at": "2026-11-21T19:15:23.512770-08:00",
+        "lateness_seconds": 23.5,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "0d02fe8d57a449be93c74a890faadeac"
+        "ca183db81ecc48969ca2357c38b4c8ab"
       ],
       "last_failure": {
         "at": "2026-11-17T09:31:58.159656-08:00",
@@ -384,7 +384,7 @@
       "schedule_display": "once at 2026-11-21 19:05",
       "repeat": {
         "times": 1,
-        "completed": 0
+        "completed": 1
       },
       "enabled": true,
       "state": "scheduled",
@@ -411,8 +411,16 @@
       "enabled_toolsets": null,
       "workdir": null,
       "timezone": "America/Los_Angeles",
-      "catch_up": false
+      "catch_up": false,
+      "run_claim": {
+        "at": "2026-11-21T19:15:24.779511-08:00",
+        "by": "uranus:3319468"
+      },
+      "fire_claim": {
+        "at": "2026-11-21T19:15:24.760421-08:00",
+        "by": "uranus:3319468:fec4fca4c21c46c2a42df80458a611f4"
+      }
     }
   ],
-  "updated_at": "2026-11-21T18:15:51.743060-08:00"
+  "updated_at": "2026-11-21T19:15:24.780096-08:00"
 }

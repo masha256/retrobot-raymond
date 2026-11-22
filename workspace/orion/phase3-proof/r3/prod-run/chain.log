@@ -1,0 +1,31 @@
+== Orion R3 prod chain 2026-11-22T03:05:24Z
+soak nightly: {"tag": "orion-2026.11.21.1", "nightly_slot": "2026-11-22T02:45:00.000Z", "status": "done", "failed_sources": []}
+soak nightly ok: soak nightly: {"tag": "orion-2026.11.21.1", "nightly_slot": "2026-11-22T02:45:00.000Z", "status": "done", "failed_sources": []}
+soak logs ok (no ORION WATCH / ORION ALERT on stage since the switch)
+== prod s0 start 03:05:26
+== N6 orion-remote of the R3 snapshot 03:05:26
+N6 rebuild-supply-levels verb ok (exit 64, usage line)
+N6 sql-ro ok (orion_prod_ro)
+== 0 save before/ (D = today-2 UTC and D-91, saved once in days.json) 03:05:28
+days ok (D 2026-11-20 = today-2 UTC, D-91 2026-08-21; saved /home/hermes/r3-prod/days.json)
+reports ok (26 saved in /home/hermes/r3-prod/before: D 2026-11-20, D-91 2026-08-21)
+== 1 expected counts (sql-ro; kept = active non-market_data, non-contract_state rows, ruling R15) 03:06:10
+aero: market_data 45 active / 45 total, old locator 0, expected rebuilt 1 notRebuildable 44 kept 0 withoutReplacement 44
+cake: market_data 43 active / 43 total, old locator 0, expected rebuilt 43 notRebuildable 0 kept 0
+crv: market_data 46 active / 46 total, old locator 0, expected rebuilt 46 notRebuildable 0 kept 0
+cvxcrv: market_data 0 active / 0 total, old locator 42, expected rebuilt 42 notRebuildable 0 kept 0
+hype: market_data 58 active / 58 total, old locator 0, expected rebuilt 0 notRebuildable 58 kept 0 withoutReplacement 58
+link: market_data 40 active / 40 total, old locator 0, expected rebuilt 40 notRebuildable 0 kept 0
+lit: market_data 41 active / 41 total, old locator 0, expected rebuilt 41 notRebuildable 0 kept 0
+pump: market_data 40 active / 40 total, old locator 0, expected rebuilt 0 notRebuildable 40 kept 0 withoutReplacement 40
+sdcrv: market_data 0 active / 0 total, old locator 42, expected rebuilt 42 notRebuildable 0 kept 0
+sky: market_data 39 active / 39 total, old locator 0, expected rebuilt 39 notRebuildable 0 kept 0
+uni: market_data 43 active / 43 total, old locator 0, expected rebuilt 43 notRebuildable 0 kept 0
+vvv: market_data 60 active / 60 total, old locator 0, expected rebuilt 60 notRebuildable 0 kept 1
+ycrv: market_data 0 active / 0 total, old locator 42, expected rebuilt 42 notRebuildable 0 kept 0
+kept (never a rebuild target, ruling R15; untouched): vvv disclosure=1
+market_data total 455; latest_levels market_data 9 (cake crv hype link lit pump sky uni vvv)
+expected ok (written /home/hermes/r3-prod/expected.json)
+s0 done: paste the per-asset lines above into the thread
+== prod s0 exit 0 03:06:13
+== prod s1 start 03:06:13

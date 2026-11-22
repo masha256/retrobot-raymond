@@ -1,0 +1,1673 @@
+{
+  "env": "stage",
+  "heartbeat": {
+    "daemonId": "venus-805351-508102bc",
+    "pid": 805351,
+    "host": "venus",
+    "releaseTag": "orion-2026.11.21.1",
+    "startedAt": "2026-11-21T17:13:07.246Z",
+    "beatAt": "2026-11-22T03:02:15.022Z",
+    "currentJobId": null,
+    "state": "running",
+    "drainRequestedAt": null
+  },
+  "release": {
+    "tag": "orion-2026.11.21.1",
+    "commit": "2635cae07f51c0adb07d42103022a68b5a9778f3",
+    "schema": 8,
+    "builtAt": "2026-11-21T17:03:04Z"
+  },
+  "registry": [
+    {
+      "assetId": "aero",
+      "state": "active",
+      "stateSince": "2026-11-04T20:52:10.696Z",
+      "stateBy": "mike via raymond",
+      "stateReason": null,
+      "pausedFrom": null,
+      "configHash": "4f3d7c2f690dbef0bc30f078d966ce6fb34ffc4252847dfbcfeeac2180cda99d",
+      "firstSeenRelease": "orion-2026.11.04.2",
+      "lastJobId": 884395,
+      "lastRunAt": "2026-11-22T02:45:12.271Z",
+      "lastOutcome": "done"
+    },
+    {
+      "assetId": "cake",
+      "state": "active",
+      "stateSince": "2026-11-04T20:52:11.952Z",
+      "stateBy": "mike via raymond",
+      "stateReason": null,
+      "pausedFrom": null,
+      "configHash": "a4da1200171aa5c73b9543b1a92fbe220934b3e9fd06c05f263ac4bcd22cea4b",
+      "firstSeenRelease": "orion-2026.11.04.2",
+      "lastJobId": 884396,
+      "lastRunAt": "2026-11-22T02:45:15.649Z",
+      "lastOutcome": "done"
+    },
+    {
+      "assetId": "crv",
+      "state": "active",
+      "stateSince": "2026-11-04T20:52:13.182Z",
+      "stateBy": "mike via raymond",
+      "stateReason": null,
+      "pausedFrom": null,
+      "configHash": "55b52e1fa4f5b1e336add007a1637d6a8924629bb63d020843ef3c1e06be33b3",
+      "firstSeenRelease": "orion-2026.11.04.2",
+      "lastJobId": 884397,
+      "lastRunAt": "2026-11-22T02:45:18.823Z",
+      "lastOutcome": "done"
+    },
+    {
+      "assetId": "cvxcrv",
+      "state": "active",
+      "stateSince": "2026-11-04T20:52:14.430Z",
+      "stateBy": "mike via raymond",
+      "stateReason": null,
+      "pausedFrom": null,
+      "configHash": "f792c7ab2bda6d5eb6c2593f92bda9c6f9160b1e5648da3def9a667f23fa0d01",
+      "firstSeenRelease": "orion-2026.11.04.2",
+      "lastJobId": 884398,
+      "lastRunAt": "2026-11-22T02:45:22.812Z",
+      "lastOutcome": "done"
+    },
+    {
+      "assetId": "hype",
+      "state": "active",
+      "stateSince": "2026-11-04T20:52:15.675Z",
+      "stateBy": "mike via raymond",
+      "stateReason": null,
+      "pausedFrom": null,
+      "configHash": "d0142eb0bb5a21c73b5f8f2bced176b1fbbccbb2baad2b29aa162ad04c5b1a5a",
+      "firstSeenRelease": "orion-2026.11.04.2",
+      "lastJobId": 884399,
+      "lastRunAt": "2026-11-22T02:45:31.677Z",
+      "lastOutcome": "done"
+    },
+    {
+      "assetId": "link",
+      "state": "active",
+      "stateSince": "2026-11-04T20:52:16.912Z",
+      "stateBy": "mike via raymond",
+      "stateReason": null,
+      "pausedFrom": null,
+      "configHash": "f0994df56fb7ab98837ebce2f8d83bb8503efefd3c3af723d8689806bb11c2c7",
+      "firstSeenRelease": "orion-2026.11.04.2",
+      "lastJobId": 884400,
+      "lastRunAt": "2026-11-22T02:45:34.533Z",
+      "lastOutcome": "done"
+    },
+    {
+      "assetId": "lit",
+      "state": "active",
+      "stateSince": "2026-11-04T20:52:18.157Z",
+      "stateBy": "mike via raymond",
+      "stateReason": null,
+      "pausedFrom": null,
+      "configHash": "4f2495ba6269b3f23cf1039a2f0f88c522eab41888b85079042163e378410237",
+      "firstSeenRelease": "orion-2026.11.04.2",
+      "lastJobId": 884401,
+      "lastRunAt": "2026-11-22T02:46:07.180Z",
+      "lastOutcome": "done"
+    },
+    {
+      "assetId": "pump",
+      "state": "active",
+      "stateSince": "2026-11-04T20:52:19.384Z",
+      "stateBy": "mike via raymond",
+      "stateReason": null,
+      "pausedFrom": null,
+      "configHash": "e5f4f6ac7f473c0028a1aa837f93f0397c0a2b8d06f71ee80268191c7934a2f1",
+      "firstSeenRelease": "orion-2026.11.04.2",
+      "lastJobId": 884402,
+      "lastRunAt": "2026-11-22T02:46:11.199Z",
+      "lastOutcome": "done"
+    },
+    {
+      "assetId": "sdcrv",
+      "state": "active",
+      "stateSince": "2026-11-04T20:52:20.632Z",
+      "stateBy": "mike via raymond",
+      "stateReason": null,
+      "pausedFrom": null,
+      "configHash": "bb3a58dae0d77a00ae31ad4b29f5d7d3bb47c7aaf53b4cea6700316dcaf93635",
+      "firstSeenRelease": "orion-2026.11.04.2",
+      "lastJobId": 884403,
+      "lastRunAt": "2026-11-22T02:46:17.495Z",
+      "lastOutcome": "done"
+    },
+    {
+      "assetId": "sky",
+      "state": "active",
+      "stateSince": "2026-11-04T20:52:21.852Z",
+      "stateBy": "mike via raymond",
+      "stateReason": null,
+      "pausedFrom": null,
+      "configHash": "33fda1251d993c36003b17c959dac48269d2ca7ed3683d2018e68d0c21478ed9",
+      "firstSeenRelease": "orion-2026.11.04.2",
+      "lastJobId": 884404,
+      "lastRunAt": "2026-11-22T02:46:19.915Z",
+      "lastOutcome": "done"
+    },
+    {
+      "assetId": "uni",
+      "state": "active",
+      "stateSince": "2026-11-04T20:52:23.092Z",
+      "stateBy": "mike via raymond",
+      "stateReason": null,
+      "pausedFrom": null,
+      "configHash": "78c1f3e011f86b601cc0d36843c222b231457de5509333691413ab2afe9b8d44",
+      "firstSeenRelease": "orion-2026.11.04.2",
+      "lastJobId": 884405,
+      "lastRunAt": "2026-11-22T02:46:20.912Z",
+      "lastOutcome": "done"
+    },
+    {
+      "assetId": "vvv",
+      "state": "active",
+      "stateSince": "2026-11-04T20:52:24.349Z",
+      "stateBy": "mike via raymond",
+      "stateReason": null,
+      "pausedFrom": null,
+      "configHash": "e3cc05364004f5f28832a2271cf30a1b7a09b7ff3a75aa38dae69cc7bccf9ef9",
+      "firstSeenRelease": "orion-2026.11.04.2",
+      "lastJobId": 884406,
+      "lastRunAt": "2026-11-22T02:46:57.396Z",
+      "lastOutcome": "done"
+    },
+    {
+      "assetId": "ycrv",
+      "state": "active",
+      "stateSince": "2026-11-04T20:52:25.596Z",
+      "stateBy": "mike via raymond",
+      "stateReason": null,
+      "pausedFrom": null,
+      "configHash": "a3b3aa21136813bc61e68ea0c740af3e23315ef123782feeaf9b7e78c952f9a9",
+      "firstSeenRelease": "orion-2026.11.04.2",
+      "lastJobId": 884407,
+      "lastRunAt": "2026-11-22T02:47:00.137Z",
+      "lastOutcome": "done"
+    }
+  ],
+  "last_jobs": [
+    {
+      "id": 884485,
+      "kind": "snapshot_push",
+      "assetId": null,
+      "slot": "2026-11-22T02:45:00.000Z",
+      "runAfter": "2026-11-22T02:45:00.000Z",
+      "priority": 30,
+      "status": "done",
+      "attempts": 1,
+      "maxAttempts": 1,
+      "leaseOwner": "venus-805351-508102bc",
+      "leaseExpiresAt": null,
+      "startedAt": "2026-11-22T02:47:07.496Z",
+      "endedAt": "2026-11-22T02:47:12.326Z",
+      "result": {
+        "pushed": 1,
+        "ref": "f13550719f067425969336014ecad6de56da01ed",
+        "full": 19,
+        "levels": 69
+      },
+      "releaseTag": "orion-2026.11.21.1",
+      "requestedBy": "scheduler",
+      "lastError": null,
+      "params": null
+    },
+    {
+      "id": 884408,
+      "kind": "nightly_report",
+      "assetId": null,
+      "slot": "2026-11-22T02:45:00.000Z",
+      "runAfter": "2026-11-22T02:45:00.000Z",
+      "priority": 20,
+      "status": "done",
+      "attempts": 1,
+      "maxAttempts": 1,
+      "leaseOwner": "venus-805351-508102bc",
+      "leaseExpiresAt": null,
+      "startedAt": "2026-11-22T02:47:00.153Z",
+      "endedAt": "2026-11-22T02:47:07.482Z",
+      "result": {
+        "day": "2026-11-21",
+        "delivered": true,
+        "deadman": true,
+        "alerts": 1,
+        "postCount": 5,
+        "refreshesMissing": [],
+        "configHashes": {
+          "aero": "4f3d7c2f690dbef0bc30f078d966ce6fb34ffc4252847dfbcfeeac2180cda99d",
+          "cake": "a4da1200171aa5c73b9543b1a92fbe220934b3e9fd06c05f263ac4bcd22cea4b",
+          "crv": "55b52e1fa4f5b1e336add007a1637d6a8924629bb63d020843ef3c1e06be33b3",
+          "cvxcrv": "f792c7ab2bda6d5eb6c2593f92bda9c6f9160b1e5648da3def9a667f23fa0d01",
+          "hype": "d0142eb0bb5a21c73b5f8f2bced176b1fbbccbb2baad2b29aa162ad04c5b1a5a",
+          "link": "f0994df56fb7ab98837ebce2f8d83bb8503efefd3c3af723d8689806bb11c2c7",
+          "lit": "4f2495ba6269b3f23cf1039a2f0f88c522eab41888b85079042163e378410237",
+          "pump": "e5f4f6ac7f473c0028a1aa837f93f0397c0a2b8d06f71ee80268191c7934a2f1",
+          "sdcrv": "bb3a58dae0d77a00ae31ad4b29f5d7d3bb47c7aaf53b4cea6700316dcaf93635",
+          "sky": "33fda1251d993c36003b17c959dac48269d2ca7ed3683d2018e68d0c21478ed9",
+          "uni": "78c1f3e011f86b601cc0d36843c222b231457de5509333691413ab2afe9b8d44",
+          "vvv": "e3cc05364004f5f28832a2271cf30a1b7a09b7ff3a75aa38dae69cc7bccf9ef9",
+          "ycrv": "a3b3aa21136813bc61e68ea0c740af3e23315ef123782feeaf9b7e78c952f9a9"
+        }
+      },
+      "releaseTag": "orion-2026.11.21.1",
+      "requestedBy": "scheduler",
+      "lastError": null,
+      "params": null
+    },
+    {
+      "id": 884407,
+      "kind": "refresh",
+      "assetId": "ycrv",
+      "slot": "2026-11-22T02:45:00.000Z",
+      "runAfter": "2026-11-22T02:45:00.000Z",
+      "priority": 10,
+      "status": "done",
+      "attempts": 1,
+      "maxAttempts": 2,
+      "leaseOwner": "venus-805351-508102bc",
+      "leaseExpiresAt": null,
+      "startedAt": "2026-11-22T02:46:57.418Z",
+      "endedAt": "2026-11-22T02:47:00.142Z",
+      "result": {
+        "report": {
+          "schema_version": 2,
+          "tick_id": "tick_ycrv_20261122T024657Z",
+          "asset": "ycrv",
+          "started_at": "2026-11-22T02:46:57.484Z",
+          "ended_at": "2026-11-22T02:47:00.120Z",
+          "outcome": "completed",
+          "lock": null,
+          "ingest": {
+            "fetch_run_id": 660,
+            "outcome": "ok",
+            "sources_failed": [],
+            "anomalies_raised": []
+          },
+          "holder_yield": {
+            "day": "2026-11-21",
+            "window_days": 91,
+            "price": 0.09641527710447159,
+            "market_cap": 6704666.865157559,
+            "fdv": 6938332.916819734,
+            "flows": [
+              {
+                "id": "ybs_payout",
+                "bucket": "cash",
+                "net": 462714.56173361617,
+                "yield": 0.07590300484793475
+              },
+              {
+                "id": "incentives_to_holders",
+                "bucket": "cash",
+                "net": 1236014.6815423565,
+                "yield": 0.20275400024959317
+              }
+            ],
+            "yields": {
+              "cash": 0.27865700509752794,
+              "buyback": 0,
+              "shareholder": 0.27865700509752794,
+              "dilution": 0,
+              "net_shareholder": 0.27865700509752794
+            },
+            "multiple": 3.5886411671223093,
+            "holder_flow_growth_annualized": 0.2522833384481,
+            "statement_revenue": 638792.3163375008,
+            "statement_revenue_growth": 0.24204474661069342,
+            "gross_profit": 638792.3163375008,
+            "statement_payout_ratio": 0.7243583711002947,
+            "payout_ratio_basis": "grossProfit",
+            "holder_flow_by_bucket": {
+              "burn": null,
+              "hold": null,
+              "cash": 1698729.2432759728
+            },
+            "net_holder_yield": 0.27865700509752794,
+            "mcap_to_revenue": 10.495847701485504,
+            "mcap_to_holder_flow": 3.946871987808789,
+            "scope": "complete",
+            "flags": []
+          },
+          "report_error": null,
+          "inbox": {
+            "observations": [],
+            "proposals": [],
+            "anomalies": []
+          },
+          "error": null,
+          "checks": [
+            {
+              "id": "splitter",
+              "type": "sum",
+              "status": "ok",
+              "gap_pct": 0.014323259739659365
+            },
+            {
+              "id": "gross_by_sender",
+              "type": "sum",
+              "status": "ok",
+              "gap_pct": 0
+            }
+          ]
+        },
+        "fetchLines": [
+          "YCRV fetch ok",
+          "  ok       adapter:price.token  wrote price_usd",
+          "  ok       chain_levels  wrote total_supply, staked_supply",
+          "  ok       adapter:chain.view_sum  wrote circulating_supply",
+          "  ok       constant  wrote staker_emission_share, emission_rate_annual",
+          "  ok       transfer_flow:yv_crvusd>distributor[receiver]  wrote flow_usd.fees",
+          "  ok       transfer_flow:yv_crvusd>yearn_treasury[receiver,splitter]  wrote flow_usd.yearn_revenue",
+          "  ok       transfer_flow:st_ycrv>yearn_treasury[st_ycrv]  wrote flow_usd.yearn_styc_fee",
+          "  ok       transfer_flow:crvusd>splitter[fee_burner,voter]  wrote flow_usd.yearn_gross, flow_usd.yearn_gross_fees, flow_usd.yearn_gross_incentives"
+        ],
+        "alertFlags": [],
+        "levels": 4
+      },
+      "releaseTag": "orion-2026.11.21.1",
+      "requestedBy": "scheduler",
+      "lastError": null,
+      "params": null
+    },
+    {
+      "id": 884406,
+      "kind": "refresh",
+      "assetId": "vvv",
+      "slot": "2026-11-22T02:45:00.000Z",
+      "runAfter": "2026-11-22T02:45:00.000Z",
+      "priority": 10,
+      "status": "done",
+      "attempts": 1,
+      "maxAttempts": 2,
+      "leaseOwner": "venus-805351-508102bc",
+      "leaseExpiresAt": null,
+      "startedAt": "2026-11-22T02:46:20.926Z",
+      "endedAt": "2026-11-22T02:46:57.403Z",
+      "result": {
+        "report": {
+          "schema_version": 2,
+          "tick_id": "tick_vvv_20261122T024620Z",
+          "asset": "vvv",
+          "started_at": "2026-11-22T02:46:20.980Z",
+          "ended_at": "2026-11-22T02:46:57.339Z",
+          "outcome": "completed",
+          "lock": null,
+          "ingest": {
+            "fetch_run_id": 659,
+            "outcome": "ok",
+            "sources_failed": [],
+            "anomalies_raised": [
+              {
+                "id": 37,
+                "kind": "unlisted_sender",
+                "metric": "flow_usd.burn",
+                "severity": "degrading"
+              },
+              {
+                "id": 36,
+                "kind": "revenue_disclosure_stale",
+                "metric": "revenue_run_rate_usd",
+                "severity": "advisory"
+              }
+            ]
+          },
+          "holder_yield": {
+            "day": "2026-11-21",
+            "window_days": 91,
+            "price": 24.74801615528119,
+            "market_cap": 1222396636.863195,
+            "fdv": 2011468555.2838569,
+            "flows": [
+              {
+                "id": "burn",
+                "bucket": "burn",
+                "net": 11984890.828731088,
+                "yield": 0.0059582789883781155
+              }
+            ],
+            "yields": {
+              "cash": 0,
+              "buyback": 0.0059582789883781155,
+              "shareholder": 0.0059582789883781155,
+              "dilution": 0.02460691328260786,
+              "net_shareholder": -0.018648634294229742
+            },
+            "multiple": 167.83369861507725,
+            "holder_flow_growth_annualized": 27.414907043975916,
+            "statement_revenue": 150000000,
+            "statement_revenue_growth": 11.828046029000676,
+            "gross_profit": null,
+            "statement_payout_ratio": 0.07989927219154058,
+            "payout_ratio_basis": "revenue",
+            "holder_flow_by_bucket": {
+              "burn": 11984890.828731088,
+              "hold": null,
+              "cash": null
+            },
+            "net_holder_yield": -0.018648634294229742,
+            "mcap_to_revenue": 8.1493109124213,
+            "mcap_to_holder_flow": 101.99480782359512,
+            "scope": "complete",
+            "flags": [
+              "cost of revenue not measured: compute",
+              "payout ratio on revenue: cost of revenue not measured",
+              "disclosed revenue: the two latest disclosures are 58 days apart (< 90): a noisy rate"
+            ]
+          },
+          "report_error": null,
+          "inbox": {
+            "observations": [],
+            "proposals": [],
+            "anomalies": [
+              {
+                "id": 37,
+                "kind": "unlisted_sender",
+                "metric": "flow_usd.burn",
+                "severity": "degrading",
+                "occurrences": 1,
+                "first_seen_at": "2026-11-22T02:46:20.980Z",
+                "last_seen_at": "2026-11-22T02:46:20.980Z",
+                "reading": {
+                  "sender": "0xad29522249fddb08453dbf1435afad6bc778f70f",
+                  "transfers": 1,
+                  "tokens": 1.2,
+                  "first": {
+                    "tx": "0x8c0bbdfbed6098137d8697805c8788f9d65517655f4cb2c22ea82c4b209259e4",
+                    "day": "2026-11-21"
+                  },
+                  "last": {
+                    "tx": "0x8c0bbdfbed6098137d8697805c8788f9d65517655f4cb2c22ea82c4b209259e4",
+                    "day": "2026-11-21"
+                  },
+                  "scan": "transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe]"
+                }
+              },
+              {
+                "id": 36,
+                "kind": "revenue_disclosure_stale",
+                "metric": "revenue_run_rate_usd",
+                "severity": "advisory",
+                "occurrences": 2,
+                "first_seen_at": "2026-11-21T02:46:24.336Z",
+                "last_seen_at": "2026-11-22T02:46:20.980Z",
+                "reading": {
+                  "index_at_disclosure": {
+                    "value": 17547.166452942918
+                  },
+                  "index_latest": {
+                    "value": 22859.585746118053
+                  },
+                  "move_pct": 30.275083486679776,
+                  "threshold_pct": 30
+                }
+              },
+              {
+                "id": 35,
+                "kind": "unlisted_sender",
+                "metric": "flow_usd.burn",
+                "severity": "degrading",
+                "occurrences": 1,
+                "first_seen_at": "2026-11-21T02:46:24.336Z",
+                "last_seen_at": "2026-11-21T02:46:24.336Z",
+                "reading": {
+                  "sender": "0x51b0f19971c0f3eb8466aea6f4c120e8d3ee7560",
+                  "transfers": 1,
+                  "tokens": 0.0510541702967634,
+                  "first": {
+                    "tx": "0xf83414d1b07b20e20c2133867c13ed500a935aff722df4289dbcd2a3e5f45142",
+                    "day": "2026-11-20"
+                  },
+                  "last": {
+                    "tx": "0xf83414d1b07b20e20c2133867c13ed500a935aff722df4289dbcd2a3e5f45142",
+                    "day": "2026-11-20"
+                  },
+                  "scan": "transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe]"
+                }
+              },
+              {
+                "id": 34,
+                "kind": "unlisted_sender",
+                "metric": "flow_usd.burn",
+                "severity": "degrading",
+                "occurrences": 1,
+                "first_seen_at": "2026-11-21T02:46:24.336Z",
+                "last_seen_at": "2026-11-21T02:46:24.336Z",
+                "reading": {
+                  "sender": "0x446fcf85dea3dc1661bd6d98335eb7f6997386f9",
+                  "transfers": 1,
+                  "tokens": 0.3294693035249223,
+                  "first": {
+                    "tx": "0x6e4b8973a58ca7b1d745b86ff380813d17039d6e6b05a1a9ba69121e67361d1c",
+                    "day": "2026-11-20"
+                  },
+                  "last": {
+                    "tx": "0x6e4b8973a58ca7b1d745b86ff380813d17039d6e6b05a1a9ba69121e67361d1c",
+                    "day": "2026-11-20"
+                  },
+                  "scan": "transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe]"
+                }
+              },
+              {
+                "id": 33,
+                "kind": "unlisted_sender",
+                "metric": "flow_usd.burn",
+                "severity": "degrading",
+                "occurrences": 1,
+                "first_seen_at": "2026-11-21T02:46:24.336Z",
+                "last_seen_at": "2026-11-21T02:46:24.336Z",
+                "reading": {
+                  "sender": "0xfd9a8453271667ae3aba9baee85479c8ddd74bd7",
+                  "transfers": 1,
+                  "tokens": 0.1,
+                  "first": {
+                    "tx": "0xe6b7b32b8fe04cfe30d3319aa1fb9bf68e466f76ad7ae2b692c1a4ecf6a484e7",
+                    "day": "2026-11-20"
+                  },
+                  "last": {
+                    "tx": "0xe6b7b32b8fe04cfe30d3319aa1fb9bf68e466f76ad7ae2b692c1a4ecf6a484e7",
+                    "day": "2026-11-20"
+                  },
+                  "scan": "transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe]"
+                }
+              },
+              {
+                "id": 32,
+                "kind": "unlisted_sender",
+                "metric": "flow_usd.burn",
+                "severity": "degrading",
+                "occurrences": 1,
+                "first_seen_at": "2026-11-20T02:46:21.647Z",
+                "last_seen_at": "2026-11-20T02:46:21.647Z",
+                "reading": {
+                  "sender": "0x0b176ff4a115a32b62978aba54c90140c50bb47c",
+                  "transfers": 1,
+                  "tokens": 0.110931266403435,
+                  "first": {
+                    "tx": "0x4d00d1e797184daf51e8d6bdd97f2cf43a3721ba11ee01ff8d79597a0337f9ae",
+                    "day": "2026-11-19"
+                  },
+                  "last": {
+                    "tx": "0x4d00d1e797184daf51e8d6bdd97f2cf43a3721ba11ee01ff8d79597a0337f9ae",
+                    "day": "2026-11-19"
+                  },
+                  "scan": "transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe]"
+                }
+              },
+              {
+                "id": 31,
+                "kind": "unlisted_sender",
+                "metric": "flow_usd.burn",
+                "severity": "degrading",
+                "occurrences": 1,
+                "first_seen_at": "2026-11-19T02:46:24.450Z",
+                "last_seen_at": "2026-11-19T02:46:24.450Z",
+                "reading": {
+                  "sender": "0x61ea4eee06763a14a6167a2847768bf322e796aa",
+                  "transfers": 1,
+                  "tokens": 1.0362226841085223,
+                  "first": {
+                    "tx": "0x90f7d6f89d01f19c4c77802e19c40fc647deb3c0b19eb470e9ea0aa0df928f1b",
+                    "day": "2026-11-18"
+                  },
+                  "last": {
+                    "tx": "0x90f7d6f89d01f19c4c77802e19c40fc647deb3c0b19eb470e9ea0aa0df928f1b",
+                    "day": "2026-11-18"
+                  },
+                  "scan": "transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe]"
+                }
+              },
+              {
+                "id": 30,
+                "kind": "unlisted_sender",
+                "metric": "flow_usd.burn",
+                "severity": "degrading",
+                "occurrences": 1,
+                "first_seen_at": "2026-11-19T02:46:24.450Z",
+                "last_seen_at": "2026-11-19T02:46:24.450Z",
+                "reading": {
+                  "sender": "0x1b67a2ae3456881e5c77fe862920d9861e1bf6fe",
+                  "transfers": 1,
+                  "tokens": 0.4781102171580045,
+                  "first": {
+                    "tx": "0x396ea122871fc689cf0b885913833a73b23432f107990695bfd392aa7b851122",
+                    "day": "2026-11-18"
+                  },
+                  "last": {
+                    "tx": "0x396ea122871fc689cf0b885913833a73b23432f107990695bfd392aa7b851122",
+                    "day": "2026-11-18"
+                  },
+                  "scan": "transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe]"
+                }
+              },
+              {
+                "id": 29,
+                "kind": "unlisted_sender",
+                "metric": "flow_usd.burn",
+                "severity": "degrading",
+                "occurrences": 1,
+                "first_seen_at": "2026-11-19T02:46:24.450Z",
+                "last_seen_at": "2026-11-19T02:46:24.450Z",
+                "reading": {
+                  "sender": "0x17a6647118249a220e76627ae62bc5b8c81f7c13",
+                  "transfers": 1,
+                  "tokens": 2,
+                  "first": {
+                    "tx": "0x2ef28a945201369d435ab4b3343a815c1c518233cf856391c74051729603bf8c",
+                    "day": "2026-11-18"
+                  },
+                  "last": {
+                    "tx": "0x2ef28a945201369d435ab4b3343a815c1c518233cf856391c74051729603bf8c",
+                    "day": "2026-11-18"
+                  },
+                  "scan": "transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe]"
+                }
+              },
+              {
+                "id": 28,
+                "kind": "unlisted_sender",
+                "metric": "flow_usd.burn",
+                "severity": "degrading",
+                "occurrences": 1,
+                "first_seen_at": "2026-11-19T02:46:24.450Z",
+                "last_seen_at": "2026-11-19T02:46:24.450Z",
+                "reading": {
+                  "sender": "0xea1e51257e41c94be3ace40844bcc05eb6eba806",
+                  "transfers": 1,
+                  "tokens": 1,
+                  "first": {
+                    "tx": "0xb374e760fd315eb056cd43528ebbbf388a45192aa312a39f7d7b661a76e49d97",
+                    "day": "2026-11-18"
+                  },
+                  "last": {
+                    "tx": "0xb374e760fd315eb056cd43528ebbbf388a45192aa312a39f7d7b661a76e49d97",
+                    "day": "2026-11-18"
+                  },
+                  "scan": "transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe]"
+                }
+              },
+              {
+                "id": 27,
+                "kind": "unlisted_sender",
+                "metric": "flow_usd.burn",
+                "severity": "degrading",
+                "occurrences": 1,
+                "first_seen_at": "2026-11-19T02:46:24.450Z",
+                "last_seen_at": "2026-11-19T02:46:24.450Z",
+                "reading": {
+                  "sender": "0xd39d8044469737ceb3764923c0ab42bee534c24e",
+                  "transfers": 1,
+                  "tokens": 0.24044832787183265,
+                  "first": {
+                    "tx": "0x1b240de8581ecf2365f3163fb3b2577a260dd96c151aa659b1f446bee8c9fd54",
+                    "day": "2026-11-18"
+                  },
+                  "last": {
+                    "tx": "0x1b240de8581ecf2365f3163fb3b2577a260dd96c151aa659b1f446bee8c9fd54",
+                    "day": "2026-11-18"
+                  },
+                  "scan": "transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe]"
+                }
+              },
+              {
+                "id": 26,
+                "kind": "unlisted_sender",
+                "metric": "flow_usd.burn",
+                "severity": "degrading",
+                "occurrences": 2,
+                "first_seen_at": "2026-11-19T02:46:24.450Z",
+                "last_seen_at": "2026-11-20T02:46:21.647Z",
+                "reading": {
+                  "sender": "0x6295d887d631116b0a983610c5e09af96b8851d3",
+                  "transfers": 2,
+                  "tokens": 0.4574250696659512,
+                  "first": {
+                    "tx": "0x0b47ffec9de7e1c7b1cf58ced0780f0822c4fdd5410762a3f0a45772642d166c",
+                    "day": "2026-11-19"
+                  },
+                  "last": {
+                    "tx": "0xb0ee309ca25b14128770a3d69ab66f2b9b750b4279a84329dd470f2fb0467111",
+                    "day": "2026-11-19"
+                  },
+                  "scan": "transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe]"
+                }
+              },
+              {
+                "id": 25,
+                "kind": "unlisted_sender",
+                "metric": "flow_usd.burn",
+                "severity": "degrading",
+                "occurrences": 1,
+                "first_seen_at": "2026-11-19T02:46:24.450Z",
+                "last_seen_at": "2026-11-19T02:46:24.450Z",
+                "reading": {
+                  "sender": "0xbf258fb073290253d4220a3c9b912fd69f234eaa",
+                  "transfers": 1,
+                  "tokens": 0.25,
+                  "first": {
+                    "tx": "0xbf06a0ab498f2136e48710acded53b74443e2cf4ab61320da6657a0cf6c3dcef",
+                    "day": "2026-11-18"
+                  },
+                  "last": {
+                    "tx": "0xbf06a0ab498f2136e48710acded53b74443e2cf4ab61320da6657a0cf6c3dcef",
+                    "day": "2026-11-18"
+                  },
+                  "scan": "transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe]"
+                }
+              },
+              {
+                "id": 24,
+                "kind": "unlisted_sender",
+                "metric": "flow_usd.burn",
+                "severity": "degrading",
+                "occurrences": 1,
+                "first_seen_at": "2026-11-19T02:46:24.450Z",
+                "last_seen_at": "2026-11-19T02:46:24.450Z",
+                "reading": {
+                  "sender": "0xd44c0fa359ce6f86d2b1f1b34e2d214c0205df24",
+                  "transfers": 1,
+                  "tokens": 2,
+                  "first": {
+                    "tx": "0x78ecba41b61d5b14cb11b8ae423d2048c34ca31124f7131050314cc21d38e1bb",
+                    "day": "2026-11-18"
+                  },
+                  "last": {
+                    "tx": "0x78ecba41b61d5b14cb11b8ae423d2048c34ca31124f7131050314cc21d38e1bb",
+                    "day": "2026-11-18"
+                  },
+                  "scan": "transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe]"
+                }
+              },
+              {
+                "id": 23,
+                "kind": "unlisted_sender",
+                "metric": "flow_usd.burn",
+                "severity": "degrading",
+                "occurrences": 1,
+                "first_seen_at": "2026-11-19T02:46:24.450Z",
+                "last_seen_at": "2026-11-19T02:46:24.450Z",
+                "reading": {
+                  "sender": "0x5f1bacf9d5185c862edbde2b9f531c1c5af894a1",
+                  "transfers": 1,
+                  "tokens": 0.482671044244602,
+                  "first": {
+                    "tx": "0xb816535f3fb8d243ed98eb56232f1d1c8ca95dec121ebf972c5868eb8620e059",
+                    "day": "2026-11-18"
+                  },
+                  "last": {
+                    "tx": "0xb816535f3fb8d243ed98eb56232f1d1c8ca95dec121ebf972c5868eb8620e059",
+                    "day": "2026-11-18"
+                  },
+                  "scan": "transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe]"
+                }
+              },
+              {
+                "id": 22,
+                "kind": "unlisted_sender",
+                "metric": "flow_usd.burn",
+                "severity": "degrading",
+                "occurrences": 1,
+                "first_seen_at": "2026-11-19T02:46:24.450Z",
+                "last_seen_at": "2026-11-19T02:46:24.450Z",
+                "reading": {
+                  "sender": "0x7837657ca694ab6ac0867b500037c63baf0e18a5",
+                  "transfers": 1,
+                  "tokens": 0.4817164630718188,
+                  "first": {
+                    "tx": "0x5ce22698c67e8f5073d44a7ff88d064702a68dda065a0271caf4020d9980284f",
+                    "day": "2026-11-18"
+                  },
+                  "last": {
+                    "tx": "0x5ce22698c67e8f5073d44a7ff88d064702a68dda065a0271caf4020d9980284f",
+                    "day": "2026-11-18"
+                  },
+                  "scan": "transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe]"
+                }
+              },
+              {
+                "id": 21,
+                "kind": "unlisted_sender",
+                "metric": "flow_usd.burn",
+                "severity": "degrading",
+                "occurrences": 3,
+                "first_seen_at": "2026-11-18T02:46:34.964Z",
+                "last_seen_at": "2026-11-20T02:46:21.647Z",
+                "reading": {
+                  "sender": "0xfeac1b9218de4fabad3a138364b0d1912be9dd92",
+                  "transfers": 2,
+                  "tokens": 0.3970473435592401,
+                  "first": {
+                    "tx": "0xe7982aae5935103230377bf89fbb8fccb2471e06cf95341371826447b31af474",
+                    "day": "2026-11-19"
+                  },
+                  "last": {
+                    "tx": "0xb2342858bcb798f28c38a2e8a29a1f2a3363d2f0583fe35658101065f3576221",
+                    "day": "2026-11-19"
+                  },
+                  "scan": "transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe]"
+                }
+              },
+              {
+                "id": 20,
+                "kind": "unlisted_sender",
+                "metric": "flow_usd.burn",
+                "severity": "degrading",
+                "occurrences": 1,
+                "first_seen_at": "2026-11-18T02:46:34.964Z",
+                "last_seen_at": "2026-11-18T02:46:34.964Z",
+                "reading": {
+                  "sender": "0x66138244815a5371fbf0d8553e8334be85835f52",
+                  "transfers": 1,
+                  "tokens": 0.4776140884174846,
+                  "first": {
+                    "tx": "0x505638e6b6fef5efc7ff8579bae13c570db432fa78a9d37a2a140cd5a15c475e",
+                    "day": "2026-11-17"
+                  },
+                  "last": {
+                    "tx": "0x505638e6b6fef5efc7ff8579bae13c570db432fa78a9d37a2a140cd5a15c475e",
+                    "day": "2026-11-17"
+                  },
+                  "scan": "transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe]"
+                }
+              },
+              {
+                "id": 19,
+                "kind": "unlisted_sender",
+                "metric": "flow_usd.burn",
+                "severity": "degrading",
+                "occurrences": 1,
+                "first_seen_at": "2026-11-18T02:46:34.964Z",
+                "last_seen_at": "2026-11-18T02:46:34.964Z",
+                "reading": {
+                  "sender": "0xbf6c68c496fcda5d5c708c87dec9483b17907236",
+                  "transfers": 1,
+                  "tokens": 0.887631501610021,
+                  "first": {
+                    "tx": "0xbbd9a0ef03bc2f93bb64080391c0b3b4709df65d951a01f4cdb0305891148cb2",
+                    "day": "2026-11-17"
+                  },
+                  "last": {
+                    "tx": "0xbbd9a0ef03bc2f93bb64080391c0b3b4709df65d951a01f4cdb0305891148cb2",
+                    "day": "2026-11-17"
+                  },
+                  "scan": "transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe]"
+                }
+              },
+              {
+                "id": 18,
+                "kind": "unlisted_sender",
+                "metric": "flow_usd.burn",
+                "severity": "degrading",
+                "occurrences": 1,
+                "first_seen_at": "2026-11-13T00:46:48.636Z",
+                "last_seen_at": "2026-11-13T00:46:48.636Z",
+                "reading": {
+                  "sender": "0xaf612b5b0a94c517b7e5ebe448dcb028b48df50a",
+                  "transfers": 1,
+                  "tokens": 0.011,
+                  "first": {
+                    "tx": "0xf732052086fe5ccc4c37fc910f66a59977f175e3f61f78eca77fbfc9f91f447c",
+                    "day": "2026-11-12"
+                  },
+                  "last": {
+                    "tx": "0xf732052086fe5ccc4c37fc910f66a59977f175e3f61f78eca77fbfc9f91f447c",
+                    "day": "2026-11-12"
+                  },
+                  "scan": "transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe]"
+                }
+              }
+            ]
+          },
+          "error": null
+        },
+        "fetchLines": [
+          "VVV fetch ok",
+          "  ok       adapter:price.token  wrote price_usd, diem_price_usd",
+          "  ok       adapter:price.token_check",
+          "    check price_usd vs adapter:price.token_check: 24.74801616 vs 24.90026624 (0.62% within 2%)",
+          "  ok       chain_levels  wrote total_supply, staked_supply, locked_supply, emission_rate_annual, diem_supply, diem_locked_yield_share",
+          "  ok       http_json:https://outerface.venice.ai/api/app/vvv/vvv_stats",
+          "    check total_supply vs http_json:https://outerface.venice.ai/api/app/vvv/vvv_stats: 81277971.64 vs 81277971.64 (0.00% within 0.1%)",
+          "    check circulating_supply vs http_json:https://outerface.venice.ai/api/app/vvv/vvv_stats: 49393722.28 vs 49393722.28 (0.00% within 2%)",
+          "    check staked_supply vs http_json:https://outerface.venice.ai/api/app/vvv/vvv_stats: 33253166.92 vs 33253166.92 (0.00% within 0.1%)",
+          "    check locked_supply vs http_json:https://outerface.venice.ai/api/app/vvv/vvv_stats: 8603973.701 vs 8603973.701 (0.00% within 0.1%)",
+          "  ok       adapter:chain.view_sum  wrote circulating_supply",
+          "  ok       adapter:vvv.staker_emission_share  wrote staker_emission_share",
+          "  ok       adapter:vvv.staker_share_from_api",
+          "    check staker_emission_share vs adapter:vvv.staker_share_from_api: 0.9482517035 vs 0.9482598093 (0.00% within 1%)",
+          "  ok       http_json:https://outerface.venice.ai/api/app/vvv/vvv_staking_yield",
+          "    check emission_rate_annual vs http_json:https://outerface.venice.ai/api/app/vvv/vvv_staking_yield: 2000000 vs 1999745.37 (0.01% within 1%)",
+          "  ok       adapter:vvv.burn_history_tokens",
+          "    check flow_tokens.burn 2026-04 vs adapter:vvv.burn_history_tokens: 19223.52982 vs 19223.52982 (0.00% within 0.1%)",
+          "    check flow_tokens.burn 2026-05 vs adapter:vvv.burn_history_tokens: 17956.76485 vs 17956.76485 (0.00% within 0.1%)",
+          "    check flow_tokens.burn 2026-06 vs adapter:vvv.burn_history_tokens: 14579.43556 vs 14579.43556 (0.00% within 0.1%)",
+          "    check flow_tokens.burn 2026-07 vs adapter:vvv.burn_history_tokens: 38093.24638 vs 38093.24638 (0.00% within 0.1%)",
+          "    check flow_tokens.burn 2026-08 vs adapter:vvv.burn_history_tokens: 55498.41783 vs 55498.41783 (0.00% within 0.1%)",
+          "    check flow_tokens.burn 2026-09 vs adapter:vvv.burn_history_tokens: 36417.98172 vs 36417.98172 (0.00% within 0.1%)",
+          "    check flow_tokens.burn 2026-10 vs adapter:vvv.burn_history_tokens: 42574.525 vs 42574.789 (0.00% within 0.1%)",
+          "  ok       http_json:https://outerface.venice.ai/api/app/vvv/diem_stats",
+          "    check diem_supply vs http_json:https://outerface.venice.ai/api/app/vvv/diem_stats: 37415.63674 vs 37415.63674 (0.00% within 0.1%)",
+          "    check diem_target_supply vs http_json:https://outerface.venice.ai/api/app/vvv/diem_stats: 40000 vs 39500 (1.25% within 5%)",
+          "  ok       adapter:vvv.diem_target_supply  wrote diem_target_supply",
+          "  ok       transfer_flow:token>burn_sink[aerodrome_pool,buyback_safe]  wrote flow_usd.burn, flow_tokens.burn, flow_usd.burn_programmatic",
+          "    unlisted sender 0xad29522249fddb08453dbf1435afad6bc778f70f: 1.2 tokens on 2026-11-21 (tx 0x8c0bbdfbed6098137d8697805c8788f9d65517655f4cb2c22ea82c4b209259e4)",
+          "  ok       derived:burn_momentum  wrote usage_index",
+          "  anomaly #37 unlisted_sender on flow_usd.burn (degrading)",
+          "  anomaly #36 revenue_disclosure_stale on revenue_run_rate_usd (advisory)"
+        ],
+        "alertFlags": [
+          "    unlisted sender 0xad29522249fddb08453dbf1435afad6bc778f70f: 1.2 tokens on 2026-11-21 (tx 0x8c0bbdfbed6098137d8697805c8788f9d65517655f4cb2c22ea82c4b209259e4)"
+        ],
+        "levels": 11
+      },
+      "releaseTag": "orion-2026.11.21.1",
+      "requestedBy": "scheduler",
+      "lastError": null,
+      "params": null
+    },
+    {
+      "id": 884405,
+      "kind": "refresh",
+      "assetId": "uni",
+      "slot": "2026-11-22T02:45:00.000Z",
+      "runAfter": "2026-11-22T02:45:00.000Z",
+      "priority": 10,
+      "status": "done",
+      "attempts": 1,
+      "maxAttempts": 2,
+      "leaseOwner": "venus-805351-508102bc",
+      "leaseExpiresAt": null,
+      "startedAt": "2026-11-22T02:46:19.936Z",
+      "endedAt": "2026-11-22T02:46:20.916Z",
+      "result": {
+        "report": {
+          "schema_version": 2,
+          "tick_id": "tick_uni_20261122T024619Z",
+          "asset": "uni",
+          "started_at": "2026-11-22T02:46:19.988Z",
+          "ended_at": "2026-11-22T02:46:20.894Z",
+          "outcome": "completed",
+          "lock": null,
+          "ingest": {
+            "fetch_run_id": 658,
+            "outcome": "ok",
+            "sources_failed": [],
+            "anomalies_raised": []
+          },
+          "holder_yield": {
+            "day": "2026-11-21",
+            "window_days": 91,
+            "price": 4.70679357,
+            "market_cap": 2858463485.732148,
+            "fdv": 4168178325.7507997,
+            "flows": [
+              {
+                "id": "burn",
+                "bucket": "burn",
+                "net": 140037036.68542802,
+                "yield": 0.03359669998288848
+              }
+            ],
+            "yields": {
+              "cash": 0,
+              "buyback": 0.03359669998288848,
+              "shareholder": 0.03359669998288848,
+              "dilution": 0.02258441555113735,
+              "net_shareholder": 0.011012284431751129
+            },
+            "multiple": 29.764828108395214,
+            "holder_flow_growth_annualized": 27.092945103726105,
+            "statement_revenue": 140037036.68542802,
+            "statement_revenue_growth": 27.092945103726105,
+            "gross_profit": null,
+            "statement_payout_ratio": 1,
+            "payout_ratio_basis": "revenue",
+            "holder_flow_by_bucket": {
+              "burn": 140037036.68542802,
+              "hold": null,
+              "cash": null
+            },
+            "net_holder_yield": 0.011012284431751129,
+            "mcap_to_revenue": 20.412196325985196,
+            "mcap_to_holder_flow": 20.412196325985196,
+            "scope": "protocol_share_only",
+            "flags": [
+              "cost of revenue not measured: lps",
+              "payout ratio on revenue: cost of revenue not measured"
+            ]
+          },
+          "report_error": null,
+          "inbox": {
+            "observations": [],
+            "proposals": [],
+            "anomalies": []
+          },
+          "error": null,
+          "checks": [
+            {
+              "id": "price_chainlink",
+              "type": "price",
+              "status": "ok",
+              "gap_pct": 0.4285333412316597
+            }
+          ]
+        },
+        "fetchLines": [
+          "UNI fetch ok",
+          "  ok       adapter:price.token  wrote price_usd",
+          "  ok       adapter:price.token_check",
+          "    check price_usd vs adapter:price.token_check: 4.70679357 vs 4.68662339 (0.43% within 2%)",
+          "  ok       chain_levels  wrote total_supply, labs_vest_rate, labs_vest_approved, treasury_uni",
+          "  ok       adapter:chain.view_sum  wrote circulating_supply",
+          "  ok       constant  wrote staked_supply, staker_emission_share, emission_rate_annual",
+          "  ok       transfer_flow:token>dead[*]  wrote flow_usd.burn, flow_tokens.burn"
+        ],
+        "alertFlags": [],
+        "levels": 3
+      },
+      "releaseTag": "orion-2026.11.21.1",
+      "requestedBy": "scheduler",
+      "lastError": null,
+      "params": null
+    },
+    {
+      "id": 884404,
+      "kind": "refresh",
+      "assetId": "sky",
+      "slot": "2026-11-22T02:45:00.000Z",
+      "runAfter": "2026-11-22T02:45:00.000Z",
+      "priority": 10,
+      "status": "done",
+      "attempts": 1,
+      "maxAttempts": 2,
+      "leaseOwner": "venus-805351-508102bc",
+      "leaseExpiresAt": null,
+      "startedAt": "2026-11-22T02:46:17.509Z",
+      "endedAt": "2026-11-22T02:46:19.922Z",
+      "result": {
+        "report": {
+          "schema_version": 2,
+          "tick_id": "tick_sky_20261122T024617Z",
+          "asset": "sky",
+          "started_at": "2026-11-22T02:46:17.552Z",
+          "ended_at": "2026-11-22T02:46:19.890Z",
+          "outcome": "completed",
+          "lock": null,
+          "ingest": {
+            "fetch_run_id": 657,
+            "outcome": "ok",
+            "sources_failed": [],
+            "anomalies_raised": []
+          },
+          "holder_yield": {
+            "day": "2026-11-21",
+            "window_days": 91,
+            "price": 0.044134354963891606,
+            "market_cap": 1029822673.2287581,
+            "fdv": 1035057954.929854,
+            "flows": [
+              {
+                "id": "stakers",
+                "bucket": "cash",
+                "net": 28727920.261241294,
+                "yield": 0.037431981001201174
+              },
+              {
+                "id": "buyback",
+                "bucket": "cash",
+                "net": 40697878.83125025,
+                "yield": 0.053028629060066966
+              }
+            ],
+            "yields": {
+              "cash": 0.09046061006126814,
+              "buyback": 0,
+              "shareholder": 0.09046061006126814,
+              "dilution": 0.02072610746525182,
+              "net_shareholder": 0.06973450259601632
+            },
+            "multiple": 11.054535220608276,
+            "holder_flow_growth_annualized": 396.9188371031138,
+            "statement_revenue": 69425799.09249155,
+            "statement_revenue_growth": 396.9188371031138,
+            "gross_profit": null,
+            "statement_payout_ratio": 1,
+            "payout_ratio_basis": "revenue",
+            "holder_flow_by_bucket": {
+              "burn": null,
+              "hold": null,
+              "cash": 69425799.09249154
+            },
+            "net_holder_yield": 0.06973450259601632,
+            "mcap_to_revenue": 14.833429167402038,
+            "mcap_to_holder_flow": 14.833429167402041,
+            "scope": "protocol_share_only",
+            "flags": [
+              "cost of revenue not measured: savers",
+              "payout ratio on revenue: cost of revenue not measured"
+            ]
+          },
+          "report_error": null,
+          "inbox": {
+            "observations": [],
+            "proposals": [],
+            "anomalies": []
+          },
+          "error": null
+        },
+        "fetchLines": [
+          "SKY fetch ok",
+          "  ok       adapter:price.token  wrote price_usd",
+          "  ok       chain_levels  wrote total_supply, staked_supply, splitter_burn_share",
+          "  ok       adapter:chain.view_sum  wrote circulating_supply",
+          "  ok       constant  wrote staker_emission_share, emission_rate_annual",
+          "  ok       transfer_flow:usds>usds_farm[zero]  wrote flow_usd.stakers",
+          "  ok       transfer_flow:token>pause_proxy[sky_usds_pair]  wrote flow_usd.buyback, flow_tokens.buyback",
+          "  ok       transfer_flow:token>sky_farm[*]  wrote flow_tokens.rewards_staker",
+          "  ok       transfer_flow:token>usds_sky_farm[*]  wrote flow_tokens.rewards_usds",
+          "  ok       derived:flow_annualized  wrote treasury_net_payout"
+        ],
+        "alertFlags": [],
+        "levels": 4
+      },
+      "releaseTag": "orion-2026.11.21.1",
+      "requestedBy": "scheduler",
+      "lastError": null,
+      "params": null
+    },
+    {
+      "id": 884403,
+      "kind": "refresh",
+      "assetId": "sdcrv",
+      "slot": "2026-11-22T02:45:00.000Z",
+      "runAfter": "2026-11-22T02:45:00.000Z",
+      "priority": 10,
+      "status": "done",
+      "attempts": 1,
+      "maxAttempts": 2,
+      "leaseOwner": "venus-805351-508102bc",
+      "leaseExpiresAt": null,
+      "startedAt": "2026-11-22T02:46:11.215Z",
+      "endedAt": "2026-11-22T02:46:17.499Z",
+      "result": {
+        "report": {
+          "schema_version": 2,
+          "tick_id": "tick_sdcrv_20261122T024611Z",
+          "asset": "sdcrv",
+          "started_at": "2026-11-22T02:46:11.272Z",
+          "ended_at": "2026-11-22T02:46:17.471Z",
+          "outcome": "completed",
+          "lock": null,
+          "ingest": {
+            "fetch_run_id": 656,
+            "outcome": "ok",
+            "sources_failed": [],
+            "anomalies_raised": []
+          },
+          "holder_yield": {
+            "day": "2026-11-21",
+            "window_days": 91,
+            "price": 0.09655281682194149,
+            "market_cap": 11339299.399142738,
+            "fdv": 11494611.551446537,
+            "flows": [
+              {
+                "id": "vecrv_fees",
+                "bucket": "cash",
+                "net": 771204.891846476,
+                "yield": 0.07471550579541532
+              },
+              {
+                "id": "crv_fee_share",
+                "bucket": "cash",
+                "net": 206700.69181240082,
+                "yield": 0.02002547818394827
+              },
+              {
+                "id": "bribes",
+                "bucket": "cash",
+                "net": 1684136.7722832332,
+                "yield": 0.16316173833976305
+              }
+            ],
+            "yields": {
+              "cash": 0.25790272231912664,
+              "buyback": 0,
+              "shareholder": 0.25790272231912664,
+              "dilution": 0,
+              "net_shareholder": 0.25790272231912664
+            },
+            "multiple": 3.8774309592692413,
+            "holder_flow_growth_annualized": 0.285401492123176,
+            "statement_revenue": 1947780.4165011572,
+            "statement_revenue_growth": 0.17254795891747343,
+            "gross_profit": 1947780.4165011572,
+            "statement_payout_ratio": 0.502594785484679,
+            "payout_ratio_basis": "grossProfit",
+            "holder_flow_by_bucket": {
+              "burn": null,
+              "hold": null,
+              "cash": 2662042.35594211
+            },
+            "net_holder_yield": 0.25790272231912664,
+            "mcap_to_revenue": 5.821651816128115,
+            "mcap_to_holder_flow": 4.259623958962029,
+            "scope": "complete",
+            "flags": []
+          },
+          "report_error": null,
+          "inbox": {
+            "observations": [],
+            "proposals": [],
+            "anomalies": []
+          },
+          "error": null,
+          "checks": [
+            {
+              "id": "crv_fee",
+              "type": "sum",
+              "status": "ok",
+              "gap_pct": 0
+            }
+          ]
+        },
+        "fetchLines": [
+          "SDCRV fetch ok",
+          "  ok       adapter:price.token  wrote price_usd",
+          "  ok       chain_levels  wrote total_supply, staked_supply",
+          "  ok       adapter:chain.view_sum  wrote circulating_supply",
+          "  ok       constant  wrote staker_emission_share, emission_rate_annual",
+          "  ok       transfer_flow:crvusd>gauge[accumulator]  wrote flow_usd.fees",
+          "  ok       transfer_flow:crv>gauge[accumulator]  wrote flow_usd.crv",
+          "  ok       transfer_flow:token>merkle_stash[botmarket]  wrote flow_usd.bribes",
+          "  ok       transfer_flow:crv>sd_accountant[locker]  wrote flow_usd.sd_gross_crv",
+          "    note: not counted, as configured: 11 zero-amount, 41 from ignored clones",
+          "  ok       transfer_flow:crv>sd_fee_receiver[sd_accountant,sd_staking_v2_fee]  wrote flow_usd.sd_rev_crv",
+          "  ok       transfer_flow:crv>sd_vesdt_recipient[sd_fee_receiver]  wrote flow_usd.sd_rev_crv_vesdt",
+          "  ok       transfer_flow:crv>sd_treasury[sd_fee_receiver]  wrote flow_usd.sd_rev_crv_treasury",
+          "  ok       transfer_flow:crv>sd_boost_delegation[accumulator]  wrote flow_usd.sd_boost_delegation",
+          "  ok       transfer_flow:crvusd>sd_liquidity_fee[accumulator]  wrote flow_usd.sd_rev_fees_liquidity",
+          "  ok       transfer_flow:crvusd>sd_treasury[accumulator]  wrote flow_usd.sd_rev_fees_treasury"
+        ],
+        "alertFlags": [],
+        "levels": 4
+      },
+      "releaseTag": "orion-2026.11.21.1",
+      "requestedBy": "scheduler",
+      "lastError": null,
+      "params": null
+    },
+    {
+      "id": 884402,
+      "kind": "refresh",
+      "assetId": "pump",
+      "slot": "2026-11-22T02:45:00.000Z",
+      "runAfter": "2026-11-22T02:45:00.000Z",
+      "priority": 10,
+      "status": "done",
+      "attempts": 1,
+      "maxAttempts": 2,
+      "leaseOwner": "venus-805351-508102bc",
+      "leaseExpiresAt": null,
+      "startedAt": "2026-11-22T02:46:07.202Z",
+      "endedAt": "2026-11-22T02:46:11.204Z",
+      "result": {
+        "report": {
+          "schema_version": 2,
+          "tick_id": "tick_pump_20261122T024607Z",
+          "asset": "pump",
+          "started_at": "2026-11-22T02:46:07.268Z",
+          "ended_at": "2026-11-22T02:46:11.177Z",
+          "outcome": "completed",
+          "lock": null,
+          "ingest": {
+            "fetch_run_id": 655,
+            "outcome": "ok",
+            "sources_failed": [],
+            "anomalies_raised": []
+          },
+          "holder_yield": {
+            "day": "2026-11-21",
+            "window_days": 91,
+            "price": 0.0023043564910771312,
+            "market_cap": 928592033.1828407,
+            "fdv": 1892416461.1700277,
+            "flows": [
+              {
+                "id": "buyback",
+                "bucket": "burn",
+                "net": 299875018.3050214,
+                "yield": 0.1584614298480669
+              }
+            ],
+            "yields": {
+              "cash": 0,
+              "buyback": 0.1584614298480669,
+              "shareholder": 0.1584614298480669,
+              "dilution": 0.10045854832414851,
+              "net_shareholder": 0.0580028815239184
+            },
+            "multiple": 6.31068393714989,
+            "holder_flow_growth_annualized": 4.480749746381343,
+            "statement_revenue": 655567204.7335166,
+            "statement_revenue_growth": 4.984732568233143,
+            "gross_profit": null,
+            "statement_payout_ratio": 0.4574283401301602,
+            "payout_ratio_basis": "revenue",
+            "holder_flow_by_bucket": {
+              "burn": 299875018.3050214,
+              "hold": null,
+              "cash": null
+            },
+            "net_holder_yield": 0.0580028815239184,
+            "mcap_to_revenue": 1.4164711512076122,
+            "mcap_to_holder_flow": 3.096596837013987,
+            "scope": "protocol_share_only",
+            "flags": [
+              "cost of revenue not measured: creators, lps",
+              "payout ratio on revenue: cost of revenue not measured",
+              "third_party: revenue.protocol"
+            ]
+          },
+          "report_error": null,
+          "inbox": {
+            "observations": [],
+            "proposals": [],
+            "anomalies": []
+          },
+          "error": null
+        },
+        "fetchLines": [
+          "PUMP fetch ok",
+          "  ok       adapter:price.token  wrote price_usd",
+          "  ok       adapter:price.token_check",
+          "    check price_usd vs adapter:price.token_check: 0.002304356491 vs 0.002306393796 (0.09% within 2%)",
+          "  ok       adapter:solana.token_supply  wrote total_supply",
+          "  ok       adapter:solana.supply_less_owners  wrote circulating_supply",
+          "  ok       adapter:solana.owners_balance  wrote reserved_balance",
+          "  ok       constant  wrote staked_supply, staker_emission_share, emission_rate_annual",
+          "  ok       adapter:solana.supply_burn_daily  wrote flow_usd.buyback, flow_tokens.buyback",
+          "  ok       adapter:solana.owner_balance  wrote burn_wallet_a_pump, burn_wallet_b_pump",
+          "  ok       adapter:schedule.unlocks_next_year  wrote unlocks_next_year",
+          "  ok       defillama:pump:dailyRevenue  wrote flow_usd.llama_revenue"
+        ],
+        "alertFlags": [],
+        "levels": 4
+      },
+      "releaseTag": "orion-2026.11.21.1",
+      "requestedBy": "scheduler",
+      "lastError": null,
+      "params": null
+    },
+    {
+      "id": 884401,
+      "kind": "refresh",
+      "assetId": "lit",
+      "slot": "2026-11-22T02:45:00.000Z",
+      "runAfter": "2026-11-22T02:45:00.000Z",
+      "priority": 10,
+      "status": "done",
+      "attempts": 1,
+      "maxAttempts": 2,
+      "leaseOwner": "venus-805351-508102bc",
+      "leaseExpiresAt": null,
+      "startedAt": "2026-11-22T02:45:34.555Z",
+      "endedAt": "2026-11-22T02:46:07.187Z",
+      "result": {
+        "report": {
+          "schema_version": 2,
+          "tick_id": "tick_lit_20261122T024534Z",
+          "asset": "lit",
+          "started_at": "2026-11-22T02:45:34.617Z",
+          "ended_at": "2026-11-22T02:46:07.133Z",
+          "outcome": "completed",
+          "lock": null,
+          "ingest": {
+            "fetch_run_id": 654,
+            "outcome": "ok",
+            "sources_failed": [],
+            "anomalies_raised": []
+          },
+          "holder_yield": {
+            "day": "2026-11-20",
+            "window_days": 91,
+            "price": 2.2696410371054996,
+            "market_cap": 556514825.144482,
+            "fdv": 2228581596.6027145,
+            "flows": [
+              {
+                "id": "buyback",
+                "bucket": "burn",
+                "net": 43115757.67239802,
+                "yield": 0.019346726069229134
+              }
+            ],
+            "yields": {
+              "cash": 0,
+              "buyback": 0.019346726069229134,
+              "shareholder": 0.019346726069229134,
+              "dilution": 0.14144778109123166,
+              "net_shareholder": -0.12210105502200252
+            },
+            "multiple": 51.68833199072864,
+            "holder_flow_growth_annualized": 5.412311120630465,
+            "statement_revenue": 61517154.669780225,
+            "statement_revenue_growth": 20.220753774988584,
+            "gross_profit": 50321999.050549455,
+            "statement_payout_ratio": 0.856797394497134,
+            "payout_ratio_basis": "grossProfit",
+            "holder_flow_by_bucket": {
+              "burn": 43115757.67239802,
+              "hold": null,
+              "cash": null
+            },
+            "net_holder_yield": -0.12210105502200252,
+            "mcap_to_revenue": 9.046498137500256,
+            "mcap_to_holder_flow": 12.907457857356716,
+            "scope": "complete",
+            "flags": []
+          },
+          "report_error": null,
+          "inbox": {
+            "observations": [],
+            "proposals": [],
+            "anomalies": []
+          },
+          "error": null,
+          "checks": [
+            {
+              "id": "fees_core_revision",
+              "type": "revision",
+              "status": "ok",
+              "gap_pct": 0
+            },
+            {
+              "id": "robinhood_partner_share",
+              "type": "parameter",
+              "status": "ok",
+              "gap_pct": 0
+            }
+          ]
+        },
+        "fetchLines": [
+          "LIT fetch ok",
+          "  ok       adapter:price.token  wrote price_usd",
+          "  ok       adapter:price.token_check",
+          "    check price_usd vs adapter:price.token_check: 2.282480408 vs 2.294908131 (0.54% within 3%)",
+          "  ok       chain_levels  wrote total_supply, reserve_lit",
+          "  ok       adapter:chain.view_sum  wrote circulating_supply",
+          "  ok       constant  wrote staked_supply, staker_emission_share, emission_rate_annual",
+          "  ok       adapter:lit.treasury_buys_daily  wrote flow_usd.buyback, flow_tokens.buyback",
+          "  ok       adapter:schedule.unlocks_next_year  wrote unlocks_next_year",
+          "  ok       adapter:lit.exchange_fees_daily  wrote flow_usd.fees_core, flow_usd.fees_rh, flow_usd.rh_buyback",
+          "    note: flow_usd.fees_core: not in the series, skipped: 2026-11-21",
+          "    note: flow_usd.fees_rh: not in the series, skipped: 2026-11-21",
+          "    note: flow_usd.rh_buyback: not in the series, skipped: 2026-11-21",
+          "  ok       adapter:lit.app_fee_share  wrote rh_revenue_share_app",
+          "  ok       http_json:https://api.rh.lighter.xyz/api/v1/account?by=index&value=0  wrote rh_fee_account_usd",
+          "  ok       adapter:lit.staking_pool  wrote staked_tokens_reported, staking_apr",
+          "  ok       transfer_flow:token>dead[burn_safe]  wrote flow_tokens.burn",
+          "  ok       transfer_flow:token>prime_passthrough[buyback_wallet]  wrote flow_tokens.routed_to_prime",
+          "  ok       derived:flow_annualized  wrote routed_to_prime_rate"
+        ],
+        "alertFlags": [],
+        "levels": 6
+      },
+      "releaseTag": "orion-2026.11.21.1",
+      "requestedBy": "scheduler",
+      "lastError": null,
+      "params": null
+    },
+    {
+      "id": 884400,
+      "kind": "refresh",
+      "assetId": "link",
+      "slot": "2026-11-22T02:45:00.000Z",
+      "runAfter": "2026-11-22T02:45:00.000Z",
+      "priority": 10,
+      "status": "done",
+      "attempts": 1,
+      "maxAttempts": 2,
+      "leaseOwner": "venus-805351-508102bc",
+      "leaseExpiresAt": null,
+      "startedAt": "2026-11-22T02:45:31.698Z",
+      "endedAt": "2026-11-22T02:45:34.540Z",
+      "result": {
+        "report": {
+          "schema_version": 2,
+          "tick_id": "tick_link_20261122T024531Z",
+          "asset": "link",
+          "started_at": "2026-11-22T02:45:31.767Z",
+          "ended_at": "2026-11-22T02:45:34.517Z",
+          "outcome": "completed",
+          "lock": null,
+          "ingest": {
+            "fetch_run_id": 653,
+            "outcome": "ok",
+            "sources_failed": [],
+            "anomalies_raised": []
+          },
+          "holder_yield": {
+            "day": "2026-11-21",
+            "window_days": 91,
+            "price": 8.525496,
+            "market_cap": 6537776355.457467,
+            "fdv": 8525496000,
+            "flows": [
+              {
+                "id": "reserve",
+                "bucket": "hold",
+                "net": 53827927.40062622,
+                "yield": 0.006313759035324891
+              }
+            ],
+            "yields": {
+              "cash": 0,
+              "buyback": 0.006313759035324891,
+              "shareholder": 0.006313759035324891,
+              "dilution": 0.069999977,
+              "net_shareholder": -0.06368621796467511
+            },
+            "multiple": 158.38425166451452,
+            "holder_flow_growth_annualized": -0.18596246058741317,
+            "statement_revenue": 56660976.2111855,
+            "statement_revenue_growth": -0.18596246058741317,
+            "gross_profit": null,
+            "statement_payout_ratio": 1,
+            "payout_ratio_basis": "revenue",
+            "holder_flow_by_bucket": {
+              "burn": null,
+              "hold": 53827927.40062622,
+              "cash": null
+            },
+            "net_holder_yield": -0.06368621796467511,
+            "mcap_to_revenue": 115.38411076946532,
+            "mcap_to_holder_flow": 121.45695870470034,
+            "scope": "protocol_share_only",
+            "flags": [
+              "cost of revenue not measured: node_operators",
+              "payout ratio on revenue: cost of revenue not measured"
+            ]
+          },
+          "report_error": null,
+          "inbox": {
+            "observations": [],
+            "proposals": [],
+            "anomalies": []
+          },
+          "error": null,
+          "checks": [
+            {
+              "id": "price_chainlink",
+              "type": "price",
+              "status": "ok",
+              "gap_pct": 0.27586266800411424
+            },
+            {
+              "id": "reserve_balance",
+              "type": "balance",
+              "status": "ok",
+              "gap_pct": 0
+            }
+          ]
+        },
+        "fetchLines": [
+          "LINK fetch ok",
+          "  ok       adapter:price.token  wrote price_usd",
+          "  ok       adapter:price.token_check",
+          "    check price_usd vs adapter:price.token_check: 8.525496 vs 8.549079719 (0.28% within 2%)",
+          "  ok       chain_levels  wrote total_supply, reserve_link",
+          "  ok       adapter:chain.view_sum  wrote circulating_supply",
+          "  ok       http_json:https://supply.chain.link/supply  wrote chainlink_circulating",
+          "  ok       constant  wrote staked_supply, staker_emission_share, emission_rate_annual",
+          "  ok       transfer_flow:token>reserve[fee_converter]  wrote flow_usd.reserve, flow_tokens.reserve",
+          "  ok       transfer_flow:token>release_hub[*]  wrote flow_tokens.released_hub",
+          "  ok       transfer_flow:token>release_rewards[*]  wrote flow_tokens.released_rewards",
+          "  ok       derived:level_gap_pct  wrote circulating_gap_chainlink",
+          "  ok       derived:flow_annualized  wrote released_rate"
+        ],
+        "alertFlags": [],
+        "levels": 3
+      },
+      "releaseTag": "orion-2026.11.21.1",
+      "requestedBy": "scheduler",
+      "lastError": null,
+      "params": null
+    }
+  ],
+  "next": [
+    {
+      "key": "nightly",
+      "slot": "2026-11-23T02:45:00.000Z"
+    },
+    {
+      "key": "levels",
+      "slot": "2026-11-22T06:15:00.000Z"
+    },
+    {
+      "key": "disclosure_watch",
+      "slot": "2026-11-22T16:40:00.000Z"
+    },
+    {
+      "key": "staging_refresh",
+      "slot": "2026-11-22T10:30:00.000Z"
+    },
+    {
+      "key": "retention",
+      "slot": "2026-11-22T03:30:00.000Z"
+    }
+  ],
+  "soak": {
+    "tag": "orion-2026.11.21.1",
+    "nightly_slot": "2026-11-22T02:45:00.000Z",
+    "status": "done",
+    "failed_sources": []
+  },
+  "last_nightly": {
+    "tag": "orion-2026.11.21.1",
+    "nightly_slot": "2026-11-22T02:45:00.000Z",
+    "status": "done",
+    "failed_sources": []
+  }
+}
