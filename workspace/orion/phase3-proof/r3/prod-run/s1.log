@@ -430,3 +430,7 @@ levels pre ok (expected pre-switch: 9 (assets cake crv hype link lit pump sky un
 == 4 wait for the first levels run on orion-2026.11.21.1 started after the switch to be done (jobs every 300s, at most 16 polls) 03:06:44
 levels: no levels run on orion-2026.11.21.1 finished yet
 levels: no levels run on orion-2026.11.21.1 finished yet
+levels job ok (id 739726 on orion-2026.11.21.1, no failed source)
+== 4 re-check with no exemption 03:16:48
+levels post ok (0 market_data in latest_levels; 13/13 within +-2% of the signed values)
+s1 done: paste the deploy report and the lines above into the thread

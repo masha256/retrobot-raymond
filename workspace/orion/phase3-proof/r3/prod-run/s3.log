@@ -1,0 +1,27 @@
+== 7 purge dry runs (aero cake crv hype link lit pump sky uni vvv) 03:25:53
+aero purge dry ok (observations 45 withoutReplacement 44)
+cake purge dry ok (observations 43 withoutReplacement 0)
+crv purge dry ok (observations 46 withoutReplacement 0)
+hype purge dry ok (observations 58 withoutReplacement 58)
+link purge dry ok (observations 40 withoutReplacement 0)
+lit purge dry ok (observations 41 withoutReplacement 0)
+pump purge dry ok (observations 40 withoutReplacement 40)
+sky purge dry ok (observations 39 withoutReplacement 0)
+uni purge dry ok (observations 43 withoutReplacement 0)
+vvv purge dry ok (observations 60 withoutReplacement 0)
+== 7 purge --yes 03:26:07
+aero purge yes == dry ok (deleted 45; export /home/orion-prod/home/purged/aero-circulating_supply-20261122T032608Z.json sha256 25f3b86bd6eab58a157c85d9b32ae507f9f0b1e0efbce4c2973bfff1f87f5fec)
+cake purge yes == dry ok (deleted 43; export /home/orion-prod/home/purged/cake-circulating_supply-20261122T032610Z.json sha256 9cd8d2b57227e4b4da997167cb6fad2184e331db6e1ddf0cbc460f24ab89e5f6)
+crv purge yes == dry ok (deleted 46; export /home/orion-prod/home/purged/crv-circulating_supply-20261122T032612Z.json sha256 2e4bcc4a9c9085d65949640ba4fb87bb389feca32587e391ce68e11bdf40dc22)
+hype purge yes == dry ok (deleted 58; export /home/orion-prod/home/purged/hype-circulating_supply-20261122T032613Z.json sha256 8f1f83a4cb17561ec6823ef42ebb3e3463c0b17944dbe4debb112c4ba2762649)
+link purge yes == dry ok (deleted 40; export /home/orion-prod/home/purged/link-circulating_supply-20261122T032615Z.json sha256 f2981ff92234a07b4cfe4b3f181066a95cd177c2c99f6d69b88aaa65d0c06a9f)
+lit purge yes == dry ok (deleted 41; export /home/orion-prod/home/purged/lit-circulating_supply-20261122T032617Z.json sha256 8e1ef614d00bb9d9701af38bfe0e865d3cca53de0582019bc3e6f692d4f4ab16)
+pump purge yes == dry ok (deleted 40; export /home/orion-prod/home/purged/pump-circulating_supply-20261122T032619Z.json sha256 9d259514e15c9c3879280a487f9f125985e7e1187fab6c2b8b8c1912b654d56b)
+sky purge yes == dry ok (deleted 39; export /home/orion-prod/home/purged/sky-circulating_supply-20261122T032620Z.json sha256 3adcd79b5bd0ce426d96476cf153ff435ed5ce8daa83906b8f23f665c8bd6cd7)
+uni purge yes == dry ok (deleted 43; export /home/orion-prod/home/purged/uni-circulating_supply-20261122T032622Z.json sha256 ae828c253df96b83afe75333fb3d9fad29e02f5045f83533ce4139b834730d67)
+vvv purge yes == dry ok (deleted 60; export /home/orion-prod/home/purged/vvv-circulating_supply-20261122T032624Z.json sha256 5df50e0a08cf71e5bcbadef0fd3c59e0ba3928f0df0d982ea085a967cbfeba23)
+== 8 re-check with no exemption 03:26:24
+market_data ok (0 rows in observations)
+latest_levels ok (0 market_data circulating rows)
+stale purged ok (0 stale rows on all 13) [kept, as step 1: vvv disclosure=1]
+s3 done: the export files and sha256 are in /home/hermes/r3-prod/yes/exports.txt (keep them)

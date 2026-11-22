@@ -29,3 +29,125 @@ expected ok (written /home/hermes/r3-prod/expected.json)
 s0 done: paste the per-asset lines above into the thread
 == prod s0 exit 0 03:06:13
 == prod s1 start 03:06:13
+== 2 deploy prod orion-2026.11.21.1 03:06:13
+== deploy prod orion-2026.11.21.1 (commit 2635cae07f51c0adb07d42103022a68b5a9778f3 on origin/main, sha256 721fca6a52366a3d0effcb878329cd0a54abc7c27148e4d6ca406d368e565e33)
+== switch prod to orion-2026.11.21.1
+== deploy report (prod)
+deploy ok (orion-2026.11.21.1, migrations applied: none)
+== 3 check the switch 03:06:38
+status ok (current orion-2026.11.21.1; logs 30 clean)
+migrations ok (max 8)
+== 4 levels coverage before the first hourly run (exempt: step 1's latest_levels market_data rows) 03:06:41
+levels pre ok (expected pre-switch: 9 (assets cake crv hype link lit pump sky uni vvv))
+== 4 wait for the first levels run on orion-2026.11.21.1 started after the switch to be done (jobs every 300s, at most 16 polls) 03:06:44
+levels: no levels run on orion-2026.11.21.1 finished yet
+levels: no levels run on orion-2026.11.21.1 finished yet
+levels job ok (id 739726 on orion-2026.11.21.1, no failed source)
+== 4 re-check with no exemption 03:16:48
+levels post ok (0 market_data in latest_levels; 13/13 within +-2% of the signed values)
+s1 done: paste the deploy report and the lines above into the thread
+== prod s1 exit 0 03:16:49
+== prod s2 start 03:16:49
+hype rebuild dry ok (rows 58 rebuilt 0 refused 0 notRebuildable 58 kept 0)
+link rebuild dry ok (rows 40 rebuilt 40 refused 0 notRebuildable 0 kept 0)
+lit rebuild dry ok (rows 41 rebuilt 41 refused 0 notRebuildable 0 kept 0)
+pump rebuild dry ok (rows 40 rebuilt 0 refused 0 notRebuildable 40 kept 0)
+sdcrv rebuild dry ok (rows 42 rebuilt 42 refused 0 notRebuildable 0 kept 0)
+sky rebuild dry ok (rows 39 rebuilt 39 refused 0 notRebuildable 0 kept 0)
+uni rebuild dry ok (rows 43 rebuilt 43 refused 0 notRebuildable 0 kept 0)
+vvv rebuild dry ok (rows 60 rebuilt 60 refused 0 notRebuildable 0 kept 1)
+ycrv rebuild dry ok (rows 42 rebuilt 42 refused 0 notRebuildable 0 kept 0)
+== 6 rebuild --yes 03:21:16
+aero rebuild yes == dry ok (rebuilt 1)
+cake rebuild yes == dry ok (rebuilt 43)
+crv rebuild yes == dry ok (rebuilt 46)
+cvxcrv rebuild yes == dry ok (rebuilt 42)
+hype rebuild yes == dry ok (rebuilt 0)
+link rebuild yes == dry ok (rebuilt 40)
+lit rebuild yes == dry ok (rebuilt 41)
+pump rebuild yes == dry ok (rebuilt 0)
+sdcrv rebuild yes == dry ok (rebuilt 42)
+sky rebuild yes == dry ok (rebuilt 39)
+uni rebuild yes == dry ok (rebuilt 43)
+vvv rebuild yes == dry ok (rebuilt 60)
+ycrv rebuild yes == dry ok (rebuilt 42)
+== 6 second dry runs (rebuild 0) 03:25:34
+aero second dry ok (rebuilds 0)
+cake second dry ok (rebuilds 0)
+crv second dry ok (rebuilds 0)
+cvxcrv second dry ok (rebuilds 0)
+hype second dry ok (rebuilds 0)
+link second dry ok (rebuilds 0)
+lit second dry ok (rebuilds 0)
+pump second dry ok (rebuilds 0)
+sdcrv second dry ok (rebuilds 0)
+sky second dry ok (rebuilds 0)
+uni second dry ok (rebuilds 0)
+vvv second dry ok (rebuilds 0)
+ycrv second dry ok (rebuilds 0)
+== 5 re-check after --yes (left: the notRebuildable market_data rows, cleared by step 7) 03:25:52
+stale rebuilt ok (left for step 7 (notRebuildable): aero market_data=44 hype market_data=58 pump market_data=40) [kept, as step 1: vvv disclosure=1]
+s2 done
+== prod s2 exit 0 03:25:53
+== prod s3 start 03:25:53
+== 7 purge dry runs (aero cake crv hype link lit pump sky uni vvv) 03:25:53
+aero purge dry ok (observations 45 withoutReplacement 44)
+cake purge dry ok (observations 43 withoutReplacement 0)
+crv purge dry ok (observations 46 withoutReplacement 0)
+hype purge dry ok (observations 58 withoutReplacement 58)
+link purge dry ok (observations 40 withoutReplacement 0)
+lit purge dry ok (observations 41 withoutReplacement 0)
+pump purge dry ok (observations 40 withoutReplacement 40)
+sky purge dry ok (observations 39 withoutReplacement 0)
+uni purge dry ok (observations 43 withoutReplacement 0)
+vvv purge dry ok (observations 60 withoutReplacement 0)
+== 7 purge --yes 03:26:07
+aero purge yes == dry ok (deleted 45; export /home/orion-prod/home/purged/aero-circulating_supply-20261122T032608Z.json sha256 25f3b86bd6eab58a157c85d9b32ae507f9f0b1e0efbce4c2973bfff1f87f5fec)
+cake purge yes == dry ok (deleted 43; export /home/orion-prod/home/purged/cake-circulating_supply-20261122T032610Z.json sha256 9cd8d2b57227e4b4da997167cb6fad2184e331db6e1ddf0cbc460f24ab89e5f6)
+crv purge yes == dry ok (deleted 46; export /home/orion-prod/home/purged/crv-circulating_supply-20261122T032612Z.json sha256 2e4bcc4a9c9085d65949640ba4fb87bb389feca32587e391ce68e11bdf40dc22)
+hype purge yes == dry ok (deleted 58; export /home/orion-prod/home/purged/hype-circulating_supply-20261122T032613Z.json sha256 8f1f83a4cb17561ec6823ef42ebb3e3463c0b17944dbe4debb112c4ba2762649)
+link purge yes == dry ok (deleted 40; export /home/orion-prod/home/purged/link-circulating_supply-20261122T032615Z.json sha256 f2981ff92234a07b4cfe4b3f181066a95cd177c2c99f6d69b88aaa65d0c06a9f)
+lit purge yes == dry ok (deleted 41; export /home/orion-prod/home/purged/lit-circulating_supply-20261122T032617Z.json sha256 8e1ef614d00bb9d9701af38bfe0e865d3cca53de0582019bc3e6f692d4f4ab16)
+pump purge yes == dry ok (deleted 40; export /home/orion-prod/home/purged/pump-circulating_supply-20261122T032619Z.json sha256 9d259514e15c9c3879280a487f9f125985e7e1187fab6c2b8b8c1912b654d56b)
+sky purge yes == dry ok (deleted 39; export /home/orion-prod/home/purged/sky-circulating_supply-20261122T032620Z.json sha256 3adcd79b5bd0ce426d96476cf153ff435ed5ce8daa83906b8f23f665c8bd6cd7)
+uni purge yes == dry ok (deleted 43; export /home/orion-prod/home/purged/uni-circulating_supply-20261122T032622Z.json sha256 ae828c253df96b83afe75333fb3d9fad29e02f5045f83533ce4139b834730d67)
+vvv purge yes == dry ok (deleted 60; export /home/orion-prod/home/purged/vvv-circulating_supply-20261122T032624Z.json sha256 5df50e0a08cf71e5bcbadef0fd3c59e0ba3928f0df0d982ea085a967cbfeba23)
+== 8 re-check with no exemption 03:26:24
+market_data ok (0 rows in observations)
+latest_levels ok (0 market_data circulating rows)
+stale purged ok (0 stale rows on all 13) [kept, as step 1: vvv disclosure=1]
+s3 done: the export files and sha256 are in /home/hermes/r3-prod/yes/exports.txt (keep them)
+== prod s3 exit 0 03:26:28
+== prod s4 start 03:26:28
+== 9 save after/ 03:26:28
+reports ok (26 saved in /home/hermes/r3-prod/after: D 2026-11-20, D-91 2026-08-21)
+== 10 gate: flatdiff before/ -> after/ with r3-allowlist.json 03:27:11
+aero ok
+aero-91 ok
+cake ok
+cake-91 ok
+crv ok
+crv-91 ok
+cvxcrv ok
+cvxcrv-91 ok
+hype ok
+hype-91 ok
+link ok
+link-91 ok
+lit ok
+lit-91 ok
+pump ok
+pump-91 ok
+sdcrv ok
+sdcrv-91 ok
+sky ok
+sky-91 ok
+uni ok
+uni-91 ok
+vvv ok
+vvv-91 ok
+ycrv ok
+ycrv-91 ok
+gate ok (26/26 flatdiff exit 0)
+== prod s4 exit 0 03:27:12
+PROD R3 COMPLETE: s0-s4 all ok, gate passed 2026-11-22T03:27:12Z

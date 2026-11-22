@@ -191,15 +191,15 @@
       "schedule_display": "15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 1837
+        "completed": 1838
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-06T08:57:25.404654-07:00",
-      "next_run_at": "2026-11-21T20:15:00-08:00",
-      "last_run_at": "2026-11-21T18:16:05.316216-08:00",
+      "next_run_at": "2026-11-21T21:15:00-08:00",
+      "last_run_at": "2026-11-21T19:15:39.874678-08:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -219,17 +219,17 @@
       ],
       "workdir": null,
       "fire_claim": {
-        "at": "2026-11-21T19:15:24.616919-08:00",
-        "by": "uranus:3319468:fb30efb273a845ff9e4a861419452a87"
+        "at": "2026-11-21T20:15:24.615286-08:00",
+        "by": "uranus:3319468:e12b3488337e4695b8592cee571a99f5"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-11-21T19:15:00-08:00",
-        "dispatched_at": "2026-11-21T19:15:23.512770-08:00",
+        "scheduled_at": "2026-11-21T20:15:00-08:00",
+        "dispatched_at": "2026-11-21T20:15:23.507788-08:00",
         "lateness_seconds": 23.5,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "ca183db81ecc48969ca2357c38b4c8ab"
+        "bc14fa6f8dcd4f3abdbe15c96afc3864"
       ],
       "last_failure": {
         "at": "2026-11-17T09:31:58.159656-08:00",
@@ -386,14 +386,14 @@
         "times": 1,
         "completed": 1
       },
-      "enabled": true,
-      "state": "scheduled",
+      "enabled": false,
+      "state": "completed",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-11-21T11:15:10.609128-08:00",
-      "next_run_at": "2026-11-21T19:05:00-08:00",
-      "last_run_at": null,
-      "last_status": null,
+      "next_run_at": null,
+      "last_run_at": "2026-11-21T19:27:13.943336-08:00",
+      "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "last_delivery_unverified": null,
@@ -412,15 +412,9 @@
       "workdir": null,
       "timezone": "America/Los_Angeles",
       "catch_up": false,
-      "run_claim": {
-        "at": "2026-11-21T19:15:24.779511-08:00",
-        "by": "uranus:3319468"
-      },
-      "fire_claim": {
-        "at": "2026-11-21T19:15:24.760421-08:00",
-        "by": "uranus:3319468:fec4fca4c21c46c2a42df80458a611f4"
-      }
+      "run_claim": null,
+      "fire_claim": null
     }
   ],
-  "updated_at": "2026-11-21T19:15:24.780096-08:00"
+  "updated_at": "2026-11-21T20:15:24.615885-08:00"
 }

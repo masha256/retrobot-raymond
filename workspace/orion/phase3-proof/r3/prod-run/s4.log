@@ -1,0 +1,30 @@
+== 9 save after/ 03:26:28
+reports ok (26 saved in /home/hermes/r3-prod/after: D 2026-11-20, D-91 2026-08-21)
+== 10 gate: flatdiff before/ -> after/ with r3-allowlist.json 03:27:11
+aero ok
+aero-91 ok
+cake ok
+cake-91 ok
+crv ok
+crv-91 ok
+cvxcrv ok
+cvxcrv-91 ok
+hype ok
+hype-91 ok
+link ok
+link-91 ok
+lit ok
+lit-91 ok
+pump ok
+pump-91 ok
+sdcrv ok
+sdcrv-91 ok
+sky ok
+sky-91 ok
+uni ok
+uni-91 ok
+vvv ok
+vvv-91 ok
+ycrv ok
+ycrv-91 ok
+gate ok (26/26 flatdiff exit 0)
