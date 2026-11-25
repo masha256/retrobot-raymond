@@ -191,20 +191,20 @@
       "schedule_display": "15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 1912
+        "completed": 1913
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-06T08:57:25.404654-07:00",
-      "next_run_at": "2026-11-24T23:15:00-08:00",
-      "last_run_at": "2026-11-24T21:15:51.215407-08:00",
-      "last_status": "error",
-      "last_error": "GatewayUnavailableError: Gateway draining: update_paused",
+      "next_run_at": "2026-11-25T00:15:00-08:00",
+      "last_run_at": "2026-11-24T22:16:00.355413-08:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "last_delivery_unverified": null,
-      "failure_streak": 1,
+      "failure_streak": 0,
       "deliver": "local",
       "origin": {
         "platform": "telegram",
@@ -219,17 +219,17 @@
       ],
       "workdir": null,
       "fire_claim": {
-        "at": "2026-11-24T22:15:51.072333-08:00",
-        "by": "uranus:3595573:5e81a122fbf34e159d2ff9521fae5515"
+        "at": "2026-11-24T23:15:51.111102-08:00",
+        "by": "uranus:3595573:1172a7160aa54d9e8cae03cc77730716"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-11-24T22:15:00-08:00",
-        "dispatched_at": "2026-11-24T22:15:49.760047-08:00",
+        "scheduled_at": "2026-11-24T23:15:00-08:00",
+        "dispatched_at": "2026-11-24T23:15:49.801504-08:00",
         "lateness_seconds": 49.8,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "8d0a10faeee34d2bb7bbd8c1241592d6"
+        "886fc13445ef4a06844af1ec20079743"
       ],
       "last_failure": {
         "at": "2026-11-24T21:15:51.215407-08:00",
@@ -416,5 +416,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-11-24T22:15:51.072963-08:00"
+  "updated_at": "2026-11-24T23:15:51.111735-08:00"
 }
