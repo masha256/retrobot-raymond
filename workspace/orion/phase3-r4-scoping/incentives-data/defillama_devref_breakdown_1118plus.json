@@ -1,0 +1,1282 @@
+{
+"dailyFees|2026-11-18": {
+"OP Mainnet": {
+"Velodrome V1": 4.96,
+"Velodrome V2": 91.83,
+"Velodrome V3": 115,
+"Aero Slipstream": 2014,
+"Aero Basic": 560
+},
+"Unichain": {
+"Velodrome V2": 0,
+"Velodrome V3": 0.02
+},
+"Celo": {
+"Velodrome V2": 0,
+"Velodrome V3": 1.6
+},
+"Fraxtal": {
+"Velodrome V2": 0.07,
+"Velodrome V3": 0.04
+},
+"BOB": {
+"Velodrome V2": 0.04
+},
+"Ink": {
+"Velodrome V2": 0.27,
+"Velodrome V3": 56.21,
+"Aero Slipstream": 1299,
+"Aero Basic": 0
+},
+"Soneium": {
+"Velodrome V2": 0.08,
+"Velodrome V3": 4.14
+},
+"Mode": {
+"Velodrome V2": 0.73,
+"Velodrome V3": 0
+},
+"Base": {
+"Aerodrome V1": 6515,
+"Aerodrome Slipstream": 18603,
+"Aero Slipstream": 195172,
+"Aero Basic": 7683
+},
+"Ethereum": {
+"Aero Slipstream": 18040,
+"Aero Basic": 0
+},
+"Arbitrum": {
+"Aero Slipstream": 2866,
+"Aero Basic": 0
+},
+"Robinhood Chain": {
+"Aero Slipstream": 29312,
+"Aero Basic": 0
+},
+"Arc": {
+"Aero Slipstream": 818,
+"Aero Basic": 0
+},
+"Elysium": {
+"Aero Slipstream": 3088,
+"Aero Basic": 0
+}
+},
+"dailyFees|2026-11-19": {
+"OP Mainnet": {
+"Velodrome V1": 6.05,
+"Velodrome V2": 87,
+"Velodrome V3": 133,
+"Aero Slipstream": 2000,
+"Aero Basic": 565
+},
+"Unichain": {
+"Velodrome V2": 0,
+"Velodrome V3": 0.03
+},
+"Fraxtal": {
+"Velodrome V2": 0.1,
+"Velodrome V3": 0.07
+},
+"Ink": {
+"Velodrome V2": 0.47,
+"Velodrome V3": 59.38,
+"Aero Slipstream": 876,
+"Aero Basic": 0
+},
+"Celo": {
+"Velodrome V2": 0,
+"Velodrome V3": 1.05
+},
+"BOB": {
+"Velodrome V2": 0.41
+},
+"Mode": {
+"Velodrome V2": 2.37,
+"Velodrome V3": 0
+},
+"Soneium": {
+"Velodrome V2": 0.06,
+"Velodrome V3": 4.83
+},
+"Base": {
+"Aerodrome V1": 12648,
+"Aerodrome Slipstream": 23341,
+"Aero Slipstream": 215976,
+"Aero Basic": 9752
+},
+"Arc": {
+"Aero Slipstream": 991,
+"Aero Basic": 0
+},
+"Arbitrum": {
+"Aero Slipstream": 2480,
+"Aero Basic": 0
+},
+"Robinhood Chain": {
+"Aero Slipstream": 33404,
+"Aero Basic": 0
+},
+"Ethereum": {
+"Aero Slipstream": 18048,
+"Aero Basic": 0
+},
+"Elysium": {
+"Aero Slipstream": 5220,
+"Aero Basic": 0
+}
+},
+"dailyFees|2026-11-20": {
+"OP Mainnet": {
+"Velodrome V1": 11.93,
+"Velodrome V2": 207,
+"Velodrome V3": 296,
+"Aero Slipstream": 3428,
+"Aero Basic": 582
+},
+"Celo": {
+"Velodrome V2": 0,
+"Velodrome V3": 2.35
+},
+"Unichain": {
+"Velodrome V2": 0,
+"Velodrome V3": 1.03
+},
+"Ink": {
+"Velodrome V2": 0.62,
+"Velodrome V3": 61.22,
+"Aero Slipstream": 1120,
+"Aero Basic": 0
+},
+"Fraxtal": {
+"Velodrome V2": 0.15,
+"Velodrome V3": 0.06
+},
+"BOB": {
+"Velodrome V2": 0.73
+},
+"Soneium": {
+"Velodrome V2": 0.29,
+"Velodrome V3": 3.97
+},
+"Mode": {
+"Velodrome V2": 1,
+"Velodrome V3": 0.02
+},
+"Base": {
+"Aerodrome V1": 13114,
+"Aerodrome Slipstream": 35418,
+"Aero Slipstream": 263615,
+"Aero Basic": 16636
+},
+"Ethereum": {
+"Aero Slipstream": 25930,
+"Aero Basic": 0.01
+},
+"Arbitrum": {
+"Aero Slipstream": 5566,
+"Aero Basic": 0
+},
+"Arc": {
+"Aero Slipstream": 2401,
+"Aero Basic": 0
+},
+"Robinhood Chain": {
+"Aero Slipstream": 40556,
+"Aero Basic": 0.1
+},
+"Elysium": {
+"Aero Slipstream": 3751,
+"Aero Basic": 0
+}
+},
+"dailyFees|2026-11-21": {
+"OP Mainnet": {
+"Velodrome V1": 10.99,
+"Velodrome V2": 206,
+"Velodrome V3": 244,
+"Aero Slipstream": 2758,
+"Aero Basic": 570
+},
+"Celo": {
+"Velodrome V2": 0,
+"Velodrome V3": 2.39
+},
+"Unichain": {
+"Velodrome V2": 0,
+"Velodrome V3": 1.56
+},
+"Fraxtal": {
+"Velodrome V2": 0.24,
+"Velodrome V3": 0.03
+},
+"Ink": {
+"Velodrome V2": 0.38,
+"Velodrome V3": 39.09,
+"Aero Slipstream": 983,
+"Aero Basic": 0
+},
+"Soneium": {
+"Velodrome V2": 0.23,
+"Velodrome V3": 3.14
+},
+"BOB": {
+"Velodrome V2": 0.67
+},
+"Mode": {
+"Velodrome V2": 1.35,
+"Velodrome V3": 0.02
+},
+"Base": {
+"Aerodrome V1": 13715,
+"Aerodrome Slipstream": 34215,
+"Aero Slipstream": 255253,
+"Aero Basic": 15865
+},
+"Ethereum": {
+"Aero Slipstream": 23101,
+"Aero Basic": 0
+},
+"Arbitrum": {
+"Aero Slipstream": 2822,
+"Aero Basic": 0
+},
+"Robinhood Chain": {
+"Aero Slipstream": 27177,
+"Aero Basic": 0.08
+},
+"Arc": {
+"Aero Slipstream": 1262,
+"Aero Basic": 0
+},
+"Elysium": {
+"Aero Slipstream": 2758,
+"Aero Basic": 0
+}
+},
+"dailyFees|2026-11-22": {
+"OP Mainnet": {
+"Velodrome V1": 4.56,
+"Velodrome V2": 81.99,
+"Velodrome V3": 81.85,
+"Aero Slipstream": 1827,
+"Aero Basic": 537
+},
+"Celo": {
+"Velodrome V2": 0,
+"Velodrome V3": 0.69
+},
+"Unichain": {
+"Velodrome V2": 0,
+"Velodrome V3": 1.23
+},
+"Soneium": {
+"Velodrome V2": 0.07,
+"Velodrome V3": 1.05
+},
+"Fraxtal": {
+"Velodrome V2": 0.05,
+"Velodrome V3": 0.04
+},
+"BOB": {
+"Velodrome V2": 0.13
+},
+"Ink": {
+"Velodrome V2": 0.18,
+"Velodrome V3": 23.14,
+"Aero Slipstream": 721,
+"Aero Basic": 0
+},
+"Mode": {
+"Velodrome V2": 1.1,
+"Velodrome V3": 0.01
+},
+"Base": {
+"Aerodrome V1": 8589,
+"Aerodrome Slipstream": 25411,
+"Aero Slipstream": 205011,
+"Aero Basic": 11636
+},
+"Ethereum": {
+"Aero Slipstream": 15929,
+"Aero Basic": 0.02
+},
+"Arc": {
+"Aero Slipstream": 703,
+"Aero Basic": 0
+},
+"Elysium": {
+"Aero Slipstream": 1566,
+"Aero Basic": 0
+},
+"Arbitrum": {
+"Aero Slipstream": 2693,
+"Aero Basic": 0
+},
+"Robinhood Chain": {
+"Aero Slipstream": 23587,
+"Aero Basic": 0
+}
+},
+"dailyFees|2026-11-23": {
+"OP Mainnet": {
+"Velodrome V1": 8.21,
+"Velodrome V2": 337,
+"Velodrome V3": 219,
+"Aero Slipstream": 2595,
+"Aero Basic": 580
+},
+"Celo": {
+"Velodrome V2": 0,
+"Velodrome V3": 1.61
+},
+"Fraxtal": {
+"Velodrome V2": 0.17,
+"Velodrome V3": 0.04
+},
+"Unichain": {
+"Velodrome V2": 0,
+"Velodrome V3": 0.76
+},
+"Ink": {
+"Velodrome V2": 0.21,
+"Velodrome V3": 98.38,
+"Aero Slipstream": 1199,
+"Aero Basic": 0
+},
+"BOB": {
+"Velodrome V2": 0.17
+},
+"Soneium": {
+"Velodrome V2": 0.22,
+"Velodrome V3": 4.98
+},
+"Mode": {
+"Velodrome V2": 0.08,
+"Velodrome V3": 0
+},
+"Base": {
+"Aerodrome V1": 10071,
+"Aerodrome Slipstream": 30294,
+"Aero Slipstream": 317494,
+"Aero Basic": 15686
+},
+"Ethereum": {
+"Aero Slipstream": 21067,
+"Aero Basic": 0.01
+},
+"Arbitrum": {
+"Aero Slipstream": 2921,
+"Aero Basic": 0
+},
+"Robinhood Chain": {
+"Aero Slipstream": 34550,
+"Aero Basic": 0.12
+},
+"Arc": {
+"Aero Slipstream": 1294,
+"Aero Basic": 0
+},
+"Elysium": {
+"Aero Slipstream": 4339,
+"Aero Basic": 0
+}
+},
+"dailyFees|2026-11-24": {
+"OP Mainnet": {
+"Velodrome V1": 6.51,
+"Velodrome V2": 187,
+"Velodrome V3": 97.49,
+"Aero Slipstream": 2027,
+"Aero Basic": 569
+},
+"Ink": {
+"Velodrome V2": 0.32,
+"Velodrome V3": 37.43,
+"Aero Slipstream": 813,
+"Aero Basic": 0
+},
+"Celo": {
+"Velodrome V2": 0,
+"Velodrome V3": 2.15
+},
+"Unichain": {
+"Velodrome V2": 0,
+"Velodrome V3": 2.12
+},
+"BOB": {
+"Velodrome V2": 0.09
+},
+"Fraxtal": {
+"Velodrome V2": 0.1,
+"Velodrome V3": 0.05
+},
+"Soneium": {
+"Velodrome V2": 0.04,
+"Velodrome V3": 0.67
+},
+"Mode": {
+"Velodrome V2": 0.46,
+"Velodrome V3": 0
+},
+"Base": {
+"Aerodrome V1": 7852,
+"Aerodrome Slipstream": 21056,
+"Aero Slipstream": 233808,
+"Aero Basic": 11660
+},
+"Ethereum": {
+"Aero Slipstream": 19160,
+"Aero Basic": 0
+},
+"Robinhood Chain": {
+"Aero Slipstream": 29896,
+"Aero Basic": 0.08
+},
+"Arc": {
+"Aero Slipstream": 831,
+"Aero Basic": 0
+},
+"Arbitrum": {
+"Aero Slipstream": 2805,
+"Aero Basic": 35.17
+},
+"Elysium": {
+"Aero Slipstream": 3482,
+"Aero Basic": 0
+}
+},
+"dailyFees|2026-11-25": {
+"OP Mainnet": {
+"Velodrome V1": 7.97,
+"Velodrome V2": 177,
+"Velodrome V3": 147,
+"Aero Slipstream": 2185,
+"Aero Basic": 585
+},
+"Unichain": {
+"Velodrome V2": 0,
+"Velodrome V3": 2.46
+},
+"Fraxtal": {
+"Velodrome V2": 0.16,
+"Velodrome V3": 0.02
+},
+"Ink": {
+"Velodrome V2": 0.27,
+"Velodrome V3": 41.33,
+"Aero Slipstream": 845,
+"Aero Basic": 0
+},
+"Celo": {
+"Velodrome V2": 0,
+"Velodrome V3": 2.22
+},
+"Soneium": {
+"Velodrome V2": 0.11,
+"Velodrome V3": 1.28
+},
+"BOB": {
+"Velodrome V2": 0.14
+},
+"Mode": {
+"Velodrome V2": 0.13,
+"Velodrome V3": 0
+},
+"Base": {
+"Aerodrome V1": 10405,
+"Aerodrome Slipstream": 28139,
+"Aero Slipstream": 261188,
+"Aero Basic": 13748
+},
+"Ethereum": {
+"Aero Slipstream": 24886,
+"Aero Basic": 0.02
+},
+"Arbitrum": {
+"Aero Slipstream": 3086,
+"Aero Basic": 60.25
+},
+"Robinhood Chain": {
+"Aero Slipstream": 31348,
+"Aero Basic": 0.01
+},
+"Arc": {
+"Aero Slipstream": 1055,
+"Aero Basic": 0
+},
+"Elysium": {
+"Aero Slipstream": 3459,
+"Aero Basic": 0
+}
+},
+"dailyFees|2026-11-26": {
+"OP Mainnet": {
+"Velodrome V1": 3.56,
+"Velodrome V2": 65.6,
+"Velodrome V3": 65.88,
+"Aero Slipstream": 1835,
+"Aero Basic": 565
+},
+"Celo": {
+"Velodrome V2": 0,
+"Velodrome V3": 0.82
+},
+"Fraxtal": {
+"Velodrome V2": 0.08,
+"Velodrome V3": 0.04
+},
+"Unichain": {
+"Velodrome V2": 0,
+"Velodrome V3": 1.12
+},
+"BOB": {
+"Velodrome V2": 0.01
+},
+"Soneium": {
+"Velodrome V2": 0.09,
+"Velodrome V3": 0.73
+},
+"Mode": {
+"Velodrome V2": 0.03,
+"Velodrome V3": 0
+},
+"Ink": {
+"Velodrome V2": 0.25,
+"Velodrome V3": 31.54,
+"Aero Slipstream": 533,
+"Aero Basic": 0
+},
+"Base": {
+"Aerodrome V1": 12531,
+"Aerodrome Slipstream": 20824,
+"Aero Slipstream": 233553,
+"Aero Basic": 12801
+},
+"Arc": {
+"Aero Slipstream": 680,
+"Aero Basic": 0
+},
+"Ethereum": {
+"Aero Slipstream": 17543,
+"Aero Basic": 0.02
+},
+"Arbitrum": {
+"Aero Slipstream": 2238,
+"Aero Basic": 0.9
+},
+"Robinhood Chain": {
+"Aero Slipstream": 23694,
+"Aero Basic": 0.05
+},
+"Elysium": {
+"Aero Slipstream": 8840,
+"Aero Basic": 0
+}
+},
+"dailyFees|2026-11-27": {
+"OP Mainnet": {
+"Velodrome V1": 5.02,
+"Velodrome V2": 101,
+"Velodrome V3": 123,
+"Aero Slipstream": 2150,
+"Aero Basic": 580
+},
+"Fraxtal": {
+"Velodrome V2": 0.07,
+"Velodrome V3": 0.03
+},
+"Celo": {
+"Velodrome V2": 0,
+"Velodrome V3": 1.34
+},
+"BOB": {
+"Velodrome V2": 0.08
+},
+"Unichain": {
+"Velodrome V2": 0,
+"Velodrome V3": 1.08
+},
+"Soneium": {
+"Velodrome V2": 0.13,
+"Velodrome V3": 1.07
+},
+"Ink": {
+"Velodrome V2": 0.38,
+"Velodrome V3": 69.77,
+"Aero Slipstream": 2552,
+"Aero Basic": 0
+},
+"Mode": {
+"Velodrome V2": 0.12,
+"Velodrome V3": 0
+},
+"Base": {
+"Aerodrome V1": 8368,
+"Aerodrome Slipstream": 16233,
+"Aero Slipstream": 240743,
+"Aero Basic": 9730
+},
+"Arc": {
+"Aero Slipstream": 965,
+"Aero Basic": 0
+},
+"Ethereum": {
+"Aero Slipstream": 19005,
+"Aero Basic": 0.01
+},
+"Robinhood Chain": {
+"Aero Slipstream": 32889,
+"Aero Basic": 0.03
+},
+"Arbitrum": {
+"Aero Slipstream": 2725,
+"Aero Basic": 36.76
+},
+"Elysium": {
+"Aero Slipstream": 12982,
+"Aero Basic": 0.02
+}
+},
+"dailyHoldersRevenue|2026-11-18": {
+"OP Mainnet": {
+"Velodrome V1": 4.96,
+"Velodrome V2": 0,
+"Velodrome V3": 0,
+"Aero Slipstream": 1937,
+"Aero Basic": 560
+},
+"Unichain": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Celo": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Fraxtal": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"BOB": {
+"Velodrome V2": 0
+},
+"Ink": {
+"Velodrome V2": 0,
+"Velodrome V3": 0,
+"Aero Slipstream": 737,
+"Aero Basic": 0
+},
+"Soneium": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Mode": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Base": {
+"Aerodrome V1": 0,
+"Aerodrome Slipstream": 0,
+"Aero Slipstream": 175838,
+"Aero Basic": 7115
+},
+"Ethereum": {
+"Aero Slipstream": 16270,
+"Aero Basic": 0
+},
+"Arbitrum": {
+"Aero Slipstream": 2831,
+"Aero Basic": 0
+},
+"Robinhood Chain": {
+"Aero Slipstream": 28322,
+"Aero Basic": 0
+},
+"Arc": {
+"Aero Slipstream": 637,
+"Aero Basic": 0
+},
+"Elysium": {
+"Aero Slipstream": 3026,
+"Aero Basic": 0
+}
+},
+"dailyHoldersRevenue|2026-11-19": {
+"OP Mainnet": {
+"Velodrome V1": 6.05,
+"Velodrome V2": 0,
+"Velodrome V3": 0,
+"Aero Slipstream": 1911,
+"Aero Basic": 564
+},
+"Unichain": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Fraxtal": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Ink": {
+"Velodrome V2": 0,
+"Velodrome V3": 0,
+"Aero Slipstream": 736,
+"Aero Basic": 0
+},
+"Celo": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"BOB": {
+"Velodrome V2": 0
+},
+"Mode": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Soneium": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Base": {
+"Aerodrome V1": 0,
+"Aerodrome Slipstream": 0,
+"Aero Slipstream": 193889,
+"Aero Basic": 8893
+},
+"Arc": {
+"Aero Slipstream": 793,
+"Aero Basic": 0
+},
+"Arbitrum": {
+"Aero Slipstream": 2455,
+"Aero Basic": 0
+},
+"Robinhood Chain": {
+"Aero Slipstream": 31870,
+"Aero Basic": 0
+},
+"Ethereum": {
+"Aero Slipstream": 17053,
+"Aero Basic": 0
+},
+"Elysium": {
+"Aero Slipstream": 5159,
+"Aero Basic": 0
+}
+},
+"dailyHoldersRevenue|2026-11-20": {
+"OP Mainnet": {
+"Velodrome V1": 11.93,
+"Velodrome V2": 0,
+"Velodrome V3": 0,
+"Aero Slipstream": 3125,
+"Aero Basic": 579
+},
+"Celo": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Unichain": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Ink": {
+"Velodrome V2": 0,
+"Velodrome V3": 0,
+"Aero Slipstream": 861,
+"Aero Basic": 0
+},
+"Fraxtal": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"BOB": {
+"Velodrome V2": 0
+},
+"Soneium": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Mode": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Base": {
+"Aerodrome V1": 0,
+"Aerodrome Slipstream": 0,
+"Aero Slipstream": 230537,
+"Aero Basic": 15520
+},
+"Ethereum": {
+"Aero Slipstream": 24855,
+"Aero Basic": 0
+},
+"Arbitrum": {
+"Aero Slipstream": 5501,
+"Aero Basic": 0
+},
+"Arc": {
+"Aero Slipstream": 1861,
+"Aero Basic": 0
+},
+"Robinhood Chain": {
+"Aero Slipstream": 38648,
+"Aero Basic": 0
+},
+"Elysium": {
+"Aero Slipstream": 3682,
+"Aero Basic": 0
+}
+},
+"dailyHoldersRevenue|2026-11-21": {
+"OP Mainnet": {
+"Velodrome V1": 10.99,
+"Velodrome V2": 0,
+"Velodrome V3": 0,
+"Aero Slipstream": 2568,
+"Aero Basic": 568
+},
+"Celo": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Unichain": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Fraxtal": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Ink": {
+"Velodrome V2": 0,
+"Velodrome V3": 0,
+"Aero Slipstream": 775,
+"Aero Basic": 0
+},
+"Soneium": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"BOB": {
+"Velodrome V2": 0
+},
+"Mode": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Base": {
+"Aerodrome V1": 0,
+"Aerodrome Slipstream": 0,
+"Aero Slipstream": 221613,
+"Aero Basic": 14200
+},
+"Ethereum": {
+"Aero Slipstream": 22147,
+"Aero Basic": 0
+},
+"Arbitrum": {
+"Aero Slipstream": 2777,
+"Aero Basic": 0
+},
+"Robinhood Chain": {
+"Aero Slipstream": 25735,
+"Aero Basic": 0
+},
+"Arc": {
+"Aero Slipstream": 980,
+"Aero Basic": 0
+},
+"Elysium": {
+"Aero Slipstream": 2690,
+"Aero Basic": 0
+}
+},
+"dailyHoldersRevenue|2026-11-22": {
+"OP Mainnet": {
+"Velodrome V1": 4.56,
+"Velodrome V2": 0,
+"Velodrome V3": 0,
+"Aero Slipstream": 1748,
+"Aero Basic": 536
+},
+"Celo": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Unichain": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Soneium": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Fraxtal": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"BOB": {
+"Velodrome V2": 0
+},
+"Ink": {
+"Velodrome V2": 0,
+"Velodrome V3": 0,
+"Aero Slipstream": 627,
+"Aero Basic": 0
+},
+"Mode": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Base": {
+"Aerodrome V1": 0,
+"Aerodrome Slipstream": 0,
+"Aero Slipstream": 182748,
+"Aero Basic": 10086
+},
+"Ethereum": {
+"Aero Slipstream": 15094,
+"Aero Basic": 0
+},
+"Arc": {
+"Aero Slipstream": 604,
+"Aero Basic": 0
+},
+"Elysium": {
+"Aero Slipstream": 1551,
+"Aero Basic": 0
+},
+"Arbitrum": {
+"Aero Slipstream": 2667,
+"Aero Basic": 0
+},
+"Robinhood Chain": {
+"Aero Slipstream": 22689,
+"Aero Basic": 0
+}
+},
+"dailyHoldersRevenue|2026-11-23": {
+"OP Mainnet": {
+"Velodrome V1": 8.21,
+"Velodrome V2": 0,
+"Velodrome V3": 0,
+"Aero Slipstream": 2413,
+"Aero Basic": 579
+},
+"Celo": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Fraxtal": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Unichain": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Ink": {
+"Velodrome V2": 0,
+"Velodrome V3": 0,
+"Aero Slipstream": 837,
+"Aero Basic": 0
+},
+"BOB": {
+"Velodrome V2": 0
+},
+"Soneium": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Mode": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Base": {
+"Aerodrome V1": 0,
+"Aerodrome Slipstream": 0,
+"Aero Slipstream": 275696,
+"Aero Basic": 14411
+},
+"Ethereum": {
+"Aero Slipstream": 19897,
+"Aero Basic": 0
+},
+"Arbitrum": {
+"Aero Slipstream": 2783,
+"Aero Basic": 0
+},
+"Robinhood Chain": {
+"Aero Slipstream": 33360,
+"Aero Basic": 0
+},
+"Arc": {
+"Aero Slipstream": 1052,
+"Aero Basic": 0
+},
+"Elysium": {
+"Aero Slipstream": 4251,
+"Aero Basic": 0
+}
+},
+"dailyHoldersRevenue|2026-11-24": {
+"OP Mainnet": {
+"Velodrome V1": 6.51,
+"Velodrome V2": 0,
+"Velodrome V3": 0,
+"Aero Slipstream": 1956,
+"Aero Basic": 567
+},
+"Ink": {
+"Velodrome V2": 0,
+"Velodrome V3": 0,
+"Aero Slipstream": 621,
+"Aero Basic": 0
+},
+"Celo": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Unichain": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"BOB": {
+"Velodrome V2": 0
+},
+"Fraxtal": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Soneium": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Mode": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Base": {
+"Aerodrome V1": 0,
+"Aerodrome Slipstream": 0,
+"Aero Slipstream": 205735,
+"Aero Basic": 10797
+},
+"Ethereum": {
+"Aero Slipstream": 18612,
+"Aero Basic": 0
+},
+"Robinhood Chain": {
+"Aero Slipstream": 29167,
+"Aero Basic": 0
+},
+"Arc": {
+"Aero Slipstream": 715,
+"Aero Basic": 0
+},
+"Arbitrum": {
+"Aero Slipstream": 2710,
+"Aero Basic": 0
+},
+"Elysium": {
+"Aero Slipstream": 3466,
+"Aero Basic": 0
+}
+},
+"dailyHoldersRevenue|2026-11-25": {
+"OP Mainnet": {
+"Velodrome V1": 7.97,
+"Velodrome V2": 0,
+"Velodrome V3": 0,
+"Aero Slipstream": 2043,
+"Aero Basic": 584
+},
+"Unichain": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Fraxtal": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Ink": {
+"Velodrome V2": 0,
+"Velodrome V3": 0,
+"Aero Slipstream": 583,
+"Aero Basic": 0
+},
+"Celo": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Soneium": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"BOB": {
+"Velodrome V2": 0
+},
+"Mode": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Base": {
+"Aerodrome V1": 0,
+"Aerodrome Slipstream": 0,
+"Aero Slipstream": 226447,
+"Aero Basic": 12606
+},
+"Ethereum": {
+"Aero Slipstream": 24082,
+"Aero Basic": 0
+},
+"Arbitrum": {
+"Aero Slipstream": 2971,
+"Aero Basic": 0
+},
+"Robinhood Chain": {
+"Aero Slipstream": 30542,
+"Aero Basic": 0
+},
+"Arc": {
+"Aero Slipstream": 843,
+"Aero Basic": 0
+},
+"Elysium": {
+"Aero Slipstream": 3442,
+"Aero Basic": 0
+}
+},
+"dailyHoldersRevenue|2026-11-26": {
+"OP Mainnet": {
+"Velodrome V1": 3.56,
+"Velodrome V2": 0,
+"Velodrome V3": 0,
+"Aero Slipstream": 1754,
+"Aero Basic": 565
+},
+"Celo": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Fraxtal": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Unichain": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"BOB": {
+"Velodrome V2": 0
+},
+"Soneium": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Mode": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Ink": {
+"Velodrome V2": 0,
+"Velodrome V3": 0,
+"Aero Slipstream": 420,
+"Aero Basic": 0
+},
+"Base": {
+"Aerodrome V1": 0,
+"Aerodrome Slipstream": 0,
+"Aero Slipstream": 201284,
+"Aero Basic": 12105
+},
+"Arc": {
+"Aero Slipstream": 577,
+"Aero Basic": 0
+},
+"Ethereum": {
+"Aero Slipstream": 16604,
+"Aero Basic": 0
+},
+"Arbitrum": {
+"Aero Slipstream": 2187,
+"Aero Basic": 0
+},
+"Robinhood Chain": {
+"Aero Slipstream": 23216,
+"Aero Basic": 0
+},
+"Elysium": {
+"Aero Slipstream": 8797,
+"Aero Basic": 0
+}
+},
+"dailyHoldersRevenue|2026-11-27": {
+"OP Mainnet": {
+"Velodrome V1": 5.02,
+"Velodrome V2": 0,
+"Velodrome V3": 0,
+"Aero Slipstream": 2034,
+"Aero Basic": 579
+},
+"Fraxtal": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Celo": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"BOB": {
+"Velodrome V2": 0
+},
+"Unichain": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Soneium": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Ink": {
+"Velodrome V2": 0,
+"Velodrome V3": 0,
+"Aero Slipstream": 1645,
+"Aero Basic": 0
+},
+"Mode": {
+"Velodrome V2": 0,
+"Velodrome V3": 0
+},
+"Base": {
+"Aerodrome V1": 0,
+"Aerodrome Slipstream": 0,
+"Aero Slipstream": 211080,
+"Aero Basic": 9113
+},
+"Arc": {
+"Aero Slipstream": 782,
+"Aero Basic": 0
+},
+"Ethereum": {
+"Aero Slipstream": 17019,
+"Aero Basic": 0
+},
+"Robinhood Chain": {
+"Aero Slipstream": 31712,
+"Aero Basic": 0
+},
+"Arbitrum": {
+"Aero Slipstream": 2646,
+"Aero Basic": 0
+},
+"Elysium": {
+"Aero Slipstream": 11553,
+"Aero Basic": 0
+}
+}
+}

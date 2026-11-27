@@ -1,0 +1,50 @@
+{
+ "2026-10-22": {
+  "aerodrome_v1_slip_fees": 142844,
+  "aerodrome_rev": 62705,
+  "aerodrome_holders": 30448,
+  "velodrome_fees": 4048,
+  "velodrome_rev": 2064,
+  "velodrome_holders": 1422
+ },
+ "2026-10-23": {
+  "aerodrome_v1_slip_fees": 106481,
+  "aerodrome_rev": 31505,
+  "aerodrome_holders": 0,
+  "velodrome_fees": 1795,
+  "velodrome_rev": 1035,
+  "velodrome_holders": 6
+ },
+ "2026-11-01": {
+  "aerodrome_v1_slip_fees": 31330,
+  "aerodrome_rev": 4832,
+  "aerodrome_holders": 0,
+  "velodrome_fees": 351,
+  "velodrome_rev": 217,
+  "velodrome_holders": 2
+ },
+ "2026-11-15": {
+  "aerodrome_v1_slip_fees": 36158,
+  "aerodrome_rev": 4770,
+  "aerodrome_holders": 0,
+  "velodrome_fees": 495,
+  "velodrome_rev": 269,
+  "velodrome_holders": 11
+ },
+ "2026-11-25": {
+  "aerodrome_v1_slip_fees": 38544,
+  "aerodrome_rev": 4964,
+  "aerodrome_holders": 0,
+  "velodrome_fees": 380,
+  "velodrome_rev": 271,
+  "velodrome_holders": 8
+ },
+ "2026-11-26": {
+  "aerodrome_v1_slip_fees": 33355,
+  "aerodrome_rev": 2480,
+  "aerodrome_holders": 0,
+  "velodrome_fees": 170,
+  "velodrome_rev": 90,
+  "velodrome_holders": 4
+ }
+}

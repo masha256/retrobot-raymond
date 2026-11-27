@@ -1,0 +1,452 @@
+{
+ "2026-10-22|base": {
+  "vrms": 291,
+  "programs": 130,
+  "active_in_day": 130,
+  "streamed_usd_onchain_price": 62633,
+  "streamed_usd_dlprice_devonly": 4270,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 421
+ },
+ "2026-10-22|ethereum": {
+  "vrms": 58,
+  "programs": 10,
+  "active_in_day": 10,
+  "streamed_usd_onchain_price": 5961,
+  "streamed_usd_dlprice_devonly": 5975,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 68
+ },
+ "2026-10-22|optimism": {
+  "vrms": 32,
+  "programs": 3,
+  "active_in_day": 3,
+  "streamed_usd_onchain_price": 877,
+  "streamed_usd_dlprice_devonly": 876,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 35
+ },
+ "2026-10-22|arbitrum": {
+  "vrms": 30,
+  "programs": 4,
+  "active_in_day": 4,
+  "streamed_usd_onchain_price": 1408,
+  "streamed_usd_dlprice_devonly": 1407,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 34
+ },
+ "2026-10-22|ink": {
+  "vrms": 13,
+  "programs": 0,
+  "active_in_day": 0,
+  "streamed_usd_onchain_price": 0,
+  "streamed_usd_dlprice_devonly": 0,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 13
+ },
+ "2026-10-22|robinhood": {
+  "vrms": 68,
+  "programs": 10,
+  "active_in_day": 10,
+  "streamed_usd_onchain_price": 4945,
+  "streamed_usd_dlprice_devonly": 4944,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 78
+ },
+ "2026-10-22|arc": {
+  "vrms": 7,
+  "programs": 4,
+  "active_in_day": 4,
+  "streamed_usd_onchain_price": 375,
+  "streamed_usd_dlprice_devonly": 374,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 11
+ },
+ "2026-10-23|base": {
+  "vrms": 291,
+  "programs": 136,
+  "active_in_day": 136,
+  "streamed_usd_onchain_price": 78077,
+  "streamed_usd_dlprice_devonly": 78140,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 427
+ },
+ "2026-10-23|ethereum": {
+  "vrms": 59,
+  "programs": 10,
+  "active_in_day": 10,
+  "streamed_usd_onchain_price": 6276,
+  "streamed_usd_dlprice_devonly": 6297,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 69
+ },
+ "2026-10-23|optimism": {
+  "vrms": 32,
+  "programs": 5,
+  "active_in_day": 5,
+  "streamed_usd_onchain_price": 1290,
+  "streamed_usd_dlprice_devonly": 1290,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 37
+ },
+ "2026-10-23|arbitrum": {
+  "vrms": 30,
+  "programs": 4,
+  "active_in_day": 4,
+  "streamed_usd_onchain_price": 1469,
+  "streamed_usd_dlprice_devonly": 1468,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 34
+ },
+ "2026-10-23|ink": {
+  "vrms": 13,
+  "programs": 0,
+  "active_in_day": 0,
+  "streamed_usd_onchain_price": 0,
+  "streamed_usd_dlprice_devonly": 0,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 13
+ },
+ "2026-10-23|robinhood": {
+  "vrms": 68,
+  "programs": 10,
+  "active_in_day": 10,
+  "streamed_usd_onchain_price": 5155,
+  "streamed_usd_dlprice_devonly": 5155,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 78
+ },
+ "2026-10-23|arc": {
+  "vrms": 7,
+  "programs": 4,
+  "active_in_day": 4,
+  "streamed_usd_onchain_price": 390,
+  "streamed_usd_dlprice_devonly": 391,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 11
+ },
+ "2026-11-01|base": {
+  "vrms": 303,
+  "programs": 203,
+  "active_in_day": 28,
+  "streamed_usd_onchain_price": 5984,
+  "streamed_usd_dlprice_devonly": 5986,
+  "unpriced_tokens": 1,
+  "tokens_not_in_pools": 0,
+  "calls": 506
+ },
+ "2026-11-01|ethereum": {
+  "vrms": 60,
+  "programs": 17,
+  "active_in_day": 3,
+  "streamed_usd_onchain_price": 1829,
+  "streamed_usd_dlprice_devonly": 1828,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 77
+ },
+ "2026-11-01|optimism": {
+  "vrms": 32,
+  "programs": 8,
+  "active_in_day": 5,
+  "streamed_usd_onchain_price": 641,
+  "streamed_usd_dlprice_devonly": 639,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 40
+ },
+ "2026-11-01|arbitrum": {
+  "vrms": 46,
+  "programs": 17,
+  "active_in_day": 7,
+  "streamed_usd_onchain_price": 2517,
+  "streamed_usd_dlprice_devonly": 2518,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 63
+ },
+ "2026-11-01|ink": {
+  "vrms": 13,
+  "programs": 0,
+  "active_in_day": 0,
+  "streamed_usd_onchain_price": 0,
+  "streamed_usd_dlprice_devonly": 0,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 13
+ },
+ "2026-11-01|robinhood": {
+  "vrms": 71,
+  "programs": 11,
+  "active_in_day": 0,
+  "streamed_usd_onchain_price": 0,
+  "streamed_usd_dlprice_devonly": 0,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 82
+ },
+ "2026-11-01|arc": {
+  "vrms": 7,
+  "programs": 4,
+  "active_in_day": 0,
+  "streamed_usd_onchain_price": 0,
+  "streamed_usd_dlprice_devonly": 0,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 11
+ },
+ "2026-11-15|base": {
+  "vrms": 315,
+  "programs": 239,
+  "active_in_day": 14,
+  "streamed_usd_onchain_price": 1778,
+  "streamed_usd_dlprice_devonly": 1762,
+  "unpriced_tokens": 1,
+  "tokens_not_in_pools": 0,
+  "calls": 554
+ },
+ "2026-11-15|ethereum": {
+  "vrms": 60,
+  "programs": 17,
+  "active_in_day": 0,
+  "streamed_usd_onchain_price": 0,
+  "streamed_usd_dlprice_devonly": 0,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 77
+ },
+ "2026-11-15|optimism": {
+  "vrms": 32,
+  "programs": 13,
+  "active_in_day": 4,
+  "streamed_usd_onchain_price": 553,
+  "streamed_usd_dlprice_devonly": 557,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 45
+ },
+ "2026-11-15|arbitrum": {
+  "vrms": 56,
+  "programs": 17,
+  "active_in_day": 0,
+  "streamed_usd_onchain_price": 0,
+  "streamed_usd_dlprice_devonly": 0,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 73
+ },
+ "2026-11-15|ink": {
+  "vrms": 21,
+  "programs": 0,
+  "active_in_day": 0,
+  "streamed_usd_onchain_price": 0,
+  "streamed_usd_dlprice_devonly": 0,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 21
+ },
+ "2026-11-15|robinhood": {
+  "vrms": 80,
+  "programs": 11,
+  "active_in_day": 0,
+  "streamed_usd_onchain_price": 0,
+  "streamed_usd_dlprice_devonly": 0,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 91
+ },
+ "2026-11-15|arc": {
+  "vrms": 7,
+  "programs": 4,
+  "active_in_day": 0,
+  "streamed_usd_onchain_price": 0,
+  "streamed_usd_dlprice_devonly": 0,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 11
+ },
+ "2026-11-15|elysium": {
+  "vrms": 8,
+  "programs": 0,
+  "active_in_day": 0,
+  "streamed_usd_onchain_price": 0,
+  "streamed_usd_dlprice_devonly": 0,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 8
+ },
+ "2026-11-25|base": {
+  "vrms": 321,
+  "programs": 259,
+  "active_in_day": 18,
+  "streamed_usd_onchain_price": 2720,
+  "streamed_usd_dlprice_devonly": 2728,
+  "unpriced_tokens": 1,
+  "tokens_not_in_pools": 0,
+  "calls": 580
+ },
+ "2026-11-25|ethereum": {
+  "vrms": 62,
+  "programs": 17,
+  "active_in_day": 0,
+  "streamed_usd_onchain_price": 0,
+  "streamed_usd_dlprice_devonly": 0,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 79
+ },
+ "2026-11-25|optimism": {
+  "vrms": 32,
+  "programs": 19,
+  "active_in_day": 4,
+  "streamed_usd_onchain_price": 556,
+  "streamed_usd_dlprice_devonly": 558,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 51
+ },
+ "2026-11-25|arbitrum": {
+  "vrms": 56,
+  "programs": 17,
+  "active_in_day": 0,
+  "streamed_usd_onchain_price": 0,
+  "streamed_usd_dlprice_devonly": 0,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 73
+ },
+ "2026-11-25|ink": {
+  "vrms": 28,
+  "programs": 0,
+  "active_in_day": 0,
+  "streamed_usd_onchain_price": 0,
+  "streamed_usd_dlprice_devonly": 0,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 28
+ },
+ "2026-11-25|robinhood": {
+  "vrms": 81,
+  "programs": 11,
+  "active_in_day": 0,
+  "streamed_usd_onchain_price": 0,
+  "streamed_usd_dlprice_devonly": 0,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 92
+ },
+ "2026-11-25|arc": {
+  "vrms": 8,
+  "programs": 4,
+  "active_in_day": 0,
+  "streamed_usd_onchain_price": 0,
+  "streamed_usd_dlprice_devonly": 0,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 12
+ },
+ "2026-11-25|elysium": {
+  "vrms": 8,
+  "programs": 0,
+  "active_in_day": 0,
+  "streamed_usd_onchain_price": 0,
+  "streamed_usd_dlprice_devonly": 0,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 8
+ },
+ "2026-11-26|base": {
+  "vrms": 321,
+  "programs": 259,
+  "active_in_day": 18,
+  "streamed_usd_onchain_price": 3033,
+  "streamed_usd_dlprice_devonly": 3006,
+  "unpriced_tokens": 1,
+  "tokens_not_in_pools": 0,
+  "calls": 580
+ },
+ "2026-11-26|ethereum": {
+  "vrms": 62,
+  "programs": 17,
+  "active_in_day": 0,
+  "streamed_usd_onchain_price": 0,
+  "streamed_usd_dlprice_devonly": 0,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 79
+ },
+ "2026-11-26|optimism": {
+  "vrms": 32,
+  "programs": 19,
+  "active_in_day": 4,
+  "streamed_usd_onchain_price": 555,
+  "streamed_usd_dlprice_devonly": 557,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 51
+ },
+ "2026-11-26|arbitrum": {
+  "vrms": 56,
+  "programs": 17,
+  "active_in_day": 0,
+  "streamed_usd_onchain_price": 0,
+  "streamed_usd_dlprice_devonly": 0,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 73
+ },
+ "2026-11-26|ink": {
+  "vrms": 28,
+  "programs": 0,
+  "active_in_day": 0,
+  "streamed_usd_onchain_price": 0,
+  "streamed_usd_dlprice_devonly": 0,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 28
+ },
+ "2026-11-26|robinhood": {
+  "vrms": 81,
+  "programs": 11,
+  "active_in_day": 0,
+  "streamed_usd_onchain_price": 0,
+  "streamed_usd_dlprice_devonly": 0,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 92
+ },
+ "2026-11-26|arc": {
+  "vrms": 8,
+  "programs": 4,
+  "active_in_day": 0,
+  "streamed_usd_onchain_price": 0,
+  "streamed_usd_dlprice_devonly": 0,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 12
+ },
+ "2026-11-26|elysium": {
+  "vrms": 8,
+  "programs": 0,
+  "active_in_day": 0,
+  "streamed_usd_onchain_price": 0,
+  "streamed_usd_dlprice_devonly": 0,
+  "unpriced_tokens": 0,
+  "tokens_not_in_pools": 0,
+  "calls": 8
+ }
+}

@@ -30,6 +30,14 @@ Orion's rule: no live CoinGecko/DefiLlama read; CoinGecko only as a labelled dev
 - Measure archive reach before promising a history horizon: one multicall per chain at the horizon's first hour
   reading every primary, check and feed (non-zero answers).
 
+## Pricing a long tail of fee tokens (hundreds of tokens per day, e.g. DEX pool fees)
+- Anchors = a reviewed list of token ADDRESSES per chain with a Chainlink USD feed (stables, ETH, BTC), never symbol matches: a chain can carry several "USDC"s with real liquidity and a spoof "LINK" deeper than the real one.
+- Everything else: spot of the token's deepest pool against an already-priced token with a priced-side floor (~$10k; up to 3 hops), then the token's own pool against its priced side as fallback, then unpriced (reported as coverage). Measured: 99.99% coverage, chain-day totals within ~0.5% of a dev-only reference; a $250k floor drops coverage to ~89%.
+- Don't use Chainlink tokenized-stock feeds as anchors: they go 48+ h stale over weekends/holidays and sit several % off the on-chain market.
+- A chain with no Chainlink feeds needs a cross-chain anchor (another chain's feed for the same asset): Mike's decision, label it.
+- Solidly-style pools: `stable()` can revert; derive the curve from the factory that created the pool, or stable pools price tens of % off.
+- Boundary state for a UTC day: a call at block N returns state AFTER N, so read day D's accumulators at B(D)-1 and B(D+1)-1, where B = first block at or after 00:00Z.
+
 ## Check outcomes never open anomalies
 A level `cross_checks` mismatch opens a `cross_check_mismatch` anomaly, which starts a paid triage run on prod. So hourly
 price checks are stored on the `prices` row (`check_gap_pct`) and alerted as `ORION WATCH <env> price ...` lines; keep

@@ -1,0 +1,6954 @@
+[
+ {
+  "err_pct": 65.23951022958765,
+  "sym": "AMC",
+  "fee_usd_ref": 47.7902798781782,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 45.84922694078396,
+  "sym": "DJT",
+  "fee_usd_ref": 0.02280472286678854,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 31.827359882868443,
+  "sym": "RBLX",
+  "fee_usd_ref": 0.02145091031302576,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 31.242628848674215,
+  "sym": "DJT",
+  "fee_usd_ref": 0.059755546267480336,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 28.550300372034553,
+  "sym": "TAROT",
+  "fee_usd_ref": 0.037578748785685824,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 22.76354010267084,
+  "sym": "MXNB",
+  "fee_usd_ref": 0.001415784907,
+  "src": "fallback",
+  "chain": "arc",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 22.18972220894798,
+  "sym": "ETHFI",
+  "fee_usd_ref": 0.0026563588515865415,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 20.986625891710588,
+  "sym": "CRCL",
+  "fee_usd_ref": 160.7789421867042,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 16.728021701879193,
+  "sym": "GLD",
+  "fee_usd_ref": 32.22020256888605,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 12.267202056185745,
+  "sym": "INTC",
+  "fee_usd_ref": 4.174451362805421,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 10.989923225081776,
+  "sym": "rCRCL",
+  "fee_usd_ref": 3.5107956020963384e-05,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 10.068983417666788,
+  "sym": "COIN",
+  "fee_usd_ref": 0.38721048059515123,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 9.88027199388748,
+  "sym": "USO",
+  "fee_usd_ref": 184.28732290289574,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 9.044672378287565,
+  "sym": "BONER",
+  "fee_usd_ref": 0.008167582112120137,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 8.961941276783891,
+  "sym": "xAERO",
+  "fee_usd_ref": 0.0004362380733159439,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 7.605080688745469,
+  "sym": "MSTR",
+  "fee_usd_ref": 203.76861058235522,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 7.17635963894272,
+  "sym": "LIT",
+  "fee_usd_ref": 0.11502527993335215,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 6.898751298550976,
+  "sym": "MXNB",
+  "fee_usd_ref": 0.0037439412442,
+  "src": "fallback",
+  "chain": "arc",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 6.894627511606388,
+  "sym": "ZAMA",
+  "fee_usd_ref": 0.0018804131760647195,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 6.585892698957585,
+  "sym": "wTAO",
+  "fee_usd_ref": 0.002233847812409655,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 6.261830302662796,
+  "sym": "GLXY",
+  "fee_usd_ref": 0.000665456630698157,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 5.510592258230251,
+  "sym": "RBLX",
+  "fee_usd_ref": 0.01415695534006323,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 5.408157015852266,
+  "sym": "NVDA",
+  "fee_usd_ref": 1012.8296037373831,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 5.356165776290789,
+  "sym": "AI",
+  "fee_usd_ref": 437.14409353807014,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 5.315709251497935,
+  "sym": "MSTR",
+  "fee_usd_ref": 582.406874300222,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 5.235262009020025,
+  "sym": "GLXY",
+  "fee_usd_ref": 0.05671561711170972,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 5.227111525802086,
+  "sym": "AI",
+  "fee_usd_ref": 492.0777370518055,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 4.79317023233129,
+  "sym": "USO",
+  "fee_usd_ref": 166.93983064612755,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 4.686719930681216,
+  "sym": "NET",
+  "fee_usd_ref": 0.48889121706828836,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 4.526619180572178,
+  "sym": "DRV",
+  "fee_usd_ref": 0.00634967522916488,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 4.357416191029095,
+  "sym": "LDO",
+  "fee_usd_ref": 9.148459468734777e-08,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 4.355176004747374,
+  "sym": "DELTA",
+  "fee_usd_ref": 0.12893783997047709,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 4.235046166680756,
+  "sym": "RSGP",
+  "fee_usd_ref": 1148.9046236608763,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 3.9693732664901504,
+  "sym": "RDDT",
+  "fee_usd_ref": 0.06516890139917171,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 3.852912877965542,
+  "sym": "MSTR",
+  "fee_usd_ref": 3.0950885863569275,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 3.767033060816116,
+  "sym": "COIN",
+  "fee_usd_ref": 0.7348016641004677,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 3.498330876605127,
+  "sym": "ALCX",
+  "fee_usd_ref": 0.00010683643600611413,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 3.4911373750334374,
+  "sym": "USO",
+  "fee_usd_ref": 263.1015290079775,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 3.3253040760720443,
+  "sym": "GME",
+  "fee_usd_ref": 0.3946832285293123,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 3.2880126828726652,
+  "sym": "GME",
+  "fee_usd_ref": 0.02935880843086456,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 3.0431572881120417,
+  "sym": "META",
+  "fee_usd_ref": 142.47637168749543,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 2.9913947493258597,
+  "sym": "sDAI",
+  "fee_usd_ref": 0.003236644383904371,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 2.7909842894835224,
+  "sym": "frxETH",
+  "fee_usd_ref": 2.435893417018288e-05,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 2.776162948503136,
+  "sym": "CRCL",
+  "fee_usd_ref": 0.0985466393876032,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 2.772222792552914,
+  "sym": "MU",
+  "fee_usd_ref": 178.4153920996336,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 2.7635471154279,
+  "sym": "CRCL",
+  "fee_usd_ref": 266.8415125463285,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 2.6967789818022836,
+  "sym": "xAERO",
+  "fee_usd_ref": 1.087807380400974,
+  "src": "fallback",
+  "chain": "ink",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 2.6739229988037905,
+  "sym": "sDAI",
+  "fee_usd_ref": 0.008708520169427981,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 2.670457787686664,
+  "sym": "ZRO",
+  "fee_usd_ref": 0.021370421683726,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 2.622640766407358,
+  "sym": "STG",
+  "fee_usd_ref": 0.001171908651838671,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 2.49214342563594,
+  "sym": "KNTQ",
+  "fee_usd_ref": 387.8507255940052,
+  "src": "graph",
+  "chain": "elysium",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 2.3821750489096294,
+  "sym": "ALCX",
+  "fee_usd_ref": 2.254170241933695e-05,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 2.381682041378108,
+  "sym": "CTX",
+  "fee_usd_ref": 3.0801565627704126,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 2.2903963912006775,
+  "sym": "AAPL",
+  "fee_usd_ref": 0.0044721038830739124,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 2.2680934314278645,
+  "sym": "sDAI",
+  "fee_usd_ref": 0.00507068812472984,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 2.1500307680552,
+  "sym": "INFI",
+  "fee_usd_ref": 159.62645862768156,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 2.0875844240642705,
+  "sym": "AMD",
+  "fee_usd_ref": 147.48678775183194,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 2.070393361240963,
+  "sym": "DELTA",
+  "fee_usd_ref": 0.006302037171490759,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 2.059624730793974,
+  "sym": "wTAO",
+  "fee_usd_ref": 0.14013633457076835,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 2.0516248654011027,
+  "sym": "INTC",
+  "fee_usd_ref": 7.528018489409867,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 1.9626862263078082,
+  "sym": "TAROT",
+  "fee_usd_ref": 0.0033822259709407622,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 1.9094812794466565,
+  "sym": "SPCX",
+  "fee_usd_ref": 77.73621993839518,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 1.8580292333758464,
+  "sym": "fBOMB",
+  "fee_usd_ref": 463.7632879301413,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 1.812785207279033,
+  "sym": "ETHFI",
+  "fee_usd_ref": 0.04620827860608918,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 1.7818454366074654,
+  "sym": "EXA",
+  "fee_usd_ref": 0.003664212241249318,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 1.7239909021104394,
+  "sym": "ORBIO",
+  "fee_usd_ref": 0.8631946006101683,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 1.6577548118731134,
+  "sym": "xAERO",
+  "fee_usd_ref": 0.4099787770458212,
+  "src": "fallback",
+  "chain": "ink",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 1.587583578877516,
+  "sym": "AAPL",
+  "fee_usd_ref": 0.009773561502681521,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 1.5458483556532565,
+  "sym": "XAUt0",
+  "fee_usd_ref": 0.0201288142996633,
+  "src": "fallback",
+  "chain": "ink",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 1.5237108527025534,
+  "sym": "ZRO",
+  "fee_usd_ref": 0.03179924665489382,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 1.4562177609281246,
+  "sym": "SPCX",
+  "fee_usd_ref": 312.67229521313993,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 1.4098554374850636,
+  "sym": "JUGGERNAUT",
+  "fee_usd_ref": 0.12189587689804544,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 1.3867106631525905,
+  "sym": "ALCX",
+  "fee_usd_ref": 1.9035303533390312e-06,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 1.379136267569958,
+  "sym": "CHIP",
+  "fee_usd_ref": 0.019860084549202472,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 1.3347840508695974,
+  "sym": "xAERO",
+  "fee_usd_ref": 119.07112084833284,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 1.3227706414572937,
+  "sym": "BLUECHIP",
+  "fee_usd_ref": 513.9593319901962,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 1.307315672857623,
+  "sym": "AMD",
+  "fee_usd_ref": 384.39090730426364,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 1.302663633158696,
+  "sym": "GMX",
+  "fee_usd_ref": 0.04327017523527254,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 1.2890583548989754,
+  "sym": "POD",
+  "fee_usd_ref": 471.96312423188033,
+  "src": "fallback",
+  "chain": "base",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 1.267671945561366,
+  "sym": "ANT",
+  "fee_usd_ref": 21.766154958150878,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 1.2669799114564007,
+  "sym": "UNI",
+  "fee_usd_ref": 0.0029109272744545106,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 1.2415635286330717,
+  "sym": "REI",
+  "fee_usd_ref": 1126.2135619305475,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 1.2321152507721478,
+  "sym": "AAVE",
+  "fee_usd_ref": 8.548247199166652e-06,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 1.2011993574650326,
+  "sym": "alUSD",
+  "fee_usd_ref": 0.5145015425948937,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 1.1835336755653625,
+  "sym": "TTWO",
+  "fee_usd_ref": 8.350969893983288,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 1.1776690326379624,
+  "sym": "CTX",
+  "fee_usd_ref": 3.607999910946216,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 1.1726944050032606,
+  "sym": "MU",
+  "fee_usd_ref": 760.9217221249821,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 1.1559886226234162,
+  "sym": "alETH",
+  "fee_usd_ref": 3.1493750987651903,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 1.1539808125792472,
+  "sym": "OVER",
+  "fee_usd_ref": 5.4678929216460186e-05,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 1.1284430413678215,
+  "sym": "cbBTC",
+  "fee_usd_ref": 90.69318607669923,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 1.090121668171884,
+  "sym": "XAUt0",
+  "fee_usd_ref": 0.05985957415217301,
+  "src": "fallback",
+  "chain": "ink",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 1.0789274636968993,
+  "sym": "xAERO",
+  "fee_usd_ref": 0.14036424261185687,
+  "src": "fallback",
+  "chain": "arc",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 1.0767707894876688,
+  "sym": "COIN",
+  "fee_usd_ref": 3.0769845281966974,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 1.063366518867348,
+  "sym": "DRV",
+  "fee_usd_ref": 17.077688058373752,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 1.0466939839029354,
+  "sym": "META",
+  "fee_usd_ref": 136.2744329404284,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 1.0447495131174267,
+  "sym": "AERO",
+  "fee_usd_ref": 18211.15217241732,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 1.0290589519177162,
+  "sym": "OPP",
+  "fee_usd_ref": 0.8590216675493215,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 1.024066256450129,
+  "sym": "UNI",
+  "fee_usd_ref": 0.005245786641046155,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.9859280397787273,
+  "sym": "OPP",
+  "fee_usd_ref": 5.477515487821038,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.9856629811593853,
+  "sym": "EXA",
+  "fee_usd_ref": 0.07819782245754543,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.9691781724896265,
+  "sym": "mooBIFI",
+  "fee_usd_ref": 0.49218993708265907,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.9588847955738444,
+  "sym": "CRV",
+  "fee_usd_ref": 0.017691568454038763,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.9587208591772867,
+  "sym": "SNX",
+  "fee_usd_ref": 0.0007986072105438703,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.9506208489282075,
+  "sym": "KNTQ",
+  "fee_usd_ref": 952.7645163276952,
+  "src": "graph",
+  "chain": "elysium",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.9490697042806806,
+  "sym": "UNI",
+  "fee_usd_ref": 0.025106237217290623,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.946645138683011,
+  "sym": "SNX",
+  "fee_usd_ref": 0.002016028797567342,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.9412294870464244,
+  "sym": "AMD",
+  "fee_usd_ref": 0.3930776209682512,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.9381337566279457,
+  "sym": "AI",
+  "fee_usd_ref": 192.26923636745502,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.9336215287933047,
+  "sym": "GOOGL",
+  "fee_usd_ref": 73.97318715338503,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.9303094741233586,
+  "sym": "SHROOM",
+  "fee_usd_ref": 0.10722268362783165,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.9273091053274563,
+  "sym": "xAERO",
+  "fee_usd_ref": 118.04694741800604,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.9130909588624281,
+  "sym": "SPY",
+  "fee_usd_ref": 724.2809309018002,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.8969834574195312,
+  "sym": "JUGGERNAUT",
+  "fee_usd_ref": 0.12703576476660727,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.8924514901356817,
+  "sym": "RBLX",
+  "fee_usd_ref": 0.040306669316774325,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.888824537766264,
+  "sym": "STONKBROKER",
+  "fee_usd_ref": 0.06904545399420207,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.8852891232834725,
+  "sym": "cbZEC",
+  "fee_usd_ref": 2004.375930197763,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.8630678175748474,
+  "sym": "SNAP",
+  "fee_usd_ref": 2.911353501605943,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.8285948117101594,
+  "sym": "GOOGL",
+  "fee_usd_ref": 0.008541249622729511,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.8163749828099753,
+  "sym": "BONER",
+  "fee_usd_ref": 1.706845638979676,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.8024355905837943,
+  "sym": "UNI",
+  "fee_usd_ref": 0.3710587041284172,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.8021254062266836,
+  "sym": "xAERO",
+  "fee_usd_ref": 10.805763945591345,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.7991490482657015,
+  "sym": "INFI",
+  "fee_usd_ref": 145.03546903125783,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.795534658610364,
+  "sym": "ZRO",
+  "fee_usd_ref": 0.1303510619450783,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.78148670024909,
+  "sym": "TIBBIR",
+  "fee_usd_ref": 267.63029422827054,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.7799473705981219,
+  "sym": "LDO",
+  "fee_usd_ref": 0.013910239753209075,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.7694209185697076,
+  "sym": "ORBIO",
+  "fee_usd_ref": 1.088363499365293,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.7677898902181624,
+  "sym": "AAVE",
+  "fee_usd_ref": 5.385000204188384e-06,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.7626609327878509,
+  "sym": "DHT",
+  "fee_usd_ref": 0.00019254212945094158,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.75675534253965,
+  "sym": "RBLX",
+  "fee_usd_ref": 3.2921741110701e-05,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.7528428789394415,
+  "sym": "GOOGL",
+  "fee_usd_ref": 268.8175811951292,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.751019891918081,
+  "sym": "alUSD",
+  "fee_usd_ref": 0.24021829001463685,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.7494197771044986,
+  "sym": "STONKBROKER",
+  "fee_usd_ref": 0.216253149412376,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.7455743622325928,
+  "sym": "SKY",
+  "fee_usd_ref": 0.014464298320833903,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.7380424931074381,
+  "sym": "AAVE",
+  "fee_usd_ref": 0.0015425043200964878,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.7369760249431145,
+  "sym": "BLUECHIP",
+  "fee_usd_ref": 316.86126667935326,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.7368923686229323,
+  "sym": "wTAO",
+  "fee_usd_ref": 0.0010153927757162724,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.7274795144747825,
+  "sym": "cbBTC",
+  "fee_usd_ref": 3.1262941371090522,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.7274321777909432,
+  "sym": "xAERO",
+  "fee_usd_ref": 0.799241014806052,
+  "src": "fallback",
+  "chain": "arc",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.7265377670167661,
+  "sym": "LDO",
+  "fee_usd_ref": 0.03447421476760603,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.7127432532593181,
+  "sym": "TTWO",
+  "fee_usd_ref": 346.72030943596553,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.7004114139022022,
+  "sym": "AAVE",
+  "fee_usd_ref": 0.013925535996991971,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.6988403339682314,
+  "sym": "ALCX",
+  "fee_usd_ref": 3.291669470818574e-05,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.6805577423713904,
+  "sym": "ORBIO",
+  "fee_usd_ref": 3.104531405427026,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.6762585765464624,
+  "sym": "DRV",
+  "fee_usd_ref": 5.611865012181062,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.6612824866127243,
+  "sym": "DRV",
+  "fee_usd_ref": 525.1045915214846,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.6578849770053075,
+  "sym": "Index",
+  "fee_usd_ref": 0.3660912970144285,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.6576296445097274,
+  "sym": "alETH",
+  "fee_usd_ref": 0.20962493589811074,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.6552528102147681,
+  "sym": "mooBIFI",
+  "fee_usd_ref": 9.432317957016759,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.6441407326024828,
+  "sym": "ZRO",
+  "fee_usd_ref": 0.6762774180266118,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.6414855283928045,
+  "sym": "tBTC",
+  "fee_usd_ref": 0.0003590599292130377,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.6325918665055497,
+  "sym": "Index",
+  "fee_usd_ref": 7.445060518159704,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.6313764316527526,
+  "sym": "MORPHO",
+  "fee_usd_ref": 0.013022947573226197,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.6310986308932454,
+  "sym": "PEPE",
+  "fee_usd_ref": 66.6888366732948,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.6303143380274934,
+  "sym": "BLUECHIP",
+  "fee_usd_ref": 508.98726187394266,
+  "src": "fallback",
+  "chain": "base",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.630108290184983,
+  "sym": "ALCX",
+  "fee_usd_ref": 0.03334135333293889,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.6289104347467322,
+  "sym": "UNI",
+  "fee_usd_ref": 0.006536570273108226,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.6250185975653189,
+  "sym": "PENDLE",
+  "fee_usd_ref": 0.11265629144746671,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.6245175622969334,
+  "sym": "LDO",
+  "fee_usd_ref": 0.025362145456996527,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.6226469945265989,
+  "sym": "ZRO",
+  "fee_usd_ref": 0.011167345740637746,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.621090119424017,
+  "sym": "CRV",
+  "fee_usd_ref": 0.08244076564210748,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.6209812559829331,
+  "sym": "LINK",
+  "fee_usd_ref": 0.00470203934076209,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.6208953311492404,
+  "sym": "HIMS",
+  "fee_usd_ref": 0.06783608836919168,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.6187135134207877,
+  "sym": "xAERO",
+  "fee_usd_ref": 8.627421877788246,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.6182792223246469,
+  "sym": "alETH",
+  "fee_usd_ref": 0.3688853746853643,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.6078036243966078,
+  "sym": "SNAP",
+  "fee_usd_ref": 0.04813471948417377,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.5911042714974224,
+  "sym": "LINK",
+  "fee_usd_ref": 69.43418245666842,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.5900857648557856,
+  "sym": "ETHFI",
+  "fee_usd_ref": 0.02520010725020062,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.5802719555795699,
+  "sym": "VIRTUAL",
+  "fee_usd_ref": 0.03828787953815519,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.5749957833446562,
+  "sym": "CTX",
+  "fee_usd_ref": 1.4148051061376952,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.5724113857961011,
+  "sym": "UNI",
+  "fee_usd_ref": 0.05414334686768825,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.5695841853354033,
+  "sym": "DRV",
+  "fee_usd_ref": 1892.7027673351538,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.5690651735946739,
+  "sym": "GLD",
+  "fee_usd_ref": 9.82145026415362,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.5607721862110671,
+  "sym": "ENA",
+  "fee_usd_ref": 50.336688647702985,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.5589797631259996,
+  "sym": "xAERO",
+  "fee_usd_ref": 2.0636655446150325,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.554596215975578,
+  "sym": "SNDKc",
+  "fee_usd_ref": 5311.057691390979,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.553463227854023,
+  "sym": "TSLA",
+  "fee_usd_ref": 92.91904704997572,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.5513423601142153,
+  "sym": "mooBIFI",
+  "fee_usd_ref": 2.128125327184033,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.5470045734161988,
+  "sym": "SNDKc",
+  "fee_usd_ref": 3795.6383433675423,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.5408658422758394,
+  "sym": "BIFI",
+  "fee_usd_ref": 7.426999807104328,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.5404172044269906,
+  "sym": "ZAMA",
+  "fee_usd_ref": 0.0003575611509028926,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.5375202917814903,
+  "sym": "UNI",
+  "fee_usd_ref": 0.023930081955685058,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.5309614871886525,
+  "sym": "USDC.e",
+  "fee_usd_ref": 0.5709901234487528,
+  "src": "fallback",
+  "chain": "ink",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.5302414977135905,
+  "sym": "AAVE",
+  "fee_usd_ref": 1560.1186096711504,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.5285876616690444,
+  "sym": "BIFI",
+  "fee_usd_ref": 20.89062569324827,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.5184707895483975,
+  "sym": "PEPE",
+  "fee_usd_ref": 73.31540030274002,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.5177679196036289,
+  "sym": "SNX",
+  "fee_usd_ref": 0.20364933379861164,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.5128500163739669,
+  "sym": "SOL",
+  "fee_usd_ref": 925.5499853564313,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.5112607760559551,
+  "sym": "LULU",
+  "fee_usd_ref": 0.022196398366776882,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.5039954401689473,
+  "sym": "LDO",
+  "fee_usd_ref": 0.04383081938981154,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.4997362212525225,
+  "sym": "OPP",
+  "fee_usd_ref": 0.3714130562255155,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.49661935409518465,
+  "sym": "CRV",
+  "fee_usd_ref": 0.05365695800323458,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.4961020132212668,
+  "sym": "OPP",
+  "fee_usd_ref": 0.07990601096931924,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.4932896626884231,
+  "sym": "weETH",
+  "fee_usd_ref": 4.242461553773584e-05,
+  "src": "fallback",
+  "chain": "ink",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.487427522719841,
+  "sym": "ITP",
+  "fee_usd_ref": 0.30258220516980683,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.4819660893659039,
+  "sym": "NET",
+  "fee_usd_ref": 1.5854500947250723,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.4811021804250637,
+  "sym": "cbBTC",
+  "fee_usd_ref": 0.21516982253470118,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.479728495564391,
+  "sym": "MSTRc",
+  "fee_usd_ref": 3993.2646612366602,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.47826343884848077,
+  "sym": "CHIP",
+  "fee_usd_ref": 0.068738094439297,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.4773864374718606,
+  "sym": "ENA",
+  "fee_usd_ref": 23.63731845077441,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.47188296059790247,
+  "sym": "weETH",
+  "fee_usd_ref": 2.5124207780354342e-05,
+  "src": "fallback",
+  "chain": "ink",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.4655827242995847,
+  "sym": "MUc",
+  "fee_usd_ref": 847.923261708003,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.464245636904681,
+  "sym": "LINK",
+  "fee_usd_ref": 0.005053625852062909,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.46285138178732144,
+  "sym": "cbHYPE",
+  "fee_usd_ref": 1412.565288898645,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.46033641382920987,
+  "sym": "ETHFI",
+  "fee_usd_ref": 0.0753693520539785,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.4592383948956891,
+  "sym": "DOLA",
+  "fee_usd_ref": 0.03714638467762831,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.4571944854533161,
+  "sym": "ANTc",
+  "fee_usd_ref": 2800.054515768623,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.45327151568943513,
+  "sym": "fBOMB",
+  "fee_usd_ref": 276.32006180797174,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.45306183836225644,
+  "sym": "AAVE",
+  "fee_usd_ref": 84.14632329216725,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.4513930332660676,
+  "sym": "WLD",
+  "fee_usd_ref": 0.4096684927926119,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.451306322104994,
+  "sym": "LUSD",
+  "fee_usd_ref": 0.0002356212876638471,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.44558581507031514,
+  "sym": "DRV",
+  "fee_usd_ref": 3267.1526093411035,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.4391793317699344,
+  "sym": "TSLA",
+  "fee_usd_ref": 57.24079536363792,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.4363459223089228,
+  "sym": "cbBTC",
+  "fee_usd_ref": 14386.036501718154,
+  "src": "anchor",
+  "chain": "base",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.4308129674015948,
+  "sym": "ZRO",
+  "fee_usd_ref": 1.0806324782146213,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.4288578448592095,
+  "sym": "PLTR",
+  "fee_usd_ref": 1.3443458388420266,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.42238532785825456,
+  "sym": "SPY",
+  "fee_usd_ref": 216.92823407146759,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.4222895976865648,
+  "sym": "WETH",
+  "fee_usd_ref": 105.94744276807681,
+  "src": "anchor",
+  "chain": "arc",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.42227672404349104,
+  "sym": "CRCL",
+  "fee_usd_ref": 0.06046370709884915,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.4195051043877296,
+  "sym": "MSTRc",
+  "fee_usd_ref": 2041.2314092897645,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.41519489797398057,
+  "sym": "DRV",
+  "fee_usd_ref": 3.8803263884798387,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.4148903303684892,
+  "sym": "USDC",
+  "fee_usd_ref": 0.0031541058063016764,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.4086837591740444,
+  "sym": "alETH",
+  "fee_usd_ref": 3.3768921095042987,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.408392503214694,
+  "sym": "INTC",
+  "fee_usd_ref": 2.1740641644936183,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.40520027226984556,
+  "sym": "META",
+  "fee_usd_ref": 338.4712106625026,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.40502449603053714,
+  "sym": "AAPL",
+  "fee_usd_ref": 1.3906640443514444,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.40264162447708474,
+  "sym": "COIN",
+  "fee_usd_ref": 1.3689623953373597,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.40073542158953757,
+  "sym": "SPCXc",
+  "fee_usd_ref": 526.6353554383419,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.39651316385626023,
+  "sym": "TSLA",
+  "fee_usd_ref": 0.4076242508222828,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.3958363510029095,
+  "sym": "CRV",
+  "fee_usd_ref": 0.05968930500668672,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.39414322863142726,
+  "sym": "kHYPE",
+  "fee_usd_ref": 100.70044503768632,
+  "src": "fallback",
+  "chain": "elysium",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.391218750098532,
+  "sym": "NET",
+  "fee_usd_ref": 0.17418448607169806,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.3859184879618338,
+  "sym": "SNDKc",
+  "fee_usd_ref": 591.3804219708786,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.3841566100442062,
+  "sym": "DIEM",
+  "fee_usd_ref": 1867.932672720328,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.382347242371317,
+  "sym": "Basecat",
+  "fee_usd_ref": 341.7678375693619,
+  "src": "fallback",
+  "chain": "base",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.3817063049477043,
+  "sym": "msETH",
+  "fee_usd_ref": 2.938141951276433,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.38074456568443216,
+  "sym": "ZRO",
+  "fee_usd_ref": 0.003524960322031009,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.3759136128615115,
+  "sym": "METAc",
+  "fee_usd_ref": 1458.8852873644921,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.372811429613118,
+  "sym": "MSTRc",
+  "fee_usd_ref": 1654.2704535651687,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.3689267167438115,
+  "sym": "cbBTC",
+  "fee_usd_ref": 18.450870928013373,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.36591043622526964,
+  "sym": "xAERO",
+  "fee_usd_ref": 1.4396547447191117,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.3653979284126141,
+  "sym": "ZRO",
+  "fee_usd_ref": 0.01243115783506861,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.36496745315800494,
+  "sym": "VVV",
+  "fee_usd_ref": 5620.0773874018,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.3644722349376295,
+  "sym": "USDC",
+  "fee_usd_ref": 0.001168661156616629,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.36144727360101214,
+  "sym": "ETHFI",
+  "fee_usd_ref": 0.7688080464824751,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.3609391265784079,
+  "sym": "Index",
+  "fee_usd_ref": 3.1974613077918947,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.35687921235093567,
+  "sym": "LIT",
+  "fee_usd_ref": 0.16158915559852474,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.3491496277335693,
+  "sym": "BOLD",
+  "fee_usd_ref": 0.03892764529559324,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.3464074191444011,
+  "sym": "DRV",
+  "fee_usd_ref": 1013.0265768775566,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.3454755247374264,
+  "sym": "WBTC",
+  "fee_usd_ref": 833.5783699768289,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.34281042033497133,
+  "sym": "NVDAc",
+  "fee_usd_ref": 9362.688316852269,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.34242399643423793,
+  "sym": "ZARP",
+  "fee_usd_ref": 0.15504240725726862,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.33744243457216605,
+  "sym": "WETH",
+  "fee_usd_ref": 399.82008773091366,
+  "src": "anchor",
+  "chain": "arc",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.3369234807233945,
+  "sym": "WETH",
+  "fee_usd_ref": 2965.4367245684234,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.33572716383099,
+  "sym": "EURC",
+  "fee_usd_ref": 3.4267024318199866,
+  "src": "anchor",
+  "chain": "optimism",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.33425030076024154,
+  "sym": "msETH",
+  "fee_usd_ref": 0.04269767717803496,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.3334882601492062,
+  "sym": "EURC",
+  "fee_usd_ref": 24.179843840679073,
+  "src": "anchor",
+  "chain": "arc",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.33023704657320074,
+  "sym": "GME",
+  "fee_usd_ref": 0.3167456671560788,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.33015532496176725,
+  "sym": "AI",
+  "fee_usd_ref": 531.0678637584019,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.3289166414796374,
+  "sym": "AMDc",
+  "fee_usd_ref": 815.8385631486923,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.3276936512407014,
+  "sym": "TSLAc",
+  "fee_usd_ref": 432.05188580116726,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.32658073020270795,
+  "sym": "HIMSc",
+  "fee_usd_ref": 556.4072240043405,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.3217879918503086,
+  "sym": "ENA",
+  "fee_usd_ref": 7.825194570715384,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.3216003549470825,
+  "sym": "UNI",
+  "fee_usd_ref": 135.69739243977244,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.32086441795718956,
+  "sym": "PEPE",
+  "fee_usd_ref": 68.73421715215062,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.3188810740585746,
+  "sym": "eUSD",
+  "fee_usd_ref": 2.6015829059711137,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.31821716308625403,
+  "sym": "ORBIO",
+  "fee_usd_ref": 36.50885821652133,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.31588222782237274,
+  "sym": "BOLD",
+  "fee_usd_ref": 0.024050769315977334,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.31529418198894543,
+  "sym": "BONER",
+  "fee_usd_ref": 11.421308103849656,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.3145944930599054,
+  "sym": "DRV",
+  "fee_usd_ref": 1151.4292162156826,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.3128966882566031,
+  "sym": "KNTQ",
+  "fee_usd_ref": 2416.942663668171,
+  "src": "graph",
+  "chain": "elysium",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.31155678017964483,
+  "sym": "WETH",
+  "fee_usd_ref": 849.0701795218973,
+  "src": "anchor",
+  "chain": "arc",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.30811230239990994,
+  "sym": "cbZEC",
+  "fee_usd_ref": 1553.6270706171538,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.30579941659301113,
+  "sym": "Index",
+  "fee_usd_ref": 0.9768261788990176,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.30405253321734715,
+  "sym": "ORBIO",
+  "fee_usd_ref": 2.4867807806589877,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.29686076486753477,
+  "sym": "cbBTC",
+  "fee_usd_ref": 14586.44129563494,
+  "src": "anchor",
+  "chain": "base",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.2957200346897393,
+  "sym": "mooBIFI",
+  "fee_usd_ref": 6.523938262259452,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.2953166243911731,
+  "sym": "MUc",
+  "fee_usd_ref": 1105.808707426938,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.2951339991712487,
+  "sym": "WETH",
+  "fee_usd_ref": 763.2185056328343,
+  "src": "anchor",
+  "chain": "arc",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.2949430592707025,
+  "sym": "ZARU",
+  "fee_usd_ref": 0.2789974948414928,
+  "src": "graph",
+  "chain": "arc",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.2934650808762873,
+  "sym": "CASHCAT",
+  "fee_usd_ref": 726.0771250071423,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.2917337624030125,
+  "sym": "TSLA",
+  "fee_usd_ref": 0.28236977703034283,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.2901318245883244,
+  "sym": "MUc",
+  "fee_usd_ref": 366.3180401857729,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.2878143138997702,
+  "sym": "VVV",
+  "fee_usd_ref": 24753.257206866805,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.2869403534852544,
+  "sym": "MORPHO",
+  "fee_usd_ref": 492.70134611774074,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.2832996319457104,
+  "sym": "SPCX",
+  "fee_usd_ref": 112.78288115376284,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.28239843119213237,
+  "sym": "LDO",
+  "fee_usd_ref": 0.0278694877437809,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.28120200090426817,
+  "sym": "WLD",
+  "fee_usd_ref": 0.5775708398989199,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.27898508200692174,
+  "sym": "AMDc",
+  "fee_usd_ref": 1063.2040136268977,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.2787260293428129,
+  "sym": "DIEM",
+  "fee_usd_ref": 1175.1343525747945,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.2775188837245812,
+  "sym": "LINK",
+  "fee_usd_ref": 62.249645246152134,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.2752744411158248,
+  "sym": "WLD",
+  "fee_usd_ref": 8.391192416292652,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.27520900608944965,
+  "sym": "cbBTC",
+  "fee_usd_ref": 35431.70729266231,
+  "src": "anchor",
+  "chain": "base",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.27297715611227513,
+  "sym": "MSTRc",
+  "fee_usd_ref": 4183.415214300692,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.2704670935990472,
+  "sym": "PEPE",
+  "fee_usd_ref": 5.078597157204802,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.26897885550333234,
+  "sym": "tBTC",
+  "fee_usd_ref": 0.0023757255547581175,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.26717918430749776,
+  "sym": "cbHYPE",
+  "fee_usd_ref": 1036.213049394427,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.2669443724715226,
+  "sym": "DOLA",
+  "fee_usd_ref": 0.0006963671221698837,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.2664445920718794,
+  "sym": "SOL",
+  "fee_usd_ref": 2282.8224450787293,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.2653640719726402,
+  "sym": "USDC.e",
+  "fee_usd_ref": 0.012075138717586096,
+  "src": "fallback",
+  "chain": "ink",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.26524510568557425,
+  "sym": "AMD",
+  "fee_usd_ref": 415.77907267041854,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.26482641637467497,
+  "sym": "BB",
+  "fee_usd_ref": 13.529806846426315,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.26312444169149796,
+  "sym": "AAVE",
+  "fee_usd_ref": 0.0030787437711341254,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.25964943300986754,
+  "sym": "PONS",
+  "fee_usd_ref": 1384.158942696158,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.2586165230075155,
+  "sym": "PONS",
+  "fee_usd_ref": 1401.754303207032,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.2543405166539947,
+  "sym": "GOOGL",
+  "fee_usd_ref": 0.08245526170009522,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.253321427257569,
+  "sym": "GHO",
+  "fee_usd_ref": 0.0007067655334606608,
+  "src": "fallback",
+  "chain": "ink",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.25189968288100717,
+  "sym": "UNI",
+  "fee_usd_ref": 779.4057487057459,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.25170693636656916,
+  "sym": "EURC",
+  "fee_usd_ref": 8.774656936057648,
+  "src": "anchor",
+  "chain": "optimism",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.24977863844026782,
+  "sym": "EURC",
+  "fee_usd_ref": 5.544960859245711,
+  "src": "anchor",
+  "chain": "optimism",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.24974736597513925,
+  "sym": "EURC",
+  "fee_usd_ref": 50.271040979160006,
+  "src": "anchor",
+  "chain": "arc",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.2492977212557257,
+  "sym": "MORPHO",
+  "fee_usd_ref": 3224.554368597548,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.24908940336014762,
+  "sym": "LIT",
+  "fee_usd_ref": 0.002675327301175576,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.2483879289237878,
+  "sym": "kHYPE",
+  "fee_usd_ref": 2.8028641421937097,
+  "src": "graph",
+  "chain": "elysium",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.2479814899464028,
+  "sym": "MUc",
+  "fee_usd_ref": 1433.610966694987,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.24784911837623103,
+  "sym": "Index",
+  "fee_usd_ref": 1.0099038334371522,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.24500715264172968,
+  "sym": "VIRTUAL",
+  "fee_usd_ref": 0.11767886828547605,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.24167650435975574,
+  "sym": "AAVE",
+  "fee_usd_ref": 475.94883145226527,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.2415728106536119,
+  "sym": "TTWO",
+  "fee_usd_ref": 362.9922326752955,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.24065823082356497,
+  "sym": "VIRTUAL",
+  "fee_usd_ref": 0.004366679055370555,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.23667900804116293,
+  "sym": "msUSD",
+  "fee_usd_ref": 6.342058449684245,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.23623953350968563,
+  "sym": "WETH",
+  "fee_usd_ref": 1679.639325938488,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.2346436465665125,
+  "sym": "VVV",
+  "fee_usd_ref": 6597.232464833655,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.2325154531011897,
+  "sym": "DIEM",
+  "fee_usd_ref": 2551.581699047674,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.23206988807162876,
+  "sym": "msETH",
+  "fee_usd_ref": 7.6412170273725435,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.23203973127268185,
+  "sym": "EURC",
+  "fee_usd_ref": 0.635069457874587,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.228564272617382,
+  "sym": "WHYPE",
+  "fee_usd_ref": 4190.742893783301,
+  "src": "anchor",
+  "chain": "elysium",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.22795919526257258,
+  "sym": "cirBTC",
+  "fee_usd_ref": 191.6197700034741,
+  "src": "graph",
+  "chain": "arc",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.22402487459627363,
+  "sym": "Basecat",
+  "fee_usd_ref": 311.5319012986958,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.2230746473658174,
+  "sym": "cbZEC",
+  "fee_usd_ref": 1906.1484469276427,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.22255205518881827,
+  "sym": "AMDc",
+  "fee_usd_ref": 1290.869658743598,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.22233205866112327,
+  "sym": "cirBTC",
+  "fee_usd_ref": 99.51109383832497,
+  "src": "graph",
+  "chain": "arc",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.2218419058922283,
+  "sym": "EURC",
+  "fee_usd_ref": 4.127204463158621,
+  "src": "anchor",
+  "chain": "optimism",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.22137789899638882,
+  "sym": "AAVE",
+  "fee_usd_ref": 0.029455645517163145,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.22055120586668142,
+  "sym": "EURC",
+  "fee_usd_ref": 72.13864038251535,
+  "src": "anchor",
+  "chain": "arc",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.21993544435425783,
+  "sym": "WETH",
+  "fee_usd_ref": 199.29305162228437,
+  "src": "anchor",
+  "chain": "ink",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.21931754990949237,
+  "sym": "RDDT",
+  "fee_usd_ref": 0.0687558385359792,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.2176075511910125,
+  "sym": "WLD",
+  "fee_usd_ref": 11.730842966826579,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.21649212130445683,
+  "sym": "tBTC",
+  "fee_usd_ref": 0.5168402120908938,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.2159180097547897,
+  "sym": "AMD",
+  "fee_usd_ref": 16.6402519662816,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.21587074024522757,
+  "sym": "EURC",
+  "fee_usd_ref": 66.29276469163537,
+  "src": "anchor",
+  "chain": "arc",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.21583671408478278,
+  "sym": "NVDAc",
+  "fee_usd_ref": 1010.7773234853227,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.21546069116444855,
+  "sym": "ORCLc",
+  "fee_usd_ref": 893.460225663916,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.21495225533552098,
+  "sym": "SPCX",
+  "fee_usd_ref": 611.0791025734818,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.21457129260047392,
+  "sym": "SKY",
+  "fee_usd_ref": 0.06412554369754342,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.21418222167124412,
+  "sym": "alUSD",
+  "fee_usd_ref": 7.743893003902263,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.21396792749817095,
+  "sym": "ITP",
+  "fee_usd_ref": 0.0006448015452775864,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.21341562064400854,
+  "sym": "AVNT",
+  "fee_usd_ref": 666.0576608975437,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.20946164861126437,
+  "sym": "TSLA",
+  "fee_usd_ref": 368.629652375598,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.20827511629584183,
+  "sym": "kHYPE",
+  "fee_usd_ref": 19.145093846632438,
+  "src": "fallback",
+  "chain": "elysium",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.20805359309472582,
+  "sym": "PENDLE",
+  "fee_usd_ref": 0.1925533501941247,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.2078159714534289,
+  "sym": "cbZEC",
+  "fee_usd_ref": 3216.496665684792,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.2067813354184045,
+  "sym": "wstETH",
+  "fee_usd_ref": 0.596526875201606,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.20637308990494319,
+  "sym": "VIRTUAL",
+  "fee_usd_ref": 0.01443617405582933,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.20494132104664775,
+  "sym": "wstETH",
+  "fee_usd_ref": 0.0004296188757015618,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.20383941834947183,
+  "sym": "WBTC",
+  "fee_usd_ref": 325.21452663047165,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.20309652493688546,
+  "sym": "META",
+  "fee_usd_ref": 0.16661282779722844,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.2009362674962878,
+  "sym": "LDO",
+  "fee_usd_ref": 0.10919144247317578,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.20038334627453525,
+  "sym": "AVNT",
+  "fee_usd_ref": 686.3366003036703,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.20028766272559562,
+  "sym": "msUSD",
+  "fee_usd_ref": 1.7849464282642558,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.1992537841036368,
+  "sym": "SNDKc",
+  "fee_usd_ref": 3690.4310223867947,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.1964065429619799,
+  "sym": "NVDAc",
+  "fee_usd_ref": 8212.900480969505,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.1950642295541316,
+  "sym": "SPY",
+  "fee_usd_ref": 446.11058258555767,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.1932275580672771,
+  "sym": "SNDKc",
+  "fee_usd_ref": 1529.3414291776196,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.19260001339092003,
+  "sym": "CASHCAT",
+  "fee_usd_ref": 594.9197982636498,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.19240349738114393,
+  "sym": "AAVE",
+  "fee_usd_ref": 0.010455074957068064,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.19207267448224652,
+  "sym": "WHYPE",
+  "fee_usd_ref": 1271.7806538213554,
+  "src": "anchor",
+  "chain": "elysium",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.19057036074843214,
+  "sym": "MORPHO",
+  "fee_usd_ref": 688.7540585023759,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.1890645326881768,
+  "sym": "WETH",
+  "fee_usd_ref": 5869.580135342261,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.18859460547057116,
+  "sym": "SHROOM",
+  "fee_usd_ref": 17.637738616899743,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.18845123712953882,
+  "sym": "SPY",
+  "fee_usd_ref": 418.22757979774053,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.18793750654200192,
+  "sym": "GOOGLc",
+  "fee_usd_ref": 1874.2229670528206,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.18547029582396402,
+  "sym": "META",
+  "fee_usd_ref": 475.02430561192074,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.1804994524807202,
+  "sym": "SPCX",
+  "fee_usd_ref": 896.9091448023877,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.18048102312828718,
+  "sym": "OpenX",
+  "fee_usd_ref": 0.00010318137471841206,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.18040284799503148,
+  "sym": "wstETH",
+  "fee_usd_ref": 5.207498404781087,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.1801140271243673,
+  "sym": "TTWOc",
+  "fee_usd_ref": 559.0588302188372,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.1800226973988739,
+  "sym": "UNI",
+  "fee_usd_ref": 39.28550447888563,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.17900733609437225,
+  "sym": "ZARP",
+  "fee_usd_ref": 0.10238169724809044,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.17887999467638416,
+  "sym": "alETH",
+  "fee_usd_ref": 2.855587555496499,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.17861544001682716,
+  "sym": "VVV",
+  "fee_usd_ref": 9653.884278228272,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.17829463425709235,
+  "sym": "META",
+  "fee_usd_ref": 619.0587513258395,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.17782558130653436,
+  "sym": "tBTC",
+  "fee_usd_ref": 0.1858127696600593,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.1778221310069661,
+  "sym": "MUc",
+  "fee_usd_ref": 1334.7775203614092,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.17770006060016108,
+  "sym": "CASHCAT",
+  "fee_usd_ref": 419.9958711081026,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.17753584225377317,
+  "sym": "cbETH",
+  "fee_usd_ref": 677.7593347344292,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.17619711188703313,
+  "sym": "NVDA",
+  "fee_usd_ref": 1392.1501490712822,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.17591333731428183,
+  "sym": "SPY",
+  "fee_usd_ref": 642.5471998686563,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.17561962091399153,
+  "sym": "AERO",
+  "fee_usd_ref": 8264.654563430517,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.1749435258861176,
+  "sym": "METAc",
+  "fee_usd_ref": 1344.7106032808883,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.17426349267253283,
+  "sym": "cirBTC",
+  "fee_usd_ref": 338.4576010230292,
+  "src": "graph",
+  "chain": "arc",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.17366740838044015,
+  "sym": "CASHCAT",
+  "fee_usd_ref": 163.37175484778854,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.1732837633784401,
+  "sym": "ORCLc",
+  "fee_usd_ref": 671.0674921660587,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.17302587634229205,
+  "sym": "STONKBROKER",
+  "fee_usd_ref": 0.012657524059582922,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.1724216763614006,
+  "sym": "UBTC",
+  "fee_usd_ref": 7.83691126794685,
+  "src": "anchor",
+  "chain": "elysium",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.1711934879895738,
+  "sym": "TSLAc",
+  "fee_usd_ref": 376.8527231605182,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.1703270236424803,
+  "sym": "AAPLc",
+  "fee_usd_ref": 1206.1226603171503,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.17010684880579552,
+  "sym": "BOLD",
+  "fee_usd_ref": 0.1436142871019133,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.16998111876356248,
+  "sym": "HOODc",
+  "fee_usd_ref": 529.8933466387924,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.16989721072862007,
+  "sym": "WBTC",
+  "fee_usd_ref": 1616.664603963886,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.16899381152069015,
+  "sym": "AMD",
+  "fee_usd_ref": 7.2328515023330215,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.16855278605201196,
+  "sym": "GOOGLc",
+  "fee_usd_ref": 1319.6973194091447,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.16834761492360295,
+  "sym": "COIN",
+  "fee_usd_ref": 0.3638199699566788,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.1676920087774647,
+  "sym": "BIFI",
+  "fee_usd_ref": 4.466487252737575,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.16735336922966138,
+  "sym": "tBTC",
+  "fee_usd_ref": 0.002161315851145546,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.16718546469365325,
+  "sym": "SPY",
+  "fee_usd_ref": 665.9501731458547,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.16697227232398415,
+  "sym": "BIFI",
+  "fee_usd_ref": 0.014865692019280978,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.16251200740042826,
+  "sym": "PLTR",
+  "fee_usd_ref": 0.5110349389866685,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.16218934408813723,
+  "sym": "TSLAc",
+  "fee_usd_ref": 1061.7412090611576,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.16119666835539004,
+  "sym": "OP",
+  "fee_usd_ref": 109.58395847272969,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.1611961802136741,
+  "sym": "cbHYPE",
+  "fee_usd_ref": 900.9321335843365,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.16055232938136932,
+  "sym": "PAXG",
+  "fee_usd_ref": 65.03677652113618,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.16037005835989326,
+  "sym": "RSGP",
+  "fee_usd_ref": 649.9203123327811,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.16007940527256181,
+  "sym": "cbZEC",
+  "fee_usd_ref": 836.5245802221988,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.15964286144465323,
+  "sym": "MSFTc",
+  "fee_usd_ref": 338.5284262910483,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.15854496102458704,
+  "sym": "METAc",
+  "fee_usd_ref": 1343.3176145262244,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.15813810013189933,
+  "sym": "WETH",
+  "fee_usd_ref": 8435.002332705373,
+  "src": "anchor",
+  "chain": "robinhood",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.1572215974620983,
+  "sym": "DRV",
+  "fee_usd_ref": 3125.3666036953427,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.15514684470209206,
+  "sym": "AAVE",
+  "fee_usd_ref": 0.02090051344953625,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.15476234272955303,
+  "sym": "WETH",
+  "fee_usd_ref": 514.7800939964235,
+  "src": "anchor",
+  "chain": "optimism",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.15475502380566386,
+  "sym": "ENA",
+  "fee_usd_ref": 1.5362050248980086,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.15033028633852918,
+  "sym": "PYUSD",
+  "fee_usd_ref": 9.996488749999999e-07,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.14956237556805752,
+  "sym": "PONS",
+  "fee_usd_ref": 2194.117244185669,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.1491873495712337,
+  "sym": "SOL",
+  "fee_usd_ref": 2775.5805304741234,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.14796170002416842,
+  "sym": "AERO",
+  "fee_usd_ref": 6469.253989147177,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.14504947011289016,
+  "sym": "EURC",
+  "fee_usd_ref": 29.59006941802365,
+  "src": "anchor",
+  "chain": "arc",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.14481451551793256,
+  "sym": "kBTC",
+  "fee_usd_ref": 138.38287783524004,
+  "src": "graph",
+  "chain": "ink",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.14464823779575253,
+  "sym": "GME",
+  "fee_usd_ref": 0.0035358554830934763,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.14391147312060593,
+  "sym": "mooBIFI",
+  "fee_usd_ref": 2.3986033203799844,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.143887590386238,
+  "sym": "NFLXc",
+  "fee_usd_ref": 640.4544062955126,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.14373978160014955,
+  "sym": "xAERO",
+  "fee_usd_ref": 10.918739970029463,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.14324167872385996,
+  "sym": "GHO",
+  "fee_usd_ref": 0.0004554885435011122,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.14262932809520068,
+  "sym": "alUSD",
+  "fee_usd_ref": 4.205670811101477,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.1418327547613618,
+  "sym": "tBTC",
+  "fee_usd_ref": 0.020860746101324813,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.1399968833120102,
+  "sym": "NFLXc",
+  "fee_usd_ref": 566.4348324833114,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.13942826936830244,
+  "sym": "msUSD",
+  "fee_usd_ref": 7.2818723156906335,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.13890596981456227,
+  "sym": "SPCXc",
+  "fee_usd_ref": 1671.4032410790269,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.13672301865079728,
+  "sym": "Index",
+  "fee_usd_ref": 0.23588704767641436,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.13654238681728437,
+  "sym": "SPCXc",
+  "fee_usd_ref": 1705.9150524654872,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.13600576041569168,
+  "sym": "MSTRc",
+  "fee_usd_ref": 1886.7017436258868,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.13361705821792746,
+  "sym": "AAVE",
+  "fee_usd_ref": 1058.9272105305176,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.13310897510514508,
+  "sym": "SPCXc",
+  "fee_usd_ref": 902.6979976372962,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.13047306732403285,
+  "sym": "cbBTC",
+  "fee_usd_ref": 0.004234249860736833,
+  "src": "anchor",
+  "chain": "robinhood",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.12928086752428403,
+  "sym": "eUSD",
+  "fee_usd_ref": 4.205440443105429,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.1290860337790134,
+  "sym": "GOOGLc",
+  "fee_usd_ref": 570.9697776865427,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.1286160661624347,
+  "sym": "ITP",
+  "fee_usd_ref": 0.2569481331470905,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.1281856556766381,
+  "sym": "ANT",
+  "fee_usd_ref": 69.06624151429416,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.12793478219585985,
+  "sym": "EURC",
+  "fee_usd_ref": 22.67911295561897,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.12725943973159737,
+  "sym": "WETH",
+  "fee_usd_ref": 5491.120279627682,
+  "src": "anchor",
+  "chain": "robinhood",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.1271045356154188,
+  "sym": "AMZNc",
+  "fee_usd_ref": 738.954925436307,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.12670259804138384,
+  "sym": "kBTC",
+  "fee_usd_ref": 4.973261060021888,
+  "src": "fallback",
+  "chain": "ink",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.12476518665960334,
+  "sym": "PENDLE",
+  "fee_usd_ref": 5.539522988203771,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.12463246087976998,
+  "sym": "MSFTc",
+  "fee_usd_ref": 657.7541786253965,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.12442335696998263,
+  "sym": "alUSD",
+  "fee_usd_ref": 9.601745691322572,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.12284245432019336,
+  "sym": "GHO",
+  "fee_usd_ref": 2.7846332192500765e-05,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.12257410411251612,
+  "sym": "msETH",
+  "fee_usd_ref": 441.6690618236538,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.12253744897559038,
+  "sym": "USDC.e",
+  "fee_usd_ref": 0.00395789212800256,
+  "src": "fallback",
+  "chain": "ink",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.12212907956775654,
+  "sym": "BONER",
+  "fee_usd_ref": 0.0730927225461292,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.12140037569449147,
+  "sym": "VVV",
+  "fee_usd_ref": 16455.57643316358,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.12130149388682732,
+  "sym": "BOLD",
+  "fee_usd_ref": 0.0426871583522237,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.12128383196270409,
+  "sym": "LINK",
+  "fee_usd_ref": 252.63874549372494,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.12041075336307605,
+  "sym": "PEPE",
+  "fee_usd_ref": 97.77416699899373,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.12038266625206129,
+  "sym": "MSTR",
+  "fee_usd_ref": 632.2541066585216,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.11974437732369392,
+  "sym": "CHIP",
+  "fee_usd_ref": 10.5121384799702,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.11887055616717213,
+  "sym": "WETH",
+  "fee_usd_ref": 7897.264492662985,
+  "src": "anchor",
+  "chain": "robinhood",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.11826878356928638,
+  "sym": "AMZNc",
+  "fee_usd_ref": 1367.6241486681122,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.11774324077185039,
+  "sym": "GLD",
+  "fee_usd_ref": 75.10321928000535,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.11576659588101723,
+  "sym": "LINK",
+  "fee_usd_ref": 206.72960950924585,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.11561849624643905,
+  "sym": "PEPE",
+  "fee_usd_ref": 2.6264688514022656,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.11423508808499072,
+  "sym": "AAPL",
+  "fee_usd_ref": 0.0036203142428797752,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.11307392118424797,
+  "sym": "MSFTc",
+  "fee_usd_ref": 892.6910492838969,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.11258670024709705,
+  "sym": "cbBTC",
+  "fee_usd_ref": 230.05526992831756,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.11258215559113438,
+  "sym": "EURC",
+  "fee_usd_ref": 7.736453126715257,
+  "src": "anchor",
+  "chain": "optimism",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.11115014820243241,
+  "sym": "GLD",
+  "fee_usd_ref": 102.68839203975212,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.1103549666008341,
+  "sym": "WHYPE",
+  "fee_usd_ref": 1409.6827704556927,
+  "src": "anchor",
+  "chain": "elysium",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.1076255220170852,
+  "sym": "GOOGLc",
+  "fee_usd_ref": 2700.477614597939,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.10665653309930301,
+  "sym": "CASHCAT",
+  "fee_usd_ref": 181.21456349135022,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.1065250167751719,
+  "sym": "AMZNc",
+  "fee_usd_ref": 2121.380549252428,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.10640910461441333,
+  "sym": "OP",
+  "fee_usd_ref": 56.68691524994587,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.10625558745325225,
+  "sym": "UNI",
+  "fee_usd_ref": 914.188529602852,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.10555597251651339,
+  "sym": "AMZNc",
+  "fee_usd_ref": 1581.4642564722067,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.10513052993056382,
+  "sym": "SOL",
+  "fee_usd_ref": 637.5464087313154,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.10480245740466243,
+  "sym": "cbBTC",
+  "fee_usd_ref": 9459.738119882188,
+  "src": "anchor",
+  "chain": "base",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.10447845702561409,
+  "sym": "AI",
+  "fee_usd_ref": 230.93570146596008,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.10426665938909618,
+  "sym": "CRV",
+  "fee_usd_ref": 0.0215581016470018,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.10404702052502213,
+  "sym": "wstETH",
+  "fee_usd_ref": 0.0006328155019454773,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.10373951593951602,
+  "sym": "GLD",
+  "fee_usd_ref": 67.3888532411551,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.10357364160973326,
+  "sym": "BOLD",
+  "fee_usd_ref": 10.261499471630907,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.10320134550669824,
+  "sym": "QQQ",
+  "fee_usd_ref": 0.5362827167270138,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.10221678538411272,
+  "sym": "weETH",
+  "fee_usd_ref": 0.00041575702397719024,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.10149995899111364,
+  "sym": "tBTC",
+  "fee_usd_ref": 0.3577190571603687,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.10121081918285091,
+  "sym": "WETH",
+  "fee_usd_ref": 33820.10944218031,
+  "src": "anchor",
+  "chain": "base",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.10043925105513996,
+  "sym": "cbHYPE",
+  "fee_usd_ref": 1497.970091254938,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.09994442714766905,
+  "sym": "DOLA",
+  "fee_usd_ref": 43.58130357058654,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.09961257064824425,
+  "sym": "cbXRP",
+  "fee_usd_ref": 976.3599343723072,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.09938087091008185,
+  "sym": "NET",
+  "fee_usd_ref": 0.29898430554323163,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.09912958822564377,
+  "sym": "PAXG",
+  "fee_usd_ref": 195.28198688270137,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.09885444623138895,
+  "sym": "tBTC",
+  "fee_usd_ref": 0.0009850978822751075,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.09857103333950068,
+  "sym": "AMC",
+  "fee_usd_ref": 154.344675574734,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.0984812560404058,
+  "sym": "VIRTUAL",
+  "fee_usd_ref": 364.87429380361124,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.09761037876395706,
+  "sym": "msETH",
+  "fee_usd_ref": 2.2093712198174096,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.0972851301704214,
+  "sym": "AI",
+  "fee_usd_ref": 178.42697286690867,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.09650426788143651,
+  "sym": "AAPLc",
+  "fee_usd_ref": 852.1426094036675,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.09617955479508389,
+  "sym": "GBPA",
+  "fee_usd_ref": 14.10224968080304,
+  "src": "graph",
+  "chain": "arc",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.09612648730346063,
+  "sym": "mUSD",
+  "fee_usd_ref": 0.005676150485160775,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.09570278944222022,
+  "sym": "mUSD",
+  "fee_usd_ref": 0.7605762801979765,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.09543093656283475,
+  "sym": "AAVE",
+  "fee_usd_ref": 314.2309689455086,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.0953004012213432,
+  "sym": "SOL",
+  "fee_usd_ref": 796.498257417981,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.09505547875254816,
+  "sym": "GHO",
+  "fee_usd_ref": 37.44908153635022,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.09472503061670468,
+  "sym": "USDC",
+  "fee_usd_ref": 0.0011254311982008172,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.0938984497784956,
+  "sym": "WETH",
+  "fee_usd_ref": 1364.9815986652666,
+  "src": "anchor",
+  "chain": "optimism",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.09365822774571875,
+  "sym": "OP",
+  "fee_usd_ref": 116.86922029512856,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.09364807783508455,
+  "sym": "MSTR",
+  "fee_usd_ref": 6.803487057251706,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.09315853818860909,
+  "sym": "wstETH",
+  "fee_usd_ref": 38.936651670407706,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.09294436541702478,
+  "sym": "MSFTc",
+  "fee_usd_ref": 791.1214070932158,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.09260467828886565,
+  "sym": "frxETH",
+  "fee_usd_ref": 0.0020307960711288373,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.09255296094733412,
+  "sym": "WETH",
+  "fee_usd_ref": 347.33325343989924,
+  "src": "anchor",
+  "chain": "arc",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.0922999743327324,
+  "sym": "AAPLc",
+  "fee_usd_ref": 579.5079400188439,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.09210714449268131,
+  "sym": "AMZNc",
+  "fee_usd_ref": 899.8264954319205,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.09198272913215622,
+  "sym": "WETH",
+  "fee_usd_ref": 182.94333733371474,
+  "src": "anchor",
+  "chain": "arbitrum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.09180438875229235,
+  "sym": "ARB",
+  "fee_usd_ref": 73.21932154061413,
+  "src": "graph",
+  "chain": "arbitrum",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.09059652735878831,
+  "sym": "wstETH",
+  "fee_usd_ref": 13.604999753594967,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.09026583020134149,
+  "sym": "LINK",
+  "fee_usd_ref": 595.5397593498083,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.08914825058459197,
+  "sym": "WETH",
+  "fee_usd_ref": 10.857496524142832,
+  "src": "anchor",
+  "chain": "ink",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.08865620866207458,
+  "sym": "GBPA",
+  "fee_usd_ref": 0.06827679786405175,
+  "src": "graph",
+  "chain": "arc",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.08777099150091283,
+  "sym": "CHIP",
+  "fee_usd_ref": 0.02873176423338577,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.08728434280685926,
+  "sym": "ZRO",
+  "fee_usd_ref": 561.0142398713938,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.08671182609417682,
+  "sym": "wstETH",
+  "fee_usd_ref": 0.23697025679142494,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.08664626714185442,
+  "sym": "mUSD",
+  "fee_usd_ref": 0.0044975623759660405,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.08622805831915992,
+  "sym": "TSLA",
+  "fee_usd_ref": 3.6165298022334107,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.08537470068423758,
+  "sym": "AAPL",
+  "fee_usd_ref": 1.71975338219096,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.08469071460970312,
+  "sym": "GBPA",
+  "fee_usd_ref": 0.6955976570846656,
+  "src": "graph",
+  "chain": "arc",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.08373464037161327,
+  "sym": "WLD",
+  "fee_usd_ref": 2.985748699951719,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.08367914981670665,
+  "sym": "wTAO",
+  "fee_usd_ref": 0.05009545634904519,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.08359803139383892,
+  "sym": "USDC.e",
+  "fee_usd_ref": 0.12056291497499193,
+  "src": "fallback",
+  "chain": "ink",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.08321186788995405,
+  "sym": "SNDKc",
+  "fee_usd_ref": 1988.3215484082016,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.08298730092932693,
+  "sym": "METAc",
+  "fee_usd_ref": 760.5979806191606,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.08279789991268993,
+  "sym": "GME",
+  "fee_usd_ref": 0.969611790646648,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.0816466998282861,
+  "sym": "WETH",
+  "fee_usd_ref": 783.8753344178887,
+  "src": "anchor",
+  "chain": "arbitrum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.08013502050114862,
+  "sym": "AAPLc",
+  "fee_usd_ref": 242.64151911911318,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.08013235781690886,
+  "sym": "DIEM",
+  "fee_usd_ref": 289.321304753546,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.08001139493090115,
+  "sym": "SPCX",
+  "fee_usd_ref": 135.37693427571583,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.08001008021794043,
+  "sym": "mUSD",
+  "fee_usd_ref": 2.546879390475858,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.07990321622000085,
+  "sym": "AAPLc",
+  "fee_usd_ref": 597.0732083975531,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.07972022174962401,
+  "sym": "WBTC",
+  "fee_usd_ref": 719.4432236120037,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.07938562738638577,
+  "sym": "BOLD",
+  "fee_usd_ref": 0.001629277158496955,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.07929412129630276,
+  "sym": "DOLA",
+  "fee_usd_ref": 103.1576153456295,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.07893511948859899,
+  "sym": "VIRTUAL",
+  "fee_usd_ref": 0.15139636937685427,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.07845035577329629,
+  "sym": "ITP",
+  "fee_usd_ref": 0.17170928876588276,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.07706862234102552,
+  "sym": "msUSD",
+  "fee_usd_ref": 343.10795771241254,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.07624671081815082,
+  "sym": "WETH",
+  "fee_usd_ref": 716.1147778903405,
+  "src": "anchor",
+  "chain": "optimism",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.07606532074189154,
+  "sym": "CASHCAT",
+  "fee_usd_ref": 197.73577330163113,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.07569833018923333,
+  "sym": "EURC",
+  "fee_usd_ref": 6.557811993982745,
+  "src": "anchor",
+  "chain": "optimism",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.07546514004054261,
+  "sym": "UBTC",
+  "fee_usd_ref": 18.700564444407373,
+  "src": "anchor",
+  "chain": "elysium",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.07541469646494825,
+  "sym": "TSLAc",
+  "fee_usd_ref": 636.5168006762049,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.07539499122574123,
+  "sym": "kBTC",
+  "fee_usd_ref": 91.3272210428533,
+  "src": "graph",
+  "chain": "ink",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.0750329988847942,
+  "sym": "WETH",
+  "fee_usd_ref": 24528.283953380767,
+  "src": "anchor",
+  "chain": "base",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.07469689790301492,
+  "sym": "weETH",
+  "fee_usd_ref": 0.023916905866829825,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.07452018997078369,
+  "sym": "GOOGLc",
+  "fee_usd_ref": 1399.2268703595641,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.07424218238721858,
+  "sym": "WBTC",
+  "fee_usd_ref": 39.971670930647356,
+  "src": "anchor",
+  "chain": "arbitrum",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.07377346622137182,
+  "sym": "DAI",
+  "fee_usd_ref": 2.697034213668401e-05,
+  "src": "anchor",
+  "chain": "arbitrum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.0737082656139254,
+  "sym": "EURC",
+  "fee_usd_ref": 28.006164019741774,
+  "src": "anchor",
+  "chain": "arc",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.07369679291345799,
+  "sym": "msETH",
+  "fee_usd_ref": 735.6747272475835,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.07227980028439163,
+  "sym": "OP",
+  "fee_usd_ref": 102.86149838199594,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.07176528158374662,
+  "sym": "tBTC",
+  "fee_usd_ref": 0.01149415573933971,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.07162973195269373,
+  "sym": "PONS",
+  "fee_usd_ref": 1022.1284587451095,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.07044153865031211,
+  "sym": "ZRO",
+  "fee_usd_ref": 230.49105228043425,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.07009890522717832,
+  "sym": "BOLD",
+  "fee_usd_ref": 12.090778802503685,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.0700700498636353,
+  "sym": "XAUt",
+  "fee_usd_ref": 145.08364519176013,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.06958703283934664,
+  "sym": "pxETH",
+  "fee_usd_ref": 2.6419283391232798e-06,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.06895175342354065,
+  "sym": "cirBTC",
+  "fee_usd_ref": 81.19172741041261,
+  "src": "graph",
+  "chain": "arc",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.06869356425661666,
+  "sym": "WETH",
+  "fee_usd_ref": 1090.5096805567725,
+  "src": "anchor",
+  "chain": "arbitrum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.0681451164264324,
+  "sym": "kBTC",
+  "fee_usd_ref": 83.89981030550564,
+  "src": "graph",
+  "chain": "ink",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.06790189598213647,
+  "sym": "NVDAc",
+  "fee_usd_ref": 1403.5714244680955,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.06769445610752545,
+  "sym": "ARB",
+  "fee_usd_ref": 207.38604065251,
+  "src": "graph",
+  "chain": "arbitrum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.06714018821287748,
+  "sym": "mUSD",
+  "fee_usd_ref": 0.0008921176354462569,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.06710679008832265,
+  "sym": "TSLAc",
+  "fee_usd_ref": 862.0319260033219,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.06627375153558379,
+  "sym": "EURC",
+  "fee_usd_ref": 264.92922584194434,
+  "src": "anchor",
+  "chain": "base",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.06574826417777846,
+  "sym": "EURC",
+  "fee_usd_ref": 0.32778986007185196,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.06523700482290451,
+  "sym": "msUSD",
+  "fee_usd_ref": 0.5416875230318086,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.06515206978140453,
+  "sym": "ZRO",
+  "fee_usd_ref": 0.06363927272578919,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.06404556372469061,
+  "sym": "PAXG",
+  "fee_usd_ref": 5.997132222141014,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.06369119230142939,
+  "sym": "cbXRP",
+  "fee_usd_ref": 669.766093844807,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.06368629960780137,
+  "sym": "EURC",
+  "fee_usd_ref": 0.3878392210717283,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.0632848451722845,
+  "sym": "wstETH",
+  "fee_usd_ref": 41.937867020847015,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.06240182038759201,
+  "sym": "GBPA",
+  "fee_usd_ref": 4.575980236941263,
+  "src": "graph",
+  "chain": "arc",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.06154959747437516,
+  "sym": "cirBTC",
+  "fee_usd_ref": 417.2170693962515,
+  "src": "graph",
+  "chain": "arc",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.0612416927167736,
+  "sym": "frxETH",
+  "fee_usd_ref": 4.580880322136496e-05,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.060548835170404214,
+  "sym": "ZRO",
+  "fee_usd_ref": 0.7580998693429416,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.059544361591179484,
+  "sym": "EXA",
+  "fee_usd_ref": 0.004708046278271272,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.059513832938518085,
+  "sym": "QQQ",
+  "fee_usd_ref": 1.3968133180841655,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.05925355353136874,
+  "sym": "DAI",
+  "fee_usd_ref": 0.0008287689939845358,
+  "src": "anchor",
+  "chain": "optimism",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.05913852526870933,
+  "sym": "EURC",
+  "fee_usd_ref": 1.140019258173357,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.058161687214330904,
+  "sym": "USDC",
+  "fee_usd_ref": 0.0010897371079569226,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.05772374635764077,
+  "sym": "GME",
+  "fee_usd_ref": 0.5377663699821367,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.05696396515415536,
+  "sym": "CHIP",
+  "fee_usd_ref": 0.0660960811429852,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.055552365424405004,
+  "sym": "xAERO",
+  "fee_usd_ref": 168.15768514878053,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.0549049327553397,
+  "sym": "EURC",
+  "fee_usd_ref": 629.9936191486389,
+  "src": "anchor",
+  "chain": "base",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.05489928143351808,
+  "sym": "PENDLE",
+  "fee_usd_ref": 8.216780588129865,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.05406076937427562,
+  "sym": "USDe",
+  "fee_usd_ref": 51.8272668827102,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.054003005244807056,
+  "sym": "SOL",
+  "fee_usd_ref": 1205.3850163305633,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.05360801458940134,
+  "sym": "USDT",
+  "fee_usd_ref": 2269.823212391282,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.053521555191082815,
+  "sym": "kBTC",
+  "fee_usd_ref": 6.514407099590884,
+  "src": "fallback",
+  "chain": "ink",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.053464484999654616,
+  "sym": "DAI",
+  "fee_usd_ref": 189.72080118977132,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.0533832657956923,
+  "sym": "sUSDai",
+  "fee_usd_ref": 180.22658687844236,
+  "src": "graph",
+  "chain": "arbitrum",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.05206928803400679,
+  "sym": "cbZEC",
+  "fee_usd_ref": 420.18867744323177,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.05068410729962558,
+  "sym": "OVER",
+  "fee_usd_ref": 0.059789733863850995,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.0505330134493831,
+  "sym": "ENA",
+  "fee_usd_ref": 111.52523872332625,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.05035610104238142,
+  "sym": "ZRO",
+  "fee_usd_ref": 0.07029196792120736,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.049897293354383976,
+  "sym": "wstETH",
+  "fee_usd_ref": 32.56757381880057,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.04989237368491217,
+  "sym": "SPCXc",
+  "fee_usd_ref": 963.3104041126186,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.04918766674826269,
+  "sym": "mooBIFI",
+  "fee_usd_ref": 0.2241185839701949,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.04909653785345469,
+  "sym": "SPCXc",
+  "fee_usd_ref": 604.1285639249895,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.04870408235615464,
+  "sym": "weETH",
+  "fee_usd_ref": 0.032958591157108745,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.04864493549284754,
+  "sym": "ZRO",
+  "fee_usd_ref": 824.0142070889261,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.04805763699724519,
+  "sym": "MSFTc",
+  "fee_usd_ref": 791.7410652026524,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.04764328640414206,
+  "sym": "WETH",
+  "fee_usd_ref": 11007.57306553081,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.04746402519919535,
+  "sym": "CHIP",
+  "fee_usd_ref": 770.7194767958698,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.047198439092199784,
+  "sym": "GHO",
+  "fee_usd_ref": 0.0019764291967729274,
+  "src": "fallback",
+  "chain": "ink",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.047034779645405145,
+  "sym": "EURC",
+  "fee_usd_ref": 481.57486074863,
+  "src": "anchor",
+  "chain": "base",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.04693067221847036,
+  "sym": "XAUt",
+  "fee_usd_ref": 289.3799051231046,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.04693066092860132,
+  "sym": "USDT",
+  "fee_usd_ref": 3970.8401558149476,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.046764734325244195,
+  "sym": "msUSD",
+  "fee_usd_ref": 1.8432648632765802,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.04668223835997409,
+  "sym": "WETH",
+  "fee_usd_ref": 24.8714160002881,
+  "src": "anchor",
+  "chain": "ink",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.04564385038161589,
+  "sym": "WBTC",
+  "fee_usd_ref": 1426.9332709882092,
+  "src": "anchor",
+  "chain": "arbitrum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.04552347824859915,
+  "sym": "WETH",
+  "fee_usd_ref": 7535.277355245613,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.04515531339597256,
+  "sym": "cbBTC",
+  "fee_usd_ref": 19820.763740565504,
+  "src": "anchor",
+  "chain": "base",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.045154365648336636,
+  "sym": "WETH",
+  "fee_usd_ref": 67671.84671303521,
+  "src": "anchor",
+  "chain": "base",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.0447275585285456,
+  "sym": "XAUt",
+  "fee_usd_ref": 243.96407482395935,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.04381595950788686,
+  "sym": "WBTC",
+  "fee_usd_ref": 916.1664929021795,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.043649559083247524,
+  "sym": "USDT",
+  "fee_usd_ref": 5515.217032105789,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.04275833642525262,
+  "sym": "DAI",
+  "fee_usd_ref": 0.0002890156197289889,
+  "src": "anchor",
+  "chain": "optimism",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.042512932480187615,
+  "sym": "msUSD",
+  "fee_usd_ref": 653.1486611979179,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.042442382718244076,
+  "sym": "cbBTC",
+  "fee_usd_ref": 0.0016215218553470188,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.04213252894151864,
+  "sym": "tBTC",
+  "fee_usd_ref": 0.07084477775616785,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.04204139524150996,
+  "sym": "GLD",
+  "fee_usd_ref": 117.95905376924183,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.041975924336301595,
+  "sym": "USDT",
+  "fee_usd_ref": 14.427308442135367,
+  "src": "anchor",
+  "chain": "optimism",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.04190113332588341,
+  "sym": "PENDLE",
+  "fee_usd_ref": 2.265819282972291,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.041688240185611125,
+  "sym": "USDT",
+  "fee_usd_ref": 681.9771209293127,
+  "src": "anchor",
+  "chain": "base",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.041484798990532035,
+  "sym": "PONS",
+  "fee_usd_ref": 1636.2814096350178,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.04073989047590487,
+  "sym": "ANTc",
+  "fee_usd_ref": 1611.647101994932,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.04072759352549138,
+  "sym": "GBPA",
+  "fee_usd_ref": 0.000509384550591151,
+  "src": "graph",
+  "chain": "arc",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.04061085265072428,
+  "sym": "METAc",
+  "fee_usd_ref": 1855.2503829306472,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.04047934610043047,
+  "sym": "AMZNc",
+  "fee_usd_ref": 886.2968934154653,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.0401743121695497,
+  "sym": "XAUt",
+  "fee_usd_ref": 168.75539350793073,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.039831258721412244,
+  "sym": "DAI",
+  "fee_usd_ref": 259.1057787854072,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.039177057124795134,
+  "sym": "USDC",
+  "fee_usd_ref": 405.17511346905485,
+  "src": "anchor",
+  "chain": "arc",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.038920929497598955,
+  "sym": "USDC",
+  "fee_usd_ref": 13.301091823459542,
+  "src": "anchor",
+  "chain": "ink",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.0382288279098586,
+  "sym": "AMC",
+  "fee_usd_ref": 44.138682029768084,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.03784839505867055,
+  "sym": "USDC",
+  "fee_usd_ref": 614.1251967055961,
+  "src": "anchor",
+  "chain": "arbitrum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.03776741304998277,
+  "sym": "DAI",
+  "fee_usd_ref": 0.09757889398796266,
+  "src": "anchor",
+  "chain": "optimism",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.03771320893166674,
+  "sym": "WBTC",
+  "fee_usd_ref": 548.4593582859027,
+  "src": "anchor",
+  "chain": "optimism",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.03758889262555076,
+  "sym": "WETH",
+  "fee_usd_ref": 301.7993947115638,
+  "src": "anchor",
+  "chain": "ink",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.03754888925251443,
+  "sym": "AAVE",
+  "fee_usd_ref": 0.18199647458449117,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.03748821558291482,
+  "sym": "USDC",
+  "fee_usd_ref": 3616.492658094937,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.03730094745235668,
+  "sym": "fxUSD",
+  "fee_usd_ref": 61.44739126964961,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.03729011687134687,
+  "sym": "USDC",
+  "fee_usd_ref": 89221.97561938684,
+  "src": "anchor",
+  "chain": "base",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.037290116871235846,
+  "sym": "USDC",
+  "fee_usd_ref": 1078.9732895821815,
+  "src": "anchor",
+  "chain": "elysium",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.0368643535046953,
+  "sym": "WBTC",
+  "fee_usd_ref": 1918.2722654959668,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.03653776780426776,
+  "sym": "USDG",
+  "fee_usd_ref": 4834.061459361636,
+  "src": "anchor",
+  "chain": "robinhood",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.03634129748419923,
+  "sym": "WBTC",
+  "fee_usd_ref": 54.96431475244841,
+  "src": "anchor",
+  "chain": "optimism",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.035905946981862336,
+  "sym": "COIN",
+  "fee_usd_ref": 0.3507791553705377,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.03557993020453232,
+  "sym": "USDS",
+  "fee_usd_ref": 0.2896866673700621,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.03484023890261145,
+  "sym": "sUSDai",
+  "fee_usd_ref": 116.23694034198186,
+  "src": "graph",
+  "chain": "arbitrum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.03465074711589411,
+  "sym": "USDT",
+  "fee_usd_ref": 638.9392563506265,
+  "src": "anchor",
+  "chain": "base",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.03456347533935533,
+  "sym": "WETH",
+  "fee_usd_ref": 706.4804843593239,
+  "src": "anchor",
+  "chain": "arbitrum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.0344888944438182,
+  "sym": "fxUSD",
+  "fee_usd_ref": 1.4177475262267547,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.034466709980729426,
+  "sym": "USDC",
+  "fee_usd_ref": 784.5094417007526,
+  "src": "anchor",
+  "chain": "optimism",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.03408586048142537,
+  "sym": "alUSD",
+  "fee_usd_ref": 8.725451606196001,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.03386183236151474,
+  "sym": "CRV",
+  "fee_usd_ref": 0.27690503556740903,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.03366448243298237,
+  "sym": "AAVE",
+  "fee_usd_ref": 0.234595102686108,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.033498697992140336,
+  "sym": "USDC",
+  "fee_usd_ref": 351.8239396775187,
+  "src": "anchor",
+  "chain": "arbitrum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.033340626345323976,
+  "sym": "USDC",
+  "fee_usd_ref": 12.256440186314242,
+  "src": "anchor",
+  "chain": "ink",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.033328240181873525,
+  "sym": "WETH",
+  "fee_usd_ref": 1314.9514404663737,
+  "src": "anchor",
+  "chain": "arbitrum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.03315539405908119,
+  "sym": "WETH",
+  "fee_usd_ref": 2659.1519931434887,
+  "src": "anchor",
+  "chain": "robinhood",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.03295945357681962,
+  "sym": "USDC",
+  "fee_usd_ref": 2533.60209307523,
+  "src": "anchor",
+  "chain": "elysium",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.032959453576797415,
+  "sym": "USDC",
+  "fee_usd_ref": 75886.19646884264,
+  "src": "anchor",
+  "chain": "base",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.0325769760153749,
+  "sym": "EURC",
+  "fee_usd_ref": 386.6324422168418,
+  "src": "anchor",
+  "chain": "base",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.03251028344108953,
+  "sym": "USDT",
+  "fee_usd_ref": 6.4316837477598,
+  "src": "anchor",
+  "chain": "optimism",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.032486200276937716,
+  "sym": "USDC",
+  "fee_usd_ref": 5.24457937227264,
+  "src": "anchor",
+  "chain": "ink",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.03246719107279361,
+  "sym": "USDC",
+  "fee_usd_ref": 171.37233622522513,
+  "src": "anchor",
+  "chain": "arbitrum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.03243517557105502,
+  "sym": "USDC",
+  "fee_usd_ref": 955.7367371554665,
+  "src": "anchor",
+  "chain": "arc",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.032425268221847325,
+  "sym": "VVV",
+  "fee_usd_ref": 3051.0784480057873,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.032344174698484274,
+  "sym": "USDC",
+  "fee_usd_ref": 3016.2279092450553,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.032131763777765165,
+  "sym": "USDC",
+  "fee_usd_ref": 0.0039041049442009182,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.03200696823544291,
+  "sym": "USDC",
+  "fee_usd_ref": 22052.554216382974,
+  "src": "anchor",
+  "chain": "base",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.03195868936654023,
+  "sym": "GOOGL",
+  "fee_usd_ref": 297.1440109138935,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.03189745453231474,
+  "sym": "USDG",
+  "fee_usd_ref": 347.9313123450051,
+  "src": "anchor",
+  "chain": "arbitrum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.03175609830893267,
+  "sym": "INTC",
+  "fee_usd_ref": 36.84403610720006,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.031266686321340664,
+  "sym": "USDC",
+  "fee_usd_ref": 207.8536685343889,
+  "src": "anchor",
+  "chain": "arc",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.031151634173398612,
+  "sym": "USDC",
+  "fee_usd_ref": 655.5921237505909,
+  "src": "anchor",
+  "chain": "optimism",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.031135546297478278,
+  "sym": "USDC",
+  "fee_usd_ref": 348.02287653392875,
+  "src": "anchor",
+  "chain": "optimism",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.031057339894713376,
+  "sym": "PENDLE",
+  "fee_usd_ref": 3.179635906973004,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.030798922777341975,
+  "sym": "DAI",
+  "fee_usd_ref": 4.851140956293726e-05,
+  "src": "anchor",
+  "chain": "optimism",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.03075562784523589,
+  "sym": "ZRO",
+  "fee_usd_ref": 1420.1229804717261,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.03073905975745639,
+  "sym": "CRCL",
+  "fee_usd_ref": 403.2797837575953,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.030446345546275566,
+  "sym": "BIFI",
+  "fee_usd_ref": 13.210846487329041,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.030287135501416707,
+  "sym": "USDC",
+  "fee_usd_ref": 427.771765838147,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.029768384665818104,
+  "sym": "WETH",
+  "fee_usd_ref": 331.0732572253791,
+  "src": "anchor",
+  "chain": "ink",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.029373227100726318,
+  "sym": "GBPA",
+  "fee_usd_ref": 1.1744234704375922,
+  "src": "graph",
+  "chain": "arc",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.02920822044156779,
+  "sym": "XAUt",
+  "fee_usd_ref": 193.85659538979897,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.02884253315891261,
+  "sym": "WBTC",
+  "fee_usd_ref": 384.9742229755096,
+  "src": "anchor",
+  "chain": "optimism",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.02843268114559594,
+  "sym": "ORBIO",
+  "fee_usd_ref": 2.4394320186324205,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.02831786164430028,
+  "sym": "USDC",
+  "fee_usd_ref": 2.4989106123585764e-05,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.02762368635274015,
+  "sym": "AAVE",
+  "fee_usd_ref": 473.1899761294703,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.027524841747117446,
+  "sym": "frxUSD",
+  "fee_usd_ref": 0.03421034600792881,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.02698938937117923,
+  "sym": "wstETH",
+  "fee_usd_ref": 0.0006063448473956834,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.02692019662762224,
+  "sym": "WETH",
+  "fee_usd_ref": 907.6873696314474,
+  "src": "anchor",
+  "chain": "optimism",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.026895699579732035,
+  "sym": "frxUSD",
+  "fee_usd_ref": 0.034319541551731954,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.026834441194534264,
+  "sym": "WETH",
+  "fee_usd_ref": 227.78881125281572,
+  "src": "anchor",
+  "chain": "ink",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.026791883154209106,
+  "sym": "PONS",
+  "fee_usd_ref": 1556.0824395955028,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.02606064872680003,
+  "sym": "tBTC",
+  "fee_usd_ref": 1.092234521074758,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.026038360993396736,
+  "sym": "cbBTC",
+  "fee_usd_ref": 40505.86782316266,
+  "src": "anchor",
+  "chain": "base",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.025951934200696414,
+  "sym": "USDT",
+  "fee_usd_ref": 17.53781732102314,
+  "src": "anchor",
+  "chain": "optimism",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.025943941313499863,
+  "sym": "RLUSD",
+  "fee_usd_ref": 6.720346010345329e-05,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.025899318748434652,
+  "sym": "AERO",
+  "fee_usd_ref": 16755.798574735316,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.025784382011584395,
+  "sym": "WBTC",
+  "fee_usd_ref": 615.050252026329,
+  "src": "anchor",
+  "chain": "arbitrum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.025731751385593693,
+  "sym": "USDS",
+  "fee_usd_ref": 0.03513993276251631,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.025305302257461193,
+  "sym": "GOOGLc",
+  "fee_usd_ref": 1350.067805560776,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.02511526197858105,
+  "sym": "MSTRc",
+  "fee_usd_ref": 3445.0278095627696,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.025081482150146606,
+  "sym": "wstETH",
+  "fee_usd_ref": 39.51768442375652,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.025067714327597912,
+  "sym": "alETH",
+  "fee_usd_ref": 8.855166012464343,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.024887494629743934,
+  "sym": "AERO",
+  "fee_usd_ref": 12552.561220291023,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.024436680263950628,
+  "sym": "USDT",
+  "fee_usd_ref": 5.7107512073732165,
+  "src": "anchor",
+  "chain": "optimism",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.0244235606069787,
+  "sym": "USDG",
+  "fee_usd_ref": 42.41711845476578,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.024368365225069244,
+  "sym": "WBTC",
+  "fee_usd_ref": 109.15076603146441,
+  "src": "anchor",
+  "chain": "optimism",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.02357570794891961,
+  "sym": "USDT",
+  "fee_usd_ref": 3750.8489077300987,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.023506854109234254,
+  "sym": "ARB",
+  "fee_usd_ref": 318.44674834264316,
+  "src": "graph",
+  "chain": "arbitrum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.023218621949494533,
+  "sym": "wstETH",
+  "fee_usd_ref": 0.004070990114065986,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.02298288282913674,
+  "sym": "AAVE",
+  "fee_usd_ref": 0.0003440493198321616,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.022972910158980397,
+  "sym": "BOLD",
+  "fee_usd_ref": 8.316299683674917,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.02281481712691491,
+  "sym": "mUSD",
+  "fee_usd_ref": 0.0017932391527821709,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.02278946775169377,
+  "sym": "USD\u20ae0",
+  "fee_usd_ref": 399.60463640162584,
+  "src": "anchor",
+  "chain": "ink",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.022596354032444754,
+  "sym": "WETH",
+  "fee_usd_ref": 763.5557023989021,
+  "src": "anchor",
+  "chain": "arc",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.022555303191662546,
+  "sym": "WBTC",
+  "fee_usd_ref": 41.14918659309843,
+  "src": "anchor",
+  "chain": "arbitrum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.022192885090421832,
+  "sym": "NVDAc",
+  "fee_usd_ref": 873.4282109808338,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.02191914158169439,
+  "sym": "ZRO",
+  "fee_usd_ref": 0.010918924704484937,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.021733813241042732,
+  "sym": "VIRTUAL",
+  "fee_usd_ref": 838.1336812190893,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.021642189891635244,
+  "sym": "USD\u20ae0",
+  "fee_usd_ref": 51.60410526794397,
+  "src": "anchor",
+  "chain": "arbitrum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.021392469308534334,
+  "sym": "USDT",
+  "fee_usd_ref": 3423.7182687073237,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.02115101760946647,
+  "sym": "msETH",
+  "fee_usd_ref": 8.21222651300184,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.020793841550792447,
+  "sym": "WBTC",
+  "fee_usd_ref": 309.78676973710793,
+  "src": "anchor",
+  "chain": "optimism",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.019216120601250886,
+  "sym": "msUSD",
+  "fee_usd_ref": 318.95634197676156,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.01901156774345436,
+  "sym": "USD\u20ae0",
+  "fee_usd_ref": 354.66804255639494,
+  "src": "anchor",
+  "chain": "ink",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.018945578335460844,
+  "sym": "WETH",
+  "fee_usd_ref": 1639.6220721700913,
+  "src": "anchor",
+  "chain": "robinhood",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.018657642535846453,
+  "sym": "fxUSD",
+  "fee_usd_ref": 19.733318636586688,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.018572075369505114,
+  "sym": "USDS",
+  "fee_usd_ref": 0.05472687089471123,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.01801041631621647,
+  "sym": "USD\u20ae0",
+  "fee_usd_ref": 21.245725093498738,
+  "src": "anchor",
+  "chain": "arbitrum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.017686091448199104,
+  "sym": "USDT",
+  "fee_usd_ref": 36.40518254297644,
+  "src": "anchor",
+  "chain": "optimism",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.017670626110999343,
+  "sym": "USDT",
+  "fee_usd_ref": 68.77525823719695,
+  "src": "anchor",
+  "chain": "optimism",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.0171543918753847,
+  "sym": "USDC.e",
+  "fee_usd_ref": 0.011154137409323741,
+  "src": "fallback",
+  "chain": "ink",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.017002152648970537,
+  "sym": "PAXG",
+  "fee_usd_ref": 2.655482263011236,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.016704214519969174,
+  "sym": "USDG",
+  "fee_usd_ref": 0.2973383277756818,
+  "src": "anchor",
+  "chain": "ink",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.01662767511032559,
+  "sym": "AAVE",
+  "fee_usd_ref": 395.6908830204071,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.01638141444492147,
+  "sym": "USD\u20ae0",
+  "fee_usd_ref": 230.7303817264728,
+  "src": "anchor",
+  "chain": "ink",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.016068977691297004,
+  "sym": "WBTC",
+  "fee_usd_ref": 75.54473917037062,
+  "src": "anchor",
+  "chain": "optimism",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.01601832637760925,
+  "sym": "DOLA",
+  "fee_usd_ref": 21.52217040053539,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.01598727404491518,
+  "sym": "OP",
+  "fee_usd_ref": 35.55904534727213,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.015980656682867966,
+  "sym": "MSFTc",
+  "fee_usd_ref": 530.0055050440129,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.01579180225856902,
+  "sym": "fxUSD",
+  "fee_usd_ref": 107.74231860958659,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.015758735356685705,
+  "sym": "NVDAc",
+  "fee_usd_ref": 3423.9934556744624,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.015145172239905413,
+  "sym": "ARB",
+  "fee_usd_ref": 407.7999399578544,
+  "src": "graph",
+  "chain": "arbitrum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.014808174771996363,
+  "sym": "wstETH",
+  "fee_usd_ref": 9.030323985405708,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.014747271995574351,
+  "sym": "ARB",
+  "fee_usd_ref": 35.15743757399293,
+  "src": "graph",
+  "chain": "arbitrum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.01472371992528032,
+  "sym": "USD\u20ae0",
+  "fee_usd_ref": 5.25239824657668,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.014554243531750277,
+  "sym": "ZRO",
+  "fee_usd_ref": 1379.1996420457028,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.014457683933633003,
+  "sym": "USDG",
+  "fee_usd_ref": 10414.291099838589,
+  "src": "anchor",
+  "chain": "robinhood",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.014403202841950513,
+  "sym": "frxUSD",
+  "fee_usd_ref": 0.054894708461407364,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.014303610775279196,
+  "sym": "cbHYPE",
+  "fee_usd_ref": 2658.390841073413,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.014272528323466815,
+  "sym": "MU",
+  "fee_usd_ref": 580.6325451112917,
+  "src": "graph",
+  "chain": "robinhood",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.014231302019107606,
+  "sym": "GHO",
+  "fee_usd_ref": 4.159060799259652e-05,
+  "src": "fallback",
+  "chain": "ink",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.014160900938975374,
+  "sym": "DAI",
+  "fee_usd_ref": 169.32638637019323,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.014023128983353672,
+  "sym": "USDC",
+  "fee_usd_ref": 1039.3375493165865,
+  "src": "anchor",
+  "chain": "arc",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.013124877300474402,
+  "sym": "USDC",
+  "fee_usd_ref": 890.3705953633821,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.013085027059211995,
+  "sym": "cirBTC",
+  "fee_usd_ref": 439.1644176353474,
+  "src": "graph",
+  "chain": "arc",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.01295983105571441,
+  "sym": "USDC",
+  "fee_usd_ref": 41452.238203324094,
+  "src": "anchor",
+  "chain": "base",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.012815776334984541,
+  "sym": "XAUt",
+  "fee_usd_ref": 140.87754552048347,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.012691496041328243,
+  "sym": "DAI",
+  "fee_usd_ref": 0.00018688280801595246,
+  "src": "anchor",
+  "chain": "optimism",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.012539269877998027,
+  "sym": "LINK",
+  "fee_usd_ref": 280.55759282228473,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.012518678216100199,
+  "sym": "PAXG",
+  "fee_usd_ref": 5.788170328172228,
+  "src": "fallback",
+  "chain": "ethereum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.012210875051144043,
+  "sym": "USDC.e",
+  "fee_usd_ref": 0.8138066956808818,
+  "src": "fallback",
+  "chain": "ink",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.012205619731830986,
+  "sym": "USDC",
+  "fee_usd_ref": 7.865925412933608,
+  "src": "anchor",
+  "chain": "ink",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.01202256844230476,
+  "sym": "USDC",
+  "fee_usd_ref": 529.5184225922692,
+  "src": "anchor",
+  "chain": "optimism",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.011916411561863072,
+  "sym": "USDG",
+  "fee_usd_ref": 0.9079763531271431,
+  "src": "anchor",
+  "chain": "ink",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.011841843261217733,
+  "sym": "fxUSD",
+  "fee_usd_ref": 53.291593207163906,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.011821580716531166,
+  "sym": "USDG",
+  "fee_usd_ref": 271.8845738419674,
+  "src": "anchor",
+  "chain": "arbitrum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.011686397132459891,
+  "sym": "USDG",
+  "fee_usd_ref": 13604.53703484154,
+  "src": "anchor",
+  "chain": "robinhood",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.011671151323922047,
+  "sym": "VIRTUAL",
+  "fee_usd_ref": 0.11771922898924818,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.011450367168563957,
+  "sym": "USD\u20ae0",
+  "fee_usd_ref": 41.19565490588827,
+  "src": "anchor",
+  "chain": "arbitrum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.011428932941859316,
+  "sym": "TSLAc",
+  "fee_usd_ref": 658.225028549563,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.011361383183516871,
+  "sym": "USDC",
+  "fee_usd_ref": 369.09090369764857,
+  "src": "anchor",
+  "chain": "arbitrum",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.011334902987258921,
+  "sym": "USDG",
+  "fee_usd_ref": 2.2263571612791715,
+  "src": "anchor",
+  "chain": "ink",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.01120606887814457,
+  "sym": "cbBTC",
+  "fee_usd_ref": 159.39047240055388,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.010926288521906358,
+  "sym": "WETH",
+  "fee_usd_ref": 5259.070142605987,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.010821422494422528,
+  "sym": "USDG",
+  "fee_usd_ref": 1.635383246169529,
+  "src": "anchor",
+  "chain": "ink",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.010803298707595665,
+  "sym": "USDC",
+  "fee_usd_ref": 0.005126409072444041,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.01071646126951098,
+  "sym": "WETH",
+  "fee_usd_ref": 22545.131880616904,
+  "src": "anchor",
+  "chain": "base",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.01067064733266676,
+  "sym": "USDG",
+  "fee_usd_ref": 4276.860927882251,
+  "src": "anchor",
+  "chain": "robinhood",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.010641674515143862,
+  "sym": "ZRO",
+  "fee_usd_ref": 526.8835025874253,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.010475555420874638,
+  "sym": "WLD",
+  "fee_usd_ref": 13.703091984210673,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.010468515115114041,
+  "sym": "USDG",
+  "fee_usd_ref": 135.00094198891333,
+  "src": "anchor",
+  "chain": "arbitrum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.01020793519677099,
+  "sym": "WBTC",
+  "fee_usd_ref": 914.7917355458023,
+  "src": "anchor",
+  "chain": "arbitrum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.010193920206336138,
+  "sym": "USD\u20ae0",
+  "fee_usd_ref": 5.556935261466706,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.010020908870012057,
+  "sym": "UBTC",
+  "fee_usd_ref": 11.255429049835499,
+  "src": "anchor",
+  "chain": "elysium",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.00997275714562651,
+  "sym": "USDC",
+  "fee_usd_ref": 1977.8176532065013,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.009821264272291685,
+  "sym": "USDG",
+  "fee_usd_ref": 165.40061296171305,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.009723939312156205,
+  "sym": "USD\u20ae0",
+  "fee_usd_ref": 372.3627409893049,
+  "src": "anchor",
+  "chain": "ink",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.00969058311148796,
+  "sym": "USD\u20ae0",
+  "fee_usd_ref": 15.634523983278445,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.009366469986893389,
+  "sym": "USDe",
+  "fee_usd_ref": 35.45577823643508,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.009338187850960189,
+  "sym": "USDG",
+  "fee_usd_ref": 11839.281720556864,
+  "src": "anchor",
+  "chain": "robinhood",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.008576695345685614,
+  "sym": "DAI",
+  "fee_usd_ref": 0.0035566443166470453,
+  "src": "anchor",
+  "chain": "optimism",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.0085574234439445,
+  "sym": "USDC",
+  "fee_usd_ref": 457.7398545027623,
+  "src": "anchor",
+  "chain": "arbitrum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.008550098332915645,
+  "sym": "USDG",
+  "fee_usd_ref": 117.18590166062877,
+  "src": "anchor",
+  "chain": "arbitrum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.008544701485102557,
+  "sym": "USDG",
+  "fee_usd_ref": 3.2794766694874613,
+  "src": "anchor",
+  "chain": "ink",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.008517767709359525,
+  "sym": "AAVE",
+  "fee_usd_ref": 694.3544507371222,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.008449721449499403,
+  "sym": "EURC",
+  "fee_usd_ref": 15.497553944501938,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.008349561267761985,
+  "sym": "WBTC",
+  "fee_usd_ref": 241.42064059552285,
+  "src": "anchor",
+  "chain": "arbitrum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.008091755280292823,
+  "sym": "msUSD",
+  "fee_usd_ref": 567.7846289063326,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.008014135929046429,
+  "sym": "USDG",
+  "fee_usd_ref": 27.633954302500374,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.007847334281607665,
+  "sym": "WETH",
+  "fee_usd_ref": 283.14199625667163,
+  "src": "anchor",
+  "chain": "arbitrum",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.007702370597972852,
+  "sym": "USDe",
+  "fee_usd_ref": 190.82359784652323,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.00747907249913915,
+  "sym": "USDC",
+  "fee_usd_ref": 850.2077559448901,
+  "src": "anchor",
+  "chain": "arc",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.00736714280443751,
+  "sym": "USDC",
+  "fee_usd_ref": 304.0936461255151,
+  "src": "anchor",
+  "chain": "optimism",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.006961545290740112,
+  "sym": "WETH",
+  "fee_usd_ref": 615.5245454571809,
+  "src": "anchor",
+  "chain": "optimism",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.006921703389717315,
+  "sym": "USDT",
+  "fee_usd_ref": 345.1791291454206,
+  "src": "anchor",
+  "chain": "base",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.00662329052256716,
+  "sym": "OP",
+  "fee_usd_ref": 31.24543389127074,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.006505903197995266,
+  "sym": "DAI",
+  "fee_usd_ref": 0.0096388722772894,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.006251811717472577,
+  "sym": "METAc",
+  "fee_usd_ref": 1033.1044738689636,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.006251296654757876,
+  "sym": "USDe",
+  "fee_usd_ref": 22.009718346968057,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.00615210051053694,
+  "sym": "weETH",
+  "fee_usd_ref": 0.0014847105741215229,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.006114000753676407,
+  "sym": "MORPHO",
+  "fee_usd_ref": 228.23434611555422,
+  "src": "graph",
+  "chain": "base",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.005990523008958526,
+  "sym": "USDG",
+  "fee_usd_ref": 0.38339726192201884,
+  "src": "anchor",
+  "chain": "ink",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.005849934427015757,
+  "sym": "WETH",
+  "fee_usd_ref": 73738.73857627016,
+  "src": "anchor",
+  "chain": "base",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.005845042837659964,
+  "sym": "fxUSD",
+  "fee_usd_ref": 14.586254455223328,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.005831647967247111,
+  "sym": "ENA",
+  "fee_usd_ref": 91.49816395007188,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.005799506201387139,
+  "sym": "USDG",
+  "fee_usd_ref": 2527.2315574306626,
+  "src": "anchor",
+  "chain": "robinhood",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.005458972657002015,
+  "sym": "WETH",
+  "fee_usd_ref": 64464.189363110134,
+  "src": "anchor",
+  "chain": "base",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.005337428038942882,
+  "sym": "CHIP",
+  "fee_usd_ref": 0.04230041923802624,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.005302394744233219,
+  "sym": "USD\u20ae0",
+  "fee_usd_ref": 0.18422680871737707,
+  "src": "anchor",
+  "chain": "arbitrum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.005146813824019603,
+  "sym": "sUSDai",
+  "fee_usd_ref": 0.0066772537396032885,
+  "src": "fallback",
+  "chain": "arbitrum",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.004894201121108388,
+  "sym": "BOLD",
+  "fee_usd_ref": 137.37374872972325,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.004871349116708501,
+  "sym": "USDC",
+  "fee_usd_ref": 1228.7917736062955,
+  "src": "anchor",
+  "chain": "optimism",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.00439353735142145,
+  "sym": "msUSD",
+  "fee_usd_ref": 2.515158182552487,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.00399810687936597,
+  "sym": "USDC",
+  "fee_usd_ref": 1030.7568357368777,
+  "src": "anchor",
+  "chain": "elysium",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.003998106879343766,
+  "sym": "USDC",
+  "fee_usd_ref": 75342.97800924709,
+  "src": "anchor",
+  "chain": "base",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.003934089120827267,
+  "sym": "USDC",
+  "fee_usd_ref": 15.331512858570884,
+  "src": "anchor",
+  "chain": "ink",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.0038393110265655395,
+  "sym": "USDC",
+  "fee_usd_ref": 10.161572580635521,
+  "src": "anchor",
+  "chain": "ink",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.0038338877642929425,
+  "sym": "USD\u20ae0",
+  "fee_usd_ref": 83.82987155547552,
+  "src": "anchor",
+  "chain": "arbitrum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.003741035567794704,
+  "sym": "USDC",
+  "fee_usd_ref": 919.937513544417,
+  "src": "anchor",
+  "chain": "arbitrum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.00348723310742427,
+  "sym": "USD\u20ae0",
+  "fee_usd_ref": 4.500166186278901,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.0033461947616220122,
+  "sym": "USDC",
+  "fee_usd_ref": 24136.251310555424,
+  "src": "anchor",
+  "chain": "base",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.0032310614842656626,
+  "sym": "kBTC",
+  "fee_usd_ref": 105.57949909573533,
+  "src": "graph",
+  "chain": "ink",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.0032251662260174285,
+  "sym": "USDC",
+  "fee_usd_ref": 175.59161195880816,
+  "src": "anchor",
+  "chain": "arc",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 0.002785034831520594,
+  "sym": "USDC",
+  "fee_usd_ref": 0.0020434407169157044,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.0026872689255941218,
+  "sym": "USDG",
+  "fee_usd_ref": 167.84820876925644,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.0026710605963820022,
+  "sym": "USDT",
+  "fee_usd_ref": 1186.791984694214,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.0025347511899309616,
+  "sym": "msETH",
+  "fee_usd_ref": 1.5233104666871256,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.002298841657388806,
+  "sym": "USD\u20ae0",
+  "fee_usd_ref": 1.4477183769668682,
+  "src": "anchor",
+  "chain": "ink",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.002166444112261523,
+  "sym": "DOLA",
+  "fee_usd_ref": 83.2783453075333,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-15"
+ },
+ {
+  "err_pct": 0.002043901114534563,
+  "sym": "ARB",
+  "fee_usd_ref": 305.3458369301217,
+  "src": "graph",
+  "chain": "arbitrum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.0016967128986911106,
+  "sym": "WETH",
+  "fee_usd_ref": 2857.297210435917,
+  "src": "anchor",
+  "chain": "robinhood",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.0016850720079730763,
+  "sym": "PAXG",
+  "fee_usd_ref": 112.29508141102495,
+  "src": "graph",
+  "chain": "ethereum",
+  "day": "2026-11-26"
+ },
+ {
+  "err_pct": 0.0016100692893372681,
+  "sym": "MSTR",
+  "fee_usd_ref": 13.02979213612976,
+  "src": "fallback",
+  "chain": "robinhood",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.0015920158530580153,
+  "sym": "USD\u20ae0",
+  "fee_usd_ref": 1.7547979523584754,
+  "src": "anchor",
+  "chain": "arbitrum",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.0008815552087093614,
+  "sym": "USDS",
+  "fee_usd_ref": 0.0007994864664537367,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.000719674039062479,
+  "sym": "USD\u20ae0",
+  "fee_usd_ref": 2.162261099521102,
+  "src": "fallback",
+  "chain": "optimism",
+  "day": "2026-10-22"
+ },
+ {
+  "err_pct": 0.0006276267983329475,
+  "sym": "USD\u20ae0",
+  "fee_usd_ref": 11.12909874120265,
+  "src": "anchor",
+  "chain": "ink",
+  "day": "2026-10-23"
+ },
+ {
+  "err_pct": 0.00033194115365287047,
+  "sym": "USD\u20ae0",
+  "fee_usd_ref": 6.856554522549794,
+  "src": "graph",
+  "chain": "optimism",
+  "day": "2026-11-25"
+ },
+ {
+  "err_pct": 0.00027448162571719337,
+  "sym": "WETH",
+  "fee_usd_ref": 337.1085399004938,
+  "src": "anchor",
+  "chain": "optimism",
+  "day": "2026-11-01"
+ },
+ {
+  "err_pct": 9.60244417091971e-05,
+  "sym": "USDC",
+  "fee_usd_ref": 2314.4379818075063,
+  "src": "anchor",
+  "chain": "ethereum",
+  "day": "2026-11-15"
+ }
+]

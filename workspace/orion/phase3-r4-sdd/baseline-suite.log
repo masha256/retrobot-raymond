@@ -1,0 +1,25 @@
+
+ RUN  v5.0.1 /home/hermes/git/orion/.worktrees/ret-20-aero-pool-scan
+
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+
+ Test Files  156 passed (156)
+      Tests  2032 passed (2032)
+   Start at  18:37:35
+   Duration  115.88s (tests 80%, import 18%, transform 2%)
+
+    Isolate  156 workers spawned · ~98ms startup each (spawn + environment, per file)
+             at least ~7.52s faster with isolate: false — reuses workers across files instead of one per file
+
+
+> orion@1.0.0 typecheck
+> tsc --noEmit
+
+EXIT 0

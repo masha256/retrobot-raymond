@@ -1,0 +1,579 @@
+{
+ "definition": "streamed = sum rate x seconds of program overlapping the UTC day; allocated = streamed minus zero-allocation seconds (state: VRM globalRewardPointHistory.zeroSupplySeconds); USD at the day-end (D+1 00:00Z) block: Chainlink feed or deepest Aero pool vs USDC/WETH/AERO",
+ "daily": {
+  "base": {
+   "2026-10-22": {
+    "foundation_subsidy|streamed_usd": 58257.89,
+    "foundation_subsidy|allocated_usd": 58257.89,
+    "third_party|streamed_usd": 4329.35,
+    "third_party|allocated_usd": 4329.35
+   },
+   "2026-10-23": {
+    "foundation_subsidy|streamed_usd": 70620.03,
+    "foundation_subsidy|allocated_usd": 70620.03,
+    "third_party|streamed_usd": 7398.08,
+    "third_party|allocated_usd": 7398.08
+   },
+   "2026-10-24": {
+    "foundation_subsidy|streamed_usd": 17752.52,
+    "foundation_subsidy|allocated_usd": 17752.52,
+    "third_party|streamed_usd": 4610.41,
+    "third_party|allocated_usd": 4610.41
+   },
+   "2026-10-25": {
+    "foundation_subsidy|streamed_usd": 15030.14,
+    "foundation_subsidy|allocated_usd": 15030.14,
+    "third_party|streamed_usd": 3954.78,
+    "third_party|allocated_usd": 3954.78
+   },
+   "2026-10-26": {
+    "foundation_subsidy|streamed_usd": 15010.62,
+    "foundation_subsidy|allocated_usd": 15010.62,
+    "third_party|streamed_usd": 4025.3,
+    "third_party|allocated_usd": 4025.3
+   },
+   "2026-10-27": {
+    "foundation_subsidy|streamed_usd": 15505.82,
+    "foundation_subsidy|allocated_usd": 15505.82,
+    "third_party|streamed_usd": 4265.23,
+    "third_party|allocated_usd": 4265.23
+   },
+   "2026-10-28": {
+    "foundation_subsidy|streamed_usd": 15475.09,
+    "foundation_subsidy|allocated_usd": 15475.09,
+    "third_party|streamed_usd": 4535.53,
+    "third_party|allocated_usd": 4535.53
+   },
+   "2026-10-29": {
+    "third_party|streamed_usd": 5102.61,
+    "third_party|allocated_usd": 5102.61,
+    "foundation_subsidy|streamed_usd": 12116.99,
+    "foundation_subsidy|allocated_usd": 12116.99,
+    "foundation_signer_safe_80f7|streamed_usd": 1532.84,
+    "foundation_signer_safe_80f7|allocated_usd": 1532.84
+   },
+   "2026-10-30": {
+    "third_party|streamed_usd": 4244.9,
+    "third_party|allocated_usd": 4244.9,
+    "foundation_signer_safe_80f7|streamed_usd": 3274.35,
+    "foundation_signer_safe_80f7|allocated_usd": 3274.35
+   },
+   "2026-10-31": {
+    "third_party|streamed_usd": 3169.81,
+    "third_party|allocated_usd": 3169.81,
+    "foundation_signer_safe_80f7|streamed_usd": 2669.96,
+    "foundation_signer_safe_80f7|allocated_usd": 2669.96
+   },
+   "2026-11-01": {
+    "third_party|streamed_usd": 2746.57,
+    "third_party|allocated_usd": 2746.57,
+    "foundation_signer_safe_80f7|streamed_usd": 3235.99,
+    "foundation_signer_safe_80f7|allocated_usd": 3235.99
+   },
+   "2026-11-02": {
+    "third_party|streamed_usd": 2722.77,
+    "third_party|allocated_usd": 2722.77,
+    "foundation_signer_safe_80f7|streamed_usd": 2968.28,
+    "foundation_signer_safe_80f7|allocated_usd": 2968.28
+   },
+   "2026-11-03": {
+    "third_party|streamed_usd": 2831.98,
+    "third_party|allocated_usd": 2831.98,
+    "foundation_signer_safe_80f7|streamed_usd": 3459.95,
+    "foundation_signer_safe_80f7|allocated_usd": 3459.95
+   },
+   "2026-11-04": {
+    "third_party|streamed_usd": 2676.28,
+    "third_party|allocated_usd": 2676.28,
+    "foundation_signer_safe_80f7|streamed_usd": 3897.83,
+    "foundation_signer_safe_80f7|allocated_usd": 3897.83
+   },
+   "2026-11-05": {
+    "third_party|streamed_usd": 2090.03,
+    "third_party|allocated_usd": 2090.03,
+    "foundation_signer_safe_80f7|streamed_usd": 3559.99,
+    "foundation_signer_safe_80f7|allocated_usd": 3559.99
+   },
+   "2026-11-06": {
+    "third_party|streamed_usd": 1713.75,
+    "third_party|allocated_usd": 1713.75,
+    "foundation_signer_safe_80f7|streamed_usd": 2895.67,
+    "foundation_signer_safe_80f7|allocated_usd": 2895.67
+   },
+   "2026-11-07": {
+    "third_party|streamed_usd": 1719.24,
+    "third_party|allocated_usd": 1719.24,
+    "foundation_signer_safe_80f7|streamed_usd": 2369.39,
+    "foundation_signer_safe_80f7|allocated_usd": 2369.39
+   },
+   "2026-11-08": {
+    "third_party|streamed_usd": 1666.38,
+    "third_party|allocated_usd": 1666.38,
+    "foundation_signer_safe_80f7|streamed_usd": 2222.69,
+    "foundation_signer_safe_80f7|allocated_usd": 2222.69
+   },
+   "2026-11-09": {
+    "third_party|streamed_usd": 1502.75,
+    "third_party|allocated_usd": 1502.75,
+    "foundation_signer_safe_80f7|streamed_usd": 2291.91,
+    "foundation_signer_safe_80f7|allocated_usd": 2291.91
+   },
+   "2026-11-10": {
+    "third_party|streamed_usd": 1556.12,
+    "third_party|allocated_usd": 1556.12,
+    "foundation_signer_safe_80f7|streamed_usd": 2434.32,
+    "foundation_signer_safe_80f7|allocated_usd": 2434.32
+   },
+   "2026-11-11": {
+    "third_party|streamed_usd": 1507.0,
+    "third_party|allocated_usd": 1507.0,
+    "foundation_signer_safe_80f7|streamed_usd": 1887.93,
+    "foundation_signer_safe_80f7|allocated_usd": 1887.93
+   },
+   "2026-11-12": {
+    "third_party|streamed_usd": 1481.06,
+    "third_party|allocated_usd": 1481.06,
+    "foundation_signer_safe_80f7|streamed_usd": 1379.6,
+    "foundation_signer_safe_80f7|allocated_usd": 1379.6
+   },
+   "2026-11-13": {
+    "third_party|streamed_usd": 1417.52,
+    "third_party|allocated_usd": 1417.52,
+    "foundation_signer_safe_80f7|streamed_usd": 437.81,
+    "foundation_signer_safe_80f7|allocated_usd": 437.81
+   },
+   "2026-11-14": {
+    "third_party|streamed_usd": 1375.05,
+    "third_party|allocated_usd": 1375.05,
+    "foundation_signer_safe_80f7|streamed_usd": 431.85,
+    "foundation_signer_safe_80f7|allocated_usd": 431.85
+   },
+   "2026-11-15": {
+    "third_party|streamed_usd": 1371.14,
+    "third_party|allocated_usd": 1371.14,
+    "foundation_signer_safe_80f7|streamed_usd": 408.36,
+    "foundation_signer_safe_80f7|allocated_usd": 408.36
+   },
+   "2026-11-16": {
+    "third_party|streamed_usd": 1374.58,
+    "third_party|allocated_usd": 1374.58,
+    "foundation_signer_safe_80f7|streamed_usd": 391.59,
+    "foundation_signer_safe_80f7|allocated_usd": 391.59
+   },
+   "2026-11-17": {
+    "foundation_signer_safe_80f7|streamed_usd": 1338.95,
+    "foundation_signer_safe_80f7|allocated_usd": 1338.95,
+    "third_party|streamed_usd": 1424.67,
+    "third_party|allocated_usd": 1424.67
+   },
+   "2026-11-18": {
+    "foundation_signer_safe_80f7|streamed_usd": 2895.26,
+    "foundation_signer_safe_80f7|allocated_usd": 2895.26,
+    "third_party|streamed_usd": 1467.41,
+    "third_party|allocated_usd": 1467.41
+   },
+   "2026-11-19": {
+    "foundation_signer_safe_80f7|streamed_usd": 2438.8,
+    "foundation_signer_safe_80f7|allocated_usd": 2438.8,
+    "third_party|streamed_usd": 2250.68,
+    "third_party|allocated_usd": 2250.68
+   },
+   "2026-11-20": {
+    "foundation_signer_safe_80f7|streamed_usd": 1839.74,
+    "foundation_signer_safe_80f7|allocated_usd": 1839.74,
+    "third_party|streamed_usd": 2116.66,
+    "third_party|allocated_usd": 2116.66
+   },
+   "2026-11-21": {
+    "foundation_signer_safe_80f7|streamed_usd": 1816.49,
+    "foundation_signer_safe_80f7|allocated_usd": 1816.49,
+    "third_party|streamed_usd": 1309.53,
+    "third_party|allocated_usd": 1309.53
+   },
+   "2026-11-22": {
+    "foundation_signer_safe_80f7|streamed_usd": 1577.74,
+    "foundation_signer_safe_80f7|allocated_usd": 1577.74,
+    "third_party|streamed_usd": 3923.56,
+    "third_party|allocated_usd": 3923.56
+   },
+   "2026-11-23": {
+    "foundation_signer_safe_80f7|streamed_usd": 1308.34,
+    "foundation_signer_safe_80f7|allocated_usd": 1308.34,
+    "third_party|streamed_usd": 6317.4,
+    "third_party|allocated_usd": 6317.4
+   },
+   "2026-11-24": {
+    "foundation_signer_safe_80f7|streamed_usd": 1243.61,
+    "foundation_signer_safe_80f7|allocated_usd": 1243.61,
+    "third_party|streamed_usd": 3687.61,
+    "third_party|allocated_usd": 3687.61
+   },
+   "2026-11-25": {
+    "third_party|streamed_usd": 1273.23,
+    "third_party|allocated_usd": 1273.23,
+    "foundation_signer_safe_80f7|streamed_usd": 1448.46,
+    "foundation_signer_safe_80f7|allocated_usd": 1448.46
+   },
+   "2026-11-26": {
+    "third_party|streamed_usd": 1306.66,
+    "third_party|allocated_usd": 1306.66,
+    "foundation_signer_safe_80f7|streamed_usd": 1728.15,
+    "foundation_signer_safe_80f7|allocated_usd": 1728.15
+   }
+  },
+  "ethereum": {
+   "2026-10-22": {
+    "aero_admin_safe_42255|streamed_usd": 5960.95,
+    "aero_admin_safe_42255|allocated_usd": 5960.95
+   },
+   "2026-10-23": {
+    "aero_admin_safe_42255|streamed_usd": 6290.93,
+    "aero_admin_safe_42255|allocated_usd": 6290.93
+   },
+   "2026-10-24": {
+    "aero_admin_safe_42255|streamed_usd": 323.91,
+    "aero_admin_safe_42255|allocated_usd": 323.91
+   },
+   "2026-10-26": {
+    "aero_admin_safe_42255|streamed_usd": 1633.22,
+    "aero_admin_safe_42255|allocated_usd": 1630.65
+   },
+   "2026-10-27": {
+    "aero_admin_safe_42255|streamed_usd": 1885.55,
+    "aero_admin_safe_42255|allocated_usd": 1885.55
+   },
+   "2026-10-28": {
+    "aero_admin_safe_42255|streamed_usd": 1895.34,
+    "aero_admin_safe_42255|allocated_usd": 1895.34,
+    "third_party|streamed_usd": 0.97,
+    "third_party|allocated_usd": 0.97
+   },
+   "2026-10-29": {
+    "aero_admin_safe_42255|streamed_usd": 1810.57,
+    "aero_admin_safe_42255|allocated_usd": 1810.57,
+    "third_party|streamed_usd": 1.06,
+    "third_party|allocated_usd": 1.06
+   },
+   "2026-10-30": {
+    "aero_admin_safe_42255|streamed_usd": 1797.26,
+    "aero_admin_safe_42255|allocated_usd": 1797.26,
+    "third_party|streamed_usd": 0.09,
+    "third_party|allocated_usd": 0.09
+   },
+   "2026-10-31": {
+    "aero_admin_safe_42255|streamed_usd": 1810.12,
+    "aero_admin_safe_42255|allocated_usd": 1810.12
+   },
+   "2026-11-01": {
+    "aero_admin_safe_42255|streamed_usd": 1824.47,
+    "aero_admin_safe_42255|allocated_usd": 1824.47
+   },
+   "2026-11-02": {
+    "aero_admin_safe_42255|streamed_usd": 1854.76,
+    "aero_admin_safe_42255|allocated_usd": 1854.76
+   },
+   "2026-11-03": {
+    "aero_admin_safe_42255|streamed_usd": 1860.79,
+    "aero_admin_safe_42255|allocated_usd": 1860.79
+   },
+   "2026-11-04": {
+    "aero_admin_safe_42255|streamed_usd": 1861.62,
+    "aero_admin_safe_42255|allocated_usd": 1861.62
+   },
+   "2026-11-05": {
+    "aero_admin_safe_42255|streamed_usd": 1862.38,
+    "aero_admin_safe_42255|allocated_usd": 1862.38
+   },
+   "2026-11-06": {
+    "aero_admin_safe_42255|streamed_usd": 1861.65,
+    "aero_admin_safe_42255|allocated_usd": 1861.65
+   },
+   "2026-11-07": {
+    "aero_admin_safe_42255|streamed_usd": 1861.85,
+    "aero_admin_safe_42255|allocated_usd": 1861.85
+   },
+   "2026-11-08": {
+    "aero_admin_safe_42255|streamed_usd": 1861.71,
+    "aero_admin_safe_42255|allocated_usd": 1861.71
+   },
+   "2026-11-09": {
+    "aero_admin_safe_42255|streamed_usd": 232.71,
+    "aero_admin_safe_42255|allocated_usd": 232.71
+   }
+  },
+  "optimism": {
+   "2026-10-22": {
+    "aero_admin_safe_42255|streamed_usd": 677.75,
+    "aero_admin_safe_42255|allocated_usd": 677.75,
+    "third_party|streamed_usd": 198.12,
+    "third_party|allocated_usd": 198.12
+   },
+   "2026-10-23": {
+    "third_party|streamed_usd": 582.52,
+    "third_party|allocated_usd": 582.52,
+    "aero_admin_safe_42255|streamed_usd": 706.43,
+    "aero_admin_safe_42255|allocated_usd": 706.43
+   },
+   "2026-10-24": {
+    "third_party|streamed_usd": 654.25,
+    "third_party|allocated_usd": 654.25,
+    "aero_admin_safe_42255|streamed_usd": 29.1,
+    "aero_admin_safe_42255|allocated_usd": 29.1
+   },
+   "2026-10-25": {
+    "third_party|streamed_usd": 648.92,
+    "third_party|allocated_usd": 648.92
+   },
+   "2026-10-26": {
+    "third_party|streamed_usd": 647.18,
+    "third_party|allocated_usd": 647.18
+   },
+   "2026-10-27": {
+    "third_party|streamed_usd": 651.6,
+    "third_party|allocated_usd": 651.6
+   },
+   "2026-10-28": {
+    "third_party|streamed_usd": 654.78,
+    "third_party|allocated_usd": 654.78
+   },
+   "2026-10-29": {
+    "third_party|streamed_usd": 636.19,
+    "third_party|allocated_usd": 636.19
+   },
+   "2026-10-30": {
+    "third_party|streamed_usd": 634.63,
+    "third_party|allocated_usd": 634.57
+   },
+   "2026-10-31": {
+    "third_party|streamed_usd": 636.29,
+    "third_party|allocated_usd": 636.17
+   },
+   "2026-11-01": {
+    "third_party|streamed_usd": 640.15,
+    "third_party|allocated_usd": 640.08
+   },
+   "2026-11-02": {
+    "third_party|streamed_usd": 634.67,
+    "third_party|allocated_usd": 634.67
+   },
+   "2026-11-03": {
+    "third_party|streamed_usd": 639.4,
+    "third_party|allocated_usd": 639.4
+   },
+   "2026-11-04": {
+    "third_party|streamed_usd": 669.08,
+    "third_party|allocated_usd": 667.18
+   },
+   "2026-11-05": {
+    "third_party|streamed_usd": 623.37,
+    "third_party|allocated_usd": 623.37
+   },
+   "2026-11-06": {
+    "third_party|streamed_usd": 634.78,
+    "third_party|allocated_usd": 634.78
+   },
+   "2026-11-07": {
+    "third_party|streamed_usd": 627.66,
+    "third_party|allocated_usd": 627.66
+   },
+   "2026-11-08": {
+    "third_party|streamed_usd": 605.55,
+    "third_party|allocated_usd": 605.55
+   },
+   "2026-11-09": {
+    "third_party|streamed_usd": 605.74,
+    "third_party|allocated_usd": 605.74
+   },
+   "2026-11-10": {
+    "third_party|streamed_usd": 590.84,
+    "third_party|allocated_usd": 590.84
+   },
+   "2026-11-11": {
+    "third_party|streamed_usd": 593.2,
+    "third_party|allocated_usd": 593.2
+   },
+   "2026-11-12": {
+    "third_party|streamed_usd": 586.7,
+    "third_party|allocated_usd": 586.7
+   },
+   "2026-11-13": {
+    "third_party|streamed_usd": 571.08,
+    "third_party|allocated_usd": 571.08
+   },
+   "2026-11-14": {
+    "third_party|streamed_usd": 541.96,
+    "third_party|allocated_usd": 541.96
+   },
+   "2026-11-15": {
+    "third_party|streamed_usd": 552.3,
+    "third_party|allocated_usd": 552.3
+   },
+   "2026-11-16": {
+    "third_party|streamed_usd": 550.42,
+    "third_party|allocated_usd": 550.42
+   },
+   "2026-11-17": {
+    "third_party|streamed_usd": 551.1,
+    "third_party|allocated_usd": 551.1
+   },
+   "2026-11-18": {
+    "third_party|streamed_usd": 543.37,
+    "third_party|allocated_usd": 543.37
+   },
+   "2026-11-19": {
+    "third_party|streamed_usd": 538.38,
+    "third_party|allocated_usd": 538.38
+   },
+   "2026-11-20": {
+    "third_party|streamed_usd": 512.44,
+    "third_party|allocated_usd": 512.44
+   },
+   "2026-11-21": {
+    "third_party|streamed_usd": 521.57,
+    "third_party|allocated_usd": 521.57
+   },
+   "2026-11-22": {
+    "third_party|streamed_usd": 525.67,
+    "third_party|allocated_usd": 525.67
+   },
+   "2026-11-23": {
+    "third_party|streamed_usd": 524.01,
+    "third_party|allocated_usd": 524.01
+   },
+   "2026-11-24": {
+    "third_party|streamed_usd": 542.2,
+    "third_party|allocated_usd": 542.2
+   },
+   "2026-11-25": {
+    "third_party|streamed_usd": 555.37,
+    "third_party|allocated_usd": 555.37
+   },
+   "2026-11-26": {
+    "third_party|streamed_usd": 554.46,
+    "third_party|allocated_usd": 554.46
+   }
+  },
+  "arbitrum": {
+   "2026-10-22": {
+    "aero_admin_safe_42255|streamed_usd": 1408.06,
+    "aero_admin_safe_42255|allocated_usd": 1408.06
+   },
+   "2026-10-23": {
+    "aero_admin_safe_42255|streamed_usd": 1467.96,
+    "aero_admin_safe_42255|allocated_usd": 1467.96
+   },
+   "2026-10-24": {
+    "aero_admin_safe_42255|streamed_usd": 60.45,
+    "aero_admin_safe_42255|allocated_usd": 60.45
+   },
+   "2026-10-26": {
+    "aero_admin_safe_42255|streamed_usd": 2246.79,
+    "aero_admin_safe_42255|allocated_usd": 2245.67
+   },
+   "2026-10-27": {
+    "aero_admin_safe_42255|streamed_usd": 2598.26,
+    "aero_admin_safe_42255|allocated_usd": 2598.26
+   },
+   "2026-10-28": {
+    "aero_admin_safe_42255|streamed_usd": 2608.83,
+    "aero_admin_safe_42255|allocated_usd": 2608.83
+   },
+   "2026-10-29": {
+    "aero_admin_safe_42255|streamed_usd": 2489.0,
+    "aero_admin_safe_42255|allocated_usd": 2489.0
+   },
+   "2026-10-30": {
+    "aero_admin_safe_42255|streamed_usd": 2480.47,
+    "aero_admin_safe_42255|allocated_usd": 2480.47
+   },
+   "2026-10-31": {
+    "aero_admin_safe_42255|streamed_usd": 2492.64,
+    "aero_admin_safe_42255|allocated_usd": 2492.64,
+    "third_party|streamed_usd": 2.26,
+    "third_party|allocated_usd": 2.26
+   },
+   "2026-11-01": {
+    "aero_admin_safe_42255|streamed_usd": 2515.54,
+    "aero_admin_safe_42255|allocated_usd": 2515.54,
+    "third_party|streamed_usd": 2.64,
+    "third_party|allocated_usd": 2.64
+   },
+   "2026-11-02": {
+    "aero_admin_safe_42255|streamed_usd": 2567.65,
+    "aero_admin_safe_42255|allocated_usd": 2567.65,
+    "third_party|streamed_usd": 0.39,
+    "third_party|allocated_usd": 0.39
+   },
+   "2026-11-03": {
+    "aero_admin_safe_42255|streamed_usd": 2604.0,
+    "aero_admin_safe_42255|allocated_usd": 2604.0
+   },
+   "2026-11-04": {
+    "aero_admin_safe_42255|streamed_usd": 2777.94,
+    "aero_admin_safe_42255|allocated_usd": 2777.94
+   },
+   "2026-11-05": {
+    "aero_admin_safe_42255|streamed_usd": 2562.69,
+    "aero_admin_safe_42255|allocated_usd": 2562.69
+   },
+   "2026-11-06": {
+    "aero_admin_safe_42255|streamed_usd": 2562.63,
+    "aero_admin_safe_42255|allocated_usd": 2562.63
+   },
+   "2026-11-07": {
+    "aero_admin_safe_42255|streamed_usd": 2564.32,
+    "aero_admin_safe_42255|allocated_usd": 2564.32
+   },
+   "2026-11-08": {
+    "aero_admin_safe_42255|streamed_usd": 2433.93,
+    "aero_admin_safe_42255|allocated_usd": 2433.93
+   },
+   "2026-11-09": {
+    "aero_admin_safe_42255|streamed_usd": 305.54,
+    "aero_admin_safe_42255|allocated_usd": 305.54
+   }
+  },
+  "ink": {},
+  "robinhood": {
+   "2026-10-22": {
+    "aero_admin_safe_42255|streamed_usd": 4945.09,
+    "aero_admin_safe_42255|allocated_usd": 4945.09
+   },
+   "2026-10-23": {
+    "aero_admin_safe_42255|streamed_usd": 5154.99,
+    "aero_admin_safe_42255|allocated_usd": 5154.99
+   },
+   "2026-10-24": {
+    "aero_admin_safe_42255|streamed_usd": 212.27,
+    "aero_admin_safe_42255|allocated_usd": 212.27
+   },
+   "2026-10-28": {
+    "third_party|streamed_usd": 19.79,
+    "third_party|allocated_usd": 19.79
+   },
+   "2026-10-29": {
+    "third_party|streamed_usd": 25.0,
+    "third_party|allocated_usd": 25.0
+   },
+   "2026-10-30": {
+    "third_party|streamed_usd": 5.21,
+    "third_party|allocated_usd": 5.21
+   }
+  },
+  "arc": {
+   "2026-10-22": {
+    "aero_admin_safe_42255|streamed_usd": 375.47,
+    "aero_admin_safe_42255|allocated_usd": 375.47
+   },
+   "2026-10-23": {
+    "aero_admin_safe_42255|streamed_usd": 389.63,
+    "aero_admin_safe_42255|allocated_usd": 389.63
+   },
+   "2026-10-24": {
+    "aero_admin_safe_42255|streamed_usd": 16.08,
+    "aero_admin_safe_42255|allocated_usd": 16.08
+   }
+  }
+ },
+ "unpriced_tokens": {}
+}

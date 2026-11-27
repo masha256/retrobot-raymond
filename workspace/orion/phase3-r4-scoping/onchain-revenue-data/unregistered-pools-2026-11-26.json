@@ -1,0 +1,334 @@
+{
+ "base": {
+  "pools": 345,
+  "pools_with_swaps": 67,
+  "swaps": 1154,
+  "est_fee_usd": 55.19,
+  "getLogs": 1317,
+  "top": [
+   [
+    "0xcea7c6bf9d7fd0443896c9e09d37c8e5cff991ff",
+    "cl",
+    "TRUST",
+    "USDC",
+    10,
+    50.26,
+    false
+   ],
+   [
+    "0x05e997536b17f2beb2ea9befab77b41d6b0b9672",
+    "cl",
+    "EVAL",
+    "USDC",
+    74,
+    1.16,
+    false
+   ],
+   [
+    "0xd4f9750e67439d72781d5f15c918777c92108951",
+    "cl",
+    "WETH",
+    "APU",
+    36,
+    0.87,
+    false
+   ],
+   [
+    "0xa09edc7343f1d27526e60849ac96edcae8aff4e4",
+    "cl",
+    "AORA",
+    "USDC",
+    13,
+    0.84,
+    false
+   ],
+   [
+    "0x2b8ac911ea762447e0e9d475e51dad879d4d6caa",
+    "v2v",
+    "USDC",
+    "INFI",
+    3,
+    0.75,
+    false
+   ]
+  ]
+ },
+ "ethereum": {
+  "pools": 43,
+  "pools_with_swaps": 5,
+  "swaps": 21,
+  "est_fee_usd": 0.14,
+  "getLogs": 28,
+  "top": [
+   [
+    "0xce1a2570eaf5d7529f99aeb555df5a3a7b583d29",
+    "cl",
+    "USDC",
+    "DRV",
+    3,
+    0.13,
+    false
+   ],
+   [
+    "0x160312d5b2378beb469aea1675af9fe26033e1f9",
+    "v2v",
+    "LINK",
+    "SHEB",
+    7,
+    0.01,
+    false
+   ],
+   [
+    "0xa7e213935b2cdce35cf8b72b28534a4dbccc54a2",
+    "cl",
+    "GHO",
+    "SHEB",
+    2,
+    0.01,
+    false
+   ],
+   [
+    "0x3c1552d71512888691497434634aceaee456ca03",
+    "cl",
+    "WETH",
+    "RAIL",
+    1,
+    0.0,
+    false
+   ],
+   [
+    "0x967e7c0fe8012c6d148b330a5dff08f9fbd7e43d",
+    "cl",
+    "SwanUSD",
+    "SWAN",
+    8,
+    0.0,
+    false
+   ]
+  ]
+ },
+ "optimism": {
+  "pools": 18,
+  "pools_with_swaps": 8,
+  "swaps": 979,
+  "est_fee_usd": 0.3,
+  "getLogs": 1049,
+  "top": [
+   [
+    "0xead1190ce716b076f7dad65a3a7799c5c40b1405",
+    "cl",
+    "USDC",
+    "ZRO",
+    52,
+    0.1,
+    false
+   ],
+   [
+    "0x4da0c816a16752a401d1c35781c5728fca94f044",
+    "cl",
+    "USDC",
+    "ZRO",
+    383,
+    0.08,
+    false
+   ],
+   [
+    "0x67896025866d21248390d6a4fba334dede258f3d",
+    "cl",
+    "CRV",
+    "USDC",
+    77,
+    0.05,
+    false
+   ],
+   [
+    "0x1729badeb89d4b3e92a948d2d892af16cc66c156",
+    "cl",
+    "CRV",
+    "USDC",
+    174,
+    0.04,
+    false
+   ],
+   [
+    "0x4480f2c6be654d8b6a1d5a40044df0354397ada0",
+    "cl",
+    "USDC",
+    "SNX",
+    223,
+    0.03,
+    false
+   ]
+  ]
+ },
+ "arbitrum": {
+  "pools": 23,
+  "pools_with_swaps": 2,
+  "swaps": 4,
+  "est_fee_usd": 0.9,
+  "getLogs": 6,
+  "top": [
+   [
+    "0x2cb3b856870a99159238b4bec27bca3da8bf3a17",
+    "v2v",
+    "USDC",
+    "rANT",
+    2,
+    0.9,
+    false
+   ],
+   [
+    "0xfffeeb8a1f309bdd707e6f10343990a4cba76e9b",
+    "cl",
+    "XAUt0",
+    "PAXG",
+    2,
+    0.0,
+    false
+   ]
+  ]
+ },
+ "ink": {
+  "pools": 8,
+  "pools_with_swaps": 4,
+  "swaps": 97,
+  "est_fee_usd": 8.5,
+  "getLogs": 145,
+  "top": [
+   [
+    "0x6aa90cd22cd311c3f0e5ea05297b86ab57cf949e",
+    "cl",
+    "USDC",
+    "wQQQx",
+    38,
+    8.32,
+    false
+   ],
+   [
+    "0x7bd5da054fa62ad9d9ab14e654a758e7c5a479fa",
+    "cl",
+    "ANITA",
+    "WETH",
+    11,
+    0.18,
+    false
+   ],
+   [
+    "0x1e11a0d52aa9a90df1b1b9d688823932fe5e657b",
+    "v2v",
+    "USDC",
+    "WETH",
+    23,
+    0.0,
+    false
+   ],
+   [
+    "0x293453939d8c3068c0744d8296d617105e009140",
+    "v2v",
+    "USD\u20ae0",
+    "WETH",
+    25,
+    0.0,
+    false
+   ]
+  ]
+ },
+ "robinhood": {
+  "pools": 23,
+  "pools_with_swaps": 5,
+  "swaps": 17,
+  "est_fee_usd": 0.61,
+  "getLogs": 19,
+  "top": [
+   [
+    "0xc81bef892a40a3fe44238824d36838234537e3ed",
+    "cl",
+    "WETH",
+    "XBOW",
+    8,
+    0.55,
+    false
+   ],
+   [
+    "0x66cfc30e4b341595d2e6b23dc714d568d3094a56",
+    "v2v",
+    "USDG",
+    "VM",
+    1,
+    0.05,
+    false
+   ],
+   [
+    "0x6d3b0c7658dce8abb6019631dc0ca3ee30bf6d59",
+    "cl",
+    "USDG",
+    "ORCL",
+    3,
+    0.01,
+    false
+   ],
+   [
+    "0xd282a904a56c74376e560b3357cbfe2ea498890c",
+    "v2v",
+    "RDDT",
+    "XBOW",
+    1,
+    0.0,
+    false
+   ],
+   [
+    "0xbc3ee74b452bda455ed59a85b6845b45c86905e7",
+    "cl",
+    "QUBT",
+    "STONKBROKER",
+    4,
+    0.0,
+    false
+   ]
+  ]
+ },
+ "arc": {
+  "pools": 40,
+  "pools_with_swaps": 0,
+  "swaps": 0,
+  "est_fee_usd": 0,
+  "getLogs": 0,
+  "top": []
+ },
+ "elysium": {
+  "pools": 16,
+  "pools_with_swaps": 3,
+  "swaps": 194,
+  "est_fee_usd": 39.4,
+  "getLogs": 194,
+  "top": [
+   [
+    "0x040b22ffcc4534124c112200f378c4159b849fe5",
+    "cl",
+    "WHYPE",
+    "DEATH",
+    121,
+    29.8,
+    false
+   ],
+   [
+    "0x9da6a060d4bf3ab53f586c963435dfecb2260d90",
+    "cl",
+    "DEATH",
+    "KNTQ",
+    70,
+    6.91,
+    false
+   ],
+   [
+    "0x607a1061048eadaa540ca5b6b1ad7ce8d92dfc55",
+    "cl",
+    "ELZ",
+    "USDC",
+    3,
+    2.69,
+    false
+   ]
+  ]
+ }
+}

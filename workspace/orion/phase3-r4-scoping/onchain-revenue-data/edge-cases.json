@@ -1,0 +1,567 @@
+{
+ "2026-10-22|base": {
+  "by_kind_ref_usd": {
+   "v2s": 41,
+   "v2v": 3177,
+   "cl": 76355
+  },
+  "pools_created_in_day": 42,
+  "created_fee_ref_usd": 0.0,
+  "cap0_gauges": 4,
+  "cap0_alloc_raw_ref_usd": 0.03,
+  "alloc_raw_minus_gated_ref_usd": 0.02,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-10-22|ethereum": {
+  "by_kind_ref_usd": {
+   "v2v": 0,
+   "cl": 3883
+  },
+  "pools_created_in_day": 9,
+  "created_fee_ref_usd": 0.0,
+  "cap0_gauges": 0,
+  "cap0_alloc_raw_ref_usd": 0,
+  "alloc_raw_minus_gated_ref_usd": 0.01,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-10-22|optimism": {
+  "by_kind_ref_usd": {
+   "v2s": 4,
+   "v2v": 2,
+   "cl": 972
+  },
+  "pools_created_in_day": 4,
+  "created_fee_ref_usd": 0.0,
+  "cap0_gauges": 0,
+  "cap0_alloc_raw_ref_usd": 0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-10-22|arbitrum": {
+  "by_kind_ref_usd": {
+   "cl": 548
+  },
+  "pools_created_in_day": 0,
+  "created_fee_ref_usd": 0,
+  "cap0_gauges": 0,
+  "cap0_alloc_raw_ref_usd": 0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-10-22|ink": {
+  "by_kind_ref_usd": {
+   "v2v": 0,
+   "cl": 25
+  },
+  "pools_created_in_day": 1,
+  "created_fee_ref_usd": 0.0,
+  "cap0_gauges": 0,
+  "cap0_alloc_raw_ref_usd": 0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-10-22|robinhood": {
+  "by_kind_ref_usd": {
+   "v2v": 0,
+   "cl": 6692
+  },
+  "pools_created_in_day": 1,
+  "created_fee_ref_usd": 0.0,
+  "cap0_gauges": 0,
+  "cap0_alloc_raw_ref_usd": 0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-10-22|arc": {
+  "by_kind_ref_usd": {
+   "cl": 1023,
+   "lite_cl": 1294
+  },
+  "pools_created_in_day": 0,
+  "created_fee_ref_usd": 0,
+  "cap0_gauges": 1,
+  "cap0_alloc_raw_ref_usd": 0.14,
+  "alloc_raw_minus_gated_ref_usd": 0.14,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-10-23|base": {
+  "by_kind_ref_usd": {
+   "v2s": 21,
+   "v2v": 8900,
+   "cl": 132429
+  },
+  "pools_created_in_day": 26,
+  "created_fee_ref_usd": 0.0,
+  "cap0_gauges": 4,
+  "cap0_alloc_raw_ref_usd": 1.08,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-10-23|ethereum": {
+  "by_kind_ref_usd": {
+   "v2v": 0,
+   "cl": 7399
+  },
+  "pools_created_in_day": 7,
+  "created_fee_ref_usd": 0.0,
+  "cap0_gauges": 0,
+  "cap0_alloc_raw_ref_usd": 0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-10-23|optimism": {
+  "by_kind_ref_usd": {
+   "v2s": 16,
+   "v2v": 7,
+   "cl": 1326
+  },
+  "pools_created_in_day": 3,
+  "created_fee_ref_usd": 0.0,
+  "cap0_gauges": 0,
+  "cap0_alloc_raw_ref_usd": 0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-10-23|arbitrum": {
+  "by_kind_ref_usd": {
+   "v2v": 0,
+   "cl": 948
+  },
+  "pools_created_in_day": 1,
+  "created_fee_ref_usd": 0.0,
+  "cap0_gauges": 0,
+  "cap0_alloc_raw_ref_usd": 0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-10-23|ink": {
+  "by_kind_ref_usd": {
+   "v2v": 0,
+   "cl": 50
+  },
+  "pools_created_in_day": 0,
+  "created_fee_ref_usd": 0,
+  "cap0_gauges": 0,
+  "cap0_alloc_raw_ref_usd": 0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-10-23|robinhood": {
+  "by_kind_ref_usd": {
+   "v2v": 0,
+   "cl": 10171
+  },
+  "pools_created_in_day": 3,
+  "created_fee_ref_usd": 0.0,
+  "cap0_gauges": 0,
+  "cap0_alloc_raw_ref_usd": 0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-10-23|arc": {
+  "by_kind_ref_usd": {
+   "v2s": 0,
+   "v2v": 0,
+   "cl": 1482,
+   "lite_cl": 788
+  },
+  "pools_created_in_day": 8,
+  "created_fee_ref_usd": 0.0,
+  "cap0_gauges": 1,
+  "cap0_alloc_raw_ref_usd": 0.0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-11-01|base": {
+  "by_kind_ref_usd": {
+   "v2s": 16,
+   "v2v": 3372,
+   "cl": 100568
+  },
+  "pools_created_in_day": 15,
+  "created_fee_ref_usd": 0.0,
+  "cap0_gauges": 4,
+  "cap0_alloc_raw_ref_usd": 0.0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-11-01|ethereum": {
+  "by_kind_ref_usd": {
+   "v2s": 0,
+   "v2v": 0,
+   "cl": 13310
+  },
+  "pools_created_in_day": 1,
+  "created_fee_ref_usd": 0.0,
+  "cap0_gauges": 0,
+  "cap0_alloc_raw_ref_usd": 0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-11-01|optimism": {
+  "by_kind_ref_usd": {
+   "v2s": 25,
+   "v2v": 13,
+   "cl": 866
+  },
+  "pools_created_in_day": 2,
+  "created_fee_ref_usd": 0.0,
+  "cap0_gauges": 0,
+  "cap0_alloc_raw_ref_usd": 0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-11-01|arbitrum": {
+  "by_kind_ref_usd": {
+   "v2v": 0,
+   "cl": 2002
+  },
+  "pools_created_in_day": 0,
+  "created_fee_ref_usd": 0,
+  "cap0_gauges": 0,
+  "cap0_alloc_raw_ref_usd": 0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-11-01|ink": {
+  "by_kind_ref_usd": {
+   "v2v": 0,
+   "cl": 788
+  },
+  "pools_created_in_day": 1,
+  "created_fee_ref_usd": 0.0,
+  "cap0_gauges": 0,
+  "cap0_alloc_raw_ref_usd": 0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-11-01|robinhood": {
+  "by_kind_ref_usd": {
+   "v2v": 0,
+   "cl": 10471
+  },
+  "pools_created_in_day": 0,
+  "created_fee_ref_usd": 0,
+  "cap0_gauges": 0,
+  "cap0_alloc_raw_ref_usd": 0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-11-01|arc": {
+  "by_kind_ref_usd": {
+   "v2s": 0,
+   "v2v": 0,
+   "cl": 351,
+   "lite_cl": 40
+  },
+  "pools_created_in_day": 0,
+  "created_fee_ref_usd": 0,
+  "cap0_gauges": 1,
+  "cap0_alloc_raw_ref_usd": 0.0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-11-15|base": {
+  "by_kind_ref_usd": {
+   "v2s": 14,
+   "v2v": 18583,
+   "cl": 243980
+  },
+  "pools_created_in_day": 2,
+  "created_fee_ref_usd": 0.0,
+  "cap0_gauges": 4,
+  "cap0_alloc_raw_ref_usd": 0.0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-11-15|ethereum": {
+  "by_kind_ref_usd": {
+   "v2s": 0,
+   "v2v": 0,
+   "cl": 15156
+  },
+  "pools_created_in_day": 0,
+  "created_fee_ref_usd": 0,
+  "cap0_gauges": 0,
+  "cap0_alloc_raw_ref_usd": 0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-11-15|optimism": {
+  "by_kind_ref_usd": {
+   "v2s": 45,
+   "v2v": 4,
+   "cl": 3369
+  },
+  "pools_created_in_day": 0,
+  "created_fee_ref_usd": 0,
+  "cap0_gauges": 0,
+  "cap0_alloc_raw_ref_usd": 0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-11-15|arbitrum": {
+  "by_kind_ref_usd": {
+   "v2v": 0,
+   "cl": 4443
+  },
+  "pools_created_in_day": 0,
+  "created_fee_ref_usd": 0,
+  "cap0_gauges": 0,
+  "cap0_alloc_raw_ref_usd": 0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-11-15|ink": {
+  "by_kind_ref_usd": {
+   "v2v": 0,
+   "cl": 723
+  },
+  "pools_created_in_day": 0,
+  "created_fee_ref_usd": 0,
+  "cap0_gauges": 0,
+  "cap0_alloc_raw_ref_usd": 0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-11-15|robinhood": {
+  "by_kind_ref_usd": {
+   "v2v": 0,
+   "cl": 25243
+  },
+  "pools_created_in_day": 0,
+  "created_fee_ref_usd": 0,
+  "cap0_gauges": 0,
+  "cap0_alloc_raw_ref_usd": 0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-11-15|arc": {
+  "by_kind_ref_usd": {
+   "v2s": 0,
+   "v2v": 0,
+   "cl": 1848,
+   "lite_cl": 129
+  },
+  "pools_created_in_day": 0,
+  "created_fee_ref_usd": 0,
+  "cap0_gauges": 1,
+  "cap0_alloc_raw_ref_usd": 0.0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-11-15|elysium": {
+  "by_kind_ref_usd": {
+   "v2v": 0,
+   "cl": 2701
+  },
+  "pools_created_in_day": 0,
+  "created_fee_ref_usd": 0,
+  "cap0_gauges": 0,
+  "cap0_alloc_raw_ref_usd": 0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-11-25|base": {
+  "by_kind_ref_usd": {
+   "v2s": 37,
+   "v2v": 13773,
+   "cl": 263913
+  },
+  "pools_created_in_day": 4,
+  "created_fee_ref_usd": 0.0,
+  "cap0_gauges": 4,
+  "cap0_alloc_raw_ref_usd": 0.0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-11-25|ethereum": {
+  "by_kind_ref_usd": {
+   "v2s": 0,
+   "v2v": 0,
+   "cl": 25227
+  },
+  "pools_created_in_day": 0,
+  "created_fee_ref_usd": 0,
+  "cap0_gauges": 0,
+  "cap0_alloc_raw_ref_usd": 0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-11-25|optimism": {
+  "by_kind_ref_usd": {
+   "v2s": 31,
+   "v2v": 3,
+   "cl": 2218
+  },
+  "pools_created_in_day": 0,
+  "created_fee_ref_usd": 0,
+  "cap0_gauges": 0,
+  "cap0_alloc_raw_ref_usd": 0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-11-25|arbitrum": {
+  "by_kind_ref_usd": {
+   "v2v": 0,
+   "cl": 3139
+  },
+  "pools_created_in_day": 0,
+  "created_fee_ref_usd": 0,
+  "cap0_gauges": 0,
+  "cap0_alloc_raw_ref_usd": 0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-11-25|ink": {
+  "by_kind_ref_usd": {
+   "v2v": 0,
+   "cl": 857
+  },
+  "pools_created_in_day": 0,
+  "created_fee_ref_usd": 0,
+  "cap0_gauges": 0,
+  "cap0_alloc_raw_ref_usd": 0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-11-25|robinhood": {
+  "by_kind_ref_usd": {
+   "v2v": 0,
+   "cl": 31862
+  },
+  "pools_created_in_day": 2,
+  "created_fee_ref_usd": 0.0,
+  "cap0_gauges": 0,
+  "cap0_alloc_raw_ref_usd": 0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-11-25|arc": {
+  "by_kind_ref_usd": {
+   "v2s": 0,
+   "v2v": 0,
+   "cl": 1065,
+   "lite_cl": 12
+  },
+  "pools_created_in_day": 2,
+  "created_fee_ref_usd": 0.0,
+  "cap0_gauges": 1,
+  "cap0_alloc_raw_ref_usd": 0.0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-11-25|elysium": {
+  "by_kind_ref_usd": {
+   "v2v": 0,
+   "cl": 3479
+  },
+  "pools_created_in_day": 0,
+  "created_fee_ref_usd": 0,
+  "cap0_gauges": 0,
+  "cap0_alloc_raw_ref_usd": 0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-11-26|base": {
+  "by_kind_ref_usd": {
+   "v2s": 5,
+   "v2v": 12166,
+   "cl": 229265
+  },
+  "pools_created_in_day": 2,
+  "created_fee_ref_usd": 0.0,
+  "cap0_gauges": 4,
+  "cap0_alloc_raw_ref_usd": 0.0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-11-26|ethereum": {
+  "by_kind_ref_usd": {
+   "v2s": 0,
+   "v2v": 0,
+   "cl": 17458
+  },
+  "pools_created_in_day": 1,
+  "created_fee_ref_usd": 0.0,
+  "cap0_gauges": 0,
+  "cap0_alloc_raw_ref_usd": 0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-11-26|optimism": {
+  "by_kind_ref_usd": {
+   "v2s": 8,
+   "v2v": 1,
+   "cl": 1829
+  },
+  "pools_created_in_day": 4,
+  "created_fee_ref_usd": 0.0,
+  "cap0_gauges": 0,
+  "cap0_alloc_raw_ref_usd": 0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-11-26|arbitrum": {
+  "by_kind_ref_usd": {
+   "v2v": 0,
+   "cl": 2227
+  },
+  "pools_created_in_day": 0,
+  "created_fee_ref_usd": 0,
+  "cap0_gauges": 0,
+  "cap0_alloc_raw_ref_usd": 0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-11-26|ink": {
+  "by_kind_ref_usd": {
+   "v2v": 0,
+   "cl": 530
+  },
+  "pools_created_in_day": 1,
+  "created_fee_ref_usd": 0.0,
+  "cap0_gauges": 0,
+  "cap0_alloc_raw_ref_usd": 0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-11-26|robinhood": {
+  "by_kind_ref_usd": {
+   "v2v": 0,
+   "cl": 23538
+  },
+  "pools_created_in_day": 0,
+  "created_fee_ref_usd": 0,
+  "cap0_gauges": 0,
+  "cap0_alloc_raw_ref_usd": 0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-11-26|arc": {
+  "by_kind_ref_usd": {
+   "v2s": 0,
+   "v2v": 0,
+   "cl": 678,
+   "lite_cl": 12
+  },
+  "pools_created_in_day": 0,
+  "created_fee_ref_usd": 0,
+  "cap0_gauges": 1,
+  "cap0_alloc_raw_ref_usd": 0.0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ },
+ "2026-11-26|elysium": {
+  "by_kind_ref_usd": {
+   "v2v": 0,
+   "cl": 9253
+  },
+  "pools_created_in_day": 1,
+  "created_fee_ref_usd": 0.0,
+  "cap0_gauges": 0,
+  "cap0_alloc_raw_ref_usd": 0,
+  "alloc_raw_minus_gated_ref_usd": 0.0,
+  "v2_balance_ne_reserves": []
+ }
+}

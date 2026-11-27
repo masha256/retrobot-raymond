@@ -1,0 +1,5010 @@
+{
+ "anchors": {
+  "base": {
+   "0x0555e30da8f98308edb960aa94c0db47230d2b9c": {
+    "sym": "WBTC",
+    "name": "Wrapped BTC",
+    "feed": "0xCCADC697c55bbB68dc5bCdf8d3CBe83CdD4E071E",
+    "feed_name": "WBTC / USD",
+    "tier": "A",
+    "rejected_same_symbol": []
+   },
+   "0x0a1a1a107e45b7ced86833863f482bc5f4ed82ef": {
+    "sym": "USDai",
+    "name": "USDai",
+    "feed": "0xFCb2C36ac8A91cE9D3c94590ED239E1f683467fe",
+    "feed_name": "USDAI / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913": {
+    "sym": "USDC",
+    "name": "USD Coin",
+    "feed": "0x7e860098F58bBFC8648a4311b374B1D669a2bc6B",
+    "feed_name": "USDC / USD",
+    "tier": "A",
+    "rejected_same_symbol": [
+     [
+      "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca",
+      "USD Base Coin",
+      5702.8,
+      0.9996392011284413
+     ],
+     [
+      "0x584fbca587e2bbea9bec6cac60370f6ed20a49c4",
+      "USDC",
+      2094798.9,
+      null
+     ],
+     [
+      "0x9cb79dfbb336c487a77a79d040f34bd44d91a846",
+      "Ztaysmile_zbtc USD Coin ",
+      49.0,
+      null
+     ],
+     [
+      "0xc4c6b55196e495d7efe3273326b7b650e586ed87",
+      "USD Coin ",
+      0.1,
+      null
+     ],
+     [
+      "0x0ac9c1d2db7b6b03100e1c675ff44b729dd9fb07",
+      "USD Coin",
+      0.1,
+      null
+     ]
+    ]
+   },
+   "0x0b3e328455c4059eeb9e3f84b5543f74e24e7e1b": {
+    "sym": "VIRTUAL",
+    "name": "Virtual Protocol",
+    "feed": "0xEaf310161c9eF7c813A14f8FEF6Fb271434019F7",
+    "feed_name": "VIRTUAL / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x15d0e0c55a3e7ee67152ad7e89acf164253ff68d": {
+    "sym": "HYPE",
+    "name": "HYPE",
+    "feed": "0xEdB56c5DE751eD3182DDa337f7d9ab33cf091DcA",
+    "feed_name": "HYPE / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2": {
+    "sym": "sUSDe",
+    "name": "Staked USDe",
+    "feed": "0x79cf4a31B29D69191f0b6E97916eB93FEB81E533",
+    "feed_name": "sUSDe / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x236aa50979d5f3de3bd1eeb40e81137f22ab794b": {
+    "sym": "tBTC",
+    "name": "Base tBTC v2",
+    "feed": "0x6D75BFB5A5885f841b132198C9f0bE8c872057BF",
+    "feed_name": "TBTC / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x88fb150bdc53a65fe94dea0c9ba0a6daf8c6e196": {
+    "sym": "LINK",
+    "name": "ChainLink Token",
+    "feed": "0x17CAb8FE31E32f08326e5E27412894e49B0f9D65",
+    "feed_name": "LINK / USD",
+    "tier": "B",
+    "rejected_same_symbol": [
+     [
+      "0x26afac38d9991b0ec8990281d85e3566af16d994",
+      "Ztaysmile Chainlink LINK",
+      6200.6,
+      null
+     ]
+    ]
+   },
+   "0x4200000000000000000000000000000000000006": {
+    "sym": "WETH",
+    "name": "Wrapped Ether",
+    "feed": "0x50015f8b17fb2C290Dde41fDc246ed0dcEE93a8b",
+    "feed_name": "ETH / USD",
+    "tier": "A",
+    "rejected_same_symbol": [
+     [
+      "0x297aed7bced4223f7ad01c29b01fa455a650f2e7",
+      "WETH",
+      0.0,
+      null
+     ],
+     [
+      "0x6cb9da948c4c1020fc25d4a2da7f21789e5d03f8",
+      "WETH",
+      0.0,
+      null
+     ]
+    ]
+   },
+   "0x2ae3f1ec7f1f5012cfeab0185bfc7aa3cf0dec22": {
+    "sym": "cbETH",
+    "name": "Coinbase Wrapped Staked ETH",
+    "feed": "0xd7818272B9e248357d13057AAb0B417aF31E817d",
+    "feed_name": "CBETH / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x311935cd80b76769bf2ecc9d8ab7635b2139cf82": {
+    "sym": "SOL",
+    "name": "Solana",
+    "feed": "0xDa5Fd22F9382e57534fEdA4fF544878aa1cf401f",
+    "feed_name": "SOL / USD",
+    "tier": "B",
+    "rejected_same_symbol": [
+     [
+      "0xe0b62a2a9ebe8cf78a4f385c1f553f4dfc038028",
+      "Solana",
+      69566.8,
+      null
+     ],
+     [
+      "0x99a1936c92fc83cbc879fb9d7dc52f6765e62a15",
+      "Solana",
+      200.0,
+      null
+     ]
+    ]
+   },
+   "0xfde4c96c8593536e31f229ea8f37b2ada2699bb2": {
+    "sym": "USDT",
+    "name": "Tether USD",
+    "feed": "0xf19d560eB8d2ADf07BD6D13ed03e1D11215721F9",
+    "feed_name": "USDT / USD",
+    "tier": "A",
+    "rejected_same_symbol": [
+     [
+      "0x3ea5fe422379c143a030ca12a82efeb81cedba67",
+      "USDT",
+      101612.8,
+      null
+     ]
+    ]
+   },
+   "0x4bfaa776991e85e5f8b1255461cbbd216cfc714f": {
+    "sym": "HOME",
+    "name": "Home",
+    "feed": "0x121934C415937863d64ef93436169444633EE0d8",
+    "feed_name": "HOME / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x4ed4e862860bed51a9570b96d89af5e1b0efefed": {
+    "sym": "DEGEN",
+    "name": "Degen",
+    "feed": "0xE62BcE5D7CB9d16AB8b4D622538bc0A50A5799c2",
+    "feed_name": "DEGEN / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x50c5725949a6f0c72e6c4a641f24049a917db0cb": {
+    "sym": "DAI",
+    "name": "Dai Stablecoin",
+    "feed": "0x591e79239a7d679378eC8c847e5038150364C78F",
+    "feed_name": "DAI / USD",
+    "tier": "A",
+    "rejected_same_symbol": []
+   },
+   "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34": {
+    "sym": "USDe",
+    "name": "USDe",
+    "feed": "0x790181e93e9F4Eedb5b864860C12e4d2CffFe73B",
+    "feed_name": "USDe / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x60a3e35cc302bfa44cb288bc5a4f316fdb1adb42": {
+    "sym": "EURC",
+    "name": "EURC",
+    "feed": "0x9867186e52d2F1C2c565CDA6E747101Fa56501e0",
+    "feed_name": "EURC / USD",
+    "tier": "A",
+    "rejected_same_symbol": []
+   },
+   "0x63706e401c06ac8513145b7687a14804d17f814b": {
+    "sym": "AAVE",
+    "name": "Aave Token",
+    "feed": "0x65B5d02E1Fff839b8B67Fa26F8540e5f11454316",
+    "feed_name": "AAVE / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x696f9436b67233384889472cd7cd58a6fb5df4f1": {
+    "sym": "AVNT",
+    "name": "Avantis",
+    "feed": "0x50997b806B574501cC34a2a6d845e4dc1Bd9Aa8c",
+    "feed_name": "AVNT / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x6985884c4392d348587b19cb9eaaf157f13271cd": {
+    "sym": "ZRO",
+    "name": "LayerZero",
+    "feed": "0xdc31a4CCfCA039BeC6222e20BE7770E12581bfEB",
+    "feed_name": "ZRO / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x6bb7a212910682dcfdbd5bcbb3e28fb4e8da10ee": {
+    "sym": "GHO",
+    "name": "Gho Token",
+    "feed": "0x1B5FEF61Ff9B690364359b03cC07E060b12Bd3C1",
+    "feed_name": "GHO / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x7300b37dfdfab110d83290a29dfb31b1740219fe": {
+    "sym": "MAMO",
+    "name": "Mamo",
+    "feed": "0xeF7541b388a77C1709a3d44BfBfC5c1ED3F0Ac94",
+    "feed_name": "MAMO / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x820c137fa70c8691f0e44dc420a5e53c168921dc": {
+    "sym": "USDS",
+    "name": "USDS Stablecoin",
+    "feed": "0x2330aaE3bca5F05169d5f4597964D44522F62930",
+    "feed_name": "USDS / USD",
+    "tier": "A",
+    "rejected_same_symbol": []
+   },
+   "0x97be14dd8f994a5364573bc035d85309e7cb34de": {
+    "sym": "JitoSOL",
+    "name": "Jito Staked SOL",
+    "feed": "0x0ca181015d21A5ed19baFC17F2138883C2b16D54",
+    "feed_name": "JITOSOL / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x9eaf8c1e34f05a589eda6bafdf391cf6ad3cb239": {
+    "sym": "YFI",
+    "name": "yearn.finance",
+    "feed": "0xD40e758b5eC80820B68DFC302fc5Ce1239083548",
+    "feed_name": "YFI / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0xa88594d404727625a9437c3f886c7643872296ae": {
+    "sym": "WELL",
+    "name": "WELL",
+    "feed": "0xc15d9944dAefE2dB03e53bef8DDA25a56832C5fe",
+    "feed_name": "WELL / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0xab36452dbac151be02b16ca17d8919826072f64a": {
+    "sym": "RSR",
+    "name": "Reserve Rights",
+    "feed": "0xAa98aE504658766Dfe11F31c5D95a0bdcABDe0b1",
+    "feed_name": "RSR / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0xacfe6019ed1a7dc6f7b508c02d1b04ec88cc21bf": {
+    "sym": "VVV",
+    "name": "Venice Token",
+    "feed": "0xaABc55Ca55D70B034e4daA2551A224239890282F",
+    "feed_name": "VVV / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0xb4fde59a779991bfb6a52253b51947828b982be3": {
+    "sym": "PEPE",
+    "name": "Pepe",
+    "feed": "0xB48ac6409C0c3718b956089b0fFE295A10ACDdad",
+    "feed_name": "PEPE / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0xbaa5cc21fd487b8fcc2f632f3f4e8d37262a0842": {
+    "sym": "MORPHO",
+    "name": "Morpho Token",
+    "feed": "0xe95e258bb6615d47515Fc849f8542dA651f12bF6",
+    "feed_name": "MORPHO / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0xcb585250f852c6c6bf90434ab21a00f02833a4af": {
+    "sym": "cbXRP",
+    "name": "Coinbase Wrapped XRP",
+    "feed": "0xEEe1a9D5A0C36d99972C057Cb959267e88Ab9160",
+    "feed_name": "CBXRP / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf": {
+    "sym": "cbBTC",
+    "name": "Coinbase Wrapped BTC",
+    "feed": "0x10509b4053385b49145Fab2D6B1c58e96Eac5b79",
+    "feed_name": "CBBTC / USD",
+    "tier": "A",
+    "rejected_same_symbol": []
+   },
+   "0xcbd06e5a2b0c65597161de254aa074e489deb510": {
+    "sym": "cbDOGE",
+    "name": "Coinbase Wrapped DOGE",
+    "feed": "0x95051De9Db5Cac61682f64505006f2991dEaB3c2",
+    "feed_name": "CBDOGE / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0xe904aea5e1b110c9174728fa2effc8aed19e98ef": {
+    "sym": "PAXG",
+    "name": "Paxos Gold",
+    "feed": "0xd49c546D32D5472a7F7704EC183128512a1B2fcb",
+    "feed_name": "PAXG / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0xecac9c5f704e954931349da37f60e39f515c11c1": {
+    "sym": "LBTC",
+    "name": "Lombard BTC",
+    "feed": "0x9e07546c9Fe8868855CD04B26051a26D1599E270",
+    "feed_name": "LBTC / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   }
+  },
+  "ethereum": {
+   "0x00000000efe302beaa2b3e6e1b18d08d69a9012a": {
+    "sym": "AUSD",
+    "name": "AUSD",
+    "feed": "0xB00341502DfEA6Ced8A5786b4059d29dA5E4D1FD",
+    "feed_name": "AUSD / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x18084fba666a33d37592fa2633fd49a74dd93a88": {
+    "sym": "tBTC",
+    "name": "tBTC v2",
+    "feed": "0x8350b7De6a6a2C1368E7D4Bd968190e13E354297",
+    "feed_name": "TBTC / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x1abaea1f7c830bd89acc67ec4af516284b1bc33c": {
+    "sym": "EURC",
+    "name": "Euro Coin",
+    "feed": "0x04F84020Fdf10d9ee64D1dcC2986EDF2F556DA11",
+    "feed_name": "EURC / USD",
+    "tier": "A",
+    "rejected_same_symbol": []
+   },
+   "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984": {
+    "sym": "UNI",
+    "name": "Uniswap",
+    "feed": "0x553303d460EE0afB37EdFf9bE42922D8FF63220e",
+    "feed_name": "UNI / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x40d16fc0246ad3160ccc09b8d0d3a2cd28ae6c2f": {
+    "sym": "GHO",
+    "name": "Gho Token",
+    "feed": "0x3f12643D3f6f874d39C2a4c9f2Cd6f2DbAC877FC",
+    "feed_name": "GHO / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x45804880de22913dafe09f4980848ece6ecbaf78": {
+    "sym": "PAXG",
+    "name": "Paxos Gold",
+    "feed": "0x9944D86CEB9160aF5C5feB251FD671923323f8C3",
+    "feed_name": "PAXG / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x4c9edd5852cd905f086c759e8383e09bff1e68b3": {
+    "sym": "USDe",
+    "name": "USDe",
+    "feed": "0xa569d910839Ae8865Da8F8e70FfFb0cBA869F961",
+    "feed_name": "USDe / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x514910771af9ca656af840dff83e8264ecf986ca": {
+    "sym": "LINK",
+    "name": "ChainLink Token",
+    "feed": "0xE5fa3A4e4208858ADdf2CDb4e12651E89f1f1A70",
+    "feed_name": "LINK / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x56072c95faa701256059aa122697b133aded9279": {
+    "sym": "SKY",
+    "name": "SKY Governance Token",
+    "feed": "0xee10fE5E7aa92dd7b136597449c3d5813cFC5F18",
+    "feed_name": "SKY / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x6b175474e89094c44da98b954eedeac495271d0f": {
+    "sym": "DAI",
+    "name": "Dai Stablecoin",
+    "feed": "0xAed0c38402a5d19df6E4c03F4E2DceD6e29c1ee9",
+    "feed_name": "DAI / USD",
+    "tier": "A",
+    "rejected_same_symbol": []
+   },
+   "0x6c3ea9036406852006290770bedfcaba0e23a0e8": {
+    "sym": "PYUSD",
+    "name": "PayPal USD",
+    "feed": "0x8f1dF6D7F2db73eECE86a18b4381F4707b918FB1",
+    "feed_name": "PYUSD / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x73a15fed60bf67631dc6cd7bc5b6e8da8190acf5": {
+    "sym": "USD0",
+    "name": "Usual USD",
+    "feed": "0x7e891DEbD8FA0A4Cf6BE58Ddff5a8ca174FebDCB",
+    "feed_name": "USD0 / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9": {
+    "sym": "AAVE",
+    "name": "Aave Token",
+    "feed": "0xbd7F896e60B650C01caf2d7279a1148189A68884",
+    "feed_name": "AAVE / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x8292bb45bf1ee4d140127049757c2e0ff06317ed": {
+    "sym": "RLUSD",
+    "name": "RLUSD",
+    "feed": "0x26C46B7aD0012cA71F2298ada567dC9Af14E7f2A",
+    "feed_name": "RLUSD / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x853d955acef822db058eb8505911ed77f175b99e": {
+    "sym": "FRAX",
+    "name": "Frax",
+    "feed": "0xB9E1E3A9feFf48998E45Fa90847ed4D467E8BcfD",
+    "feed_name": "FRAX / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x865377367054516e17014ccded1e7d814edc9ce4": {
+    "sym": "DOLA",
+    "name": "Dola USD Stablecoin",
+    "feed": "0xE33592594f72Cc7ec8a05788be8E8455746C3a32",
+    "feed_name": "DOLA / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x9d39a5de30e57443bff2a8307a4256c8797a3497": {
+    "sym": "sUSDe",
+    "name": "Staked USDe",
+    "feed": "0xFF3BC18cCBd5999CE63E788A1c250a88626aD099",
+    "feed_name": "sUSDe / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+    "sym": "USDC",
+    "name": "USD Coin",
+    "feed": "0x8fFfFfd4AfB6115b954Bd326cbe7B4BA576818f6",
+    "feed_name": "USDC / USD",
+    "tier": "A",
+    "rejected_same_symbol": []
+   },
+   "0xaca92e438df0b2401ff60da7e4337b687a2435da": {
+    "sym": "mUSD",
+    "name": "MetaMask USD",
+    "feed": "0xc90E3460424fb8ea79775089E9053113FEE34Ed0",
+    "feed_name": "MUSD / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2": {
+    "sym": "WETH",
+    "name": "Wrapped Ether",
+    "feed": "0x5147eA642CAEF7BD9c1265AadcA78f997AbB9649",
+    "feed_name": "ETH / USD",
+    "tier": "A",
+    "rejected_same_symbol": []
+   },
+   "0xcacd6fd266af91b8aed52accc382b4e165586e29": {
+    "sym": "frxUSD",
+    "name": "Frax USD",
+    "feed": "0x9B4a96210bc8D9D55b1908B465D8B0de68B7fF83",
+    "feed_name": "frxUSD / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf": {
+    "sym": "cbBTC",
+    "name": "Coinbase Wrapped BTC",
+    "feed": "0x7922912AB91eb6A4b0350b01Dd066994BA64f882",
+    "feed_name": "CBBTC / USD",
+    "tier": "A",
+    "rejected_same_symbol": []
+   },
+   "0xd31a59c85ae9d8edefec411d448f90841571b89c": {
+    "sym": "SOL",
+    "name": "Wrapped SOL",
+    "feed": "0x4ffC43a60e009B551865A93d232E33Fce9f01507",
+    "feed_name": "SOL / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0xdac17f958d2ee523a2206206994597c13d831ec7": {
+    "sym": "USDT",
+    "name": "Tether USD",
+    "feed": "0x3E7d1eAB13ad0104d2750B8863b489D65364e32D",
+    "feed_name": "USDT / USD",
+    "tier": "A",
+    "rejected_same_symbol": []
+   },
+   "0xdc035d45d973e3ec169d2276ddab16f1e407384f": {
+    "sym": "USDS",
+    "name": "USDS Stablecoin",
+    "feed": "0xfF30586cD0F29eD462364C7e81375FC0C71219b1",
+    "feed_name": "USDS / USD",
+    "tier": "A",
+    "rejected_same_symbol": []
+   },
+   "0xe343167631d89b6ffc58b88d6b7fb0228795491d": {
+    "sym": "USDG",
+    "name": "Global Dollar",
+    "feed": "0x14f0737d6b705259e521EA6E9E3506AC78dBd311",
+    "feed_name": "USDG / USD",
+    "tier": "A",
+    "rejected_same_symbol": []
+   },
+   "0xf939e0a03fb07f59a73314e73794be0e57ac1b4e": {
+    "sym": "crvUSD",
+    "name": "Curve.Fi USD Stablecoin",
+    "feed": "0xEEf0C605546958c1f899b6fB336C20671f9cD49F",
+    "feed_name": "CRVUSD / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   }
+  },
+  "optimism": {
+   "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58": {
+    "sym": "USDT",
+    "name": "Tether USD",
+    "feed": "0xECef79E109e997bCA29c1c0897ec9d7b03647F5E",
+    "feed_name": "USDT / USD",
+    "tier": "A",
+    "rejected_same_symbol": [
+     [
+      "0x01bff41798a0bcf287b996046ca68b395dbc1071",
+      "USD\u20ae0",
+      21971.4,
+      0.9991405157321211
+     ]
+    ]
+   },
+   "0x0994206dfe8de6ec6920ff4d779b0d950605fb53": {
+    "sym": "CRV",
+    "name": "Curve DAO Token",
+    "feed": "0xbD92C6c284271c227a1e0bF1786F468b539f51D9",
+    "feed_name": "CRV / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x0b2c639c533813f4aa9d7837caf62653d097ff85": {
+    "sym": "USDC",
+    "name": "USD Coin",
+    "feed": "0x16a9FA2FDa030272Ce99B29CF780dFA30361E0f3",
+    "feed_name": "USDC / USD",
+    "tier": "A",
+    "rejected_same_symbol": [
+     [
+      "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+      "USD Coin",
+      5.7,
+      0.9996392011284413
+     ]
+    ]
+   },
+   "0x1f32b1c2345538c0c6f582fcb022739c4a194ebb": {
+    "sym": "wstETH",
+    "name": "Wrapped liquid staked Ether 2.0",
+    "feed": "0x698B585CbC4407e2D54aa898B2600B53C68958f7",
+    "feed_name": "WSTETH / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x4200000000000000000000000000000000000006": {
+    "sym": "WETH",
+    "name": "Wrapped Ether",
+    "feed": "0x13e3Ee699D1909E989722E753853AE30b17e08c5",
+    "feed_name": "ETH / USD",
+    "tier": "A",
+    "rejected_same_symbol": []
+   },
+   "0x4200000000000000000000000000000000000042": {
+    "sym": "OP",
+    "name": "Optimism",
+    "feed": "0x0D276FC14719f9292D5C1eA2198673d1f4269246",
+    "feed_name": "OP / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x68f180fcce6836688e9084f035309e29bf0a2095": {
+    "sym": "WBTC",
+    "name": "Wrapped BTC",
+    "feed": "0x718A5788b89454aAE3A028AE9c111A29Be6c2a6F",
+    "feed_name": "WBTC / USD",
+    "tier": "A",
+    "rejected_same_symbol": []
+   },
+   "0x6c84a8f1c29108f47a79964b5fe888d4f4d0de40": {
+    "sym": "tBTC",
+    "name": "Optimism tBTC v2",
+    "feed": "0x5a61374950D4BFa5a3D4f2CA36FC1d23A92b6f21",
+    "feed_name": "TBTC / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x76fb31fb4af56892a25e32cfc43de717950c9278": {
+    "sym": "AAVE",
+    "name": "Aave Token",
+    "feed": "0x338ed6787f463394D24813b297401B9F05a8C9d1",
+    "feed_name": "AAVE / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x8700daec35af8ff88c16bdf0418774cb3d7599b4": {
+    "sym": "SNX",
+    "name": "Synthetix Network Token",
+    "feed": "0x2FCF37343e916eAEd1f1DdaaF84458a359b53877",
+    "feed_name": "SNX / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0xc40f949f8a4e094d1b49a23ea9241d289b7b2819": {
+    "sym": "LUSD",
+    "name": "LUSD Stablecoin",
+    "feed": "0x9dfc79Aaeb5bb0f96C6e9402671981CdFc424052",
+    "feed_name": "LUSD / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1": {
+    "sym": "DAI",
+    "name": "Dai Stablecoin",
+    "feed": "0x8dBa75e83DA73cc766A7e5a0ee71F656BAb470d6",
+    "feed_name": "DAI / USD",
+    "tier": "A",
+    "rejected_same_symbol": []
+   },
+   "0xdc6ff44d5d932cbd77b52e5612ba0529dc6226f1": {
+    "sym": "WLD",
+    "name": "Worldcoin",
+    "feed": "0x4e1C6B168DCFD7758bC2Ab9d2865f1895813D236",
+    "feed_name": "WLD / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0xdcb612005417dc906ff72c87df732e5a90d49e11": {
+    "sym": "EURC",
+    "name": "EURC",
+    "feed": "0xDb2A51a5DD73865F1b0d1c33F99a96E0e7ae742c",
+    "feed_name": "EURC / USD",
+    "tier": "A",
+    "rejected_same_symbol": []
+   },
+   "0xe0080d2f853ecddbd81a643dc10da075df26fd3f": {
+    "sym": "ETHFI",
+    "name": "ether.fi governance token",
+    "feed": "0x9A3C975993354354080d815e313eEEdEb907fF34",
+    "feed_name": "ETHFI / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   }
+  },
+  "arbitrum": {
+   "0x004b506865409877c9fa29bfb1eba929984b9bbc": {
+    "sym": "USDG",
+    "name": "Global Dollar",
+    "feed": "0xE9Bd4Ca2CDacb56cd06c9C4C5231e69c33340B3c",
+    "feed_name": "USDG / USD",
+    "tier": "A",
+    "rejected_same_symbol": []
+   },
+   "0x0a1a1a107e45b7ced86833863f482bc5f4ed82ef": {
+    "sym": "USDai",
+    "name": "USDai",
+    "feed": "0xF3d6b05E69918d71807Ab005791daCcEC5de8C78",
+    "feed_name": "USDAI / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x0c1c1c109fe34733fca54b82d7b46b75cfb71f6e": {
+    "sym": "CHIP",
+    "name": "Chip",
+    "feed": "0x9dA16A80B3C7C489dFCf11024763144d94A9Dbd6",
+    "feed_name": "CHIP / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x0c880f6761f1af8d9aa9c466984b80dab9a8c9e8": {
+    "sym": "PENDLE",
+    "name": "Pendle",
+    "feed": "0x66853E19d73c0F9301fe099c324A1E9726953433",
+    "feed_name": "PENDLE / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x11cdb42b0eb46d95f990bedd4695a6e3fa034978": {
+    "sym": "CRV",
+    "name": "Curve DAO Token",
+    "feed": "0xaebDA2c976cfd1eE1977Eac079B4382acb849325",
+    "feed_name": "CRV / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x13ad51ed4f1b7e9dc168d8a00cb3f4ddd85efa60": {
+    "sym": "LDO",
+    "name": "Lido DAO Token",
+    "feed": "0xA43A34030088E6510FecCFb77E88ee5e7ed0fE64",
+    "feed_name": "LDO / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f": {
+    "sym": "WBTC",
+    "name": "Wrapped BTC",
+    "feed": "0xd0C7101eACbB49F3deCcCc166d238410D6D46d57",
+    "feed_name": "WBTC / USD",
+    "tier": "A",
+    "rejected_same_symbol": []
+   },
+   "0x46850ad61c2b7d64d08c9c754f45254596696984": {
+    "sym": "PYUSD",
+    "name": "PayPal USD",
+    "feed": "0x3d50d699A812A0f66F36876DF47B2aE68e781736",
+    "feed_name": "PYUSD / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34": {
+    "sym": "USDe",
+    "name": "USDe",
+    "feed": "0x88AC7Bca36567525A866138F03a6F6844868E0Bc",
+    "feed_name": "USDe / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x6985884c4392d348587b19cb9eaaf157f13271cd": {
+    "sym": "ZRO",
+    "name": "LayerZero",
+    "feed": "0x1940fEd49cDBC397941f2D336eb4994D599e568B",
+    "feed_name": "ZRO / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x6c84a8f1c29108f47a79964b5fe888d4f4d0de40": {
+    "sym": "tBTC",
+    "name": "Arbitrum tBTC v2",
+    "feed": "0xE808488e8627F6531bA79a13A9E0271B39abEb1C",
+    "feed_name": "TBTC / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x7dff72693f6a4149b17e7c6314655f6a9f7c8b33": {
+    "sym": "GHO",
+    "name": "Gho Token",
+    "feed": "0xAE0d73C9a489084531deEdCa6765fA3396db49c1",
+    "feed_name": "GHO / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x82af49447d8a07e3bd95bd0d56f35241523fbab1": {
+    "sym": "WETH",
+    "name": "Wrapped Ether",
+    "feed": "0xe4D040128CFdF03eC221832251caC9b6f0515E3f",
+    "feed_name": "ETH / USD",
+    "tier": "A",
+    "rejected_same_symbol": []
+   },
+   "0x912ce59144191c1204e64559fe8253a0e49e6548": {
+    "sym": "ARB",
+    "name": "Arbitrum",
+    "feed": "0x78aabb7a55508bbCc3a76D2Dfd9ad4Ff97Afed7a",
+    "feed_name": "ARB / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0xaf88d065e77c8cc2239327c5edb3a432268e5831": {
+    "sym": "USDC",
+    "name": "USD Coin",
+    "feed": "0x0D0FaDDd42C53fc6d1b933C7ccccCFaF9B79B571",
+    "feed_name": "USDC / USD",
+    "tier": "A",
+    "rejected_same_symbol": [
+     [
+      "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+      "USD Coin (Arb1)",
+      0.5,
+      0.9996392011284413
+     ]
+    ]
+   },
+   "0xba5ddd1f9d7f570dc94a51479a000e3bce967196": {
+    "sym": "AAVE",
+    "name": "Aave Token",
+    "feed": "0xaD1d5344AaDE45F43E596773Bcc4c423EAbdD034",
+    "feed_name": "AAVE / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1": {
+    "sym": "DAI",
+    "name": "Dai Stablecoin",
+    "feed": "0xc5C8E77B397E531B8EC06BFb0048328B30E9eCfB",
+    "feed_name": "DAI / USD",
+    "tier": "A",
+    "rejected_same_symbol": []
+   },
+   "0xf97f4df75117a78c1a5a0dbb814af92458539fb4": {
+    "sym": "LINK",
+    "name": "ChainLink Token",
+    "feed": "0xA841011089336de36b239b49f70A456EdD1c87c8",
+    "feed_name": "LINK / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0xfa7f8980b0f1e64a2062791cc3b0871572f1f7f0": {
+    "sym": "UNI",
+    "name": "Uniswap",
+    "feed": "0x9C917083fDb403ab5ADbEC26Ee294f6EcAda2720",
+    "feed_name": "UNI / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0xfc5a1a6eb076a2c7ad06ed22c90d7e710e35ad0a": {
+    "sym": "GMX",
+    "name": "GMX",
+    "feed": "0xDB98056FecFff59D032aB628337A4887110df3dB",
+    "feed_name": "GMX / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9": {
+    "sym": "USD\u20ae0",
+    "name": "USD\u20ae0",
+    "feed": "0x158B2203D267a50BE9b7930D13d8247A4968D659",
+    "feed_name": "USDT / USD",
+    "tier": "A",
+    "rejected_same_symbol": []
+   },
+   "0xfeb4dfc8c4cf7ed305bb08065d08ec6ee6728429": {
+    "sym": "PAXG",
+    "name": "Paxos Gold",
+    "feed": "0x2BA975D4D7922cD264267Af16F3bD177F206FE3c",
+    "feed_name": "PAXG / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   }
+  },
+  "ink": {
+   "0x0200c29006150606b650577bbe7b6248f58470c1": {
+    "sym": "USD\u20ae0",
+    "name": "USD\u20ae0",
+    "feed": "0x5aF168556BaA3Bd5c232261F7D7C662a2Ed0Db85",
+    "feed_name": "USDT / USD",
+    "tier": "A",
+    "rejected_same_symbol": []
+   },
+   "0x2d270e6886d130d724215a266106e6832161eaed": {
+    "sym": "USDC",
+    "name": "USDC",
+    "feed": "0x89991637dbaCd0999dE1bc8e86330302EAd2CD89",
+    "feed_name": "USDC / USD",
+    "tier": "A",
+    "rejected_same_symbol": [
+     [
+      "0xf1815bd50389c46847f0bda824ec8da914045d14",
+      "Bridged USDC (Stargate)",
+      6.6,
+      0.9996392011284413
+     ]
+    ]
+   },
+   "0x4200000000000000000000000000000000000006": {
+    "sym": "WETH",
+    "name": "Wrapped Ether",
+    "feed": "0x963d5d3aD2Dfd3fe759d376fF62A0963176DBdF5",
+    "feed_name": "ETH / USD",
+    "tier": "A",
+    "rejected_same_symbol": []
+   },
+   "0xe343167631d89b6ffc58b88d6b7fb0228795491d": {
+    "sym": "USDG",
+    "name": "Global Dollar",
+    "feed": "0xdb3B1fa77CF2c9597f9d4871Bed1Df03D096fdf3",
+    "feed_name": "USDG / USD",
+    "tier": "A",
+    "rejected_same_symbol": []
+   }
+  },
+  "robinhood": {
+   "0x0bd7d308f8e1639fab988df18a8011f41eacad73": {
+    "sym": "WETH",
+    "name": "WETH",
+    "feed": "0x78F3556b67E17Df817D51Ef5a990cDaF09E8d3A9",
+    "feed_name": "ETH / USD",
+    "tier": "A",
+    "rejected_same_symbol": []
+   },
+   "0x117cc2133c37b721f49de2a7a74833232b3b4c0c": {
+    "sym": "SPY",
+    "name": "SPDR S&P 500 ETF Trust \u2022 Robinhood Token",
+    "feed": "0x319724394D3A0e3669269846abE664Cd621f9f6A",
+    "feed_name": "Robinhood SPY / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x12f190a9f9d7d37a250758b26824b97ce941bf54": {
+    "sym": "AMZN",
+    "name": "Amazon \u2022 Robinhood Token",
+    "feed": "0xD5a1508ceD74c084eBf3cBe853e2C968fB2a651C",
+    "feed_name": "Robinhood AMZN / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x1b0e319c6a659f002271b69db8a7df2f911c153e": {
+    "sym": "GME",
+    "name": "GameStop \u2022 Robinhood Token",
+    "feed": "0x27C71df6A64fB476468EdF256CF72c038baB5B67",
+    "feed_name": "Robinhood GME / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x2e0847e8910a9732eb3fb1bb4b70a580adad4fe3": {
+    "sym": "GOOGL",
+    "name": "Alphabet Class A \u2022 Robinhood Token",
+    "feed": "0xF6f373a037c30F0e5010d854385cA89185AE638b",
+    "feed_name": "Robinhood GOOGL / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x322f0929c4625ed5bad873c95208d54e1c003b2d": {
+    "sym": "TSLA",
+    "name": "Tesla \u2022 Robinhood Token",
+    "feed": "0x4A1166a659A55625345e9515b32adECea5547C38",
+    "feed_name": "Robinhood TSLA / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea": {
+    "sym": "SPCX",
+    "name": "Space Exploration Technologies Corp. Class A Common Stock \u2022 Robinhood Token",
+    "feed": "0xB265810950ba6c5C0Ff821c9963014a56fD8Bffb",
+    "feed_name": "Robinhood SPCX / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x58ffe4a942d3885baa22d7520691f611ef09e7aa": {
+    "sym": "TSM",
+    "name": "Taiwan Semiconductor Manufacturing \u2022 Robinhood Token",
+    "feed": "0x874cF94aa8eC88Fd9560094dD065f2fB3E41Fc2F",
+    "feed_name": "Robinhood TSM / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x5fc5360d0400a0fd4f2af552add042d716f1d168": {
+    "sym": "USDG",
+    "name": "Global Dollar",
+    "feed": "0x61B7e5650328764B076A108EFF5fa7282a1B9aD2",
+    "feed_name": "USDG / USD",
+    "tier": "A",
+    "rejected_same_symbol": []
+   },
+   "0x6330d8c3178a418788df01a47479c0ce7ccf450b": {
+    "sym": "COIN",
+    "name": "Coinbase \u2022 Robinhood Token",
+    "feed": "0xA3a468A452940B7D6b69991207B508c609a98Ef2",
+    "feed_name": "Robinhood COIN / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x86923f96303d656e4aa86d9d42d1e57ad2023fdc": {
+    "sym": "AMD",
+    "name": "AMD \u2022 Robinhood Token",
+    "feed": "0x943A29E7ae51A4798823ca9eEd2ed533B2A22C72",
+    "feed_name": "Robinhood AMD / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0x894e1ec2d74ffe5aef8dc8a9e84686accb964f2a": {
+    "sym": "PLTR",
+    "name": "Palantir Technologies \u2022 Robinhood Token",
+    "feed": "0x820ABedFF239034956B7A9d2F0a331f9F075eB4c",
+    "feed_name": "Robinhood PLTR / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0xa30fa36db767ad9ed3f7a60fc79526fb4d56d344": {
+    "sym": "USO",
+    "name": "United States Oil Fund \u2022 Robinhood Token",
+    "feed": "0x75a9c76Ef439e2C7c2E5a34Ab105EcFe3766431c",
+    "feed_name": "Robinhood USO / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9": {
+    "sym": "AAPL",
+    "name": "Apple \u2022 Robinhood Token",
+    "feed": "0x6B22A786bAa607d76728168703a39Ea9C99f2cD0",
+    "feed_name": "Robinhood AAPL / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0xb0992820e760d836549ba69bc7598b4af75dee03": {
+    "sym": "ORCL",
+    "name": "Oracle \u2022 Robinhood Token",
+    "feed": "0x0e6a64a2B58A6693a531E6c555f3A5d042eEA844",
+    "feed_name": "Robinhood ORCL / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0xc0d6457c16cc70d6790dd43521c899c87ce02f35": {
+    "sym": "META",
+    "name": "Meta Platforms \u2022 Robinhood Token",
+    "feed": "0x7C38C00C30BEe9378381E7B6135d7283356D71b1",
+    "feed_name": "Robinhood META / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0xc72b96e0e48ecd4dc75e1e45396e26300bc39681": {
+    "sym": "INTC",
+    "name": "Intel \u2022 Robinhood Token",
+    "feed": "0x3f390C5C24628Ac7C489515402235FeAD71D1913",
+    "feed_name": "Robinhood INTC / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0xc9a981fee1f9dec688bb123ccdecc63d0debfc4e": {
+    "sym": "GLD",
+    "name": "SPDR Gold Trust \u2022 Robinhood Token",
+    "feed": "0x470A51258068043bd43dC0a56245625C9fE86eB0",
+    "feed_name": "GLD / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0xcec185eb182c47d1ba1efc84e6959e18cd620be4": {
+    "sym": "cbBTC",
+    "name": "Coinbase Wrapped BTC",
+    "feed": "0x0009cD492adf8167f9eEBf1293556A673530a21a",
+    "feed_name": "CBBTC / USD",
+    "tier": "A",
+    "rejected_same_symbol": []
+   },
+   "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec": {
+    "sym": "NVDA",
+    "name": "NVIDIA \u2022 Robinhood Token",
+    "feed": "0x379EC4f7C378F34a1B47E4F3cbeBCbAC3E8E9F15",
+    "feed_name": "Robinhood NVDA / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0xd5f3879160bc7c32ebb4dc785f8a4f505888de68": {
+    "sym": "QQQ",
+    "name": "Invesco QQQ \u2022 Robinhood Token",
+    "feed": "0x80901d846d5D7B030F26B480776EE3b29374C2ae",
+    "feed_name": "Robinhood QQQ / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0xdf0992e440dd0be65bd8439b609d6d4366bf1cb5": {
+    "sym": "CRCL",
+    "name": "Circle Internet Group \u2022 Robinhood Token",
+    "feed": "0x6652eDf64bA3731C4F2D3ce821A0Fb1f1f6b482a",
+    "feed_name": "Robinhood CRCL / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0xe93237c50d904957cf27e7b1133b510c669c2e74": {
+    "sym": "MSFT",
+    "name": "Microsoft \u2022 Robinhood Token",
+    "feed": "0x45C3C877C15E6BA2EBB19eA114Ea508d14C1Af2E",
+    "feed_name": "Robinhood MSFT / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0xec262a75e413fafd0df80480274532c79d42da09": {
+    "sym": "MSTR",
+    "name": "Strategy Inc. \u2022 Robinhood Token",
+    "feed": "0x396118bdFB181e6240E74D243F266B061c0edc3D",
+    "feed_name": "Robinhood MSTR / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   },
+   "0xff080c8ce2e5feadaca0da81314ae59d232d4afd": {
+    "sym": "MU",
+    "name": "Micron Technology \u2022 Robinhood Token",
+    "feed": "0x425EEFdCf05ed6526C3cE61Af99429A228a6d596",
+    "feed_name": "Robinhood MU / USD",
+    "tier": "B",
+    "rejected_same_symbol": []
+   }
+  },
+  "arc": {
+   "0x128cc466b61f542da60c70e3aa11c10e19b84edb": {
+    "sym": "WETH",
+    "name": "Wrapped Ether",
+    "feed": "0x50FCDD99D6762D1C170DC6A9111db944AEE6D364",
+    "feed_name": "ETH / USD",
+    "tier": "A",
+    "rejected_same_symbol": []
+   },
+   "0x3600000000000000000000000000000000000000": {
+    "sym": "USDC",
+    "name": "USDC",
+    "feed": "0x84EA90AC252Dc437031461836DB5164219147905",
+    "feed_name": "USDC / USD",
+    "tier": "A",
+    "rejected_same_symbol": []
+   },
+   "0xbef5f6d51cb62b58e6a8f77868681825c6fe21c1": {
+    "sym": "EURC",
+    "name": "EURC",
+    "feed": "0x361b95c10b76Ca3f35C686d423e43A951755Bf23",
+    "feed_name": "EURC / USD",
+    "tier": "A",
+    "rejected_same_symbol": []
+   }
+  },
+  "elysium": {}
+ },
+ "cross_chain_anchors": {
+  "elysium": {
+   "0xb47c4c8f73f009cc0c0d3f92b388d13e293f0b65": [
+    "base",
+    "0x7e860098F58bBFC8648a4311b374B1D669a2bc6B"
+   ],
+   "0xba876237b0f021a6c6d852d6c26e107997cc5e81": [
+    "base",
+    "0xEdB56c5DE751eD3182DDa337f7d9ab33cf091DcA"
+   ],
+   "0xe9c29585eae4b9a55b02a9605aea892b40d972e8": [
+    "base",
+    "0x32F587986D3fb47601157c19615d568BeD0BCabc"
+   ]
+  }
+ },
+ "feeds": {
+  "base": {
+   "desc": {
+    "0x0ca181015d21A5ed19baFC17F2138883C2b16D54": [
+     "JITOSOL / USD",
+     18
+    ],
+    "0x10509b4053385b49145Fab2D6B1c58e96Eac5b79": [
+     "CBBTC / USD",
+     18
+    ],
+    "0x121934C415937863d64ef93436169444633EE0d8": [
+     "HOME / USD",
+     18
+    ],
+    "0x17CAb8FE31E32f08326e5E27412894e49B0f9D65": [
+     "LINK / USD",
+     8
+    ],
+    "0x1B5FEF61Ff9B690364359b03cC07E060b12Bd3C1": [
+     "GHO / USD",
+     8
+    ],
+    "0x2330aaE3bca5F05169d5f4597964D44522F62930": [
+     "USDS / USD",
+     8
+    ],
+    "0x32F587986D3fb47601157c19615d568BeD0BCabc": [
+     "BTC / USD",
+     8
+    ],
+    "0x50015f8b17fb2C290Dde41fDc246ed0dcEE93a8b": [
+     "ETH / USD",
+     8
+    ],
+    "0x50997b806B574501cC34a2a6d845e4dc1Bd9Aa8c": [
+     "AVNT / USD",
+     8
+    ],
+    "0x591e79239a7d679378eC8c847e5038150364C78F": [
+     "DAI / USD",
+     8
+    ],
+    "0x65B5d02E1Fff839b8B67Fa26F8540e5f11454316": [
+     "AAVE / USD",
+     8
+    ],
+    "0x6D75BFB5A5885f841b132198C9f0bE8c872057BF": [
+     "TBTC / USD",
+     8
+    ],
+    "0x790181e93e9F4Eedb5b864860C12e4d2CffFe73B": [
+     "USDe / USD",
+     8
+    ],
+    "0x79cf4a31B29D69191f0b6E97916eB93FEB81E533": [
+     "sUSDe / USD",
+     8
+    ],
+    "0x7e860098F58bBFC8648a4311b374B1D669a2bc6B": [
+     "USDC / USD",
+     8
+    ],
+    "0x95051De9Db5Cac61682f64505006f2991dEaB3c2": [
+     "CBDOGE / USD",
+     8
+    ],
+    "0x9867186e52d2F1C2c565CDA6E747101Fa56501e0": [
+     "EURC / USD",
+     8
+    ],
+    "0x9e07546c9Fe8868855CD04B26051a26D1599E270": [
+     "LBTC / USD",
+     8
+    ],
+    "0xAa98aE504658766Dfe11F31c5D95a0bdcABDe0b1": [
+     "RSR / USD",
+     8
+    ],
+    "0xB48ac6409C0c3718b956089b0fFE295A10ACDdad": [
+     "PEPE / USD",
+     8
+    ],
+    "0xCCADC697c55bbB68dc5bCdf8d3CBe83CdD4E071E": [
+     "WBTC / USD",
+     8
+    ],
+    "0xD40e758b5eC80820B68DFC302fc5Ce1239083548": [
+     "YFI / USD",
+     8
+    ],
+    "0xDa5Fd22F9382e57534fEdA4fF544878aa1cf401f": [
+     "SOL / USD",
+     8
+    ],
+    "0xE62BcE5D7CB9d16AB8b4D622538bc0A50A5799c2": [
+     "DEGEN / USD",
+     8
+    ],
+    "0xEEe1a9D5A0C36d99972C057Cb959267e88Ab9160": [
+     "CBXRP / USD",
+     8
+    ],
+    "0xEaf310161c9eF7c813A14f8FEF6Fb271434019F7": [
+     "VIRTUAL / USD",
+     8
+    ],
+    "0xEdB56c5DE751eD3182DDa337f7d9ab33cf091DcA": [
+     "HYPE / USD",
+     8
+    ],
+    "0xFCb2C36ac8A91cE9D3c94590ED239E1f683467fe": [
+     "USDAI / USD",
+     8
+    ],
+    "0xaABc55Ca55D70B034e4daA2551A224239890282F": [
+     "VVV / USD",
+     18
+    ],
+    "0xc15d9944dAefE2dB03e53bef8DDA25a56832C5fe": [
+     "WELL / USD",
+     8
+    ],
+    "0xd49c546D32D5472a7F7704EC183128512a1B2fcb": [
+     "PAXG / USD",
+     8
+    ],
+    "0xd7818272B9e248357d13057AAb0B417aF31E817d": [
+     "CBETH / USD",
+     8
+    ],
+    "0xdc31a4CCfCA039BeC6222e20BE7770E12581bfEB": [
+     "ZRO / USD",
+     8
+    ],
+    "0xe95e258bb6615d47515Fc849f8542dA651f12bF6": [
+     "MORPHO / USD",
+     8
+    ],
+    "0xeF7541b388a77C1709a3d44BfBfC5c1ED3F0Ac94": [
+     "MAMO / USD",
+     8
+    ],
+    "0xf19d560eB8d2ADf07BD6D13ed03e1D11215721F9": [
+     "USDT / USD",
+     8
+    ]
+   },
+   "days": {
+    "2026-10-22": {
+     "0x0ca181015d21A5ed19baFC17F2138883C2b16D54": {
+      "answer": 135.15547873855905,
+      "updatedAt": 1792687727
+     },
+     "0x10509b4053385b49145Fab2D6B1c58e96Eac5b79": {
+      "answer": 81181.87967700958,
+      "updatedAt": 1792687657
+     },
+     "0x121934C415937863d64ef93436169444633EE0d8": {
+      "answer": 0.0049288413,
+      "updatedAt": 1792712809
+     },
+     "0x17CAb8FE31E32f08326e5E27412894e49B0f9D65": {
+      "answer": 11.94158,
+      "updatedAt": 1792703411
+     },
+     "0x1B5FEF61Ff9B690364359b03cC07E060b12Bd3C1": {
+      "answer": 0.998702,
+      "updatedAt": 1792701023
+     },
+     "0x2330aaE3bca5F05169d5f4597964D44522F62930": {
+      "answer": 0.99980042,
+      "updatedAt": 1792679415
+     },
+     "0x32F587986D3fb47601157c19615d568BeD0BCabc": {
+      "answer": 81254.86842154,
+      "updatedAt": 1792712683
+     },
+     "0x50015f8b17fb2C290Dde41fDc246ed0dcEE93a8b": {
+      "answer": 2385.19497742,
+      "updatedAt": 1792713237
+     },
+     "0x50997b806B574501cC34a2a6d845e4dc1Bd9Aa8c": {
+      "answer": 0.107747,
+      "updatedAt": 1792710121
+     },
+     "0x591e79239a7d679378eC8c847e5038150364C78F": {
+      "answer": 0.99958153,
+      "updatedAt": 1792679347
+     },
+     "0x65B5d02E1Fff839b8B67Fa26F8540e5f11454316": {
+      "answer": 146.3447,
+      "updatedAt": 1792707755
+     },
+     "0x6D75BFB5A5885f841b132198C9f0bE8c872057BF": {
+      "answer": 81126.18202836,
+      "updatedAt": 1792687687
+     },
+     "0x790181e93e9F4Eedb5b864860C12e4d2CffFe73B": {
+      "answer": 0.99976758,
+      "updatedAt": 1792678897
+     },
+     "0x79cf4a31B29D69191f0b6E97916eB93FEB81E533": {
+      "answer": 1.25380203,
+      "updatedAt": 1792681457
+     },
+     "0x7e860098F58bBFC8648a4311b374B1D669a2bc6B": {
+      "answer": 0.99983572,
+      "updatedAt": 1792673539
+     },
+     "0x95051De9Db5Cac61682f64505006f2991dEaB3c2": {
+      "answer": 0.07844991,
+      "updatedAt": 1792689541
+     },
+     "0x9867186e52d2F1C2c565CDA6E747101Fa56501e0": {
+      "answer": 1.12184005,
+      "updatedAt": 1792711083
+     },
+     "0x9e07546c9Fe8868855CD04B26051a26D1599E270": {
+      "answer": 81696.75597203,
+      "updatedAt": 1792660379
+     },
+     "0xAa98aE504658766Dfe11F31c5D95a0bdcABDe0b1": {
+      "answer": 0.0018018,
+      "updatedAt": 1792677147
+     },
+     "0xB48ac6409C0c3718b956089b0fFE295A10ACDdad": {
+      "answer": 4.37e-06,
+      "updatedAt": 1792707747
+     },
+     "0xCCADC697c55bbB68dc5bCdf8d3CBe83CdD4E071E": {
+      "answer": 81084.04200707,
+      "updatedAt": 1792712595
+     },
+     "0xD40e758b5eC80820B68DFC302fc5Ce1239083548": {
+      "answer": 2135.62351991,
+      "updatedAt": 1792708977
+     },
+     "0xDa5Fd22F9382e57534fEdA4fF544878aa1cf401f": {
+      "answer": 103.40135371,
+      "updatedAt": 1792704913
+     },
+     "0xE62BcE5D7CB9d16AB8b4D622538bc0A50A5799c2": {
+      "answer": 0.00094671,
+      "updatedAt": 1792705297
+     },
+     "0xEEe1a9D5A0C36d99972C057Cb959267e88Ab9160": {
+      "answer": 1.30671157,
+      "updatedAt": 1792703755
+     },
+     "0xEaf310161c9eF7c813A14f8FEF6Fb271434019F7": {
+      "answer": 0.64768346,
+      "updatedAt": 1792712113
+     },
+     "0xEdB56c5DE751eD3182DDa337f7d9ab33cf091DcA": {
+      "answer": 77.26278512,
+      "updatedAt": 1792708257
+     },
+     "0xFCb2C36ac8A91cE9D3c94590ED239E1f683467fe": {
+      "answer": 0.9997735,
+      "updatedAt": 1792681035
+     },
+     "0xaABc55Ca55D70B034e4daA2551A224239890282F": {
+      "answer": 26.168428188042842,
+      "updatedAt": 1792713427
+     },
+     "0xc15d9944dAefE2dB03e53bef8DDA25a56832C5fe": {
+      "answer": 0.0021657,
+      "updatedAt": 1792713417
+     },
+     "0xd49c546D32D5472a7F7704EC183128512a1B2fcb": {
+      "answer": 4033.98197635,
+      "updatedAt": 1792695831
+     },
+     "0xd7818272B9e248357d13057AAb0B417aF31E817d": {
+      "answer": 2725.21421,
+      "updatedAt": 1792713343
+     },
+     "0xdc31a4CCfCA039BeC6222e20BE7770E12581bfEB": {
+      "answer": 1.78480976,
+      "updatedAt": 1792712603
+     },
+     "0xe95e258bb6615d47515Fc849f8542dA651f12bF6": {
+      "answer": 2.259438,
+      "updatedAt": 1792707765
+     },
+     "0xeF7541b388a77C1709a3d44BfBfC5c1ED3F0Ac94": {
+      "answer": 0.006621,
+      "updatedAt": 1792709983
+     },
+     "0xf19d560eB8d2ADf07BD6D13ed03e1D11215721F9": {
+      "answer": 0.99900475,
+      "updatedAt": 1792673585
+     }
+    },
+    "2026-10-23": {
+     "0x0ca181015d21A5ed19baFC17F2138883C2b16D54": {
+      "answer": 133.8265071579674,
+      "updatedAt": 1792797621
+     },
+     "0x10509b4053385b49145Fab2D6B1c58e96Eac5b79": {
+      "answer": 80722.32054259318,
+      "updatedAt": 1792795897
+     },
+     "0x121934C415937863d64ef93436169444633EE0d8": {
+      "answer": 0.0050840185,
+      "updatedAt": 1792798987
+     },
+     "0x17CAb8FE31E32f08326e5E27412894e49B0f9D65": {
+      "answer": 11.79604,
+      "updatedAt": 1792799283
+     },
+     "0x1B5FEF61Ff9B690364359b03cC07E060b12Bd3C1": {
+      "answer": 0.99863772,
+      "updatedAt": 1792787427
+     },
+     "0x2330aaE3bca5F05169d5f4597964D44522F62930": {
+      "answer": 0.999765,
+      "updatedAt": 1792765819
+     },
+     "0x32F587986D3fb47601157c19615d568BeD0BCabc": {
+      "answer": 81091.19,
+      "updatedAt": 1792799401
+     },
+     "0x50015f8b17fb2C290Dde41fDc246ed0dcEE93a8b": {
+      "answer": 2382.10559614,
+      "updatedAt": 1792799281
+     },
+     "0x50997b806B574501cC34a2a6d845e4dc1Bd9Aa8c": {
+      "answer": 0.11520248,
+      "updatedAt": 1792799767
+     },
+     "0x591e79239a7d679378eC8c847e5038150364C78F": {
+      "answer": 0.99977739,
+      "updatedAt": 1792765765
+     },
+     "0x65B5d02E1Fff839b8B67Fa26F8540e5f11454316": {
+      "answer": 144.21315844,
+      "updatedAt": 1792799355
+     },
+     "0x6D75BFB5A5885f841b132198C9f0bE8c872057BF": {
+      "answer": 80775.44901782,
+      "updatedAt": 1792795927
+     },
+     "0x790181e93e9F4Eedb5b864860C12e4d2CffFe73B": {
+      "answer": 0.999731,
+      "updatedAt": 1792765307
+     },
+     "0x79cf4a31B29D69191f0b6E97916eB93FEB81E533": {
+      "answer": 1.25426114,
+      "updatedAt": 1792767883
+     },
+     "0x7e860098F58bBFC8648a4311b374B1D669a2bc6B": {
+      "answer": 0.99984937,
+      "updatedAt": 1792759957
+     },
+     "0x95051De9Db5Cac61682f64505006f2991dEaB3c2": {
+      "answer": 0.07801093,
+      "updatedAt": 1792795937
+     },
+     "0x9867186e52d2F1C2c565CDA6E747101Fa56501e0": {
+      "answer": 1.11972184,
+      "updatedAt": 1792799811
+     },
+     "0x9e07546c9Fe8868855CD04B26051a26D1599E270": {
+      "answer": 80976.65841375,
+      "updatedAt": 1792795739
+     },
+     "0xAa98aE504658766Dfe11F31c5D95a0bdcABDe0b1": {
+      "answer": 0.00172687,
+      "updatedAt": 1792795759
+     },
+     "0xB48ac6409C0c3718b956089b0fFE295A10ACDdad": {
+      "answer": 4.56e-06,
+      "updatedAt": 1792799747
+     },
+     "0xCCADC697c55bbB68dc5bCdf8d3CBe83CdD4E071E": {
+      "answer": 80856.11073738,
+      "updatedAt": 1792799349
+     },
+     "0xD40e758b5eC80820B68DFC302fc5Ce1239083548": {
+      "answer": 2181.65051413,
+      "updatedAt": 1792799535
+     },
+     "0xDa5Fd22F9382e57534fEdA4fF544878aa1cf401f": {
+      "answer": 102.31760058,
+      "updatedAt": 1792797515
+     },
+     "0xE62BcE5D7CB9d16AB8b4D622538bc0A50A5799c2": {
+      "answer": 0.00093851,
+      "updatedAt": 1792798575
+     },
+     "0xEEe1a9D5A0C36d99972C057Cb959267e88Ab9160": {
+      "answer": 1.29001851,
+      "updatedAt": 1792797663
+     },
+     "0xEaf310161c9eF7c813A14f8FEF6Fb271434019F7": {
+      "answer": 0.64358917,
+      "updatedAt": 1792799281
+     },
+     "0xEdB56c5DE751eD3182DDa337f7d9ab33cf091DcA": {
+      "answer": 76.6937,
+      "updatedAt": 1792797709
+     },
+     "0xFCb2C36ac8A91cE9D3c94590ED239E1f683467fe": {
+      "answer": 0.99999904,
+      "updatedAt": 1792767451
+     },
+     "0xaABc55Ca55D70B034e4daA2551A224239890282F": {
+      "answer": 24.98885264,
+      "updatedAt": 1792799185
+     },
+     "0xc15d9944dAefE2dB03e53bef8DDA25a56832C5fe": {
+      "answer": 0.00212496,
+      "updatedAt": 1792795727
+     },
+     "0xd49c546D32D5472a7F7704EC183128512a1B2fcb": {
+      "answer": 4010.20447066,
+      "updatedAt": 1792766431
+     },
+     "0xd7818272B9e248357d13057AAb0B417aF31E817d": {
+      "answer": 2720.24471479,
+      "updatedAt": 1792799285
+     },
+     "0xdc31a4CCfCA039BeC6222e20BE7770E12581bfEB": {
+      "answer": 1.69721487,
+      "updatedAt": 1792797999
+     },
+     "0xe95e258bb6615d47515Fc849f8542dA651f12bF6": {
+      "answer": 2.2419149,
+      "updatedAt": 1792799271
+     },
+     "0xeF7541b388a77C1709a3d44BfBfC5c1ED3F0Ac94": {
+      "answer": 0.00661047,
+      "updatedAt": 1792799731
+     },
+     "0xf19d560eB8d2ADf07BD6D13ed03e1D11215721F9": {
+      "answer": 0.99878486,
+      "updatedAt": 1792760003
+     }
+    },
+    "2026-11-01": {
+     "0x0ca181015d21A5ed19baFC17F2138883C2b16D54": {
+      "answer": 123.22806054046977,
+      "updatedAt": 1793574823
+     },
+     "0x10509b4053385b49145Fab2D6B1c58e96Eac5b79": {
+      "answer": 78011.2973650038,
+      "updatedAt": 1793574767
+     },
+     "0x121934C415937863d64ef93436169444633EE0d8": {
+      "answer": 0.005171927,
+      "updatedAt": 1793574277
+     },
+     "0x17CAb8FE31E32f08326e5E27412894e49B0f9D65": {
+      "answer": 11.38355507,
+      "updatedAt": 1793574783
+     },
+     "0x1B5FEF61Ff9B690364359b03cC07E060b12Bd3C1": {
+      "answer": 0.99876835,
+      "updatedAt": 1793565169
+     },
+     "0x2330aaE3bca5F05169d5f4597964D44522F62930": {
+      "answer": 0.99968159,
+      "updatedAt": 1793543597
+     },
+     "0x32F587986D3fb47601157c19615d568BeD0BCabc": {
+      "answer": 78242.06,
+      "updatedAt": 1793577543
+     },
+     "0x50015f8b17fb2C290Dde41fDc246ed0dcEE93a8b": {
+      "answer": 2273.05799502,
+      "updatedAt": 1793577565
+     },
+     "0x50997b806B574501cC34a2a6d845e4dc1Bd9Aa8c": {
+      "answer": 0.09190533,
+      "updatedAt": 1793576369
+     },
+     "0x591e79239a7d679378eC8c847e5038150364C78F": {
+      "answer": 0.99956077,
+      "updatedAt": 1793568257
+     },
+     "0x65B5d02E1Fff839b8B67Fa26F8540e5f11454316": {
+      "answer": 135.12557467,
+      "updatedAt": 1793576373
+     },
+     "0x6D75BFB5A5885f841b132198C9f0bE8c872057BF": {
+      "answer": 78007.53938366,
+      "updatedAt": 1793574779
+     },
+     "0x790181e93e9F4Eedb5b864860C12e4d2CffFe73B": {
+      "answer": 0.998802,
+      "updatedAt": 1793576171
+     },
+     "0x79cf4a31B29D69191f0b6E97916eB93FEB81E533": {
+      "answer": 1.25452711,
+      "updatedAt": 1793501607
+     },
+     "0x7e860098F58bBFC8648a4311b374B1D669a2bc6B": {
+      "answer": 0.99973077,
+      "updatedAt": 1793537719
+     },
+     "0x95051De9Db5Cac61682f64505006f2991dEaB3c2": {
+      "answer": 0.07538204,
+      "updatedAt": 1793576119
+     },
+     "0x9867186e52d2F1C2c565CDA6E747101Fa56501e0": {
+      "answer": 1.11540244,
+      "updatedAt": 1793576475
+     },
+     "0x9e07546c9Fe8868855CD04B26051a26D1599E270": {
+      "answer": 77979.49118584,
+      "updatedAt": 1793557043
+     },
+     "0xAa98aE504658766Dfe11F31c5D95a0bdcABDe0b1": {
+      "answer": 0.0014607,
+      "updatedAt": 1793572723
+     },
+     "0xB48ac6409C0c3718b956089b0fFE295A10ACDdad": {
+      "answer": 4.89e-06,
+      "updatedAt": 1793574339
+     },
+     "0xCCADC697c55bbB68dc5bCdf8d3CBe83CdD4E071E": {
+      "answer": 78165.527059,
+      "updatedAt": 1793577547
+     },
+     "0xD40e758b5eC80820B68DFC302fc5Ce1239083548": {
+      "answer": 1983.82714168,
+      "updatedAt": 1793573461
+     },
+     "0xDa5Fd22F9382e57534fEdA4fF544878aa1cf401f": {
+      "answer": 94.15830542,
+      "updatedAt": 1793574815
+     },
+     "0xE62BcE5D7CB9d16AB8b4D622538bc0A50A5799c2": {
+      "answer": 0.00086488,
+      "updatedAt": 1793575309
+     },
+     "0xEEe1a9D5A0C36d99972C057Cb959267e88Ab9160": {
+      "answer": 1.24693618,
+      "updatedAt": 1793535523
+     },
+     "0xEaf310161c9eF7c813A14f8FEF6Fb271434019F7": {
+      "answer": 0.59434171,
+      "updatedAt": 1793574709
+     },
+     "0xEdB56c5DE751eD3182DDa337f7d9ab33cf091DcA": {
+      "answer": 87.51189,
+      "updatedAt": 1793574709
+     },
+     "0xFCb2C36ac8A91cE9D3c94590ED239E1f683467fe": {
+      "answer": 0.9995054,
+      "updatedAt": 1793545169
+     },
+     "0xaABc55Ca55D70B034e4daA2551A224239890282F": {
+      "answer": 22.84319179,
+      "updatedAt": 1793574589
+     },
+     "0xc15d9944dAefE2dB03e53bef8DDA25a56832C5fe": {
+      "answer": 0.001913,
+      "updatedAt": 1793577135
+     },
+     "0xd49c546D32D5472a7F7704EC183128512a1B2fcb": {
+      "answer": 3892.94579292,
+      "updatedAt": 1793554539
+     },
+     "0xd7818272B9e248357d13057AAb0B417aF31E817d": {
+      "answer": 2596.79525722,
+      "updatedAt": 1793577583
+     },
+     "0xdc31a4CCfCA039BeC6222e20BE7770E12581bfEB": {
+      "answer": 1.8111235,
+      "updatedAt": 1793576445
+     },
+     "0xe95e258bb6615d47515Fc849f8542dA651f12bF6": {
+      "answer": 2.24325,
+      "updatedAt": 1793571463
+     },
+     "0xeF7541b388a77C1709a3d44BfBfC5c1ED3F0Ac94": {
+      "answer": 0.00565318,
+      "updatedAt": 1793576333
+     },
+     "0xf19d560eB8d2ADf07BD6D13ed03e1D11215721F9": {
+      "answer": 0.99875258,
+      "updatedAt": 1793537739
+     }
+    },
+    "2026-11-15": {
+     "0x0ca181015d21A5ed19baFC17F2138883C2b16D54": {
+      "answer": 95.17317199572533,
+      "updatedAt": 1794786007
+     },
+     "0x10509b4053385b49145Fab2D6B1c58e96Eac5b79": {
+      "answer": 65322.62905194331,
+      "updatedAt": 1794786004
+     },
+     "0x121934C415937863d64ef93436169444633EE0d8": {
+      "answer": 0.0040928508,
+      "updatedAt": 1794783476
+     },
+     "0x17CAb8FE31E32f08326e5E27412894e49B0f9D65": {
+      "answer": 9.28980957,
+      "updatedAt": 1794785851
+     },
+     "0x1B5FEF61Ff9B690364359b03cC07E060b12Bd3C1": {
+      "answer": 0.99896143,
+      "updatedAt": 1794775053
+     },
+     "0x2330aaE3bca5F05169d5f4597964D44522F62930": {
+      "answer": 0.99992188,
+      "updatedAt": 1794753422
+     },
+     "0x32F587986D3fb47601157c19615d568BeD0BCabc": {
+      "answer": 65305.913,
+      "updatedAt": 1794787138
+     },
+     "0x50015f8b17fb2C290Dde41fDc246ed0dcEE93a8b": {
+      "answer": 1834.38434071,
+      "updatedAt": 1794787101
+     },
+     "0x50997b806B574501cC34a2a6d845e4dc1Bd9Aa8c": {
+      "answer": 0.07151678,
+      "updatedAt": 1794786068
+     },
+     "0x591e79239a7d679378eC8c847e5038150364C78F": {
+      "answer": 0.999275,
+      "updatedAt": 1794778084
+     },
+     "0x65B5d02E1Fff839b8B67Fa26F8540e5f11454316": {
+      "answer": 109.65592,
+      "updatedAt": 1794787145
+     },
+     "0x6D75BFB5A5885f841b132198C9f0bE8c872057BF": {
+      "answer": 65045.95401852,
+      "updatedAt": 1794781058
+     },
+     "0x790181e93e9F4Eedb5b864860C12e4d2CffFe73B": {
+      "answer": 0.99972086,
+      "updatedAt": 1794783685
+     },
+     "0x79cf4a31B29D69191f0b6E97916eB93FEB81E533": {
+      "answer": 1.25683279,
+      "updatedAt": 1794711454
+     },
+     "0x7e860098F58bBFC8648a4311b374B1D669a2bc6B": {
+      "answer": 0.99976257,
+      "updatedAt": 1794747564
+     },
+     "0x95051De9Db5Cac61682f64505006f2991dEaB3c2": {
+      "answer": 0.05972414,
+      "updatedAt": 1794785859
+     },
+     "0x9867186e52d2F1C2c565CDA6E747101Fa56501e0": {
+      "answer": 1.10127359,
+      "updatedAt": 1794785742
+     },
+     "0x9e07546c9Fe8868855CD04B26051a26D1599E270": {
+      "answer": 65456.54328935,
+      "updatedAt": 1794783669
+     },
+     "0xAa98aE504658766Dfe11F31c5D95a0bdcABDe0b1": {
+      "answer": 0.00134588,
+      "updatedAt": 1794786133
+     },
+     "0xB48ac6409C0c3718b956089b0fFE295A10ACDdad": {
+      "answer": 3.87e-06,
+      "updatedAt": 1794787113
+     },
+     "0xCCADC697c55bbB68dc5bCdf8d3CBe83CdD4E071E": {
+      "answer": 65322.51720877,
+      "updatedAt": 1794787141
+     },
+     "0xD40e758b5eC80820B68DFC302fc5Ce1239083548": {
+      "answer": 1748.01717591,
+      "updatedAt": 1794786146
+     },
+     "0xDa5Fd22F9382e57534fEdA4fF544878aa1cf401f": {
+      "answer": 72.64026378,
+      "updatedAt": 1794785998
+     },
+     "0xE62BcE5D7CB9d16AB8b4D622538bc0A50A5799c2": {
+      "answer": 0.00071483,
+      "updatedAt": 1794786369
+     },
+     "0xEEe1a9D5A0C36d99972C057Cb959267e88Ab9160": {
+      "answer": 0.97252003,
+      "updatedAt": 1794785260
+     },
+     "0xEaf310161c9eF7c813A14f8FEF6Fb271434019F7": {
+      "answer": 0.45470962,
+      "updatedAt": 1794785320
+     },
+     "0xEdB56c5DE751eD3182DDa337f7d9ab33cf091DcA": {
+      "answer": 68.11220411,
+      "updatedAt": 1794786153
+     },
+     "0xFCb2C36ac8A91cE9D3c94590ED239E1f683467fe": {
+      "answer": 0.99983487,
+      "updatedAt": 1794755005
+     },
+     "0xaABc55Ca55D70B034e4daA2551A224239890282F": {
+      "answer": 20.483464,
+      "updatedAt": 1794785146
+     },
+     "0xc15d9944dAefE2dB03e53bef8DDA25a56832C5fe": {
+      "answer": 0.001439,
+      "updatedAt": 1794785298
+     },
+     "0xd49c546D32D5472a7F7704EC183128512a1B2fcb": {
+      "answer": 3882.17534371,
+      "updatedAt": 1794786404
+     },
+     "0xd7818272B9e248357d13057AAb0B417aF31E817d": {
+      "answer": 2097.19915391,
+      "updatedAt": 1794787092
+     },
+     "0xdc31a4CCfCA039BeC6222e20BE7770E12581bfEB": {
+      "answer": 1.40975857,
+      "updatedAt": 1794787131
+     },
+     "0xe95e258bb6615d47515Fc849f8542dA651f12bF6": {
+      "answer": 1.75990359,
+      "updatedAt": 1794785290
+     },
+     "0xeF7541b388a77C1709a3d44BfBfC5c1ED3F0Ac94": {
+      "answer": 0.00463533,
+      "updatedAt": 1794784381
+     },
+     "0xf19d560eB8d2ADf07BD6D13ed03e1D11215721F9": {
+      "answer": 0.99939,
+      "updatedAt": 1794747570
+     }
+    },
+    "2026-11-25": {
+     "0x0ca181015d21A5ed19baFC17F2138883C2b16D54": {
+      "answer": 92.459787,
+      "updatedAt": 1795644046
+     },
+     "0x10509b4053385b49145Fab2D6B1c58e96Eac5b79": {
+      "answer": 60221.63231245329,
+      "updatedAt": 1795648849
+     },
+     "0x121934C415937863d64ef93436169444633EE0d8": {
+      "answer": 0.00431515,
+      "updatedAt": 1795646039
+     },
+     "0x17CAb8FE31E32f08326e5E27412894e49B0f9D65": {
+      "answer": 9.05486347,
+      "updatedAt": 1795650937
+     },
+     "0x1B5FEF61Ff9B690364359b03cC07E060b12Bd3C1": {
+      "answer": 0.99895552,
+      "updatedAt": 1795639259
+     },
+     "0x2330aaE3bca5F05169d5f4597964D44522F62930": {
+      "answer": 0.99988449,
+      "updatedAt": 1795617584
+     },
+     "0x32F587986D3fb47601157c19615d568BeD0BCabc": {
+      "answer": 60405.53430503,
+      "updatedAt": 1795651081
+     },
+     "0x50015f8b17fb2C290Dde41fDc246ed0dcEE93a8b": {
+      "answer": 1692.54859282,
+      "updatedAt": 1795650680
+     },
+     "0x50997b806B574501cC34a2a6d845e4dc1Bd9Aa8c": {
+      "answer": 0.05891276,
+      "updatedAt": 1795649864
+     },
+     "0x591e79239a7d679378eC8c847e5038150364C78F": {
+      "answer": 1.000073,
+      "updatedAt": 1795642253
+     },
+     "0x65B5d02E1Fff839b8B67Fa26F8540e5f11454316": {
+      "answer": 95.267762,
+      "updatedAt": 1795650696
+     },
+     "0x6D75BFB5A5885f841b132198C9f0bE8c872057BF": {
+      "answer": 60158.78482504,
+      "updatedAt": 1795650698
+     },
+     "0x790181e93e9F4Eedb5b864860C12e4d2CffFe73B": {
+      "answer": 0.99985154,
+      "updatedAt": 1795648256
+     },
+     "0x79cf4a31B29D69191f0b6E97916eB93FEB81E533": {
+      "answer": 1.25955797,
+      "updatedAt": 1795575647
+     },
+     "0x7e860098F58bBFC8648a4311b374B1D669a2bc6B": {
+      "answer": 0.99987442,
+      "updatedAt": 1795611749
+     },
+     "0x95051De9Db5Cac61682f64505006f2991dEaB3c2": {
+      "answer": 0.05605381,
+      "updatedAt": 1795650818
+     },
+     "0x9867186e52d2F1C2c565CDA6E747101Fa56501e0": {
+      "answer": 1.09751058,
+      "updatedAt": 1795648006
+     },
+     "0x9e07546c9Fe8868855CD04B26051a26D1599E270": {
+      "answer": 60031.33613839,
+      "updatedAt": 1795630643
+     },
+     "0xAa98aE504658766Dfe11F31c5D95a0bdcABDe0b1": {
+      "answer": 0.00126531,
+      "updatedAt": 1795640186
+     },
+     "0xB48ac6409C0c3718b956089b0fFE295A10ACDdad": {
+      "answer": 3.47e-06,
+      "updatedAt": 1795650774
+     },
+     "0xCCADC697c55bbB68dc5bCdf8d3CBe83CdD4E071E": {
+      "answer": 60502.05392874,
+      "updatedAt": 1795650934
+     },
+     "0xD40e758b5eC80820B68DFC302fc5Ce1239083548": {
+      "answer": 1592.18693374,
+      "updatedAt": 1795648570
+     },
+     "0xDa5Fd22F9382e57534fEdA4fF544878aa1cf401f": {
+      "answer": 70.54570917,
+      "updatedAt": 1795648598
+     },
+     "0xE62BcE5D7CB9d16AB8b4D622538bc0A50A5799c2": {
+      "answer": 0.00066098,
+      "updatedAt": 1795643230
+     },
+     "0xEEe1a9D5A0C36d99972C057Cb959267e88Ab9160": {
+      "answer": 0.93551672,
+      "updatedAt": 1795645536
+     },
+     "0xEaf310161c9eF7c813A14f8FEF6Fb271434019F7": {
+      "answer": 0.35657728,
+      "updatedAt": 1795650090
+     },
+     "0xEdB56c5DE751eD3182DDa337f7d9ab33cf091DcA": {
+      "answer": 61.57863935,
+      "updatedAt": 1795650927
+     },
+     "0xFCb2C36ac8A91cE9D3c94590ED239E1f683467fe": {
+      "answer": 0.99989874,
+      "updatedAt": 1795619182
+     },
+     "0xaABc55Ca55D70B034e4daA2551A224239890282F": {
+      "answer": 29.23956579,
+      "updatedAt": 1795650713
+     },
+     "0xc15d9944dAefE2dB03e53bef8DDA25a56832C5fe": {
+      "answer": 0.00120276,
+      "updatedAt": 1795645983
+     },
+     "0xd49c546D32D5472a7F7704EC183128512a1B2fcb": {
+      "answer": 3567.48000017,
+      "updatedAt": 1795637813
+     },
+     "0xd7818272B9e248357d13057AAb0B417aF31E817d": {
+      "answer": 1936.29829426,
+      "updatedAt": 1795650275
+     },
+     "0xdc31a4CCfCA039BeC6222e20BE7770E12581bfEB": {
+      "answer": 1.02547522,
+      "updatedAt": 1795650942
+     },
+     "0xe95e258bb6615d47515Fc849f8542dA651f12bF6": {
+      "answer": 1.5856651,
+      "updatedAt": 1795649786
+     },
+     "0xeF7541b388a77C1709a3d44BfBfC5c1ED3F0Ac94": {
+      "answer": 0.00405805,
+      "updatedAt": 1795650362
+     },
+     "0xf19d560eB8d2ADf07BD6D13ed03e1D11215721F9": {
+      "answer": 0.99867,
+      "updatedAt": 1795611744
+     }
+    },
+    "2026-11-26": {
+     "0x0ca181015d21A5ed19baFC17F2138883C2b16D54": {
+      "answer": 93.05245593434745,
+      "updatedAt": 1795733784
+     },
+     "0x10509b4053385b49145Fab2D6B1c58e96Eac5b79": {
+      "answer": 60516.59785044878,
+      "updatedAt": 1795731088
+     },
+     "0x121934C415937863d64ef93436169444633EE0d8": {
+      "answer": 0.004239787283782954,
+      "updatedAt": 1795729967
+     },
+     "0x17CAb8FE31E32f08326e5E27412894e49B0f9D65": {
+      "answer": 9.26086071,
+      "updatedAt": 1795734475
+     },
+     "0x1B5FEF61Ff9B690364359b03cC07E060b12Bd3C1": {
+      "answer": 0.99917701,
+      "updatedAt": 1795725677
+     },
+     "0x2330aaE3bca5F05169d5f4597964D44522F62930": {
+      "answer": 0.99985179,
+      "updatedAt": 1795704006
+     },
+     "0x32F587986D3fb47601157c19615d568BeD0BCabc": {
+      "answer": 60499.60736388,
+      "updatedAt": 1795737275
+     },
+     "0x50015f8b17fb2C290Dde41fDc246ed0dcEE93a8b": {
+      "answer": 1687.1381,
+      "updatedAt": 1795737267
+     },
+     "0x50997b806B574501cC34a2a6d845e4dc1Bd9Aa8c": {
+      "answer": 0.059457,
+      "updatedAt": 1795734019
+     },
+     "0x591e79239a7d679378eC8c847e5038150364C78F": {
+      "answer": 1.000029,
+      "updatedAt": 1795728664
+     },
+     "0x65B5d02E1Fff839b8B67Fa26F8540e5f11454316": {
+      "answer": 94.38481,
+      "updatedAt": 1795732419
+     },
+     "0x6D75BFB5A5885f841b132198C9f0bE8c872057BF": {
+      "answer": 60351.08938833,
+      "updatedAt": 1795731213
+     },
+     "0x790181e93e9F4Eedb5b864860C12e4d2CffFe73B": {
+      "answer": 0.99975451,
+      "updatedAt": 1795734722
+     },
+     "0x79cf4a31B29D69191f0b6E97916eB93FEB81E533": {
+      "answer": 1.2596551,
+      "updatedAt": 1795662070
+     },
+     "0x7e860098F58bBFC8648a4311b374B1D669a2bc6B": {
+      "answer": 0.99987619,
+      "updatedAt": 1795698150
+     },
+     "0x95051De9Db5Cac61682f64505006f2991dEaB3c2": {
+      "answer": 0.05660165,
+      "updatedAt": 1795731022
+     },
+     "0x9867186e52d2F1C2c565CDA6E747101Fa56501e0": {
+      "answer": 1.09687337,
+      "updatedAt": 1795734424
+     },
+     "0x9e07546c9Fe8868855CD04B26051a26D1599E270": {
+      "answer": 60845.44248454,
+      "updatedAt": 1795708897
+     },
+     "0xAa98aE504658766Dfe11F31c5D95a0bdcABDe0b1": {
+      "answer": 0.00127932,
+      "updatedAt": 1795726604
+     },
+     "0xB48ac6409C0c3718b956089b0fFE295A10ACDdad": {
+      "answer": 3.47e-06,
+      "updatedAt": 1795737463
+     },
+     "0xCCADC697c55bbB68dc5bCdf8d3CBe83CdD4E071E": {
+      "answer": 60555.74130808,
+      "updatedAt": 1795737280
+     },
+     "0xD40e758b5eC80820B68DFC302fc5Ce1239083548": {
+      "answer": 1600.11553,
+      "updatedAt": 1795731193
+     },
+     "0xDa5Fd22F9382e57534fEdA4fF544878aa1cf401f": {
+      "answer": 70.87901431,
+      "updatedAt": 1795733773
+     },
+     "0xE62BcE5D7CB9d16AB8b4D622538bc0A50A5799c2": {
+      "answer": 0.00066303,
+      "updatedAt": 1795730496
+     },
+     "0xEEe1a9D5A0C36d99972C057Cb959267e88Ab9160": {
+      "answer": 0.9436082,
+      "updatedAt": 1795734151
+     },
+     "0xEaf310161c9eF7c813A14f8FEF6Fb271434019F7": {
+      "answer": 0.36301316,
+      "updatedAt": 1795737419
+     },
+     "0xEdB56c5DE751eD3182DDa337f7d9ab33cf091DcA": {
+      "answer": 62.10039387,
+      "updatedAt": 1795733803
+     },
+     "0xFCb2C36ac8A91cE9D3c94590ED239E1f683467fe": {
+      "answer": 0.99960062,
+      "updatedAt": 1795705587
+     },
+     "0xaABc55Ca55D70B034e4daA2551A224239890282F": {
+      "answer": 26.26097234,
+      "updatedAt": 1795735901
+     },
+     "0xc15d9944dAefE2dB03e53bef8DDA25a56832C5fe": {
+      "answer": 0.001196,
+      "updatedAt": 1795736903
+     },
+     "0xd49c546D32D5472a7F7704EC183128512a1B2fcb": {
+      "answer": 3552.98014327,
+      "updatedAt": 1795734562
+     },
+     "0xd7818272B9e248357d13057AAb0B417aF31E817d": {
+      "answer": 1931.32504799,
+      "updatedAt": 1795737281
+     },
+     "0xdc31a4CCfCA039BeC6222e20BE7770E12581bfEB": {
+      "answer": 1.1314855,
+      "updatedAt": 1795736366
+     },
+     "0xe95e258bb6615d47515Fc849f8542dA651f12bF6": {
+      "answer": 1.60203639,
+      "updatedAt": 1795734991
+     },
+     "0xeF7541b388a77C1709a3d44BfBfC5c1ED3F0Ac94": {
+      "answer": 0.00414794,
+      "updatedAt": 1795731365
+     },
+     "0xf19d560eB8d2ADf07BD6D13ed03e1D11215721F9": {
+      "answer": 0.99883,
+      "updatedAt": 1795698166
+     }
+    }
+   }
+  },
+  "ethereum": {
+   "desc": {
+    "0x04F84020Fdf10d9ee64D1dcC2986EDF2F556DA11": [
+     "EURC / USD",
+     8
+    ],
+    "0x14f0737d6b705259e521EA6E9E3506AC78dBd311": [
+     "USDG / USD",
+     8
+    ],
+    "0x26C46B7aD0012cA71F2298ada567dC9Af14E7f2A": [
+     "RLUSD / USD",
+     8
+    ],
+    "0x3E7d1eAB13ad0104d2750B8863b489D65364e32D": [
+     "USDT / USD",
+     8
+    ],
+    "0x3f12643D3f6f874d39C2a4c9f2Cd6f2DbAC877FC": [
+     "GHO / USD",
+     8
+    ],
+    "0x4ffC43a60e009B551865A93d232E33Fce9f01507": [
+     "SOL / USD",
+     8
+    ],
+    "0x5147eA642CAEF7BD9c1265AadcA78f997AbB9649": [
+     "ETH / USD",
+     8
+    ],
+    "0x553303d460EE0afB37EdFf9bE42922D8FF63220e": [
+     "UNI / USD",
+     8
+    ],
+    "0x7922912AB91eb6A4b0350b01Dd066994BA64f882": [
+     "CBBTC / USD",
+     8
+    ],
+    "0x7e891DEbD8FA0A4Cf6BE58Ddff5a8ca174FebDCB": [
+     "USD0 / USD",
+     8
+    ],
+    "0x8350b7De6a6a2C1368E7D4Bd968190e13E354297": [
+     "TBTC / USD",
+     8
+    ],
+    "0x8f1dF6D7F2db73eECE86a18b4381F4707b918FB1": [
+     "PYUSD / USD",
+     8
+    ],
+    "0x8fFfFfd4AfB6115b954Bd326cbe7B4BA576818f6": [
+     "USDC / USD",
+     8
+    ],
+    "0x9944D86CEB9160aF5C5feB251FD671923323f8C3": [
+     "PAXG / USD",
+     8
+    ],
+    "0x9B4a96210bc8D9D55b1908B465D8B0de68B7fF83": [
+     "frxUSD / USD",
+     8
+    ],
+    "0xAed0c38402a5d19df6E4c03F4E2DceD6e29c1ee9": [
+     "DAI / USD",
+     8
+    ],
+    "0xB00341502DfEA6Ced8A5786b4059d29dA5E4D1FD": [
+     "AUSD / USD",
+     18
+    ],
+    "0xB9E1E3A9feFf48998E45Fa90847ed4D467E8BcfD": [
+     "FRAX / USD",
+     8
+    ],
+    "0xE33592594f72Cc7ec8a05788be8E8455746C3a32": [
+     "DOLA / USD",
+     8
+    ],
+    "0xE5fa3A4e4208858ADdf2CDb4e12651E89f1f1A70": [
+     "LINK / USD",
+     8
+    ],
+    "0xEEf0C605546958c1f899b6fB336C20671f9cD49F": [
+     "CRVUSD / USD",
+     8
+    ],
+    "0xFF3BC18cCBd5999CE63E788A1c250a88626aD099": [
+     "sUSDe / USD",
+     8
+    ],
+    "0xa569d910839Ae8865Da8F8e70FfFb0cBA869F961": [
+     "USDe / USD",
+     8
+    ],
+    "0xbd7F896e60B650C01caf2d7279a1148189A68884": [
+     "AAVE / USD",
+     8
+    ],
+    "0xc90E3460424fb8ea79775089E9053113FEE34Ed0": [
+     "MUSD / USD",
+     8
+    ],
+    "0xee10fE5E7aa92dd7b136597449c3d5813cFC5F18": [
+     "SKY / USD",
+     8
+    ],
+    "0xfF30586cD0F29eD462364C7e81375FC0C71219b1": [
+     "USDS / USD",
+     8
+    ]
+   },
+   "days": {
+    "2026-10-22": {
+     "0x04F84020Fdf10d9ee64D1dcC2986EDF2F556DA11": {
+      "answer": 1.12253133,
+      "updatedAt": 1792689263
+     },
+     "0x14f0737d6b705259e521EA6E9E3506AC78dBd311": {
+      "answer": 0.99992015,
+      "updatedAt": 1792699583
+     },
+     "0x26C46B7aD0012cA71F2298ada567dC9Af14E7f2A": {
+      "answer": 1.000009,
+      "updatedAt": 1792644875
+     },
+     "0x3E7d1eAB13ad0104d2750B8863b489D65364e32D": {
+      "answer": 0.99891,
+      "updatedAt": 1792680239
+     },
+     "0x3f12643D3f6f874d39C2a4c9f2Cd6f2DbAC877FC": {
+      "answer": 0.99874711,
+      "updatedAt": 1792703627
+     },
+     "0x4ffC43a60e009B551865A93d232E33Fce9f01507": {
+      "answer": 104.19836961,
+      "updatedAt": 1792653107
+     },
+     "0x5147eA642CAEF7BD9c1265AadcA78f997AbB9649": {
+      "answer": 2381.347,
+      "updatedAt": 1792711055
+     },
+     "0x553303d460EE0afB37EdFf9bE42922D8FF63220e": {
+      "answer": 6.98032751,
+      "updatedAt": 1792711151
+     },
+     "0x7922912AB91eb6A4b0350b01Dd066994BA64f882": {
+      "answer": 80967.23368432,
+      "updatedAt": 1792687835
+     },
+     "0x7e891DEbD8FA0A4Cf6BE58Ddff5a8ca174FebDCB": {
+      "answer": 0.99914315,
+      "updatedAt": 1792699859
+     },
+     "0x8350b7De6a6a2C1368E7D4Bd968190e13E354297": {
+      "answer": 81064.22337379,
+      "updatedAt": 1792687715
+     },
+     "0x8f1dF6D7F2db73eECE86a18b4381F4707b918FB1": {
+      "answer": 0.999894,
+      "updatedAt": 1792699043
+     },
+     "0x8fFfFfd4AfB6115b954Bd326cbe7B4BA576818f6": {
+      "answer": 0.99981853,
+      "updatedAt": 1792633463
+     },
+     "0x9944D86CEB9160aF5C5feB251FD671923323f8C3": {
+      "answer": 4043.2818407,
+      "updatedAt": 1792687847
+     },
+     "0x9B4a96210bc8D9D55b1908B465D8B0de68B7fF83": {
+      "answer": 0.99966054,
+      "updatedAt": 1792682435
+     },
+     "0xAed0c38402a5d19df6E4c03F4E2DceD6e29c1ee9": {
+      "answer": 0.99949499,
+      "updatedAt": 1792710719
+     },
+     "0xB00341502DfEA6Ced8A5786b4059d29dA5E4D1FD": {
+      "answer": 0.9997992430409776,
+      "updatedAt": 1792645523
+     },
+     "0xB9E1E3A9feFf48998E45Fa90847ed4D467E8BcfD": {
+      "answer": 0.99132775,
+      "updatedAt": 1792711787
+     },
+     "0xE33592594f72Cc7ec8a05788be8E8455746C3a32": {
+      "answer": 0.99707855,
+      "updatedAt": 1792644407
+     },
+     "0xE5fa3A4e4208858ADdf2CDb4e12651E89f1f1A70": {
+      "answer": 11.90172548,
+      "updatedAt": 1792711343
+     },
+     "0xEEf0C605546958c1f899b6fB336C20671f9cD49F": {
+      "answer": 0.99841872,
+      "updatedAt": 1792691543
+     },
+     "0xFF3BC18cCBd5999CE63E788A1c250a88626aD099": {
+      "answer": 1.25363391,
+      "updatedAt": 1792702451
+     },
+     "0xa569d910839Ae8865Da8F8e70FfFb0cBA869F961": {
+      "answer": 0.99989147,
+      "updatedAt": 1792681379
+     },
+     "0xbd7F896e60B650C01caf2d7279a1148189A68884": {
+      "answer": 146.5795489,
+      "updatedAt": 1792710707
+     },
+     "0xc90E3460424fb8ea79775089E9053113FEE34Ed0": {
+      "answer": 0.99989535,
+      "updatedAt": 1792682279
+     },
+     "0xee10fE5E7aa92dd7b136597449c3d5813cFC5F18": {
+      "answer": 0.07296836,
+      "updatedAt": 1792692575
+     },
+     "0xfF30586cD0F29eD462364C7e81375FC0C71219b1": {
+      "answer": 0.99980393,
+      "updatedAt": 1792640843
+     }
+    },
+    "2026-10-23": {
+     "0x04F84020Fdf10d9ee64D1dcC2986EDF2F556DA11": {
+      "answer": 1.11910086,
+      "updatedAt": 1792744655
+     },
+     "0x14f0737d6b705259e521EA6E9E3506AC78dBd311": {
+      "answer": 0.99998998,
+      "updatedAt": 1792786007
+     },
+     "0x26C46B7aD0012cA71F2298ada567dC9Af14E7f2A": {
+      "answer": 1.00005186,
+      "updatedAt": 1792731287
+     },
+     "0x3E7d1eAB13ad0104d2750B8863b489D65364e32D": {
+      "answer": 0.99862102,
+      "updatedAt": 1792766639
+     },
+     "0x3f12643D3f6f874d39C2a4c9f2Cd6f2DbAC877FC": {
+      "answer": 0.9986417,
+      "updatedAt": 1792790051
+     },
+     "0x4ffC43a60e009B551865A93d232E33Fce9f01507": {
+      "answer": 102.36,
+      "updatedAt": 1792795739
+     },
+     "0x5147eA642CAEF7BD9c1265AadcA78f997AbB9649": {
+      "answer": 2376.48498297,
+      "updatedAt": 1792797731
+     },
+     "0x553303d460EE0afB37EdFf9bE42922D8FF63220e": {
+      "answer": 6.8929737,
+      "updatedAt": 1792797527
+     },
+     "0x7922912AB91eb6A4b0350b01Dd066994BA64f882": {
+      "answer": 81665.90473337,
+      "updatedAt": 1792774271
+     },
+     "0x7e891DEbD8FA0A4Cf6BE58Ddff5a8ca174FebDCB": {
+      "answer": 0.99903931,
+      "updatedAt": 1792786271
+     },
+     "0x8350b7De6a6a2C1368E7D4Bd968190e13E354297": {
+      "answer": 81724.58167749,
+      "updatedAt": 1792774127
+     },
+     "0x8f1dF6D7F2db73eECE86a18b4381F4707b918FB1": {
+      "answer": 1.00008856,
+      "updatedAt": 1792785479
+     },
+     "0x8fFfFfd4AfB6115b954Bd326cbe7B4BA576818f6": {
+      "answer": 0.99985102,
+      "updatedAt": 1792799135
+     },
+     "0x9944D86CEB9160aF5C5feB251FD671923323f8C3": {
+      "answer": 4002.30832004,
+      "updatedAt": 1792765295
+     },
+     "0x9B4a96210bc8D9D55b1908B465D8B0de68B7fF83": {
+      "answer": 0.99978597,
+      "updatedAt": 1792768859
+     },
+     "0xAed0c38402a5d19df6E4c03F4E2DceD6e29c1ee9": {
+      "answer": 1.00019949,
+      "updatedAt": 1792797719
+     },
+     "0xB00341502DfEA6Ced8A5786b4059d29dA5E4D1FD": {
+      "answer": 0.9998089667617707,
+      "updatedAt": 1792731959
+     },
+     "0xB9E1E3A9feFf48998E45Fa90847ed4D467E8BcfD": {
+      "answer": 0.99148572,
+      "updatedAt": 1792798799
+     },
+     "0xE33592594f72Cc7ec8a05788be8E8455746C3a32": {
+      "answer": 0.9968438,
+      "updatedAt": 1792730819
+     },
+     "0xE5fa3A4e4208858ADdf2CDb4e12651E89f1f1A70": {
+      "answer": 11.82007,
+      "updatedAt": 1792799387
+     },
+     "0xEEf0C605546958c1f899b6fB336C20671f9cD49F": {
+      "answer": 0.99851158,
+      "updatedAt": 1792777979
+     },
+     "0xFF3BC18cCBd5999CE63E788A1c250a88626aD099": {
+      "answer": 1.25423043,
+      "updatedAt": 1792788863
+     },
+     "0xa569d910839Ae8865Da8F8e70FfFb0cBA869F961": {
+      "answer": 0.99973807,
+      "updatedAt": 1792764203
+     },
+     "0xbd7F896e60B650C01caf2d7279a1148189A68884": {
+      "answer": 143.71968,
+      "updatedAt": 1792798139
+     },
+     "0xc90E3460424fb8ea79775089E9053113FEE34Ed0": {
+      "answer": 0.99992035,
+      "updatedAt": 1792768715
+     },
+     "0xee10fE5E7aa92dd7b136597449c3d5813cFC5F18": {
+      "answer": 0.07129347,
+      "updatedAt": 1792794827
+     },
+     "0xfF30586cD0F29eD462364C7e81375FC0C71219b1": {
+      "answer": 0.9996627,
+      "updatedAt": 1792723655
+     }
+    },
+    "2026-11-01": {
+     "0x04F84020Fdf10d9ee64D1dcC2986EDF2F556DA11": {
+      "answer": 1.11245186,
+      "updatedAt": 1793568971
+     },
+     "0x14f0737d6b705259e521EA6E9E3506AC78dBd311": {
+      "answer": 0.99990372,
+      "updatedAt": 1793563811
+     },
+     "0x26C46B7aD0012cA71F2298ada567dC9Af14E7f2A": {
+      "answer": 1.00000771,
+      "updatedAt": 1793509115
+     },
+     "0x3E7d1eAB13ad0104d2750B8863b489D65364e32D": {
+      "answer": 0.99867077,
+      "updatedAt": 1793544419
+     },
+     "0x3f12643D3f6f874d39C2a4c9f2Cd6f2DbAC877FC": {
+      "answer": 0.99870709,
+      "updatedAt": 1793567915
+     },
+     "0x4ffC43a60e009B551865A93d232E33Fce9f01507": {
+      "answer": 93.58691538,
+      "updatedAt": 1793560427
+     },
+     "0x5147eA642CAEF7BD9c1265AadcA78f997AbB9649": {
+      "answer": 2273.55,
+      "updatedAt": 1793576375
+     },
+     "0x553303d460EE0afB37EdFf9bE42922D8FF63220e": {
+      "answer": 7.2425849,
+      "updatedAt": 1793574827
+     },
+     "0x7922912AB91eb6A4b0350b01Dd066994BA64f882": {
+      "answer": 77867.14030068,
+      "updatedAt": 1793534675
+     },
+     "0x7e891DEbD8FA0A4Cf6BE58Ddff5a8ca174FebDCB": {
+      "answer": 0.99879464,
+      "updatedAt": 1793564087
+     },
+     "0x8350b7De6a6a2C1368E7D4Bd968190e13E354297": {
+      "answer": 77845.96865643,
+      "updatedAt": 1793541263
+     },
+     "0x8f1dF6D7F2db73eECE86a18b4381F4707b918FB1": {
+      "answer": 0.99964199,
+      "updatedAt": 1793563283
+     },
+     "0x8fFfFfd4AfB6115b954Bd326cbe7B4BA576818f6": {
+      "answer": 0.99966452,
+      "updatedAt": 1793544539
+     },
+     "0x9944D86CEB9160aF5C5feB251FD671923323f8C3": {
+      "answer": 3892.94570406,
+      "updatedAt": 1793554619
+     },
+     "0x9B4a96210bc8D9D55b1908B465D8B0de68B7fF83": {
+      "answer": 0.9997643,
+      "updatedAt": 1793568755
+     },
+     "0xAed0c38402a5d19df6E4c03F4E2DceD6e29c1ee9": {
+      "answer": 0.99971081,
+      "updatedAt": 1793577227
+     },
+     "0xB00341502DfEA6Ced8A5786b4059d29dA5E4D1FD": {
+      "answer": 0.9994801292742403,
+      "updatedAt": 1793509727
+     },
+     "0xB9E1E3A9feFf48998E45Fa90847ed4D467E8BcfD": {
+      "answer": 0.99086776,
+      "updatedAt": 1793574239
+     },
+     "0xE33592594f72Cc7ec8a05788be8E8455746C3a32": {
+      "answer": 0.99688836,
+      "updatedAt": 1793552675
+     },
+     "0xE5fa3A4e4208858ADdf2CDb4e12651E89f1f1A70": {
+      "answer": 11.34826825,
+      "updatedAt": 1793574623
+     },
+     "0xEEf0C605546958c1f899b6fB336C20671f9cD49F": {
+      "answer": 0.99852487,
+      "updatedAt": 1793497007
+     },
+     "0xFF3BC18cCBd5999CE63E788A1c250a88626aD099": {
+      "answer": 1.25452708,
+      "updatedAt": 1793501651
+     },
+     "0xa569d910839Ae8865Da8F8e70FfFb0cBA869F961": {
+      "answer": 0.99897316,
+      "updatedAt": 1793567915
+     },
+     "0xbd7F896e60B650C01caf2d7279a1148189A68884": {
+      "answer": 135.17728,
+      "updatedAt": 1793574803
+     },
+     "0xc90E3460424fb8ea79775089E9053113FEE34Ed0": {
+      "answer": 0.9996554,
+      "updatedAt": 1793546507
+     },
+     "0xee10fE5E7aa92dd7b136597449c3d5813cFC5F18": {
+      "answer": 0.06712243,
+      "updatedAt": 1793560439
+     },
+     "0xfF30586cD0F29eD462364C7e81375FC0C71219b1": {
+      "answer": 0.99994336,
+      "updatedAt": 1793551823
+     }
+    },
+    "2026-11-15": {
+     "0x04F84020Fdf10d9ee64D1dcC2986EDF2F556DA11": {
+      "answer": 1.10117683,
+      "updatedAt": 1794781667
+     },
+     "0x14f0737d6b705259e521EA6E9E3506AC78dBd311": {
+      "answer": 0.99994,
+      "updatedAt": 1794773687
+     },
+     "0x26C46B7aD0012cA71F2298ada567dC9Af14E7f2A": {
+      "answer": 0.999923,
+      "updatedAt": 1794719051
+     },
+     "0x3E7d1eAB13ad0104d2750B8863b489D65364e32D": {
+      "answer": 0.99932677,
+      "updatedAt": 1794754343
+     },
+     "0x3f12643D3f6f874d39C2a4c9f2Cd6f2DbAC877FC": {
+      "answer": 0.99890914,
+      "updatedAt": 1794777863
+     },
+     "0x4ffC43a60e009B551865A93d232E33Fce9f01507": {
+      "answer": 72.00624673,
+      "updatedAt": 1794733631
+     },
+     "0x5147eA642CAEF7BD9c1265AadcA78f997AbB9649": {
+      "answer": 1831.02328419,
+      "updatedAt": 1794785819
+     },
+     "0x553303d460EE0afB37EdFf9bE42922D8FF63220e": {
+      "answer": 5.18128517,
+      "updatedAt": 1794786455
+     },
+     "0x7922912AB91eb6A4b0350b01Dd066994BA64f882": {
+      "answer": 64568.68776196,
+      "updatedAt": 1794753695
+     },
+     "0x7e891DEbD8FA0A4Cf6BE58Ddff5a8ca174FebDCB": {
+      "answer": 0.99910144,
+      "updatedAt": 1794773927
+     },
+     "0x8350b7De6a6a2C1368E7D4Bd968190e13E354297": {
+      "answer": 65170.31775515,
+      "updatedAt": 1794733307
+     },
+     "0x8f1dF6D7F2db73eECE86a18b4381F4707b918FB1": {
+      "answer": 0.99997975,
+      "updatedAt": 1794773255
+     },
+     "0x8fFfFfd4AfB6115b954Bd326cbe7B4BA576818f6": {
+      "answer": 0.99972356,
+      "updatedAt": 1794786911
+     },
+     "0x9944D86CEB9160aF5C5feB251FD671923323f8C3": {
+      "answer": 3882.09920052,
+      "updatedAt": 1794786371
+     },
+     "0x9B4a96210bc8D9D55b1908B465D8B0de68B7fF83": {
+      "answer": 0.9996797,
+      "updatedAt": 1794778679
+     },
+     "0xAed0c38402a5d19df6E4c03F4E2DceD6e29c1ee9": {
+      "answer": 0.99991743,
+      "updatedAt": 1794783815
+     },
+     "0xB00341502DfEA6Ced8A5786b4059d29dA5E4D1FD": {
+      "answer": 0.9995255608254651,
+      "updatedAt": 1794719591
+     },
+     "0xB9E1E3A9feFf48998E45Fa90847ed4D467E8BcfD": {
+      "answer": 0.99122863,
+      "updatedAt": 1794784715
+     },
+     "0xE33592594f72Cc7ec8a05788be8E8455746C3a32": {
+      "answer": 0.995932,
+      "updatedAt": 1794762527
+     },
+     "0xE5fa3A4e4208858ADdf2CDb4e12651E89f1f1A70": {
+      "answer": 9.28727263,
+      "updatedAt": 1794786383
+     },
+     "0xEEf0C605546958c1f899b6fB336C20671f9cD49F": {
+      "answer": 0.99394677,
+      "updatedAt": 1794706871
+     },
+     "0xFF3BC18cCBd5999CE63E788A1c250a88626aD099": {
+      "answer": 1.25689369,
+      "updatedAt": 1794711503
+     },
+     "0xa569d910839Ae8865Da8F8e70FfFb0cBA869F961": {
+      "answer": 0.99960964,
+      "updatedAt": 1794727391
+     },
+     "0xbd7F896e60B650C01caf2d7279a1148189A68884": {
+      "answer": 109.43675,
+      "updatedAt": 1794786527
+     },
+     "0xc90E3460424fb8ea79775089E9053113FEE34Ed0": {
+      "answer": 0.99985923,
+      "updatedAt": 1794756347
+     },
+     "0xee10fE5E7aa92dd7b136597449c3d5813cFC5F18": {
+      "answer": 0.05444007,
+      "updatedAt": 1794735791
+     },
+     "0xfF30586cD0F29eD462364C7e81375FC0C71219b1": {
+      "answer": 0.99994269,
+      "updatedAt": 1794711311
+     }
+    },
+    "2026-11-25": {
+     "0x04F84020Fdf10d9ee64D1dcC2986EDF2F556DA11": {
+      "answer": 1.09710967,
+      "updatedAt": 1795625987
+     },
+     "0x14f0737d6b705259e521EA6E9E3506AC78dBd311": {
+      "answer": 1.00007,
+      "updatedAt": 1795637927
+     },
+     "0x26C46B7aD0012cA71F2298ada567dC9Af14E7f2A": {
+      "answer": 0.99997923,
+      "updatedAt": 1795583339
+     },
+     "0x3E7d1eAB13ad0104d2750B8863b489D65364e32D": {
+      "answer": 0.99855878,
+      "updatedAt": 1795618715
+     },
+     "0x3f12643D3f6f874d39C2a4c9f2Cd6f2DbAC877FC": {
+      "answer": 0.998964,
+      "updatedAt": 1795642091
+     },
+     "0x4ffC43a60e009B551865A93d232E33Fce9f01507": {
+      "answer": 70.56,
+      "updatedAt": 1795634243
+     },
+     "0x5147eA642CAEF7BD9c1265AadcA78f997AbB9649": {
+      "answer": 1692.5907,
+      "updatedAt": 1795650695
+     },
+     "0x553303d460EE0afB37EdFf9bE42922D8FF63220e": {
+      "answer": 4.73130686,
+      "updatedAt": 1795650815
+     },
+     "0x7922912AB91eb6A4b0350b01Dd066994BA64f882": {
+      "answer": 60455.81370513,
+      "updatedAt": 1795650947
+     },
+     "0x7e891DEbD8FA0A4Cf6BE58Ddff5a8ca174FebDCB": {
+      "answer": 0.99895232,
+      "updatedAt": 1795638131
+     },
+     "0x8350b7De6a6a2C1368E7D4Bd968190e13E354297": {
+      "answer": 60069.5201634,
+      "updatedAt": 1795634591
+     },
+     "0x8f1dF6D7F2db73eECE86a18b4381F4707b918FB1": {
+      "answer": 0.99989811,
+      "updatedAt": 1795637483
+     },
+     "0x8fFfFfd4AfB6115b954Bd326cbe7B4BA576818f6": {
+      "answer": 0.9998764,
+      "updatedAt": 1795615151
+     },
+     "0x9944D86CEB9160aF5C5feB251FD671923323f8C3": {
+      "answer": 3571.9138636,
+      "updatedAt": 1795638191
+     },
+     "0x9B4a96210bc8D9D55b1908B465D8B0de68B7fF83": {
+      "answer": 0.99991556,
+      "updatedAt": 1795642883
+     },
+     "0xAed0c38402a5d19df6E4c03F4E2DceD6e29c1ee9": {
+      "answer": 0.99971992,
+      "updatedAt": 1795650395
+     },
+     "0xB00341502DfEA6Ced8A5786b4059d29dA5E4D1FD": {
+      "answer": 0.999738,
+      "updatedAt": 1795583759
+     },
+     "0xB9E1E3A9feFf48998E45Fa90847ed4D467E8BcfD": {
+      "answer": 0.99411473,
+      "updatedAt": 1795647563
+     },
+     "0xE33592594f72Cc7ec8a05788be8E8455746C3a32": {
+      "answer": 0.995764,
+      "updatedAt": 1795626719
+     },
+     "0xE5fa3A4e4208858ADdf2CDb4e12651E89f1f1A70": {
+      "answer": 8.98751,
+      "updatedAt": 1795648031
+     },
+     "0xEEf0C605546958c1f899b6fB336C20671f9cD49F": {
+      "answer": 0.99664128,
+      "updatedAt": 1795571075
+     },
+     "0xFF3BC18cCBd5999CE63E788A1c250a88626aD099": {
+      "answer": 1.25956341,
+      "updatedAt": 1795575647
+     },
+     "0xa569d910839Ae8865Da8F8e70FfFb0cBA869F961": {
+      "answer": 0.9999443,
+      "updatedAt": 1795638539
+     },
+     "0xbd7F896e60B650C01caf2d7279a1148189A68884": {
+      "answer": 95.06111748,
+      "updatedAt": 1795648751
+     },
+     "0xc90E3460424fb8ea79775089E9053113FEE34Ed0": {
+      "answer": 0.99991711,
+      "updatedAt": 1795620563
+     },
+     "0xee10fE5E7aa92dd7b136597449c3d5813cFC5F18": {
+      "answer": 0.04155581,
+      "updatedAt": 1795644371
+     },
+     "0xfF30586cD0F29eD462364C7e81375FC0C71219b1": {
+      "answer": 0.99985224,
+      "updatedAt": 1795622375
+     }
+    },
+    "2026-11-26": {
+     "0x04F84020Fdf10d9ee64D1dcC2986EDF2F556DA11": {
+      "answer": 1.097085,
+      "updatedAt": 1795712399
+     },
+     "0x14f0737d6b705259e521EA6E9E3506AC78dBd311": {
+      "answer": 0.99999,
+      "updatedAt": 1795724339
+     },
+     "0x26C46B7aD0012cA71F2298ada567dC9Af14E7f2A": {
+      "answer": 1.00005496,
+      "updatedAt": 1795669751
+     },
+     "0x3E7d1eAB13ad0104d2750B8863b489D65364e32D": {
+      "answer": 0.99876,
+      "updatedAt": 1795705127
+     },
+     "0x3f12643D3f6f874d39C2a4c9f2Cd6f2DbAC877FC": {
+      "answer": 0.99906209,
+      "updatedAt": 1795728515
+     },
+     "0x4ffC43a60e009B551865A93d232E33Fce9f01507": {
+      "answer": 71.28283278,
+      "updatedAt": 1795720667
+     },
+     "0x5147eA642CAEF7BD9c1265AadcA78f997AbB9649": {
+      "answer": 1686.46211956,
+      "updatedAt": 1795734827
+     },
+     "0x553303d460EE0afB37EdFf9bE42922D8FF63220e": {
+      "answer": 4.63868224,
+      "updatedAt": 1795734407
+     },
+     "0x7922912AB91eb6A4b0350b01Dd066994BA64f882": {
+      "answer": 60496.06219561,
+      "updatedAt": 1795737359
+     },
+     "0x7e891DEbD8FA0A4Cf6BE58Ddff5a8ca174FebDCB": {
+      "answer": 0.9989369,
+      "updatedAt": 1795724543
+     },
+     "0x8350b7De6a6a2C1368E7D4Bd968190e13E354297": {
+      "answer": 60428.82901443,
+      "updatedAt": 1795721015
+     },
+     "0x8f1dF6D7F2db73eECE86a18b4381F4707b918FB1": {
+      "answer": 0.99999513,
+      "updatedAt": 1795723967
+     },
+     "0x8fFfFfd4AfB6115b954Bd326cbe7B4BA576818f6": {
+      "answer": 0.99987004,
+      "updatedAt": 1795697987
+     },
+     "0x9944D86CEB9160aF5C5feB251FD671923323f8C3": {
+      "answer": 3571.148,
+      "updatedAt": 1795703579
+     },
+     "0x9B4a96210bc8D9D55b1908B465D8B0de68B7fF83": {
+      "answer": 0.99990327,
+      "updatedAt": 1795729295
+     },
+     "0xAed0c38402a5d19df6E4c03F4E2DceD6e29c1ee9": {
+      "answer": 0.99973663,
+      "updatedAt": 1795737371
+     },
+     "0xB00341502DfEA6Ced8A5786b4059d29dA5E4D1FD": {
+      "answer": 0.9997416955677784,
+      "updatedAt": 1795670195
+     },
+     "0xB9E1E3A9feFf48998E45Fa90847ed4D467E8BcfD": {
+      "answer": 0.99385733,
+      "updatedAt": 1795734575
+     },
+     "0xE33592594f72Cc7ec8a05788be8E8455746C3a32": {
+      "answer": 0.99586156,
+      "updatedAt": 1795713143
+     },
+     "0xE5fa3A4e4208858ADdf2CDb4e12651E89f1f1A70": {
+      "answer": 9.26278429,
+      "updatedAt": 1795734731
+     },
+     "0xEEf0C605546958c1f899b6fB336C20671f9cD49F": {
+      "answer": 0.99679572,
+      "updatedAt": 1795657487
+     },
+     "0xFF3BC18cCBd5999CE63E788A1c250a88626aD099": {
+      "answer": 1.25965596,
+      "updatedAt": 1795662059
+     },
+     "0xa569d910839Ae8865Da8F8e70FfFb0cBA869F961": {
+      "answer": 0.99983066,
+      "updatedAt": 1795721351
+     },
+     "0xbd7F896e60B650C01caf2d7279a1148189A68884": {
+      "answer": 94.50116,
+      "updatedAt": 1795735895
+     },
+     "0xc90E3460424fb8ea79775089E9053113FEE34Ed0": {
+      "answer": 0.9998846,
+      "updatedAt": 1795706987
+     },
+     "0xee10fE5E7aa92dd7b136597449c3d5813cFC5F18": {
+      "answer": 0.045901,
+      "updatedAt": 1795704791
+     },
+     "0xfF30586cD0F29eD462364C7e81375FC0C71219b1": {
+      "answer": 0.99983181,
+      "updatedAt": 1795705223
+     }
+    }
+   }
+  },
+  "optimism": {
+   "desc": {
+    "0x0D276FC14719f9292D5C1eA2198673d1f4269246": [
+     "OP / USD",
+     8
+    ],
+    "0x13e3Ee699D1909E989722E753853AE30b17e08c5": [
+     "ETH / USD",
+     8
+    ],
+    "0x16a9FA2FDa030272Ce99B29CF780dFA30361E0f3": [
+     "USDC / USD",
+     8
+    ],
+    "0x2FCF37343e916eAEd1f1DdaaF84458a359b53877": [
+     "SNX / USD",
+     8
+    ],
+    "0x338ed6787f463394D24813b297401B9F05a8C9d1": [
+     "AAVE / USD",
+     8
+    ],
+    "0x4e1C6B168DCFD7758bC2Ab9d2865f1895813D236": [
+     "WLD / USD",
+     8
+    ],
+    "0x5a61374950D4BFa5a3D4f2CA36FC1d23A92b6f21": [
+     "TBTC / USD",
+     8
+    ],
+    "0x698B585CbC4407e2D54aa898B2600B53C68958f7": [
+     "WSTETH / USD",
+     8
+    ],
+    "0x718A5788b89454aAE3A028AE9c111A29Be6c2a6F": [
+     "WBTC / USD",
+     8
+    ],
+    "0x8dBa75e83DA73cc766A7e5a0ee71F656BAb470d6": [
+     "DAI / USD",
+     8
+    ],
+    "0x9A3C975993354354080d815e313eEEdEb907fF34": [
+     "ETHFI / USD",
+     18
+    ],
+    "0x9dfc79Aaeb5bb0f96C6e9402671981CdFc424052": [
+     "LUSD / USD",
+     8
+    ],
+    "0xDb2A51a5DD73865F1b0d1c33F99a96E0e7ae742c": [
+     "EURC / USD",
+     8
+    ],
+    "0xECef79E109e997bCA29c1c0897ec9d7b03647F5E": [
+     "USDT / USD",
+     8
+    ],
+    "0xbD92C6c284271c227a1e0bF1786F468b539f51D9": [
+     "CRV / USD",
+     8
+    ]
+   },
+   "days": {
+    "2026-10-22": {
+     "0x0D276FC14719f9292D5C1eA2198673d1f4269246": {
+      "answer": 0.11747842,
+      "updatedAt": 1792713081
+     },
+     "0x13e3Ee699D1909E989722E753853AE30b17e08c5": {
+      "answer": 2386.01464269,
+      "updatedAt": 1792713327
+     },
+     "0x16a9FA2FDa030272Ce99B29CF780dFA30361E0f3": {
+      "answer": 0.99982701,
+      "updatedAt": 1792698051
+     },
+     "0x2FCF37343e916eAEd1f1DdaaF84458a359b53877": {
+      "answer": 0.21174866,
+      "updatedAt": 1792713241
+     },
+     "0x338ed6787f463394D24813b297401B9F05a8C9d1": {
+      "answer": 146.44643551,
+      "updatedAt": 1792713085
+     },
+     "0x4e1C6B168DCFD7758bC2Ab9d2865f1895813D236": {
+      "answer": 0.54439206,
+      "updatedAt": 1792713325
+     },
+     "0x5a61374950D4BFa5a3D4f2CA36FC1d23A92b6f21": {
+      "answer": 81462.79876693,
+      "updatedAt": 1792704291
+     },
+     "0x698B585CbC4407e2D54aa898B2600B53C68958f7": {
+      "answer": 2976.40142691,
+      "updatedAt": 1792703443
+     },
+     "0x718A5788b89454aAE3A028AE9c111A29Be6c2a6F": {
+      "answer": 81152.55890601,
+      "updatedAt": 1792713247
+     },
+     "0x8dBa75e83DA73cc766A7e5a0ee71F656BAb470d6": {
+      "answer": 0.99964866,
+      "updatedAt": 1792689243
+     },
+     "0x9A3C975993354354080d815e313eEEdEb907fF34": {
+      "answer": 0.6437991677810552,
+      "updatedAt": 1792710645
+     },
+     "0x9dfc79Aaeb5bb0f96C6e9402671981CdFc424052": {
+      "answer": 1.00438168,
+      "updatedAt": 1792688455
+     },
+     "0xDb2A51a5DD73865F1b0d1c33F99a96E0e7ae742c": {
+      "answer": 1.12358412,
+      "updatedAt": 1792631199
+     },
+     "0xECef79E109e997bCA29c1c0897ec9d7b03647F5E": {
+      "answer": 0.99868,
+      "updatedAt": 1792698227
+     },
+     "0xbD92C6c284271c227a1e0bF1786F468b539f51D9": {
+      "answer": 0.36326027,
+      "updatedAt": 1792712655
+     }
+    },
+    "2026-10-23": {
+     "0x0D276FC14719f9292D5C1eA2198673d1f4269246": {
+      "answer": 0.1150035,
+      "updatedAt": 1792799327
+     },
+     "0x13e3Ee699D1909E989722E753853AE30b17e08c5": {
+      "answer": 2383.37039512,
+      "updatedAt": 1792799329
+     },
+     "0x16a9FA2FDa030272Ce99B29CF780dFA30361E0f3": {
+      "answer": 0.99984,
+      "updatedAt": 1792784473
+     },
+     "0x2FCF37343e916eAEd1f1DdaaF84458a359b53877": {
+      "answer": 0.20572766,
+      "updatedAt": 1792799485
+     },
+     "0x338ed6787f463394D24813b297401B9F05a8C9d1": {
+      "answer": 144.18727848,
+      "updatedAt": 1792799329
+     },
+     "0x4e1C6B168DCFD7758bC2Ab9d2865f1895813D236": {
+      "answer": 0.48065685,
+      "updatedAt": 1792798289
+     },
+     "0x5a61374950D4BFa5a3D4f2CA36FC1d23A92b6f21": {
+      "answer": 80964.44364279,
+      "updatedAt": 1792799205
+     },
+     "0x698B585CbC4407e2D54aa898B2600B53C68958f7": {
+      "answer": 2972.35403204,
+      "updatedAt": 1792799377
+     },
+     "0x718A5788b89454aAE3A028AE9c111A29Be6c2a6F": {
+      "answer": 80922.63090408,
+      "updatedAt": 1792799413
+     },
+     "0x8dBa75e83DA73cc766A7e5a0ee71F656BAb470d6": {
+      "answer": 1.000048,
+      "updatedAt": 1792775673
+     },
+     "0x9A3C975993354354080d815e313eEEdEb907fF34": {
+      "answer": 0.64309425,
+      "updatedAt": 1792799539
+     },
+     "0x9dfc79Aaeb5bb0f96C6e9402671981CdFc424052": {
+      "answer": 1.00415103,
+      "updatedAt": 1792774879
+     },
+     "0xDb2A51a5DD73865F1b0d1c33F99a96E0e7ae742c": {
+      "answer": 1.12199094,
+      "updatedAt": 1792717601
+     },
+     "0xECef79E109e997bCA29c1c0897ec9d7b03647F5E": {
+      "answer": 0.99883019,
+      "updatedAt": 1792784645
+     },
+     "0xbD92C6c284271c227a1e0bF1786F468b539f51D9": {
+      "answer": 0.35562321,
+      "updatedAt": 1792799343
+     }
+    },
+    "2026-11-01": {
+     "0x0D276FC14719f9292D5C1eA2198673d1f4269246": {
+      "answer": 0.11294137,
+      "updatedAt": 1793576821
+     },
+     "0x13e3Ee699D1909E989722E753853AE30b17e08c5": {
+      "answer": 2272.99024811,
+      "updatedAt": 1793577533
+     },
+     "0x16a9FA2FDa030272Ce99B29CF780dFA30361E0f3": {
+      "answer": 0.99969057,
+      "updatedAt": 1793562225
+     },
+     "0x2FCF37343e916eAEd1f1DdaaF84458a359b53877": {
+      "answer": 0.18053,
+      "updatedAt": 1793576905
+     },
+     "0x338ed6787f463394D24813b297401B9F05a8C9d1": {
+      "answer": 134.54020515,
+      "updatedAt": 1793577419
+     },
+     "0x4e1C6B168DCFD7758bC2Ab9d2865f1895813D236": {
+      "answer": 0.39210585,
+      "updatedAt": 1793576337
+     },
+     "0x5a61374950D4BFa5a3D4f2CA36FC1d23A92b6f21": {
+      "answer": 78051.20702108,
+      "updatedAt": 1793574827
+     },
+     "0x698B585CbC4407e2D54aa898B2600B53C68958f7": {
+      "answer": 2827.05873748,
+      "updatedAt": 1793574583
+     },
+     "0x718A5788b89454aAE3A028AE9c111A29Be6c2a6F": {
+      "answer": 78156.30713356,
+      "updatedAt": 1793577563
+     },
+     "0x8dBa75e83DA73cc766A7e5a0ee71F656BAb470d6": {
+      "answer": 0.99949458,
+      "updatedAt": 1793571097
+     },
+     "0x9A3C975993354354080d815e313eEEdEb907fF34": {
+      "answer": 0.6160730617491825,
+      "updatedAt": 1793576597
+     },
+     "0x9dfc79Aaeb5bb0f96C6e9402671981CdFc424052": {
+      "answer": 1.02929167,
+      "updatedAt": 1793562717
+     },
+     "0xDb2A51a5DD73865F1b0d1c33F99a96E0e7ae742c": {
+      "answer": 1.11588326,
+      "updatedAt": 1793542127
+     },
+     "0xECef79E109e997bCA29c1c0897ec9d7b03647F5E": {
+      "answer": 0.99870937,
+      "updatedAt": 1793550967
+     },
+     "0xbD92C6c284271c227a1e0bF1786F468b539f51D9": {
+      "answer": 0.27871468,
+      "updatedAt": 1793576857
+     }
+    },
+    "2026-11-15": {
+     "0x0D276FC14719f9292D5C1eA2198673d1f4269246": {
+      "answer": 0.08190051,
+      "updatedAt": 1794787025
+     },
+     "0x13e3Ee699D1909E989722E753853AE30b17e08c5": {
+      "answer": 1833.19923608,
+      "updatedAt": 1794787019
+     },
+     "0x16a9FA2FDa030272Ce99B29CF780dFA30361E0f3": {
+      "answer": 0.9997713,
+      "updatedAt": 1794772063
+     },
+     "0x2FCF37343e916eAEd1f1DdaaF84458a359b53877": {
+      "answer": 0.14933,
+      "updatedAt": 1794787127
+     },
+     "0x338ed6787f463394D24813b297401B9F05a8C9d1": {
+      "answer": 109.51398531,
+      "updatedAt": 1794787081
+     },
+     "0x4e1C6B168DCFD7758bC2Ab9d2865f1895813D236": {
+      "answer": 0.27125584,
+      "updatedAt": 1794786157
+     },
+     "0x5a61374950D4BFa5a3D4f2CA36FC1d23A92b6f21": {
+      "answer": 64896.94372892,
+      "updatedAt": 1794784491
+     },
+     "0x698B585CbC4407e2D54aa898B2600B53C68958f7": {
+      "answer": 2287.08710327,
+      "updatedAt": 1794785837
+     },
+     "0x718A5788b89454aAE3A028AE9c111A29Be6c2a6F": {
+      "answer": 65328.526155,
+      "updatedAt": 1794787165
+     },
+     "0x8dBa75e83DA73cc766A7e5a0ee71F656BAb470d6": {
+      "answer": 0.999327,
+      "updatedAt": 1794760321
+     },
+     "0x9A3C975993354354080d815e313eEEdEb907fF34": {
+      "answer": 0.497021512,
+      "updatedAt": 1794786089
+     },
+     "0x9dfc79Aaeb5bb0f96C6e9402671981CdFc424052": {
+      "answer": 1.00138331,
+      "updatedAt": 1794773487
+     },
+     "0xDb2A51a5DD73865F1b0d1c33F99a96E0e7ae742c": {
+      "answer": 1.09817927,
+      "updatedAt": 1794751105
+     },
+     "0xECef79E109e997bCA29c1c0897ec9d7b03647F5E": {
+      "answer": 0.99937853,
+      "updatedAt": 1794760809
+     },
+     "0xbD92C6c284271c227a1e0bF1786F468b539f51D9": {
+      "answer": 0.20658631,
+      "updatedAt": 1794787133
+     }
+    },
+    "2026-11-25": {
+     "0x0D276FC14719f9292D5C1eA2198673d1f4269246": {
+      "answer": 0.06922937,
+      "updatedAt": 1795650925
+     },
+     "0x13e3Ee699D1909E989722E753853AE30b17e08c5": {
+      "answer": 1691.84496951,
+      "updatedAt": 1795651103
+     },
+     "0x16a9FA2FDa030272Ce99B29CF780dFA30361E0f3": {
+      "answer": 0.9998462,
+      "updatedAt": 1795636311
+     },
+     "0x2FCF37343e916eAEd1f1DdaaF84458a359b53877": {
+      "answer": 0.14256159,
+      "updatedAt": 1795650949
+     },
+     "0x338ed6787f463394D24813b297401B9F05a8C9d1": {
+      "answer": 95.48074453,
+      "updatedAt": 1795650917
+     },
+     "0x4e1C6B168DCFD7758bC2Ab9d2865f1895813D236": {
+      "answer": 0.23915432,
+      "updatedAt": 1795644593
+     },
+     "0x5a61374950D4BFa5a3D4f2CA36FC1d23A92b6f21": {
+      "answer": 60212.57168616,
+      "updatedAt": 1795650939
+     },
+     "0x698B585CbC4407e2D54aa898B2600B53C68958f7": {
+      "answer": 2112.46108003,
+      "updatedAt": 1795649861
+     },
+     "0x718A5788b89454aAE3A028AE9c111A29Be6c2a6F": {
+      "answer": 60518.49873386,
+      "updatedAt": 1795650957
+     },
+     "0x8dBa75e83DA73cc766A7e5a0ee71F656BAb470d6": {
+      "answer": 0.99990659,
+      "updatedAt": 1795620083
+     },
+     "0x9A3C975993354354080d815e313eEEdEb907fF34": {
+      "answer": 0.44825293,
+      "updatedAt": 1795647685
+     },
+     "0x9dfc79Aaeb5bb0f96C6e9402671981CdFc424052": {
+      "answer": 1.00616351,
+      "updatedAt": 1795637671
+     },
+     "0xDb2A51a5DD73865F1b0d1c33F99a96E0e7ae742c": {
+      "answer": 1.09370137,
+      "updatedAt": 1795604417
+     },
+     "0xECef79E109e997bCA29c1c0897ec9d7b03647F5E": {
+      "answer": 0.99881,
+      "updatedAt": 1795623777
+     },
+     "0xbD92C6c284271c227a1e0bF1786F468b539f51D9": {
+      "answer": 0.17136321,
+      "updatedAt": 1795651131
+     }
+    },
+    "2026-11-26": {
+     "0x0D276FC14719f9292D5C1eA2198673d1f4269246": {
+      "answer": 0.06942965,
+      "updatedAt": 1795737517
+     },
+     "0x13e3Ee699D1909E989722E753853AE30b17e08c5": {
+      "answer": 1685.9437479,
+      "updatedAt": 1795737153
+     },
+     "0x16a9FA2FDa030272Ce99B29CF780dFA30361E0f3": {
+      "answer": 0.99985812,
+      "updatedAt": 1795722729
+     },
+     "0x2FCF37343e916eAEd1f1DdaaF84458a359b53877": {
+      "answer": 0.1437482,
+      "updatedAt": 1795737029
+     },
+     "0x338ed6787f463394D24813b297401B9F05a8C9d1": {
+      "answer": 94.4761,
+      "updatedAt": 1795736491
+     },
+     "0x4e1C6B168DCFD7758bC2Ab9d2865f1895813D236": {
+      "answer": 0.24040716,
+      "updatedAt": 1795734569
+     },
+     "0x5a61374950D4BFa5a3D4f2CA36FC1d23A92b6f21": {
+      "answer": 60308.320004,
+      "updatedAt": 1795733817
+     },
+     "0x698B585CbC4407e2D54aa898B2600B53C68958f7": {
+      "answer": 2103.51698699,
+      "updatedAt": 1795736851
+     },
+     "0x718A5788b89454aAE3A028AE9c111A29Be6c2a6F": {
+      "answer": 60561.84374081,
+      "updatedAt": 1795737285
+     },
+     "0x8dBa75e83DA73cc766A7e5a0ee71F656BAb470d6": {
+      "answer": 0.99995542,
+      "updatedAt": 1795706507
+     },
+     "0x9A3C975993354354080d815e313eEEdEb907fF34": {
+      "answer": 0.4457740403492787,
+      "updatedAt": 1795737215
+     },
+     "0x9dfc79Aaeb5bb0f96C6e9402671981CdFc424052": {
+      "answer": 1.00492805,
+      "updatedAt": 1795724079
+     },
+     "0xDb2A51a5DD73865F1b0d1c33F99a96E0e7ae742c": {
+      "answer": 1.09759847,
+      "updatedAt": 1795690839
+     },
+     "0xECef79E109e997bCA29c1c0897ec9d7b03647F5E": {
+      "answer": 0.99874425,
+      "updatedAt": 1795710201
+     },
+     "0xbD92C6c284271c227a1e0bF1786F468b539f51D9": {
+      "answer": 0.17367464,
+      "updatedAt": 1795737237
+     }
+    }
+   }
+  },
+  "arbitrum": {
+   "desc": {
+    "0x0D0FaDDd42C53fc6d1b933C7ccccCFaF9B79B571": [
+     "USDC / USD",
+     8
+    ],
+    "0x158B2203D267a50BE9b7930D13d8247A4968D659": [
+     "USDT / USD",
+     18
+    ],
+    "0x1940fEd49cDBC397941f2D336eb4994D599e568B": [
+     "ZRO / USD",
+     8
+    ],
+    "0x2BA975D4D7922cD264267Af16F3bD177F206FE3c": [
+     "PAXG / USD",
+     8
+    ],
+    "0x3d50d699A812A0f66F36876DF47B2aE68e781736": [
+     "PYUSD / USD",
+     18
+    ],
+    "0x66853E19d73c0F9301fe099c324A1E9726953433": [
+     "PENDLE / USD",
+     8
+    ],
+    "0x78aabb7a55508bbCc3a76D2Dfd9ad4Ff97Afed7a": [
+     "ARB / USD",
+     8
+    ],
+    "0x88AC7Bca36567525A866138F03a6F6844868E0Bc": [
+     "USDe / USD",
+     8
+    ],
+    "0x9C917083fDb403ab5ADbEC26Ee294f6EcAda2720": [
+     "UNI / USD",
+     8
+    ],
+    "0x9dA16A80B3C7C489dFCf11024763144d94A9Dbd6": [
+     "CHIP / USD",
+     18
+    ],
+    "0xA43A34030088E6510FecCFb77E88ee5e7ed0fE64": [
+     "LDO / USD",
+     8
+    ],
+    "0xA841011089336de36b239b49f70A456EdD1c87c8": [
+     "LINK / USD",
+     8
+    ],
+    "0xAE0d73C9a489084531deEdCa6765fA3396db49c1": [
+     "GHO / USD",
+     8
+    ],
+    "0xDB98056FecFff59D032aB628337A4887110df3dB": [
+     "GMX / USD",
+     8
+    ],
+    "0xE808488e8627F6531bA79a13A9E0271B39abEb1C": [
+     "TBTC / USD",
+     8
+    ],
+    "0xE9Bd4Ca2CDacb56cd06c9C4C5231e69c33340B3c": [
+     "USDG / USD",
+     8
+    ],
+    "0xF3d6b05E69918d71807Ab005791daCcEC5de8C78": [
+     "USDAI / USD",
+     8
+    ],
+    "0xaD1d5344AaDE45F43E596773Bcc4c423EAbdD034": [
+     "AAVE / USD",
+     8
+    ],
+    "0xaebDA2c976cfd1eE1977Eac079B4382acb849325": [
+     "CRV / USD",
+     8
+    ],
+    "0xc5C8E77B397E531B8EC06BFb0048328B30E9eCfB": [
+     "DAI / USD",
+     8
+    ],
+    "0xd0C7101eACbB49F3deCcCc166d238410D6D46d57": [
+     "WBTC / USD",
+     8
+    ],
+    "0xe4D040128CFdF03eC221832251caC9b6f0515E3f": [
+     "ETH / USD",
+     18
+    ]
+   },
+   "days": {
+    "2026-10-22": {
+     "0x0D0FaDDd42C53fc6d1b933C7ccccCFaF9B79B571": {
+      "answer": 0.99984032,
+      "updatedAt": 1792686295
+     },
+     "0x158B2203D267a50BE9b7930D13d8247A4968D659": {
+      "answer": 0.99887,
+      "updatedAt": 1792686498
+     },
+     "0x1940fEd49cDBC397941f2D336eb4994D599e568B": {
+      "answer": 1.78554513,
+      "updatedAt": 1792712581
+     },
+     "0x2BA975D4D7922cD264267Af16F3bD177F206FE3c": {
+      "answer": 4043.64265118,
+      "updatedAt": 1792687856
+     },
+     "0x3d50d699A812A0f66F36876DF47B2aE68e781736": {
+      "answer": 1.0000693386847423,
+      "updatedAt": 1792635746
+     },
+     "0x66853E19d73c0F9301fe099c324A1E9726953433": {
+      "answer": 2.04481013,
+      "updatedAt": 1792707714
+     },
+     "0x78aabb7a55508bbCc3a76D2Dfd9ad4Ff97Afed7a": {
+      "answer": 0.17896119,
+      "updatedAt": 1792713313
+     },
+     "0x88AC7Bca36567525A866138F03a6F6844868E0Bc": {
+      "answer": 0.99969804,
+      "updatedAt": 1792703277
+     },
+     "0x9C917083fDb403ab5ADbEC26Ee294f6EcAda2720": {
+      "answer": 6.9921954,
+      "updatedAt": 1792712630
+     },
+     "0x9dA16A80B3C7C489dFCf11024763144d94A9Dbd6": {
+      "answer": 0.04412,
+      "updatedAt": 1792712543
+     },
+     "0xA43A34030088E6510FecCFb77E88ee5e7ed0fE64": {
+      "answer": 0.38155374,
+      "updatedAt": 1792711969
+     },
+     "0xA841011089336de36b239b49f70A456EdD1c87c8": {
+      "answer": 11.941908,
+      "updatedAt": 1792713346
+     },
+     "0xAE0d73C9a489084531deEdCa6765fA3396db49c1": {
+      "answer": 0.99882377,
+      "updatedAt": 1792693348
+     },
+     "0xDB98056FecFff59D032aB628337A4887110df3dB": {
+      "answer": 7.72820489,
+      "updatedAt": 1792703731
+     },
+     "0xE808488e8627F6531bA79a13A9E0271B39abEb1C": {
+      "answer": 81341.0069548,
+      "updatedAt": 1792696906
+     },
+     "0xE9Bd4Ca2CDacb56cd06c9C4C5231e69c33340B3c": {
+      "answer": 0.99992,
+      "updatedAt": 1792687119
+     },
+     "0xF3d6b05E69918d71807Ab005791daCcEC5de8C78": {
+      "answer": 0.999876,
+      "updatedAt": 1792701973
+     },
+     "0xaD1d5344AaDE45F43E596773Bcc4c423EAbdD034": {
+      "answer": 146.52189455,
+      "updatedAt": 1792707675
+     },
+     "0xaebDA2c976cfd1eE1977Eac079B4382acb849325": {
+      "answer": 0.36274875,
+      "updatedAt": 1792712194
+     },
+     "0xc5C8E77B397E531B8EC06BFb0048328B30E9eCfB": {
+      "answer": 0.99954574,
+      "updatedAt": 1792702917
+     },
+     "0xd0C7101eACbB49F3deCcCc166d238410D6D46d57": {
+      "answer": 81155.002208,
+      "updatedAt": 1792713323
+     },
+     "0xe4D040128CFdF03eC221832251caC9b6f0515E3f": {
+      "answer": 2385.91,
+      "updatedAt": 1792713326
+     }
+    },
+    "2026-10-23": {
+     "0x0D0FaDDd42C53fc6d1b933C7ccccCFaF9B79B571": {
+      "answer": 0.99983339,
+      "updatedAt": 1792772716
+     },
+     "0x158B2203D267a50BE9b7930D13d8247A4968D659": {
+      "answer": 0.9988495805383539,
+      "updatedAt": 1792772910
+     },
+     "0x1940fEd49cDBC397941f2D336eb4994D599e568B": {
+      "answer": 1.70136443,
+      "updatedAt": 1792799153
+     },
+     "0x2BA975D4D7922cD264267Af16F3bD177F206FE3c": {
+      "answer": 4002.06687069,
+      "updatedAt": 1792765291
+     },
+     "0x3d50d699A812A0f66F36876DF47B2aE68e781736": {
+      "answer": 1.000035979957892,
+      "updatedAt": 1792722162
+     },
+     "0x66853E19d73c0F9301fe099c324A1E9726953433": {
+      "answer": 2.03223168,
+      "updatedAt": 1792799347
+     },
+     "0x78aabb7a55508bbCc3a76D2Dfd9ad4Ff97Afed7a": {
+      "answer": 0.17203197,
+      "updatedAt": 1792799952
+     },
+     "0x88AC7Bca36567525A866138F03a6F6844868E0Bc": {
+      "answer": 0.99976948,
+      "updatedAt": 1792789706
+     },
+     "0x9C917083fDb403ab5ADbEC26Ee294f6EcAda2720": {
+      "answer": 6.95567,
+      "updatedAt": 1792799403
+     },
+     "0x9dA16A80B3C7C489dFCf11024763144d94A9Dbd6": {
+      "answer": 0.04379,
+      "updatedAt": 1792799392
+     },
+     "0xA43A34030088E6510FecCFb77E88ee5e7ed0fE64": {
+      "answer": 0.38262077,
+      "updatedAt": 1792799968
+     },
+     "0xA841011089336de36b239b49f70A456EdD1c87c8": {
+      "answer": 11.81219,
+      "updatedAt": 1792799338
+     },
+     "0xAE0d73C9a489084531deEdCa6765fA3396db49c1": {
+      "answer": 0.99854365,
+      "updatedAt": 1792779766
+     },
+     "0xDB98056FecFff59D032aB628337A4887110df3dB": {
+      "answer": 8.21305897,
+      "updatedAt": 1792799349
+     },
+     "0xE808488e8627F6531bA79a13A9E0271B39abEb1C": {
+      "answer": 80771.79438439,
+      "updatedAt": 1792795948
+     },
+     "0xE9Bd4Ca2CDacb56cd06c9C4C5231e69c33340B3c": {
+      "answer": 0.9999777,
+      "updatedAt": 1792773544
+     },
+     "0xF3d6b05E69918d71807Ab005791daCcEC5de8C78": {
+      "answer": 1.00001425,
+      "updatedAt": 1792788399
+     },
+     "0xaD1d5344AaDE45F43E596773Bcc4c423EAbdD034": {
+      "answer": 144.35691938,
+      "updatedAt": 1792799639
+     },
+     "0xaebDA2c976cfd1eE1977Eac079B4382acb849325": {
+      "answer": 0.3547312,
+      "updatedAt": 1792798127
+     },
+     "0xc5C8E77B397E531B8EC06BFb0048328B30E9eCfB": {
+      "answer": 1.00000453,
+      "updatedAt": 1792789346
+     },
+     "0xd0C7101eACbB49F3deCcCc166d238410D6D46d57": {
+      "answer": 80885.35082281,
+      "updatedAt": 1792799374
+     },
+     "0xe4D040128CFdF03eC221832251caC9b6f0515E3f": {
+      "answer": 2384.83,
+      "updatedAt": 1792799713
+     }
+    },
+    "2026-11-01": {
+     "0x0D0FaDDd42C53fc6d1b933C7ccccCFaF9B79B571": {
+      "answer": 0.99967867,
+      "updatedAt": 1793550447
+     },
+     "0x158B2203D267a50BE9b7930D13d8247A4968D659": {
+      "answer": 0.99867,
+      "updatedAt": 1793575330
+     },
+     "0x1940fEd49cDBC397941f2D336eb4994D599e568B": {
+      "answer": 1.8063465,
+      "updatedAt": 1793576343
+     },
+     "0x2BA975D4D7922cD264267Af16F3bD177F206FE3c": {
+      "answer": 3892.91228873,
+      "updatedAt": 1793554517
+     },
+     "0x3d50d699A812A0f66F36876DF47B2aE68e781736": {
+      "answer": 1.0000098511878004,
+      "updatedAt": 1793499902
+     },
+     "0x66853E19d73c0F9301fe099c324A1E9726953433": {
+      "answer": 1.84783932,
+      "updatedAt": 1793574771
+     },
+     "0x78aabb7a55508bbCc3a76D2Dfd9ad4Ff97Afed7a": {
+      "answer": 0.16365,
+      "updatedAt": 1793577576
+     },
+     "0x88AC7Bca36567525A866138F03a6F6844868E0Bc": {
+      "answer": 0.99896393,
+      "updatedAt": 1793492247
+     },
+     "0x9C917083fDb403ab5ADbEC26Ee294f6EcAda2720": {
+      "answer": 7.20729901,
+      "updatedAt": 1793576885
+     },
+     "0x9dA16A80B3C7C489dFCf11024763144d94A9Dbd6": {
+      "answer": 0.043505478,
+      "updatedAt": 1793576332
+     },
+     "0xA43A34030088E6510FecCFb77E88ee5e7ed0fE64": {
+      "answer": 0.34125213,
+      "updatedAt": 1793576012
+     },
+     "0xA841011089336de36b239b49f70A456EdD1c87c8": {
+      "answer": 11.3765094,
+      "updatedAt": 1793577355
+     },
+     "0xAE0d73C9a489084531deEdCa6765fA3396db49c1": {
+      "answer": 0.99870206,
+      "updatedAt": 1793557467
+     },
+     "0xDB98056FecFff59D032aB628337A4887110df3dB": {
+      "answer": 7.96184083,
+      "updatedAt": 1793576258
+     },
+     "0xE808488e8627F6531bA79a13A9E0271B39abEb1C": {
+      "answer": 77961.50788412,
+      "updatedAt": 1793522038
+     },
+     "0xE9Bd4Ca2CDacb56cd06c9C4C5231e69c33340B3c": {
+      "answer": 0.99982897,
+      "updatedAt": 1793551362
+     },
+     "0xF3d6b05E69918d71807Ab005791daCcEC5de8C78": {
+      "answer": 0.99936758,
+      "updatedAt": 1793566153
+     },
+     "0xaD1d5344AaDE45F43E596773Bcc4c423EAbdD034": {
+      "answer": 134.4535202,
+      "updatedAt": 1793575658
+     },
+     "0xaebDA2c976cfd1eE1977Eac079B4382acb849325": {
+      "answer": 0.2791982,
+      "updatedAt": 1793576327
+     },
+     "0xc5C8E77B397E531B8EC06BFb0048328B30E9eCfB": {
+      "answer": 0.99955181,
+      "updatedAt": 1793527108
+     },
+     "0xd0C7101eACbB49F3deCcCc166d238410D6D46d57": {
+      "answer": 78162.341314,
+      "updatedAt": 1793577441
+     },
+     "0xe4D040128CFdF03eC221832251caC9b6f0515E3f": {
+      "answer": 2272.0870629100723,
+      "updatedAt": 1793577256
+     }
+    },
+    "2026-11-15": {
+     "0x0D0FaDDd42C53fc6d1b933C7ccccCFaF9B79B571": {
+      "answer": 0.99976,
+      "updatedAt": 1794760232
+     },
+     "0x158B2203D267a50BE9b7930D13d8247A4968D659": {
+      "answer": 0.9994688714888025,
+      "updatedAt": 1794785113
+     },
+     "0x1940fEd49cDBC397941f2D336eb4994D599e568B": {
+      "answer": 1.41054765,
+      "updatedAt": 1794787127
+     },
+     "0x2BA975D4D7922cD264267Af16F3bD177F206FE3c": {
+      "answer": 3881.60259286,
+      "updatedAt": 1794786356
+     },
+     "0x3d50d699A812A0f66F36876DF47B2aE68e781736": {
+      "answer": 1.0000095221693237,
+      "updatedAt": 1794709744
+     },
+     "0x66853E19d73c0F9301fe099c324A1E9726953433": {
+      "answer": 1.4636678,
+      "updatedAt": 1794786141
+     },
+     "0x78aabb7a55508bbCc3a76D2Dfd9ad4Ff97Afed7a": {
+      "answer": 0.134767,
+      "updatedAt": 1794787102
+     },
+     "0x88AC7Bca36567525A866138F03a6F6844868E0Bc": {
+      "answer": 0.99977769,
+      "updatedAt": 1794702033
+     },
+     "0x9C917083fDb403ab5ADbEC26Ee294f6EcAda2720": {
+      "answer": 5.1789892,
+      "updatedAt": 1794787110
+     },
+     "0x9dA16A80B3C7C489dFCf11024763144d94A9Dbd6": {
+      "answer": 0.02735,
+      "updatedAt": 1794786180
+     },
+     "0xA43A34030088E6510FecCFb77E88ee5e7ed0fE64": {
+      "answer": 0.28010255,
+      "updatedAt": 1794787161
+     },
+     "0xA841011089336de36b239b49f70A456EdD1c87c8": {
+      "answer": 9.29451,
+      "updatedAt": 1794787124
+     },
+     "0xAE0d73C9a489084531deEdCa6765fA3396db49c1": {
+      "answer": 0.99897419,
+      "updatedAt": 1794767260
+     },
+     "0xDB98056FecFff59D032aB628337A4887110df3dB": {
+      "answer": 7.32521609,
+      "updatedAt": 1794786070
+     },
+     "0xE808488e8627F6531bA79a13A9E0271B39abEb1C": {
+      "answer": 64891.76420862,
+      "updatedAt": 1794784504
+     },
+     "0xE9Bd4Ca2CDacb56cd06c9C4C5231e69c33340B3c": {
+      "answer": 0.99996,
+      "updatedAt": 1794761243
+     },
+     "0xF3d6b05E69918d71807Ab005791daCcEC5de8C78": {
+      "answer": 0.99977522,
+      "updatedAt": 1794775946
+     },
+     "0xaD1d5344AaDE45F43E596773Bcc4c423EAbdD034": {
+      "answer": 109.4686632,
+      "updatedAt": 1794786160
+     },
+     "0xaebDA2c976cfd1eE1977Eac079B4382acb849325": {
+      "answer": 0.20614021,
+      "updatedAt": 1794786132
+     },
+     "0xc5C8E77B397E531B8EC06BFb0048328B30E9eCfB": {
+      "answer": 0.99961217,
+      "updatedAt": 1794736940
+     },
+     "0xd0C7101eACbB49F3deCcCc166d238410D6D46d57": {
+      "answer": 65333.705173,
+      "updatedAt": 1794787182
+     },
+     "0xe4D040128CFdF03eC221832251caC9b6f0515E3f": {
+      "answer": 1835.1030610546716,
+      "updatedAt": 1794787121
+     }
+    },
+    "2026-11-25": {
+     "0x0D0FaDDd42C53fc6d1b933C7ccccCFaF9B79B571": {
+      "answer": 0.99988,
+      "updatedAt": 1795624382
+     },
+     "0x158B2203D267a50BE9b7930D13d8247A4968D659": {
+      "answer": 0.99867,
+      "updatedAt": 1795647152
+     },
+     "0x1940fEd49cDBC397941f2D336eb4994D599e568B": {
+      "answer": 1.02500547,
+      "updatedAt": 1795650799
+     },
+     "0x2BA975D4D7922cD264267Af16F3bD177F206FE3c": {
+      "answer": 3570.5483803,
+      "updatedAt": 1795638177
+     },
+     "0x3d50d699A812A0f66F36876DF47B2aE68e781736": {
+      "answer": 0.999906380887679,
+      "updatedAt": 1795573863
+     },
+     "0x66853E19d73c0F9301fe099c324A1E9726953433": {
+      "answer": 1.23685777,
+      "updatedAt": 1795649903
+     },
+     "0x78aabb7a55508bbCc3a76D2Dfd9ad4Ff97Afed7a": {
+      "answer": 0.113002,
+      "updatedAt": 1795651049
+     },
+     "0x88AC7Bca36567525A866138F03a6F6844868E0Bc": {
+      "answer": 0.99980919,
+      "updatedAt": 1795566217
+     },
+     "0x9C917083fDb403ab5ADbEC26Ee294f6EcAda2720": {
+      "answer": 4.7406865,
+      "updatedAt": 1795650990
+     },
+     "0x9dA16A80B3C7C489dFCf11024763144d94A9Dbd6": {
+      "answer": 0.027266928,
+      "updatedAt": 1795649893
+     },
+     "0xA43A34030088E6510FecCFb77E88ee5e7ed0fE64": {
+      "answer": 0.23282694,
+      "updatedAt": 1795649952
+     },
+     "0xA841011089336de36b239b49f70A456EdD1c87c8": {
+      "answer": 9.0544711,
+      "updatedAt": 1795650944
+     },
+     "0xAE0d73C9a489084531deEdCa6765fA3396db49c1": {
+      "answer": 0.99894785,
+      "updatedAt": 1795631369
+     },
+     "0xDB98056FecFff59D032aB628337A4887110df3dB": {
+      "answer": 8.04877536,
+      "updatedAt": 1795641946
+     },
+     "0xE808488e8627F6531bA79a13A9E0271B39abEb1C": {
+      "answer": 60023.17557625,
+      "updatedAt": 1795648611
+     },
+     "0xE9Bd4Ca2CDacb56cd06c9C4C5231e69c33340B3c": {
+      "answer": 0.99999218,
+      "updatedAt": 1795625481
+     },
+     "0xF3d6b05E69918d71807Ab005791daCcEC5de8C78": {
+      "answer": 0.99987267,
+      "updatedAt": 1795640061
+     },
+     "0xaD1d5344AaDE45F43E596773Bcc4c423EAbdD034": {
+      "answer": 95.12366583,
+      "updatedAt": 1795648700
+     },
+     "0xaebDA2c976cfd1eE1977Eac079B4382acb849325": {
+      "answer": 0.17124894,
+      "updatedAt": 1795650801
+     },
+     "0xc5C8E77B397E531B8EC06BFb0048328B30E9eCfB": {
+      "answer": 0.99979685,
+      "updatedAt": 1795617085
+     },
+     "0xd0C7101eACbB49F3deCcCc166d238410D6D46d57": {
+      "answer": 60490.96199771,
+      "updatedAt": 1795651083
+     },
+     "0xe4D040128CFdF03eC221832251caC9b6f0515E3f": {
+      "answer": 1690.96,
+      "updatedAt": 1795651175
+     }
+    },
+    "2026-11-26": {
+     "0x0D0FaDDd42C53fc6d1b933C7ccccCFaF9B79B571": {
+      "answer": 0.99988158,
+      "updatedAt": 1795710811
+     },
+     "0x158B2203D267a50BE9b7930D13d8247A4968D659": {
+      "answer": 0.9987649652125169,
+      "updatedAt": 1795733582
+     },
+     "0x1940fEd49cDBC397941f2D336eb4994D599e568B": {
+      "answer": 1.13163172,
+      "updatedAt": 1795736365
+     },
+     "0x2BA975D4D7922cD264267Af16F3bD177F206FE3c": {
+      "answer": 3555.33,
+      "updatedAt": 1795715072
+     },
+     "0x3d50d699A812A0f66F36876DF47B2aE68e781736": {
+      "answer": 0.9998943710132381,
+      "updatedAt": 1795660276
+     },
+     "0x66853E19d73c0F9301fe099c324A1E9726953433": {
+      "answer": 1.20471095,
+      "updatedAt": 1795737020
+     },
+     "0x78aabb7a55508bbCc3a76D2Dfd9ad4Ff97Afed7a": {
+      "answer": 0.11307549,
+      "updatedAt": 1795737282
+     },
+     "0x88AC7Bca36567525A866138F03a6F6844868E0Bc": {
+      "answer": 0.99990045,
+      "updatedAt": 1795652629
+     },
+     "0x9C917083fDb403ab5ADbEC26Ee294f6EcAda2720": {
+      "answer": 4.65484593,
+      "updatedAt": 1795737271
+     },
+     "0x9dA16A80B3C7C489dFCf11024763144d94A9Dbd6": {
+      "answer": 0.026671582,
+      "updatedAt": 1795737117
+     },
+     "0xA43A34030088E6510FecCFb77E88ee5e7ed0fE64": {
+      "answer": 0.23418494,
+      "updatedAt": 1795734053
+     },
+     "0xA841011089336de36b239b49f70A456EdD1c87c8": {
+      "answer": 9.27597383,
+      "updatedAt": 1795737206
+     },
+     "0xAE0d73C9a489084531deEdCa6765fA3396db49c1": {
+      "answer": 0.99903542,
+      "updatedAt": 1795717786
+     },
+     "0xDB98056FecFff59D032aB628337A4887110df3dB": {
+      "answer": 7.99446135,
+      "updatedAt": 1795734161
+     },
+     "0xE808488e8627F6531bA79a13A9E0271B39abEb1C": {
+      "answer": 60310.100455,
+      "updatedAt": 1795733808
+     },
+     "0xE9Bd4Ca2CDacb56cd06c9C4C5231e69c33340B3c": {
+      "answer": 0.99998464,
+      "updatedAt": 1795711883
+     },
+     "0xF3d6b05E69918d71807Ab005791daCcEC5de8C78": {
+      "answer": 0.99989044,
+      "updatedAt": 1795726470
+     },
+     "0xaD1d5344AaDE45F43E596773Bcc4c423EAbdD034": {
+      "answer": 94.4424613,
+      "updatedAt": 1795732261
+     },
+     "0xaebDA2c976cfd1eE1977Eac079B4382acb849325": {
+      "answer": 0.17411,
+      "updatedAt": 1795735040
+     },
+     "0xc5C8E77B397E531B8EC06BFb0048328B30E9eCfB": {
+      "answer": 0.99934455,
+      "updatedAt": 1795703496
+     },
+     "0xd0C7101eACbB49F3deCcCc166d238410D6D46d57": {
+      "answer": 60550.57209395,
+      "updatedAt": 1795737275
+     },
+     "0xe4D040128CFdF03eC221832251caC9b6f0515E3f": {
+      "answer": 1688.32021605,
+      "updatedAt": 1795737532
+     }
+    }
+   }
+  },
+  "ink": {
+   "desc": {
+    "0x5aF168556BaA3Bd5c232261F7D7C662a2Ed0Db85": [
+     "USDT / USD",
+     8
+    ],
+    "0x89991637dbaCd0999dE1bc8e86330302EAd2CD89": [
+     "USDC / USD",
+     8
+    ],
+    "0x963d5d3aD2Dfd3fe759d376fF62A0963176DBdF5": [
+     "ETH / USD",
+     8
+    ],
+    "0xdb3B1fa77CF2c9597f9d4871Bed1Df03D096fdf3": [
+     "USDG / USD",
+     8
+    ]
+   },
+   "days": {
+    "2026-10-22": {
+     "0x5aF168556BaA3Bd5c232261F7D7C662a2Ed0Db85": {
+      "answer": 0.99884,
+      "updatedAt": 1792687495
+     },
+     "0x89991637dbaCd0999dE1bc8e86330302EAd2CD89": {
+      "answer": 0.99984051,
+      "updatedAt": 1792709132
+     },
+     "0x963d5d3aD2Dfd3fe759d376fF62A0963176DBdF5": {
+      "answer": 2384.4515,
+      "updatedAt": 1792713201
+     },
+     "0xdb3B1fa77CF2c9597f9d4871Bed1Df03D096fdf3": {
+      "answer": 0.99997191,
+      "updatedAt": 1792678950
+     }
+    },
+    "2026-10-23": {
+     "0x5aF168556BaA3Bd5c232261F7D7C662a2Ed0Db85": {
+      "answer": 0.99882741,
+      "updatedAt": 1792773915
+     },
+     "0x89991637dbaCd0999dE1bc8e86330302EAd2CD89": {
+      "answer": 0.99984183,
+      "updatedAt": 1792795570
+     },
+     "0x963d5d3aD2Dfd3fe759d376fF62A0963176DBdF5": {
+      "answer": 2384.64901419,
+      "updatedAt": 1792799730
+     },
+     "0xdb3B1fa77CF2c9597f9d4871Bed1Df03D096fdf3": {
+      "answer": 0.99990468,
+      "updatedAt": 1792765394
+     }
+    },
+    "2026-11-01": {
+     "0x5aF168556BaA3Bd5c232261F7D7C662a2Ed0Db85": {
+      "answer": 0.99866,
+      "updatedAt": 1793575863
+     },
+     "0x89991637dbaCd0999dE1bc8e86330302EAd2CD89": {
+      "answer": 0.99972584,
+      "updatedAt": 1793575863
+     },
+     "0x963d5d3aD2Dfd3fe759d376fF62A0963176DBdF5": {
+      "answer": 2272.31985273,
+      "updatedAt": 1793576337
+     },
+     "0xdb3B1fa77CF2c9597f9d4871Bed1Df03D096fdf3": {
+      "answer": 1.00002881,
+      "updatedAt": 1793554908
+     }
+    },
+    "2026-11-15": {
+     "0x5aF168556BaA3Bd5c232261F7D7C662a2Ed0Db85": {
+      "answer": 0.99941,
+      "updatedAt": 1794749800
+     },
+     "0x89991637dbaCd0999dE1bc8e86330302EAd2CD89": {
+      "answer": 0.99976193,
+      "updatedAt": 1794785872
+     },
+     "0x963d5d3aD2Dfd3fe759d376fF62A0963176DBdF5": {
+      "answer": 1834.86,
+      "updatedAt": 1794787115
+     },
+     "0xdb3B1fa77CF2c9597f9d4871Bed1Df03D096fdf3": {
+      "answer": 0.99995,
+      "updatedAt": 1794764921
+     }
+    },
+    "2026-11-25": {
+     "0x5aF168556BaA3Bd5c232261F7D7C662a2Ed0Db85": {
+      "answer": 0.99865854,
+      "updatedAt": 1795616895
+     },
+     "0x89991637dbaCd0999dE1bc8e86330302EAd2CD89": {
+      "answer": 0.99989072,
+      "updatedAt": 1795650146
+     },
+     "0x963d5d3aD2Dfd3fe759d376fF62A0963176DBdF5": {
+      "answer": 1691.66442311,
+      "updatedAt": 1795651124
+     },
+     "0xdb3B1fa77CF2c9597f9d4871Bed1Df03D096fdf3": {
+      "answer": 1.00001142,
+      "updatedAt": 1795629231
+     }
+    },
+    "2026-11-26": {
+     "0x5aF168556BaA3Bd5c232261F7D7C662a2Ed0Db85": {
+      "answer": 0.99871571,
+      "updatedAt": 1795703315
+     },
+     "0x89991637dbaCd0999dE1bc8e86330302EAd2CD89": {
+      "answer": 0.99988,
+      "updatedAt": 1795736566
+     },
+     "0x963d5d3aD2Dfd3fe759d376fF62A0963176DBdF5": {
+      "answer": 1687.94333392,
+      "updatedAt": 1795737278
+     },
+     "0xdb3B1fa77CF2c9597f9d4871Bed1Df03D096fdf3": {
+      "answer": 0.99995679,
+      "updatedAt": 1795715667
+     }
+    }
+   }
+  },
+  "robinhood": {
+   "desc": {
+    "0x0009cD492adf8167f9eEBf1293556A673530a21a": [
+     "CBBTC / USD",
+     8
+    ],
+    "0x0e6a64a2B58A6693a531E6c555f3A5d042eEA844": [
+     "Robinhood ORCL / USD",
+     8
+    ],
+    "0x27C71df6A64fB476468EdF256CF72c038baB5B67": [
+     "Robinhood GME / USD",
+     8
+    ],
+    "0x319724394D3A0e3669269846abE664Cd621f9f6A": [
+     "RHSPY / USD",
+     8
+    ],
+    "0x379EC4f7C378F34a1B47E4F3cbeBCbAC3E8E9F15": [
+     "RHNVDA / USD",
+     8
+    ],
+    "0x396118bdFB181e6240E74D243F266B061c0edc3D": [
+     "Robinhood MSTR / USD",
+     8
+    ],
+    "0x3f390C5C24628Ac7C489515402235FeAD71D1913": [
+     "RHINTC / USD",
+     8
+    ],
+    "0x425EEFdCf05ed6526C3cE61Af99429A228a6d596": [
+     "RHMU / USD",
+     8
+    ],
+    "0x45C3C877C15E6BA2EBB19eA114Ea508d14C1Af2E": [
+     "RHMSFT / USD",
+     8
+    ],
+    "0x470A51258068043bd43dC0a56245625C9fE86eB0": [
+     "GLD / USD",
+     8
+    ],
+    "0x4A1166a659A55625345e9515b32adECea5547C38": [
+     "RHTSLA / USD",
+     8
+    ],
+    "0x61B7e5650328764B076A108EFF5fa7282a1B9aD2": [
+     "USDG / USD",
+     8
+    ],
+    "0x6652eDf64bA3731C4F2D3ce821A0Fb1f1f6b482a": [
+     "Robinhood CRCL / USD",
+     8
+    ],
+    "0x6B22A786bAa607d76728168703a39Ea9C99f2cD0": [
+     "Robinhood AAPL / USD",
+     8
+    ],
+    "0x75a9c76Ef439e2C7c2E5a34Ab105EcFe3766431c": [
+     "RHUSO / USD",
+     8
+    ],
+    "0x78F3556b67E17Df817D51Ef5a990cDaF09E8d3A9": [
+     "ETH / USD",
+     8
+    ],
+    "0x7C38C00C30BEe9378381E7B6135d7283356D71b1": [
+     "Robinhood META / USD",
+     8
+    ],
+    "0x80901d846d5D7B030F26B480776EE3b29374C2ae": [
+     "Robinhood QQQ / USD",
+     8
+    ],
+    "0x820ABedFF239034956B7A9d2F0a331f9F075eB4c": [
+     "Robinhood PLTR / USD",
+     8
+    ],
+    "0x874cF94aa8eC88Fd9560094dD065f2fB3E41Fc2F": [
+     "Robinhood TSM / USD",
+     8
+    ],
+    "0x943A29E7ae51A4798823ca9eEd2ed533B2A22C72": [
+     "RHAMD / USD",
+     8
+    ],
+    "0xA3a468A452940B7D6b69991207B508c609a98Ef2": [
+     "Robinhood COIN / USD",
+     8
+    ],
+    "0xB265810950ba6c5C0Ff821c9963014a56fD8Bffb": [
+     "Robinhood SPCX / USD",
+     8
+    ],
+    "0xD5a1508ceD74c084eBf3cBe853e2C968fB2a651C": [
+     "Robinhood AMZN / USD",
+     8
+    ],
+    "0xF6f373a037c30F0e5010d854385cA89185AE638b": [
+     "Robinhood GOOGL / USD",
+     8
+    ]
+   },
+   "days": {
+    "2026-10-22": {
+     "0x0009cD492adf8167f9eEBf1293556A673530a21a": {
+      "answer": 81335.98435156,
+      "updatedAt": 1792696899
+     },
+     "0x0e6a64a2B58A6693a531E6c555f3A5d042eEA844": {
+      "answer": 125.78124575,
+      "updatedAt": 1792703768
+     },
+     "0x27C71df6A64fB476468EdF256CF72c038baB5B67": {
+      "answer": 25.0248,
+      "updatedAt": 1792706735
+     },
+     "0x319724394D3A0e3669269846abE664Cd621f9f6A": {
+      "answer": 763.38523985,
+      "updatedAt": 1792692124
+     },
+     "0x379EC4f7C378F34a1B47E4F3cbeBCbAC3E8E9F15": {
+      "answer": 212.06425622,
+      "updatedAt": 1792712139
+     },
+     "0x396118bdFB181e6240E74D243F266B061c0edc3D": {
+      "answer": 143.87,
+      "updatedAt": 1792712208
+     },
+     "0x3f390C5C24628Ac7C489515402235FeAD71D1913": {
+      "answer": 84.475,
+      "updatedAt": 1792711924
+     },
+     "0x425EEFdCf05ed6526C3cE61Af99429A228a6d596": {
+      "answer": 843.95480074,
+      "updatedAt": 1792710106
+     },
+     "0x45C3C877C15E6BA2EBB19eA114Ea508d14C1Af2E": {
+      "answer": 522.02098092,
+      "updatedAt": 1792695006
+     },
+     "0x470A51258068043bd43dC0a56245625C9fE86eB0": {
+      "answer": 369.87839054,
+      "updatedAt": 1792694553
+     },
+     "0x4A1166a659A55625345e9515b32adECea5547C38": {
+      "answer": 372.28285,
+      "updatedAt": 1792712376
+     },
+     "0x61B7e5650328764B076A108EFF5fa7282a1B9aD2": {
+      "answer": 0.99997,
+      "updatedAt": 1792683923
+     },
+     "0x6652eDf64bA3731C4F2D3ce821A0Fb1f1f6b482a": {
+      "answer": 85.4274,
+      "updatedAt": 1792709561
+     },
+     "0x6B22A786bAa607d76728168703a39Ea9C99f2cD0": {
+      "answer": 348.24802473,
+      "updatedAt": 1792698685
+     },
+     "0x75a9c76Ef439e2C7c2E5a34Ab105EcFe3766431c": {
+      "answer": 162.75,
+      "updatedAt": 1792711737
+     },
+     "0x78F3556b67E17Df817D51Ef5a990cDaF09E8d3A9": {
+      "answer": 2385.50691166,
+      "updatedAt": 1792696972
+     },
+     "0x7C38C00C30BEe9378381E7B6135d7283356D71b1": {
+      "answer": 646.95010795,
+      "updatedAt": 1792701655
+     },
+     "0x80901d846d5D7B030F26B480776EE3b29374C2ae": {
+      "answer": 703.56270528,
+      "updatedAt": 1792695567
+     },
+     "0x820ABedFF239034956B7A9d2F0a331f9F075eB4c": {
+      "answer": 196.4918,
+      "updatedAt": 1792699317
+     },
+     "0x874cF94aa8eC88Fd9560094dD065f2fB3E41Fc2F": {
+      "answer": 410.88808901,
+      "updatedAt": 1792712323
+     },
+     "0x943A29E7ae51A4798823ca9eEd2ed533B2A22C72": {
+      "answer": 505.625,
+      "updatedAt": 1792711080
+     },
+     "0xA3a468A452940B7D6b69991207B508c609a98Ef2": {
+      "answer": 168.1547,
+      "updatedAt": 1792712340
+     },
+     "0xB265810950ba6c5C0Ff821c9963014a56fD8Bffb": {
+      "answer": 146.11945,
+      "updatedAt": 1792711921
+     },
+     "0xD5a1508ceD74c084eBf3cBe853e2C968fB2a651C": {
+      "answer": 250.6544,
+      "updatedAt": 1792699287
+     },
+     "0xF6f373a037c30F0e5010d854385cA89185AE638b": {
+      "answer": 324.48291294,
+      "updatedAt": 1792698941
+     }
+    },
+    "2026-10-23": {
+     "0x0009cD492adf8167f9eEBf1293556A673530a21a": {
+      "answer": 80862.90681376,
+      "updatedAt": 1792795748
+     },
+     "0x0e6a64a2B58A6693a531E6c555f3A5d042eEA844": {
+      "answer": 126.65363115,
+      "updatedAt": 1792784914
+     },
+     "0x27C71df6A64fB476468EdF256CF72c038baB5B67": {
+      "answer": 24.805,
+      "updatedAt": 1792784699
+     },
+     "0x319724394D3A0e3669269846abE664Cd621f9f6A": {
+      "answer": 762.26131226,
+      "updatedAt": 1792778536
+     },
+     "0x379EC4f7C378F34a1B47E4F3cbeBCbAC3E8E9F15": {
+      "answer": 211.16355858,
+      "updatedAt": 1792785331
+     },
+     "0x396118bdFB181e6240E74D243F266B061c0edc3D": {
+      "answer": 146.28,
+      "updatedAt": 1792799418
+     },
+     "0x3f390C5C24628Ac7C489515402235FeAD71D1913": {
+      "answer": 86.26265,
+      "updatedAt": 1792796235
+     },
+     "0x425EEFdCf05ed6526C3cE61Af99429A228a6d596": {
+      "answer": 879.71025912,
+      "updatedAt": 1792799952
+     },
+     "0x45C3C877C15E6BA2EBB19eA114Ea508d14C1Af2E": {
+      "answer": 525.87507182,
+      "updatedAt": 1792767654
+     },
+     "0x470A51258068043bd43dC0a56245625C9fE86eB0": {
+      "answer": 365.75210291,
+      "updatedAt": 1792765676
+     },
+     "0x4A1166a659A55625345e9515b32adECea5547C38": {
+      "answer": 372.07125,
+      "updatedAt": 1792772153
+     },
+     "0x61B7e5650328764B076A108EFF5fa7282a1B9aD2": {
+      "answer": 0.99996502,
+      "updatedAt": 1792770349
+     },
+     "0x6652eDf64bA3731C4F2D3ce821A0Fb1f1f6b482a": {
+      "answer": 85.41499999,
+      "updatedAt": 1792799527
+     },
+     "0x6B22A786bAa607d76728168703a39Ea9C99f2cD0": {
+      "answer": 346.79795433,
+      "updatedAt": 1792766355
+     },
+     "0x75a9c76Ef439e2C7c2E5a34Ab105EcFe3766431c": {
+      "answer": 169.52299999,
+      "updatedAt": 1792784201
+     },
+     "0x78F3556b67E17Df817D51Ef5a990cDaF09E8d3A9": {
+      "answer": 2383.1469,
+      "updatedAt": 1792799332
+     },
+     "0x7C38C00C30BEe9378381E7B6135d7283356D71b1": {
+      "answer": 639.97333235,
+      "updatedAt": 1792795853
+     },
+     "0x80901d846d5D7B030F26B480776EE3b29374C2ae": {
+      "answer": 707.28030873,
+      "updatedAt": 1792766392
+     },
+     "0x820ABedFF239034956B7A9d2F0a331f9F075eB4c": {
+      "answer": 196.7395,
+      "updatedAt": 1792785324
+     },
+     "0x874cF94aa8eC88Fd9560094dD065f2fB3E41Fc2F": {
+      "answer": 417.81671786,
+      "updatedAt": 1792775680
+     },
+     "0x943A29E7ae51A4798823ca9eEd2ed533B2A22C72": {
+      "answer": 514.3728,
+      "updatedAt": 1792797252
+     },
+     "0xA3a468A452940B7D6b69991207B508c609a98Ef2": {
+      "answer": 164.2859,
+      "updatedAt": 1792799427
+     },
+     "0xB265810950ba6c5C0Ff821c9963014a56fD8Bffb": {
+      "answer": 147.67,
+      "updatedAt": 1792784350
+     },
+     "0xD5a1508ceD74c084eBf3cBe853e2C968fB2a651C": {
+      "answer": 248.04,
+      "updatedAt": 1792784484
+     },
+     "0xF6f373a037c30F0e5010d854385cA89185AE638b": {
+      "answer": 320.85793512,
+      "updatedAt": 1792784408
+     }
+    },
+    "2026-11-01": {
+     "0x0009cD492adf8167f9eEBf1293556A673530a21a": {
+      "answer": 78219.93734236,
+      "updatedAt": 1793576356
+     },
+     "0x0e6a64a2B58A6693a531E6c555f3A5d042eEA844": {
+      "answer": 131.28910487,
+      "updatedAt": 1793389874
+     },
+     "0x27C71df6A64fB476468EdF256CF72c038baB5B67": {
+      "answer": 24.265,
+      "updatedAt": 1793390266
+     },
+     "0x319724394D3A0e3669269846abE664Cd621f9f6A": {
+      "answer": 758.37790204,
+      "updatedAt": 1793404825
+     },
+     "0x379EC4f7C378F34a1B47E4F3cbeBCbAC3E8E9F15": {
+      "answer": 205.28000142,
+      "updatedAt": 1793390520
+     },
+     "0x396118bdFB181e6240E74D243F266B061c0edc3D": {
+      "answer": 132.4065,
+      "updatedAt": 1793403909
+     },
+     "0x3f390C5C24628Ac7C489515402235FeAD71D1913": {
+      "answer": 64.885,
+      "updatedAt": 1793397223
+     },
+     "0x425EEFdCf05ed6526C3cE61Af99429A228a6d596": {
+      "answer": 886.82666443,
+      "updatedAt": 1793390472
+     },
+     "0x45C3C877C15E6BA2EBB19eA114Ea508d14C1Af2E": {
+      "answer": 523.34097579,
+      "updatedAt": 1793398016
+     },
+     "0x470A51258068043bd43dC0a56245625C9fE86eB0": {
+      "answer": 355.31507651,
+      "updatedAt": 1793561041
+     },
+     "0x4A1166a659A55625345e9515b32adECea5547C38": {
+      "answer": 399.3924,
+      "updatedAt": 1793387350
+     },
+     "0x61B7e5650328764B076A108EFF5fa7282a1B9aD2": {
+      "answer": 0.99978256,
+      "updatedAt": 1793548147
+     },
+     "0x6652eDf64bA3731C4F2D3ce821A0Fb1f1f6b482a": {
+      "answer": 72.865,
+      "updatedAt": 1793403495
+     },
+     "0x6B22A786bAa607d76728168703a39Ea9C99f2cD0": {
+      "answer": 344.90763487,
+      "updatedAt": 1793389873
+     },
+     "0x75a9c76Ef439e2C7c2E5a34Ab105EcFe3766431c": {
+      "answer": 169.31,
+      "updatedAt": 1793397686
+     },
+     "0x78F3556b67E17Df817D51Ef5a990cDaF09E8d3A9": {
+      "answer": 2272.01,
+      "updatedAt": 1793576342
+     },
+     "0x7C38C00C30BEe9378381E7B6135d7283356D71b1": {
+      "answer": 613.37894035,
+      "updatedAt": 1793394301
+     },
+     "0x80901d846d5D7B030F26B480776EE3b29374C2ae": {
+      "answer": 691.46423273,
+      "updatedAt": 1793389924
+     },
+     "0x820ABedFF239034956B7A9d2F0a331f9F075eB4c": {
+      "answer": 184.709,
+      "updatedAt": 1793402482
+     },
+     "0x874cF94aa8eC88Fd9560094dD065f2fB3E41Fc2F": {
+      "answer": 408.5232038,
+      "updatedAt": 1793390513
+     },
+     "0x943A29E7ae51A4798823ca9eEd2ed533B2A22C72": {
+      "answer": 508.513,
+      "updatedAt": 1793401918
+     },
+     "0xA3a468A452940B7D6b69991207B508c609a98Ef2": {
+      "answer": 144.93,
+      "updatedAt": 1793403820
+     },
+     "0xB265810950ba6c5C0Ff821c9963014a56fD8Bffb": {
+      "answer": 136.125,
+      "updatedAt": 1793399211
+     },
+     "0xD5a1508ceD74c084eBf3cBe853e2C968fB2a651C": {
+      "answer": 240.020375,
+      "updatedAt": 1793389766
+     },
+     "0xF6f373a037c30F0e5010d854385cA89185AE638b": {
+      "answer": 281.4044106,
+      "updatedAt": 1793392844
+     }
+    },
+    "2026-11-15": {
+     "0x0009cD492adf8167f9eEBf1293556A673530a21a": {
+      "answer": 65168.51064169,
+      "updatedAt": 1794785278
+     },
+     "0x0e6a64a2B58A6693a531E6c555f3A5d042eEA844": {
+      "answer": 124.4901254,
+      "updatedAt": 1794610788
+     },
+     "0x27C71df6A64fB476468EdF256CF72c038baB5B67": {
+      "answer": 25.507,
+      "updatedAt": 1794612818
+     },
+     "0x319724394D3A0e3669269846abE664Cd621f9f6A": {
+      "answer": 753.44719566,
+      "updatedAt": 1794591501
+     },
+     "0x379EC4f7C378F34a1B47E4F3cbeBCbAC3E8E9F15": {
+      "answer": 161.40001379,
+      "updatedAt": 1794614768
+     },
+     "0x396118bdFB181e6240E74D243F266B061c0edc3D": {
+      "answer": 109.416,
+      "updatedAt": 1794616481
+     },
+     "0x3f390C5C24628Ac7C489515402235FeAD71D1913": {
+      "answer": 58.58,
+      "updatedAt": 1794612090
+     },
+     "0x425EEFdCf05ed6526C3cE61Af99429A228a6d596": {
+      "answer": 764.68025997,
+      "updatedAt": 1794611047
+     },
+     "0x45C3C877C15E6BA2EBB19eA114Ea508d14C1Af2E": {
+      "answer": 522.62272931,
+      "updatedAt": 1794603827
+     },
+     "0x470A51258068043bd43dC0a56245625C9fE86eB0": {
+      "answer": 356.32987036,
+      "updatedAt": 1794786504
+     },
+     "0x4A1166a659A55625345e9515b32adECea5547C38": {
+      "answer": 387.05,
+      "updatedAt": 1794613088
+     },
+     "0x61B7e5650328764B076A108EFF5fa7282a1B9aD2": {
+      "answer": 0.99993517,
+      "updatedAt": 1794757996
+     },
+     "0x6652eDf64bA3731C4F2D3ce821A0Fb1f1f6b482a": {
+      "answer": 61.485,
+      "updatedAt": 1794610881
+     },
+     "0x6B22A786bAa607d76728168703a39Ea9C99f2cD0": {
+      "answer": 357.15959996,
+      "updatedAt": 1794601557
+     },
+     "0x75a9c76Ef439e2C7c2E5a34Ab105EcFe3766431c": {
+      "answer": 145.85,
+      "updatedAt": 1794603881
+     },
+     "0x78F3556b67E17Df817D51Ef5a990cDaF09E8d3A9": {
+      "answer": 1833.32748428,
+      "updatedAt": 1794785831
+     },
+     "0x7C38C00C30BEe9378381E7B6135d7283356D71b1": {
+      "answer": 639.64915692,
+      "updatedAt": 1794603815
+     },
+     "0x80901d846d5D7B030F26B480776EE3b29374C2ae": {
+      "answer": 675.04073134,
+      "updatedAt": 1794603942
+     },
+     "0x820ABedFF239034956B7A9d2F0a331f9F075eB4c": {
+      "answer": 165.685,
+      "updatedAt": 1794611056
+     },
+     "0x874cF94aa8eC88Fd9560094dD065f2fB3E41Fc2F": {
+      "answer": 395.28061871,
+      "updatedAt": 1794612279
+     },
+     "0x943A29E7ae51A4798823ca9eEd2ed533B2A22C72": {
+      "answer": 522.222,
+      "updatedAt": 1794611336
+     },
+     "0xA3a468A452940B7D6b69991207B508c609a98Ef2": {
+      "answer": 126.29,
+      "updatedAt": 1794605597
+     },
+     "0xB265810950ba6c5C0Ff821c9963014a56fD8Bffb": {
+      "answer": 136.32,
+      "updatedAt": 1794616335
+     },
+     "0xD5a1508ceD74c084eBf3cBe853e2C968fB2a651C": {
+      "answer": 265.48,
+      "updatedAt": 1794603867
+     },
+     "0xF6f373a037c30F0e5010d854385cA89185AE638b": {
+      "answer": 294.59711849,
+      "updatedAt": 1794603864
+     }
+    },
+    "2026-11-25": {
+     "0x0009cD492adf8167f9eEBf1293556A673530a21a": {
+      "answer": 60226.32746305,
+      "updatedAt": 1795648850
+     },
+     "0x0e6a64a2B58A6693a531E6c555f3A5d042eEA844": {
+      "answer": 105.50010627,
+      "updatedAt": 1795649978
+     },
+     "0x27C71df6A64fB476468EdF256CF72c038baB5B67": {
+      "answer": 26.924,
+      "updatedAt": 1795638109
+     },
+     "0x319724394D3A0e3669269846abE664Cd621f9f6A": {
+      "answer": 719.15638538,
+      "updatedAt": 1795640169
+     },
+     "0x379EC4f7C378F34a1B47E4F3cbeBCbAC3E8E9F15": {
+      "answer": 149.98116922,
+      "updatedAt": 1795649590
+     },
+     "0x396118bdFB181e6240E74D243F266B061c0edc3D": {
+      "answer": 81.46,
+      "updatedAt": 1795650801
+     },
+     "0x3f390C5C24628Ac7C489515402235FeAD71D1913": {
+      "answer": 54.37,
+      "updatedAt": 1795650133
+     },
+     "0x425EEFdCf05ed6526C3cE61Af99429A228a6d596": {
+      "answer": 606.02855959,
+      "updatedAt": 1795651118
+     },
+     "0x45C3C877C15E6BA2EBB19eA114Ea508d14C1Af2E": {
+      "answer": 490.50660806,
+      "updatedAt": 1795636676
+     },
+     "0x470A51258068043bd43dC0a56245625C9fE86eB0": {
+      "answer": 327.83631743,
+      "updatedAt": 1795638561
+     },
+     "0x4A1166a659A55625345e9515b32adECea5547C38": {
+      "answer": 379.69,
+      "updatedAt": 1795640558
+     },
+     "0x61B7e5650328764B076A108EFF5fa7282a1B9aD2": {
+      "answer": 0.99998,
+      "updatedAt": 1795622142
+     },
+     "0x6652eDf64bA3731C4F2D3ce821A0Fb1f1f6b482a": {
+      "answer": 48.69,
+      "updatedAt": 1795648861
+     },
+     "0x6B22A786bAa607d76728168703a39Ea9C99f2cD0": {
+      "answer": 355.21297925,
+      "updatedAt": 1795647655
+     },
+     "0x75a9c76Ef439e2C7c2E5a34Ab105EcFe3766431c": {
+      "answer": 139.515,
+      "updatedAt": 1795636975
+     },
+     "0x78F3556b67E17Df817D51Ef5a990cDaF09E8d3A9": {
+      "answer": 1690.8382,
+      "updatedAt": 1795649861
+     },
+     "0x7C38C00C30BEe9378381E7B6135d7283356D71b1": {
+      "answer": 610.1752066,
+      "updatedAt": 1795650220
+     },
+     "0x80901d846d5D7B030F26B480776EE3b29374C2ae": {
+      "answer": 633.34853428,
+      "updatedAt": 1795639817
+     },
+     "0x820ABedFF239034956B7A9d2F0a331f9F075eB4c": {
+      "answer": 163.875,
+      "updatedAt": 1795646782
+     },
+     "0x874cF94aa8eC88Fd9560094dD065f2fB3E41Fc2F": {
+      "answer": 345.58539043,
+      "updatedAt": 1795650194
+     },
+     "0x943A29E7ae51A4798823ca9eEd2ed533B2A22C72": {
+      "answer": 406.8,
+      "updatedAt": 1795647638
+     },
+     "0xA3a468A452940B7D6b69991207B508c609a98Ef2": {
+      "answer": 106.17,
+      "updatedAt": 1795650716
+     },
+     "0xB265810950ba6c5C0Ff821c9963014a56fD8Bffb": {
+      "answer": 127.92,
+      "updatedAt": 1795649930
+     },
+     "0xD5a1508ceD74c084eBf3cBe853e2C968fB2a651C": {
+      "answer": 245.8944,
+      "updatedAt": 1795650160
+     },
+     "0xF6f373a037c30F0e5010d854385cA89185AE638b": {
+      "answer": 274.34219133,
+      "updatedAt": 1795650157
+     }
+    },
+    "2026-11-26": {
+     "0x0009cD492adf8167f9eEBf1293556A673530a21a": {
+      "answer": 60568.20594869,
+      "updatedAt": 1795730745
+     },
+     "0x0e6a64a2B58A6693a531E6c555f3A5d042eEA844": {
+      "answer": 106.10296402,
+      "updatedAt": 1795652049
+     },
+     "0x27C71df6A64fB476468EdF256CF72c038baB5B67": {
+      "answer": 26.75,
+      "updatedAt": 1795654734
+     },
+     "0x319724394D3A0e3669269846abE664Cd621f9f6A": {
+      "answer": 719.15638538,
+      "updatedAt": 1795640169
+     },
+     "0x379EC4f7C378F34a1B47E4F3cbeBCbAC3E8E9F15": {
+      "answer": 151.64270618,
+      "updatedAt": 1795652351
+     },
+     "0x396118bdFB181e6240E74D243F266B061c0edc3D": {
+      "answer": 82.21,
+      "updatedAt": 1795653742
+     },
+     "0x3f390C5C24628Ac7C489515402235FeAD71D1913": {
+      "answer": 54.75499999,
+      "updatedAt": 1795654664
+     },
+     "0x425EEFdCf05ed6526C3cE61Af99429A228a6d596": {
+      "answer": 616.36505554,
+      "updatedAt": 1795652769
+     },
+     "0x45C3C877C15E6BA2EBB19eA114Ea508d14C1Af2E": {
+      "answer": 493.00393879,
+      "updatedAt": 1795653290
+     },
+     "0x470A51258068043bd43dC0a56245625C9fE86eB0": {
+      "answer": 327.93264486,
+      "updatedAt": 1795703621
+     },
+     "0x4A1166a659A55625345e9515b32adECea5547C38": {
+      "answer": 381.64,
+      "updatedAt": 1795651901
+     },
+     "0x61B7e5650328764B076A108EFF5fa7282a1B9aD2": {
+      "answer": 0.99992556,
+      "updatedAt": 1795708569
+     },
+     "0x6652eDf64bA3731C4F2D3ce821A0Fb1f1f6b482a": {
+      "answer": 48.86,
+      "updatedAt": 1795653422
+     },
+     "0x6B22A786bAa607d76728168703a39Ea9C99f2cD0": {
+      "answer": 355.21297925,
+      "updatedAt": 1795647655
+     },
+     "0x75a9c76Ef439e2C7c2E5a34Ab105EcFe3766431c": {
+      "answer": 139.515,
+      "updatedAt": 1795636975
+     },
+     "0x78F3556b67E17Df817D51Ef5a990cDaF09E8d3A9": {
+      "answer": 1689.58,
+      "updatedAt": 1795733765
+     },
+     "0x7C38C00C30BEe9378381E7B6135d7283356D71b1": {
+      "answer": 613.27088187,
+      "updatedAt": 1795653551
+     },
+     "0x80901d846d5D7B030F26B480776EE3b29374C2ae": {
+      "answer": 636.58580134,
+      "updatedAt": 1795652361
+     },
+     "0x820ABedFF239034956B7A9d2F0a331f9F075eB4c": {
+      "answer": 165.67,
+      "updatedAt": 1795653414
+     },
+     "0x874cF94aa8eC88Fd9560094dD065f2fB3E41Fc2F": {
+      "answer": 347.5457248,
+      "updatedAt": 1795654005
+     },
+     "0x943A29E7ae51A4798823ca9eEd2ed533B2A22C72": {
+      "answer": 415.875,
+      "updatedAt": 1795652800
+     },
+     "0xA3a468A452940B7D6b69991207B508c609a98Ef2": {
+      "answer": 106.32,
+      "updatedAt": 1795654018
+     },
+     "0xB265810950ba6c5C0Ff821c9963014a56fD8Bffb": {
+      "answer": 128.58935,
+      "updatedAt": 1795652240
+     },
+     "0xD5a1508ceD74c084eBf3cBe853e2C968fB2a651C": {
+      "answer": 247.149,
+      "updatedAt": 1795653217
+     },
+     "0xF6f373a037c30F0e5010d854385cA89185AE638b": {
+      "answer": 274.34219133,
+      "updatedAt": 1795650157
+     }
+    }
+   }
+  },
+  "arc": {
+   "desc": {
+    "0x361b95c10b76Ca3f35C686d423e43A951755Bf23": [
+     "EURC / USD",
+     8
+    ],
+    "0x50FCDD99D6762D1C170DC6A9111db944AEE6D364": [
+     "ETH / USD",
+     8
+    ],
+    "0x84EA90AC252Dc437031461836DB5164219147905": [
+     "USDC / USD",
+     8
+    ]
+   },
+   "days": {
+    "2026-10-22": {
+     "0x361b95c10b76Ca3f35C686d423e43A951755Bf23": {
+      "answer": 1.12356965,
+      "updatedAt": 1792631186
+     },
+     "0x50FCDD99D6762D1C170DC6A9111db944AEE6D364": {
+      "answer": 2389.75,
+      "updatedAt": 1792703701
+     },
+     "0x84EA90AC252Dc437031461836DB5164219147905": {
+      "answer": 0.99984,
+      "updatedAt": 1792682708
+     }
+    },
+    "2026-10-23": {
+     "0x361b95c10b76Ca3f35C686d423e43A951755Bf23": {
+      "answer": 1.12199059,
+      "updatedAt": 1792717591
+     },
+     "0x50FCDD99D6762D1C170DC6A9111db944AEE6D364": {
+      "answer": 2376.5017,
+      "updatedAt": 1792797728
+     },
+     "0x84EA90AC252Dc437031461836DB5164219147905": {
+      "answer": 0.99986,
+      "updatedAt": 1792769111
+     }
+    },
+    "2026-11-01": {
+     "0x361b95c10b76Ca3f35C686d423e43A951755Bf23": {
+      "answer": 1.11586107,
+      "updatedAt": 1793542006
+     },
+     "0x50FCDD99D6762D1C170DC6A9111db944AEE6D364": {
+      "answer": 2267.13209792,
+      "updatedAt": 1793574703
+     },
+     "0x84EA90AC252Dc437031461836DB5164219147905": {
+      "answer": 0.99973198,
+      "updatedAt": 1793546815
+     }
+    },
+    "2026-11-15": {
+     "0x361b95c10b76Ca3f35C686d423e43A951755Bf23": {
+      "answer": 1.09820394,
+      "updatedAt": 1794751060
+     },
+     "0x50FCDD99D6762D1C170DC6A9111db944AEE6D364": {
+      "answer": 1833.95325743,
+      "updatedAt": 1794785855
+     },
+     "0x84EA90AC252Dc437031461836DB5164219147905": {
+      "answer": 0.99979737,
+      "updatedAt": 1794756506
+     }
+    },
+    "2026-11-25": {
+     "0x361b95c10b76Ca3f35C686d423e43A951755Bf23": {
+      "answer": 1.0940943,
+      "updatedAt": 1795615151
+     },
+     "0x50FCDD99D6762D1C170DC6A9111db944AEE6D364": {
+      "answer": 1686.59,
+      "updatedAt": 1795639902
+     },
+     "0x84EA90AC252Dc437031461836DB5164219147905": {
+      "answer": 0.99989328,
+      "updatedAt": 1795620574
+     }
+    },
+    "2026-11-26": {
+     "0x361b95c10b76Ca3f35C686d423e43A951755Bf23": {
+      "answer": 1.09795443,
+      "updatedAt": 1795701572
+     },
+     "0x50FCDD99D6762D1C170DC6A9111db944AEE6D364": {
+      "answer": 1682.68028203,
+      "updatedAt": 1795736844
+     },
+     "0x84EA90AC252Dc437031461836DB5164219147905": {
+      "answer": 0.99985927,
+      "updatedAt": 1795706988
+     }
+    }
+   }
+  },
+  "elysium": {
+   "desc": {},
+   "days": {}
+  }
+ }
+}

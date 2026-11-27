@@ -1,0 +1,212 @@
+{
+ "base|F_TGE": {
+  "owners": [
+   "0x509bbaf1edb834bc039e1b18dd338ae3b84e28e4",
+   "0xb3fe07ca4623b8dffd6d7409992b6317cd586317",
+   "0x689f4db3a506ff1d66f0497c4536068637682189",
+   "0xe06e289e5bac548daf82e5b22793853e5bd91105",
+   "0xd044e9858fb4b9cfc12440685e51db438e77cf02"
+  ],
+  "threshold": 2,
+  "version": "1.3.0",
+  "nonce": 185,
+  "codelen": 172
+ },
+ "base|RSGP_SAFE": {
+  "owners": [
+   "0xb3fe07ca4623b8dffd6d7409992b6317cd586317",
+   "0x689f4db3a506ff1d66f0497c4536068637682189",
+   "0xd044e9858fb4b9cfc12440685e51db438e77cf02",
+   "0xe06e289e5bac548daf82e5b22793853e5bd91105",
+   "0x509bbaf1edb834bc039e1b18dd338ae3b84e28e4"
+  ],
+  "threshold": 2,
+  "version": "1.4.1",
+  "nonce": 23,
+  "codelen": 172
+ },
+ "base|E42255": {
+  "owners": [
+   "0x9939578305136e255151f3cc1c0996368f7221ba",
+   "0x3cc42a196321994e637156851a0b247034983e46",
+   "0x0ebee8c53c228a5fc1ebba05f179bd99f577cb52",
+   "0x3e4ee5e1fcc58acbaef449a7f2fe52ba7ba71d4c",
+   "0xc6e5084b11ee98da7bdbc4f9cabf5e17bb209652",
+   "0x3c15f0ac6c0dc75906a4977f8b7b25cab667afe2",
+   "0x0aeda6fdc0a8277ff4646a6aa60efa61d8d741ac"
+  ],
+  "threshold": 3,
+  "version": "1.5.0",
+  "nonce": 115,
+  "codelen": 124
+ },
+ "ethereum|F_TGE": null,
+ "ethereum|RSGP_SAFE": {
+  "owners": [
+   "0x689f4db3a506ff1d66f0497c4536068637682189",
+   "0xb70519e16b1cd0978f9e5450086311ef0617111f",
+   "0x02c27cd43306f0940af688fd1901b07f65e2443c",
+   "0x509bbaf1edb834bc039e1b18dd338ae3b84e28e4"
+  ],
+  "threshold": 2,
+  "version": "1.4.1",
+  "nonce": 0,
+  "codelen": 172
+ },
+ "ethereum|E42255": {
+  "owners": [
+   "0x9939578305136e255151f3cc1c0996368f7221ba",
+   "0x3cc42a196321994e637156851a0b247034983e46",
+   "0x0ebee8c53c228a5fc1ebba05f179bd99f577cb52",
+   "0x3e4ee5e1fcc58acbaef449a7f2fe52ba7ba71d4c",
+   "0xc6e5084b11ee98da7bdbc4f9cabf5e17bb209652",
+   "0x3c15f0ac6c0dc75906a4977f8b7b25cab667afe2",
+   "0x0aeda6fdc0a8277ff4646a6aa60efa61d8d741ac"
+  ],
+  "threshold": 3,
+  "version": "1.5.0",
+  "nonce": 40,
+  "codelen": 124
+ },
+ "optimism|F_TGE": null,
+ "optimism|RSGP_SAFE": {
+  "owners": [
+   "0xb3fe07ca4623b8dffd6d7409992b6317cd586317",
+   "0x689f4db3a506ff1d66f0497c4536068637682189",
+   "0xd044e9858fb4b9cfc12440685e51db438e77cf02",
+   "0xe06e289e5bac548daf82e5b22793853e5bd91105",
+   "0x509bbaf1edb834bc039e1b18dd338ae3b84e28e4"
+  ],
+  "threshold": 2,
+  "version": "1.4.1",
+  "nonce": 30,
+  "codelen": 172
+ },
+ "optimism|E42255": {
+  "owners": [
+   "0x9939578305136e255151f3cc1c0996368f7221ba",
+   "0x3cc42a196321994e637156851a0b247034983e46",
+   "0x0ebee8c53c228a5fc1ebba05f179bd99f577cb52",
+   "0x3e4ee5e1fcc58acbaef449a7f2fe52ba7ba71d4c",
+   "0xc6e5084b11ee98da7bdbc4f9cabf5e17bb209652",
+   "0x3c15f0ac6c0dc75906a4977f8b7b25cab667afe2",
+   "0x0aeda6fdc0a8277ff4646a6aa60efa61d8d741ac"
+  ],
+  "threshold": 3,
+  "version": "1.5.0",
+  "nonce": 35,
+  "codelen": 124
+ },
+ "arbitrum|F_TGE": null,
+ "arbitrum|RSGP_SAFE": {
+  "owners": [
+   "0x689f4db3a506ff1d66f0497c4536068637682189",
+   "0xb70519e16b1cd0978f9e5450086311ef0617111f",
+   "0x02c27cd43306f0940af688fd1901b07f65e2443c",
+   "0x509bbaf1edb834bc039e1b18dd338ae3b84e28e4"
+  ],
+  "threshold": 2,
+  "version": "1.4.1",
+  "nonce": 0,
+  "codelen": 172
+ },
+ "arbitrum|E42255": {
+  "owners": [
+   "0x9939578305136e255151f3cc1c0996368f7221ba",
+   "0x3cc42a196321994e637156851a0b247034983e46",
+   "0x0ebee8c53c228a5fc1ebba05f179bd99f577cb52",
+   "0x3e4ee5e1fcc58acbaef449a7f2fe52ba7ba71d4c",
+   "0xc6e5084b11ee98da7bdbc4f9cabf5e17bb209652",
+   "0x3c15f0ac6c0dc75906a4977f8b7b25cab667afe2",
+   "0x0aeda6fdc0a8277ff4646a6aa60efa61d8d741ac"
+  ],
+  "threshold": 3,
+  "version": "1.5.0",
+  "nonce": 39,
+  "codelen": 124
+ },
+ "ink|F_TGE": null,
+ "ink|RSGP_SAFE": {
+  "owners": [
+   "0x689f4db3a506ff1d66f0497c4536068637682189",
+   "0xb70519e16b1cd0978f9e5450086311ef0617111f",
+   "0x02c27cd43306f0940af688fd1901b07f65e2443c",
+   "0x509bbaf1edb834bc039e1b18dd338ae3b84e28e4"
+  ],
+  "threshold": 2,
+  "version": "1.4.1",
+  "nonce": 0,
+  "codelen": 172
+ },
+ "ink|E42255": {
+  "owners": [
+   "0x9939578305136e255151f3cc1c0996368f7221ba",
+   "0x3cc42a196321994e637156851a0b247034983e46",
+   "0x0ebee8c53c228a5fc1ebba05f179bd99f577cb52",
+   "0x3e4ee5e1fcc58acbaef449a7f2fe52ba7ba71d4c",
+   "0xc6e5084b11ee98da7bdbc4f9cabf5e17bb209652",
+   "0x3c15f0ac6c0dc75906a4977f8b7b25cab667afe2",
+   "0x0aeda6fdc0a8277ff4646a6aa60efa61d8d741ac"
+  ],
+  "threshold": 3,
+  "version": "1.5.0",
+  "nonce": 29,
+  "codelen": 124
+ },
+ "robinhood|F_TGE": null,
+ "robinhood|RSGP_SAFE": {
+  "owners": [
+   "0x689f4db3a506ff1d66f0497c4536068637682189",
+   "0xb70519e16b1cd0978f9e5450086311ef0617111f",
+   "0x02c27cd43306f0940af688fd1901b07f65e2443c",
+   "0x509bbaf1edb834bc039e1b18dd338ae3b84e28e4"
+  ],
+  "threshold": 2,
+  "version": "1.4.1",
+  "nonce": 0,
+  "codelen": 172
+ },
+ "robinhood|E42255": {
+  "owners": [
+   "0x9939578305136e255151f3cc1c0996368f7221ba",
+   "0x3cc42a196321994e637156851a0b247034983e46",
+   "0x0ebee8c53c228a5fc1ebba05f179bd99f577cb52",
+   "0x3e4ee5e1fcc58acbaef449a7f2fe52ba7ba71d4c",
+   "0xc6e5084b11ee98da7bdbc4f9cabf5e17bb209652",
+   "0x3c15f0ac6c0dc75906a4977f8b7b25cab667afe2",
+   "0x0aeda6fdc0a8277ff4646a6aa60efa61d8d741ac"
+  ],
+  "threshold": 3,
+  "version": "1.5.0",
+  "nonce": 37,
+  "codelen": 124
+ },
+ "arc|F_TGE": null,
+ "arc|RSGP_SAFE": {
+  "owners": [
+   "0x689f4db3a506ff1d66f0497c4536068637682189",
+   "0xb70519e16b1cd0978f9e5450086311ef0617111f",
+   "0x02c27cd43306f0940af688fd1901b07f65e2443c",
+   "0x509bbaf1edb834bc039e1b18dd338ae3b84e28e4"
+  ],
+  "threshold": 2,
+  "version": "1.4.1",
+  "nonce": 0,
+  "codelen": 172
+ },
+ "arc|E42255": {
+  "owners": [
+   "0x9939578305136e255151f3cc1c0996368f7221ba",
+   "0x3cc42a196321994e637156851a0b247034983e46",
+   "0x0ebee8c53c228a5fc1ebba05f179bd99f577cb52",
+   "0x3e4ee5e1fcc58acbaef449a7f2fe52ba7ba71d4c",
+   "0xc6e5084b11ee98da7bdbc4f9cabf5e17bb209652",
+   "0x3c15f0ac6c0dc75906a4977f8b7b25cab667afe2",
+   "0x0aeda6fdc0a8277ff4646a6aa60efa61d8d741ac"
+  ],
+  "threshold": 3,
+  "version": "1.5.0",
+  "nonce": 43,
+  "codelen": 124
+ }
+}

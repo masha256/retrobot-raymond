@@ -1,0 +1,16 @@
+{
+ "1795392000": {
+  "tape_gross_usd": 323230,
+  "cl": 308551,
+  "v2": 14679,
+  "pools_valued": 926,
+  "pools_unpriced_with_fees": 2
+ },
+ "1795564800": {
+  "tape_gross_usd": 277810,
+  "cl": 264009,
+  "v2": 13801,
+  "pools_valued": 926,
+  "pools_unpriced_with_fees": 1
+ }
+}
