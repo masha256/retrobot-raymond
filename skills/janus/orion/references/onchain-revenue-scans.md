@@ -34,6 +34,15 @@ Depth for a release that replaces a third-party revenue series with Orion's own 
   the matching timestamp, with Mike's sign-off.
 - A live coverage percentage cannot divide by a DEV-REF value: value the still-unpriced fees with a floorless graph
   (coverage only, never stored).
+- Enforce "no tokenized-stock anchors" in the adapter's `validateParams` (anchor feed `description()` must be on a
+  fixed crypto/stable allowlist): the pricing code trusts whatever anchors config lists.
+- A null read (revert or decode failure) of anything a number depends on must fail the chain-day, never default:
+  a null `s-1` accumulator read as "absent" puts a pool's lifetime fees into one day, a null registration read
+  silently drops the pool, a null pending reads as 0. The only legitimate null is a pool created during the day
+  (no code at `s-1`), and that needs a successful `s-1` pool-count read to prove it. Treat negative per-pool deltas
+  (gross or allocator) as failures too: counters are monotonic and a negative allocator means missed logs.
+- Read pools from each factory's LIVE tape getter at `e-1` and only compare it with config (drift warn): reading the
+  config tape after a migration gives stale or zero gross with only a warning.
 
 ## Orion code pitfalls (where a new adapter family plugs in)
 - The series writer used to stamp every adapter row `api` and treat other origins as foreign: a `pool_scan`
@@ -58,6 +67,11 @@ Depth for a release that replaces a third-party revenue series with Orion's own 
 - Retiring the old metric key (new keys for the new series) lets one `data purge <asset> --metric <old> --yes`
   remove every source type of it (third_party and derived corrections) plus its cursor; keeping the key needs a
   two-step purge before any backfill.
+- `CHAINS.maxLogRange` (Base 2,000) is tuned for transfer scans; a once-a-day scan should carry its own per-chain
+  `log_range` from the measured provider span (1M on Alchemy except Ink 10k), or Base costs ~216 getLogs/day.
+  Don't change the CHAINS row itself: transfer_flow assets would move.
+- Test fixtures: trim them from the scoping `raw/` day files, mark any invented datum `"synthetic": true`, and have
+  the reviewer diff fixture pools against the raw files by script, so expected values aren't circular.
 - Backfill jobs: `job run-now backfill <a> --metric <k>` (repeatable) `--backfill-days N` (<= 400, one attempt, kept
   clear of the nightly). For a long multi-chain history, cap days scanned per run in the adapter (oldest missing
   first, from the stored days) and loop the job, so a lost lease costs one chunk.
