@@ -37,6 +37,9 @@ Orion's rule: no live CoinGecko/DefiLlama read; CoinGecko only as a labelled dev
 - A chain with no Chainlink feeds needs a cross-chain anchor (another chain's feed for the same asset): Mike's decision, label it.
 - Solidly-style pools: `stable()` can revert; derive the curve from the factory that created the pool, or stable pools price tens of % off.
 - Boundary state for a UTC day: a call at block N returns state AFTER N, so read day D's accumulators at B(D)-1 and B(D+1)-1, where B = first block at or after 00:00Z.
+- Coverage in live code can't divide by a dev-only reference: value the still-unpriced fees with the same graph run with no floor and more hops (coverage denominator only, never stored), and list what no path reaches with token amounts.
+- A stale anchor feed (older than its heartbeat + margin) is dropped for the day, not reused: the graph re-prices that token through the remaining anchors (USDC via a deep WETH/USDC pool), so value stays bounded; warn when it happens.
+- Probe each new chain once before pinning a chain row: `eth_chainId`, mean block time over ~200k blocks, and the provider's `eth_getLogs` span limit (Alchemy caps some chains, e.g. Ink, at 10,000 blocks; others accept 1M+). A log reader must also halve its range on a provider range/too-many-results error.
 
 ## Check outcomes never open anomalies
 A level `cross_checks` mismatch opens a `cross_check_mismatch` anomaly, which starts a paid triage run on prod. So hourly
