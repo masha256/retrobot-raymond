@@ -48,6 +48,18 @@ Depth for a release that replaces a third-party revenue series with Orion's own 
   (gross or allocator) as failures too: counters are monotonic and a negative allocator means missed logs.
 - Read pools from each factory's LIVE tape getter at `e-1` and only compare it with config (drift warn): reading the
   config tape after a migration gives stale or zero gross with only a warning.
+- Prove every configured contract exists at each chain's backfill start: `eth_getCode` at the first day's `s-1` for
+  every address, binary-searching the deploy block of any that is empty. A chain that joined later needs a per-chain
+  start date (chain-days before it not read, counted 0, marked not live); the planner takes the oldest missing day
+  first, so one pre-deploy chain-day fails the backfill and every nightly forever.
+- Registration lags pool creation: a gauged pool can be unregistered on the tape for its first day(s), so its tape
+  gross is 0 while its gauge accrues fees and the allocator <= gross gate trips. Count a gauged-unregistered pool's
+  allocator accrual as its gross (LP share 0, reported per chain); ungauged unregistered pools stay excluded.
+- Key collected-fee events by the event's indexed gauge (+ token), not the emitting contract, so a rewards manager
+  serving two gauges can't double count.
+- Live-check, before the prod-copy proof, the first backfill day, each chain's first live day and a recent day
+  (adapters on the real config with `since` = that day, via a `.probe/*.mts`): a one-recent-day golden hid both the
+  pre-deploy and the registration-lag failure.
 
 ## Orion code pitfalls (where a new adapter family plugs in)
 - The series writer used to stamp every adapter row `api` and treat other origins as foreign: a `pool_scan`
@@ -84,3 +96,15 @@ Depth for a release that replaces a third-party revenue series with Orion's own 
 - Backfill jobs: `job run-now backfill <a> --metric <k>` (repeatable) `--backfill-days N` (<= 400, one attempt, kept
   clear of the nightly). For a long multi-chain history, cap days scanned per run in the adapter (oldest missing
   first, from the stored days) and loop the job, so a lost lease costs one chunk.
+- `data purge` refuses a metric that is still configured: the per-env order is deploy, export+purge the old key,
+  backfill, verify one active row per metric per day.
+
+## Prod-copy proof (controller)
+- Old side = a detached worktree at the prod tag, new side = a detached worktree at the commit under test, both built,
+  `node_modules` symlinked after `cmp -s` of the lock files. One background script (refusing the prod nightly window
+  and the RPC quiet windows): `prod_copy.py` -> old/new `report yield` x13 at D (today-2) and D-91 -> export the old
+  third-party rows from the copy with psql as the dev-only acceptance reference -> purge on the copy -> loop
+  `data fetch <a> --metric <each new key> --backfill-days <n> --json` until every metric has every day -> new reports
+  -> flatdiff all 13 with an empty allowlist (the 12 untouched must show nothing) -> acceptance script.
+- `data fetch --json` exits 0 even when every source failed: read the JSON's `outcome` and stop on anything but
+  `ok`, and count stored days per metric with psql after each run. A failed bound/coverage gate shows up only there.

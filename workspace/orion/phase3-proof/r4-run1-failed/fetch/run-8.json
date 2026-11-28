@@ -1,0 +1,62 @@
+{
+  "assetId": "aero",
+  "dryRun": false,
+  "fetchRunId": 746,
+  "outcome": "failed",
+  "startedAt": "2026-11-28T06:04:48.859Z",
+  "endedAt": "2026-11-28T06:05:58.302Z",
+  "sources": [
+    {
+      "sourceId": "adapter:pool.tape_fees_daily",
+      "status": "failed",
+      "error": "flow_usd.voter_fees: adapter pool.tape_fees_daily: chain 42161 2026-10-26: allocator $2534.38 exceeds gross $2189.50 by more than 0.5% and $1.00; flow_usd.lp_fees: adapter pool.tape_fees_daily: chain 42161 2026-10-26: allocator $2534.38 exceeds gross $2189.50 by more than 0.5% and $1.00; flow_usd.pool_fees_gross: adapter pool.tape_fees_daily: chain 42161 2026-10-26: allocator $2534.38 exceeds gross $2189.50 by more than 0.5% and $1.00",
+      "metricsWritten": [],
+      "crossChecks": [],
+      "unlistedTransfers": [],
+      "conflicts": [],
+      "retiredObservationIds": [],
+      "notes": []
+    },
+    {
+      "sourceId": "adapter:pool.vrm_incentives_daily",
+      "status": "failed",
+      "error": "flow_usd.vote_incentives: adapter pool.vrm_incentives_daily: chain 42161 2026-10-26: allocator $2534.38 exceeds gross $2189.50 by more than 0.5% and $1.00; flow_usd.protocol_subsidy: adapter pool.vrm_incentives_daily: chain 42161 2026-10-26: allocator $2534.38 exceeds gross $2189.50 by more than 0.5% and $1.00",
+      "metricsWritten": [],
+      "crossChecks": [],
+      "unlistedTransfers": [],
+      "conflicts": [],
+      "retiredObservationIds": [],
+      "notes": []
+    }
+  ],
+  "written": [],
+  "anomalies": [
+    {
+      "id": 65,
+      "status": "open",
+      "kind": "source_failure_streak",
+      "metricKey": "",
+      "dedupeKey": "adapter:pool.tape_fees_daily",
+      "severity": "advisory",
+      "detail": {
+        "source": "adapter:pool.tape_fees_daily",
+        "error": "flow_usd.voter_fees: adapter pool.tape_fees_daily: chain 42161 2026-10-26: allocator $2534.38 exceeds gross $2189.50 by more than 0.5% and $1.00; flow_usd.lp_fees: adapter pool.tape_fees_daily: chain 42161 2026-10-26: allocator $2534.38 exceeds gross $2189.50 by more than 0.5% and $1.00; flow_usd.pool_fees_gross: adapter pool.tape_fees_daily: chain 42161 2026-10-26: allocator $2534.38 exceeds gross $2189.50 by more than 0.5% and $1.00",
+        "consecutive_failures_at_least": 3
+      }
+    },
+    {
+      "id": 66,
+      "status": "open",
+      "kind": "source_failure_streak",
+      "metricKey": "",
+      "dedupeKey": "adapter:pool.vrm_incentives_daily",
+      "severity": "advisory",
+      "detail": {
+        "source": "adapter:pool.vrm_incentives_daily",
+        "error": "flow_usd.vote_incentives: adapter pool.vrm_incentives_daily: chain 42161 2026-10-26: allocator $2534.38 exceeds gross $2189.50 by more than 0.5% and $1.00; flow_usd.protocol_subsidy: adapter pool.vrm_incentives_daily: chain 42161 2026-10-26: allocator $2534.38 exceeds gross $2189.50 by more than 0.5% and $1.00",
+        "consecutive_failures_at_least": 3
+      }
+    }
+  ],
+  "watch": []
+}

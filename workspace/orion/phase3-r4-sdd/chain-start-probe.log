@@ -1,0 +1,16 @@
+base chain genesis ts 2023-06-15T00:35:47.000Z s(10-22)= 52918927 addrs 8 all have code at 10-22
+ethereum chain genesis ts 1970-01-01T00:00:00.000Z s(10-22)= 26244425 addrs 8 all have code at 10-22
+optimism chain genesis ts 1970-01-01T00:00:00.000Z s(10-22)= 158514212 addrs 8 all have code at 10-22
+arbitrum chain genesis ts 1970-01-01T00:00:00.000Z s(10-22)= 517064902 addrs 8 all have code at 10-22
+ink chain genesis ts 2024-12-06T15:20:11.000Z s(10-22)= 59128789 addrs 8 all have code at 10-22
+robinhood chain genesis ts 1970-01-01T00:00:00.000Z s(10-22)= 94682515 addrs 8 all have code at 10-22
+arc chain genesis ts 2026-05-12T00:00:00.000Z s(10-22)= 27194601 addrs 14 all have code at 10-22
+elysium chain genesis ts 1970-01-01T00:00:00.000Z s(10-22)= 1687 addrs 8 
+  0x78589e876edcebdce72ee3436ab3c9ad3a7cef2d no code at 10-22 s-1; first code block 1945557 ts 2026-11-07T13:09:19.000Z
+  0x34bdd64b19d8631f936c2d07f19aaa6b83515992 no code at 10-22 s-1; first code block 1945263 ts 2026-11-07T13:08:35.000Z
+  0x8e6a9fcd1d638cc760ffba397605fe3355de76d2 no code at 10-22 s-1; first code block 1945551 ts 2026-11-07T13:09:13.000Z
+  0xefd7a089d3057f05189b05f74ffcf30610c42891 no code at 10-22 s-1; first code block 1947859 ts 2026-11-07T13:15:16.000Z
+  0x27d5eb73e7406675f6b0cbd037490ec3dba935a4 no code at 10-22 s-1; first code block 1947949 ts 2026-11-07T13:15:21.000Z
+  0xc0ed888afe87ed1acf01d9f19bb850159e3ce434 no code at 10-22 s-1; first code block 1947963 ts 2026-11-07T13:15:29.000Z
+  0xdd1705e23762f4d6e44d8c31bd8ea80c54612239 no code at 10-22 s-1; first code block 1944910 ts 2026-11-07T13:07:42.000Z
+  0x382409fad8503fbcdbb27a4211551fa03e884078 no code at 10-22 s-1; first code block 1944917 ts 2026-11-07T13:07:48.000Z

@@ -1,0 +1,20 @@
+{
+  "asset": "aero",
+  "perMetric": [
+    {
+      "metric": "flow_usd.fees",
+      "configured": false,
+      "observations": 310,
+      "superseded": 62,
+      "firstDay": "2026-03-27",
+      "lastDay": "2026-11-28",
+      "valueSum": 80819441.26000002,
+      "latestLevels": 0,
+      "watchState": 0,
+      "fetchCursors": 1
+    }
+  ],
+  "exportFile": "/home/hermes/.hermes/profiles/raymond/cache/scratch/r4copy-20261128T054207Z/new/purged/aero-flow_usd.fees-20261128T055622Z.json",
+  "exportSha256": "a1d8ea13c1cab80c0547ae1e9baec05321254323450409f4117350b810afe68f",
+  "applied": true
+}

@@ -1,0 +1,17 @@
+== prod copy 05:42:07
+== reports old + new (before purge/backfill) D=2026-11-26 D91=2026-08-27 05:55:36
+== DefiLlama reference export (dev-only) 05:56:21
+== purge dry + --yes 05:56:21
+flow_usd.fees rows after: 0
+== backfill 37 days (2026-10-22..2026-11-27) 05:56:24
+run 1 exit 0 85s days stored (min over 5 metrics): 0 / 37
+run 2 exit 0 76s days stored (min over 5 metrics): 0 / 37
+run 3 exit 0 69s days stored (min over 5 metrics): 0 / 37
+run 4 exit 0 75s days stored (min over 5 metrics): 0 / 37
+run 5 exit 0 69s days stored (min over 5 metrics): 0 / 37
+run 6 exit 0 65s days stored (min over 5 metrics): 0 / 37
+run 7 exit 0 65s days stored (min over 5 metrics): 0 / 37
+run 8 exit 0 70s days stored (min over 5 metrics): 0 / 37
+run 9 exit 0 62s days stored (min over 5 metrics): 0 / 37
+STOP: backfill incomplete: 0 / 37
+exit 1

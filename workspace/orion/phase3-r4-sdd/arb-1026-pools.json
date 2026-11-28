@@ -1,0 +1,190 @@
+{
+ "blocks": {
+  "s": "518282017",
+  "e": "518587284"
+ },
+ "counts": {
+  "pools": 39,
+  "registered": 30,
+  "gauged": 36,
+  "newInDay": 7
+ },
+ "drift": [
+  {
+   "kind": "gauged_unregistered",
+   "chainId": 42161,
+   "id": "0x14cecb8a37013853ad071fc877705a8ecc9e77b7",
+   "detail": {
+    "gauge": "0x45d150cdac47edee7e4b7aebd5113cdee71bf75d",
+    "factory": "0x88a60ee77392577c355c0acb2a8d476d5a4ec03a"
+   }
+  },
+  {
+   "kind": "gauged_unregistered",
+   "chainId": 42161,
+   "id": "0x346b3e6bc9c654c5c2437e6b005e2ccd3a43ddd5",
+   "detail": {
+    "gauge": "0xfc2799094ff8d06793ce9c5de474dc0b0dbee6c3",
+    "factory": "0x88a60ee77392577c355c0acb2a8d476d5a4ec03a"
+   }
+  },
+  {
+   "kind": "gauged_unregistered",
+   "chainId": 42161,
+   "id": "0xe41723a9fca1eac0f18728d4583510aa7377901b",
+   "detail": {
+    "gauge": "0x2d4effa04473cf9b2d94b874565576516f5b0b85",
+    "factory": "0x88a60ee77392577c355c0acb2a8d476d5a4ec03a"
+   }
+  },
+  {
+   "kind": "gauged_unregistered",
+   "chainId": 42161,
+   "id": "0x09328be718d89228a985471bb470988a34d0b162",
+   "detail": {
+    "gauge": "0x2e956a98e993d8814f9088862be36cc8fc9e86bc",
+    "factory": "0x88a60ee77392577c355c0acb2a8d476d5a4ec03a"
+   }
+  },
+  {
+   "kind": "gauged_unregistered",
+   "chainId": 42161,
+   "id": "0x81659867a8ce20bb57be82fd9184f2ff1f887605",
+   "detail": {
+    "gauge": "0x1ef39bd68e472d932af1f3c79526f00ced5d8b91",
+    "factory": "0x88a60ee77392577c355c0acb2a8d476d5a4ec03a"
+   }
+  },
+  {
+   "kind": "gauged_unregistered",
+   "chainId": 42161,
+   "id": "0xe95e4fdc3f666909ec06b809cd02861f0453f053",
+   "detail": {
+    "gauge": "0xc27e35e7b1949e25c78f7f3af8bf84a1d8d466bf",
+    "factory": "0x88a60ee77392577c355c0acb2a8d476d5a4ec03a"
+   }
+  }
+ ],
+ "top": [
+  {
+   "pool": "0x14cecb8a37013853ad071fc877705a8ecc9e77b7",
+   "reg": false,
+   "newInDay": true,
+   "gauge": "0x45d150cdac47edee7e4b7aebd5113cdee71bf75d",
+   "g": 0,
+   "a": 205.43,
+   "d": 205.43,
+   "f0": "0",
+   "f1": "0",
+   "al": {
+    "0x004b506865409877c9fa29bfb1eba929984b9bbc": "103905916",
+    "0x82af49447d8a07e3bd95bd0d56f35241523fbab1": "43760052230933648"
+   }
+  },
+  {
+   "pool": "0x346b3e6bc9c654c5c2437e6b005e2ccd3a43ddd5",
+   "reg": false,
+   "newInDay": true,
+   "gauge": "0xfc2799094ff8d06793ce9c5de474dc0b0dbee6c3",
+   "g": 0,
+   "a": 60.95,
+   "d": 60.95,
+   "f0": "0",
+   "f1": "0",
+   "al": {
+    "0x004b506865409877c9fa29bfb1eba929984b9bbc": "30003672",
+    "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f": "38744"
+   }
+  },
+  {
+   "pool": "0xe41723a9fca1eac0f18728d4583510aa7377901b",
+   "reg": false,
+   "newInDay": true,
+   "gauge": "0x2d4effa04473cf9b2d94b874565576516f5b0b85",
+   "g": 0,
+   "a": 39.92,
+   "d": 39.92,
+   "f0": "0",
+   "f1": "0",
+   "al": {
+    "0x004b506865409877c9fa29bfb1eba929984b9bbc": "20742151",
+    "0x912ce59144191c1204e64559fe8253a0e49e6548": "114171986154991099654"
+   }
+  },
+  {
+   "pool": "0x09328be718d89228a985471bb470988a34d0b162",
+   "reg": false,
+   "newInDay": true,
+   "gauge": "0x2e956a98e993d8814f9088862be36cc8fc9e86bc",
+   "g": 0,
+   "a": 36.61,
+   "d": 36.61,
+   "f0": "0",
+   "f1": "0",
+   "al": {
+    "0x004b506865409877c9fa29bfb1eba929984b9bbc": "18089582",
+    "0xaf88d065e77c8cc2239327c5edb3a432268e5831": "18524816"
+   }
+  },
+  {
+   "pool": "0x81659867a8ce20bb57be82fd9184f2ff1f887605",
+   "reg": false,
+   "newInDay": true,
+   "gauge": "0x1ef39bd68e472d932af1f3c79526f00ced5d8b91",
+   "g": 0,
+   "a": 19.11,
+   "d": 19.11,
+   "f0": "0",
+   "f1": "0",
+   "al": {
+    "0x004b506865409877c9fa29bfb1eba929984b9bbc": "9078398",
+    "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9": "10043703"
+   }
+  },
+  {
+   "pool": "0x951a73d70a22179710a41668898f58f671345e9a",
+   "reg": true,
+   "newInDay": false,
+   "gauge": "0xe7cb62c4b29636bea2a3bff37c839fba790f8e13",
+   "g": 0.03,
+   "a": 0.03,
+   "d": 0,
+   "f0": "8482481634617",
+   "f1": "6371",
+   "al": {
+    "0x82af49447d8a07e3bd95bd0d56f35241523fbab1": "8482481634619",
+    "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9": "6373"
+   }
+  },
+  {
+   "pool": "0xb66bea36e999bcdb6cfcca6d72e18af2163ffc96",
+   "reg": true,
+   "newInDay": false,
+   "gauge": "0x296a7fdfc5f5b627b6218e16d913fb1c6fadd4b5",
+   "g": 0.31,
+   "a": 0.31,
+   "d": 0,
+   "f0": "902216584235571968",
+   "f1": "160087",
+   "al": {
+    "0x912ce59144191c1204e64559fe8253a0e49e6548": "902216584235571969",
+    "0xaf88d065e77c8cc2239327c5edb3a432268e5831": "160087"
+   }
+  },
+  {
+   "pool": "0x412cf90dc0e435e9f68d2d810b24fe7d2904085b",
+   "reg": true,
+   "newInDay": false,
+   "gauge": "0xb78e6cfc4c09304a21886701f32067e1630c30f0",
+   "g": 18.02,
+   "a": 18.02,
+   "d": 0,
+   "f0": "8403915",
+   "f1": "9634689",
+   "al": {
+    "0xaf88d065e77c8cc2239327c5edb3a432268e5831": "8403915",
+    "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9": "9634672"
+   }
+  }
+ ]
+}
