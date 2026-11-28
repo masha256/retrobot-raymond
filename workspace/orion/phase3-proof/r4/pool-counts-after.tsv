@@ -1,0 +1,5 @@
+flow_usd.lp_fees	pool_scan	37	2026-10-23 00:00:00+00	2026-11-28 00:00:00+00	958482.65
+flow_usd.pool_fees_gross	pool_scan	37	2026-10-23 00:00:00+00	2026-11-28 00:00:00+00	10125218.98
+flow_usd.protocol_subsidy	pool_scan	37	2026-10-23 00:00:00+00	2026-11-28 00:00:00+00	309493.06
+flow_usd.vote_incentives	pool_scan	37	2026-10-23 00:00:00+00	2026-11-28 00:00:00+00	183657.24
+flow_usd.voter_fees	pool_scan	37	2026-10-23 00:00:00+00	2026-11-28 00:00:00+00	9166736.33

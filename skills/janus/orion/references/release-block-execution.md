@@ -45,6 +45,15 @@ d91() { python3 -c 'import datetime,sys; print(datetime.date.fromisoformat(sys.a
 ## Release build red with test timeouts
 `build.sh` has no skip flag. If failures are only `Test timed out in 5000ms` on DB-heavy tests: rerun those files alone (`--maxWorkers=1 --reporter=verbose`) and compare durations and the run's total `Duration` with the last green full run. Tests 50-100x slower than alone plus a run ~2x longer = host/DB stall (often another session's suite on the shared `orion_test`): check `uptime` and `pg_stat_activity` for `orion_test`, rerun `build.sh <tag>` once on an idle host, change no code, and tell Mike the first run was red and why. Tests slow even alone are a real regression: stop.
 
+## Prod-copy proof of a series swap (purge old key + adapter backfill on the copy)
+- Order in the proof script: copy -> old/new reports at D and D-91 -> export the old series' rows with local `psql` (the dev-only reference) -> `data purge <a> --metric <old>` dry then `--yes` (NEW home) -> loop `data fetch <a> --metric <k>... --backfill-days N --json` until a `psql` count shows one active row per new metric per day -> new reports -> flatdiff every asset with an EMPTY allowlist (unchanged assets must show 0 paths at D and D-91, before and after the backfill) -> acceptance.
+- Gate each fetch pass on the JSON `outcome == "ok"`, not the exit code: `data fetch` exits 0 even when every source failed, so an exit-code loop spins through all passes writing nothing.
+- Append every RPC URL the new adapters read (one per chain) to the new home's `.env` (values never printed).
+- A failed run: keep its output dir (`<rel>-runN-failed/`), `cleanup.py` the schema, fix, rebuild the new side, re-copy prod. Fixes found here go through a scoped re-review before the next run; the re-review and the next proof run may go in parallel (the proof is read-only).
+- `data purge` refuses a metric that is still configured, so every env's series swap runs deploy -> export+purge -> backfill -> verify; a spec that says purge-then-deploy cannot run.
+- Fill the release allowlist from the proof's diff only after Mike signs the table (the skeleton test pins the placeholder until then).
+- A live (network) vitest file still needs `ORION_TEST_DATABASE_URL` set: the global setup refuses before any test runs.
+
 ## When a runbook STOP fires
 Before stopping, compare the stopping output with the signed proof's own run of the same step (`workspace/orion/phase3-proof/<rel>/B*`, `C*`). If the proof shows the identical pattern (scaled by the extra days since), it is an artifact of step order, not a gap: run the next read-only step that explains it, re-check after the step that should clear it, tell Mike in the thread, and fix the runbook before prod. Example: `compare-usd` flags yCRV rows still on `coingecko:*` refs as unpriced until `data reprice` remaps them; after the reprice they read 0.
 

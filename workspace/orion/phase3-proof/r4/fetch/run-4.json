@@ -1,0 +1,984 @@
+{
+  "assetId": "aero",
+  "dryRun": false,
+  "fetchRunId": 742,
+  "outcome": "ok",
+  "startedAt": "2026-11-28T06:58:40.431Z",
+  "endedAt": "2026-11-28T07:01:47.075Z",
+  "sources": [
+    {
+      "sourceId": "adapter:pool.tape_fees_daily",
+      "status": "ok",
+      "error": null,
+      "metricsWritten": [
+        "flow_usd.voter_fees",
+        "flow_usd.lp_fees",
+        "flow_usd.pool_fees_gross"
+      ],
+      "crossChecks": [],
+      "unlistedTransfers": [],
+      "conflicts": [],
+      "retiredObservationIds": [],
+      "notes": [
+        "flow_usd.voter_fees: not in the series, skipped: 31 days from 2026-10-21 to 2026-11-27",
+        "flow_usd.lp_fees: not in the series, skipped: 31 days from 2026-10-21 to 2026-11-27",
+        "flow_usd.pool_fees_gross: not in the series, skipped: 31 days from 2026-10-21 to 2026-11-27"
+      ]
+    },
+    {
+      "sourceId": "adapter:pool.vrm_incentives_daily",
+      "status": "ok",
+      "error": null,
+      "metricsWritten": [
+        "flow_usd.vote_incentives",
+        "flow_usd.protocol_subsidy"
+      ],
+      "crossChecks": [],
+      "unlistedTransfers": [],
+      "conflicts": [],
+      "retiredObservationIds": [],
+      "notes": [
+        "flow_usd.vote_incentives: not in the series, skipped: 31 days from 2026-10-21 to 2026-11-27",
+        "flow_usd.protocol_subsidy: not in the series, skipped: 31 days from 2026-10-21 to 2026-11-27"
+      ]
+    }
+  ],
+  "written": [
+    {
+      "metricKey": "flow_usd.voter_fees",
+      "value": 272820.84404794505,
+      "observedAt": "2026-11-13T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34667
+    },
+    {
+      "metricKey": "flow_usd.voter_fees",
+      "value": 380148.0697500752,
+      "observedAt": "2026-11-14T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34668
+    },
+    {
+      "metricKey": "flow_usd.voter_fees",
+      "value": 343767.55987047637,
+      "observedAt": "2026-11-15T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34669
+    },
+    {
+      "metricKey": "flow_usd.voter_fees",
+      "value": 285578.05115300865,
+      "observedAt": "2026-11-16T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34670
+    },
+    {
+      "metricKey": "flow_usd.voter_fees",
+      "value": 263455.64150486153,
+      "observedAt": "2026-11-17T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34671
+    },
+    {
+      "metricKey": "flow_usd.voter_fees",
+      "value": 254749.92850725586,
+      "observedAt": "2026-11-18T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34672
+    },
+    {
+      "metricKey": "flow_usd.voter_fees",
+      "value": 231503.88971270333,
+      "observedAt": "2026-11-19T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34673
+    },
+    {
+      "metricKey": "flow_usd.lp_fees",
+      "value": 20780.43566296656,
+      "observedAt": "2026-11-13T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34674
+    },
+    {
+      "metricKey": "flow_usd.lp_fees",
+      "value": 35606.77711939896,
+      "observedAt": "2026-11-14T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34675
+    },
+    {
+      "metricKey": "flow_usd.lp_fees",
+      "value": 36010.02644649748,
+      "observedAt": "2026-11-15T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34676
+    },
+    {
+      "metricKey": "flow_usd.lp_fees",
+      "value": 31246.4501098501,
+      "observedAt": "2026-11-16T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34677
+    },
+    {
+      "metricKey": "flow_usd.lp_fees",
+      "value": 28523.13566294847,
+      "observedAt": "2026-11-17T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34678
+    },
+    {
+      "metricKey": "flow_usd.lp_fees",
+      "value": 34017.127912330456,
+      "observedAt": "2026-11-18T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34679
+    },
+    {
+      "metricKey": "flow_usd.lp_fees",
+      "value": 23455.448360034865,
+      "observedAt": "2026-11-19T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34680
+    },
+    {
+      "metricKey": "flow_usd.pool_fees_gross",
+      "value": 293601.27971091174,
+      "observedAt": "2026-11-13T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34681
+    },
+    {
+      "metricKey": "flow_usd.pool_fees_gross",
+      "value": 415754.84686947416,
+      "observedAt": "2026-11-14T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34682
+    },
+    {
+      "metricKey": "flow_usd.pool_fees_gross",
+      "value": 379777.5863169738,
+      "observedAt": "2026-11-15T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34683
+    },
+    {
+      "metricKey": "flow_usd.pool_fees_gross",
+      "value": 316824.5012628588,
+      "observedAt": "2026-11-16T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34684
+    },
+    {
+      "metricKey": "flow_usd.pool_fees_gross",
+      "value": 291978.77716780995,
+      "observedAt": "2026-11-17T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34685
+    },
+    {
+      "metricKey": "flow_usd.pool_fees_gross",
+      "value": 288767.05641958636,
+      "observedAt": "2026-11-18T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34686
+    },
+    {
+      "metricKey": "flow_usd.pool_fees_gross",
+      "value": 254959.3380727382,
+      "observedAt": "2026-11-19T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34687
+    },
+    {
+      "metricKey": "flow_usd.vote_incentives",
+      "value": 3447.8803444144696,
+      "observedAt": "2026-11-13T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34688
+    },
+    {
+      "metricKey": "flow_usd.vote_incentives",
+      "value": 2424.671123113786,
+      "observedAt": "2026-11-14T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34689
+    },
+    {
+      "metricKey": "flow_usd.vote_incentives",
+      "value": 2347.221725251081,
+      "observedAt": "2026-11-15T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34690
+    },
+    {
+      "metricKey": "flow_usd.vote_incentives",
+      "value": 2329.6937948547943,
+      "observedAt": "2026-11-16T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34691
+    },
+    {
+      "metricKey": "flow_usd.vote_incentives",
+      "value": 2315.0048209784895,
+      "observedAt": "2026-11-17T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34692
+    },
+    {
+      "metricKey": "flow_usd.vote_incentives",
+      "value": 3311.41594337019,
+      "observedAt": "2026-11-18T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34693
+    },
+    {
+      "metricKey": "flow_usd.vote_incentives",
+      "value": 4899.217157804175,
+      "observedAt": "2026-11-19T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34694
+    },
+    {
+      "metricKey": "flow_usd.protocol_subsidy",
+      "value": 0,
+      "observedAt": "2026-11-13T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34695
+    },
+    {
+      "metricKey": "flow_usd.protocol_subsidy",
+      "value": 0,
+      "observedAt": "2026-11-14T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34696
+    },
+    {
+      "metricKey": "flow_usd.protocol_subsidy",
+      "value": 0,
+      "observedAt": "2026-11-15T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34697
+    },
+    {
+      "metricKey": "flow_usd.protocol_subsidy",
+      "value": 0,
+      "observedAt": "2026-11-16T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34698
+    },
+    {
+      "metricKey": "flow_usd.protocol_subsidy",
+      "value": 0,
+      "observedAt": "2026-11-17T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34699
+    },
+    {
+      "metricKey": "flow_usd.protocol_subsidy",
+      "value": 0,
+      "observedAt": "2026-11-18T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34700
+    },
+    {
+      "metricKey": "flow_usd.protocol_subsidy",
+      "value": 0,
+      "observedAt": "2026-11-19T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34701
+    }
+  ],
+  "anomalies": [
+    {
+      "id": 77,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.pool_fees_gross",
+      "dedupeKey": "pool_scan:gauged_unregistered:8453:0x6d127dae042a746e42f945f442afbe23fbd410ce",
+      "severity": "advisory",
+      "detail": {
+        "kind": "gauged_unregistered",
+        "chain": 8453,
+        "id": "0x6d127dae042a746e42f945f442afbe23fbd410ce",
+        "gauge": "0xf8088c921901b3e240e83f1cc8e0f2653b79a286",
+        "factory": "0x9cb220581b91b0c83223012fe69688b92ad07a76",
+        "days": [
+          "2026-11-12"
+        ]
+      }
+    },
+    {
+      "id": 80,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.pool_fees_gross",
+      "dedupeKey": "pool_scan:gauged_unregistered:8453:0x16b8228cd097865d8f5a534b95e42e17d84551b0",
+      "severity": "advisory",
+      "detail": {
+        "kind": "gauged_unregistered",
+        "chain": 8453,
+        "id": "0x16b8228cd097865d8f5a534b95e42e17d84551b0",
+        "gauge": "0x8af3617c13af830f7715736d3e152a6f7af58744",
+        "factory": "0x9cb220581b91b0c83223012fe69688b92ad07a76",
+        "days": [
+          "2026-11-12"
+        ]
+      }
+    },
+    {
+      "id": 81,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.pool_fees_gross",
+      "dedupeKey": "pool_scan:gauged_unregistered:8453:0xfb35d41801893197b5a4d477d0bf6737d2ad6106",
+      "severity": "advisory",
+      "detail": {
+        "kind": "gauged_unregistered",
+        "chain": 8453,
+        "id": "0xfb35d41801893197b5a4d477d0bf6737d2ad6106",
+        "gauge": "0x46603b3862f5a0a251dabce8fedbf00929495461",
+        "factory": "0x9cb220581b91b0c83223012fe69688b92ad07a76",
+        "days": [
+          "2026-11-12"
+        ]
+      }
+    },
+    {
+      "id": 82,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.pool_fees_gross",
+      "dedupeKey": "pool_scan:gauged_unregistered:8453:0xfdd2ae1d7e30f66a68597c3d658521f333d80e1b",
+      "severity": "advisory",
+      "detail": {
+        "kind": "gauged_unregistered",
+        "chain": 8453,
+        "id": "0xfdd2ae1d7e30f66a68597c3d658521f333d80e1b",
+        "gauge": "0x48204d855ded422691b602b9743d79330a5ab641",
+        "factory": "0x9cb220581b91b0c83223012fe69688b92ad07a76",
+        "days": [
+          "2026-11-12",
+          "2026-11-13"
+        ]
+      }
+    },
+    {
+      "id": 83,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.pool_fees_gross",
+      "dedupeKey": "pool_scan:gauged_unregistered:8453:0x61f2123880fa27f29cd747db10ad38dd25b55ce2",
+      "severity": "advisory",
+      "detail": {
+        "kind": "gauged_unregistered",
+        "chain": 8453,
+        "id": "0x61f2123880fa27f29cd747db10ad38dd25b55ce2",
+        "gauge": "0xe42f2ac06a3b5d5a26be453dc6afdcf0a3cabb33",
+        "factory": "0x9cb220581b91b0c83223012fe69688b92ad07a76",
+        "days": [
+          "2026-11-12",
+          "2026-11-13"
+        ]
+      }
+    },
+    {
+      "id": 84,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.pool_fees_gross",
+      "dedupeKey": "pool_scan:gauged_unregistered:8453:0x4837db33b205cd6f3d2c7564925233942b311bea",
+      "severity": "advisory",
+      "detail": {
+        "kind": "gauged_unregistered",
+        "chain": 8453,
+        "id": "0x4837db33b205cd6f3d2c7564925233942b311bea",
+        "gauge": "0xac8d535db5a55f12f818a7e892e8d4f47e7e5f86",
+        "factory": "0x9cb220581b91b0c83223012fe69688b92ad07a76",
+        "days": [
+          "2026-11-12",
+          "2026-11-13"
+        ]
+      }
+    },
+    {
+      "id": 85,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.pool_fees_gross",
+      "dedupeKey": "pool_scan:gauged_unregistered:8453:0x579ddb21ae2ace4d0694b7fcb64491a585815959",
+      "severity": "advisory",
+      "detail": {
+        "kind": "gauged_unregistered",
+        "chain": 8453,
+        "id": "0x579ddb21ae2ace4d0694b7fcb64491a585815959",
+        "gauge": "0x7bd7e9a079515ac1ecd08952db14f7ee4fcd5601",
+        "factory": "0x9cb220581b91b0c83223012fe69688b92ad07a76",
+        "days": [
+          "2026-11-12",
+          "2026-11-13"
+        ]
+      }
+    },
+    {
+      "id": 86,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.pool_fees_gross",
+      "dedupeKey": "pool_scan:gauged_unregistered:8453:0xcce7aa61e7ac446ae4db52f36ee54b01dd60192d",
+      "severity": "advisory",
+      "detail": {
+        "kind": "gauged_unregistered",
+        "chain": 8453,
+        "id": "0xcce7aa61e7ac446ae4db52f36ee54b01dd60192d",
+        "gauge": "0x5edb08992b02aacfa6d7d7e1e322e3a8fc786074",
+        "factory": "0x9cb220581b91b0c83223012fe69688b92ad07a76",
+        "days": [
+          "2026-11-12",
+          "2026-11-13"
+        ]
+      }
+    },
+    {
+      "id": 87,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.pool_fees_gross",
+      "dedupeKey": "pool_scan:gauged_unregistered:8453:0xc93f7af9bd8966b5ddf1a4267a5b3b14a302c5f7",
+      "severity": "advisory",
+      "detail": {
+        "kind": "gauged_unregistered",
+        "chain": 8453,
+        "id": "0xc93f7af9bd8966b5ddf1a4267a5b3b14a302c5f7",
+        "gauge": "0x70b45ad9fb8e1a64d51d158d04b9cb4cd69cd9bb",
+        "factory": "0x9cb220581b91b0c83223012fe69688b92ad07a76",
+        "days": [
+          "2026-11-12",
+          "2026-11-13"
+        ]
+      }
+    },
+    {
+      "id": 88,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.pool_fees_gross",
+      "dedupeKey": "pool_scan:gauged_unregistered:8453:0x80997e422e1d03f8d41fe831a306df674128050d",
+      "severity": "advisory",
+      "detail": {
+        "kind": "gauged_unregistered",
+        "chain": 8453,
+        "id": "0x80997e422e1d03f8d41fe831a306df674128050d",
+        "gauge": "0x8168efbfe385acfea8761cab677fe55abab5469a",
+        "factory": "0x9cb220581b91b0c83223012fe69688b92ad07a76",
+        "days": [
+          "2026-11-12",
+          "2026-11-13"
+        ]
+      }
+    },
+    {
+      "id": 89,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.pool_fees_gross",
+      "dedupeKey": "pool_scan:gauged_unregistered:8453:0x01fdfdddd59a0eded43326dfb1a0f8dd2ea7180a",
+      "severity": "advisory",
+      "detail": {
+        "kind": "gauged_unregistered",
+        "chain": 8453,
+        "id": "0x01fdfdddd59a0eded43326dfb1a0f8dd2ea7180a",
+        "gauge": "0x7daf0c6fb057920116ad727a6f18e48f7efefc20",
+        "factory": "0x9cb220581b91b0c83223012fe69688b92ad07a76",
+        "days": [
+          "2026-11-12",
+          "2026-11-13"
+        ]
+      }
+    },
+    {
+      "id": 90,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.pool_fees_gross",
+      "dedupeKey": "pool_scan:gauged_unregistered:8453:0x59c7a81e752fca11b89e29fa98e56a6f2ead5fb3",
+      "severity": "advisory",
+      "detail": {
+        "kind": "gauged_unregistered",
+        "chain": 8453,
+        "id": "0x59c7a81e752fca11b89e29fa98e56a6f2ead5fb3",
+        "gauge": "0xf89bb273057c0ac074de26c346d2d2c5b85a587e",
+        "factory": "0x9cb220581b91b0c83223012fe69688b92ad07a76",
+        "days": [
+          "2026-11-12",
+          "2026-11-13"
+        ]
+      }
+    },
+    {
+      "id": 91,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.pool_fees_gross",
+      "dedupeKey": "pool_scan:gauged_unregistered:8453:0xf38a7a2d5a05c111417146bc090ed0ff8f3c7f4b",
+      "severity": "advisory",
+      "detail": {
+        "kind": "gauged_unregistered",
+        "chain": 8453,
+        "id": "0xf38a7a2d5a05c111417146bc090ed0ff8f3c7f4b",
+        "gauge": "0x7dcf7692a0dadef7b27341260fb44a8731ae47c5",
+        "factory": "0x9cb220581b91b0c83223012fe69688b92ad07a76",
+        "days": [
+          "2026-11-12",
+          "2026-11-13"
+        ]
+      }
+    },
+    {
+      "id": 92,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.pool_fees_gross",
+      "dedupeKey": "pool_scan:gauged_unregistered:8453:0x20812d6c78d972eea8df85319ec721db1e67b31f",
+      "severity": "advisory",
+      "detail": {
+        "kind": "gauged_unregistered",
+        "chain": 8453,
+        "id": "0x20812d6c78d972eea8df85319ec721db1e67b31f",
+        "gauge": "0xd4d1332b61406ae85c60491bc2ab7f097a862098",
+        "factory": "0x9cb220581b91b0c83223012fe69688b92ad07a76",
+        "days": [
+          "2026-11-12",
+          "2026-11-13"
+        ]
+      }
+    },
+    {
+      "id": 106,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.pool_fees_gross",
+      "dedupeKey": "pool_scan:gauged_unregistered:8453:0x25b45ff27bd03dafa0c0bf458762ffd0911fa9de",
+      "severity": "advisory",
+      "detail": {
+        "kind": "gauged_unregistered",
+        "chain": 8453,
+        "id": "0x25b45ff27bd03dafa0c0bf458762ffd0911fa9de",
+        "gauge": "0xc544fa46ca59c847cd0cb890b887234cd0eccf02",
+        "factory": "0x9cb220581b91b0c83223012fe69688b92ad07a76",
+        "days": [
+          "2026-11-13"
+        ]
+      }
+    },
+    {
+      "id": 107,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.pool_fees_gross",
+      "dedupeKey": "pool_scan:gauged_unregistered:42161:0x15049835e87d0ffd78e84fc43a28b418a9906546",
+      "severity": "advisory",
+      "detail": {
+        "kind": "gauged_unregistered",
+        "chain": 42161,
+        "id": "0x15049835e87d0ffd78e84fc43a28b418a9906546",
+        "gauge": "0xb92f0852ca018c6e7d463b5f3bd8202269a49658",
+        "factory": "0x88a60ee77392577c355c0acb2a8d476d5a4ec03a",
+        "days": [
+          "2026-11-13"
+        ]
+      }
+    },
+    {
+      "id": 108,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.pool_fees_gross",
+      "dedupeKey": "pool_scan:gauged_unregistered:42161:0x255419f287a8a08b58e1d99e7875db5a4fff18b3",
+      "severity": "advisory",
+      "detail": {
+        "kind": "gauged_unregistered",
+        "chain": 42161,
+        "id": "0x255419f287a8a08b58e1d99e7875db5a4fff18b3",
+        "gauge": "0x003193b6c1e09ed60d0850b3a28766d1db13a453",
+        "factory": "0x88a60ee77392577c355c0acb2a8d476d5a4ec03a",
+        "days": [
+          "2026-11-13"
+        ]
+      }
+    },
+    {
+      "id": 109,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.pool_fees_gross",
+      "dedupeKey": "pool_scan:gauged_unregistered:42161:0x9fb2d00c3a34f077ef89357bc7ebf6e6941821b8",
+      "severity": "advisory",
+      "detail": {
+        "kind": "gauged_unregistered",
+        "chain": 42161,
+        "id": "0x9fb2d00c3a34f077ef89357bc7ebf6e6941821b8",
+        "gauge": "0x6d48714154d2c3e18091cf59255ecffadd7e82eb",
+        "factory": "0x88a60ee77392577c355c0acb2a8d476d5a4ec03a",
+        "days": [
+          "2026-11-13"
+        ]
+      }
+    },
+    {
+      "id": 110,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.pool_fees_gross",
+      "dedupeKey": "pool_scan:gauged_unregistered:42161:0xdc069851d5518ad3b430967a961b7ee7578168b4",
+      "severity": "advisory",
+      "detail": {
+        "kind": "gauged_unregistered",
+        "chain": 42161,
+        "id": "0xdc069851d5518ad3b430967a961b7ee7578168b4",
+        "gauge": "0x59c35d3f5e26f537ec739c8253de53d30d840404",
+        "factory": "0x88a60ee77392577c355c0acb2a8d476d5a4ec03a",
+        "days": [
+          "2026-11-13"
+        ]
+      }
+    },
+    {
+      "id": 111,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.pool_fees_gross",
+      "dedupeKey": "pool_scan:gauged_unregistered:42161:0x4a6187b223045194b7bd5b0010f7102b398ba95f",
+      "severity": "advisory",
+      "detail": {
+        "kind": "gauged_unregistered",
+        "chain": 42161,
+        "id": "0x4a6187b223045194b7bd5b0010f7102b398ba95f",
+        "gauge": "0xe899c740dca54d82a6b6de916639879c13fe2ecf",
+        "factory": "0x88a60ee77392577c355c0acb2a8d476d5a4ec03a",
+        "days": [
+          "2026-11-13"
+        ]
+      }
+    },
+    {
+      "id": 112,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.pool_fees_gross",
+      "dedupeKey": "pool_scan:gauged_unregistered:42161:0x63f3faf3c74d35407f85dae22b0b0fbbfe32ac2a",
+      "severity": "advisory",
+      "detail": {
+        "kind": "gauged_unregistered",
+        "chain": 42161,
+        "id": "0x63f3faf3c74d35407f85dae22b0b0fbbfe32ac2a",
+        "gauge": "0x4fb61b42cf9fb791f15f9c21318d8eed434be78f",
+        "factory": "0x88a60ee77392577c355c0acb2a8d476d5a4ec03a",
+        "days": [
+          "2026-11-13"
+        ]
+      }
+    },
+    {
+      "id": 113,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.pool_fees_gross",
+      "dedupeKey": "pool_scan:gauged_unregistered:42161:0x1ce0d0f07d7bedc8f5e406473ab0904899c81118",
+      "severity": "advisory",
+      "detail": {
+        "kind": "gauged_unregistered",
+        "chain": 42161,
+        "id": "0x1ce0d0f07d7bedc8f5e406473ab0904899c81118",
+        "gauge": "0x37e0a3ac0dabc7b41707b0926bca01c608594662",
+        "factory": "0x88a60ee77392577c355c0acb2a8d476d5a4ec03a",
+        "days": [
+          "2026-11-13"
+        ]
+      }
+    },
+    {
+      "id": 114,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.pool_fees_gross",
+      "dedupeKey": "pool_scan:gauged_unregistered:42161:0x5efecb137509a5da879c754a7dd50ae3a78b2be5",
+      "severity": "advisory",
+      "detail": {
+        "kind": "gauged_unregistered",
+        "chain": 42161,
+        "id": "0x5efecb137509a5da879c754a7dd50ae3a78b2be5",
+        "gauge": "0x0f614bcb1a5d9adf4fc21924fa544f0179e81577",
+        "factory": "0x88a60ee77392577c355c0acb2a8d476d5a4ec03a",
+        "days": [
+          "2026-11-13"
+        ]
+      }
+    },
+    {
+      "id": 115,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.pool_fees_gross",
+      "dedupeKey": "pool_scan:gauged_unregistered:42161:0x7f0a610558f82768a261a1669d96dfc7f176a81a",
+      "severity": "advisory",
+      "detail": {
+        "kind": "gauged_unregistered",
+        "chain": 42161,
+        "id": "0x7f0a610558f82768a261a1669d96dfc7f176a81a",
+        "gauge": "0xd4192d070da739a0c216540d7c88b2fe07caa25c",
+        "factory": "0x88a60ee77392577c355c0acb2a8d476d5a4ec03a",
+        "days": [
+          "2026-11-13"
+        ]
+      }
+    },
+    {
+      "id": 116,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.pool_fees_gross",
+      "dedupeKey": "pool_scan:gauged_unregistered:42161:0x6a6b359fec65e644b4edec3ec2663fb12e9874aa",
+      "severity": "advisory",
+      "detail": {
+        "kind": "gauged_unregistered",
+        "chain": 42161,
+        "id": "0x6a6b359fec65e644b4edec3ec2663fb12e9874aa",
+        "gauge": "0x8f2721d0b8892e80971768649ace5dea0acc263a",
+        "factory": "0x88a60ee77392577c355c0acb2a8d476d5a4ec03a",
+        "days": [
+          "2026-11-13"
+        ]
+      }
+    },
+    {
+      "id": 117,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.pool_fees_gross",
+      "dedupeKey": "pool_scan:gauged_unregistered:4663:0xc17fa734d36f4a5ab8091b9f58baea18acb30419",
+      "severity": "advisory",
+      "detail": {
+        "kind": "gauged_unregistered",
+        "chain": 4663,
+        "id": "0xc17fa734d36f4a5ab8091b9f58baea18acb30419",
+        "gauge": "0x35a94abc82bf9ca17b61fdc0d17bd56b59536d0d",
+        "factory": "0xc63d7338c178e805c544b8f897066bd3bbcbe136",
+        "days": [
+          "2026-11-13"
+        ]
+      }
+    },
+    {
+      "id": 118,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.pool_fees_gross",
+      "dedupeKey": "pool_scan:gauged_unregistered:4663:0xbf88d2b2b0922484af03d9b0a786a1d04e9f523b",
+      "severity": "advisory",
+      "detail": {
+        "kind": "gauged_unregistered",
+        "chain": 4663,
+        "id": "0xbf88d2b2b0922484af03d9b0a786a1d04e9f523b",
+        "gauge": "0xfb488142281d7aff2e61ef58c22f7bd6cf2edd64",
+        "factory": "0xc63d7338c178e805c544b8f897066bd3bbcbe136",
+        "days": [
+          "2026-11-13"
+        ]
+      }
+    },
+    {
+      "id": 119,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.pool_fees_gross",
+      "dedupeKey": "pool_scan:spot_fallback:8453:0xcd2f22236dd9dfe2356d7c543161d4d260fd9bcb",
+      "severity": "advisory",
+      "detail": {
+        "chain": 8453,
+        "token": "0xcd2f22236dd9dfe2356d7c543161d4d260fd9bcb",
+        "pool": "0x306ab1a875690f3e9735b791dc4a92675d02edaf",
+        "hop": 1,
+        "days": [
+          "2026-11-14"
+        ]
+      }
+    },
+    {
+      "id": 120,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.pool_fees_gross",
+      "dedupeKey": "pool_scan:spot_fallback:8453:0xcef8db49e456f872e288e1c042f916e9ced7c781",
+      "severity": "advisory",
+      "detail": {
+        "chain": 8453,
+        "token": "0xcef8db49e456f872e288e1c042f916e9ced7c781",
+        "pool": "0xdb3f4ab8225ff86d5574fb87b2cad86a7df7dcbf",
+        "hop": 2,
+        "days": [
+          "2026-11-14"
+        ]
+      }
+    },
+    {
+      "id": 121,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.pool_fees_gross",
+      "dedupeKey": "pool_scan:spot_fallback:8453:0x18bc5bcc660cf2b9ce3cd51a404afe1a0cbd3c22",
+      "severity": "advisory",
+      "detail": {
+        "chain": 8453,
+        "token": "0x18bc5bcc660cf2b9ce3cd51a404afe1a0cbd3c22",
+        "pool": "0x8a493456c0fbaf8c1a0fd92b7d20a5fadf850572",
+        "hop": 1,
+        "days": [
+          "2026-11-17"
+        ]
+      }
+    },
+    {
+      "id": 122,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.pool_fees_gross",
+      "dedupeKey": "pool_scan:spot_fallback:8453:0x0000006238e3c7797ae71827da303560bae1b125",
+      "severity": "advisory",
+      "detail": {
+        "chain": 8453,
+        "token": "0x0000006238e3c7797ae71827da303560bae1b125",
+        "pool": "0xbbe79535ffad210803fb50c7a5217555ac5461f2",
+        "hop": 1,
+        "days": [
+          "2026-11-17"
+        ]
+      }
+    },
+    {
+      "id": 76,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.vote_incentives",
+      "dedupeKey": "pool_scan:incentives_unpriced:8453",
+      "severity": "advisory",
+      "detail": {
+        "chain": 8453,
+        "days": [
+          {
+            "day": "2026-11-12",
+            "tokens": [
+              {
+                "token": "0xcb111e6a2a3bde90856d299d61341ac302167d23",
+                "class": "vote_incentives",
+                "amount": "499999999999999999"
+              }
+            ]
+          },
+          {
+            "day": "2026-11-13",
+            "tokens": [
+              {
+                "token": "0xcb111e6a2a3bde90856d299d61341ac302167d23",
+                "class": "vote_incentives",
+                "amount": "145833333333333333"
+              },
+              {
+                "token": "0xb755506531786c8ac63b756bab1ac387bacb0c04",
+                "class": "vote_incentives",
+                "amount": "35393999999999999999"
+              }
+            ]
+          },
+          {
+            "day": "2026-11-14",
+            "tokens": [
+              {
+                "token": "0xb755506531786c8ac63b756bab1ac387bacb0c04",
+                "class": "vote_incentives",
+                "amount": "35393999999999999999"
+              }
+            ]
+          },
+          {
+            "day": "2026-11-15",
+            "tokens": [
+              {
+                "token": "0xb755506531786c8ac63b756bab1ac387bacb0c04",
+                "class": "vote_incentives",
+                "amount": "35393999999999999999"
+              }
+            ]
+          },
+          {
+            "day": "2026-11-16",
+            "tokens": [
+              {
+                "token": "0xb755506531786c8ac63b756bab1ac387bacb0c04",
+                "class": "vote_incentives",
+                "amount": "35393999999999999999"
+              }
+            ]
+          },
+          {
+            "day": "2026-11-17",
+            "tokens": [
+              {
+                "token": "0xb755506531786c8ac63b756bab1ac387bacb0c04",
+                "class": "vote_incentives",
+                "amount": "35393999999999999999"
+              }
+            ]
+          },
+          {
+            "day": "2026-11-18",
+            "tokens": [
+              {
+                "token": "0xb755506531786c8ac63b756bab1ac387bacb0c04",
+                "class": "vote_incentives",
+                "amount": "35393999999999999999"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "watch": []
+}

@@ -1,5 +1,5 @@
 #!/bin/bash
-# Phase 3 R4 proof (plan Task 10, controller): read-only prod copy -> old (orion-2026.11.21.1) vs new (fddaa14) reports
+# Phase 3 R4 proof (plan Task 10, controller): read-only prod copy -> old (orion-2026.11.21.1) vs new (112b441) reports
 # at D (today-2 UTC) and D-91; on the COPY only: export the stored DefiLlama flow_usd.fees rows (dev-only reference),
 # purge them, backfill AERO's five pool metrics from 2026-10-22 with real (read-only) RPC, re-run reports, flatdiff all
 # 13 assets with an empty allowlist, and the dev-only acceptance check. Prod is only read (prod_copy.py via sql-ro).

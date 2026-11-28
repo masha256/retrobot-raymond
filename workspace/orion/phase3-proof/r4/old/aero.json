@@ -1,0 +1,396 @@
+{
+  "asset": "aero",
+  "day": "2026-11-26",
+  "windowDays": 91,
+  "price": 0.40173425270735047,
+  "marketCap": 320315396.3839489,
+  "fdv": 865371002.3295152,
+  "incomeStatement": {
+    "schema": 2,
+    "day": "2026-11-26",
+    "windowDays": 91,
+    "category": "dex",
+    "scope": "protocol_share_only",
+    "revenue": {
+      "annualized": 91792913.07307692,
+      "growth": {
+        "current": 22885356.41,
+        "prior": 13987496,
+        "change": 0.6361296124767435,
+        "annualized": 6.204775707838466
+      },
+      "growthExNew": null,
+      "excludedFromExNew": [],
+      "provisional": false,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "fees",
+          "label": "pool fees to stakers (DefiLlama dailyHoldersRevenue): all-chain Aero since 2026-10-22, Base-only Aerodrome before",
+          "method": "measured",
+          "sourceTypes": [
+            "third_party"
+          ],
+          "priceBasis": "legacy",
+          "annualized": 91792913.07307692,
+          "windowSum": 22885356.41,
+          "settlement": "daily",
+          "started": null,
+          "daysMeasured": 90,
+          "provisionalDays": 0,
+          "coverage": null,
+          "isNew": false,
+          "growth": {
+            "current": 22885356.41,
+            "prior": 13987496,
+            "change": 0.6361296124767435,
+            "annualized": 6.204775707838466
+          }
+        }
+      ]
+    },
+    "costOfRevenue": {
+      "annualized": null,
+      "measuredAnnualized": 0,
+      "notMeasured": [
+        "lp_fees"
+      ],
+      "lines": [
+        {
+          "id": "lp_fees",
+          "label": null,
+          "of": null,
+          "share": 1,
+          "method": "not_measured",
+          "sourceTypes": [],
+          "priceBasis": null,
+          "annualized": null,
+          "growth": {
+            "current": null,
+            "prior": null,
+            "change": null,
+            "annualized": null,
+            "note": "not measured"
+          },
+          "notMeasured": "swap fees to LPs and ungauged pools: pools not scanned yet (Phase 3)",
+          "to": "lps"
+        }
+      ]
+    },
+    "grossProfit": {
+      "annualized": null,
+      "growth": {
+        "current": null,
+        "prior": null,
+        "change": null,
+        "annualized": null,
+        "note": "cost of revenue not measured"
+      }
+    },
+    "holders": {
+      "annualized": 91792913.07307692,
+      "growth": {
+        "current": 22885356.41,
+        "prior": 13987496,
+        "change": 0.6361296124767435,
+        "annualized": 6.204775707838466
+      },
+      "remainder": false,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "voter_fees",
+          "label": null,
+          "of": "fees",
+          "share": 1,
+          "method": "measured",
+          "sourceTypes": [
+            "third_party"
+          ],
+          "priceBasis": "legacy",
+          "annualized": 91792913.07307692,
+          "growth": {
+            "current": 22885356.41,
+            "prior": 13987496,
+            "change": 0.6361296124767435,
+            "annualized": 6.204775707838466
+          },
+          "note": "all-chain Aero since 2026-10-22 (DefiLlama parent#aero-protocol); Base-only Aerodrome before",
+          "bucket": "cash",
+          "haircut": 0.02,
+          "recipientBase": "locked",
+          "valuedPer": null,
+          "captureRule": "contractual",
+          "paidMetric": null,
+          "gross": 91792913.07307692,
+          "net": 89957054.81161538,
+          "yield": 0.20695627795517985
+        }
+      ],
+      "byBucket": {
+        "burn": null,
+        "hold": null,
+        "cash": {
+          "annualized": 91792913.07307692
+        }
+      }
+    },
+    "protocol": {
+      "annualized": 0,
+      "growth": {
+        "current": 0,
+        "prior": 0,
+        "change": null,
+        "annualized": null,
+        "note": "no lines"
+      },
+      "remainder": false,
+      "notMeasured": [],
+      "lines": []
+    },
+    "operatingCosts": {
+      "annualized": 0,
+      "growth": {
+        "current": 0,
+        "prior": 0,
+        "change": null,
+        "annualized": null,
+        "note": "no lines"
+      },
+      "remainder": false,
+      "notMeasured": [],
+      "lines": []
+    },
+    "unreconciled": {
+      "annualized": 0,
+      "pct": 0,
+      "basis": "revenue"
+    },
+    "belowLine": {
+      "toHolders": null,
+      "toProtocol": 0,
+      "notMeasured": [
+        "bribes"
+      ],
+      "lines": [
+        {
+          "id": "bribes",
+          "label": null,
+          "to": "holders",
+          "method": "not_measured",
+          "sourceTypes": [],
+          "priceBasis": null,
+          "annualized": null,
+          "growth": {
+            "current": null,
+            "prior": null,
+            "change": null,
+            "annualized": null,
+            "note": "not measured"
+          },
+          "bucket": null,
+          "haircut": null,
+          "recipientBase": null,
+          "captureRule": null,
+          "notMeasured": "incentives to sAERO allocators (Predictive Allocation): not read yet (Phase 3; Foundation migration incentives to be held apart)"
+        }
+      ]
+    },
+    "holderFlow": {
+      "gross": 91792913.07307692,
+      "net": 89957054.81161538,
+      "netOfDilution": -173025068.10818934,
+      "growth": {
+        "current": 22427649.281799998,
+        "prior": 13707746.08,
+        "change": 0.6361296124767433,
+        "annualized": 6.204775707838461
+      },
+      "byBucket": {
+        "burn": null,
+        "hold": null,
+        "cash": {
+          "gross": 91792913.07307692,
+          "net": 89957054.81161538,
+          "yield": 0.20695627795517985,
+          "fromRevenue": 91792913.07307692,
+          "fromBelowLine": null
+        }
+      },
+      "fromRevenue": 91792913.07307692,
+      "fromBelowLine": null,
+      "notMeasured": [
+        "bribes"
+      ],
+      "lines": [
+        {
+          "id": "voter_fees",
+          "section": "holders",
+          "fromBelowLine": false,
+          "bucket": "cash",
+          "method": "measured",
+          "sourceTypes": [
+            "third_party"
+          ],
+          "priceBasis": "legacy",
+          "metric": "flow_usd.fees",
+          "haircut": 0.02,
+          "recipientBase": "locked",
+          "gross": 91792913.07307692,
+          "net": 89957054.81161538,
+          "yield": 0.20695627795517985,
+          "growth": {
+            "current": 22885356.41,
+            "prior": 13987496,
+            "change": 0.6361296124767435,
+            "annualized": 6.204775707838466
+          }
+        },
+        {
+          "id": "bribes",
+          "section": "below_line",
+          "fromBelowLine": true,
+          "bucket": null,
+          "method": "not_measured",
+          "sourceTypes": [],
+          "priceBasis": null,
+          "metric": null,
+          "haircut": 0,
+          "recipientBase": "all",
+          "gross": null,
+          "net": null,
+          "yield": null,
+          "growth": {
+            "current": null,
+            "prior": null,
+            "change": null,
+            "annualized": null,
+            "note": "not measured"
+          },
+          "notMeasured": "incentives to sAERO allocators (Predictive Allocation): not read yet (Phase 3; Foundation migration incentives to be held apart)"
+        }
+      ]
+    },
+    "volume": null,
+    "dilution": {
+      "pct": 0.3038952336187325,
+      "tokensPerYear": 654617128.4811457,
+      "emissionsPerYear": 379836843.0808095,
+      "releases": [
+        {
+          "id": "aero_upgrade",
+          "tokensPerYear": 264298836.3121425,
+          "yield": 0.12269638711195292
+        },
+        {
+          "id": "velo_upgrade",
+          "tokensPerYear": 10481449.088193769,
+          "yield": 0.004865840322128445
+        }
+      ],
+      "supply": null
+    },
+    "ratios": {
+      "takeRate": null,
+      "payoutRatio": 1,
+      "payoutRatioBasis": "revenue"
+    },
+    "multiples": {
+      "mcapToRevenue": 3.489543861942194,
+      "mcapToGrossProfit": null,
+      "mcapToHolderFlow": {
+        "burn": null,
+        "hold": null,
+        "cash": 3.560759042798157,
+        "total": 3.560759042798157
+      }
+    },
+    "yields": {
+      "cash": 0.20695627795517985,
+      "buyback": 0,
+      "shareholder": 0.20695627795517985,
+      "dilution": 0.3038952336187325,
+      "netShareholder": -0.09693895566355265,
+      "multiple": 4.831938464879854,
+      "pegTrailing": 0.007787450654784654,
+      "dilutionLines": [
+        {
+          "id": "aero_upgrade",
+          "tokensPerYear": 264298836.3121425,
+          "yield": 0.12269638711195292
+        },
+        {
+          "id": "velo_upgrade",
+          "tokensPerYear": 10481449.088193769,
+          "yield": 0.004865840322128445
+        }
+      ]
+    },
+    "perToken": {
+      "revenue": 0.1151251477560609,
+      "grossProfit": null,
+      "holderFlow": {
+        "total": 0.11282264480093968,
+        "netOfDilution": -0.2170051680961441,
+        "byBucket": {
+          "burn": null,
+          "hold": null,
+          "cash": 0.11282264480093968
+        }
+      },
+      "dilution": 0.3298278128970838,
+      "circulatingSupply": 797331554.9403442,
+      "totalSupply": 2154088172.710302,
+      "supplyAsOf": "2026-11-27T23:59:59.999Z",
+      "perTokenFdv": {
+        "revenue": 0.042613349925032025,
+        "grossProfit": null,
+        "holderFlow": {
+          "total": 0.041761082926531384,
+          "netOfDilution": -0.0803240416526158,
+          "byBucket": {
+            "burn": null,
+            "hold": null,
+            "cash": 0.041761082926531384
+          }
+        },
+        "dilution": 0.12208512457914719
+      }
+    },
+    "priceBasis": {
+      "price": 0.40173425270735047,
+      "metric": "price_usd",
+      "sourceType": "contract_state",
+      "source": "contract_state:chain.v2_pool_twap_price",
+      "day": "2026-11-26",
+      "asOf": "2026-11-27T23:59:59.999Z",
+      "flows": "each flow day's USD from its tokens x the chain/first-party hourly prices where every hour with an amount is priced (hourly), or its day amount x the mean of the day's 24 chain hours (daily_mean), else the stored value (per line: priceBasis)"
+    },
+    "checks": [],
+    "provenance": {
+      "methods": {
+        "measured": 0.9885677550608005,
+        "derived": 0.01143224493919953,
+        "disclosed": 0
+      },
+      "thirdParty": [
+        "revenue.fees",
+        "holders.voter_fees"
+      ],
+      "sources": [
+        "derived",
+        "third_party:api.llama.fi"
+      ],
+      "basis": "observations"
+    },
+    "flags": [
+      "cost of revenue not measured: lp_fees",
+      "below the line not measured: bribes",
+      "payout ratio on revenue: cost of revenue not measured",
+      "third_party: revenue.fees, holders.voter_fees"
+    ]
+  },
+  "notes": [
+    "yields are per token of each flow's recipients (staked or locked supply), i.e. to a holder in every flow's base"
+  ]
+}

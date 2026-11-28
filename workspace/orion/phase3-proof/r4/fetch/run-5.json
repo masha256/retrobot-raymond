@@ -1,0 +1,481 @@
+{
+  "assetId": "aero",
+  "dryRun": false,
+  "fetchRunId": 743,
+  "outcome": "ok",
+  "startedAt": "2026-11-28T07:01:47.841Z",
+  "endedAt": "2026-11-28T07:05:15.588Z",
+  "sources": [
+    {
+      "sourceId": "adapter:pool.tape_fees_daily",
+      "status": "ok",
+      "error": null,
+      "metricsWritten": [
+        "flow_usd.voter_fees",
+        "flow_usd.lp_fees",
+        "flow_usd.pool_fees_gross"
+      ],
+      "crossChecks": [],
+      "unlistedTransfers": [],
+      "conflicts": [],
+      "retiredObservationIds": [],
+      "notes": [
+        "flow_usd.voter_fees: not in the series, skipped: 31 days from 2026-10-21 to 2026-11-27",
+        "flow_usd.lp_fees: not in the series, skipped: 31 days from 2026-10-21 to 2026-11-27",
+        "flow_usd.pool_fees_gross: not in the series, skipped: 31 days from 2026-10-21 to 2026-11-27"
+      ]
+    },
+    {
+      "sourceId": "adapter:pool.vrm_incentives_daily",
+      "status": "ok",
+      "error": null,
+      "metricsWritten": [
+        "flow_usd.vote_incentives",
+        "flow_usd.protocol_subsidy"
+      ],
+      "crossChecks": [],
+      "unlistedTransfers": [],
+      "conflicts": [],
+      "retiredObservationIds": [],
+      "notes": [
+        "flow_usd.vote_incentives: not in the series, skipped: 31 days from 2026-10-21 to 2026-11-27",
+        "flow_usd.protocol_subsidy: not in the series, skipped: 31 days from 2026-10-21 to 2026-11-27"
+      ]
+    }
+  ],
+  "written": [
+    {
+      "metricKey": "flow_usd.voter_fees",
+      "value": 254108.63453848468,
+      "observedAt": "2026-11-20T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34702
+    },
+    {
+      "metricKey": "flow_usd.voter_fees",
+      "value": 314119.39590107446,
+      "observedAt": "2026-11-21T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34703
+    },
+    {
+      "metricKey": "flow_usd.voter_fees",
+      "value": 296515.57434424077,
+      "observedAt": "2026-11-22T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34704
+    },
+    {
+      "metricKey": "flow_usd.voter_fees",
+      "value": 234955.70375834545,
+      "observedAt": "2026-11-23T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34705
+    },
+    {
+      "metricKey": "flow_usd.voter_fees",
+      "value": 345068.44366650353,
+      "observedAt": "2026-11-24T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34706
+    },
+    {
+      "metricKey": "flow_usd.voter_fees",
+      "value": 266412.02018285514,
+      "observedAt": "2026-11-25T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34707
+    },
+    {
+      "metricKey": "flow_usd.voter_fees",
+      "value": 306410.9749895331,
+      "observedAt": "2026-11-26T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34708
+    },
+    {
+      "metricKey": "flow_usd.lp_fees",
+      "value": 25600.487811546223,
+      "observedAt": "2026-11-20T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34709
+    },
+    {
+      "metricKey": "flow_usd.lp_fees",
+      "value": 37874.484013996465,
+      "observedAt": "2026-11-21T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34710
+    },
+    {
+      "metricKey": "flow_usd.lp_fees",
+      "value": 39880.22120558963,
+      "observedAt": "2026-11-22T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34711
+    },
+    {
+      "metricKey": "flow_usd.lp_fees",
+      "value": 26275.197144304704,
+      "observedAt": "2026-11-23T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34712
+    },
+    {
+      "metricKey": "flow_usd.lp_fees",
+      "value": 45928.68581815558,
+      "observedAt": "2026-11-24T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34713
+    },
+    {
+      "metricKey": "flow_usd.lp_fees",
+      "value": 30501.656712192846,
+      "observedAt": "2026-11-25T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34714
+    },
+    {
+      "metricKey": "flow_usd.lp_fees",
+      "value": 39343.75503257682,
+      "observedAt": "2026-11-26T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34715
+    },
+    {
+      "metricKey": "flow_usd.pool_fees_gross",
+      "value": 279709.12235003087,
+      "observedAt": "2026-11-20T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34716
+    },
+    {
+      "metricKey": "flow_usd.pool_fees_gross",
+      "value": 351993.8799150709,
+      "observedAt": "2026-11-21T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34717
+    },
+    {
+      "metricKey": "flow_usd.pool_fees_gross",
+      "value": 336395.7955498304,
+      "observedAt": "2026-11-22T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34718
+    },
+    {
+      "metricKey": "flow_usd.pool_fees_gross",
+      "value": 261230.90090265017,
+      "observedAt": "2026-11-23T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34719
+    },
+    {
+      "metricKey": "flow_usd.pool_fees_gross",
+      "value": 390997.1294846591,
+      "observedAt": "2026-11-24T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34720
+    },
+    {
+      "metricKey": "flow_usd.pool_fees_gross",
+      "value": 296913.676895048,
+      "observedAt": "2026-11-25T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34721
+    },
+    {
+      "metricKey": "flow_usd.pool_fees_gross",
+      "value": 345754.7300221098,
+      "observedAt": "2026-11-26T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34722
+    },
+    {
+      "metricKey": "flow_usd.vote_incentives",
+      "value": 5216.121031957239,
+      "observedAt": "2026-11-20T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34723
+    },
+    {
+      "metricKey": "flow_usd.vote_incentives",
+      "value": 4467.92084820319,
+      "observedAt": "2026-11-21T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34724
+    },
+    {
+      "metricKey": "flow_usd.vote_incentives",
+      "value": 3634.7944119947856,
+      "observedAt": "2026-11-22T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34725
+    },
+    {
+      "metricKey": "flow_usd.vote_incentives",
+      "value": 6022.865357985445,
+      "observedAt": "2026-11-23T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34726
+    },
+    {
+      "metricKey": "flow_usd.vote_incentives",
+      "value": 8148.778817635614,
+      "observedAt": "2026-11-24T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34727
+    },
+    {
+      "metricKey": "flow_usd.vote_incentives",
+      "value": 5467.719913633716,
+      "observedAt": "2026-11-25T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34728
+    },
+    {
+      "metricKey": "flow_usd.vote_incentives",
+      "value": 3274.4329197286497,
+      "observedAt": "2026-11-26T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34729
+    },
+    {
+      "metricKey": "flow_usd.protocol_subsidy",
+      "value": 0,
+      "observedAt": "2026-11-20T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34730
+    },
+    {
+      "metricKey": "flow_usd.protocol_subsidy",
+      "value": 0,
+      "observedAt": "2026-11-21T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34731
+    },
+    {
+      "metricKey": "flow_usd.protocol_subsidy",
+      "value": 0,
+      "observedAt": "2026-11-22T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34732
+    },
+    {
+      "metricKey": "flow_usd.protocol_subsidy",
+      "value": 0,
+      "observedAt": "2026-11-23T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34733
+    },
+    {
+      "metricKey": "flow_usd.protocol_subsidy",
+      "value": 0,
+      "observedAt": "2026-11-24T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34734
+    },
+    {
+      "metricKey": "flow_usd.protocol_subsidy",
+      "value": 0,
+      "observedAt": "2026-11-25T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34735
+    },
+    {
+      "metricKey": "flow_usd.protocol_subsidy",
+      "value": 0,
+      "observedAt": "2026-11-26T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34736
+    }
+  ],
+  "anomalies": [
+    {
+      "id": 123,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.pool_fees_gross",
+      "dedupeKey": "pool_scan:gauged_unregistered:1:0x26e9a8313b62db29c7aac1715e6ffc91d1f756c9",
+      "severity": "advisory",
+      "detail": {
+        "kind": "gauged_unregistered",
+        "chain": 1,
+        "id": "0x26e9a8313b62db29c7aac1715e6ffc91d1f756c9",
+        "gauge": "0x5c9957960c4d7a89db9afd9d4415be78a6d96474",
+        "factory": "0x78589e876edcebdce72ee3436ab3c9ad3a7cef2d",
+        "days": [
+          "2026-11-20",
+          "2026-11-21",
+          "2026-11-22",
+          "2026-11-23",
+          "2026-11-24",
+          "2026-11-25"
+        ]
+      }
+    },
+    {
+      "id": 124,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.pool_fees_gross",
+      "dedupeKey": "pool_scan:spot_fallback:8453:0x6cd905df2ed214b22e0d48ff17cd4200c1c6d8a3",
+      "severity": "advisory",
+      "detail": {
+        "chain": 8453,
+        "token": "0x6cd905df2ed214b22e0d48ff17cd4200c1c6d8a3",
+        "pool": "0xcea7c6bf9d7fd0443896c9e09d37c8e5cff991ff",
+        "hop": 1,
+        "days": [
+          "2026-11-23"
+        ]
+      }
+    },
+    {
+      "id": 125,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.pool_fees_gross",
+      "dedupeKey": "pool_scan:spot_fallback:4663:0xd5f3879160bc7c32ebb4dc785f8a4f505888de68",
+      "severity": "advisory",
+      "detail": {
+        "chain": 4663,
+        "token": "0xd5f3879160bc7c32ebb4dc785f8a4f505888de68",
+        "pool": "0x8cdb80eef1800dff469ee5faf676837b13625f3e",
+        "hop": 2,
+        "days": [
+          "2026-11-25"
+        ]
+      }
+    },
+    {
+      "id": 76,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.vote_incentives",
+      "dedupeKey": "pool_scan:incentives_unpriced:8453",
+      "severity": "advisory",
+      "detail": {
+        "chain": 8453,
+        "days": [
+          {
+            "day": "2026-11-19",
+            "tokens": [
+              {
+                "token": "0x0000006238e3c7797ae71827da303560bae1b125",
+                "class": "vote_incentives",
+                "amount": "83333333"
+              },
+              {
+                "token": "0xb755506531786c8ac63b756bab1ac387bacb0c04",
+                "class": "vote_incentives",
+                "amount": "35393999999999999999"
+              }
+            ]
+          },
+          {
+            "day": "2026-11-20",
+            "tokens": [
+              {
+                "token": "0xb755506531786c8ac63b756bab1ac387bacb0c04",
+                "class": "vote_incentives",
+                "amount": "35393999999999999999"
+              }
+            ]
+          },
+          {
+            "day": "2026-11-21",
+            "tokens": [
+              {
+                "token": "0x0000006238e3c7797ae71827da303560bae1b125",
+                "class": "vote_incentives",
+                "amount": "83333333"
+              },
+              {
+                "token": "0xb755506531786c8ac63b756bab1ac387bacb0c04",
+                "class": "vote_incentives",
+                "amount": "35393999999999999999"
+              }
+            ]
+          },
+          {
+            "day": "2026-11-22",
+            "tokens": [
+              {
+                "token": "0xb755506531786c8ac63b756bab1ac387bacb0c04",
+                "class": "vote_incentives",
+                "amount": "35393999999999999999"
+              }
+            ]
+          },
+          {
+            "day": "2026-11-23",
+            "tokens": [
+              {
+                "token": "0xb755506531786c8ac63b756bab1ac387bacb0c04",
+                "class": "vote_incentives",
+                "amount": "35393999999999999999"
+              }
+            ]
+          },
+          {
+            "day": "2026-11-24",
+            "tokens": [
+              {
+                "token": "0xb755506531786c8ac63b756bab1ac387bacb0c04",
+                "class": "vote_incentives",
+                "amount": "35393999999999999999"
+              }
+            ]
+          },
+          {
+            "day": "2026-11-25",
+            "tokens": [
+              {
+                "token": "0xb755506531786c8ac63b756bab1ac387bacb0c04",
+                "class": "vote_incentives",
+                "amount": "35393999999999999999"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "watch": []
+}

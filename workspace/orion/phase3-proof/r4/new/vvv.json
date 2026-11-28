@@ -1,0 +1,346 @@
+{
+  "asset": "vvv",
+  "day": "2026-11-26",
+  "windowDays": 91,
+  "price": 26.46849180516838,
+  "marketCap": 1311761266.2635255,
+  "fdv": 2151893056.2098556,
+  "incomeStatement": {
+    "schema": 2,
+    "day": "2026-11-26",
+    "windowDays": 91,
+    "category": "ai_platform",
+    "scope": "complete",
+    "revenue": {
+      "annualized": 150000000,
+      "growth": {
+        "current": 150000000,
+        "prior": 100000000,
+        "change": 0.5,
+        "annualized": 11.828046029000676,
+        "note": "between the two latest disclosures"
+      },
+      "growthExNew": null,
+      "excludedFromExNew": [],
+      "provisional": false,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "business",
+          "label": "disclosed business revenue (annual run rate)",
+          "method": "disclosed",
+          "sourceTypes": [
+            "disclosure"
+          ],
+          "priceBasis": null,
+          "annualized": 150000000,
+          "windowSum": null,
+          "settlement": null,
+          "started": null,
+          "daysMeasured": null,
+          "provisionalDays": 0,
+          "coverage": null,
+          "isNew": false,
+          "growth": {
+            "current": 150000000,
+            "prior": 100000000,
+            "change": 0.5,
+            "annualized": 11.828046029000676,
+            "note": "between the two latest disclosures"
+          },
+          "disclosedGrowth": {
+            "annualized": 11.828046029000676,
+            "gapDays": 58,
+            "latestAgeDays": 44,
+            "flags": [
+              "the two latest disclosures are 58 days apart (< 90): a noisy rate"
+            ]
+          }
+        }
+      ]
+    },
+    "costOfRevenue": {
+      "annualized": null,
+      "measuredAnnualized": 0,
+      "notMeasured": [
+        "compute"
+      ],
+      "lines": [
+        {
+          "id": "compute",
+          "label": null,
+          "of": null,
+          "share": 1,
+          "method": "not_measured",
+          "sourceTypes": [],
+          "priceBasis": null,
+          "annualized": null,
+          "growth": {
+            "current": null,
+            "prior": null,
+            "change": null,
+            "annualized": null,
+            "note": "not measured"
+          },
+          "notMeasured": "compute costs: not disclosed by Venice",
+          "to": "other"
+        }
+      ]
+    },
+    "grossProfit": {
+      "annualized": null,
+      "growth": {
+        "current": null,
+        "prior": null,
+        "change": null,
+        "annualized": null,
+        "note": "cost of revenue not measured"
+      }
+    },
+    "holders": {
+      "annualized": 12213224.972328603,
+      "growth": {
+        "current": 3044941.020498364,
+        "prior": 1345824.6615415982,
+        "change": 1.2625094542482853,
+        "annualized": 25.439802602928136
+      },
+      "remainder": false,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "burn",
+          "label": null,
+          "of": null,
+          "share": 1,
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "hourly",
+          "annualized": 12213224.972328603,
+          "growth": {
+            "current": 3044941.020498364,
+            "prior": 1345824.6615415982,
+            "change": 1.2625094542482853,
+            "annualized": 25.439802602928136
+          },
+          "bucket": "burn",
+          "haircut": 0,
+          "recipientBase": "all",
+          "valuedPer": null,
+          "captureRule": "discretionary",
+          "paidMetric": null,
+          "gross": 12213224.972328603,
+          "net": 12213224.972328603,
+          "yield": 0.005675572462620351
+        }
+      ],
+      "byBucket": {
+        "burn": {
+          "annualized": 12213224.972328603
+        },
+        "hold": null,
+        "cash": null
+      }
+    },
+    "protocol": {
+      "annualized": 137786775.0276714,
+      "growth": {
+        "current": null,
+        "prior": null,
+        "change": null,
+        "annualized": null,
+        "note": "a disclosed level less daily flows"
+      },
+      "remainder": true,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "remainder",
+          "label": null,
+          "of": null,
+          "share": 1,
+          "method": "derived",
+          "sourceTypes": [],
+          "priceBasis": "hourly",
+          "annualized": 137786775.0276714,
+          "growth": {
+            "current": null,
+            "prior": null,
+            "change": null,
+            "annualized": null,
+            "note": "a disclosed level less daily flows"
+          },
+          "note": "revenue less holders and the other uses, before the costs not measured"
+        }
+      ]
+    },
+    "operatingCosts": {
+      "annualized": 0,
+      "growth": {
+        "current": 0,
+        "prior": 0,
+        "change": null,
+        "annualized": null,
+        "note": "no lines"
+      },
+      "remainder": false,
+      "notMeasured": [],
+      "lines": []
+    },
+    "unreconciled": {
+      "annualized": 0,
+      "pct": 0,
+      "basis": "revenue"
+    },
+    "belowLine": {
+      "toHolders": 0,
+      "toProtocol": 0,
+      "notMeasured": [],
+      "lines": []
+    },
+    "holderFlow": {
+      "gross": 12213224.972328603,
+      "net": 12213224.972328603,
+      "netOfDilution": -40723758.638008155,
+      "growth": {
+        "current": 3044941.020498364,
+        "prior": 1345824.6615415982,
+        "change": 1.2625094542482853,
+        "annualized": 25.439802602928136
+      },
+      "byBucket": {
+        "burn": {
+          "gross": 12213224.972328603,
+          "net": 12213224.972328603,
+          "yield": 0.005675572462620351,
+          "fromRevenue": 12213224.972328603,
+          "fromBelowLine": 0
+        },
+        "hold": null,
+        "cash": null
+      },
+      "fromRevenue": 12213224.972328603,
+      "fromBelowLine": 0,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "burn",
+          "section": "holders",
+          "fromBelowLine": false,
+          "bucket": "burn",
+          "method": "measured",
+          "sourceTypes": [
+            "log_scan"
+          ],
+          "priceBasis": "hourly",
+          "metric": "flow_usd.burn",
+          "haircut": 0,
+          "recipientBase": "all",
+          "gross": 12213224.972328603,
+          "net": 12213224.972328603,
+          "yield": 0.005675572462620351,
+          "growth": {
+            "current": 3044941.020498364,
+            "prior": 1345824.6615415982,
+            "change": 1.2625094542482853,
+            "annualized": 25.439802602928136
+          }
+        }
+      ]
+    },
+    "volume": null,
+    "dilution": {
+      "pct": 0.02460019258743975,
+      "tokensPerYear": 2000000,
+      "emissionsPerYear": 2000000,
+      "releases": [],
+      "supply": null
+    },
+    "ratios": {
+      "takeRate": null,
+      "payoutRatio": 0.08142149981552402,
+      "payoutRatioBasis": "revenue"
+    },
+    "multiples": {
+      "mcapToRevenue": 8.745075108423503,
+      "mcapToGrossProfit": null,
+      "mcapToHolderFlow": {
+        "burn": 107.40498674474362,
+        "hold": null,
+        "cash": null,
+        "total": 107.40498674474362
+      }
+    },
+    "yields": {
+      "cash": 0,
+      "buyback": 0.005675572462620351,
+      "shareholder": 0.005675572462620351,
+      "dilution": 0.02460019258743975,
+      "netShareholder": -0.018924620124819398,
+      "multiple": 176.19368030027948,
+      "pegTrailing": 0.06925905953374005
+    },
+    "perToken": {
+      "revenue": 3.026674039617245,
+      "grossProfit": null,
+      "holderFlow": {
+        "total": 0.24643633975834686,
+        "netOfDilution": -0.8217169537686522,
+        "byBucket": {
+          "burn": 0.24643633975834686,
+          "hold": null,
+          "cash": null
+        }
+      },
+      "dilution": 1.068153293526999,
+      "circulatingSupply": 49559350.63921488,
+      "totalSupply": 81300176.52874598,
+      "supplyAsOf": "2026-11-27T23:59:59.999Z",
+      "perTokenFdv": {
+        "revenue": 1.8450144440579812,
+        "grossProfit": null,
+        "holderFlow": {
+          "total": 0.1502238432165061,
+          "netOfDilution": -0.5009061526897068,
+          "byBucket": {
+            "burn": 0.1502238432165061,
+            "hold": null,
+            "cash": null
+          }
+        },
+        "dilution": 0.6511299959062129
+      }
+    },
+    "priceBasis": {
+      "price": 26.46849180516838,
+      "metric": "price_usd",
+      "sourceType": "contract_state",
+      "source": "contract_state:price.token",
+      "day": "2026-11-26",
+      "asOf": "2026-11-27T23:59:59.999Z",
+      "flows": "each flow day's USD from its tokens x the chain/first-party hourly prices where every hour with an amount is priced (hourly), or its day amount x the mean of the day's 24 chain hours (daily_mean), else the stored value (per line: priceBasis)"
+    },
+    "checks": [],
+    "provenance": {
+      "methods": {
+        "measured": 0,
+        "derived": 0,
+        "disclosed": 1
+      },
+      "thirdParty": [],
+      "sources": [
+        "disclosure:manual",
+        "log_scan:eip155:8453"
+      ],
+      "basis": "observations"
+    },
+    "flags": [
+      "cost of revenue not measured: compute",
+      "payout ratio on revenue: cost of revenue not measured",
+      "disclosed revenue: the two latest disclosures are 58 days apart (< 90): a noisy rate"
+    ]
+  },
+  "notes": []
+}

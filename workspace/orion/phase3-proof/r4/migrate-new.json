@@ -1,0 +1,61 @@
+{
+  "applied": [],
+  "status": {
+    "schema": "p2proof_20261128t063741z",
+    "dbAt": 8,
+    "codeRequires": 8,
+    "applied": [
+      {
+        "id": 1,
+        "name": "baseline",
+        "sha256": "38bd9522ddb31125bf52f37a287a62b9891271260f704dd4e9fd6e9e3d1ccb2a",
+        "appliedAt": "2026-11-28T06:37:41.668Z"
+      },
+      {
+        "id": 2,
+        "name": "daemon",
+        "sha256": "e1267f83cb06e79fc2c49b4ef795bdc326ab9815351dd08aedb1d058943976db",
+        "appliedAt": "2026-11-28T06:37:41.689Z"
+      },
+      {
+        "id": 3,
+        "name": "checks",
+        "sha256": "a9841bef2980a731936642c5189ff49e4275e83fda3b56053f2f49323bc2611d",
+        "appliedAt": "2026-11-28T06:37:41.701Z"
+      },
+      {
+        "id": 4,
+        "name": "provenance",
+        "sha256": "63b6ef7716c381c6e36da4fc339a400732d6e847cc6ec3eb41923a71f3173e5b",
+        "appliedAt": "2026-11-28T06:37:41.705Z"
+      },
+      {
+        "id": 5,
+        "name": "tokens_prices",
+        "sha256": "343a7f93f163ac37b6b03746a73311d3d3c890461bd095e49855eb9e5462570f",
+        "appliedAt": "2026-11-28T06:37:41.709Z"
+      },
+      {
+        "id": 6,
+        "name": "provenance_not_null",
+        "sha256": "d6f9d0cf53135dfedeba5b9108015d6e857832eb45784cc2cfb64c7c91c7e40a",
+        "appliedAt": "2026-11-28T06:37:41.716Z"
+      },
+      {
+        "id": 7,
+        "name": "job_params",
+        "sha256": "e0bd10b7e47fd5cee5e031ad29a10c066c0e9a5d461710bcf8575f184f627766",
+        "appliedAt": "2026-11-28T06:37:41.719Z"
+      },
+      {
+        "id": 8,
+        "name": "chain_prices",
+        "sha256": "2c188e6e1cbaff3ec791a0e63690aa35522d3dd1448e22edead6e24de8233a67",
+        "appliedAt": "2026-11-28T06:37:41.722Z"
+      }
+    ],
+    "pending": [],
+    "changed": [],
+    "state": "current"
+  }
+}

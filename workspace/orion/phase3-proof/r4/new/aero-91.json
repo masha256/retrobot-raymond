@@ -1,0 +1,456 @@
+{
+  "asset": "aero",
+  "day": "2026-08-27",
+  "windowDays": 91,
+  "price": null,
+  "marketCap": null,
+  "fdv": null,
+  "incomeStatement": {
+    "schema": 2,
+    "day": "2026-08-27",
+    "windowDays": 91,
+    "window": {
+      "windowDays": 91,
+      "daysMeasured": 0,
+      "since": "2026-10-22"
+    },
+    "category": "dex",
+    "scope": "complete",
+    "revenue": {
+      "annualized": 0,
+      "growth": {
+        "current": 0,
+        "prior": 0,
+        "change": null,
+        "annualized": null,
+        "note": "not meaningful: the prior window starts before 2026-10-22"
+      },
+      "growthExNew": {
+        "current": null,
+        "prior": null,
+        "change": null,
+        "annualized": null,
+        "note": "not meaningful: the prior window starts before 2026-10-22"
+      },
+      "excludedFromExNew": [
+        "voter_rev",
+        "lp_rev"
+      ],
+      "provisional": false,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "voter_rev",
+          "label": "pool fees to sAERO allocators (gauged pools, 8 chains)",
+          "method": "measured",
+          "sourceTypes": [
+            "pool_scan"
+          ],
+          "priceBasis": null,
+          "annualized": 0,
+          "windowSum": 0,
+          "settlement": "daily",
+          "started": "2026-10-22",
+          "daysMeasured": 0,
+          "provisionalDays": 0,
+          "coverage": null,
+          "isNew": true,
+          "growth": {
+            "current": 0,
+            "prior": 0,
+            "change": null,
+            "annualized": null,
+            "note": "not meaningful: the prior window starts before 2026-10-22"
+          }
+        },
+        {
+          "id": "lp_rev",
+          "label": "pool fees kept by LPs (unstaked, ungauged and Aero Lite pools)",
+          "method": "measured",
+          "sourceTypes": [
+            "pool_scan"
+          ],
+          "priceBasis": null,
+          "annualized": 0,
+          "windowSum": 0,
+          "settlement": "daily",
+          "started": "2026-10-22",
+          "daysMeasured": 0,
+          "provisionalDays": 0,
+          "coverage": null,
+          "isNew": true,
+          "growth": {
+            "current": 0,
+            "prior": 0,
+            "change": null,
+            "annualized": null,
+            "note": "not meaningful: the prior window starts before 2026-10-22"
+          }
+        }
+      ]
+    },
+    "costOfRevenue": {
+      "annualized": 0,
+      "measuredAnnualized": 0,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "lp_fees",
+          "label": null,
+          "of": "lp_rev",
+          "share": 1,
+          "method": "measured",
+          "sourceTypes": [
+            "pool_scan"
+          ],
+          "priceBasis": null,
+          "annualized": 0,
+          "growth": {
+            "current": 0,
+            "prior": 0,
+            "change": null,
+            "annualized": null,
+            "note": "not meaningful: the prior window starts before 2026-10-22"
+          },
+          "to": "lps"
+        }
+      ]
+    },
+    "grossProfit": {
+      "annualized": 0,
+      "growth": {
+        "current": 0,
+        "prior": 0,
+        "change": null,
+        "annualized": null,
+        "note": "not meaningful: the prior window starts before 2026-10-22"
+      }
+    },
+    "holders": {
+      "annualized": 0,
+      "growth": {
+        "current": 0,
+        "prior": 0,
+        "change": null,
+        "annualized": null,
+        "note": "not meaningful: the prior window starts before 2026-10-22"
+      },
+      "remainder": false,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "voter_fees",
+          "label": null,
+          "of": "voter_rev",
+          "share": 1,
+          "method": "measured",
+          "sourceTypes": [
+            "pool_scan"
+          ],
+          "priceBasis": null,
+          "annualized": 0,
+          "growth": {
+            "current": 0,
+            "prior": 0,
+            "change": null,
+            "annualized": null,
+            "note": "not meaningful: the prior window starts before 2026-10-22"
+          },
+          "bucket": "cash",
+          "haircut": 0.02,
+          "recipientBase": "locked",
+          "valuedPer": null,
+          "captureRule": "contractual",
+          "paidMetric": null,
+          "gross": 0,
+          "net": 0,
+          "yield": null
+        }
+      ],
+      "byBucket": {
+        "burn": null,
+        "hold": null,
+        "cash": {
+          "annualized": 0
+        }
+      }
+    },
+    "protocol": {
+      "annualized": 0,
+      "growth": {
+        "current": 0,
+        "prior": 0,
+        "change": null,
+        "annualized": null,
+        "note": "no lines"
+      },
+      "remainder": false,
+      "notMeasured": [],
+      "lines": []
+    },
+    "operatingCosts": {
+      "annualized": 0,
+      "growth": {
+        "current": 0,
+        "prior": 0,
+        "change": null,
+        "annualized": null,
+        "note": "no lines"
+      },
+      "remainder": false,
+      "notMeasured": [],
+      "lines": []
+    },
+    "unreconciled": {
+      "annualized": 0,
+      "pct": null,
+      "basis": "grossProfit"
+    },
+    "belowLine": {
+      "toHolders": 0,
+      "toProtocol": 0,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "vote_incentives",
+          "label": null,
+          "to": "holders",
+          "method": "measured",
+          "sourceTypes": [
+            "pool_scan"
+          ],
+          "priceBasis": null,
+          "annualized": 0,
+          "growth": {
+            "current": 0,
+            "prior": 0,
+            "change": null,
+            "annualized": null,
+            "note": "not meaningful: the prior window starts before 2026-10-22"
+          },
+          "bucket": "cash",
+          "haircut": 0.03,
+          "recipientBase": "locked",
+          "captureRule": "programmatic",
+          "started": "2026-10-22"
+        },
+        {
+          "id": "protocol_subsidy",
+          "label": null,
+          "to": "holders",
+          "method": "measured",
+          "sourceTypes": [
+            "pool_scan"
+          ],
+          "priceBasis": null,
+          "annualized": 0,
+          "growth": {
+            "current": 0,
+            "prior": 0,
+            "change": null,
+            "annualized": null,
+            "note": "not meaningful: the prior window starts before 2026-10-22"
+          },
+          "bucket": null,
+          "haircut": null,
+          "recipientBase": null,
+          "captureRule": null,
+          "note": "Aero Foundation TGE wallet and governance multisig programs: Aero's own money recycled",
+          "started": "2026-10-22",
+          "inHolderFlow": false
+        }
+      ]
+    },
+    "holderFlow": {
+      "gross": 0,
+      "net": 0,
+      "netOfDilution": null,
+      "growth": {
+        "current": 0,
+        "prior": 0,
+        "change": null,
+        "annualized": null,
+        "note": "not meaningful: the prior window starts before 2026-10-22"
+      },
+      "byBucket": {
+        "burn": null,
+        "hold": null,
+        "cash": {
+          "gross": 0,
+          "net": 0,
+          "yield": null,
+          "fromRevenue": 0,
+          "fromBelowLine": 0
+        }
+      },
+      "fromRevenue": 0,
+      "fromBelowLine": 0,
+      "notMeasured": [],
+      "lines": [
+        {
+          "id": "voter_fees",
+          "section": "holders",
+          "fromBelowLine": false,
+          "bucket": "cash",
+          "method": "measured",
+          "sourceTypes": [
+            "pool_scan"
+          ],
+          "priceBasis": null,
+          "metric": "flow_usd.voter_fees",
+          "haircut": 0.02,
+          "recipientBase": "locked",
+          "gross": 0,
+          "net": 0,
+          "yield": null,
+          "growth": {
+            "current": 0,
+            "prior": 0,
+            "change": null,
+            "annualized": null,
+            "note": "not meaningful: the prior window starts before 2026-10-22"
+          }
+        },
+        {
+          "id": "vote_incentives",
+          "section": "below_line",
+          "fromBelowLine": true,
+          "bucket": "cash",
+          "method": "measured",
+          "sourceTypes": [
+            "pool_scan"
+          ],
+          "priceBasis": null,
+          "metric": "flow_usd.vote_incentives",
+          "haircut": 0.03,
+          "recipientBase": "locked",
+          "gross": 0,
+          "net": 0,
+          "yield": null,
+          "growth": {
+            "current": 0,
+            "prior": 0,
+            "change": null,
+            "annualized": null,
+            "note": "not meaningful: the prior window starts before 2026-10-22"
+          }
+        }
+      ]
+    },
+    "volume": null,
+    "dilution": {
+      "pct": null,
+      "tokensPerYear": null,
+      "emissionsPerYear": null,
+      "releases": [
+        {
+          "id": "aero_upgrade",
+          "tokensPerYear": null,
+          "yield": null
+        },
+        {
+          "id": "velo_upgrade",
+          "tokensPerYear": null,
+          "yield": null
+        }
+      ],
+      "supply": null
+    },
+    "ratios": {
+      "takeRate": null,
+      "payoutRatio": null,
+      "payoutRatioBasis": "grossProfit"
+    },
+    "multiples": {
+      "mcapToRevenue": null,
+      "mcapToGrossProfit": null,
+      "mcapToHolderFlow": {
+        "burn": null,
+        "hold": null,
+        "cash": null,
+        "total": null
+      }
+    },
+    "yields": {
+      "cash": null,
+      "buyback": 0,
+      "shareholder": null,
+      "dilution": null,
+      "netShareholder": null,
+      "multiple": null,
+      "pegTrailing": null,
+      "dilutionLines": [
+        {
+          "id": "aero_upgrade",
+          "tokensPerYear": null,
+          "yield": null
+        },
+        {
+          "id": "velo_upgrade",
+          "tokensPerYear": null,
+          "yield": null
+        }
+      ]
+    },
+    "perToken": {
+      "revenue": null,
+      "grossProfit": null,
+      "holderFlow": {
+        "total": null,
+        "netOfDilution": null,
+        "byBucket": {
+          "burn": null,
+          "hold": null,
+          "cash": null
+        }
+      },
+      "dilution": null,
+      "circulatingSupply": null,
+      "totalSupply": null,
+      "supplyAsOf": "2026-08-28T23:59:59.999Z",
+      "perTokenFdv": {
+        "revenue": null,
+        "grossProfit": null,
+        "holderFlow": {
+          "total": null,
+          "netOfDilution": null,
+          "byBucket": {
+            "burn": null,
+            "hold": null,
+            "cash": null
+          }
+        },
+        "dilution": null
+      }
+    },
+    "priceBasis": {
+      "price": null,
+      "metric": "price_usd",
+      "sourceType": "contract_state",
+      "source": "contract_state:chain.v2_pool_twap_price",
+      "day": "2026-08-27",
+      "asOf": "2026-08-28T23:59:59.999Z",
+      "flows": "each flow day's USD from its tokens x the chain/first-party hourly prices where every hour with an amount is priced (hourly), or its day amount x the mean of the day's 24 chain hours (daily_mean), else the stored value (per line: priceBasis)"
+    },
+    "checks": [],
+    "provenance": {
+      "methods": {
+        "measured": null,
+        "derived": null,
+        "disclosed": null
+      },
+      "thirdParty": [],
+      "sources": [
+        "pool_scan:pool.tape_fees_daily",
+        "pool_scan:pool.vrm_incentives_daily"
+      ],
+      "basis": "observations"
+    },
+    "flags": [
+      "not in holder flow: protocol_subsidy"
+    ]
+  },
+  "notes": [
+    "yields are per token of each flow's recipients (staked or locked supply), i.e. to a holder in every flow's base"
+  ]
+}

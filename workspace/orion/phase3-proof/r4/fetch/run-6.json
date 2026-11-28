@@ -1,0 +1,211 @@
+{
+  "assetId": "aero",
+  "dryRun": false,
+  "fetchRunId": 744,
+  "outcome": "ok",
+  "startedAt": "2026-11-28T07:05:16.365Z",
+  "endedAt": "2026-11-28T07:06:46.326Z",
+  "sources": [
+    {
+      "sourceId": "adapter:pool.tape_fees_daily",
+      "status": "ok",
+      "error": null,
+      "metricsWritten": [
+        "flow_usd.voter_fees",
+        "flow_usd.lp_fees",
+        "flow_usd.pool_fees_gross"
+      ],
+      "crossChecks": [],
+      "unlistedTransfers": [],
+      "conflicts": [],
+      "retiredObservationIds": [],
+      "notes": [
+        "flow_usd.voter_fees: not in the series, skipped: 35 days from 2026-10-21 to 2026-11-24",
+        "flow_usd.lp_fees: not in the series, skipped: 35 days from 2026-10-21 to 2026-11-24",
+        "flow_usd.pool_fees_gross: not in the series, skipped: 35 days from 2026-10-21 to 2026-11-24"
+      ]
+    },
+    {
+      "sourceId": "adapter:pool.vrm_incentives_daily",
+      "status": "ok",
+      "error": null,
+      "metricsWritten": [
+        "flow_usd.vote_incentives",
+        "flow_usd.protocol_subsidy"
+      ],
+      "crossChecks": [],
+      "unlistedTransfers": [],
+      "conflicts": [],
+      "retiredObservationIds": [],
+      "notes": [
+        "flow_usd.vote_incentives: not in the series, skipped: 35 days from 2026-10-21 to 2026-11-24",
+        "flow_usd.protocol_subsidy: not in the series, skipped: 35 days from 2026-10-21 to 2026-11-24"
+      ]
+    }
+  ],
+  "written": [
+    {
+      "metricKey": "flow_usd.voter_fees",
+      "value": 263045.7589817566,
+      "observedAt": "2026-11-27T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34737
+    },
+    {
+      "metricKey": "flow_usd.voter_fees",
+      "value": 279275.18049700593,
+      "observedAt": "2026-11-28T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34738
+    },
+    {
+      "metricKey": "flow_usd.lp_fees",
+      "value": 34299.97749782174,
+      "observedAt": "2026-11-27T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34739
+    },
+    {
+      "metricKey": "flow_usd.lp_fees",
+      "value": 37074.64168608816,
+      "observedAt": "2026-11-28T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34740
+    },
+    {
+      "metricKey": "flow_usd.pool_fees_gross",
+      "value": 297345.7364795783,
+      "observedAt": "2026-11-27T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34741
+    },
+    {
+      "metricKey": "flow_usd.pool_fees_gross",
+      "value": 316349.822183094,
+      "observedAt": "2026-11-28T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34742
+    },
+    {
+      "metricKey": "flow_usd.vote_incentives",
+      "value": 3591.5183225692917,
+      "observedAt": "2026-11-27T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34743
+    },
+    {
+      "metricKey": "flow_usd.vote_incentives",
+      "value": 2972.359569976853,
+      "observedAt": "2026-11-28T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34744
+    },
+    {
+      "metricKey": "flow_usd.protocol_subsidy",
+      "value": 0,
+      "observedAt": "2026-11-27T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34745
+    },
+    {
+      "metricKey": "flow_usd.protocol_subsidy",
+      "value": 0,
+      "observedAt": "2026-11-28T00:00:00.000Z",
+      "periodDays": 1,
+      "source": "onchain",
+      "observationId": 34746
+    }
+  ],
+  "anomalies": [
+    {
+      "id": 123,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.pool_fees_gross",
+      "dedupeKey": "pool_scan:gauged_unregistered:1:0x26e9a8313b62db29c7aac1715e6ffc91d1f756c9",
+      "severity": "advisory",
+      "detail": {
+        "kind": "gauged_unregistered",
+        "chain": 1,
+        "id": "0x26e9a8313b62db29c7aac1715e6ffc91d1f756c9",
+        "gauge": "0x5c9957960c4d7a89db9afd9d4415be78a6d96474",
+        "factory": "0x78589e876edcebdce72ee3436ab3c9ad3a7cef2d",
+        "days": [
+          "2026-11-25",
+          "2026-11-26",
+          "2026-11-27"
+        ]
+      }
+    },
+    {
+      "id": 125,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.pool_fees_gross",
+      "dedupeKey": "pool_scan:spot_fallback:4663:0xd5f3879160bc7c32ebb4dc785f8a4f505888de68",
+      "severity": "advisory",
+      "detail": {
+        "chain": 4663,
+        "token": "0xd5f3879160bc7c32ebb4dc785f8a4f505888de68",
+        "pool": "0x8cdb80eef1800dff469ee5faf676837b13625f3e",
+        "hop": 2,
+        "days": [
+          "2026-11-25"
+        ]
+      }
+    },
+    {
+      "id": 76,
+      "status": "open",
+      "kind": "cross_check_mismatch",
+      "metricKey": "flow_usd.vote_incentives",
+      "dedupeKey": "pool_scan:incentives_unpriced:8453",
+      "severity": "advisory",
+      "detail": {
+        "chain": 8453,
+        "days": [
+          {
+            "day": "2026-11-25",
+            "tokens": [
+              {
+                "token": "0xb755506531786c8ac63b756bab1ac387bacb0c04",
+                "class": "vote_incentives",
+                "amount": "35393999999999999999"
+              }
+            ]
+          },
+          {
+            "day": "2026-11-26",
+            "tokens": [
+              {
+                "token": "0xb755506531786c8ac63b756bab1ac387bacb0c04",
+                "class": "vote_incentives",
+                "amount": "35393999999999999999"
+              }
+            ]
+          },
+          {
+            "day": "2026-11-27",
+            "tokens": [
+              {
+                "token": "0xb755506531786c8ac63b756bab1ac387bacb0c04",
+                "class": "vote_incentives",
+                "amount": "35393999999999999999"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "watch": []
+}
