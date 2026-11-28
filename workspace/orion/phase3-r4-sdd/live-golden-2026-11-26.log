@@ -1,0 +1,45 @@
+
+ RUN  v5.0.1 /home/hermes/git/orion/.worktrees/ret-20-aero-pool-scan
+
+stdout | tests/live/aeroPoolScan.live.test.ts > AERO pool scan, live golden 2026-11-26 (ORION_LIVE_RPC=1) > per-chain gross, allocator and incentives match the R4 scoping within tolerance
+ethereum gross: 17456.48 vs 17455 (0.008%, tol 87.28)
+ethereum allocator: 16498.52 vs 16497 (0.009%, tol 82.48)
+ethereum vote_incentives: 0.00 vs 0 (-, tol 1.00)
+ethereum protocol_subsidy: 0.00 vs 0 (-, tol 1.00)
+optimism gross: 1837.87 vs 1838 (-0.007%, tol 9.19)
+optimism allocator: 1757.65 vs 1758 (-0.020%, tol 8.79)
+optimism vote_incentives: 555.28 vs 554.46 (0.147%, tol 2.77)
+optimism protocol_subsidy: 0.00 vs 0 (-, tol 1.00)
+robinhood gross: 23598.26 vs 23601 (-0.012%, tol 118.00)
+robinhood allocator: 23119.77 vs 23122 (-0.010%, tol 115.61)
+robinhood vote_incentives: 0.00 vs 0 (-, tol 1.00)
+robinhood protocol_subsidy: 0.00 vs 0 (-, tol 1.00)
+arc gross: 689.23 vs 689 (0.033%, tol 3.45)
+arc allocator: 574.01 vs 574 (0.001%, tol 2.87)
+arc vote_incentives: 0.00 vs 0 (-, tol 1.00)
+arc protocol_subsidy: 0.00 vs 0 (-, tol 1.00)
+base gross: 241775.43 vs 241793 (-0.007%, tol 1208.96)
+base allocator: 209316.28 vs 209333 (-0.008%, tol 1046.66)
+base vote_incentives: 3036.24 vs 3034.81 (0.047%, tol 15.17)
+base protocol_subsidy: 0.00 vs 0 (-, tol 1.00)
+arbitrum gross: 2227.77 vs 2228 (-0.010%, tol 11.14)
+arbitrum allocator: 2177.49 vs 2177 (0.023%, tol 10.88)
+arbitrum vote_incentives: 0.00 vs 0 (-, tol 1.00)
+arbitrum protocol_subsidy: 0.00 vs 0 (-, tol 1.00)
+ink gross: 529.85 vs 530 (-0.029%, tol 2.65)
+ink allocator: 419.26 vs 419 (0.062%, tol 2.10)
+ink vote_incentives: 0.00 vs 0 (-, tol 1.00)
+ink protocol_subsidy: 0.00 vs 0 (-, tol 1.00)
+elysium gross: 9230.85 vs 9252 (-0.229%, tol 46.26)
+elysium allocator: 9182.78 vs 9204 (-0.231%, tol 46.02)
+elysium vote_incentives: 0.00 vs 0 (-, tol 1.00)
+elysium protocol_subsidy: 0.00 vs 0 (-, tol 1.00)
+
+ ✓ tests/live/aeroPoolScan.live.test.ts > AERO pool scan, live golden 2026-11-26 (ORION_LIVE_RPC=1) > per-chain gross, allocator and incentives match the R4 scoping within tolerance 34072ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed (1)
+   Start at  05:09:35
+   Duration  35.10s (tests 98%, import 1%, transform 1%)
+
+EXIT 0

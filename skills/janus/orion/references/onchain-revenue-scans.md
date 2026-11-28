@@ -25,7 +25,12 @@ Depth for a release that replaces a third-party revenue series with Orion's own 
 - A cumulative fee counter gives gross; the allocator/voter share usually needs a log scan (pending delta +
   collected events): a state-only estimate from reward-per-vote indices blew up near zero voting supply.
 - Incentive streams: allocator-earned = rate x (overlap with the day - zero-allocation seconds), from contract
-  state; class them by creator address from a reviewed list.
+  state; class them by creator address from a reviewed list. Mirror the contract's lazy weekly checkpoint backfill
+  (read `supplyAt(w-1)` for each week boundary skipped since the last checkpoint): lock ends are week-aligned, so a
+  pool's last allocation expiring at a boundary otherwise reads as > 24 h of zero allocation until someone
+  checkpoints, and a legitimate state fails the run.
+- Read the allocator's pending fees on the pool side (CL `gaugeFees()`, V2 `pendingFees(gauge)`), not the gauge's
+  own getter, which returns 0 while the gauge is unactivated or capped.
 - Pricing with no CoinGecko/DefiLlama: reviewed anchor token ADDRESSES -> Chainlink USD feeds (description()
   checked on chain), then a deepest-pool graph with a priced-side depth floor and a hop cap, then the token's own
   pool, then unpriced. Never match anchors by symbol (Base has several "USDC"s and a spoof LINK). Never use
@@ -62,8 +67,12 @@ Depth for a release that replaces a third-party revenue series with Orion's own 
   nulls their published growth and PEG. A recycled-subsidy line that is shown but not holder flow is a below-line
   line with `in_holder_flow: false` (needs a `note`). Check every enum against `src/config/incomeStatement.ts`
   before writing it into a spec.
-- Adapters run once per metric with no RPC cache: memoize a multi-metric scan per run context. The series writer
-  throws on an empty series, so return at least one day every run.
+- Adapters run once per metric with no RPC cache: memoize a multi-metric scan per run context (a WeakMap on the
+  SourceContext). The series writer throws on an empty series, so return at least one day every run.
+- Run warnings are deduped per metric request, not per run: emit scan-level warnings (drift, coverage, dropped
+  anchors) from ONE metric of the set (the monitor-only gross metric), or each posts once per metric.
+- Give a history-limited adapter a `since` date param and set it on every metric: routine runs scan the oldest
+  missing days first, and days before the contracts existed fail every nightly.
 - Retiring the old metric key (new keys for the new series) lets one `data purge <asset> --metric <old> --yes`
   remove every source type of it (third_party and derived corrections) plus its cursor; keeping the key needs a
   two-step purge before any backfill.
